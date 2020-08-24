@@ -1,0 +1,7 @@
+{{ $html := .Get "html"}}
+{{ $css := .Get "css"}}
+{{ $html  | readFile | safeHTML }}
+
+<style type="text/css">
+    {{ $css  | readFile | safeCSS }}
+</style>

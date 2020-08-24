@@ -1,0 +1,26 @@
+{{ $html := .Get "html"}}
+{{ $css := .Get "css"}}
+{{ $htmlcontent := $html | readFile }}
+{{ $csscontent := $css | readFile }}
+
+<button id="copyhtml">Copy HTML</button>
+<button id="copycss">Copy CSS</button>
+
+<script type="application/javascript">
+    function copyhtml() {
+        var $temp = $("<textarea>");
+        $("body").append($temp);
+        $temp.val({{ $htmlcontent}}).select();
+        document.execCommand("copy");
+        $temp.remove();
+    }
+    $("#copyhtml").on("click", copyhtml);
+    function copycss() {
+        var $temp = $("<textarea>");
+        $("body").append($temp);
+        $temp.val({{ $csscontent}}).select();
+        document.execCommand("copy");
+        $temp.remove();
+    }
+    $("#copycss").on("click", copycss);
+</script>
