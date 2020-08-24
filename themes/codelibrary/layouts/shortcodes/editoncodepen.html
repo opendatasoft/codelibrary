@@ -1,0 +1,10 @@
+{{ $html := .Get "html"}}
+{{ $css := .Get "css"}}
+{{ $htmlcontent := printf "%s%s%s" "<div ng-app=\"ods-widgets\">\n" ($html | readFile) "</div>" }}
+{{ $csscontent := $css | readFile }}
+{{ $head := "/layouts/partials/head_includes.html" | readFile | jsonify }}
+
+<form action="https://codepen.io/pen/define" method="POST" target="_blank">
+    <input type="hidden" name="data" value='{"title": "New Pen!", "head": {{ $head }}, "html": {{ $htmlcontent | jsonify }}, "css": {{ $csscontent | jsonify }} }'>
+    <input type="submit" value="Create a new pen with this code !">
+</form>

@@ -1,0 +1,15 @@
+{{ define "main" }}
+<h1>_default list.html</h1>
+
+<ul>
+    {{ range (.Paginator (.Site.Params.listPaginate | default 20)).Pages }}
+    <li>
+        <a href="{{ .Permalink }}" title="{{ .Title }}">
+            <span>{{ .Title }}</span>
+            <span>{{ .PublishDate.Format "2006-01-02" }}</span>
+        </a>
+    </li>
+    {{ end }}
+</ul>
+
+{{ end }}
