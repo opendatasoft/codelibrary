@@ -1,7 +1,10 @@
-{{ $html := .Get "html"}}
-{{ $css := .Get "css"}}
-{{ $html  | readFile | safeHTML }}
+{{ $url := .Get "url" }}
+{{ $type := .Get "type" }}
 
-<style type="text/css">
-    {{ $css  | readFile | safeCSS }}
-</style>
+{{ if eq $type "html" }}
+{{ $url  | readFile | safeHTML }}
+{{ end }}
+
+{{ if eq $type "css" }}
+{{ $url  | readFile | safeCSS }}
+{{ end }}

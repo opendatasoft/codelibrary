@@ -1,0 +1,103 @@
+//
+// Tabs
+//
+
+$nav-tabs-border-width: 0.2em;
+$nav-tabs-border-color: darkblue;
+$nav-tabs-link-active-color: $nav-tabs-border-color;
+$nav-tabs-link-active-border-color: $nav-tabs-border-color;
+$nav-pills-link-active-color: $nav-tabs-border-color;
+$nav-tabs-link-hover-border-color: blue;
+$nav-link-disabled-color: lightgrey;
+$nav-tabs-link-active-bg: white;
+$nav-pills-link-active-bg: white;
+$nav-tabs-border-radius: 3px;
+$nav-pills-border-radius: $nav-tabs-border-radius;
+
+.nav-tabs {
+  border-bottom: $nav-tabs-border-width solid $nav-tabs-border-color;
+
+  .nav-item {
+    margin-bottom: -$nav-tabs-border-width;
+  }
+
+  .nav-link {
+    border: $nav-tabs-border-width solid transparent;
+    border-top-radius: $nav-tabs-border-radius;
+
+    &:hover, &:focus {
+      border-color: $nav-tabs-link-hover-border-color;
+    }
+
+    &.disabled {
+      color: $nav-link-disabled-color;
+      background-color: transparent;
+      border-color: transparent;
+    }
+  }
+
+  .nav-link.active,
+  .nav-item.show .nav-link {
+    color: $nav-tabs-link-active-color;
+    background-color: $nav-tabs-link-active-bg;
+    border-color: $nav-tabs-link-active-border-color;
+  }
+
+  .dropdown-menu {
+    // Make dropdown border overlap tab border
+    margin-top: -$nav-tabs-border-width;
+    // Remove the top rounded corners here since there is a hard edge above the menu
+    border-top-radius: 0;
+  }
+}
+
+
+//
+// Pills
+//
+
+.nav-pills {
+  .nav-link {
+    border-radius: $nav-pills-border-radius;
+  }
+
+  .nav-link.active,
+  .show > .nav-link {
+    color: $nav-pills-link-active-color;
+    background-color: $nav-pills-link-active-bg;
+  }
+}
+
+
+//
+// Justified variants
+//
+
+.nav-fill {
+  .nav-item {
+    flex: 1 1 auto;
+    text-align: center;
+  }
+}
+
+.nav-justified {
+  .nav-item {
+    flex-basis: 0;
+    flex-grow: 1;
+    text-align: center;
+  }
+}
+
+
+// Tabbable tabs
+//
+// Hide tabbable panes to start, show them when `.active`
+
+.tab-content {
+  > .tab-pane {
+    display: none;
+  }
+  > .active {
+    display: block;
+  }
+}
