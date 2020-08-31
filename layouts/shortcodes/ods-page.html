@@ -83,7 +83,15 @@
 <body>
 
 <div ng-app="ods-widgets">
-    {{ .Content }}
+  {{ with .Page.Resources.GetMatch "*.html.inc" }}
+   {{ .Content | safeHTML}}
+  {{ end }}
+
+  {{ with .Page.Resources.GetMatch ".css.inc"}}
+  <style type="text/css">
+    {{ .Content | safeCSS }}
+  </style>
+  {{ end }}
 </div>
 
 </body>
