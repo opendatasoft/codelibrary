@@ -23,9 +23,8 @@
         });
         gettextCatalog.setCurrentLanguage('fr');
     });</script>
-    <!-- urlsync patch -->
+
     <script type="text/javascript">angular.module('ods-widgets').config(function ($locationProvider) {
-// https://stackoverflow.com/a/38772825
         if (window.history && window.history.pushState) {
             $locationProvider.html5Mode({
                 enabled: true,
@@ -41,7 +40,7 @@
     angular.module('ods-widgets').config(function ($sceProvider) {
         $sceProvider.enabled(false);
     });</script>
-    <!-- custom basemap -->
+
     <script type="text/javascript">angular.module('ods-widgets').config(function (ODSWidgetsConfigProvider) {
         ODSWidgetsConfigProvider.setConfig({
             "themes": {
@@ -83,9 +82,16 @@
 </head>
 <body>
 
-<div ng-app="ods-widgets">
-    {{ .Content }}
-</div>
+  <div ng-app="ods-widgets">
+    {{ with .Page.Resources.GetMatch "*.html.inc" }}
+     {{ .Content | safeHTML}}
+    {{ end }}
 
+    {{ with .Page.Resources.GetMatch ".css.inc"}}
+    <style type="text/css">
+      {{ .Content | safeCSS }}
+    </style>
+    {{ end }}
+  </div>
 </body>
 </html>

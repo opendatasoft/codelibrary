@@ -1,0 +1,105 @@
+<div class="resource">
+    <h2>Resource title</h2>
+    <iframe width="100%" height="500px" src="about:blank"></iframe>
+</div>
+
+<script>
+  const iframe = document.querySelector('iframe')
+  const iframeHead = iframe.contentDocument.querySelector('head')
+  const iframeBody = iframe.contentDocument.querySelector('body')
+
+  iframeHead.innerHTML = /*html*/`
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"><\/script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js"><\/script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js"><\/script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js"><\/script>
+        <script type="text/javascript" src="https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js"><\/script>
+        <!-- ODS Translation dict. -->
+        <!-- ODS Translation dict. -->
+        <script type="text/javascript">var ods = angular.module('ods-widgets');
+        ods.run(function (gettextCatalog) {
+            gettextCatalog.setStrings('fr', {
+                'No value': 'Aucune valeur',
+                'Clear all': 'Tout effacer',
+                'More': 'Voir plus',
+                'Less': 'Voir moins',
+                'Download image': 'Télécharger l\'image'
+            });
+            gettextCatalog.setCurrentLanguage('fr');
+        });<\/script>
+
+        <script type="text/javascript">angular.module('ods-widgets').config(function ($locationProvider) {
+            if (window.history && window.history.pushState) {
+                $locationProvider.html5Mode({
+                    enabled: true,
+                    requireBase: false,
+                    rewriteLinks: false
+                });
+                $locationProvider.hashPrefix('!');
+            } else {
+                $locationProvider.html5Mode(false);
+            }
+        });
+
+        angular.module('ods-widgets').config(function ($sceProvider) {
+            $sceProvider.enabled(false);
+        });<\/script>
+
+        <script type="text/javascript">angular.module('ods-widgets').config(function (ODSWidgetsConfigProvider) {
+            ODSWidgetsConfigProvider.setConfig({
+                "themes": {
+                    "Discovery": {
+                        'url': 'https://discovery.opendatasoft.com/assets/theme_image/discovery.svg',
+                        'color': ''
+                    },
+                    "Privé": {
+                        'url': '/assets/theme_image/lock.svg',
+                        'color': ''
+                    }
+                },
+                "basemaps": [
+                    {
+                        "url": "https://tile.jawg.io/jawg-light/{z}/{x}/{y}.png?access-token=FR099NQpwlavnwzU2eVmGygH4PNEwk9gNKKPyN7zbfP9IJhVeh634PpJolA6I2Tn",
+                        "strictTMS": false,
+                        "provider": "custom",
+                        "label": "Jawg Light",
+                        "id": "jawg.light"
+                    },
+                    {
+                        "url": "https://tile.jawg.io/jawg-dark/{z}/{x}/{y}.png?access-token=FR099NQpwlavnwzU2eVmGygH4PNEwk9gNKKPyN7zbfP9IJhVeh634PpJolA6I2Tn",
+                        "strictTMS": false,
+                        "provider": "custom",
+                        "label": "Jawg Dark",
+                        "id": "jawg.dark"
+                    },
+                    {
+                        "url": "https://tile.jawg.io/jawg-streets/{z}/{x}/{y}.png?access-token=FR099NQpwlavnwzU2eVmGygH4PNEwk9gNKKPyN7zbfP9IJhVeh634PpJolA6I2Tn",
+                        "strictTMS": false,
+                        "provider": "custom",
+                        "label": "Jawg Streets",
+                        "id": "jawg.streets"
+                    }
+                ]
+            });
+        });
+        <\/script>
+    </head>
+  `
+
+  iframeBody.innerHTML = /*html*/`
+    <div ng-app="ods-widgets">
+      {{ with .Page.Resources.GetMatch "*.html.inc" }}
+       {{ .Content | safeHTML}}
+      {{ end }}
+
+      <style type="text/css">
+        {{ with .Page.Resources.GetMatch ".css.inc"}}
+          {{ .Content | safeCSS }}
+        {{ end }}
+      </style>
+    </div>
+  `
+</script>
