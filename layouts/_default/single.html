@@ -3,12 +3,11 @@
 {{ end }}
 
 {{ define "main" }}
-<h1>_default single.html</h1>
 
-<h2>{{ .Title }}</h2>
+{{ .Content }}
 
-<hr>
-<br/>
+{{ range .Page.Resources.Match "*/index.md" }}
+    {{ .Content }}
+{{ end }}
 
-<p>{{ .Content }}</p>
 {{ end }}

@@ -1,0 +1,82 @@
+{{ $html := path.Join .Page.Dir "html.inc" | readFile }}
+{{ $css := path.Join .Page.Dir "css.inc" | readFile }}
+
+
+<div class="copy">
+    <h3>Get the code</h3>
+    <button id="copyhtml-{{ .Page.Slug }}">Copy HTML</button>
+    <button id="copycss-{{ .Page.Slug }}">Copy CSS</button>
+
+    <script type="application/javascript">
+        function copyhtml() {
+            var $temp = $("<textarea>");
+            $("body").append($temp);
+            $temp.val({{ $html }}).select();
+            document.execCommand("copy");
+            $temp.remove();
+        }
+        $("#copyhtml-{{ .Page.Slug }}").on("click", copyhtml);
+        function copycss() {
+            var $temp = $("<textarea>");
+            $("body").append($temp);
+            $temp.val({{ $css }}).select();
+            document.execCommand("copy");
+            $temp.remove();
+        }
+        $("#copycss-{{ .Page.Slug }}").on("click", copycss);
+    </script>
+</div>
+
+<div class="codepen">
+    <h3>Edit on codepen</h3>
+    {{ $htmlcontent := printf "%s%s%s" "<div ng-app=\"ods-widgets\">\n" $html "</div>" }}
+    {{ $csscontent := $css }}
+    {{ $head := "/layouts/partials/includes.html" | readFile | jsonify }}
+
+    <form action="https://codepen.io/pen/define" method="POST" target="_blank">
+        <input type="hidden" name="data" value='{
+            "title": "New Pen!",
+            "head": {{ $head }},
+            "editors": 110,
+            "html": {{ $htmlcontent | jsonify }},
+            "css": {{ $csscontent | jsonify }} }'>
+        <input type="submit" value="Create a new pen with this code !">
+    </form>
+</div>
+
+<div class="live">
+    <h3>Live view</h3>
+    <iframe id="iframe-{{ .Page.Slug }}" width="100%" height="600px" src="about:blank"
+            srcdoc="
+<head>{{ "/layouts/partials/includes.html" | readFile }}</head>
+    <body>
+        <div ng-app='ods-widgets'>
+            {{ $html }}
+        </div>
+        <style type='text/css'>
+            {{ $css }}
+        </style>
+    </body>
+"></iframe>
+</div>
+
+<div class="code">
+    <h3>See the code</h3>
+    <nav>
+        <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active" id="nav-{{ .Page.Slug }}" data-toggle="tab" href="#{{ .Page.Slug }}1" role="tab"
+               aria-controls="nav-home" aria-selected="true">HTML</a>
+            <a class="nav-item nav-link" id="nav-{{ .Page.Slug }}" data-toggle="tab" href="#{{ .Page.Slug }}2" role="tab"
+               aria-controls="nav-home" aria-selected="false">CSS</a>
+        </div>
+    </nav>
+
+    <div class="tab-content" id="{{ .Page.Slug }}">
+        <div class="tab-pane fade show active" id="{{ .Page.Slug }}1" role="tabpanel" aria-labelledby="nav-html">
+            <pre>{{ $html }}</pre>
+        </div>
+        <div class="tab-pane fade" id="{{ .Page.Slug }}2" role="tabpanel" aria-labelledby="nav-css">
+            <pre>{{ $css }}</pre>
+        </div>
+    </div>
+</div>
