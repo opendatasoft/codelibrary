@@ -4,10 +4,12 @@
 
 {{ define "main" }}
 
-{{ .Content }}
-
-{{ range .Page.Resources.Match "*/index.md" }}
+<div class="container">
     {{ .Content }}
-{{ end }}
+
+    {{ range .Page.Resources.Match "*/index.md" }}
+        {{ .Content }}
+    {{ end }}
+</div>
 
 {{ end }}
