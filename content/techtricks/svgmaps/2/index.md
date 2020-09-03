@@ -1,6 +1,5 @@
 ---
-title: "SVG Maps / 2"
-slug: "svgmaps-2"
+title: "SVG Maps 2"
 date: 2020-08-24T15:57:58+02:00
 ---
 
