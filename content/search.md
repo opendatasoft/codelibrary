@@ -40,6 +40,7 @@ i.e. add `category`
 \```
 
 ### Edit fuse.js options to Search
+PTDR
 `static/js/search.js`
 \```
 keys: [
