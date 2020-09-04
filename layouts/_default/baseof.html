@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
 </head>
 <body>
+{{ partial "header" . }}
 {{ block "main" . }}
 {{ end }}
 
@@ -28,7 +29,7 @@
 
 {{ $copy := resources.Get "js/copy.js" }}
 <script src="{{ $copy.RelPermalink }}"></script>
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+{{ partial "search" . }}
 </body>
 </html>

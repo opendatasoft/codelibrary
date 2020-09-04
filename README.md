@@ -4,9 +4,9 @@ V0 - WIP
 
 ### Cmds
 
-Run 
+Run (with drafts)
 ```shell script
-hugo server
+hugo server -D
 ```
 
 
