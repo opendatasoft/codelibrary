@@ -1,5 +1,4 @@
 import Fuse from 'fuse.js'
-import { list } from './list.js'
 
 const options = {
   // isCaseSensitive: false,
@@ -20,17 +19,23 @@ const options = {
   ]
 };
 
-const fuse = new Fuse(list, options)
-
 const searchBox = document.getElementById('search-box')
 const searchResultsBox = document.getElementById('search-results-box')
 
-const updateSearch = (event) => {
+const initFuse = async () => {
+  const res = await fetch('index.json')
+  const list = await res.json()
+  const fuseInstance = new Fuse(list, options)
+  return fuseInstance
+}
+
+const updateSearch = fuseInstance => event => {
   const pattern = event.target.value
-  const searchResults = fuse.search(pattern)
+  const searchResults = fuseInstance.search(pattern)
   searchResultsBox.innerText = JSON.stringify(searchResults)
 }
 
-export default () => {
-  searchBox && searchBox.addEventListener('input', updateSearch)
+export default async () => {
+  const fuse = await initFuse()
+  searchBox && searchBox.addEventListener('input', updateSearch(fuse))
 }
