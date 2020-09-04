@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
 
     {{ $style := resources.Get "scss/main.scss" | resources.ToCSS }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
+    <link rel="prefetch" href="{{ $style.RelPermalink }}" />
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
@@ -26,8 +26,6 @@
 {{ end }}
 
 {{ partial "footer" . }}
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
 
 {{ $built := resources.Get "js/main.js" | js.Build "index.js" }}
 <script type="text/javascript" src="{{ $built.RelPermalink }}" defer></script>
