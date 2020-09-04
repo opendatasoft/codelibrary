@@ -35,7 +35,7 @@ const updateSearch = fuseInstance => event => {
   searchResultsBox.innerText = JSON.stringify(searchResults)
 }
 
-export default async () => {
+export const initSearch =  async () => {
   const fuse = await initFuse()
   searchBox && searchBox.addEventListener('input', updateSearch(fuse))
 }
