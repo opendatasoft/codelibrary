@@ -14,7 +14,7 @@
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
 
-    {{ $style := resources.Get "scss/main.scss" | resources.ToCSS }}
+    {{ $style := resources.Get "scss/main.scss" | resources.ToCSS | minify | fingerprint }}
     <link rel="prefetch" href="{{ $style.RelPermalink }}" />
 
 
@@ -27,7 +27,7 @@
 
 {{ partial "footer" . }}
 
-{{ $built := resources.Get "js/main.js" | js.Build "index.js" }}
+{{ $built := resources.Get "js/main.js" | js.Build "index.js" | minify | fingerprint }}
 <script type="text/javascript" src="{{ $built.RelPermalink }}" defer></script>
 
 </body>
