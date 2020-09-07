@@ -1,0 +1,23 @@
+<h1>Partial nav</h1>
+
+<input type="text" id="search-box">
+<ul id="search-results-box"></ul>
+
+<h2>
+    <a href="{{ .Site.BaseURL }}">Home</a>
+</h2>
+
+<h2>Categories</h2>
+<ul>
+    {{ range .Site.Taxonomies.categories }}
+    <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
+    {{ end }}
+</ul>
+
+<h2>Tags</h2>
+
+<ul>
+    {{ range .Site.Taxonomies.tags }}
+    <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> {{ .Count }}</li>
+    {{ end }}
+</ul>

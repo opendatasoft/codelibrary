@@ -14,17 +14,38 @@
     {{ $style := resources.Get "scss/main.scss" | resources.ToCSS }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 
-    {{ block "headimports" . }}
-    {{ end }}
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
 </head>
 <body>
-{{ block "main" . }}
-{{ end }}
 
-{{ block "footer" . }}
-{{ end }}
+<header class="cl-header">
+    {{ partial "header" . }}
+</header>
 
-{{ block "bodyimports" . }}
-{{ end }}
+<div class="cl-page">
+    <nav class="cl-nav">
+        {{ partial "nav" . }}
+    </nav>
+    <div class="cl-content">
+        {{ block "main" . }}
+        {{ end }}
+    </div>
+</div>
+
+<footer class="cl-footer">
+    {{ partial "footer" . }}
+</footer>
+
+<!--
+{{ $copy := resources.Get "js/copy.js" }}
+<script src="{{ $copy.RelPermalink }}"></script>
+-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+{{ $built := resources.Get "js/main.js" | js.Build "index.js" }}
+<script type="text/javascript" src="{{ $built.RelPermalink }}" defer></script>
+
 </body>
 </html>

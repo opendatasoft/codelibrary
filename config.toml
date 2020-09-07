@@ -2,16 +2,10 @@ baseURL = "https://opendatasoft.github.io/codelibrary/"
 languageCode = "en-us"
 title = "Codelibrary"
 
+[taxonomies]
+  category = "categories"
+  tag = "tags"
 
-[outputFormats.Algolia]
-baseName = "algolia"
-isPlainText = true
-mediaType = "application/json"
-notAlternative = true
-
-[params.algolia]
-vars = ["title", "summary", "date", "permalink"]
-params = ["categories", "tags"]
-
+## Add JSON output for search
 [outputs]
-home = ["HTML", "RSS", "Algolia"]
+  home = ["HTML", "RSS", "JSON"]
