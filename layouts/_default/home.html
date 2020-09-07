@@ -1,0 +1,42 @@
+{{ define "title" }}
+{{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+
+{{ define "headimports" }}
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch.min.css">
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch-theme-algolia.min.css">
+{{ end }}
+
+{{ define "main" }}
+
+<div class="container">
+    <h1>Codelibrary Home</h1>
+
+    <div id="search-box">
+        <!-- SearchBox widget will appear here -->
+    </div>
+    <div id="refinement-list">
+        <!-- RefinementList widget will appear here -->
+    </div>
+    <div id="current-refined-values">
+        <!-- CurrentRefinedValues widget will appear here -->
+    </div>
+    <div id="clear-all">
+        <!-- ClearAll widget will appear here -->
+    </div>
+    <div id="hits">
+        <!-- Hits widget will appear here -->
+    </div>
+</div>
+
+{{ end }}
+
+
+{{ define "footer" }}
+{{ end }}
+
+{{ define "bodyimports" }}
+    {{ $search := resources.Get "js/search.js" }}
+    <script src="{{ $search.RelPermalink }}"></script>
+{{ end }}

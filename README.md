@@ -15,3 +15,8 @@ Deploy on GH Pages
 hugo
 git subtree push --prefix public origin gh-pages
 ```
+
+Update Algolia index (see .env)
+```shell script
+npm run algolia
+```

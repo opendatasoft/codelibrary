@@ -2,6 +2,10 @@
 {{ .Title }} &ndash; {{ .Site.Title }}
 {{ end }}
 
+{{ define "headimports" }}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
+{{ end }}
+
 {{ define "main" }}
 
 <div class="container">
@@ -12,4 +16,18 @@
     {{ end }}
 </div>
 
+{{ end }}
+
+
+
+
+{{ define "footer" }}
+{{ end }}
+
+
+{{ define "bodyimports" }}
+    {{ $copy := resources.Get "js/copy.js" }}
+    <script src="{{ $copy.RelPermalink }}"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
 {{ end }}
