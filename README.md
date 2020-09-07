@@ -4,11 +4,15 @@ V0 - WIP
 
 ### Cmds
 
-Run 
+Install
 ```shell script
-hugo server
+brew install hugo
 ```
 
+Run 
+```shell script
+hugo server -D
+```
 
 Deploy on GH Pages
 ```shell script
