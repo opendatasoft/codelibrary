@@ -6,29 +6,49 @@
         {{ .Site.Title }}
         {{ end }}</title>
 
-    <!--<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
--->
     <!-- JavaScript and dependencies -->
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-
     {{ $style := resources.Get "scss/main.scss" | resources.ToCSS }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 
+    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch-theme-algolia.min.css">
 </head>
 <body>
-{{ block "main" . }}
-{{ end }}
 
-{{ partial "footer" . }}
+<header class="cl-header">
+    {{ partial "header" . }}
+</header>
 
+<div class="cl-page">
+    <nav class="cl-nav">
+        {{ partial "nav" . }}
+    </nav>
+    <div class="cl-content">
+        {{ block "main" . }}
+        {{ end }}
+    </div>
+</div>
+
+<footer class="cl-footer">
+    {{ partial "footer" . }}
+</footer>
+
+<!--
 {{ $copy := resources.Get "js/copy.js" }}
 <script src="{{ $copy.RelPermalink }}"></script>
+-->
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+{{ $built := resources.Get "js/main.js" | js.Build "index.js" }}
+<script type="text/javascript" src="{{ $built.RelPermalink }}" defer></script>
+
 </body>
 </html>

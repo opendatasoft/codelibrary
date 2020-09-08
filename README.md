@@ -4,14 +4,23 @@ V0 - WIP
 
 ### Cmds
 
-Run 
+Install
 ```shell script
-hugo server
+brew install hugo
 ```
 
+Run 
+```shell script
+hugo server -D
+```
 
 Deploy on GH Pages
 ```shell script
 hugo
 git subtree push --prefix public origin gh-pages
+```
+
+Update Algolia index (see .env)
+```shell script
+npm run algolia
 ```

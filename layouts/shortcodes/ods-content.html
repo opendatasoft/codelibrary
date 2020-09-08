@@ -19,9 +19,9 @@
 <div class="ods-content">
     <nav>
         <div class="nav nav-tabs justify-content-center" id="nav{{ .Page.Title | urlize}}-tab" role="tablist">
-            <a class="nav-item nav-link active" id="nav{{ .Page.Title | urlize}}-live-tab" data-toggle="tab" href="#nav{{ .Page.Title | urlize}}-live" role="tab" aria-controls="nav{{ .Page.Title | urlize}}-live" aria-selected="true">Live snippet</a>
-            <a class="nav-item nav-link" id="nav{{ .Page.Title | urlize}}-code-tab" data-toggle="tab" href="#nav{{ .Page.Title | urlize}}-code" role="tab" aria-controls="nav{{ .Page.Title | urlize}}-code" aria-selected="false">Get the code</a>
-        </div>
+        <a class="nav-item nav-link active" id="nav{{ .Page.Title | urlize}}-live-tab" data-toggle="tab" href="#nav{{ .Page.Title | urlize}}-live" role="tab" aria-controls="nav{{ .Page.Title | urlize}}-live" aria-selected="true">Live snippet</a>
+        <a class="nav-item nav-link" id="nav{{ .Page.Title | urlize}}-code-tab" data-toggle="tab" href="#nav{{ .Page.Title | urlize}}-code" role="tab" aria-controls="nav{{ .Page.Title | urlize}}-code" aria-selected="false">Get the code</a>
+</div>
     </nav>
 
     <div class="tab-content" id="{{ .Page.Title | urlize}}">
@@ -29,7 +29,10 @@
             <div class="row">
                 <iframe id="iframe-{{ .Page.Title | urlize}}" width="100%" height="600px" src="about:blank"
                     srcdoc="
-<head>{{ "/layouts/partials/includes.html" | readFile }}</head>
+<head>{{ "/layouts/partials/includes.html" | readFile }}
+{{ $style := resources.Get "scss/main.scss" | resources.ToCSS }}
+<link rel='stylesheet' href='{{ $style.RelPermalink }}' />
+</head>
 <body>
 <div ng-app='ods-widgets'>
     {{ $html }}
