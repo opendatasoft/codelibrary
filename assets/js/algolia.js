@@ -1,40 +1,53 @@
-const search = instantsearch({
-    appId: 'XGE67QYGAR',
-    apiKey: '4de1a710351e1933128b8010dbc2a327',
-    indexName: 'Codelibrary',
-    hitsPerPage: 5,
-    routing: true,
-    searchFunction(helper) {
-        const container = document.querySelector('#algolia-results');
-        container.style.display = helper.state.query === '' ? 'none' : '';
+import algoliasearch from 'algoliasearch/lite';
+import instantsearch from 'instantsearch.js';
+import { searchBox, infiniteHits } from 'instantsearch.js/es/widgets';
 
-        helper.search();
-    }
-});
+var hit = `
+    <div class="hit">
+        <div class="hit-content">
+            <h2 class="hit-title">{{{_highlightResult.title.value}}}</h2>
+            <p class="hit-categories">{{{categories}}}</p>
+            <p class="hit-tags">{{{tags}}}</p>
+            <p class="hit-summary">{{{_highlightResult.summary.value}}}</p>
+        </div>
+    </div>
+    `;
+var empty = `
+    <div id="no-results-message">
+        <p>We didn't find any results for the search <em>"{{query}}"</em>.</p>
+        <a href="." class='clear-all'>Clear search</a>
+    </div>
+    `;
 
-search.addWidget(
-    instantsearch.widgets.searchBox({
-        container: '#algolia-box',
-        reset: true,
-        placeholder: 'Search for content'
-    })
-);
-search.addWidget(
-    instantsearch.widgets.infiniteHits({
-        container: "#algolia-results",
-        templates: {
-            empty: 'No results',
-            item: '<hr/> {{{_highlightResult.title.value}}}<br/> {{{_highlightResult.summary.value}}} <br/>{{{_highlightResult.tags[0].value}}}'
-        },
-    })
-);
+export function initSearch() {
+    const search = instantsearch({
+        indexName: 'Codelibrary',
+        searchClient: algoliasearch('XGE67QYGAR', '4de1a710351e1933128b8010dbc2a327'),
+        hitsPerPage: 5,
+        routing: true,
+        searchFunction(helper) {
+            const container = document.querySelector('#algolia-results');
+            container.style.display = helper.state.query === '' ? 'none' : '';
 
-// initialize RefinementList
-search.addWidget(
-    instantsearch.widgets.refinementList({
-        container: "#algolia-refine",
-        attributeName: "tags",
-    })
-);
+            helper.search();
+        }
+    });
 
-search.start();
+    search.addWidgets([
+        searchBox({
+            container: '#algolia-box',
+            autofocus: true,
+            placeholder: 'Search for content'
+        }),
+
+        infiniteHits({
+            container: "#algolia-results",
+            templates: {
+                item: hit,
+                empty: empty,
+            }
+        })
+    ]);
+
+    search.start();
+};

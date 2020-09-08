@@ -11,14 +11,12 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
     <!-- CSS only -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-    {{ $style := resources.Get "scss/main.scss" | resources.ToCSS }}
-    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
-
-    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch-theme-algolia.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css" integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8=" crossorigin="anonymous">
+
+    {{ $style := resources.Get "scss/main.scss" | resources.ToCSS | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ $style.RelPermalink }}" />
 </head>
 <body>
 
@@ -40,14 +38,11 @@
     {{ partial "footer" . }}
 </footer>
 
-<!--
-{{ $copy := resources.Get "js/copy.js" }}
-<script src="{{ $copy.RelPermalink }}"></script>
--->
+{{ $defines := dict "process.env.NODE_ENV" `"development"` }}
+{{ $opts := dict "targetPath" "index.js" "defines" $defines }}
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
-
-{{ $built := resources.Get "js/main.js" | js.Build "index.js" }}
+{{ $built := resources.Get "js/main.js" | js.Build $opts | minify | fingerprint }}
+<script>var process = { "env": { "NODE_ENV": "production" } }</script>
 <script type="text/javascript" src="{{ $built.RelPermalink }}" defer></script>
 
 </body>
