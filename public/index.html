@@ -15,8 +15,11 @@ Home &ndash; Codelibrary
     
     <link rel="stylesheet" href="/codelibrary/scss/main.css" />
 
+    <script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch-theme-algolia.min.css">
 </head>
 <body>
 
@@ -81,8 +84,22 @@ Home &ndash; Codelibrary
     <nav class="cl-nav">
         <h1>Partial nav</h1>
 
+<input type="text" id="algolia-box">
+<ul id="algolia-results"></ul>
+
+
 <input type="text" id="search-box">
 <ul id="search-results-box"></ul>
+
+<script id="search-result-template" type="text/x-js-template">
+    <div id="summary-${key}">
+        <h4><a href="${link}">${title}</a></h4>
+        <p>${snippet}</p>
+        ${ isset tags }<p>Tags: ${tags}</p>${ end }
+        ${ isset categories }<p>Categories: ${categories}</p>${ end }
+        ${ isset score }<p>Score: ${score}</p>${ end }
+    </div>
+</script>
 
 <h2>
     <a href="https://opendatasoft.github.io/codelibrary/">Home</a>
@@ -130,21 +147,6 @@ Home &ndash; Codelibrary
 <div class="container">
     <h1>Codelibrary Home</h1>
 
-    <div id="search-box">
-        
-    </div>
-    <div id="refinement-list">
-        
-    </div>
-    <div id="current-refined-values">
-        
-    </div>
-    <div id="clear-all">
-        
-    </div>
-    <div id="hits">
-        
-    </div>
 </div>
 
 
