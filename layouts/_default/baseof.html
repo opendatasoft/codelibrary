@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css" integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8=" crossorigin="anonymous">
 
-    {{ $style := resources.Get "scss/main.scss" | resources.ToCSS | minify | fingerprint }}
+    {{ $style := resources.Get "scss/main.scss" | resources.ToCSS (dict "outputStyle" "compressed" "includePaths" (slice "node_modules")) }}
     <link rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}" />
 </head>
 <body>
