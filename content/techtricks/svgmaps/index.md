@@ -1,7 +1,6 @@
 ---
 title: "SVG Maps"
 date: 2020-08-24T15:57:58+02:00
-categories: ["Techtricks"]
 tags: ["ods-maps", "widget", "map", "compute", "render"]
 resources:
 - src: '*/'

@@ -1,30 +1,22 @@
 <aside class="menu">
+  {{ $currentPage := . }}
   <p class="menu-label">
-    General
+    Sections
   </p>
   <ul class="menu-list">
-    <li><a>Dashboard</a></li>
-    <li><a>Customers</a></li>
-  </ul>
-  <p class="menu-label">
-    Administration
-  </p>
-  <ul class="menu-list">
-    <li><a>Team Settings</a></li>
+    {{ range .Site.Menus.main }}
     <li>
-      <a class="is-active">Manage Your Team</a>
+      <a href="{{ .URL }}">
+        {{ .Name }}
+      </a>
       <ul>
-        <li><a>Members</a></li>
-        <li><a>Plugins</a></li>
-        <li><a>Add a member</a></li>
+        <li></li>
       </ul>
     </li>
-    <li><a>Invitations</a></li>
-    <li><a>Cloud Storage Environment Settings</a></li>
-    <li><a>Authentication</a></li>
+    {{ end }}
   </ul>
   <p class="menu-label">
-    Transactions
+    Tags
   </p>
   <ul class="menu-list">
     <li><a>Payments</a></li>
