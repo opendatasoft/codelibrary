@@ -5,14 +5,26 @@
   </p>
   <ul class="menu-list">
     {{ range .Site.Menus.main }}
-    <li>
-      <a class="{{ if $currentPage.IsMenuCurrent "main" . }}is-active{{ end }}" href="{{ .URL }}">
-        {{ .Name }}
-      </a>
-      <ul>
-        <li></li>
-      </ul>
-    </li>
+      {{ if eq $currentPage.Section .Page.Section }}
+        <li>
+          <a class="{{ if $currentPage.IsMenuCurrent "main" . }}is-active{{ end }}" href="{{ .URL }}">
+            {{ .Name }}
+          </a>
+          <ul>
+            {{ range .Page.Pages }}
+              <li>
+                <a class="{{ if eq $currentPage . }}is-active{{ end }}" href="{{ .Permalink }}">{{ .Title }}</a>
+              </li>
+            {{ end }}
+          </ul>
+        </li>
+      {{ else }}
+        <li>
+          <a href="{{ .URL }}">
+            {{ .Name }}
+          </a>
+        </li>
+      {{ end }}
     {{ end }}
   </ul>
   <p class="menu-label">
