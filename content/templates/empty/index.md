@@ -1,6 +1,5 @@
 ---
 title: "Empty"
-categories: ["Empty"]
 tags: ["empty"]
 resources:
 - src: '*/'

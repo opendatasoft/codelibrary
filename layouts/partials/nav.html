@@ -1,44 +1,45 @@
 <aside class="menu p-4">
-  <div id="algolia-box"></div>
-  <div id="algolia-results"></div>
-  <div id="algolia-refine"></div>
+    <div id="algolia-box"></div>
+    <div id="algolia-results"></div>
 
-  <h2><a href="{{ .Site.BaseURL }}">Home</a></h2>
+    <h2 class="title is-5 mt-3"><a href="{{ .Site.BaseURL }}">Home</a></h2>
 
-  {{ $currentPage := . }}
-  <p class="menu-label">
-    Sections
-  </p>
-  <ul class="menu-list">
-    {{ range .Site.Menus.main }}
-      {{ if eq $currentPage.Section .Page.Section }}
+    {{ $currentPage := . }}
+    <p class="menu-label">
+        Sections
+    </p>
+    <ul class="menu-list">
+        {{ range .Site.Menus.main }}
+        {{ if eq $currentPage.Section .Page.Section }}
         <li>
-          <a class="{{ if $currentPage.IsMenuCurrent "main" . }}is-active{{ end }}" href="{{ .URL }}">
+            <a class="{{ if $currentPage.IsMenuCurrent " main" . }}is-active{{ end }}" href="{{ .URL }}">
             {{ .Name }}
-          </a>
-          <ul>
-            {{ range .Page.Pages }}
-              <li>
-                <a class="{{ if eq $currentPage . }}is-active{{ end }}" href="{{ .Permalink }}">{{ .Title }}</a>
-              </li>
-            {{ end }}
-          </ul>
+            </a>
+            <ul>
+                {{ range .Page.Pages }}
+                <li>
+                    <a class="{{ if eq $currentPage . }}is-active{{ end }}" href="{{ .Permalink }}">{{ .Title }}</a>
+                </li>
+                {{ end }}
+            </ul>
         </li>
-      {{ else }}
+        {{ else }}
         <li>
-          <a href="{{ .URL }}">
-            {{ .Name }}
-          </a>
+            <a href="{{ .URL }}">
+                {{ .Name }}
+            </a>
         </li>
-      {{ end }}
-    {{ end }}
-  </ul>
-  <p class="menu-label">
-    Tags
-  </p>
-  {{ range .Site.Taxonomies.tags }}
-  <a class="tag {{ if eq $currentPage .Page }}is-primary{{end}}" href="{{ .Page.Permalink }}">
-    {{ .Page.Title }}
-  </a>
-  {{ end }}
+        {{ end }}
+        {{ end }}
+    </ul>
+    <p class="menu-label">
+        Tags
+    </p>
+    <div class="tags">
+        {{ range .Site.Taxonomies.tags }}
+        <a class="tag {{ if eq $currentPage .Page }}is-primary{{end}}" href="{{ .Page.Permalink }}">
+            {{ .Page.Title }}
+        </a>
+        {{ end }}
+    </div>
 </aside>
