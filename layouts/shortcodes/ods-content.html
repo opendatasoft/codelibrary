@@ -1,6 +1,8 @@
 {{ $html := path.Join .Page.File.Dir "html.inc" | readFile }}
 {{ $css := path.Join .Page.File.Dir "css.inc" | readFile }}
 
+{{ (replace (.Page.File.Dir | urlize) "/" "-") }}
+
 <div class="codepen">
     {{ $htmlcontent := printf "%s%s%s" "<div ng-app=\"ods-widgets\">\n" $html "</div>" }}
     {{ $csscontent := $css }}
