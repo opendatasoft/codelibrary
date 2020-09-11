@@ -20,18 +20,15 @@
 </head>
 <body>
 
-<header class="cl-header">
-    {{ partial "header" . }}
-</header>
-
-<div class="cl-page">
-    <nav class="cl-nav">
-        {{ partial "nav" . }}
-    </nav>
-    <div class="cl-content">
-        {{ block "main" . }}
-        {{ end }}
-    </div>
+{{ partial "header" . }}
+<div class="columns">
+  <div class="column is-one-quarter">
+    {{ partial "nav" . }}
+  </div>
+  <div class="column">
+    {{ block "main" . }}
+    {{ end }}
+  </div>
 </div>
 
 <footer class="cl-footer">
