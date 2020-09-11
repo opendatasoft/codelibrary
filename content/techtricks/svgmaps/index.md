@@ -1,6 +1,8 @@
 ---
 title: "SVG Maps"
 date: 2020-08-24T15:57:58+02:00
+description: "How to create fast analytics maps based on SVG static files and data aggregation"
+categories: ["Techtricks"]
 tags: ["ods-maps", "widget", "map", "compute", "render"]
 resources:
 - src: '*/'
@@ -11,4 +13,4 @@ resources:
 
 When your goal is to share a precise analysis of a theme, such as employment or demography, for given administrative territories, you may want to disable all interactions with the map. You will even probably want to have overseas territories right next to the other territories in order to visualize immediately how the measurement varies across these administrative areas.
 
-In this situation, you might prefer a static colored picture over a classic map widget. The ressource below shows you how to create such static analyses of administrative divisions.
+In this situation, you might prefer a static colored picture over a classic map widget. The resource below shows you how to create such static analyses of administrative divisions.

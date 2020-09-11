@@ -16,7 +16,7 @@ ODS Analysis &ndash; Codelibrary
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css" integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8=" crossorigin="anonymous">
 
     
-    <link rel="stylesheet" type="text/css" href="/scss/main.9908c8cf5d85222ad0965488b4ffc673039eec5572e5724f4bf62e5c5fc9c0a5.css" />
+    <link rel="stylesheet" type="text/css" href="/scss/main.css" />
 </head>
 <body>
 
@@ -79,26 +79,27 @@ ODS Analysis &ndash; Codelibrary
 
 <div class="cl-page">
     <nav class="cl-nav">
-        <h1>Partial nav</h1>
+        <div id="algolia-box"></div>
+<div id="algolia-results">
+    <div class="algolia-docsearch-footer">
+        Search by <a class="algolia-docsearch-footer--logo" href="https://www.algolia.com/docsearch">Algolia</a>
+    </div>
+</div>
 
-<div id="algolia-box"></div>
-<div id="algolia-results"></div>
-<div id="algolia-refine"></div>
-
-<h2>
+<h2 class="title is-4 mt-4">
     <a href="https://codelibrary.opendatasoft.com">Home</a>
 </h2>
 
-<h2>Categories</h2>
+<h2 class="subtitle is-5 mt-4 mb-2">Categories</h2>
 <ul>
     
-    <li><a href="https://codelibrary.opendatasoft.com/categories/empty/">Empty</a> 1</li>
+    <li><a href="https://codelibrary.opendatasoft.com/categories/components/">Components</a> 1</li>
     
-    <li><a href="https://codelibrary.opendatasoft.com/categories/techtricks/">Techtricks</a> 2</li>
+    <li><a href="https://codelibrary.opendatasoft.com/categories/techtricks/">Techtricks</a> 3</li>
     
 </ul>
 
-<h2>Tags</h2>
+<h2 class="subtitle is-5 mt-4 mb-2">Tags</h2>
 
 <ul>
     
@@ -108,17 +109,31 @@ ODS Analysis &ndash; Codelibrary
     
     <li><a href="https://codelibrary.opendatasoft.com/tags/analyse/">analyse</a> 1</li>
     
+    <li><a href="https://codelibrary.opendatasoft.com/tags/card/">card</a> 1</li>
+    
+    <li><a href="https://codelibrary.opendatasoft.com/tags/catalog/">catalog</a> 1</li>
+    
+    <li><a href="https://codelibrary.opendatasoft.com/tags/component/">component</a> 1</li>
+    
     <li><a href="https://codelibrary.opendatasoft.com/tags/compute/">compute</a> 2</li>
     
-    <li><a href="https://codelibrary.opendatasoft.com/tags/empty/">empty</a> 1</li>
+    <li><a href="https://codelibrary.opendatasoft.com/tags/contact/">contact</a> 1</li>
     
     <li><a href="https://codelibrary.opendatasoft.com/tags/map/">map</a> 1</li>
+    
+    <li><a href="https://codelibrary.opendatasoft.com/tags/metadata/">metadata</a> 1</li>
+    
+    <li><a href="https://codelibrary.opendatasoft.com/tags/modal/">modal</a> 1</li>
     
     <li><a href="https://codelibrary.opendatasoft.com/tags/ods-analysis/">ods-analysis</a> 1</li>
     
     <li><a href="https://codelibrary.opendatasoft.com/tags/ods-maps/">ods-maps</a> 1</li>
     
-    <li><a href="https://codelibrary.opendatasoft.com/tags/render/">render</a> 1</li>
+    <li><a href="https://codelibrary.opendatasoft.com/tags/pop-in/">pop-in</a> 1</li>
+    
+    <li><a href="https://codelibrary.opendatasoft.com/tags/render/">render</a> 2</li>
+    
+    <li><a href="https://codelibrary.opendatasoft.com/tags/template/">template</a> 1</li>
     
     <li><a href="https://codelibrary.opendatasoft.com/tags/widget/">widget</a> 2</li>
     
@@ -128,8 +143,9 @@ ODS Analysis &ndash; Codelibrary
     <div class="cl-content">
         
 
-<div class="">
-    <h1 id="ods-analysis-a-quick-intro">Ods-analysis, a quick intro</h1>
+<div class="content">
+    <div class="box">
+        <h1 id="ods-analysis-a-quick-intro">Ods-analysis, a quick intro</h1>
 <p><strong>The technical documentation says :</strong></p>
 <p><em>This widget exposes the results of an analysis (as an object containing a results array and optionally an aggregations object) in a variable available in the scope. It can be used with AngularJS&rsquo;s ngRepeat to simply build a table of analysis results.</em></p>
 <p><strong>Normal people would say :</strong></p>
@@ -137,11 +153,17 @@ ODS Analysis &ndash; Codelibrary
 <p>The syntax is different, but options and parameters are pretty similar. You have a context, an X axis, you define series, optionnaly you sort the results.
 To conclude, we can say that : <strong>ods-analysis is the low level widget of ods-chart, its underlying layer !</strong></p>
 
-
+    </div>
     
-    <h2 id="heading"></h2>
+    <div class="box">
+        <h2 id="what-an-ods-analysis-results-object-looks-like">What an ods-analysis results object looks like</h2>
+<p>The <strong>ods-analysis</strong> output is a json object, containing one key <strong>results</strong>.
+It&rsquo;s value is a json array and each item contains the <strong>x</strong> value of the analysis, and <strong>one to many series</strong>.</p>
+<p>Compare, side-by-side the ods-chart values and the ods-analysis results. They both have the same settings (x axis, series, number of results and sort parameters)</p>
 
 
+
+techtricks-odsanalysis-1-
 
 <div class="codepen">
     
@@ -151,7 +173,7 @@ To conclude, we can say that : <strong>ods-analysis is the low level widget of o
     <form id="form-ods-analysis-1" action="https://codepen.io/pen/define" method="POST" target="_blank">
         <input type="hidden" name="data" value='{
                                 "title": "New Pen!",
-                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n&#34;,
+                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n&#34;,
                                 "editors": 110,
                                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;shanghaiworlduniversityranking\&#34;\n                     shanghaiworlduniversityranking-dataset=\&#34;shanghai-world-university-ranking\&#34;\n                     shanghaiworlduniversityranking-domain=\&#34;public\&#34;\n                     shanghaiworlduniversityranking-parameters=\&#34;{&#39;sort&#39;:&#39;world_rank&#39;}\&#34;\u003e\n    \u003cdiv class=\&#34;row\&#34;\u003e\n        \u003cdiv class=\&#34;col-md-7\&#34;\u003e\n            \u003cods-chart single-y-axis=\&#34;true\&#34;\n                       min=\&#34;0\&#34; max=\&#34;110\&#34; step=\&#34;10\&#34;\n                       labels-x-length=\&#34;43\&#34;\n                       label-x=\&#34;University name\&#34;\u003e\n                \u003cods-chart-query context=\&#34;shanghaiworlduniversityranking\&#34;\n                                 field-x=\&#34;university_name\&#34;\n                                 maxpoints=\&#34;10\&#34; sort=\&#34;serie1-3\&#34;\u003e\n                    \u003cods-chart-serie expression-y=\&#34;pub\&#34;\n                                     chart-type=\&#34;column\&#34;\n                                     function-y=\&#34;MAX\&#34;\n                                     label-y=\&#34;Best Publication score\&#34; color=\&#34;#FF515A\&#34;\n                                     display-values=\&#34;true\&#34;\u003e\n                    \u003c/ods-chart-serie\u003e\n                    \u003cods-chart-serie expression-y=\&#34;alumni\&#34;\n                                     chart-type=\&#34;column\&#34;\n                                     function-y=\&#34;MAX\&#34;\n                                     label-y=\&#34;Best Alumni score\&#34; color=\&#34;#1B6698\&#34;\n                                     display-values=\&#34;true\&#34;\u003e\n                    \u003c/ods-chart-serie\u003e\n                    \u003cods-chart-serie expression-y=\&#34;award\&#34;\n                                     chart-type=\&#34;column\&#34;\n                                     function-y=\&#34;MAX\&#34;\n                                     label-y=\&#34;Best Award score\&#34; color=\&#34;#FCD23B\&#34;\n                                     display-values=\&#34;true\&#34;\u003e\n                    \u003c/ods-chart-serie\u003e\n                \u003c/ods-chart-query\u003e\n            \u003c/ods-chart\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;col-md-5\&#34;\u003e\n            \u003cdiv ods-analysis=\&#34;analysisshanghai\&#34;\n                 ods-analysis-context=\&#34;shanghaiworlduniversityranking\&#34;\n                 ods-analysis-max=\&#34;10\&#34;\n                 ods-analysis-x=\&#34;university_name\&#34;\n                 ods-analysis-serie-bestpubscore=\&#34;MAX(pub)\&#34;\n                 ods-analysis-serie-bestalumniscore=\&#34;MAX(alumni)\&#34;\n                 ods-analysis-serie-bestawardscore=\&#34;MAX(award)\&#34;\n                 ods-analysis-sort=\&#34;bestawardscore\&#34;\u003e\n                \u003cpre ng-bind=\&#34;analysisshanghai|json\&#34;\u003e\u003c/pre\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\u003c/div\u003e&#34;,
                                 "css": &#34;&#34; }'>
@@ -174,13 +196,20 @@ To conclude, we can say that : <strong>ods-analysis is the low level widget of o
 <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
 
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
 
 
 <link rel='stylesheet' href='/scss/main.css' />
@@ -331,11 +360,15 @@ To conclude, we can say that : <strong>ods-analysis is the low level widget of o
 
 
 
+    </div>
     
-    <h2 id="top-10">Top 10</h2>
+    <div class="box">
+        <h2 id="top-10">Top 10</h2>
 <p>Like with charts, it&rsquo;s conveniant to use ods-analysis to sort aggregations by the computed serie (like for exemple the sum or average of numerical fields). In this example, the ods-analysis results object is used to print lines of an HTML table to display the information as a table.</p>
 
 
+
+techtricks-odsanalysis-2-
 
 <div class="codepen">
     
@@ -345,7 +378,7 @@ To conclude, we can say that : <strong>ods-analysis is the low level widget of o
     <form id="form-ods-analysis-2" action="https://codepen.io/pen/define" method="POST" target="_blank">
         <input type="hidden" name="data" value='{
                                 "title": "New Pen!",
-                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n&#34;,
+                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n&#34;,
                                 "editors": 110,
                                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;population\&#34;\n                     population-domain=\&#34;discovery\&#34;\n                     population-dataset=\&#34;population-millesimee-communes-2016@public\&#34;\u003e\n    \u003cdiv class=\&#34;row\&#34;\u003e\n        \u003cdiv class=\&#34;col-md-6\&#34;\u003e\n            \u003cods-chart single-y-axis=\&#34;true\&#34; scientific-display=\&#34;true\&#34; labels-x-length=\&#34;18\&#34; align-month=\&#34;true\&#34;\u003e\n                \u003cods-chart-query context=\&#34;population\&#34; field-x=\&#34;nom_de_la_commune\&#34; maxpoints=\&#34;10\&#34; sort=\&#34;serie1-1\&#34;\u003e\n                    \u003cods-chart-serie expression-y=\&#34;population_totale\&#34; chart-type=\&#34;column\&#34; function-y=\&#34;MAX\&#34;\n                                     label-y=\&#34;Population 2016\&#34; color=\&#34;#142E7B\&#34; display-values=\&#34;true\&#34;\n                                     scientific-display=\&#34;true\&#34;\u003e\n                    \u003c/ods-chart-serie\u003e\n                \u003c/ods-chart-query\u003e\n            \u003c/ods-chart\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;col-md-6\&#34;\u003e\n            \u003cdiv ods-analysis=\&#34;analysispopulation\&#34;\n                 ods-analysis-context=\&#34;population\&#34;\n                 ods-analysis-max=\&#34;10\&#34;\n                 ods-analysis-x=\&#34;nom_de_la_commune\&#34;\n                 ods-analysis-serie-population=\&#34;MAX(population_totale)\&#34;\n                 ods-analysis-sort=\&#34;population\&#34;\u003e\n                \u003cdiv id=\&#34;top10\&#34;\u003e\n                    \u003ctable\u003e\n                        \u003ctr\u003e\n                            \u003cth\u003ePosition\u003c/th\u003e\n                            \u003cth\u003eCommune\u003c/th\u003e\n                            \u003cth\u003ePopulation\u003c/th\u003e\n                        \u003c/tr\u003e\n                        \u003ctr ng-repeat=\&#34;(position,analyse) in analysispopulation.results\&#34;\u003e\n                            \u003ctd\u003e{{ position &#43; 1 }}\u003c/td\u003e \u003c!-- Start at 0 --\u003e\n                            \u003ctd\u003e{{ analyse.x | capitalize }}\u003c/td\u003e\n                            \u003ctd\u003e{{ analyse.population | number }}\u003c/td\u003e\n                        \u003c/tr\u003e\n                    \u003c/table\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
                                 "css": &#34;#top10 table {\n    width: 100%;\n}\n#top10 tr th, #top10 tr td {\n    padding: 5px;\n}\n#top10 table td, #top10 table th {\n    text-align: center;\n}\n#top10 tr:nth-child(odd) {\n    background-color: #f1f1f1;\n}\n#top10 tr:nth-child(1) { /* Headers */\n    background-color: #142e7a;\n    color: white;\n}\n#top10 tr:nth-child(2) { /* First pos. */\n    font-weight: 800;\n    font-size: 1.4em;\n}\n#top10 tr:nth-child(3) { /* Second pos. */\n    font-weight: 700;\n    font-size: 1.3em;\n}\n#top10 tr:nth-child(4) { /* Third pos. */\n    font-weight: 600;\n    font-size: 1.2em;\n}\n&#34; }'>
@@ -368,13 +401,20 @@ To conclude, we can say that : <strong>ods-analysis is the low level widget of o
 <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
 
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
 
 
 <link rel='stylesheet' href='/scss/main.css' />
@@ -565,13 +605,17 @@ To conclude, we can say that : <strong>ods-analysis is the low level widget of o
 
 
 
+    </div>
     
-    <h2 id="minmax-bestworst-sizelength">Min/Max, Best/Worst, Size/Length</h2>
+    <div class="box">
+        <h2 id="minmax-bestworst-sizelength">Min/Max, Best/Worst, Size/Length</h2>
 <p>Ods-analysis results can also be processed to get the minimum and maximum value of a serie, and also compute the length of the array. By doing so, you can get interesting information like the biggest city or smallest city in your dataset by summing the population as a serie for example.</p>
 <p>When you analyse your domain statistics, you can compute an ods-analysis with the user ID or IP address as the X axis, and then get the length of the ods-analysis results. It then correspond to the number of different users that reached your domain.</p>
 <p>In the following example, we get the best or worst universities, by ranking score.</p>
 
 
+
+techtricks-odsanalysis-3-
 
 <div class="codepen">
     
@@ -581,7 +625,7 @@ To conclude, we can say that : <strong>ods-analysis is the low level widget of o
     <form id="form-ods-analysis-3" action="https://codepen.io/pen/define" method="POST" target="_blank">
         <input type="hidden" name="data" value='{
                                 "title": "New Pen!",
-                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n&#34;,
+                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n&#34;,
                                 "editors": 110,
                                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;shanghai\&#34;\n                     shanghai-dataset=\&#34;shanghai-world-university-ranking\&#34;\n                     shanghai-domain=\&#34;public\&#34;\u003e\n    \u003cdiv class=\&#34;row\&#34;\u003e\n        \u003cdiv class=\&#34;col-md-6\&#34;\u003e\n            \u003ch3\u003e\n                Best Universities (regarding publication ranking)\n            \u003c/h3\u003e\n            \u003cods-chart single-y-axis=\&#34;true\&#34; align-month=\&#34;true\&#34;\u003e\n                \u003cods-chart-query context=\&#34;shanghai\&#34;\n                                 field-x=\&#34;university_name\&#34; maxpoints=\&#34;5\&#34; sort=\&#34;serie1-1\&#34;\u003e\n                    \u003cods-chart-serie expression-y=\&#34;pub\&#34; chart-type=\&#34;column\&#34; function-y=\&#34;AVG\&#34;\n                                     label-y=\&#34;Average publication ranking\&#34; color=\&#34;#142E7B\&#34; display-units=\&#34;false\&#34;\n                                     display-values=\&#34;true\&#34; scientific-display=\&#34;true\&#34;\u003e\n                    \u003c/ods-chart-serie\u003e\n                \u003c/ods-chart-query\u003e\n            \u003c/ods-chart\u003e\n            \u003ch3\u003e\n                Worst Universities (regarding publication ranking)\n            \u003c/h3\u003e\n            \u003cods-chart single-y-axis=\&#34;true\&#34; align-month=\&#34;true\&#34;\u003e\n                \u003cods-chart-query context=\&#34;shanghai\&#34;\n                                 field-x=\&#34;university_name\&#34; maxpoints=\&#34;5\&#34; sort=\&#34;-serie1-1\&#34;\u003e\n                    \u003cods-chart-serie expression-y=\&#34;pub\&#34; chart-type=\&#34;column\&#34; function-y=\&#34;AVG\&#34;\n                                     label-y=\&#34;Average publication ranking\&#34; color=\&#34;#142E7B\&#34; display-units=\&#34;false\&#34;\n                                     display-values=\&#34;true\&#34; scientific-display=\&#34;true\&#34;\u003e\n                    \u003c/ods-chart-serie\u003e\n                \u003c/ods-chart-query\u003e\n            \u003c/ods-chart\u003e\n        \u003c/div\u003e\n\n        \u003cdiv class=\&#34;col-md-6\&#34;\u003e\n            \u003cods-dataset-context context=\&#34;shanghai\&#34;\n                                 shanghai-dataset=\&#34;shanghai-world-university-ranking\&#34;\n                                 shanghai-domain=\&#34;public\&#34;\u003e\n                \u003cdiv ods-analysis=\&#34;analysisminmax\&#34;\n                     ods-analysis-context=\&#34;shanghai\&#34;\n                     ods-analysis-max=\&#34;0\&#34;\n                     ods-analysis-x=\&#34;university_name\&#34;\n                     ods-analysis-serie-pubrank=\&#34;AVG(pub)\&#34;\n                     ods-analysis-sort=\&#34;pubrank\&#34;\u003e\n                    \u003ch2\u003e\n                        First and last items of ods-analysis\n                    \u003c/h2\u003e\n                    \u003ch3\u003e\n                        Best University (regarding publication ranking)\n                    \u003c/h3\u003e\n                    \u003cp\u003e\n                        \u003cb\u003e{{ analysisminmax.results[0].x }}\u003c/b\u003e with a score of \u003cb\u003e{{ analysisminmax.results[0].pubrank\n                        }}\u003c/b\u003e\n                    \u003c/p\u003e\n                    \u003ch3\u003e\n                        Worst University (regarding publication ranking)\n                    \u003c/h3\u003e\n                    \u003cp\u003e\n                        \u003cb\u003e{{ analysisminmax.results[analysisminmax.results.length-1].x }}\u003c/b\u003e with a score of \u003cb\u003e{{\n                        analysisminmax.results[analysisminmax.results.length-1].pubrank | number : 2 }}\u003c/b\u003e\n                    \u003c/p\u003e\n                    \u003cbr/\u003e\u003cbr/\u003e\n                    \u003cdiv ods-subaggregation=\&#34;analysisminmax.results\&#34;\n                         ods-subaggregation-serie-bestrank=\&#34;MAX(pubrank)\&#34;\n                         ods-subaggregation-serie-worstrank=\&#34;MIN(pubrank)\&#34;\u003e\n                        \u003ch2\u003e\n                            Max and min values of ods-analysis results\n                        \u003c/h2\u003e\n                        \u003cp\u003e\n                            Best ranking : \u003cb\u003e{{ results[0].bestrank | number }}\u003c/b\u003e\n                        \u003c/p\u003e\n                        \u003cp\u003e\n                            Worst ranking : \u003cb\u003e{{ results[0].worstrank | number:2 }}\u003c/b\u003e\n                        \u003c/p\u003e\n                    \u003c/div\u003e\n                    \u003cbr/\u003e\u003cbr/\u003e\n                    \u003ch2\u003e\n                        Length of ods-analysis.results\n                    \u003c/h2\u003e\n                    \u003cp\u003e\n                        Number of universities in this ranking : \u003cb\u003e{{ analysisminmax.results.length | number }}\u003c/b\u003e\n                    \u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/ods-dataset-context\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
                                 "css": &#34;&#34; }'>
@@ -604,13 +648,20 @@ To conclude, we can say that : <strong>ods-analysis is the low level widget of o
 <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
 
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
 
 
 <link rel='stylesheet' href='/scss/main.css' />
@@ -835,11 +886,15 @@ To conclude, we can say that : <strong>ods-analysis is the low level widget of o
 
 
 
+    </div>
     
-    <h2 id="multiple-aggregations-at-once">Multiple aggregations at once</h2>
+    <div class="box">
+        <h2 id="multiple-aggregations-at-once">Multiple aggregations at once</h2>
 <p>Instead of using several contexts filtered on several values of the same field, and then computing an <strong>ods-aggregation</strong> for each context. An <strong>ods-analysis</strong> if often the good choice to compute them all with only one API Call (it&rsquo;s way faster and more efficient).</p>
 
 
+
+techtricks-odsanalysis-4-
 
 <div class="codepen">
     
@@ -849,7 +904,7 @@ To conclude, we can say that : <strong>ods-analysis is the low level widget of o
     <form id="form-ods-analysis-4" action="https://codepen.io/pen/define" method="POST" target="_blank">
         <input type="hidden" name="data" value='{
                                 "title": "New Pen!",
-                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n&#34;,
+                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n&#34;,
                                 "editors": 110,
                                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;population\&#34;\n                     population-domain=\&#34;public\&#34;\n                     population-dataset=\&#34;population-millesimee-communes-2016\&#34;\u003e\n    \u003cdiv class=\&#34;row\&#34;\u003e\n        \u003cdiv class=\&#34;col-md-5\&#34;\u003e\n            \u003cods-chart single-y-axis=\&#34;true\&#34; scientific-display=\&#34;true\&#34; labels-x-length=\&#34;18\&#34; align-month=\&#34;true\&#34;\u003e\n                \u003cods-chart-query context=\&#34;population\&#34; field-x=\&#34;nom_de_la_commune\&#34; maxpoints=\&#34;9\&#34; sort=\&#34;serie1-1\&#34;\u003e\n                    \u003cods-chart-serie expression-y=\&#34;population_totale\&#34; chart-type=\&#34;column\&#34; function-y=\&#34;MAX\&#34;\n                                     label-y=\&#34;Population 2016\&#34; color=\&#34;#142E7B\&#34; display-values=\&#34;true\&#34;\n                                     scientific-display=\&#34;true\&#34;\u003e\n                    \u003c/ods-chart-serie\u003e\n                \u003c/ods-chart-query\u003e\n            \u003c/ods-chart\u003e\n\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;col-md-7\&#34;\u003e\n                \u003cdiv ods-aggregation=\&#34;populationtotal\&#34;\n                     ods-aggregation-context=\&#34;population\&#34;\n                     ods-aggregation-function=\&#34;SUM\&#34;\n                     ods-aggregation-expression=\&#34;population_totale\&#34;\u003e\n                    \u003ch3\u003e\n                        Overall population (City population sum)\n                    \u003c/h3\u003e\n                    \u003cp\u003e\n                        \u003cb\u003e{{ populationtotal | number }}\u003c/b\u003e residents\n                    \u003c/p\u003e\n                    \u003cdiv ods-analysis=\&#34;analysispopulation\&#34;\n                         ods-analysis-context=\&#34;population\&#34;\n                         ods-analysis-max=\&#34;9\&#34;\n                         ods-analysis-x=\&#34;nom_de_la_commune\&#34;\n                         ods-analysis-serie-population=\&#34;MAX(population_totale)\&#34;\n                         ods-analysis-sort=\&#34;population\&#34;\u003e\n                        \u003cdiv class=\&#34;row\&#34;\u003e\n                            \u003cdiv class=\&#34;col-xs-4\&#34; ng-repeat=\&#34;(position,analyse) in analysispopulation.results\&#34;\u003e\n                                \u003cdiv class=\&#34;kpi-bloc\&#34;\n                                     ng-class=\&#34;{&#39;top3&#39;: position \u003c 3}\&#34;\u003e\n                                    \u003cdiv class=\&#34;position\&#34;\u003e\n                                        {{ position &#43; 1 }} \u003c!-- Start at 0 --\u003e\n                                    \u003c/div\u003e\n                                    \u003cdiv class=\&#34;commune\&#34;\u003e\n                                        {{ analyse.x | capitalize }}\n                                    \u003c/div\u003e\n                                    \u003cdiv class=\&#34;population\&#34;\u003e\n                                        {{ analyse.population | number }}\n                                    \u003c/div\u003e\n                                    \u003cdiv class=\&#34;ratio\&#34;\u003e\n                                        (\u003cb\u003e{{ analyse.population / populationtotal * 100 | number : 2 }}%\u003c/b\u003e of total population)\n                                    \u003c/div\u003e\n                                \u003c/div\u003e\n                            \u003c/div\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
                                 "css": &#34;.kpi-bloc {\n    border: 1px solid;\n    padding: 2px;\n    margin-bottom: 15px;\n    text-align: center;\n    height: 130px;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n}\n.kpi-bloc.top3 {\n    background-color: #fbd66f6b;\n}\n.commune {\n    font-weight: 100;\n    font-size: 1.2em;\n    line-height: 20px;\n}\n.position {\n    font-size: 1.1em;\n}\n.population {\n    font-weight: 700;\n}\n.ratio {\n    font-size: 0.9em;\n}&#34; }'>
@@ -872,13 +927,20 @@ To conclude, we can say that : <strong>ods-analysis is the low level widget of o
 <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
 
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
 
 
 <link rel='stylesheet' href='/scss/main.css' />
@@ -1099,10 +1161,14 @@ To conclude, we can say that : <strong>ods-analysis is the low level widget of o
 
 
 
+    </div>
     
-    <h2 id="heading"></h2>
+    <div class="box">
+        <h2 id="heading"></h2>
 
 
+
+techtricks-odsanalysis-5-
 
 <div class="codepen">
     
@@ -1112,7 +1178,7 @@ To conclude, we can say that : <strong>ods-analysis is the low level widget of o
     <form id="form-ods-analysis-5" action="https://codepen.io/pen/define" method="POST" target="_blank">
         <input type="hidden" name="data" value='{
                                 "title": "New Pen!",
-                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n&#34;,
+                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n&#34;,
                                 "editors": 110,
                                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003c/div\u003e&#34;,
                                 "css": &#34;&#34; }'>
@@ -1135,13 +1201,20 @@ To conclude, we can say that : <strong>ods-analysis is the low level widget of o
 <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
 
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
 
 
 <link rel='stylesheet' href='/scss/main.css' />
@@ -1198,10 +1271,14 @@ To conclude, we can say that : <strong>ods-analysis is the low level widget of o
 
 
 
+    </div>
     
-    <h2 id="heading"></h2>
+    <div class="box">
+        <h2 id="heading"></h2>
 
 
+
+techtricks-odsanalysis-6-
 
 <div class="codepen">
     
@@ -1211,7 +1288,7 @@ To conclude, we can say that : <strong>ods-analysis is the low level widget of o
     <form id="form-ods-analysis-6" action="https://codepen.io/pen/define" method="POST" target="_blank">
         <input type="hidden" name="data" value='{
                                 "title": "New Pen!",
-                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n&#34;,
+                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n&#34;,
                                 "editors": 110,
                                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003c/div\u003e&#34;,
                                 "css": &#34;&#34; }'>
@@ -1234,13 +1311,20 @@ To conclude, we can say that : <strong>ods-analysis is the low level widget of o
 <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
 
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
 
 
 <link rel='stylesheet' href='/scss/main.css' />
@@ -1297,6 +1381,7 @@ To conclude, we can say that : <strong>ods-analysis is the low level widget of o
 
 
 
+    </div>
     
 </div>
 
@@ -1313,7 +1398,7 @@ To conclude, we can say that : <strong>ods-analysis is the low level widget of o
 
 
 <script>var process = { "env": { "NODE_ENV": "production" } }</script>
-<script type="text/javascript" src="/index.min.71438ae6cff40184ef53977549eda0d267e1682e7f3f8f4222db20f99b31d842.js" defer></script>
+<script type="text/javascript" src="/index.min.7cee4da6f625b9a595f0d4af9b5bc1d6a9e6eeb183354e4596ad9e49a666b447.js" defer></script>
 
 </body>
 </html>
