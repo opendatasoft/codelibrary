@@ -1,4 +1,4 @@
-<aside class="menu">
+<aside class="menu p-4">
   <div id="algolia-box"></div>
   <div id="algolia-results"></div>
   <div id="algolia-refine"></div>
@@ -36,9 +36,9 @@
   <p class="menu-label">
     Tags
   </p>
-  <ul class="menu-list">
-    <li><a>Payments</a></li>
-    <li><a>Transfers</a></li>
-    <li><a>Balance</a></li>
-  </ul>
+  {{ range .Site.Taxonomies.tags }}
+  <a class="tag {{ if eq $currentPage .Page }}is-primary{{end}}" href="{{ .Page.Permalink }}">
+    {{ .Page.Title }}
+  </a>
+  {{ end }}
 </aside>
