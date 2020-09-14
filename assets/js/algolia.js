@@ -100,9 +100,7 @@ export function initSearch() {
                             <a class="ais-Hits-item" data-rel-path="${hit.relpermalink}" data-object-id="${hit.objectID}" href="${hit.relpermalink}">
                                     <div class="hit-head">
                                         <p class="title is-6">${instantsearch.highlight({attribute: 'title', hit: hit})}</p>
-                                        <div>
-                                            ${hit._highlightResult.categories.map(category => `<span class="tag is-info">${category.value}</span>`).join('')}
-                                        </div>
+                                        <span class="tag is-info">${hit._highlightResult.section.value}</span>
                                     </div>
                                     <div class="hit-content">
                                         <p class="hit-summary content has-text-grey">
@@ -146,10 +144,8 @@ export function initSearch() {
             container: document.querySelector("#algolia-results"),
             transformItems: items => {
                 items.forEach(item => {
-                    /* Algo :
-                    highlighted description more important than highlighted content.
-                    If any available, get the description or the content if description is empty
-                     */
+                    /* highlighted description more important than highlighted content.
+                    If any available, get the description or the content if description is empty */
                     if (item._snippetResult.description.matchLevel != "none") {
                         item.print = item._snippetResult.description.value;
                     } else {
@@ -163,7 +159,6 @@ export function initSearch() {
                             }
                         }
                     }
-                    console.log(item);
                 });
                 return items;
             }

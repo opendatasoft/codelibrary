@@ -1249,9 +1249,7 @@ widgetParams.container.innerHTML=`
                             <a class="ais-Hits-item" data-rel-path="${hit2.relpermalink}" data-object-id="${hit2.objectID}" href="${hit2.relpermalink}">
                                     <div class="hit-head">
                                         <p class="title is-6">${es_default.highlight({attribute:"title",hit:hit2})}</p>
-                                        <div>
-                                            ${hit2._highlightResult.categories.map((category)=>`<span class="tag is-info">${category.value}</span>`).join("")}
-                                        </div>
+                                        <span class="tag is-info">${hit2._highlightResult.section.value}</span>
                                     </div>
                                     <div class="hit-content">
                                         <p class="hit-summary content has-text-grey">
@@ -1272,6 +1270,5 @@ widgetParams.container.innerHTML=`
             <div class="algolia-docsearch-footer">
               Search by <a class="algolia-docsearch-footer--logo" href="https://www.algolia.com/docsearch">Algolia</a>
             </div>
-            `;const anchors=widgetParams.container.querySelectorAll(".ais-Hits-item");anchors.forEach((anchor)=>{anchor.addEventListener("click",(event)=>{const objectID=anchor.getAttribute("data-object-id");const relpath=anchor.getAttribute("data-rel-path");insights7("clickedObjectIDsAfterSearch",{eventName:relpath,objectIDs:[objectID]});});});};const customHits=connectInfiniteHitsWithInsights_default(renderHits);search.addWidgets([customHits({container:document.querySelector("#algolia-results"),transformItems:(items)=>{items.forEach((item)=>{if(item._snippetResult.description.matchLevel!="none"){item.print=item._snippetResult.description.value;}else{if(item._snippetResult.content.matchLevel!="none"){item.print=item._snippetResult.content.value;}else{if(item._snippetResult.description.value==""){item.print=item._snippetResult.content.value;}else{item.print=item._snippetResult.description.value;}}}
-console.log(item);});return items;}}),configure_default({clickAnalytics:true})]);search.start();}
+            `;const anchors=widgetParams.container.querySelectorAll(".ais-Hits-item");anchors.forEach((anchor)=>{anchor.addEventListener("click",(event)=>{const objectID=anchor.getAttribute("data-object-id");const relpath=anchor.getAttribute("data-rel-path");insights7("clickedObjectIDsAfterSearch",{eventName:relpath,objectIDs:[objectID]});});});};const customHits=connectInfiniteHitsWithInsights_default(renderHits);search.addWidgets([customHits({container:document.querySelector("#algolia-results"),transformItems:(items)=>{items.forEach((item)=>{if(item._snippetResult.description.matchLevel!="none"){item.print=item._snippetResult.description.value;}else{if(item._snippetResult.content.matchLevel!="none"){item.print=item._snippetResult.content.value;}else{if(item._snippetResult.description.value==""){item.print=item._snippetResult.content.value;}else{item.print=item._snippetResult.description.value;}}}});return items;}}),configure_default({clickAnalytics:true})]);search.start();}
 const prismjs=__toModule(require_prism());window.addEventListener("DOMContentLoaded",initCopyToCB,{once:true});initSearch();prismjs.default.highlightAll();})();
