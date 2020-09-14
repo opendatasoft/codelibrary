@@ -13,7 +13,7 @@
         {{ if eq $currentPage.Section .Page.Section }}
         <li>
             <a class="{{ if $currentPage.IsMenuCurrent " main" . }}is-active{{ end }}" href="{{ .URL }}">
-            {{ .Name }}
+            {{ humanize .Name }}
             </a>
             <ul>
                 {{ range .Page.Pages }}
@@ -26,7 +26,7 @@
         {{ else }}
         <li>
             <a href="{{ .URL }}">
-                {{ .Name }}
+                {{ humanize .Name }}
             </a>
         </li>
         {{ end }}

@@ -31,10 +31,10 @@
                     srcdoc="
 <head>{{ "/layouts/partials/includes.html" | readFile }}
 {{ $style := resources.Get "scss/main.scss" | resources.ToCSS }}
-<link rel='stylesheet' href='{{ $style.RelPermalink }}' />
+<!--link rel='stylesheet' href='{{ $style.RelPermalink }}' /-->
 </head>
 <body>
-<div ng-app='ods-widgets'>
+<div ng-app='ods-widgets' class='container-fluid'>
     {{ $html }}
 </div>
 <style type='text/css'>
