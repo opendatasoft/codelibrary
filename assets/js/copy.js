@@ -4,8 +4,8 @@
 // 1. https://tomspencer.dev/blog/2018/09/14/adding-click-to-copy-buttons-to-a-hugo-powered-blog/
 // 2. https://www.dannyguo.com/blog/how-to-add-copy-to-clipboard-buttons-to-code-blocks-in-hugo/
 export const initCopyToCB = (event) => {
-  const copyText = 'copy';
-  const copiedText = 'copied';
+  const copyText = 'Copy';
+  const copiedText = 'Copied!';
 
   document.querySelectorAll('.post-body > pre').forEach((e) => {
     let div = document.createElement('div');
@@ -20,7 +20,7 @@ export const initCopyToCB = (event) => {
       containerEl.parentNode.style.position = 'relative';
 
       const button = document.createElement('button');
-      button.className = 'copy-button';
+      button.className = 'button is-primary copy-button';
       button.type = 'button';
       button.innerText = copyText;
 
