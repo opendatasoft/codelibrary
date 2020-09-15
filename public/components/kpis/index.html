@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>
+KPIs &ndash; Codelibrary
+</title>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css" integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8=" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" type="text/css" href="/scss/main.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="https://discovery.opendatasoft.com/assets/theme_image/ODS-Help-Hub.svg" />
+    </a>
+    <a class="navbar-item" href="https://help.opendatasoft.com/">
+      Help Hub
+    </a>
+    <a class="navbar-item" href="https://help.opendatasoft.com/platform/en/">
+      User guide
+    </a>
+    <a class="navbar-item" href="https://discovery.opendatasoft.com">
+      Discovery
+    </a>
+    <a class="navbar-item" href="https://help.opendatasoft.com/faq-glossary/en/">
+      FAQ
+    </a>
+    <a class="navbar-item" href="https://help.opendatasoft.com/widgets/">
+      Widgets
+    </a>
+    <a class="navbar-item" href="https://help.opendatasoft.com/en/apis/">
+      APIs
+    </a>
+    <a class="navbar-item" href="https://academy.opendatasoft.com/page/homepage">
+      Academy
+    </a>
+  </div>
+</nav>
+
+<div class="columns">
+  <div class="column is-one-quarter">
+    <aside class="menu p-4">
+    <div id="algolia-box"></div>
+    <div id="algolia-results"></div>
+
+    <h2 class="title is-5 mt-3"><a href="https://codelibrary.opendatasoft.com">Home</a></h2>
+
+    
+    <p class="menu-label">
+        Sections
+    </p>
+    <ul class="menu-list">
+        
+        
+        <li>
+            <a class="" href="/components/">
+            Components
+            </a>
+            <ul>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/components/contact-card/">Contact Card</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/components/content-card/">Content card</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/components/image-card/">Image card</a>
+                </li>
+                
+                <li>
+                    <a class="is-active" href="https://codelibrary.opendatasoft.com/components/kpis/">KPIs</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/components/sticky-header/">Sticky header</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/components/table-module/">Table module</a>
+                </li>
+                
+            </ul>
+        </li>
+        
+        
+        
+        <li>
+            <a href="/page-template/">
+                Page templates
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a href="/portal-theme/">
+                Portal themes
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a href="/widget-tricks/">
+                Widget tricks
+            </a>
+        </li>
+        
+        
+    </ul>
+    <p class="menu-label">
+        Tags
+    </p>
+    <div class="tags">
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/aggregate/">
+            aggregate
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/aggregation/">
+            aggregation
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/analyse/">
+            analyse
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/catalog/">
+            catalog
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/compute/">
+            compute
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/display/">
+            display
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/empty/">
+            empty
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/list/">
+            list
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/map/">
+            map
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/metadata/">
+            metadata
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/navigation/">
+            navigation
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/ods-analysis/">
+            ods-analysis
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/ods-maps/">
+            ods-maps
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/render/">
+            render
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/widget/">
+            widget
+        </a>
+        
+    </div>
+</aside>
+
+  </div>
+  <div class="column">
+    
+
+<div class="content">
+    <div class="box">
+        <h1 id="components-library---kpis">Components library - KPIs</h1>
+
+    </div>
+    
+    <div class="box">
+        <h2 id="kpi-card">KPI Card</h2>
+<p>Card to show off metrics and values. Has an icon, the KPI number and a small descriptive text.</p>
+<p>For more information about how to compute metrics, see <a href="/widget-tricks/ods-aggregation">ods-aggregation resource</a></p>
+
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-kpis-1" action="https://codepen.io/pen/define" method="POST" target="_blank">
+        <input type="hidden" name="data" value='{
+                                "title": "New Pen!",
+                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n&#34;,
+                                "editors": 110,
+                                "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;row\&#34;\u003e\n    \u003cdiv class=\&#34;col-xs-12\&#34;\u003e\n        \u003ch2\u003e\n            Adaptive height\n        \u003c/h2\u003e\n    \u003c/div\u003e\n    \u003cdiv class=\&#34;col-md-4\&#34;\u003e\n        \u003c!-- KPI box component --\u003e\n        \u003cdiv class=\&#34;kpi-card\&#34;\u003e\n            \u003ci class=\&#34;kpi-icon fa fa-gitlab\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n            \u003ch2 class=\&#34;kpi-title\&#34;\u003e\n                5,983\n            \u003c/h2\u003e\n            \u003cp class=\&#34;kpi-description\&#34;\u003e\n                Dignissim suspendisse in est ante in nibh nisl tincidunt eget\n            \u003c/p\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n    \u003cdiv class=\&#34;col-md-4\&#34;\u003e\n        \u003c!-- KPI box component --\u003e\n        \u003cdiv class=\&#34;kpi-card\&#34;\u003e\n            \u003ci class=\&#34;kpi-icon fa fa-houzz\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n            \u003ch2 class=\&#34;kpi-title\&#34;\u003e\n                18.3k\n            \u003c/h2\u003e\n            \u003cp class=\&#34;kpi-description\&#34;\u003e\n                Quam vulputate dignissim suspendisse in est ante in nibh. Faucibus nisl tincidunt eget nullam non nisi est sit amet\n            \u003c/p\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n    \u003cdiv class=\&#34;col-md-4\&#34;\u003e\n        \u003c!-- KPI box component --\u003e\n        \u003cdiv class=\&#34;kpi-card\&#34;\u003e\n            \u003ci class=\&#34;kpi-icon fa fa-houzz\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n            \u003ch2 class=\&#34;kpi-title\&#34;\u003e\n                8.3k\n            \u003c/h2\u003e\n            \u003cp class=\&#34;kpi-description\&#34;\u003e\n                Quam vulputate\n            \u003c/p\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\n\u003cdiv class=\&#34;row row-equal-height\&#34;\u003e\n    \u003cdiv class=\&#34;col-xs-12\&#34;\u003e\n        \u003ch2\u003e\n            Same height\n        \u003c/h2\u003e\n    \u003c/div\u003e\n    \u003cdiv class=\&#34;col-md-4\&#34;\u003e\n        \u003c!-- KPI box component --\u003e\n        \u003cdiv class=\&#34;kpi-card\&#34;\u003e\n            \u003ci class=\&#34;kpi-icon fa fa-gitlab\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n            \u003ch2 class=\&#34;kpi-title\&#34;\u003e\n                5,983\n            \u003c/h2\u003e\n            \u003cp class=\&#34;kpi-description\&#34;\u003e\n                Dignissim suspendisse in est ante in nibh nisl tincidunt eget\n            \u003c/p\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n    \u003cdiv class=\&#34;col-md-4\&#34;\u003e\n        \u003c!-- KPI box component --\u003e\n        \u003cdiv class=\&#34;kpi-card\&#34;\u003e\n            \u003ci class=\&#34;kpi-icon fa fa-houzz\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n            \u003ch2 class=\&#34;kpi-title\&#34;\u003e\n                18.3k\n            \u003c/h2\u003e\n            \u003cp class=\&#34;kpi-description\&#34;\u003e\n                Quam vulputate dignissim suspendisse in est ante in nibh. Faucibus nisl tincidunt eget nullam non nisi est sit amet\n            \u003c/p\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n    \u003cdiv class=\&#34;col-md-4\&#34;\u003e\n        \u003c!-- KPI box component --\u003e\n        \u003cdiv class=\&#34;kpi-card\&#34;\u003e\n            \u003ci class=\&#34;kpi-icon fa fa-houzz\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n            \u003ch2 class=\&#34;kpi-title\&#34;\u003e\n                8.3k\n            \u003c/h2\u003e\n            \u003cp class=\&#34;kpi-description\&#34;\u003e\n                Quam vulputate\n            \u003c/p\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\n\u003c/div\u003e&#34;,
+                                "css": &#34;/* Variables \u0026 Shared classes\n========================================================================== */\n:root {\n    --secondary-color: #142E7B;\n}\n.row-equal-height {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-wrap: wrap;\n    flex-wrap: wrap;\n    margin-bottom: 20px;\n}\n/* Fix for early content wrapping in Safari*/\n.row-equal-height:before,\n.row-equal-height:after {\n    content: normal;\n}\n/* KPI Card\n========================================================================== */\n.kpi-card {\n    background-color: var(--boxes-background);\n    height: 100%;\n    padding: 39px;\n    border-radius: 4px;\n    margin-bottom: 20px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -ms-flex-direction: column;\n    flex-direction: column;\n    -webkit-box-align: center;\n    -ms-flex-align: center;\n    align-items: center;\n    text-align: center;\n    -webkit-box-pack: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    text-align: center;\n}\n.kpi-icon {\n    color: var(--highlight);\n    color: var(--secondary-color);\n    font-size: 4rem;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n.kpi-title {\n    font-weight: normal;\n    color: var(--highlight);\n    font-size: 3.2rem;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n.kpi-description {\n    color: var(--text);\n    font-size: 1rem;\n    line-height: 1.5;\n    font-weight: normal;\n    margin-top: 0;\n    margin-bottom: 0;\n    max-width: 100%;\n}\n&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <nav>
+        <div class="nav nav-tabs justify-content-center" id="navkpis-1-tab" role="tablist">
+        <a class="nav-item nav-link active" id="navkpis-1-live-tab" data-toggle="tab" href="#navkpis-1-live" role="tab" aria-controls="navkpis-1-live" aria-selected="true">Live snippet</a>
+        <a class="nav-item nav-link" id="navkpis-1-code-tab" data-toggle="tab" href="#navkpis-1-code" role="tab" aria-controls="navkpis-1-code" aria-selected="false">Get the code</a>
+</div>
+    </nav>
+
+    <div class="tab-content" id="kpis-1">
+        <div class="tab-pane fade show active" id="navkpis-1-live" role="tabpanel" aria-labelledby="navkpis-1-live-tab">
+            <div class="row">
+                <iframe id="iframe-kpis-1" width="100%" height="600px" src="about:blank"
+                    srcdoc="
+<head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+
+
+<!--link rel='stylesheet' href='/scss/main.css' /-->
+</head>
+<body>
+<div ng-app='ods-widgets' class='container-fluid'>
+    &lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-xs-12&#34;&gt;
+        &lt;h2&gt;
+            Adaptive height
+        &lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;!-- KPI box component --&gt;
+        &lt;div class=&#34;kpi-card&#34;&gt;
+            &lt;i class=&#34;kpi-icon fa fa-gitlab&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;h2 class=&#34;kpi-title&#34;&gt;
+                5,983
+            &lt;/h2&gt;
+            &lt;p class=&#34;kpi-description&#34;&gt;
+                Dignissim suspendisse in est ante in nibh nisl tincidunt eget
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;!-- KPI box component --&gt;
+        &lt;div class=&#34;kpi-card&#34;&gt;
+            &lt;i class=&#34;kpi-icon fa fa-houzz&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;h2 class=&#34;kpi-title&#34;&gt;
+                18.3k
+            &lt;/h2&gt;
+            &lt;p class=&#34;kpi-description&#34;&gt;
+                Quam vulputate dignissim suspendisse in est ante in nibh. Faucibus nisl tincidunt eget nullam non nisi est sit amet
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;!-- KPI box component --&gt;
+        &lt;div class=&#34;kpi-card&#34;&gt;
+            &lt;i class=&#34;kpi-icon fa fa-houzz&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;h2 class=&#34;kpi-title&#34;&gt;
+                8.3k
+            &lt;/h2&gt;
+            &lt;p class=&#34;kpi-description&#34;&gt;
+                Quam vulputate
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;row row-equal-height&#34;&gt;
+    &lt;div class=&#34;col-xs-12&#34;&gt;
+        &lt;h2&gt;
+            Same height
+        &lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;!-- KPI box component --&gt;
+        &lt;div class=&#34;kpi-card&#34;&gt;
+            &lt;i class=&#34;kpi-icon fa fa-gitlab&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;h2 class=&#34;kpi-title&#34;&gt;
+                5,983
+            &lt;/h2&gt;
+            &lt;p class=&#34;kpi-description&#34;&gt;
+                Dignissim suspendisse in est ante in nibh nisl tincidunt eget
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;!-- KPI box component --&gt;
+        &lt;div class=&#34;kpi-card&#34;&gt;
+            &lt;i class=&#34;kpi-icon fa fa-houzz&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;h2 class=&#34;kpi-title&#34;&gt;
+                18.3k
+            &lt;/h2&gt;
+            &lt;p class=&#34;kpi-description&#34;&gt;
+                Quam vulputate dignissim suspendisse in est ante in nibh. Faucibus nisl tincidunt eget nullam non nisi est sit amet
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;!-- KPI box component --&gt;
+        &lt;div class=&#34;kpi-card&#34;&gt;
+            &lt;i class=&#34;kpi-icon fa fa-houzz&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;h2 class=&#34;kpi-title&#34;&gt;
+                8.3k
+            &lt;/h2&gt;
+            &lt;p class=&#34;kpi-description&#34;&gt;
+                Quam vulputate
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+</div>
+<style type='text/css'>
+    /* Variables &amp; Shared classes
+========================================================================== */
+:root {
+    --secondary-color: #142E7B;
+}
+.row-equal-height {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+/* Fix for early content wrapping in Safari*/
+.row-equal-height:before,
+.row-equal-height:after {
+    content: normal;
+}
+/* KPI Card
+========================================================================== */
+.kpi-card {
+    background-color: var(--boxes-background);
+    height: 100%;
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+.kpi-icon {
+    color: var(--highlight);
+    color: var(--secondary-color);
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+.kpi-title {
+    font-weight: normal;
+    color: var(--highlight);
+    font-size: 3.2rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+.kpi-description {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 100%;
+}
+
+</style>
+</body>
+"></iframe>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="navkpis-1-code" role="tabpanel" aria-labelledby="navkpis-1-code-tab">
+            <div class="row">
+                <div class="col-2">
+                    <div class="nav flex-column nav-pills" id="code-kpis-1-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link active" id="code-kpis-1-html-tab" data-toggle="pill" href="#code-kpis-1-html-content" role="tab" aria-controls="code-kpis-1-html-content" aria-selected="true">
+                            HTML
+                        </a>
+                        <a class="nav-link" id="code-kpis-1-css-tab" data-toggle="pill" href="#code-kpis-1-css-content" role="tab" aria-controls="code-kpis-1-css-content" aria-selected="false">
+                            CSS
+                        </a>
+                    </div>
+
+                    <a class="edit-on-codepen" target="_blank" rel="noopener" href="#" title="Edit on CodePen"
+                       onclick="document.getElementById('form-kpis-1').submit()">
+                        <span class="codepen-edit-on-text">EDIT ON</span>
+                        <svg class="codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-10">
+                    <div class="tab-content" id="code-tabContent">
+                        <div class="tab-pane fade show active" id="code-kpis-1-html-content" role="tabpanel" aria-labelledby="code-kpis-1-html-tab">
+                            <div class="highlight">
+                                <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-xs-12&#34;&gt;
+        &lt;h2&gt;
+            Adaptive height
+        &lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;!-- KPI box component --&gt;
+        &lt;div class=&#34;kpi-card&#34;&gt;
+            &lt;i class=&#34;kpi-icon fa fa-gitlab&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;h2 class=&#34;kpi-title&#34;&gt;
+                5,983
+            &lt;/h2&gt;
+            &lt;p class=&#34;kpi-description&#34;&gt;
+                Dignissim suspendisse in est ante in nibh nisl tincidunt eget
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;!-- KPI box component --&gt;
+        &lt;div class=&#34;kpi-card&#34;&gt;
+            &lt;i class=&#34;kpi-icon fa fa-houzz&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;h2 class=&#34;kpi-title&#34;&gt;
+                18.3k
+            &lt;/h2&gt;
+            &lt;p class=&#34;kpi-description&#34;&gt;
+                Quam vulputate dignissim suspendisse in est ante in nibh. Faucibus nisl tincidunt eget nullam non nisi est sit amet
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;!-- KPI box component --&gt;
+        &lt;div class=&#34;kpi-card&#34;&gt;
+            &lt;i class=&#34;kpi-icon fa fa-houzz&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;h2 class=&#34;kpi-title&#34;&gt;
+                8.3k
+            &lt;/h2&gt;
+            &lt;p class=&#34;kpi-description&#34;&gt;
+                Quam vulputate
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class=&#34;row row-equal-height&#34;&gt;
+    &lt;div class=&#34;col-xs-12&#34;&gt;
+        &lt;h2&gt;
+            Same height
+        &lt;/h2&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;!-- KPI box component --&gt;
+        &lt;div class=&#34;kpi-card&#34;&gt;
+            &lt;i class=&#34;kpi-icon fa fa-gitlab&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;h2 class=&#34;kpi-title&#34;&gt;
+                5,983
+            &lt;/h2&gt;
+            &lt;p class=&#34;kpi-description&#34;&gt;
+                Dignissim suspendisse in est ante in nibh nisl tincidunt eget
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;!-- KPI box component --&gt;
+        &lt;div class=&#34;kpi-card&#34;&gt;
+            &lt;i class=&#34;kpi-icon fa fa-houzz&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;h2 class=&#34;kpi-title&#34;&gt;
+                18.3k
+            &lt;/h2&gt;
+            &lt;p class=&#34;kpi-description&#34;&gt;
+                Quam vulputate dignissim suspendisse in est ante in nibh. Faucibus nisl tincidunt eget nullam non nisi est sit amet
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;!-- KPI box component --&gt;
+        &lt;div class=&#34;kpi-card&#34;&gt;
+            &lt;i class=&#34;kpi-icon fa fa-houzz&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;h2 class=&#34;kpi-title&#34;&gt;
+                8.3k
+            &lt;/h2&gt;
+            &lt;p class=&#34;kpi-description&#34;&gt;
+                Quam vulputate
+            &lt;/p&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="code-kpis-1-css-content" role="tabpanel" aria-labelledby="code-kpis-1-css-tab">
+                            <div class="highlight">
+                                <pre class="language-css" data-lang="css"><code>/* Variables &amp; Shared classes
+========================================================================== */
+:root {
+    --secondary-color: #142E7B;
+}
+.row-equal-height {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+/* Fix for early content wrapping in Safari*/
+.row-equal-height:before,
+.row-equal-height:after {
+    content: normal;
+}
+/* KPI Card
+========================================================================== */
+.kpi-card {
+    background-color: var(--boxes-background);
+    height: 100%;
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+.kpi-icon {
+    color: var(--highlight);
+    color: var(--secondary-color);
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+.kpi-title {
+    font-weight: normal;
+    color: var(--highlight);
+    font-size: 3.2rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+.kpi-description {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 100%;
+}
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+    
+</div>
+
+
+  </div>
+</div>
+
+<footer class="cl-footer">
+    <h2>Partials footer.html</h2>
+</footer>
+
+
+
+
+
+<script>var process = { "env": { "NODE_ENV": "production" } }</script>
+<script type="text/javascript" src="/index.min.18b5607ba349907552016ca9a8e58107e636f5b7e8027b7255c7e5f2426a5bbe.js" defer></script>
+
+</body>
+</html>

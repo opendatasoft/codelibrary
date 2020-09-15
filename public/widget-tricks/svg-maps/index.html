@@ -1,0 +1,2340 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>
+SVG Maps &ndash; Codelibrary
+</title>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css" integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8=" crossorigin="anonymous">
+
+    
+    <link rel="stylesheet" type="text/css" href="/scss/main.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-brand">
+    <a class="navbar-item" href="/">
+      <img src="https://discovery.opendatasoft.com/assets/theme_image/ODS-Help-Hub.svg" />
+    </a>
+    <a class="navbar-item" href="https://help.opendatasoft.com/">
+      Help Hub
+    </a>
+    <a class="navbar-item" href="https://help.opendatasoft.com/platform/en/">
+      User guide
+    </a>
+    <a class="navbar-item" href="https://discovery.opendatasoft.com">
+      Discovery
+    </a>
+    <a class="navbar-item" href="https://help.opendatasoft.com/faq-glossary/en/">
+      FAQ
+    </a>
+    <a class="navbar-item" href="https://help.opendatasoft.com/widgets/">
+      Widgets
+    </a>
+    <a class="navbar-item" href="https://help.opendatasoft.com/en/apis/">
+      APIs
+    </a>
+    <a class="navbar-item" href="https://academy.opendatasoft.com/page/homepage">
+      Academy
+    </a>
+  </div>
+</nav>
+
+<div class="columns">
+  <div class="column is-one-quarter">
+    <aside class="menu p-4">
+    <div id="algolia-box"></div>
+    <div id="algolia-results"></div>
+
+    <h2 class="title is-5 mt-3"><a href="https://codelibrary.opendatasoft.com">Home</a></h2>
+
+    
+    <p class="menu-label">
+        Sections
+    </p>
+    <ul class="menu-list">
+        
+        
+        <li>
+            <a href="/components/">
+                Components
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a href="/page-template/">
+                Page templates
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a href="/portal-theme/">
+                Portal themes
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="" href="/widget-tricks/">
+            Widget tricks
+            </a>
+            <ul>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/catalog-cards/">Catalog cards</a>
+                </li>
+                
+                <li>
+                    <a class="is-active" href="https://codelibrary.opendatasoft.com/widget-tricks/svg-maps/">SVG Maps</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-analysis/">ODS Analysis</a>
+                </li>
+                
+            </ul>
+        </li>
+        
+        
+    </ul>
+    <p class="menu-label">
+        Tags
+    </p>
+    <div class="tags">
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/aggregate/">
+            aggregate
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/aggregation/">
+            aggregation
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/analyse/">
+            analyse
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/catalog/">
+            catalog
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/compute/">
+            compute
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/display/">
+            display
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/empty/">
+            empty
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/list/">
+            list
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/map/">
+            map
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/metadata/">
+            metadata
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/navigation/">
+            navigation
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/ods-analysis/">
+            ods-analysis
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/ods-maps/">
+            ods-maps
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/render/">
+            render
+        </a>
+        
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/widget/">
+            widget
+        </a>
+        
+    </div>
+</aside>
+
+  </div>
+  <div class="column">
+    
+
+<div class="content">
+    <div class="box">
+        <h1 id="static-maps-a-quick-introduction">Static maps, a quick introduction</h1>
+<p>When your goal is to share a precise analysis of a theme, such as employment or demography, for given administrative territories, you may want to disable all interactions with the map. You will even probably want to have overseas territories right next to the other territories in order to visualize immediately how the measurement varies across these administrative areas.</p>
+<p>In this situation, you might prefer a static colored picture over a classic map widget. The resource below shows you how to create such static analyses of administrative divisions.</p>
+
+    </div>
+    
+    <div class="box">
+        <h2 id="static-maps-with-colored-svg-images">Static maps with colored SVG images</h2>
+<p>Powered by ods-picto and ods-color-gradient, an example of combinaison to display a fast and lightweight map for analytic purposes</p>
+<blockquote>
+<p><strong><em>NOTE:</em></strong>  Note: this resource showcase positionning possibilities and demonstrate how flexible SVG usage can be. On the other hand beware that reusing this code can be difficult. If you feel confortable with <code>ng-model</code> and <code>ng-class</code> you can copy and simplify it by removing unecessary positions and code.</p>
+</blockquote>
+
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-svg-maps-1" action="https://codepen.io/pen/define" method="POST" target="_blank">
+        <input type="hidden" name="data" value='{
+                                "title": "New Pen!",
+                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n&#34;,
+                                "editors": 110,
+                                "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;ctx\&#34;\n                     ctx-dataset=\&#34;liste-des-departements-metropole-dom\&#34;\n                     ctx-domain=\&#34;discovery\&#34;\u003e\n    \u003cdiv ods-color-gradient=\&#34;analysis\&#34;\n         ods-color-gradient-context=\&#34;ctx\&#34;\n         ods-color-gradient-x=\&#34;code_texte\&#34;\n         ods-color-gradient-serie=\&#34;MAX(code)\&#34;\n         ods-color-gradient-logarithmic-scale-factor=\&#34;1\&#34;\n         ng-init=\&#34;idf = &#39;svgmap-idf-top-left&#39;;\n                  drom = &#39;svgmap-drom-right&#39;;\&#34;\u003e\n        \u003cdiv class=\&#34;ods-box\&#34;\u003e\n            \u003cspan\u003e\n                Position de l&#39;île de France\n            \u003c/span\u003e\n            \u003cselect ng-model=\&#34;idf\&#34;\u003e\n                \u003coption value=\&#34;svgmap-idf-top-left\&#34;\u003eHaut gauche\u003c/option\u003e\n                \u003coption value=\&#34;svgmap-idf-top-right\&#34;\u003eHaut droit\u003c/option\u003e\n                \u003coption value=\&#34;svgmap-idf-none\&#34;\u003eDésactivé\u003c/option\u003e\n            \u003c/select\u003e\n            \u003cbr/\u003e\n            \u003cspan\u003e\n                Position des départements et régions d&#39;outre mer\n            \u003c/span\u003e\n            \u003cselect ng-model=\&#34;drom\&#34;\u003e\n                \u003coption value=\&#34;svgmap-drom-left\&#34;\u003eGauche\u003c/option\u003e\n                \u003coption value=\&#34;svgmap-drom-right\&#34;\u003eDroite\u003c/option\u003e\n                \u003coption value=\&#34;svgmap-drom-bottom\&#34;\u003eEn dessous\u003c/option\u003e\n                \u003coption value=\&#34;svgmap-drom-none\&#34;\u003eDésactivé\u003c/option\u003e\n            \u003c/select\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;svgmap-france\&#34;\u003e\n            \u003cdiv class=\&#34;svgmap-drom\&#34;\n                 ng-class=\&#34;drom\&#34;\u003e\n                \u003cdiv class=\&#34;svgmap-martinique\&#34;\u003e\n                    \u003cods-picto url=\&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_mtq.svg&#39;\&#34;\n                               color-by-attribute=\&#34;analysis.colors\&#34;\u003e\u003c/ods-picto\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;svgmap-reunion\&#34;\u003e\n                    \u003cods-picto url=\&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_reu.svg&#39;\&#34;\n                               color-by-attribute=\&#34;analysis.colors\&#34;\u003e\u003c/ods-picto\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;svgmap-guyane\&#34;\u003e\n                    \u003cods-picto url=\&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_guf.svg&#39;\&#34;\n                               color-by-attribute=\&#34;analysis.colors\&#34;\u003e\u003c/ods-picto\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;svgmap-guadeloupe\&#34;\u003e\n                    \u003cods-picto url=\&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_glp.svg&#39;\&#34;\n                               color-by-attribute=\&#34;analysis.colors\&#34;\u003e\u003c/ods-picto\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;svgmap-mayotte\&#34;\u003e\n                    \u003cods-picto url=\&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_myt.svg&#39;\&#34;\n                               color-by-attribute=\&#34;analysis.colors\&#34;\u003e\u003c/ods-picto\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;svgmap-idf\&#34;\n                 ng-class=\&#34;idf\&#34;\u003e\n                \u003cods-picto url=\&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_idf.svg&#39;\&#34;\n                           color-by-attribute=\&#34;analysis.colors\&#34;\u003e\u003c/ods-picto\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;svgmap-francemetro\&#34;\u003e\n                \u003cods-picto url=\&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_fxx.svg&#39;\&#34;\n                           color-by-attribute=\&#34;analysis.colors\&#34;\u003e\u003c/ods-picto\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+                                "css": &#34;/******** SVG MAPS *************/\n/************ Conteneur France ***************/\n.svgmap-france {\n    width: 500px;\n    margin: auto;\n    position: relative;\n    background-color: white;\n}\n/* France Métropole */\n.svgmap-francemetro {\n    padding: 0;\n}\n/********** DROM ************/\n/* Position en colonne left */\n.svgmap-drom-left ~ .svgmap-francemetro {\n    padding-left: 17%;\n}\n.svgmap-drom.svgmap-drom-left {\n    display: flex;\n    flex-direction: column;\n    position: absolute;\n    left: 1%;\n    top: 2%;\n    width: 12.1%;\n}\n/* Position en colonne right */\n.svgmap-drom.svgmap-drom-right {\n    display: flex;\n    flex-direction: column;\n    position: absolute;\n    right: 1%;\n    top: 3%;\n    width: 11%;\n}\n/* Position en ligne bottom */\n.svgmap-drom-bottom ~ .svgmap-francemetro {\n    padding-bottom: 16%;\n}\n.svgmap-drom.svgmap-drom-bottom {\n    display: flex;\n    flex-direction: row;\n    position: absolute;\n    left: 5%;\n    right: 5%;\n    bottom: 1%;\n    width: 90%;\n    height: 17%;\n}\n.svgmap-drom.svgmap-drom-bottom \u003e * {\n    margin: 2%;\n}\n/****** Ile de France ZOOM ********/\n/* Position Top Left */\n.svgmap-idf-top-left ~ .svgmap-francemetro {\n    padding-top: 7%;\n    padding-left: 7%;\n}\n.svgmap-idf.svgmap-idf-top-left {\n    position: absolute;\n    left: 2%;\n    top: 2%;\n    width: 20%;\n}\n/* Position Top Right */\n.svgmap-idf.svgmap-idf-top-right {\n    position: absolute;\n    right: 10%;\n    top: 3%;\n    width: 20%;\n}\n.svgmap-idf-top-right ~ .svgmap-francemetro {\n    padding-top: 8%;\n}\n/* DROM Right &#43; IDF Top Right */\n.svgmap-drom-right ~ .svgmap-idf-top-right ~ .svgmap-francemetro {\n    padding-right: 3%;\n}\n.svgmap-drom-right ~ .svgmap-idf-top-right {\n    right: 16%;\n}\n/* DROM Right &#43; IDF Top Left */\n.svgmap-drom-right ~ .svgmap-idf.svgmap-idf-top-left {\n    left: 3%;\n}\n/* DROM Left &#43; IDF Top Right */\n.svgmap-drom-left ~ .svgmap-idf-top-right {\n    right: 1%;\n}\n/* DROM Left &#43; IDF Top Left */\n.svgmap-drom-left ~ .svgmap-francemetro ~ .svgmap-idf.svgmap-idf-top-left {\n    padding-top: 11%;\n    padding-left: 20%;\n}\n.svgmap-drom-left ~ .svgmap-idf.svgmap-idf-top-left ~ .svgmap-francemetro{\n    padding-left: 22%;\n    padding-top: 5%;\n}\n.svgmap-drom-left ~ .svgmap-idf.svgmap-idf-top-left {\n    left: 17%;\n    width: 17%;\n}\n/* Some CSS override to manage picto sizes */\n.ods-svginliner__svg-container {\n    height: 100%;\n}\n.odswidget.odswidget-picto {\n    height: 100%;\n}\n/* None styles */\n.svgmap-idf-none, .svgmap-drom-none {\n    display: none;\n}\n&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <nav>
+        <div class="nav nav-tabs justify-content-center" id="navsvg-maps-1-tab" role="tablist">
+        <a class="nav-item nav-link active" id="navsvg-maps-1-live-tab" data-toggle="tab" href="#navsvg-maps-1-live" role="tab" aria-controls="navsvg-maps-1-live" aria-selected="true">Live snippet</a>
+        <a class="nav-item nav-link" id="navsvg-maps-1-code-tab" data-toggle="tab" href="#navsvg-maps-1-code" role="tab" aria-controls="navsvg-maps-1-code" aria-selected="false">Get the code</a>
+</div>
+    </nav>
+
+    <div class="tab-content" id="svg-maps-1">
+        <div class="tab-pane fade show active" id="navsvg-maps-1-live" role="tabpanel" aria-labelledby="navsvg-maps-1-live-tab">
+            <div class="row">
+                <iframe id="iframe-svg-maps-1" width="100%" height="600px" src="about:blank"
+                    srcdoc="
+<head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+
+
+<!--link rel='stylesheet' href='/scss/main.css' /-->
+</head>
+<body>
+<div ng-app='ods-widgets' class='container-fluid'>
+    &lt;ods-dataset-context context=&#34;ctx&#34;
+                     ctx-dataset=&#34;liste-des-departements-metropole-dom&#34;
+                     ctx-domain=&#34;discovery&#34;&gt;
+    &lt;div ods-color-gradient=&#34;analysis&#34;
+         ods-color-gradient-context=&#34;ctx&#34;
+         ods-color-gradient-x=&#34;code_texte&#34;
+         ods-color-gradient-serie=&#34;MAX(code)&#34;
+         ods-color-gradient-logarithmic-scale-factor=&#34;1&#34;
+         ng-init=&#34;idf = &#39;svgmap-idf-top-left&#39;;
+                  drom = &#39;svgmap-drom-right&#39;;&#34;&gt;
+        &lt;div class=&#34;ods-box&#34;&gt;
+            &lt;span&gt;
+                Position de l&#39;île de France
+            &lt;/span&gt;
+            &lt;select ng-model=&#34;idf&#34;&gt;
+                &lt;option value=&#34;svgmap-idf-top-left&#34;&gt;Haut gauche&lt;/option&gt;
+                &lt;option value=&#34;svgmap-idf-top-right&#34;&gt;Haut droit&lt;/option&gt;
+                &lt;option value=&#34;svgmap-idf-none&#34;&gt;Désactivé&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;br/&gt;
+            &lt;span&gt;
+                Position des départements et régions d&#39;outre mer
+            &lt;/span&gt;
+            &lt;select ng-model=&#34;drom&#34;&gt;
+                &lt;option value=&#34;svgmap-drom-left&#34;&gt;Gauche&lt;/option&gt;
+                &lt;option value=&#34;svgmap-drom-right&#34;&gt;Droite&lt;/option&gt;
+                &lt;option value=&#34;svgmap-drom-bottom&#34;&gt;En dessous&lt;/option&gt;
+                &lt;option value=&#34;svgmap-drom-none&#34;&gt;Désactivé&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;svgmap-france&#34;&gt;
+            &lt;div class=&#34;svgmap-drom&#34;
+                 ng-class=&#34;drom&#34;&gt;
+                &lt;div class=&#34;svgmap-martinique&#34;&gt;
+                    &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_mtq.svg&#39;&#34;
+                               color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;svgmap-reunion&#34;&gt;
+                    &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_reu.svg&#39;&#34;
+                               color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;svgmap-guyane&#34;&gt;
+                    &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_guf.svg&#39;&#34;
+                               color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;svgmap-guadeloupe&#34;&gt;
+                    &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_glp.svg&#39;&#34;
+                               color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;svgmap-mayotte&#34;&gt;
+                    &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_myt.svg&#39;&#34;
+                               color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;svgmap-idf&#34;
+                 ng-class=&#34;idf&#34;&gt;
+                &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_idf.svg&#39;&#34;
+                           color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;svgmap-francemetro&#34;&gt;
+                &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_fxx.svg&#39;&#34;
+                           color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+
+</div>
+<style type='text/css'>
+    /******** SVG MAPS *************/
+/************ Conteneur France ***************/
+.svgmap-france {
+    width: 500px;
+    margin: auto;
+    position: relative;
+    background-color: white;
+}
+/* France Métropole */
+.svgmap-francemetro {
+    padding: 0;
+}
+/********** DROM ************/
+/* Position en colonne left */
+.svgmap-drom-left ~ .svgmap-francemetro {
+    padding-left: 17%;
+}
+.svgmap-drom.svgmap-drom-left {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 1%;
+    top: 2%;
+    width: 12.1%;
+}
+/* Position en colonne right */
+.svgmap-drom.svgmap-drom-right {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 1%;
+    top: 3%;
+    width: 11%;
+}
+/* Position en ligne bottom */
+.svgmap-drom-bottom ~ .svgmap-francemetro {
+    padding-bottom: 16%;
+}
+.svgmap-drom.svgmap-drom-bottom {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    bottom: 1%;
+    width: 90%;
+    height: 17%;
+}
+.svgmap-drom.svgmap-drom-bottom &gt; * {
+    margin: 2%;
+}
+/****** Ile de France ZOOM ********/
+/* Position Top Left */
+.svgmap-idf-top-left ~ .svgmap-francemetro {
+    padding-top: 7%;
+    padding-left: 7%;
+}
+.svgmap-idf.svgmap-idf-top-left {
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    width: 20%;
+}
+/* Position Top Right */
+.svgmap-idf.svgmap-idf-top-right {
+    position: absolute;
+    right: 10%;
+    top: 3%;
+    width: 20%;
+}
+.svgmap-idf-top-right ~ .svgmap-francemetro {
+    padding-top: 8%;
+}
+/* DROM Right &#43; IDF Top Right */
+.svgmap-drom-right ~ .svgmap-idf-top-right ~ .svgmap-francemetro {
+    padding-right: 3%;
+}
+.svgmap-drom-right ~ .svgmap-idf-top-right {
+    right: 16%;
+}
+/* DROM Right &#43; IDF Top Left */
+.svgmap-drom-right ~ .svgmap-idf.svgmap-idf-top-left {
+    left: 3%;
+}
+/* DROM Left &#43; IDF Top Right */
+.svgmap-drom-left ~ .svgmap-idf-top-right {
+    right: 1%;
+}
+/* DROM Left &#43; IDF Top Left */
+.svgmap-drom-left ~ .svgmap-francemetro ~ .svgmap-idf.svgmap-idf-top-left {
+    padding-top: 11%;
+    padding-left: 20%;
+}
+.svgmap-drom-left ~ .svgmap-idf.svgmap-idf-top-left ~ .svgmap-francemetro{
+    padding-left: 22%;
+    padding-top: 5%;
+}
+.svgmap-drom-left ~ .svgmap-idf.svgmap-idf-top-left {
+    left: 17%;
+    width: 17%;
+}
+/* Some CSS override to manage picto sizes */
+.ods-svginliner__svg-container {
+    height: 100%;
+}
+.odswidget.odswidget-picto {
+    height: 100%;
+}
+/* None styles */
+.svgmap-idf-none, .svgmap-drom-none {
+    display: none;
+}
+
+</style>
+</body>
+"></iframe>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="navsvg-maps-1-code" role="tabpanel" aria-labelledby="navsvg-maps-1-code-tab">
+            <div class="row">
+                <div class="col-2">
+                    <div class="nav flex-column nav-pills" id="code-svg-maps-1-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link active" id="code-svg-maps-1-html-tab" data-toggle="pill" href="#code-svg-maps-1-html-content" role="tab" aria-controls="code-svg-maps-1-html-content" aria-selected="true">
+                            HTML
+                        </a>
+                        <a class="nav-link" id="code-svg-maps-1-css-tab" data-toggle="pill" href="#code-svg-maps-1-css-content" role="tab" aria-controls="code-svg-maps-1-css-content" aria-selected="false">
+                            CSS
+                        </a>
+                    </div>
+
+                    <a class="edit-on-codepen" target="_blank" rel="noopener" href="#" title="Edit on CodePen"
+                       onclick="document.getElementById('form-svg-maps-1').submit()">
+                        <span class="codepen-edit-on-text">EDIT ON</span>
+                        <svg class="codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-10">
+                    <div class="tab-content" id="code-tabContent">
+                        <div class="tab-pane fade show active" id="code-svg-maps-1-html-content" role="tabpanel" aria-labelledby="code-svg-maps-1-html-tab">
+                            <div class="highlight">
+                                <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;ctx&#34;
+                     ctx-dataset=&#34;liste-des-departements-metropole-dom&#34;
+                     ctx-domain=&#34;discovery&#34;&gt;
+    &lt;div ods-color-gradient=&#34;analysis&#34;
+         ods-color-gradient-context=&#34;ctx&#34;
+         ods-color-gradient-x=&#34;code_texte&#34;
+         ods-color-gradient-serie=&#34;MAX(code)&#34;
+         ods-color-gradient-logarithmic-scale-factor=&#34;1&#34;
+         ng-init=&#34;idf = &#39;svgmap-idf-top-left&#39;;
+                  drom = &#39;svgmap-drom-right&#39;;&#34;&gt;
+        &lt;div class=&#34;ods-box&#34;&gt;
+            &lt;span&gt;
+                Position de l&#39;île de France
+            &lt;/span&gt;
+            &lt;select ng-model=&#34;idf&#34;&gt;
+                &lt;option value=&#34;svgmap-idf-top-left&#34;&gt;Haut gauche&lt;/option&gt;
+                &lt;option value=&#34;svgmap-idf-top-right&#34;&gt;Haut droit&lt;/option&gt;
+                &lt;option value=&#34;svgmap-idf-none&#34;&gt;Désactivé&lt;/option&gt;
+            &lt;/select&gt;
+            &lt;br/&gt;
+            &lt;span&gt;
+                Position des départements et régions d&#39;outre mer
+            &lt;/span&gt;
+            &lt;select ng-model=&#34;drom&#34;&gt;
+                &lt;option value=&#34;svgmap-drom-left&#34;&gt;Gauche&lt;/option&gt;
+                &lt;option value=&#34;svgmap-drom-right&#34;&gt;Droite&lt;/option&gt;
+                &lt;option value=&#34;svgmap-drom-bottom&#34;&gt;En dessous&lt;/option&gt;
+                &lt;option value=&#34;svgmap-drom-none&#34;&gt;Désactivé&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;svgmap-france&#34;&gt;
+            &lt;div class=&#34;svgmap-drom&#34;
+                 ng-class=&#34;drom&#34;&gt;
+                &lt;div class=&#34;svgmap-martinique&#34;&gt;
+                    &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_mtq.svg&#39;&#34;
+                               color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;svgmap-reunion&#34;&gt;
+                    &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_reu.svg&#39;&#34;
+                               color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;svgmap-guyane&#34;&gt;
+                    &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_guf.svg&#39;&#34;
+                               color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;svgmap-guadeloupe&#34;&gt;
+                    &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_glp.svg&#39;&#34;
+                               color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;svgmap-mayotte&#34;&gt;
+                    &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_myt.svg&#39;&#34;
+                               color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;svgmap-idf&#34;
+                 ng-class=&#34;idf&#34;&gt;
+                &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_idf.svg&#39;&#34;
+                           color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;svgmap-francemetro&#34;&gt;
+                &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_fxx.svg&#39;&#34;
+                           color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+</code></pre>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="code-svg-maps-1-css-content" role="tabpanel" aria-labelledby="code-svg-maps-1-css-tab">
+                            <div class="highlight">
+                                <pre class="language-css" data-lang="css"><code>/******** SVG MAPS *************/
+/************ Conteneur France ***************/
+.svgmap-france {
+    width: 500px;
+    margin: auto;
+    position: relative;
+    background-color: white;
+}
+/* France Métropole */
+.svgmap-francemetro {
+    padding: 0;
+}
+/********** DROM ************/
+/* Position en colonne left */
+.svgmap-drom-left ~ .svgmap-francemetro {
+    padding-left: 17%;
+}
+.svgmap-drom.svgmap-drom-left {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 1%;
+    top: 2%;
+    width: 12.1%;
+}
+/* Position en colonne right */
+.svgmap-drom.svgmap-drom-right {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 1%;
+    top: 3%;
+    width: 11%;
+}
+/* Position en ligne bottom */
+.svgmap-drom-bottom ~ .svgmap-francemetro {
+    padding-bottom: 16%;
+}
+.svgmap-drom.svgmap-drom-bottom {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    bottom: 1%;
+    width: 90%;
+    height: 17%;
+}
+.svgmap-drom.svgmap-drom-bottom &gt; * {
+    margin: 2%;
+}
+/****** Ile de France ZOOM ********/
+/* Position Top Left */
+.svgmap-idf-top-left ~ .svgmap-francemetro {
+    padding-top: 7%;
+    padding-left: 7%;
+}
+.svgmap-idf.svgmap-idf-top-left {
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    width: 20%;
+}
+/* Position Top Right */
+.svgmap-idf.svgmap-idf-top-right {
+    position: absolute;
+    right: 10%;
+    top: 3%;
+    width: 20%;
+}
+.svgmap-idf-top-right ~ .svgmap-francemetro {
+    padding-top: 8%;
+}
+/* DROM Right &#43; IDF Top Right */
+.svgmap-drom-right ~ .svgmap-idf-top-right ~ .svgmap-francemetro {
+    padding-right: 3%;
+}
+.svgmap-drom-right ~ .svgmap-idf-top-right {
+    right: 16%;
+}
+/* DROM Right &#43; IDF Top Left */
+.svgmap-drom-right ~ .svgmap-idf.svgmap-idf-top-left {
+    left: 3%;
+}
+/* DROM Left &#43; IDF Top Right */
+.svgmap-drom-left ~ .svgmap-idf-top-right {
+    right: 1%;
+}
+/* DROM Left &#43; IDF Top Left */
+.svgmap-drom-left ~ .svgmap-francemetro ~ .svgmap-idf.svgmap-idf-top-left {
+    padding-top: 11%;
+    padding-left: 20%;
+}
+.svgmap-drom-left ~ .svgmap-idf.svgmap-idf-top-left ~ .svgmap-francemetro{
+    padding-left: 22%;
+    padding-top: 5%;
+}
+.svgmap-drom-left ~ .svgmap-idf.svgmap-idf-top-left {
+    left: 17%;
+    width: 17%;
+}
+/* Some CSS override to manage picto sizes */
+.ods-svginliner__svg-container {
+    height: 100%;
+}
+.odswidget.odswidget-picto {
+    height: 100%;
+}
+/* None styles */
+.svgmap-idf-none, .svgmap-drom-none {
+    display: none;
+}
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+    
+    <div class="box">
+        <h2 id="svg-paths-styling">SVG Paths styling</h2>
+<p>Path and other geometries can easily be styled with few CSS lines.</p>
+
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-svg-maps-2" action="https://codepen.io/pen/define" method="POST" target="_blank">
+        <input type="hidden" name="data" value='{
+                                "title": "New Pen!",
+                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n&#34;,
+                                "editors": 110,
+                                "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;ctx\&#34;\n                     ctx-dataset=\&#34;liste-des-departements-metropole-dom\&#34;\n                     ctx-domain=\&#34;discovery\&#34;\u003e\n    \u003cdiv ods-color-gradient=\&#34;analysis\&#34;\n         ods-color-gradient-context=\&#34;ctx\&#34;\n         ods-color-gradient-x=\&#34;code_texte\&#34;\n         ods-color-gradient-serie=\&#34;MAX(code)\&#34;\n         ods-color-gradient-logarithmic-scale-factor=\&#34;1\&#34;\u003e\n        \u003cdiv class=\&#34;svgmap-france\&#34; id=\&#34;style1\&#34;\u003e\n            \u003cdiv class=\&#34;svgmap-idf svgmap-idf-top-left\&#34;\n                 ng-class=\&#34;idf\&#34;\u003e\n                \u003cods-picto url=\&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_idf.svg&#39;\&#34;\n                           color-by-attribute=\&#34;analysis.colors\&#34;\u003e\u003c/ods-picto\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;svgmap-francemetro\&#34;\u003e\n                \u003cods-picto url=\&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_fxx.svg&#39;\&#34;\n                           color-by-attribute=\&#34;analysis.colors\&#34;\u003e\u003c/ods-picto\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+                                "css": &#34;/******** SVG MAPS *************/\n/******************** Custom Style *************************/\n/* Path stroke : lines between whapes */\n#style1 {\n    stroke: white;\n    stroke-width: 2px;\n}\n/************ Conteneur France ***************/\n.svgmap-france {\n    width: 500px;\n    margin: auto;\n    position: relative;\n    background-color: white;\n}\n/* France Métropole */\n.svgmap-francemetro {\n    padding: 0;\n}\n/********** DROM ************/\n/* Position en colonne left */\n.svgmap-drom-left ~ .svgmap-francemetro {\n    padding-left: 17%;\n}\n.svgmap-drom.svgmap-drom-left {\n    display: flex;\n    flex-direction: column;\n    position: absolute;\n    left: 1%;\n    top: 2%;\n    width: 12.1%;\n}\n/* Position en colonne right */\n.svgmap-drom.svgmap-drom-right {\n    display: flex;\n    flex-direction: column;\n    position: absolute;\n    right: 1%;\n    top: 3%;\n    width: 11%;\n}\n/* Position en ligne bottom */\n.svgmap-drom-bottom ~ .svgmap-francemetro {\n    padding-bottom: 16%;\n}\n.svgmap-drom.svgmap-drom-bottom {\n    display: flex;\n    flex-direction: row;\n    position: absolute;\n    left: 5%;\n    right: 5%;\n    bottom: 1%;\n    width: 90%;\n    height: 17%;\n}\n.svgmap-drom.svgmap-drom-bottom \u003e * {\n    margin: 2%;\n}\n/****** Ile de France ZOOM ********/\n/* Position Top Left */\n.svgmap-idf-top-left ~ .svgmap-francemetro {\n    padding-top: 7%;\n    padding-left: 7%;\n}\n.svgmap-idf.svgmap-idf-top-left {\n    position: absolute;\n    left: 2%;\n    top: 2%;\n    width: 20%;\n}\n/* Position Top Right */\n.svgmap-idf.svgmap-idf-top-right {\n    position: absolute;\n    right: 10%;\n    top: 3%;\n    width: 20%;\n}\n.svgmap-idf-top-right ~ .svgmap-francemetro {\n    padding-top: 8%;\n}\n/* DROM Right &#43; IDF Top Right */\n.svgmap-drom-right ~ .svgmap-idf-top-right ~ .svgmap-francemetro {\n    padding-right: 3%;\n}\n.svgmap-drom-right ~ .svgmap-idf-top-right {\n    right: 16%;\n}\n/* DROM Right &#43; IDF Top Left */\n.svgmap-drom-right ~ .svgmap-idf.svgmap-idf-top-left {\n    left: 3%;\n}\n/* DROM Left &#43; IDF Top Right */\n.svgmap-drom-left ~ .svgmap-idf-top-right {\n    right: 1%;\n}\n/* DROM Left &#43; IDF Top Left */\n.svgmap-drom-left ~ .svgmap-francemetro ~ .svgmap-idf.svgmap-idf-top-left {\n    padding-top: 11%;\n    padding-left: 20%;\n}\n.svgmap-drom-left ~ .svgmap-idf.svgmap-idf-top-left ~ .svgmap-francemetro{\n    padding-left: 22%;\n    padding-top: 5%;\n}\n.svgmap-drom-left ~ .svgmap-idf.svgmap-idf-top-left {\n    left: 17%;\n    width: 17%;\n}\n/* Some CSS override to manage picto sizes */\n.ods-svginliner__svg-container {\n    height: 100%;\n}\n.odswidget.odswidget-picto {\n    height: 100%;\n}\n/* None styles */\n.svgmap-idf-none, .svgmap-drom-none {\n    display: none;\n}\n&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <nav>
+        <div class="nav nav-tabs justify-content-center" id="navsvg-maps-2-tab" role="tablist">
+        <a class="nav-item nav-link active" id="navsvg-maps-2-live-tab" data-toggle="tab" href="#navsvg-maps-2-live" role="tab" aria-controls="navsvg-maps-2-live" aria-selected="true">Live snippet</a>
+        <a class="nav-item nav-link" id="navsvg-maps-2-code-tab" data-toggle="tab" href="#navsvg-maps-2-code" role="tab" aria-controls="navsvg-maps-2-code" aria-selected="false">Get the code</a>
+</div>
+    </nav>
+
+    <div class="tab-content" id="svg-maps-2">
+        <div class="tab-pane fade show active" id="navsvg-maps-2-live" role="tabpanel" aria-labelledby="navsvg-maps-2-live-tab">
+            <div class="row">
+                <iframe id="iframe-svg-maps-2" width="100%" height="600px" src="about:blank"
+                    srcdoc="
+<head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+
+
+<!--link rel='stylesheet' href='/scss/main.css' /-->
+</head>
+<body>
+<div ng-app='ods-widgets' class='container-fluid'>
+    &lt;ods-dataset-context context=&#34;ctx&#34;
+                     ctx-dataset=&#34;liste-des-departements-metropole-dom&#34;
+                     ctx-domain=&#34;discovery&#34;&gt;
+    &lt;div ods-color-gradient=&#34;analysis&#34;
+         ods-color-gradient-context=&#34;ctx&#34;
+         ods-color-gradient-x=&#34;code_texte&#34;
+         ods-color-gradient-serie=&#34;MAX(code)&#34;
+         ods-color-gradient-logarithmic-scale-factor=&#34;1&#34;&gt;
+        &lt;div class=&#34;svgmap-france&#34; id=&#34;style1&#34;&gt;
+            &lt;div class=&#34;svgmap-idf svgmap-idf-top-left&#34;
+                 ng-class=&#34;idf&#34;&gt;
+                &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_idf.svg&#39;&#34;
+                           color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;svgmap-francemetro&#34;&gt;
+                &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_fxx.svg&#39;&#34;
+                           color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+
+</div>
+<style type='text/css'>
+    /******** SVG MAPS *************/
+/******************** Custom Style *************************/
+/* Path stroke : lines between whapes */
+#style1 {
+    stroke: white;
+    stroke-width: 2px;
+}
+/************ Conteneur France ***************/
+.svgmap-france {
+    width: 500px;
+    margin: auto;
+    position: relative;
+    background-color: white;
+}
+/* France Métropole */
+.svgmap-francemetro {
+    padding: 0;
+}
+/********** DROM ************/
+/* Position en colonne left */
+.svgmap-drom-left ~ .svgmap-francemetro {
+    padding-left: 17%;
+}
+.svgmap-drom.svgmap-drom-left {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 1%;
+    top: 2%;
+    width: 12.1%;
+}
+/* Position en colonne right */
+.svgmap-drom.svgmap-drom-right {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 1%;
+    top: 3%;
+    width: 11%;
+}
+/* Position en ligne bottom */
+.svgmap-drom-bottom ~ .svgmap-francemetro {
+    padding-bottom: 16%;
+}
+.svgmap-drom.svgmap-drom-bottom {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    bottom: 1%;
+    width: 90%;
+    height: 17%;
+}
+.svgmap-drom.svgmap-drom-bottom &gt; * {
+    margin: 2%;
+}
+/****** Ile de France ZOOM ********/
+/* Position Top Left */
+.svgmap-idf-top-left ~ .svgmap-francemetro {
+    padding-top: 7%;
+    padding-left: 7%;
+}
+.svgmap-idf.svgmap-idf-top-left {
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    width: 20%;
+}
+/* Position Top Right */
+.svgmap-idf.svgmap-idf-top-right {
+    position: absolute;
+    right: 10%;
+    top: 3%;
+    width: 20%;
+}
+.svgmap-idf-top-right ~ .svgmap-francemetro {
+    padding-top: 8%;
+}
+/* DROM Right &#43; IDF Top Right */
+.svgmap-drom-right ~ .svgmap-idf-top-right ~ .svgmap-francemetro {
+    padding-right: 3%;
+}
+.svgmap-drom-right ~ .svgmap-idf-top-right {
+    right: 16%;
+}
+/* DROM Right &#43; IDF Top Left */
+.svgmap-drom-right ~ .svgmap-idf.svgmap-idf-top-left {
+    left: 3%;
+}
+/* DROM Left &#43; IDF Top Right */
+.svgmap-drom-left ~ .svgmap-idf-top-right {
+    right: 1%;
+}
+/* DROM Left &#43; IDF Top Left */
+.svgmap-drom-left ~ .svgmap-francemetro ~ .svgmap-idf.svgmap-idf-top-left {
+    padding-top: 11%;
+    padding-left: 20%;
+}
+.svgmap-drom-left ~ .svgmap-idf.svgmap-idf-top-left ~ .svgmap-francemetro{
+    padding-left: 22%;
+    padding-top: 5%;
+}
+.svgmap-drom-left ~ .svgmap-idf.svgmap-idf-top-left {
+    left: 17%;
+    width: 17%;
+}
+/* Some CSS override to manage picto sizes */
+.ods-svginliner__svg-container {
+    height: 100%;
+}
+.odswidget.odswidget-picto {
+    height: 100%;
+}
+/* None styles */
+.svgmap-idf-none, .svgmap-drom-none {
+    display: none;
+}
+
+</style>
+</body>
+"></iframe>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="navsvg-maps-2-code" role="tabpanel" aria-labelledby="navsvg-maps-2-code-tab">
+            <div class="row">
+                <div class="col-2">
+                    <div class="nav flex-column nav-pills" id="code-svg-maps-2-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link active" id="code-svg-maps-2-html-tab" data-toggle="pill" href="#code-svg-maps-2-html-content" role="tab" aria-controls="code-svg-maps-2-html-content" aria-selected="true">
+                            HTML
+                        </a>
+                        <a class="nav-link" id="code-svg-maps-2-css-tab" data-toggle="pill" href="#code-svg-maps-2-css-content" role="tab" aria-controls="code-svg-maps-2-css-content" aria-selected="false">
+                            CSS
+                        </a>
+                    </div>
+
+                    <a class="edit-on-codepen" target="_blank" rel="noopener" href="#" title="Edit on CodePen"
+                       onclick="document.getElementById('form-svg-maps-2').submit()">
+                        <span class="codepen-edit-on-text">EDIT ON</span>
+                        <svg class="codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-10">
+                    <div class="tab-content" id="code-tabContent">
+                        <div class="tab-pane fade show active" id="code-svg-maps-2-html-content" role="tabpanel" aria-labelledby="code-svg-maps-2-html-tab">
+                            <div class="highlight">
+                                <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;ctx&#34;
+                     ctx-dataset=&#34;liste-des-departements-metropole-dom&#34;
+                     ctx-domain=&#34;discovery&#34;&gt;
+    &lt;div ods-color-gradient=&#34;analysis&#34;
+         ods-color-gradient-context=&#34;ctx&#34;
+         ods-color-gradient-x=&#34;code_texte&#34;
+         ods-color-gradient-serie=&#34;MAX(code)&#34;
+         ods-color-gradient-logarithmic-scale-factor=&#34;1&#34;&gt;
+        &lt;div class=&#34;svgmap-france&#34; id=&#34;style1&#34;&gt;
+            &lt;div class=&#34;svgmap-idf svgmap-idf-top-left&#34;
+                 ng-class=&#34;idf&#34;&gt;
+                &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_idf.svg&#39;&#34;
+                           color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;svgmap-francemetro&#34;&gt;
+                &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_fxx.svg&#39;&#34;
+                           color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+</code></pre>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="code-svg-maps-2-css-content" role="tabpanel" aria-labelledby="code-svg-maps-2-css-tab">
+                            <div class="highlight">
+                                <pre class="language-css" data-lang="css"><code>/******** SVG MAPS *************/
+/******************** Custom Style *************************/
+/* Path stroke : lines between whapes */
+#style1 {
+    stroke: white;
+    stroke-width: 2px;
+}
+/************ Conteneur France ***************/
+.svgmap-france {
+    width: 500px;
+    margin: auto;
+    position: relative;
+    background-color: white;
+}
+/* France Métropole */
+.svgmap-francemetro {
+    padding: 0;
+}
+/********** DROM ************/
+/* Position en colonne left */
+.svgmap-drom-left ~ .svgmap-francemetro {
+    padding-left: 17%;
+}
+.svgmap-drom.svgmap-drom-left {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 1%;
+    top: 2%;
+    width: 12.1%;
+}
+/* Position en colonne right */
+.svgmap-drom.svgmap-drom-right {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 1%;
+    top: 3%;
+    width: 11%;
+}
+/* Position en ligne bottom */
+.svgmap-drom-bottom ~ .svgmap-francemetro {
+    padding-bottom: 16%;
+}
+.svgmap-drom.svgmap-drom-bottom {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    bottom: 1%;
+    width: 90%;
+    height: 17%;
+}
+.svgmap-drom.svgmap-drom-bottom &gt; * {
+    margin: 2%;
+}
+/****** Ile de France ZOOM ********/
+/* Position Top Left */
+.svgmap-idf-top-left ~ .svgmap-francemetro {
+    padding-top: 7%;
+    padding-left: 7%;
+}
+.svgmap-idf.svgmap-idf-top-left {
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    width: 20%;
+}
+/* Position Top Right */
+.svgmap-idf.svgmap-idf-top-right {
+    position: absolute;
+    right: 10%;
+    top: 3%;
+    width: 20%;
+}
+.svgmap-idf-top-right ~ .svgmap-francemetro {
+    padding-top: 8%;
+}
+/* DROM Right &#43; IDF Top Right */
+.svgmap-drom-right ~ .svgmap-idf-top-right ~ .svgmap-francemetro {
+    padding-right: 3%;
+}
+.svgmap-drom-right ~ .svgmap-idf-top-right {
+    right: 16%;
+}
+/* DROM Right &#43; IDF Top Left */
+.svgmap-drom-right ~ .svgmap-idf.svgmap-idf-top-left {
+    left: 3%;
+}
+/* DROM Left &#43; IDF Top Right */
+.svgmap-drom-left ~ .svgmap-idf-top-right {
+    right: 1%;
+}
+/* DROM Left &#43; IDF Top Left */
+.svgmap-drom-left ~ .svgmap-francemetro ~ .svgmap-idf.svgmap-idf-top-left {
+    padding-top: 11%;
+    padding-left: 20%;
+}
+.svgmap-drom-left ~ .svgmap-idf.svgmap-idf-top-left ~ .svgmap-francemetro{
+    padding-left: 22%;
+    padding-top: 5%;
+}
+.svgmap-drom-left ~ .svgmap-idf.svgmap-idf-top-left {
+    left: 17%;
+    width: 17%;
+}
+/* Some CSS override to manage picto sizes */
+.ods-svginliner__svg-container {
+    height: 100%;
+}
+.odswidget.odswidget-picto {
+    height: 100%;
+}
+/* None styles */
+.svgmap-idf-none, .svgmap-drom-none {
+    display: none;
+}
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+    
+    <div class="box">
+        <h2 id="svg-paths--text">SVG Paths + Text</h2>
+<p>Hover paths to display it&rsquo;s label</p>
+
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-svg-maps-3" action="https://codepen.io/pen/define" method="POST" target="_blank">
+        <input type="hidden" name="data" value='{
+                                "title": "New Pen!",
+                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n&#34;,
+                                "editors": 110,
+                                "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;ctx\&#34;\n                     ctx-dataset=\&#34;liste-des-departements-metropole-dom\&#34;\n                     ctx-domain=\&#34;discovery\&#34;\u003e\n    \u003cdiv ods-color-gradient=\&#34;analysis\&#34;\n         ods-color-gradient-context=\&#34;ctx\&#34;\n         ods-color-gradient-x=\&#34;code_texte\&#34;\n         ods-color-gradient-serie=\&#34;MAX(code)\&#34;\n         ods-color-gradient-logarithmic-scale-factor=\&#34;1\&#34;\u003e\n        \u003cdiv class=\&#34;svgmap-france svgmap-with-text\&#34;\u003e\n            \u003cdiv class=\&#34;svgmap-francemetro\&#34;\u003e\n                \u003cods-picto url=\&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_fxx_text.svg&#39;\&#34;\n                           color-by-attribute=\&#34;analysis.colors\&#34;\u003e\u003c/ods-picto\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+                                "css": &#34;/******** SVG MAPS *************/\n/************ Conteneur France ***************/\n.svgmap-france {\n    width: 500px;\n    margin: auto;\n    position: relative;\n    background-color: white;\n}\n/* France Métropole */\n.svgmap-francemetro {\n    padding: 0;\n}\n/********** DROM ************/\n/* Position en colonne left */\n.svgmap-drom-left ~ .svgmap-francemetro {\n    padding-left: 17%;\n}\n.svgmap-drom.svgmap-drom-left {\n    display: flex;\n    flex-direction: column;\n    position: absolute;\n    left: 1%;\n    top: 2%;\n    width: 12.1%;\n}\n/* Position en colonne right */\n.svgmap-drom.svgmap-drom-right {\n    display: flex;\n    flex-direction: column;\n    position: absolute;\n    right: 1%;\n    top: 3%;\n    width: 11%;\n}\n/* Position en ligne bottom */\n.svgmap-drom-bottom ~ .svgmap-francemetro {\n    padding-bottom: 16%;\n}\n.svgmap-drom.svgmap-drom-bottom {\n    display: flex;\n    flex-direction: row;\n    position: absolute;\n    left: 5%;\n    right: 5%;\n    bottom: 1%;\n    width: 90%;\n    height: 17%;\n}\n.svgmap-drom.svgmap-drom-bottom \u003e * {\n    margin: 2%;\n}\n/****** Ile de France ZOOM ********/\n/* Position Top Left */\n.svgmap-idf-top-left ~ .svgmap-francemetro {\n    padding-top: 7%;\n    padding-left: 7%;\n}\n.svgmap-idf.svgmap-idf-top-left {\n    position: absolute;\n    left: 2%;\n    top: 2%;\n    width: 20%;\n}\n/* Position Top Right */\n.svgmap-idf.svgmap-idf-top-right {\n    position: absolute;\n    right: 10%;\n    top: 3%;\n    width: 20%;\n}\n.svgmap-idf-top-right ~ .svgmap-francemetro {\n    padding-top: 8%;\n}\n/* DROM Right &#43; IDF Top Right */\n.svgmap-drom-right ~ .svgmap-idf-top-right ~ .svgmap-francemetro {\n    padding-right: 3%;\n}\n.svgmap-drom-right ~ .svgmap-idf-top-right {\n    right: 16%;\n}\n/* DROM Right &#43; IDF Top Left */\n.svgmap-drom-right ~ .svgmap-idf.svgmap-idf-top-left {\n    left: 3%;\n}\n/* DROM Left &#43; IDF Top Right */\n.svgmap-drom-left ~ .svgmap-idf-top-right {\n    right: 1%;\n}\n/* DROM Left &#43; IDF Top Left */\n.svgmap-drom-left ~ .svgmap-francemetro ~ .svgmap-idf.svgmap-idf-top-left {\n    padding-top: 11%;\n    padding-left: 20%;\n}\n.svgmap-drom-left ~ .svgmap-idf.svgmap-idf-top-left ~ .svgmap-francemetro{\n    padding-left: 22%;\n    padding-top: 5%;\n}\n.svgmap-drom-left ~ .svgmap-idf.svgmap-idf-top-left {\n    left: 17%;\n    width: 17%;\n}\n/* Some CSS override to manage picto sizes */\n.ods-svginliner__svg-container {\n    height: 100%;\n}\n.odswidget.odswidget-picto {\n    height: 100%;\n}\n/* None styles */\n.svgmap-idf-none, .svgmap-drom-none {\n    display: none;\n}\n/******************** Style *************************/\n/* Texts */\n.svgmap-with-text svg a path {\n    fill: transparent !important;\n    stroke: transparent !important;\n}\n.svgmap-with-text svg a text {\n    display: none;\n    font-size: 1.3em;\n    font-weight: 300;\n    font-family: sans-serif;\n    fill: white !important;\n    text-shadow: 2px 2px 5px black;\n    stroke: none;\n    pointer-events: none;\n}\n.svgmap-with-text svg a:hover {\n    cursor: default;\n    text-decoration: none;\n}\n.svgmap-with-text svg a:hover text {\n    display: inherit;\n}\n/* Custom hover styling */\n.svgmap-with-text svg a:hover path {\n    stroke: white !important;\n}\n/* Custom positionning */\n/* DEP */\n#text-dep_idf-92 {\n    text-anchor: start;\n}\n#text-dep_fxx-29, #text-dep_fxx-22 {\n    text-anchor: start;\n}\n#text-dep_fxx-2A, #text-dep_fxx-2B {\n    text-anchor: end;\n}\n&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <nav>
+        <div class="nav nav-tabs justify-content-center" id="navsvg-maps-3-tab" role="tablist">
+        <a class="nav-item nav-link active" id="navsvg-maps-3-live-tab" data-toggle="tab" href="#navsvg-maps-3-live" role="tab" aria-controls="navsvg-maps-3-live" aria-selected="true">Live snippet</a>
+        <a class="nav-item nav-link" id="navsvg-maps-3-code-tab" data-toggle="tab" href="#navsvg-maps-3-code" role="tab" aria-controls="navsvg-maps-3-code" aria-selected="false">Get the code</a>
+</div>
+    </nav>
+
+    <div class="tab-content" id="svg-maps-3">
+        <div class="tab-pane fade show active" id="navsvg-maps-3-live" role="tabpanel" aria-labelledby="navsvg-maps-3-live-tab">
+            <div class="row">
+                <iframe id="iframe-svg-maps-3" width="100%" height="600px" src="about:blank"
+                    srcdoc="
+<head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+
+
+<!--link rel='stylesheet' href='/scss/main.css' /-->
+</head>
+<body>
+<div ng-app='ods-widgets' class='container-fluid'>
+    &lt;ods-dataset-context context=&#34;ctx&#34;
+                     ctx-dataset=&#34;liste-des-departements-metropole-dom&#34;
+                     ctx-domain=&#34;discovery&#34;&gt;
+    &lt;div ods-color-gradient=&#34;analysis&#34;
+         ods-color-gradient-context=&#34;ctx&#34;
+         ods-color-gradient-x=&#34;code_texte&#34;
+         ods-color-gradient-serie=&#34;MAX(code)&#34;
+         ods-color-gradient-logarithmic-scale-factor=&#34;1&#34;&gt;
+        &lt;div class=&#34;svgmap-france svgmap-with-text&#34;&gt;
+            &lt;div class=&#34;svgmap-francemetro&#34;&gt;
+                &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_fxx_text.svg&#39;&#34;
+                           color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+
+</div>
+<style type='text/css'>
+    /******** SVG MAPS *************/
+/************ Conteneur France ***************/
+.svgmap-france {
+    width: 500px;
+    margin: auto;
+    position: relative;
+    background-color: white;
+}
+/* France Métropole */
+.svgmap-francemetro {
+    padding: 0;
+}
+/********** DROM ************/
+/* Position en colonne left */
+.svgmap-drom-left ~ .svgmap-francemetro {
+    padding-left: 17%;
+}
+.svgmap-drom.svgmap-drom-left {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 1%;
+    top: 2%;
+    width: 12.1%;
+}
+/* Position en colonne right */
+.svgmap-drom.svgmap-drom-right {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 1%;
+    top: 3%;
+    width: 11%;
+}
+/* Position en ligne bottom */
+.svgmap-drom-bottom ~ .svgmap-francemetro {
+    padding-bottom: 16%;
+}
+.svgmap-drom.svgmap-drom-bottom {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    bottom: 1%;
+    width: 90%;
+    height: 17%;
+}
+.svgmap-drom.svgmap-drom-bottom &gt; * {
+    margin: 2%;
+}
+/****** Ile de France ZOOM ********/
+/* Position Top Left */
+.svgmap-idf-top-left ~ .svgmap-francemetro {
+    padding-top: 7%;
+    padding-left: 7%;
+}
+.svgmap-idf.svgmap-idf-top-left {
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    width: 20%;
+}
+/* Position Top Right */
+.svgmap-idf.svgmap-idf-top-right {
+    position: absolute;
+    right: 10%;
+    top: 3%;
+    width: 20%;
+}
+.svgmap-idf-top-right ~ .svgmap-francemetro {
+    padding-top: 8%;
+}
+/* DROM Right &#43; IDF Top Right */
+.svgmap-drom-right ~ .svgmap-idf-top-right ~ .svgmap-francemetro {
+    padding-right: 3%;
+}
+.svgmap-drom-right ~ .svgmap-idf-top-right {
+    right: 16%;
+}
+/* DROM Right &#43; IDF Top Left */
+.svgmap-drom-right ~ .svgmap-idf.svgmap-idf-top-left {
+    left: 3%;
+}
+/* DROM Left &#43; IDF Top Right */
+.svgmap-drom-left ~ .svgmap-idf-top-right {
+    right: 1%;
+}
+/* DROM Left &#43; IDF Top Left */
+.svgmap-drom-left ~ .svgmap-francemetro ~ .svgmap-idf.svgmap-idf-top-left {
+    padding-top: 11%;
+    padding-left: 20%;
+}
+.svgmap-drom-left ~ .svgmap-idf.svgmap-idf-top-left ~ .svgmap-francemetro{
+    padding-left: 22%;
+    padding-top: 5%;
+}
+.svgmap-drom-left ~ .svgmap-idf.svgmap-idf-top-left {
+    left: 17%;
+    width: 17%;
+}
+/* Some CSS override to manage picto sizes */
+.ods-svginliner__svg-container {
+    height: 100%;
+}
+.odswidget.odswidget-picto {
+    height: 100%;
+}
+/* None styles */
+.svgmap-idf-none, .svgmap-drom-none {
+    display: none;
+}
+/******************** Style *************************/
+/* Texts */
+.svgmap-with-text svg a path {
+    fill: transparent !important;
+    stroke: transparent !important;
+}
+.svgmap-with-text svg a text {
+    display: none;
+    font-size: 1.3em;
+    font-weight: 300;
+    font-family: sans-serif;
+    fill: white !important;
+    text-shadow: 2px 2px 5px black;
+    stroke: none;
+    pointer-events: none;
+}
+.svgmap-with-text svg a:hover {
+    cursor: default;
+    text-decoration: none;
+}
+.svgmap-with-text svg a:hover text {
+    display: inherit;
+}
+/* Custom hover styling */
+.svgmap-with-text svg a:hover path {
+    stroke: white !important;
+}
+/* Custom positionning */
+/* DEP */
+#text-dep_idf-92 {
+    text-anchor: start;
+}
+#text-dep_fxx-29, #text-dep_fxx-22 {
+    text-anchor: start;
+}
+#text-dep_fxx-2A, #text-dep_fxx-2B {
+    text-anchor: end;
+}
+
+</style>
+</body>
+"></iframe>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="navsvg-maps-3-code" role="tabpanel" aria-labelledby="navsvg-maps-3-code-tab">
+            <div class="row">
+                <div class="col-2">
+                    <div class="nav flex-column nav-pills" id="code-svg-maps-3-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link active" id="code-svg-maps-3-html-tab" data-toggle="pill" href="#code-svg-maps-3-html-content" role="tab" aria-controls="code-svg-maps-3-html-content" aria-selected="true">
+                            HTML
+                        </a>
+                        <a class="nav-link" id="code-svg-maps-3-css-tab" data-toggle="pill" href="#code-svg-maps-3-css-content" role="tab" aria-controls="code-svg-maps-3-css-content" aria-selected="false">
+                            CSS
+                        </a>
+                    </div>
+
+                    <a class="edit-on-codepen" target="_blank" rel="noopener" href="#" title="Edit on CodePen"
+                       onclick="document.getElementById('form-svg-maps-3').submit()">
+                        <span class="codepen-edit-on-text">EDIT ON</span>
+                        <svg class="codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-10">
+                    <div class="tab-content" id="code-tabContent">
+                        <div class="tab-pane fade show active" id="code-svg-maps-3-html-content" role="tabpanel" aria-labelledby="code-svg-maps-3-html-tab">
+                            <div class="highlight">
+                                <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;ctx&#34;
+                     ctx-dataset=&#34;liste-des-departements-metropole-dom&#34;
+                     ctx-domain=&#34;discovery&#34;&gt;
+    &lt;div ods-color-gradient=&#34;analysis&#34;
+         ods-color-gradient-context=&#34;ctx&#34;
+         ods-color-gradient-x=&#34;code_texte&#34;
+         ods-color-gradient-serie=&#34;MAX(code)&#34;
+         ods-color-gradient-logarithmic-scale-factor=&#34;1&#34;&gt;
+        &lt;div class=&#34;svgmap-france svgmap-with-text&#34;&gt;
+            &lt;div class=&#34;svgmap-francemetro&#34;&gt;
+                &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_fxx_text.svg&#39;&#34;
+                           color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+</code></pre>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="code-svg-maps-3-css-content" role="tabpanel" aria-labelledby="code-svg-maps-3-css-tab">
+                            <div class="highlight">
+                                <pre class="language-css" data-lang="css"><code>/******** SVG MAPS *************/
+/************ Conteneur France ***************/
+.svgmap-france {
+    width: 500px;
+    margin: auto;
+    position: relative;
+    background-color: white;
+}
+/* France Métropole */
+.svgmap-francemetro {
+    padding: 0;
+}
+/********** DROM ************/
+/* Position en colonne left */
+.svgmap-drom-left ~ .svgmap-francemetro {
+    padding-left: 17%;
+}
+.svgmap-drom.svgmap-drom-left {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    left: 1%;
+    top: 2%;
+    width: 12.1%;
+}
+/* Position en colonne right */
+.svgmap-drom.svgmap-drom-right {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 1%;
+    top: 3%;
+    width: 11%;
+}
+/* Position en ligne bottom */
+.svgmap-drom-bottom ~ .svgmap-francemetro {
+    padding-bottom: 16%;
+}
+.svgmap-drom.svgmap-drom-bottom {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    bottom: 1%;
+    width: 90%;
+    height: 17%;
+}
+.svgmap-drom.svgmap-drom-bottom &gt; * {
+    margin: 2%;
+}
+/****** Ile de France ZOOM ********/
+/* Position Top Left */
+.svgmap-idf-top-left ~ .svgmap-francemetro {
+    padding-top: 7%;
+    padding-left: 7%;
+}
+.svgmap-idf.svgmap-idf-top-left {
+    position: absolute;
+    left: 2%;
+    top: 2%;
+    width: 20%;
+}
+/* Position Top Right */
+.svgmap-idf.svgmap-idf-top-right {
+    position: absolute;
+    right: 10%;
+    top: 3%;
+    width: 20%;
+}
+.svgmap-idf-top-right ~ .svgmap-francemetro {
+    padding-top: 8%;
+}
+/* DROM Right &#43; IDF Top Right */
+.svgmap-drom-right ~ .svgmap-idf-top-right ~ .svgmap-francemetro {
+    padding-right: 3%;
+}
+.svgmap-drom-right ~ .svgmap-idf-top-right {
+    right: 16%;
+}
+/* DROM Right &#43; IDF Top Left */
+.svgmap-drom-right ~ .svgmap-idf.svgmap-idf-top-left {
+    left: 3%;
+}
+/* DROM Left &#43; IDF Top Right */
+.svgmap-drom-left ~ .svgmap-idf-top-right {
+    right: 1%;
+}
+/* DROM Left &#43; IDF Top Left */
+.svgmap-drom-left ~ .svgmap-francemetro ~ .svgmap-idf.svgmap-idf-top-left {
+    padding-top: 11%;
+    padding-left: 20%;
+}
+.svgmap-drom-left ~ .svgmap-idf.svgmap-idf-top-left ~ .svgmap-francemetro{
+    padding-left: 22%;
+    padding-top: 5%;
+}
+.svgmap-drom-left ~ .svgmap-idf.svgmap-idf-top-left {
+    left: 17%;
+    width: 17%;
+}
+/* Some CSS override to manage picto sizes */
+.ods-svginliner__svg-container {
+    height: 100%;
+}
+.odswidget.odswidget-picto {
+    height: 100%;
+}
+/* None styles */
+.svgmap-idf-none, .svgmap-drom-none {
+    display: none;
+}
+/******************** Style *************************/
+/* Texts */
+.svgmap-with-text svg a path {
+    fill: transparent !important;
+    stroke: transparent !important;
+}
+.svgmap-with-text svg a text {
+    display: none;
+    font-size: 1.3em;
+    font-weight: 300;
+    font-family: sans-serif;
+    fill: white !important;
+    text-shadow: 2px 2px 5px black;
+    stroke: none;
+    pointer-events: none;
+}
+.svgmap-with-text svg a:hover {
+    cursor: default;
+    text-decoration: none;
+}
+.svgmap-with-text svg a:hover text {
+    display: inherit;
+}
+/* Custom hover styling */
+.svgmap-with-text svg a:hover path {
+    stroke: white !important;
+}
+/* Custom positionning */
+/* DEP */
+#text-dep_idf-92 {
+    text-anchor: start;
+}
+#text-dep_fxx-29, #text-dep_fxx-22 {
+    text-anchor: start;
+}
+#text-dep_fxx-2A, #text-dep_fxx-2B {
+    text-anchor: end;
+}
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+    
+    <div class="box">
+        <h2 id="svg-paths--text">SVG Paths + Text</h2>
+<p>Same example with different SVGs.</p>
+
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-svg-maps-4" action="https://codepen.io/pen/define" method="POST" target="_blank">
+        <input type="hidden" name="data" value='{
+                                "title": "New Pen!",
+                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n&#34;,
+                                "editors": 110,
+                                "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;ctx\&#34;\n                     ctx-dataset=\&#34;liste-des-departements-metropole-dom\&#34;\n                     ctx-domain=\&#34;discovery\&#34;\u003e\n    \u003cdiv ods-color-gradient=\&#34;analysis\&#34;\n         ods-color-gradient-context=\&#34;ctx\&#34;\n         ods-color-gradient-x=\&#34;code_texte\&#34;\n         ods-color-gradient-serie=\&#34;MAX(code)\&#34;\n         ods-color-gradient-logarithmic-scale-factor=\&#34;1\&#34;\n         ng-init=\&#34;shapeColor = &#39;white&#39;\&#34;\u003e\n        \u003cdiv id=\&#34;map\&#34; class=\&#34;svgmap-france-region svgmap-with-text\&#34;\u003e\n            \u003cdiv class=\&#34;svgmap-drom-region\&#34;\u003e\n                \u003cdiv class=\&#34;svgmap-region-martinique\&#34;\u003e\n                    \u003cods-picto url=\&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/reg_mtq_text.svg&#39;\&#34;\n                               color=\&#34;shapeColor\&#34;\n                               color-by-attribute=\&#34;analysis.colors\&#34;\u003e\u003c/ods-picto\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;svgmap-region-reunion\&#34;\u003e\n                    \u003cods-picto url=\&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/reg_reu_text.svg&#39;\&#34;\n                               color=\&#34;shapeColor\&#34;\n                               color-by-attribute=\&#34;analysis.colors\&#34;\u003e\u003c/ods-picto\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;svgmap-region-guyane\&#34;\u003e\n                    \u003cods-picto url=\&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/reg_guf_text.svg&#39;\&#34;\n                               color=\&#34;shapeColor\&#34;\n                               color-by-attribute=\&#34;analysis.colors\&#34;\u003e\u003c/ods-picto\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;svgmap-region-guadeloupe\&#34;\u003e\n                    \u003cods-picto url=\&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/reg_glp_text.svg&#39;\&#34;\n                               color=\&#34;shapeColor\&#34;\n                               color-by-attribute=\&#34;analysis.colors\&#34;\u003e\u003c/ods-picto\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;svgmap-region-mayotte\&#34;\u003e\n                    \u003cods-picto url=\&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/reg_myt_text.svg&#39;\&#34;\n                               color=\&#34;shapeColor\&#34;\n                               color-by-attribute=\&#34;analysis.colors\&#34;\u003e\u003c/ods-picto\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;svgmap-francemetro-region\&#34;\u003e\n                \u003cods-picto url=\&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/reg_fxx_text.svg&#39;\&#34;\n                           color=\&#34;shapeColor\&#34;\n                           color-by-attribute=\&#34;analysis.colors\&#34;\u003e\u003c/ods-picto\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+                                "css": &#34;/******** SVG MAPS REGION *************/\n/************ Conteneur France ***************/\n.svgmap-france-region {\n    width: 500px;\n    margin: auto;\n    position: relative;\n    background-color: white;\n}\n/* France Métropole */\n.svgmap-francemetro-region {\n    padding-left: 17%;\n}\n/********** DROM ************/\n/* Position en colonne left */\n.svgmap-drom-region {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    position: absolute;\n    left: 1%;\n    top: 2%;\n    bottom: 2%;\n    width: 12%;\n}\n/******************** Style *************************/\n/* Texts */\n.svgmap-with-text svg a path {\n    fill: transparent !important;\n    stroke: transparent !important;\n}\n.svgmap-with-text svg a text {\n    display: none;\n    font-size: 1.3em;\n    font-weight: 300;\n    font-family: sans-serif;\n    fill: white !important;\n    text-shadow: 2px 2px 5px black;\n    stroke: none;\n    pointer-events: none;\n}\n.svgmap-with-text svg a:hover {\n    cursor: default;\n    text-decoration: none;\n}\n.svgmap-with-text svg a:hover text {\n    display: inherit;\n}\n/* Custom hover styling */\n.svgmap-with-text svg a:hover path {\n    stroke: white !important;\n}\n&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <nav>
+        <div class="nav nav-tabs justify-content-center" id="navsvg-maps-4-tab" role="tablist">
+        <a class="nav-item nav-link active" id="navsvg-maps-4-live-tab" data-toggle="tab" href="#navsvg-maps-4-live" role="tab" aria-controls="navsvg-maps-4-live" aria-selected="true">Live snippet</a>
+        <a class="nav-item nav-link" id="navsvg-maps-4-code-tab" data-toggle="tab" href="#navsvg-maps-4-code" role="tab" aria-controls="navsvg-maps-4-code" aria-selected="false">Get the code</a>
+</div>
+    </nav>
+
+    <div class="tab-content" id="svg-maps-4">
+        <div class="tab-pane fade show active" id="navsvg-maps-4-live" role="tabpanel" aria-labelledby="navsvg-maps-4-live-tab">
+            <div class="row">
+                <iframe id="iframe-svg-maps-4" width="100%" height="600px" src="about:blank"
+                    srcdoc="
+<head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+
+
+<!--link rel='stylesheet' href='/scss/main.css' /-->
+</head>
+<body>
+<div ng-app='ods-widgets' class='container-fluid'>
+    &lt;ods-dataset-context context=&#34;ctx&#34;
+                     ctx-dataset=&#34;liste-des-departements-metropole-dom&#34;
+                     ctx-domain=&#34;discovery&#34;&gt;
+    &lt;div ods-color-gradient=&#34;analysis&#34;
+         ods-color-gradient-context=&#34;ctx&#34;
+         ods-color-gradient-x=&#34;code_texte&#34;
+         ods-color-gradient-serie=&#34;MAX(code)&#34;
+         ods-color-gradient-logarithmic-scale-factor=&#34;1&#34;
+         ng-init=&#34;shapeColor = &#39;white&#39;&#34;&gt;
+        &lt;div id=&#34;map&#34; class=&#34;svgmap-france-region svgmap-with-text&#34;&gt;
+            &lt;div class=&#34;svgmap-drom-region&#34;&gt;
+                &lt;div class=&#34;svgmap-region-martinique&#34;&gt;
+                    &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/reg_mtq_text.svg&#39;&#34;
+                               color=&#34;shapeColor&#34;
+                               color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;svgmap-region-reunion&#34;&gt;
+                    &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/reg_reu_text.svg&#39;&#34;
+                               color=&#34;shapeColor&#34;
+                               color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;svgmap-region-guyane&#34;&gt;
+                    &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/reg_guf_text.svg&#39;&#34;
+                               color=&#34;shapeColor&#34;
+                               color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;svgmap-region-guadeloupe&#34;&gt;
+                    &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/reg_glp_text.svg&#39;&#34;
+                               color=&#34;shapeColor&#34;
+                               color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;svgmap-region-mayotte&#34;&gt;
+                    &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/reg_myt_text.svg&#39;&#34;
+                               color=&#34;shapeColor&#34;
+                               color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;svgmap-francemetro-region&#34;&gt;
+                &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/reg_fxx_text.svg&#39;&#34;
+                           color=&#34;shapeColor&#34;
+                           color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+
+</div>
+<style type='text/css'>
+    /******** SVG MAPS REGION *************/
+/************ Conteneur France ***************/
+.svgmap-france-region {
+    width: 500px;
+    margin: auto;
+    position: relative;
+    background-color: white;
+}
+/* France Métropole */
+.svgmap-francemetro-region {
+    padding-left: 17%;
+}
+/********** DROM ************/
+/* Position en colonne left */
+.svgmap-drom-region {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 1%;
+    top: 2%;
+    bottom: 2%;
+    width: 12%;
+}
+/******************** Style *************************/
+/* Texts */
+.svgmap-with-text svg a path {
+    fill: transparent !important;
+    stroke: transparent !important;
+}
+.svgmap-with-text svg a text {
+    display: none;
+    font-size: 1.3em;
+    font-weight: 300;
+    font-family: sans-serif;
+    fill: white !important;
+    text-shadow: 2px 2px 5px black;
+    stroke: none;
+    pointer-events: none;
+}
+.svgmap-with-text svg a:hover {
+    cursor: default;
+    text-decoration: none;
+}
+.svgmap-with-text svg a:hover text {
+    display: inherit;
+}
+/* Custom hover styling */
+.svgmap-with-text svg a:hover path {
+    stroke: white !important;
+}
+
+</style>
+</body>
+"></iframe>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="navsvg-maps-4-code" role="tabpanel" aria-labelledby="navsvg-maps-4-code-tab">
+            <div class="row">
+                <div class="col-2">
+                    <div class="nav flex-column nav-pills" id="code-svg-maps-4-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link active" id="code-svg-maps-4-html-tab" data-toggle="pill" href="#code-svg-maps-4-html-content" role="tab" aria-controls="code-svg-maps-4-html-content" aria-selected="true">
+                            HTML
+                        </a>
+                        <a class="nav-link" id="code-svg-maps-4-css-tab" data-toggle="pill" href="#code-svg-maps-4-css-content" role="tab" aria-controls="code-svg-maps-4-css-content" aria-selected="false">
+                            CSS
+                        </a>
+                    </div>
+
+                    <a class="edit-on-codepen" target="_blank" rel="noopener" href="#" title="Edit on CodePen"
+                       onclick="document.getElementById('form-svg-maps-4').submit()">
+                        <span class="codepen-edit-on-text">EDIT ON</span>
+                        <svg class="codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-10">
+                    <div class="tab-content" id="code-tabContent">
+                        <div class="tab-pane fade show active" id="code-svg-maps-4-html-content" role="tabpanel" aria-labelledby="code-svg-maps-4-html-tab">
+                            <div class="highlight">
+                                <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;ctx&#34;
+                     ctx-dataset=&#34;liste-des-departements-metropole-dom&#34;
+                     ctx-domain=&#34;discovery&#34;&gt;
+    &lt;div ods-color-gradient=&#34;analysis&#34;
+         ods-color-gradient-context=&#34;ctx&#34;
+         ods-color-gradient-x=&#34;code_texte&#34;
+         ods-color-gradient-serie=&#34;MAX(code)&#34;
+         ods-color-gradient-logarithmic-scale-factor=&#34;1&#34;
+         ng-init=&#34;shapeColor = &#39;white&#39;&#34;&gt;
+        &lt;div id=&#34;map&#34; class=&#34;svgmap-france-region svgmap-with-text&#34;&gt;
+            &lt;div class=&#34;svgmap-drom-region&#34;&gt;
+                &lt;div class=&#34;svgmap-region-martinique&#34;&gt;
+                    &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/reg_mtq_text.svg&#39;&#34;
+                               color=&#34;shapeColor&#34;
+                               color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;svgmap-region-reunion&#34;&gt;
+                    &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/reg_reu_text.svg&#39;&#34;
+                               color=&#34;shapeColor&#34;
+                               color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;svgmap-region-guyane&#34;&gt;
+                    &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/reg_guf_text.svg&#39;&#34;
+                               color=&#34;shapeColor&#34;
+                               color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;svgmap-region-guadeloupe&#34;&gt;
+                    &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/reg_glp_text.svg&#39;&#34;
+                               color=&#34;shapeColor&#34;
+                               color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;svgmap-region-mayotte&#34;&gt;
+                    &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/reg_myt_text.svg&#39;&#34;
+                               color=&#34;shapeColor&#34;
+                               color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;svgmap-francemetro-region&#34;&gt;
+                &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/reg_fxx_text.svg&#39;&#34;
+                           color=&#34;shapeColor&#34;
+                           color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+</code></pre>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="code-svg-maps-4-css-content" role="tabpanel" aria-labelledby="code-svg-maps-4-css-tab">
+                            <div class="highlight">
+                                <pre class="language-css" data-lang="css"><code>/******** SVG MAPS REGION *************/
+/************ Conteneur France ***************/
+.svgmap-france-region {
+    width: 500px;
+    margin: auto;
+    position: relative;
+    background-color: white;
+}
+/* France Métropole */
+.svgmap-francemetro-region {
+    padding-left: 17%;
+}
+/********** DROM ************/
+/* Position en colonne left */
+.svgmap-drom-region {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    left: 1%;
+    top: 2%;
+    bottom: 2%;
+    width: 12%;
+}
+/******************** Style *************************/
+/* Texts */
+.svgmap-with-text svg a path {
+    fill: transparent !important;
+    stroke: transparent !important;
+}
+.svgmap-with-text svg a text {
+    display: none;
+    font-size: 1.3em;
+    font-weight: 300;
+    font-family: sans-serif;
+    fill: white !important;
+    text-shadow: 2px 2px 5px black;
+    stroke: none;
+    pointer-events: none;
+}
+.svgmap-with-text svg a:hover {
+    cursor: default;
+    text-decoration: none;
+}
+.svgmap-with-text svg a:hover text {
+    display: inherit;
+}
+/* Custom hover styling */
+.svgmap-with-text svg a:hover path {
+    stroke: white !important;
+}
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+    
+    <div class="box">
+        <h2 id="the-complete-exemple---france-with-overseas-regions-departments-and-cities--text-hover-paths">The complete exemple - France with overseas regions, departments and cities + text hover paths</h2>
+<p>Click on HTML or CSS tab to edit and see the results. The code proposes only one positioning, therefore it&rsquo;s lighter and cleaner.</p>
+
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-svg-maps-5" action="https://codepen.io/pen/define" method="POST" target="_blank">
+        <input type="hidden" name="data" value='{
+                                "title": "New Pen!",
+                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n&#34;,
+                                "editors": 110,
+                                "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003c!-- IE 11 requires height style on the container, and height:100% on all children --\u003e\n\u003cdiv style=\&#34;width: 600px; margin: auto\&#34;\u003e\n\n    \u003cods-dataset-context style=\&#34;height: 100%\&#34;\n                         context=\&#34;ctx\&#34;\n                         ctx-dataset=\&#34;liste-des-departements-metropole-dom\&#34;\n                         ctx-parameters=\&#34;{&#39;q&#39;:&#39;code \u003e 3&#39;}\&#34;\n                         ctx-domain=\&#34;discovery\&#34;\u003e\n\n        \u003c!-- To Test default color when values are missing, add :\n  ctx-parameters=\&#34;{&#39;q&#39;:&#39;code \u003c= 70 OR code \u003e 972 OR code:95 OR code:78&#39;}\&#34;\n  --\u003e\n\n        \u003cdiv style=\&#34;height: 100%\&#34; ods-color-gradient=\&#34;analysis\&#34;\n             ods-color-gradient-context=\&#34;ctx\&#34;\n             ods-color-gradient-x=\&#34;code_texte\&#34;\n             ods-color-gradient-serie=\&#34;MAX(code)\&#34;\n             ods-color-gradient-logarithmic-scale-factor=\&#34;1\&#34;\n\n             ng-init=\&#34;shapeColor = &#39;white&#39;\&#34;\u003e\n\n            \u003cdiv id=\&#34;map\&#34; class=\&#34;svgmap-france\&#34;\u003e\n\n                \u003cdiv class=\&#34;svgmap-drom\&#34;\u003e\n                    \u003cdiv class=\&#34;svgmap-martinique\&#34;\u003e\n                        \u003cods-picto url=\&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_mtq_text.svg&#39;\&#34;\n                                   color=\&#34;shapeColor\&#34;\n                                   color-by-attribute=\&#34;analysis.colors\&#34;\u003e\u003c/ods-picto\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;svgmap-reunion\&#34;\u003e\n                        \u003cods-picto url=\&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_reu_text.svg&#39;\&#34;\n                                   color=\&#34;shapeColor\&#34;\n                                   color-by-attribute=\&#34;analysis.colors\&#34;\u003e\u003c/ods-picto\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;svgmap-guyane\&#34;\u003e\n                        \u003cods-picto url=\&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_guf_text.svg&#39;\&#34;\n                                   color=\&#34;shapeColor\&#34;\n                                   color-by-attribute=\&#34;analysis.colors\&#34;\u003e\u003c/ods-picto\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;svgmap-guadeloupe\&#34;\u003e\n                        \u003cods-picto url=\&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_glp_text.svg&#39;\&#34;\n                                   color=\&#34;shapeColor\&#34;\n                                   color-by-attribute=\&#34;analysis.colors\&#34;\u003e\u003c/ods-picto\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;svgmap-mayotte\&#34;\u003e\n                        \u003cods-picto url=\&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_myt_text.svg&#39;\&#34;\n                                   color=\&#34;shapeColor\&#34;\n                                   color-by-attribute=\&#34;analysis.colors\&#34;\u003e\u003c/ods-picto\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;svgmap-com\&#34;\u003e\n                    \u003cdiv class=\&#34;svgmap-maf_blm\&#34;\u003e\n                        \u003cods-picto url=\&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/com_maf_blm_text.svg&#39;\&#34;\n                                   color=\&#34;shapeColor\&#34;\n                                   color-by-attribute=\&#34;analysis.colors\&#34;\u003e\u003c/ods-picto\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;svgmap-ncl\&#34;\u003e\n                        \u003cods-picto url=\&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/com_ncl_text.svg&#39;\&#34;\n                                   color=\&#34;shapeColor\&#34;\n                                   color-by-attribute=\&#34;analysis.colors\&#34;\u003e\u003c/ods-picto\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;svgmap-spm\&#34;\u003e\n                        \u003cods-picto url=\&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/com_spm_text.svg&#39;\&#34;\n                                   color=\&#34;shapeColor\&#34;\n                                   color-by-attribute=\&#34;analysis.colors\&#34;\u003e\u003c/ods-picto\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;svgmap-idf\&#34;\u003e\n                    \u003cods-picto url=\&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_idf_text.svg&#39;\&#34;\n                               color=\&#34;shapeColor\&#34;\n                               color-by-attribute=\&#34;analysis.colors\&#34;\u003e\u003c/ods-picto\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;svgmap-francemetro\&#34;\u003e\n                    \u003cods-picto url=\&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_fxx_text.svg&#39;\&#34;\n                               color=\&#34;shapeColor\&#34;\n                               color-by-attribute=\&#34;analysis.colors\&#34;\u003e\u003c/ods-picto\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n\n        \u003c/div\u003e\n    \u003c/ods-dataset-context\u003e\n\n\u003c/div\u003e\u003c/div\u003e&#34;,
+                                "css": &#34;/******** SVG MAPS *************/\n\n/************ Conteneur France ***************/\n.svgmap-france {\n  width: 100%;\n  height: 100%; /* IE Fix */\n  margin: auto;\n  position: relative;\n  background-color: white;\n}\n/* France Métropole */\n.svgmap-francemetro {\n  padding-left: 17%;\n  padding-bottom: 15%;\n  padding-right: 0%;\n  padding-top: 7%;\n  height: 100%; /* IE Fix */\n}\n/********** DROM ************/\n/* Position en colonne left */\n.svgmap-drom {\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  position: absolute;\n  left: 1%;\n  top: 2%;\n  bottom: 2%;\n  width: 12%;\n}\n.svgmap-drom \u003e * {\n  height: 12%;\n}\n/********** COM ************/\n/* Position en ligne bottom */\n.svgmap-com {\n  display: flex;\n  flex-direction: row;\n  justify-content: center;\n  position: absolute;\n  left: 2%;\n  right: 2%;\n  bottom: 1%;\n  height: 15%;\n}\n.svgmap-com \u003e * {\n  width: 15%;\n}\n\n/****** Ile de France ZOOM ********/\n/* Position Top Right */\n.svgmap-idf {\n  position: absolute;\n  top: 1%;\n  right: 3%;\n  width: 20%;\n}\n\n\n/* Some CSS override to manage picto sizes */\n.ods-svginliner__svg-container {\n  height: 100%;\n}\n.odswidget.odswidget-picto {\n  height: 100%;\n}\n\n\n/******************** Style *************************/\n\n/* Colored shapes */\nsvg g \u003e path {\n  stroke: black;\n  stroke-width: 2px;\n}\n\n/* Texts */\nsvg a path {\n  fill: transparent !important;\n  stroke: transparent !important;\n}\nsvg a text {\n  display: none;\n  font-size: 1.3em;\n  font-weight: 300;\n  font-family: sans-serif;\n  fill: white !important;\n  text-shadow: 2px 2px 5px black;\n  stroke: none;\n  pointer-events: none;\n}\nsvg a:hover {\n  cursor: default;\n  text-decoration: none;\n}\nsvg a:hover text {\n  display: inherit;\n}\n\n/* Custom hover styling */\nsvg a:hover path {\n  stroke: white !important;\n}\n\n/* Custom positionning */\n/* DEP */\n#text-dep_idf-92 {\n  text-anchor: start;\n}\n#text-dep_fxx-29, #text-dep_fxx-22 {\n  text-anchor: start;\n}\n#text-dep_fxx-2A, #text-dep_fxx-2B {\n  text-anchor: end;\n}\n/* COM */\n#text-com_maf_blm-978 {\n  font-size: 1.2em;\n  text-anchor: start;\n}\n#text-com_maf_blm-977 {\n  text-anchor: end;\n  font-size: 1em;\n}\n#text-com_spm-975 {\n  font-size: 0.75em;\n}\n#text-com_ncl-988 {\n  font-size: 0.95em;\n}&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <nav>
+        <div class="nav nav-tabs justify-content-center" id="navsvg-maps-5-tab" role="tablist">
+        <a class="nav-item nav-link active" id="navsvg-maps-5-live-tab" data-toggle="tab" href="#navsvg-maps-5-live" role="tab" aria-controls="navsvg-maps-5-live" aria-selected="true">Live snippet</a>
+        <a class="nav-item nav-link" id="navsvg-maps-5-code-tab" data-toggle="tab" href="#navsvg-maps-5-code" role="tab" aria-controls="navsvg-maps-5-code" aria-selected="false">Get the code</a>
+</div>
+    </nav>
+
+    <div class="tab-content" id="svg-maps-5">
+        <div class="tab-pane fade show active" id="navsvg-maps-5-live" role="tabpanel" aria-labelledby="navsvg-maps-5-live-tab">
+            <div class="row">
+                <iframe id="iframe-svg-maps-5" width="100%" height="600px" src="about:blank"
+                    srcdoc="
+<head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+
+
+<!--link rel='stylesheet' href='/scss/main.css' /-->
+</head>
+<body>
+<div ng-app='ods-widgets' class='container-fluid'>
+    &lt;!-- IE 11 requires height style on the container, and height:100% on all children --&gt;
+&lt;div style=&#34;width: 600px; margin: auto&#34;&gt;
+
+    &lt;ods-dataset-context style=&#34;height: 100%&#34;
+                         context=&#34;ctx&#34;
+                         ctx-dataset=&#34;liste-des-departements-metropole-dom&#34;
+                         ctx-parameters=&#34;{&#39;q&#39;:&#39;code &gt; 3&#39;}&#34;
+                         ctx-domain=&#34;discovery&#34;&gt;
+
+        &lt;!-- To Test default color when values are missing, add :
+  ctx-parameters=&#34;{&#39;q&#39;:&#39;code &lt;= 70 OR code &gt; 972 OR code:95 OR code:78&#39;}&#34;
+  --&gt;
+
+        &lt;div style=&#34;height: 100%&#34; ods-color-gradient=&#34;analysis&#34;
+             ods-color-gradient-context=&#34;ctx&#34;
+             ods-color-gradient-x=&#34;code_texte&#34;
+             ods-color-gradient-serie=&#34;MAX(code)&#34;
+             ods-color-gradient-logarithmic-scale-factor=&#34;1&#34;
+
+             ng-init=&#34;shapeColor = &#39;white&#39;&#34;&gt;
+
+            &lt;div id=&#34;map&#34; class=&#34;svgmap-france&#34;&gt;
+
+                &lt;div class=&#34;svgmap-drom&#34;&gt;
+                    &lt;div class=&#34;svgmap-martinique&#34;&gt;
+                        &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_mtq_text.svg&#39;&#34;
+                                   color=&#34;shapeColor&#34;
+                                   color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;svgmap-reunion&#34;&gt;
+                        &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_reu_text.svg&#39;&#34;
+                                   color=&#34;shapeColor&#34;
+                                   color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;svgmap-guyane&#34;&gt;
+                        &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_guf_text.svg&#39;&#34;
+                                   color=&#34;shapeColor&#34;
+                                   color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;svgmap-guadeloupe&#34;&gt;
+                        &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_glp_text.svg&#39;&#34;
+                                   color=&#34;shapeColor&#34;
+                                   color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;svgmap-mayotte&#34;&gt;
+                        &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_myt_text.svg&#39;&#34;
+                                   color=&#34;shapeColor&#34;
+                                   color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;svgmap-com&#34;&gt;
+                    &lt;div class=&#34;svgmap-maf_blm&#34;&gt;
+                        &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/com_maf_blm_text.svg&#39;&#34;
+                                   color=&#34;shapeColor&#34;
+                                   color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;svgmap-ncl&#34;&gt;
+                        &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/com_ncl_text.svg&#39;&#34;
+                                   color=&#34;shapeColor&#34;
+                                   color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;svgmap-spm&#34;&gt;
+                        &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/com_spm_text.svg&#39;&#34;
+                                   color=&#34;shapeColor&#34;
+                                   color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;svgmap-idf&#34;&gt;
+                    &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_idf_text.svg&#39;&#34;
+                               color=&#34;shapeColor&#34;
+                               color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;svgmap-francemetro&#34;&gt;
+                    &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_fxx_text.svg&#39;&#34;
+                               color=&#34;shapeColor&#34;
+                               color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/ods-dataset-context&gt;
+
+&lt;/div&gt;
+</div>
+<style type='text/css'>
+    /******** SVG MAPS *************/
+
+/************ Conteneur France ***************/
+.svgmap-france {
+  width: 100%;
+  height: 100%; /* IE Fix */
+  margin: auto;
+  position: relative;
+  background-color: white;
+}
+/* France Métropole */
+.svgmap-francemetro {
+  padding-left: 17%;
+  padding-bottom: 15%;
+  padding-right: 0%;
+  padding-top: 7%;
+  height: 100%; /* IE Fix */
+}
+/********** DROM ************/
+/* Position en colonne left */
+.svgmap-drom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  left: 1%;
+  top: 2%;
+  bottom: 2%;
+  width: 12%;
+}
+.svgmap-drom &gt; * {
+  height: 12%;
+}
+/********** COM ************/
+/* Position en ligne bottom */
+.svgmap-com {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  left: 2%;
+  right: 2%;
+  bottom: 1%;
+  height: 15%;
+}
+.svgmap-com &gt; * {
+  width: 15%;
+}
+
+/****** Ile de France ZOOM ********/
+/* Position Top Right */
+.svgmap-idf {
+  position: absolute;
+  top: 1%;
+  right: 3%;
+  width: 20%;
+}
+
+
+/* Some CSS override to manage picto sizes */
+.ods-svginliner__svg-container {
+  height: 100%;
+}
+.odswidget.odswidget-picto {
+  height: 100%;
+}
+
+
+/******************** Style *************************/
+
+/* Colored shapes */
+svg g &gt; path {
+  stroke: black;
+  stroke-width: 2px;
+}
+
+/* Texts */
+svg a path {
+  fill: transparent !important;
+  stroke: transparent !important;
+}
+svg a text {
+  display: none;
+  font-size: 1.3em;
+  font-weight: 300;
+  font-family: sans-serif;
+  fill: white !important;
+  text-shadow: 2px 2px 5px black;
+  stroke: none;
+  pointer-events: none;
+}
+svg a:hover {
+  cursor: default;
+  text-decoration: none;
+}
+svg a:hover text {
+  display: inherit;
+}
+
+/* Custom hover styling */
+svg a:hover path {
+  stroke: white !important;
+}
+
+/* Custom positionning */
+/* DEP */
+#text-dep_idf-92 {
+  text-anchor: start;
+}
+#text-dep_fxx-29, #text-dep_fxx-22 {
+  text-anchor: start;
+}
+#text-dep_fxx-2A, #text-dep_fxx-2B {
+  text-anchor: end;
+}
+/* COM */
+#text-com_maf_blm-978 {
+  font-size: 1.2em;
+  text-anchor: start;
+}
+#text-com_maf_blm-977 {
+  text-anchor: end;
+  font-size: 1em;
+}
+#text-com_spm-975 {
+  font-size: 0.75em;
+}
+#text-com_ncl-988 {
+  font-size: 0.95em;
+}
+</style>
+</body>
+"></iframe>
+            </div>
+        </div>
+        <div class="tab-pane fade" id="navsvg-maps-5-code" role="tabpanel" aria-labelledby="navsvg-maps-5-code-tab">
+            <div class="row">
+                <div class="col-2">
+                    <div class="nav flex-column nav-pills" id="code-svg-maps-5-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link active" id="code-svg-maps-5-html-tab" data-toggle="pill" href="#code-svg-maps-5-html-content" role="tab" aria-controls="code-svg-maps-5-html-content" aria-selected="true">
+                            HTML
+                        </a>
+                        <a class="nav-link" id="code-svg-maps-5-css-tab" data-toggle="pill" href="#code-svg-maps-5-css-content" role="tab" aria-controls="code-svg-maps-5-css-content" aria-selected="false">
+                            CSS
+                        </a>
+                    </div>
+
+                    <a class="edit-on-codepen" target="_blank" rel="noopener" href="#" title="Edit on CodePen"
+                       onclick="document.getElementById('form-svg-maps-5').submit()">
+                        <span class="codepen-edit-on-text">EDIT ON</span>
+                        <svg class="codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
+                        </svg>
+                    </a>
+                </div>
+                <div class="col-10">
+                    <div class="tab-content" id="code-tabContent">
+                        <div class="tab-pane fade show active" id="code-svg-maps-5-html-content" role="tabpanel" aria-labelledby="code-svg-maps-5-html-tab">
+                            <div class="highlight">
+                                <pre class="language-html" data-lang="html"><code>&lt;!-- IE 11 requires height style on the container, and height:100% on all children --&gt;
+&lt;div style=&#34;width: 600px; margin: auto&#34;&gt;
+
+    &lt;ods-dataset-context style=&#34;height: 100%&#34;
+                         context=&#34;ctx&#34;
+                         ctx-dataset=&#34;liste-des-departements-metropole-dom&#34;
+                         ctx-parameters=&#34;{&#39;q&#39;:&#39;code &gt; 3&#39;}&#34;
+                         ctx-domain=&#34;discovery&#34;&gt;
+
+        &lt;!-- To Test default color when values are missing, add :
+  ctx-parameters=&#34;{&#39;q&#39;:&#39;code &lt;= 70 OR code &gt; 972 OR code:95 OR code:78&#39;}&#34;
+  --&gt;
+
+        &lt;div style=&#34;height: 100%&#34; ods-color-gradient=&#34;analysis&#34;
+             ods-color-gradient-context=&#34;ctx&#34;
+             ods-color-gradient-x=&#34;code_texte&#34;
+             ods-color-gradient-serie=&#34;MAX(code)&#34;
+             ods-color-gradient-logarithmic-scale-factor=&#34;1&#34;
+
+             ng-init=&#34;shapeColor = &#39;white&#39;&#34;&gt;
+
+            &lt;div id=&#34;map&#34; class=&#34;svgmap-france&#34;&gt;
+
+                &lt;div class=&#34;svgmap-drom&#34;&gt;
+                    &lt;div class=&#34;svgmap-martinique&#34;&gt;
+                        &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_mtq_text.svg&#39;&#34;
+                                   color=&#34;shapeColor&#34;
+                                   color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;svgmap-reunion&#34;&gt;
+                        &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_reu_text.svg&#39;&#34;
+                                   color=&#34;shapeColor&#34;
+                                   color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;svgmap-guyane&#34;&gt;
+                        &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_guf_text.svg&#39;&#34;
+                                   color=&#34;shapeColor&#34;
+                                   color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;svgmap-guadeloupe&#34;&gt;
+                        &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_glp_text.svg&#39;&#34;
+                                   color=&#34;shapeColor&#34;
+                                   color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;svgmap-mayotte&#34;&gt;
+                        &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_myt_text.svg&#39;&#34;
+                                   color=&#34;shapeColor&#34;
+                                   color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;svgmap-com&#34;&gt;
+                    &lt;div class=&#34;svgmap-maf_blm&#34;&gt;
+                        &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/com_maf_blm_text.svg&#39;&#34;
+                                   color=&#34;shapeColor&#34;
+                                   color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;svgmap-ncl&#34;&gt;
+                        &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/com_ncl_text.svg&#39;&#34;
+                                   color=&#34;shapeColor&#34;
+                                   color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;svgmap-spm&#34;&gt;
+                        &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/com_spm_text.svg&#39;&#34;
+                                   color=&#34;shapeColor&#34;
+                                   color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;svgmap-idf&#34;&gt;
+                    &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_idf_text.svg&#39;&#34;
+                               color=&#34;shapeColor&#34;
+                               color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;svgmap-francemetro&#34;&gt;
+                    &lt;ods-picto url=&#34;&#39;https://static.opendatasoft.com/georef/svg/fr/dep_fxx_text.svg&#39;&#34;
+                               color=&#34;shapeColor&#34;
+                               color-by-attribute=&#34;analysis.colors&#34;&gt;&lt;/ods-picto&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/ods-dataset-context&gt;
+
+&lt;/div&gt;</code></pre>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="code-svg-maps-5-css-content" role="tabpanel" aria-labelledby="code-svg-maps-5-css-tab">
+                            <div class="highlight">
+                                <pre class="language-css" data-lang="css"><code>/******** SVG MAPS *************/
+
+/************ Conteneur France ***************/
+.svgmap-france {
+  width: 100%;
+  height: 100%; /* IE Fix */
+  margin: auto;
+  position: relative;
+  background-color: white;
+}
+/* France Métropole */
+.svgmap-francemetro {
+  padding-left: 17%;
+  padding-bottom: 15%;
+  padding-right: 0%;
+  padding-top: 7%;
+  height: 100%; /* IE Fix */
+}
+/********** DROM ************/
+/* Position en colonne left */
+.svgmap-drom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  left: 1%;
+  top: 2%;
+  bottom: 2%;
+  width: 12%;
+}
+.svgmap-drom &gt; * {
+  height: 12%;
+}
+/********** COM ************/
+/* Position en ligne bottom */
+.svgmap-com {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: absolute;
+  left: 2%;
+  right: 2%;
+  bottom: 1%;
+  height: 15%;
+}
+.svgmap-com &gt; * {
+  width: 15%;
+}
+
+/****** Ile de France ZOOM ********/
+/* Position Top Right */
+.svgmap-idf {
+  position: absolute;
+  top: 1%;
+  right: 3%;
+  width: 20%;
+}
+
+
+/* Some CSS override to manage picto sizes */
+.ods-svginliner__svg-container {
+  height: 100%;
+}
+.odswidget.odswidget-picto {
+  height: 100%;
+}
+
+
+/******************** Style *************************/
+
+/* Colored shapes */
+svg g &gt; path {
+  stroke: black;
+  stroke-width: 2px;
+}
+
+/* Texts */
+svg a path {
+  fill: transparent !important;
+  stroke: transparent !important;
+}
+svg a text {
+  display: none;
+  font-size: 1.3em;
+  font-weight: 300;
+  font-family: sans-serif;
+  fill: white !important;
+  text-shadow: 2px 2px 5px black;
+  stroke: none;
+  pointer-events: none;
+}
+svg a:hover {
+  cursor: default;
+  text-decoration: none;
+}
+svg a:hover text {
+  display: inherit;
+}
+
+/* Custom hover styling */
+svg a:hover path {
+  stroke: white !important;
+}
+
+/* Custom positionning */
+/* DEP */
+#text-dep_idf-92 {
+  text-anchor: start;
+}
+#text-dep_fxx-29, #text-dep_fxx-22 {
+  text-anchor: start;
+}
+#text-dep_fxx-2A, #text-dep_fxx-2B {
+  text-anchor: end;
+}
+/* COM */
+#text-com_maf_blm-978 {
+  font-size: 1.2em;
+  text-anchor: start;
+}
+#text-com_maf_blm-977 {
+  text-anchor: end;
+  font-size: 1em;
+}
+#text-com_spm-975 {
+  font-size: 0.75em;
+}
+#text-com_ncl-988 {
+  font-size: 0.95em;
+}</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+    </div>
+    
+</div>
+
+
+  </div>
+</div>
+
+<footer class="cl-footer">
+    <h2>Partials footer.html</h2>
+</footer>
+
+
+
+
+
+<script>var process = { "env": { "NODE_ENV": "production" } }</script>
+<script type="text/javascript" src="/index.min.18b5607ba349907552016ca9a8e58107e636f5b7e8027b7255c7e5f2426a5bbe.js" defer></script>
+
+</body>
+</html>
