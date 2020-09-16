@@ -20,7 +20,7 @@ export const initCopyToCB = (event) => {
       containerEl.parentNode.style.position = 'relative';
 
       const button = document.createElement('button');
-      button.className = 'button is-primary copy-button';
+      button.className = 'button button-copy is-primary';
       button.type = 'button';
       button.innerText = copyText;
 

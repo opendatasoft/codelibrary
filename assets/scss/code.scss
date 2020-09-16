@@ -8,11 +8,7 @@ pre {
   max-height: 600px;
 }
 
-button.copy-button {
-  position: absolute;
-  top: 15px;
-  right: 10px;
-}
+
 
 a.edit-on-codepen {
   text-decoration: none;
@@ -31,6 +27,29 @@ a.edit-on-codepen {
   }
 }
 
+.highlight pre {
+  border-radius: $radius-large;
+}
+
+.highlight:hover {
+  pre {
+    box-shadow: inset 0 0 0 3px $primary;
+  }
+  .button-copy {
+    opacity: 1;
+  }
+}
+
+
+// Copy button used in Code examples
+
+.button-copy {
+  opacity: 0;
+  position: absolute;
+  top: 15px;
+  right: 10px;
+  transition: all .2s;
+}
 
 /* ods-theme */
 
@@ -71,11 +90,13 @@ a.edit-on-codepen {
       display: flex;
       align-items: center;
 
-      code {
+      code { 
         padding: 0 5px;
       }
 
-      button.copy-button {
+      .button-copy {
+        padding-top: .2rem;
+        padding-bottom: .2rem;
         position: inherit;
       }
     }
