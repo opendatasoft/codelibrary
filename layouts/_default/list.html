@@ -1,23 +1,33 @@
+{{ define "headimport" }}
+
+<link rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch.min.css">
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4"></script>
+<link rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/instantsearch.js@2.10.4/dist/instantsearch-theme-algolia.min.css">
+
+{{ end }}
+
+
 {{ define "main" }}
-<div class="container-fluid">
-    <h1 class="title is-1 mt-4">{{ .Page.Section | humanize }}</h1>
-    <h3 class="subtitle is-3 mt-4">{{ index .Site.Data.sections .Page.Section | safeHTML }}</h3>
-    <ul class="row">
-        {{ range (.Paginator (.Site.Params.listPaginate | default 20)).Pages }}
-        <li class="col-4 mb-4">
-            <a href="{{ .Permalink }}" title="{{ .Title }}">
-                <div class="box">
-                    <h3 class="title is-5">{{ .Title }}</h3>
-                    <h4 class="subtitle is-7">{{ if eq "" .Description}}{{ .Summary }}{{ else }}{{ .Description }}{{ end }}</h4>
-                    <div class="tags">
-                        {{ range .Params.tags }}
-                        <div class="tag">{{ . }}</div>
-                        {{ end }}
-                    </div>
-                </div>
-            </a>
-        </li>
-        {{ end }}
-    </ul>
-</div>
+
+<h1>_default list.html</h1>
+
+<ul>
+    {{ range (.Paginator (.Site.Params.listPaginate | default 20)).Pages }}
+    <li>
+        <a href="{{ .Permalink }}" title="{{ .Title }}">
+            <span>{{ .Title }}</span>
+        </a>
+    </li>
+    {{ end }}
+</ul>
+
+{{ end }}
+
+
+{{ define "bodyimports" }}
+
 {{ end }}
