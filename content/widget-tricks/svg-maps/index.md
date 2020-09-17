@@ -2,7 +2,7 @@
 title: "SVG Maps"
 date: 2020-08-24T15:57:58+02:00
 description: "How to create fast analytics maps based on SVG static files and data aggregation"
-tags: ["ods-maps", "widget", "map", "compute", "render"]
+tags: ["geo", "aggregation", "display"]
 resources:
 - src: '*/'
   title: 'Section #:counter'

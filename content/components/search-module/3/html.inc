@@ -7,6 +7,7 @@
             <label for="search-as-you-type" class="sr-only">Search for a city</label>
             <input id="search-as-you-type"
                    name="search-as-you-type"
+                   autocomplete="off"
                    aria-label="search-as-you-type: type some characters to make a search"
                    aria-expanded="{{ ctx.parameters['q'] != undefined }}"
                    aria-controls="search-results"

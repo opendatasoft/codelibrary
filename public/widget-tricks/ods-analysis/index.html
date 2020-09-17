@@ -9,6 +9,22 @@ ODS Analysis &ndash; Codelibrary
     </title>
 
     
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-41201218-21', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+    
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
             integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
             crossorigin="anonymous"></script>
@@ -102,7 +118,7 @@ ODS Analysis &ndash; Codelibrary
         
         
         <li>
-            <a href="/page-template/">
+            <a href="/page-templates/">
                 Page templates
             </a>
         </li>
@@ -110,7 +126,7 @@ ODS Analysis &ndash; Codelibrary
         
         
         <li>
-            <a href="/portal-theme/">
+            <a href="/portal-themes/">
                 Portal themes
             </a>
         </li>
@@ -145,24 +161,12 @@ ODS Analysis &ndash; Codelibrary
     </p>
     <div class="tags">
         
-        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/aggregate/">
-            aggregate
-        </a>
-        
         <a class="tag " href="https://codelibrary.opendatasoft.com/tags/aggregation/">
             aggregation
         </a>
         
-        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/analyse/">
-            analyse
-        </a>
-        
-        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/catalog/">
-            catalog
-        </a>
-        
-        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/compute/">
-            compute
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/chart/">
+            chart
         </a>
         
         <a class="tag " href="https://codelibrary.opendatasoft.com/tags/display/">
@@ -173,16 +177,12 @@ ODS Analysis &ndash; Codelibrary
             filter
         </a>
         
+        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/geo/">
+            geo
+        </a>
+        
         <a class="tag " href="https://codelibrary.opendatasoft.com/tags/list/">
             list
-        </a>
-        
-        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/map/">
-            map
-        </a>
-        
-        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/metadata/">
-            metadata
         </a>
         
         <a class="tag " href="https://codelibrary.opendatasoft.com/tags/navigation/">
@@ -191,18 +191,6 @@ ODS Analysis &ndash; Codelibrary
         
         <a class="tag " href="https://codelibrary.opendatasoft.com/tags/ods-analysis/">
             ods-analysis
-        </a>
-        
-        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/ods-maps/">
-            ods-maps
-        </a>
-        
-        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/render/">
-            render
-        </a>
-        
-        <a class="tag " href="https://codelibrary.opendatasoft.com/tags/widget/">
-            widget
         </a>
         
     </div>
@@ -1225,7 +1213,9 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
     </div>
     
     <div class="box">
-        <h2 id="heading"></h2>
+        <h2 id="htmlcss-home-made-chart">HTML/CSS Home-made chart</h2>
+<p>For specific cases, <strong>ods-analysis, combined with some advanced HTML and CSS</strong> can be a complex but smart choice for data visualizations.</p>
+<p>In this example, a very simple bar chart is made by creating one line for each X values, the width of the bar is defined by its serie. Then, by clicking on the bar, it expends and opens a chart to have more details on the selected information.</p>
 
 
 
@@ -1239,8 +1229,8 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
                                 "title": "New Pen!",
                                 "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n&#34;,
                                 "editors": 110,
-                                "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003c/div\u003e&#34;,
-                                "css": &#34;&#34; }'>
+                                "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;populationmillesime\&#34;\n           populationmillesime-domain=\&#34;public\&#34;\n           populationmillesime-dataset=\&#34;population-francaise-communes\&#34;\n           populationmillesime-parameters=\&#34;{&#39;refine.annee_recensement&#39;:&#39;2016&#39;}\&#34;\u003e\n  \u003cdiv class=\&#34;row\&#34;\u003e\n    \u003cdiv class=\&#34;col-md-5\&#34;\u003e\n        \u003cods-chart single-y-axis=\&#34;true\&#34; scientific-display=\&#34;true\&#34; labels-x-length=\&#34;18\&#34; align-month=\&#34;true\&#34;\u003e\n              \u003cods-chart-query context=\&#34;populationmillesime\&#34; field-x=\&#34;nom_de_la_commune\&#34; maxpoints=\&#34;8\&#34; sort=\&#34;serie1-1\&#34;\u003e\n                  \u003cods-chart-serie expression-y=\&#34;population_totale\&#34; chart-type=\&#34;bar\&#34; function-y=\&#34;MAX\&#34;\n                                   label-y=\&#34;2016 Census population\&#34; color=\&#34;#142E7B\&#34; display-values=\&#34;true\&#34; scientific-display=\&#34;true\&#34;\u003e\n                  \u003c/ods-chart-serie\u003e\n              \u003c/ods-chart-query\u003e\n        \u003c/ods-chart\u003e\n    \u003c/div\u003e\n    \u003cdiv class=\&#34;col-md-7\&#34;\u003e\n          \u003ch3\u003e\n              Top cities by population, click to see the evolution over years\n          \u003c/h3\u003e\n          \u003cdiv ods-analysis=\&#34;analysispopulationhomemadechart\&#34;\n               ods-analysis-context=\&#34;populationmillesime\&#34;\n               ods-analysis-max=\&#34;8\&#34;\n               ods-analysis-x=\&#34;nom_de_la_commune\&#34;\n               ods-analysis-serie-population=\&#34;MAX(population_totale)\&#34;\n               ods-analysis-sort=\&#34;population\&#34;\u003e\n              \u003cdiv ods-subaggregation=\&#34;analysispopulationhomemadechart.results\&#34;\n                   ods-subaggregation-serie-max=\&#34;MAX(population)\&#34;\u003e\n                  \u003cdiv class=\&#34;homemadechart\&#34;\n                       ng-init=\&#34;select = {&#39;commune&#39;:&#39;&#39;}\&#34;\u003e\n                      \u003cdiv class=\&#34;homemadechart__line\&#34;\n                           ng-repeat=\&#34;(position,analysehomemadechart) in analysispopulationhomemadechart.results\&#34;\u003e\n                          \u003cdiv class=\&#34;homemadechart__line-progressionbar\&#34;\n                               ng-click=\&#34;select.commune = analysehomemadechart.x\&#34;\n                               ng-class=\&#34;{&#39;selected&#39;: select.commune == analysehomemadechart.x}\&#34;\n                               style=\&#34;width: {{ analysehomemadechart.population / results[0].max * 100 }}%\&#34;\u003e\n                              \u003cdiv class=\&#34;homemadechart__line-commune\&#34;\u003e\n                                  {{ analysehomemadechart.x | capitalize }}\n                              \u003c/div\u003e\n                              \u003cdiv class=\&#34;homemadechart__line-population\&#34;\u003e\n                                  {{ analysehomemadechart.population | number }}\n                              \u003c/div\u003e\n                          \u003c/div\u003e\n                          \u003cdiv class=\&#34;homemadechart__line-progressionbackground\&#34;\u003e\n                          \u003c/div\u003e\n                          \u003cdiv class=\&#34;homemadechart__focus\&#34;\n                               ng-if=\&#34;select.commune == analysehomemadechart.x\&#34;\u003e\n                              \u003cdiv class=\&#34;homemadechart__focus__close\&#34;\n                                   ng-click=\&#34;select.commune = undefined\&#34;\u003e\n                                  \u003ci class=\&#34;fa fa-times\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                              \u003c/div\u003e\n                              \u003ch4\u003e\n                                  Population evolution in {{ analysehomemadechart.x }} since 2006\n                              \u003c/h4\u003e\n                              \u003cods-dataset-context context=\&#34;historic\&#34;\n                                                   historic-domain=\&#34;public\&#34;\n                                                   historic-dataset=\&#34;population-francaise-communes\&#34;\n                                                   historic-parameters=\&#34;{&#39;q&#39;: &#39;nom_de_la_commune:\u0026quot;&#39; &#43; analysehomemadechart.x &#43; &#39;\u0026quot;&#39;}\&#34;\u003e\n                                  \u003cods-chart timescale=\&#34;year\&#34; single-y-axis=\&#34;true\&#34;\n                                             logarithmic=\&#34;true\&#34; align-month=\&#34;true\&#34;\u003e\n                                      \u003cods-chart-query context=\&#34;historic\&#34;\n                                                       field-x=\&#34;annee_recensement\&#34; maxpoints=\&#34;0\&#34;\n                                                       timescale=\&#34;year\&#34;\u003e\n                                          \u003cods-chart-serie expression-y=\&#34;population_totale\&#34;\n                                                           chart-type=\&#34;column\&#34;\n                                                           function-y=\&#34;MAX\&#34; color=\&#34;#142E7B\&#34;\n                                                           scientific-display=\&#34;true\&#34;\u003e\n                                          \u003c/ods-chart-serie\u003e\n                                      \u003c/ods-chart-query\u003e\n                                  \u003c/ods-chart\u003e\n                              \u003c/ods-dataset-context\u003e\n                          \u003c/div\u003e\n                      \u003c/div\u003e\n                  \u003c/div\u003e\n              \u003c/div\u003e\n          \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+                                "css": &#34;.homemadechart__line {\n    position: relative;\n    width: 100%;\n    margin: 5px 0;\n}\n.homemadechart__line-progressionbar {\n    position: absolute;\n    background-color: #142e7a;\n    color: white;\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    border-radius: 1000px;\n    height: 30px;\n    padding: 0 10px;\n    border: 2px solid #e0e0e0;\n}\n.homemadechart__line-progressionbar:hover, .homemadechart__line-progressionbar.selected {\n    border-color: #142e79;\n    font-weight: 600;\n}\n.homemadechart__line-progressionbackground {\n    width: 100%;\n    height: 30px;\n    background-color: #e0e0e0;\n    display: block;\n    border-radius: 1000px;\n}\n.homemadechart__focus {\n    position: relative;\n    padding: 10px 15px 0px;\n}\n.homemadechart__focus h4 {\n    margin: 0;\n}\n.homemadechart__focus__close {\n    position: absolute;\n    right: 20px;\n    top: 10px;\n    padding: 0px;\n    font-size: 1.2em;\n}\n.homemadechart .odswidget.odswidget-charts {\n    height: 250px;\n    padding: 20px 30px 0px;\n}\n&#34; }'>
     </form>
 </div>
 
@@ -1280,10 +1270,132 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
 </head>
 <body>
 <div ng-app='ods-widgets' class='container-fluid'>
-    
+    &lt;ods-dataset-context context=&#34;populationmillesime&#34;
+           populationmillesime-domain=&#34;public&#34;
+           populationmillesime-dataset=&#34;population-francaise-communes&#34;
+           populationmillesime-parameters=&#34;{&#39;refine.annee_recensement&#39;:&#39;2016&#39;}&#34;&gt;
+  &lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-md-5&#34;&gt;
+        &lt;ods-chart single-y-axis=&#34;true&#34; scientific-display=&#34;true&#34; labels-x-length=&#34;18&#34; align-month=&#34;true&#34;&gt;
+              &lt;ods-chart-query context=&#34;populationmillesime&#34; field-x=&#34;nom_de_la_commune&#34; maxpoints=&#34;8&#34; sort=&#34;serie1-1&#34;&gt;
+                  &lt;ods-chart-serie expression-y=&#34;population_totale&#34; chart-type=&#34;bar&#34; function-y=&#34;MAX&#34;
+                                   label-y=&#34;2016 Census population&#34; color=&#34;#142E7B&#34; display-values=&#34;true&#34; scientific-display=&#34;true&#34;&gt;
+                  &lt;/ods-chart-serie&gt;
+              &lt;/ods-chart-query&gt;
+        &lt;/ods-chart&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-7&#34;&gt;
+          &lt;h3&gt;
+              Top cities by population, click to see the evolution over years
+          &lt;/h3&gt;
+          &lt;div ods-analysis=&#34;analysispopulationhomemadechart&#34;
+               ods-analysis-context=&#34;populationmillesime&#34;
+               ods-analysis-max=&#34;8&#34;
+               ods-analysis-x=&#34;nom_de_la_commune&#34;
+               ods-analysis-serie-population=&#34;MAX(population_totale)&#34;
+               ods-analysis-sort=&#34;population&#34;&gt;
+              &lt;div ods-subaggregation=&#34;analysispopulationhomemadechart.results&#34;
+                   ods-subaggregation-serie-max=&#34;MAX(population)&#34;&gt;
+                  &lt;div class=&#34;homemadechart&#34;
+                       ng-init=&#34;select = {&#39;commune&#39;:&#39;&#39;}&#34;&gt;
+                      &lt;div class=&#34;homemadechart__line&#34;
+                           ng-repeat=&#34;(position,analysehomemadechart) in analysispopulationhomemadechart.results&#34;&gt;
+                          &lt;div class=&#34;homemadechart__line-progressionbar&#34;
+                               ng-click=&#34;select.commune = analysehomemadechart.x&#34;
+                               ng-class=&#34;{&#39;selected&#39;: select.commune == analysehomemadechart.x}&#34;
+                               style=&#34;width: {{ analysehomemadechart.population / results[0].max * 100 }}%&#34;&gt;
+                              &lt;div class=&#34;homemadechart__line-commune&#34;&gt;
+                                  {{ analysehomemadechart.x | capitalize }}
+                              &lt;/div&gt;
+                              &lt;div class=&#34;homemadechart__line-population&#34;&gt;
+                                  {{ analysehomemadechart.population | number }}
+                              &lt;/div&gt;
+                          &lt;/div&gt;
+                          &lt;div class=&#34;homemadechart__line-progressionbackground&#34;&gt;
+                          &lt;/div&gt;
+                          &lt;div class=&#34;homemadechart__focus&#34;
+                               ng-if=&#34;select.commune == analysehomemadechart.x&#34;&gt;
+                              &lt;div class=&#34;homemadechart__focus__close&#34;
+                                   ng-click=&#34;select.commune = undefined&#34;&gt;
+                                  &lt;i class=&#34;fa fa-times&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                              &lt;/div&gt;
+                              &lt;h4&gt;
+                                  Population evolution in {{ analysehomemadechart.x }} since 2006
+                              &lt;/h4&gt;
+                              &lt;ods-dataset-context context=&#34;historic&#34;
+                                                   historic-domain=&#34;public&#34;
+                                                   historic-dataset=&#34;population-francaise-communes&#34;
+                                                   historic-parameters=&#34;{&#39;q&#39;: &#39;nom_de_la_commune:&amp;quot;&#39; &#43; analysehomemadechart.x &#43; &#39;&amp;quot;&#39;}&#34;&gt;
+                                  &lt;ods-chart timescale=&#34;year&#34; single-y-axis=&#34;true&#34;
+                                             logarithmic=&#34;true&#34; align-month=&#34;true&#34;&gt;
+                                      &lt;ods-chart-query context=&#34;historic&#34;
+                                                       field-x=&#34;annee_recensement&#34; maxpoints=&#34;0&#34;
+                                                       timescale=&#34;year&#34;&gt;
+                                          &lt;ods-chart-serie expression-y=&#34;population_totale&#34;
+                                                           chart-type=&#34;column&#34;
+                                                           function-y=&#34;MAX&#34; color=&#34;#142E7B&#34;
+                                                           scientific-display=&#34;true&#34;&gt;
+                                          &lt;/ods-chart-serie&gt;
+                                      &lt;/ods-chart-query&gt;
+                                  &lt;/ods-chart&gt;
+                              &lt;/ods-dataset-context&gt;
+                          &lt;/div&gt;
+                      &lt;/div&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+
 </div>
 <style type='text/css'>
-    
+    .homemadechart__line {
+    position: relative;
+    width: 100%;
+    margin: 5px 0;
+}
+.homemadechart__line-progressionbar {
+    position: absolute;
+    background-color: #142e7a;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1000px;
+    height: 30px;
+    padding: 0 10px;
+    border: 2px solid #e0e0e0;
+}
+.homemadechart__line-progressionbar:hover, .homemadechart__line-progressionbar.selected {
+    border-color: #142e79;
+    font-weight: 600;
+}
+.homemadechart__line-progressionbackground {
+    width: 100%;
+    height: 30px;
+    background-color: #e0e0e0;
+    display: block;
+    border-radius: 1000px;
+}
+.homemadechart__focus {
+    position: relative;
+    padding: 10px 15px 0px;
+}
+.homemadechart__focus h4 {
+    margin: 0;
+}
+.homemadechart__focus__close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    padding: 0px;
+    font-size: 1.2em;
+}
+.homemadechart .odswidget.odswidget-charts {
+    height: 250px;
+    padding: 20px 30px 0px;
+}
+
 </style>
 </body>
 "></iframe>
@@ -1313,12 +1425,134 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
                     <div class="tab-content" id="code-tabContent">
                         <div class="tab-pane fade show active" id="code-ods-analysis-5-html-content" role="tabpanel" aria-labelledby="code-ods-analysis-5-html-tab">
                             <div class="highlight">
-                                <pre class="language-html" data-lang="html"><code></code></pre>
+                                <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;populationmillesime&#34;
+           populationmillesime-domain=&#34;public&#34;
+           populationmillesime-dataset=&#34;population-francaise-communes&#34;
+           populationmillesime-parameters=&#34;{&#39;refine.annee_recensement&#39;:&#39;2016&#39;}&#34;&gt;
+  &lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-md-5&#34;&gt;
+        &lt;ods-chart single-y-axis=&#34;true&#34; scientific-display=&#34;true&#34; labels-x-length=&#34;18&#34; align-month=&#34;true&#34;&gt;
+              &lt;ods-chart-query context=&#34;populationmillesime&#34; field-x=&#34;nom_de_la_commune&#34; maxpoints=&#34;8&#34; sort=&#34;serie1-1&#34;&gt;
+                  &lt;ods-chart-serie expression-y=&#34;population_totale&#34; chart-type=&#34;bar&#34; function-y=&#34;MAX&#34;
+                                   label-y=&#34;2016 Census population&#34; color=&#34;#142E7B&#34; display-values=&#34;true&#34; scientific-display=&#34;true&#34;&gt;
+                  &lt;/ods-chart-serie&gt;
+              &lt;/ods-chart-query&gt;
+        &lt;/ods-chart&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-7&#34;&gt;
+          &lt;h3&gt;
+              Top cities by population, click to see the evolution over years
+          &lt;/h3&gt;
+          &lt;div ods-analysis=&#34;analysispopulationhomemadechart&#34;
+               ods-analysis-context=&#34;populationmillesime&#34;
+               ods-analysis-max=&#34;8&#34;
+               ods-analysis-x=&#34;nom_de_la_commune&#34;
+               ods-analysis-serie-population=&#34;MAX(population_totale)&#34;
+               ods-analysis-sort=&#34;population&#34;&gt;
+              &lt;div ods-subaggregation=&#34;analysispopulationhomemadechart.results&#34;
+                   ods-subaggregation-serie-max=&#34;MAX(population)&#34;&gt;
+                  &lt;div class=&#34;homemadechart&#34;
+                       ng-init=&#34;select = {&#39;commune&#39;:&#39;&#39;}&#34;&gt;
+                      &lt;div class=&#34;homemadechart__line&#34;
+                           ng-repeat=&#34;(position,analysehomemadechart) in analysispopulationhomemadechart.results&#34;&gt;
+                          &lt;div class=&#34;homemadechart__line-progressionbar&#34;
+                               ng-click=&#34;select.commune = analysehomemadechart.x&#34;
+                               ng-class=&#34;{&#39;selected&#39;: select.commune == analysehomemadechart.x}&#34;
+                               style=&#34;width: {{ analysehomemadechart.population / results[0].max * 100 }}%&#34;&gt;
+                              &lt;div class=&#34;homemadechart__line-commune&#34;&gt;
+                                  {{ analysehomemadechart.x | capitalize }}
+                              &lt;/div&gt;
+                              &lt;div class=&#34;homemadechart__line-population&#34;&gt;
+                                  {{ analysehomemadechart.population | number }}
+                              &lt;/div&gt;
+                          &lt;/div&gt;
+                          &lt;div class=&#34;homemadechart__line-progressionbackground&#34;&gt;
+                          &lt;/div&gt;
+                          &lt;div class=&#34;homemadechart__focus&#34;
+                               ng-if=&#34;select.commune == analysehomemadechart.x&#34;&gt;
+                              &lt;div class=&#34;homemadechart__focus__close&#34;
+                                   ng-click=&#34;select.commune = undefined&#34;&gt;
+                                  &lt;i class=&#34;fa fa-times&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                              &lt;/div&gt;
+                              &lt;h4&gt;
+                                  Population evolution in {{ analysehomemadechart.x }} since 2006
+                              &lt;/h4&gt;
+                              &lt;ods-dataset-context context=&#34;historic&#34;
+                                                   historic-domain=&#34;public&#34;
+                                                   historic-dataset=&#34;population-francaise-communes&#34;
+                                                   historic-parameters=&#34;{&#39;q&#39;: &#39;nom_de_la_commune:&amp;quot;&#39; &#43; analysehomemadechart.x &#43; &#39;&amp;quot;&#39;}&#34;&gt;
+                                  &lt;ods-chart timescale=&#34;year&#34; single-y-axis=&#34;true&#34;
+                                             logarithmic=&#34;true&#34; align-month=&#34;true&#34;&gt;
+                                      &lt;ods-chart-query context=&#34;historic&#34;
+                                                       field-x=&#34;annee_recensement&#34; maxpoints=&#34;0&#34;
+                                                       timescale=&#34;year&#34;&gt;
+                                          &lt;ods-chart-serie expression-y=&#34;population_totale&#34;
+                                                           chart-type=&#34;column&#34;
+                                                           function-y=&#34;MAX&#34; color=&#34;#142E7B&#34;
+                                                           scientific-display=&#34;true&#34;&gt;
+                                          &lt;/ods-chart-serie&gt;
+                                      &lt;/ods-chart-query&gt;
+                                  &lt;/ods-chart&gt;
+                              &lt;/ods-dataset-context&gt;
+                          &lt;/div&gt;
+                      &lt;/div&gt;
+                  &lt;/div&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+</code></pre>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="code-ods-analysis-5-css-content" role="tabpanel" aria-labelledby="code-ods-analysis-5-css-tab">
                             <div class="highlight">
-                                <pre class="language-css" data-lang="css"><code></code></pre>
+                                <pre class="language-css" data-lang="css"><code>.homemadechart__line {
+    position: relative;
+    width: 100%;
+    margin: 5px 0;
+}
+.homemadechart__line-progressionbar {
+    position: absolute;
+    background-color: #142e7a;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1000px;
+    height: 30px;
+    padding: 0 10px;
+    border: 2px solid #e0e0e0;
+}
+.homemadechart__line-progressionbar:hover, .homemadechart__line-progressionbar.selected {
+    border-color: #142e79;
+    font-weight: 600;
+}
+.homemadechart__line-progressionbackground {
+    width: 100%;
+    height: 30px;
+    background-color: #e0e0e0;
+    display: block;
+    border-radius: 1000px;
+}
+.homemadechart__focus {
+    position: relative;
+    padding: 10px 15px 0px;
+}
+.homemadechart__focus h4 {
+    margin: 0;
+}
+.homemadechart__focus__close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    padding: 0px;
+    font-size: 1.2em;
+}
+.homemadechart .odswidget.odswidget-charts {
+    height: 250px;
+    padding: 20px 30px 0px;
+}
+</code></pre>
                             </div>
                         </div>
                     </div>
@@ -1333,7 +1567,9 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
     </div>
     
     <div class="box">
-        <h2 id="heading"></h2>
+        <h2 id="toobject-angularjs-filter"><strong>toObject</strong> AngularJS filter</h2>
+<p>A custom AngularJS filter can help to switch from a json array to a json dict by defining the desired key contained in the array items.</p>
+<p>The main usage is to pick specific items easily in the json object instead of iterating over each elements.</p>
 
 
 
@@ -1347,7 +1583,7 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
                                 "title": "New Pen!",
                                 "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n&#34;,
                                 "editors": 110,
-                                "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003c/div\u003e&#34;,
+                                "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;shanghaiworlduniversityranking\&#34;\n                     shanghaiworlduniversityranking-dataset=\&#34;shanghai-world-university-ranking\&#34;\n                     shanghaiworlduniversityranking-domain=\&#34;public\&#34;\n                     shanghaiworlduniversityranking-parameters=\&#34;{&#39;sort&#39;:&#39;world_rank&#39;}\&#34;\u003e\n    \u003cdiv class=\&#34;row\&#34;\n         ods-analysis=\&#34;analysisshanghai\&#34;\n         ods-analysis-context=\&#34;shanghaiworlduniversityranking\&#34;\n         ods-analysis-max=\&#34;20\&#34;\n         ods-analysis-x=\&#34;university_name\&#34;\n         ods-analysis-serie-bestpubscore=\&#34;MAX(pub)\&#34;\n         ods-analysis-serie-bestalumniscore=\&#34;MAX(alumni)\&#34;\n         ods-analysis-serie-bestawardscore=\&#34;MAX(award)\&#34;\n         ods-analysis-sort=\&#34;bestawardscore\&#34;\u003e\n        {{ mynewstructure = (analysisshanghai.results | toObject : &#39;x&#39;) ; \&#34;\&#34; }}\n        \u003cdiv class=\&#34;col-sm-6\&#34;\u003e\n            \u003ch3\u003e\n                ods-analysis\n            \u003c/h3\u003e\n            \u003cpre ng-bind=\&#34;analysisshanghai|json\&#34;\u003e\u003c/pre\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;col-sm-6\&#34;\u003e\n            \u003ch3\u003e\n                mynewstructure = (odsanalysis.results | toObject : &#39;x&#39;)\n            \u003c/h3\u003e\n            \u003cpre ng-bind=\&#34;analysisshanghai.results | toObject : &#39;x&#39; |json\&#34;\u003e\u003c/pre\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;col-sm-12\&#34;\u003e\n            \u003ch3\u003e\n                Princeton University score \u003cb\u003e{{ mynewstructure[&#39;Princeton University&#39;].bestawardscore }}\u003c/b\u003e\n            \u003c/h3\u003e\n            \u003cpre\u003emynewstructure[&#39;Princeton University&#39;].bestawardscore\u003c/pre\u003e\n            \u003ch3\u003e\n                Cornell University score \u003cb\u003e{{ mynewstructure[&#39;Cornell University&#39;].bestawardscore }}\u003c/b\u003e\n            \u003c/h3\u003e\n            \u003cpre\u003emynewstructure[&#39;Cornell University&#39;].bestawardscore\u003c/pre\u003e\n            \u003ch3\u003e\n                Columbia University score \u003cb\u003e{{ mynewstructure[&#39;Columbia University&#39;].bestawardscore }}\u003c/b\u003e\n            \u003c/h3\u003e\n            \u003cpre\u003emynewstructure[&#39;Columbia University&#39;].bestawardscore\u003c/pre\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
                                 "css": &#34;&#34; }'>
     </form>
 </div>
@@ -1388,7 +1624,49 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
 </head>
 <body>
 <div ng-app='ods-widgets' class='container-fluid'>
-    
+    &lt;ods-dataset-context context=&#34;shanghaiworlduniversityranking&#34;
+                     shanghaiworlduniversityranking-dataset=&#34;shanghai-world-university-ranking&#34;
+                     shanghaiworlduniversityranking-domain=&#34;public&#34;
+                     shanghaiworlduniversityranking-parameters=&#34;{&#39;sort&#39;:&#39;world_rank&#39;}&#34;&gt;
+    &lt;div class=&#34;row&#34;
+         ods-analysis=&#34;analysisshanghai&#34;
+         ods-analysis-context=&#34;shanghaiworlduniversityranking&#34;
+         ods-analysis-max=&#34;20&#34;
+         ods-analysis-x=&#34;university_name&#34;
+         ods-analysis-serie-bestpubscore=&#34;MAX(pub)&#34;
+         ods-analysis-serie-bestalumniscore=&#34;MAX(alumni)&#34;
+         ods-analysis-serie-bestawardscore=&#34;MAX(award)&#34;
+         ods-analysis-sort=&#34;bestawardscore&#34;&gt;
+        {{ mynewstructure = (analysisshanghai.results | toObject : &#39;x&#39;) ; &#34;&#34; }}
+        &lt;div class=&#34;col-sm-6&#34;&gt;
+            &lt;h3&gt;
+                ods-analysis
+            &lt;/h3&gt;
+            &lt;pre ng-bind=&#34;analysisshanghai|json&#34;&gt;&lt;/pre&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-sm-6&#34;&gt;
+            &lt;h3&gt;
+                mynewstructure = (odsanalysis.results | toObject : &#39;x&#39;)
+            &lt;/h3&gt;
+            &lt;pre ng-bind=&#34;analysisshanghai.results | toObject : &#39;x&#39; |json&#34;&gt;&lt;/pre&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-sm-12&#34;&gt;
+            &lt;h3&gt;
+                Princeton University score &lt;b&gt;{{ mynewstructure[&#39;Princeton University&#39;].bestawardscore }}&lt;/b&gt;
+            &lt;/h3&gt;
+            &lt;pre&gt;mynewstructure[&#39;Princeton University&#39;].bestawardscore&lt;/pre&gt;
+            &lt;h3&gt;
+                Cornell University score &lt;b&gt;{{ mynewstructure[&#39;Cornell University&#39;].bestawardscore }}&lt;/b&gt;
+            &lt;/h3&gt;
+            &lt;pre&gt;mynewstructure[&#39;Cornell University&#39;].bestawardscore&lt;/pre&gt;
+            &lt;h3&gt;
+                Columbia University score &lt;b&gt;{{ mynewstructure[&#39;Columbia University&#39;].bestawardscore }}&lt;/b&gt;
+            &lt;/h3&gt;
+            &lt;pre&gt;mynewstructure[&#39;Columbia University&#39;].bestawardscore&lt;/pre&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+
 </div>
 <style type='text/css'>
     
@@ -1421,7 +1699,49 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
                     <div class="tab-content" id="code-tabContent">
                         <div class="tab-pane fade show active" id="code-ods-analysis-6-html-content" role="tabpanel" aria-labelledby="code-ods-analysis-6-html-tab">
                             <div class="highlight">
-                                <pre class="language-html" data-lang="html"><code></code></pre>
+                                <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;shanghaiworlduniversityranking&#34;
+                     shanghaiworlduniversityranking-dataset=&#34;shanghai-world-university-ranking&#34;
+                     shanghaiworlduniversityranking-domain=&#34;public&#34;
+                     shanghaiworlduniversityranking-parameters=&#34;{&#39;sort&#39;:&#39;world_rank&#39;}&#34;&gt;
+    &lt;div class=&#34;row&#34;
+         ods-analysis=&#34;analysisshanghai&#34;
+         ods-analysis-context=&#34;shanghaiworlduniversityranking&#34;
+         ods-analysis-max=&#34;20&#34;
+         ods-analysis-x=&#34;university_name&#34;
+         ods-analysis-serie-bestpubscore=&#34;MAX(pub)&#34;
+         ods-analysis-serie-bestalumniscore=&#34;MAX(alumni)&#34;
+         ods-analysis-serie-bestawardscore=&#34;MAX(award)&#34;
+         ods-analysis-sort=&#34;bestawardscore&#34;&gt;
+        {{ mynewstructure = (analysisshanghai.results | toObject : &#39;x&#39;) ; &#34;&#34; }}
+        &lt;div class=&#34;col-sm-6&#34;&gt;
+            &lt;h3&gt;
+                ods-analysis
+            &lt;/h3&gt;
+            &lt;pre ng-bind=&#34;analysisshanghai|json&#34;&gt;&lt;/pre&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-sm-6&#34;&gt;
+            &lt;h3&gt;
+                mynewstructure = (odsanalysis.results | toObject : &#39;x&#39;)
+            &lt;/h3&gt;
+            &lt;pre ng-bind=&#34;analysisshanghai.results | toObject : &#39;x&#39; |json&#34;&gt;&lt;/pre&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-sm-12&#34;&gt;
+            &lt;h3&gt;
+                Princeton University score &lt;b&gt;{{ mynewstructure[&#39;Princeton University&#39;].bestawardscore }}&lt;/b&gt;
+            &lt;/h3&gt;
+            &lt;pre&gt;mynewstructure[&#39;Princeton University&#39;].bestawardscore&lt;/pre&gt;
+            &lt;h3&gt;
+                Cornell University score &lt;b&gt;{{ mynewstructure[&#39;Cornell University&#39;].bestawardscore }}&lt;/b&gt;
+            &lt;/h3&gt;
+            &lt;pre&gt;mynewstructure[&#39;Cornell University&#39;].bestawardscore&lt;/pre&gt;
+            &lt;h3&gt;
+                Columbia University score &lt;b&gt;{{ mynewstructure[&#39;Columbia University&#39;].bestawardscore }}&lt;/b&gt;
+            &lt;/h3&gt;
+            &lt;pre&gt;mynewstructure[&#39;Columbia University&#39;].bestawardscore&lt;/pre&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+</code></pre>
                             </div>
                         </div>
                         <div class="tab-pane fade" id="code-ods-analysis-6-css-content" role="tabpanel" aria-labelledby="code-ods-analysis-6-css-tab">
