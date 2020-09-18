@@ -145,6 +145,10 @@ Catalog cards &ndash; Codelibrary
                     <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-analysis/">ODS Analysis</a>
                 </li>
                 
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-color-gradient/">Ods-color-gradient</a>
+                </li>
+                
             </ul>
         </li>
         
@@ -194,7 +198,7 @@ Catalog cards &ndash; Codelibrary
     <div class="column">
         
 
-<div class="content">
+<div class="content container-fluid mt-3">
     <div class="box">
         <h1 id="custom-catalog-card">Custom catalog card</h1>
 <p>The catalog card represents the published datasets of that portal. (see <a href="https://help.opendatasoft.com/platform/en/exploring_catalog_and_datasets/01_navigating_the_catalog/catalog.html#exploring-dataset">Exploring a dataset from the catalog</a>).</p>
@@ -217,19 +221,35 @@ This resource propose different versions and technical tricks that can be used t
     <form id="form-catalog-cards-1" action="https://codepen.io/pen/define" method="POST" target="_blank">
         <input type="hidden" name="data" value='{
                                 "title": "New Pen!",
-                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n&#34;,
+                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\n&#34;,
                                 "editors": 110,
                                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-catalog-context context=\&#34;userclub\&#34;\n                     userclub-domain=\&#34;userclub\&#34;\n                     class=\&#34;catalog-grid\&#34;\u003e\n    \u003cods-result-enumerator context=\&#34;userclub\&#34; max=\&#34;4\&#34;\u003e\n        {{ dataset = item ; \&#34;\&#34; }}\n        \u003c!-- Resource starts here, DO NOT COPY before this line --\u003e\n        \u003cods-catalog-card\u003e\n            \u003cods-catalog-card-theme-icon\u003e\u003c/ods-catalog-card-theme-icon\u003e\n            \u003cods-catalog-card-body\u003e\n                \u003cods-catalog-card-title\u003e\u003c/ods-catalog-card-title\u003e\n                \u003cods-catalog-card-description\u003e\u003c/ods-catalog-card-description\u003e\n                \u003cdiv class=\&#34;ods-catalog-card__metadata\&#34;\u003e\n                    \u003cods-catalog-card-metadata-item item-title=\&#34;Publisher\&#34; item-key=\&#34;publisher\&#34;\u003e\u003c/ods-catalog-card-metadata-item\u003e\n                    \u003cods-catalog-card-metadata-item item-title=\&#34;License\&#34; item-key=\&#34;license\&#34;\u003e\u003c/ods-catalog-card-metadata-item\u003e\n                \u003c/div\u003e\n                \u003cods-catalog-card-keywords\u003e\u003c/ods-catalog-card-keywords\u003e\n            \u003c/ods-catalog-card-body\u003e\n            \u003cods-catalog-card-visualizations\u003e\u003c/ods-catalog-card-visualizations\u003e\n        \u003c/ods-catalog-card\u003e\n    \u003c/ods-result-enumerator\u003e\n\u003c/ods-catalog-context\u003e\u003c/div\u003e&#34;,
                                 "css": &#34;.catalog-grid .odswidget-result-enumerator__results {\n    display: grid;\n    grid-column-gap: 20px;\n    grid-row-gap: 20px;\n}\n@media screen and (min-width: 768px) {\n    .catalog-grid .odswidget-result-enumerator__results {\n        grid-template-columns: 1fr 1fr;\n    }\n}\nods-catalog-card {\n    height: 100%;\n}\n\n.ods-catalog-card {\n    margin-bottom: 0;\n}\n/* Resource starts here, DO NOT COPY before this line */\n/* ================================================== */\n\n&#34; }'>
     </form>
 </div>
 
-<div class="ods-content">
-    <nav>
-        <div class="nav nav-tabs justify-content-center" id="navcatalog-cards-1-tab" role="tablist">
-        <a class="nav-item nav-link active" id="navcatalog-cards-1-live-tab" data-toggle="tab" href="#navcatalog-cards-1-live" role="tab" aria-controls="navcatalog-cards-1-live" aria-selected="true">Live snippet</a>
-        <a class="nav-item nav-link" id="navcatalog-cards-1-code-tab" data-toggle="tab" href="#navcatalog-cards-1-code" role="tab" aria-controls="navcatalog-cards-1-code" aria-selected="false">Get the code</a>
-</div>
+<section class="ods-content">
+    <nav class="nav nav-pills"
+         id="navcatalog-cards-1-tab"
+         role="tablist">
+        <a class="nav-link active"
+           id="navcatalog-cards-1-live-tab"
+           data-toggle="tab"
+           href="#navcatalog-cards-1-live"
+           role="tab"
+           aria-controls="navcatalog-cards-1-live"
+           aria-selected="true">
+            Live snippet
+        </a>
+        <a class="nav-link"
+           id="navcatalog-cards-1-code-tab"
+           data-toggle="tab"
+           href="#navcatalog-cards-1-code"
+           role="tab"
+           aria-controls="navcatalog-cards-1-code"
+           aria-selected="false">
+            Get the code
+        </a>
     </nav>
 
     <div class="tab-content" id="catalog-cards-1">
@@ -253,6 +273,22 @@ This resource propose different versions and technical tricks that can be used t
 
 &lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
 
 
 
@@ -386,7 +422,7 @@ ods-catalog-card {
             </div>
         </div>
     </div>
-</div>
+</section>
 
 
 
@@ -406,19 +442,35 @@ ods-catalog-card {
     <form id="form-catalog-cards-2" action="https://codepen.io/pen/define" method="POST" target="_blank">
         <input type="hidden" name="data" value='{
                                 "title": "New Pen!",
-                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n&#34;,
+                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\n&#34;,
                                 "editors": 110,
                                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-catalog-context context=\&#34;userclub\&#34;\n                     userclub-domain=\&#34;userclub\&#34;\n                     class=\&#34;catalog-grid\&#34;\u003e\n    \u003cods-result-enumerator context=\&#34;userclub\&#34; max=\&#34;4\&#34;\u003e\n        {{ dataset = item ; \&#34;\&#34; }}\n        \u003c!-- Resource starts here, DO NOT COPY before this line --\u003e\n        \u003cods-catalog-card\u003e\n            \u003cods-catalog-card-theme-icon\u003e\u003c/ods-catalog-card-theme-icon\u003e\n            \u003cods-catalog-card-body\u003e\n                \u003cods-catalog-card-title\u003e\u003c/ods-catalog-card-title\u003e\n                \u003cods-catalog-card-description\u003e\u003c/ods-catalog-card-description\u003e\n                \u003cdiv class=\&#34;ods-catalog-card__metadata\&#34;\u003e\n                    \u003cods-catalog-card-metadata-item item-title=\&#34;Publisher\&#34; item-key=\&#34;publisher\&#34;\u003e\u003c/ods-catalog-card-metadata-item\u003e\n                    \u003cods-catalog-card-metadata-item item-title=\&#34;License\&#34; item-key=\&#34;license\&#34;\u003e\u003c/ods-catalog-card-metadata-item\u003e\n                \u003c/div\u003e\n                \u003cods-catalog-card-keywords\u003e\u003c/ods-catalog-card-keywords\u003e\n            \u003c/ods-catalog-card-body\u003e\n            \u003cods-catalog-card-visualizations\u003e\u003c/ods-catalog-card-visualizations\u003e\n        \u003c/ods-catalog-card\u003e\n    \u003c/ods-result-enumerator\u003e\n\u003c/ods-catalog-context\u003e\u003c/div\u003e&#34;,
                                 "css": &#34;.catalog-grid .odswidget-result-enumerator__results {\n    display: grid;\n    grid-column-gap: 20px;\n    grid-row-gap: 20px;\n}\n@media screen and (min-width: 768px) {\n    .catalog-grid .odswidget-result-enumerator__results {\n        grid-template-columns: 1fr 1fr;\n    }\n}\nods-catalog-card {\n    height: 100%;\n}\n\n.ods-catalog-card {\n    margin-bottom: 0;\n}\n/* Resource starts here, DO NOT COPY before this line */\n/* ================================================== */\n\n\n\n/* Explore Page - Catalog Cards\n========================================================================== */\n.ods-catalog-card {\n    border-radius: 4px;\n    padding: 26px;\n    -webkit-transition: all .2s;\n    -o-transition: all .2s;\n    transition: all .2s;\n}\n.ods-catalog-card:hover {\n    -webkit-box-shadow: 0 0 10px 0 #e3e9f1;\n            box-shadow: 0 0 10px 0 #e3e9f1;\n}\n.ods-catalog-card:hover:before {\n    display: none;\n}\n.ods-catalog-card__theme-icon {\n    position: absolute;\n    top: 26px;\n    left: 26px;\n}\n.ods-catalog-card__title {\n    color: var(--highlight);\n    font-weight: 400;\n    font-size: 1.44rem;\n    line-height: 1.2;\n}\n.ods-catalog-card__metadata-item {\n    font-size: .833rem;\n    line-height: 1.4;\n    margin-bottom: 4px;\n}\n.ods-catalog-card__visualization {\n    color: var(--text);\n    padding: 0 0 4px 0;\n}\n.ods-catalog-card__keyword {\n    color: var(--text);\n    font-size: 0.833rem;\n    padding: .15rem .35rem;\n    background-color: var(--boxes-border);\n    border-radius: 7px;\n}\n.ods-catalog-card__keyword:hover {\n    color: #FFFFFF;\n    background-color: var(--links);\n}\n\n&#34; }'>
     </form>
 </div>
 
-<div class="ods-content">
-    <nav>
-        <div class="nav nav-tabs justify-content-center" id="navcatalog-cards-2-tab" role="tablist">
-        <a class="nav-item nav-link active" id="navcatalog-cards-2-live-tab" data-toggle="tab" href="#navcatalog-cards-2-live" role="tab" aria-controls="navcatalog-cards-2-live" aria-selected="true">Live snippet</a>
-        <a class="nav-item nav-link" id="navcatalog-cards-2-code-tab" data-toggle="tab" href="#navcatalog-cards-2-code" role="tab" aria-controls="navcatalog-cards-2-code" aria-selected="false">Get the code</a>
-</div>
+<section class="ods-content">
+    <nav class="nav nav-pills"
+         id="navcatalog-cards-2-tab"
+         role="tablist">
+        <a class="nav-link active"
+           id="navcatalog-cards-2-live-tab"
+           data-toggle="tab"
+           href="#navcatalog-cards-2-live"
+           role="tab"
+           aria-controls="navcatalog-cards-2-live"
+           aria-selected="true">
+            Live snippet
+        </a>
+        <a class="nav-link"
+           id="navcatalog-cards-2-code-tab"
+           data-toggle="tab"
+           href="#navcatalog-cards-2-code"
+           role="tab"
+           aria-controls="navcatalog-cards-2-code"
+           aria-selected="false">
+            Get the code
+        </a>
     </nav>
 
     <div class="tab-content" id="catalog-cards-2">
@@ -442,6 +494,22 @@ ods-catalog-card {
 
 &lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
 
 
 
@@ -675,7 +743,7 @@ ods-catalog-card {
             </div>
         </div>
     </div>
-</div>
+</section>
 
 
 
@@ -695,19 +763,35 @@ ods-catalog-card {
     <form id="form-catalog-cards-3" action="https://codepen.io/pen/define" method="POST" target="_blank">
         <input type="hidden" name="data" value='{
                                 "title": "New Pen!",
-                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n&#34;,
+                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\n&#34;,
                                 "editors": 110,
                                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-catalog-context context=\&#34;userclub\&#34;\n                     userclub-domain=\&#34;userclub\&#34;\n                     class=\&#34;catalog-grid\&#34;\u003e\n    \u003cods-result-enumerator context=\&#34;userclub\&#34; max=\&#34;4\&#34;\u003e\n        {{ dataset = item ; \&#34;\&#34; }}\n        \u003c!-- Resource starts here, DO NOT COPY before this line --\u003e\n        \u003cods-catalog-card\u003e\n            \u003cods-catalog-card-theme-icon\u003e\u003c/ods-catalog-card-theme-icon\u003e\n            \u003cods-catalog-card-body\u003e\n                \u003cods-catalog-card-title\u003e\u003c/ods-catalog-card-title\u003e\n                \u003cdiv class=\&#34;catalog-card-content\&#34;\u003e\n                    \u003cdiv class=\&#34;catalog-card-info\&#34;\u003e\n                        \u003cdiv class=\&#34;catalog-card-metrics\&#34;\u003e\n                            \u003cdiv class=\&#34;catalog-card-metric\&#34;\u003e\n                        \u003cspan class=\&#34;catalog-card-metric-value\&#34;\u003e\n                            \u003ci class=\&#34;fa fa-cube\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\u0026nbsp;\u0026nbsp;{{ dataset.metas.records_count | siPrefixFormat }}\n                        \u003c/span\u003e\n                                \u003cspan\u003e\u003ctranslate\u003eenregistrements\u003c/translate\u003e\n                        \u003c/span\u003e\n                            \u003c/div\u003e\n                            \u003cdiv class=\&#34;catalog-card-metric\&#34; ng-if=\&#34;dataset.extra_metas.explore.popularity_score\&#34;\u003e\n                        \u003cspan class=\&#34;catalog-card-metric-value\&#34;\u003e\n                            \u003ci class=\&#34;fa fa-heartbeat\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\u0026nbsp;\u0026nbsp;{{ dataset.extra_metas.explore.popularity_score * 10| number }}\n                        \u003c/span\u003e\n                                \u003cspan\u003e\n                            \u003ctranslate\u003e (score de popularité)\u003c/translate\u003e\n                        \u003c/span\u003e\n                            \u003c/div\u003e\n                            \u003cdiv class=\&#34;catalog-card-metric\&#34;\u003e\n                        \u003cspan class=\&#34;catalog-card-metric-value\&#34;\u003e\n                            \u003ci class=\&#34;fa fa-clock-o\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e \u0026nbsp;\u0026nbsp;{{ dataset.metas.modified | date:format:\&#34;DD/MM/YYYY\&#34; }}\n                        \u003c/span\u003e\n                                \u003cspan\u003e{{ dataset.metas.modified | date:\&#34;&#39;à&#39; HH:mm\&#34; }}\u003c/span\u003e\n                            \u003c/div\u003e\n                            \u003cdiv class=\&#34;catalog-card-metric\&#34;\u003e\n                        \u003cspan class=\&#34;catalog-card-metric-value\&#34;\u003e\n                            \u003ci class=\&#34;fa fa-shield\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e \u0026nbsp;\u0026nbsp;{{ dataset.metas.license }}\n                        \u003c/span\u003e\n                            \u003c/div\u003e\n                            \u003cdiv class=\&#34;catalog-card-metric\&#34;\u003e\n                        \u003cspan class=\&#34;catalog-card-metric-value\&#34;\u003e\n                            \u003ci class=\&#34;fa fa-user-circle\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e \u0026nbsp;{{ dataset.metas.publisher }}\n                        \u003c/span\u003e\n                            \u003c/div\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;catalog-card-description\&#34;\u003e\n                        \u003cods-catalog-card-description\u003e\u003c/ods-catalog-card-description\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/ods-catalog-card-body\u003e\n            \u003cdiv class=\&#34;catalog-card-sidebar\&#34;\u003e\n                \u003cods-catalog-card-visualizations\u003e\u003c/ods-catalog-card-visualizations\u003e\n                \u003cods-catalog-card-keywords\u003e\u003c/ods-catalog-card-keywords\u003e\n            \u003c/div\u003e\n        \u003c/ods-catalog-card\u003e\n    \u003c/ods-result-enumerator\u003e\n\u003c/ods-catalog-context\u003e\u003c/div\u003e&#34;,
                                 "css": &#34;.catalog-grid .odswidget-result-enumerator__results {\n    display: grid;\n    grid-column-gap: 20px;\n    grid-row-gap: 20px;\n}\n@media screen and (min-width: 768px) {\n    .catalog-grid .odswidget-result-enumerator__results {\n        grid-template-columns: 1fr 1fr;\n    }\n}\nods-catalog-card {\n    height: 100%;\n}\n\n.ods-catalog-card {\n    margin-bottom: 0;\n}\n/* Resource starts here, DO NOT COPY before this line */\n/* ================================================== */\n\n\n\n/* Explore Page - Catalog Cards */\n.ods-catalog-card {\n    display: block;\n    border-radius: 12px;\n    padding: 26px;\n    transition: all .2s;\n}\n@media screen and (min-width: 749px) {\n    .ods-catalog-card {\n        display: flex;\n    }\n}\n.ods-catalog-card:hover {\n    box-shadow: 0 0 10px 0 #e3e9f1;\n}\n.ods-catalog-card:hover:before {\n    display: none;\n}\n.ods-catalog-card:hover .catalog-card-description {\n    opacity: 0;\n    top: 30px;\n}\n.ods-catalog-card:hover .catalog-card-info {\n    opacity: 1;\n    top: 0;\n}\n.catalog-card-content {\n    position: relative;\n}\n.catalog-card-info {\n    position: absolute;\n    top: 30px;\n    opacity: 0;\n    transition: opacity .3s .1s, top .3s;\n}\n.catalog-card-metrics {\n    font-size: 1rem;\n    margin-left: 42px;\n    margin-bottom: 1rem;\n}\n.catalog-card-description {\n    min-height: 120px;\n    margin-top: .5rem;\n    position: relative;\n    top: 0;\n    left: 0;\n    opacity: 1;\n    transition: opacity .5s, top .4s;\n}\n.ods-catalog-card__theme-icon {\n    position: absolute;\n    top: 26px;\n    left: 26px;\n}\n.ods-catalog-card__title {\n    color: var(--titles);\n    font-weight: 400;\n    font-size: 1.5rem;\n    line-height: 1.2;\n    transition: color .3s;\n}\n.ods-catalog-card:hover .ods-catalog-card__title {\n    color: var(--highlight);\n}\n.ods-catalog-card__metadata-item {\n    font-size: .833rem;\n    line-height: 1.4;\n    margin-bottom: 4px;\n}\n.ods-catalog-card__visualization {\n    color: var(--text);\n    padding: 0 0 4px 0;\n}\n.ods-dataset-visualization__dataset-title-text {\n    font-size: 1.5rem;\n    line-height: 0rem;\n    font-weight: bold;\n}\n.ods-catalog-card__body {\n    width: 100%;\n}\n@media screen and (min-width: 749px) {\n    .ods-catalog-card__body {\n        width: calc(100% - 136px);\n        padding-right: 5px;\n    }\n}\n@media screen and (min-width: 749px) {\n    .ods-catalog-card__visualizations {\n        display: flex;\n        flex-direction: column;\n        border-left: none;\n        padding-left: 0;\n        margin-left: 0;\n    }\n}\n/* display: none; pour ne pas afficher les mots-clés en mode mobile */\n.ods-catalog-card__keywords {\n    display: none;\n}\n@media screen and (min-width: 749px) {\n    .ods-catalog-card__keywords {\n        display: block;\n        margin-left: 0;\n        margin-right: 10px;\n        padding-right: 10px;\n        display: flex;\n        flex-direction: column;\n    }\n}\n.catalog-card-sidebar {\n    display: flex;\n    justify-content: flex-end;\n    width: 100%;\n    padding-left: 0;\n}\n@media screen and (min-width: 749px) {\n    .catalog-card-sidebar {\n        padding-left: 10px;\n        flex-direction: column;\n        border-left: 1px solid var(--boxes-border);\n        width: 136px;\n        justify-content: flex-start;\n    }\n}\n@media screen and (min-width: 749px) {\n    .ods-catalog-card__visualizations {\n        order: 0;\n        height: auto;\n        border-left: none;\n        padding-left: 0;\n        margin-left: 0;\n    }\n}\nods-catalog-card-keywords {\n    flex-grow: 1;\n}\n.ods-catalog-card__keywords {\n    width: 100%\n}\n@media screen and (min-width: 749px) {\n    .ods-catalog-card__keywords {\n        height: auto;\n        margin-top: 10px;\n        border-right: none;\n    }\n}\n.ods-catalog-card__keyword {\n    color: var(--text);\n    font-size: 0.75rem;\n    padding: .15rem .35rem;\n    background-color: var(--boxes-border);\n    border-radius: 7px;\n}\n.ods-catalog-card__keyword:hover {\n    color: #FFFFFF;\n}\n.ods-catalog-card__visualization-icon {\n    text-align: center;\n}\n.metadata-publisher .ods-catalog-card__metadata-item-label:before {\n    content: &#39;\\f2bd&#39;;\n    font-family: &#39;FontAwesome&#39;;\n    margin-right: 5px;\n}\n.metadata-license .ods-catalog-card__metadata-item-label:before {\n    content: &#39;\\f132&#39;;\n    font-family: &#39;FontAwesome&#39;;\n    margin-right: 5px;\n}\n&#34; }'>
     </form>
 </div>
 
-<div class="ods-content">
-    <nav>
-        <div class="nav nav-tabs justify-content-center" id="navcatalog-cards-3-tab" role="tablist">
-        <a class="nav-item nav-link active" id="navcatalog-cards-3-live-tab" data-toggle="tab" href="#navcatalog-cards-3-live" role="tab" aria-controls="navcatalog-cards-3-live" aria-selected="true">Live snippet</a>
-        <a class="nav-item nav-link" id="navcatalog-cards-3-code-tab" data-toggle="tab" href="#navcatalog-cards-3-code" role="tab" aria-controls="navcatalog-cards-3-code" aria-selected="false">Get the code</a>
-</div>
+<section class="ods-content">
+    <nav class="nav nav-pills"
+         id="navcatalog-cards-3-tab"
+         role="tablist">
+        <a class="nav-link active"
+           id="navcatalog-cards-3-live-tab"
+           data-toggle="tab"
+           href="#navcatalog-cards-3-live"
+           role="tab"
+           aria-controls="navcatalog-cards-3-live"
+           aria-selected="true">
+            Live snippet
+        </a>
+        <a class="nav-link"
+           id="navcatalog-cards-3-code-tab"
+           data-toggle="tab"
+           href="#navcatalog-cards-3-code"
+           role="tab"
+           aria-controls="navcatalog-cards-3-code"
+           aria-selected="false">
+            Get the code
+        </a>
     </nav>
 
     <div class="tab-content" id="catalog-cards-3">
@@ -731,6 +815,22 @@ ods-catalog-card {
 
 &lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
 
 
 
@@ -1282,7 +1382,7 @@ ods-catalog-card-keywords {
             </div>
         </div>
     </div>
-</div>
+</section>
 
 
 
@@ -1302,19 +1402,35 @@ ods-catalog-card-keywords {
     <form id="form-catalog-cards-4" action="https://codepen.io/pen/define" method="POST" target="_blank">
         <input type="hidden" name="data" value='{
                                 "title": "New Pen!",
-                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n&#34;,
+                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\n&#34;,
                                 "editors": 110,
                                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-catalog-context context=\&#34;userclub\&#34;\n                     userclub-domain=\&#34;userclub\&#34;\n                     class=\&#34;catalog-grid\&#34;\u003e\n    \u003cods-result-enumerator context=\&#34;userclub\&#34; max=\&#34;4\&#34;\u003e\n        {{ dataset = item ; \&#34;\&#34; }}\n        \u003c!-- Resource starts here, DO NOT COPY before this line --\u003e\n        \u003cods-catalog-card class=\&#34;catalog-highlight\&#34;\n                          ng-class=\&#34;{&#39;ods-catalog-card-highlighted&#39; : dataset.metas.keyword.indexOf(&#39;Discovery&#39;) \u003e -1 }\&#34;\u003e\n            \u003ca ods-main-click=\&#34;\&#34;\n               ng-href=\&#34;{{ &#39;/explore/dataset/&#39; &#43; dataset.datasetid &#43; &#39;/&#39; }}\&#34;\n               target=\&#34;_self\&#34;\u003e\n            \u003c/a\u003e\n            \u003cods-catalog-card-theme-icon\u003e\u003c/ods-catalog-card-theme-icon\u003e\n            \u003cods-catalog-card-body\u003e\n                \u003cods-catalog-card-title\u003e\u003c/ods-catalog-card-title\u003e\n                \u003cods-catalog-card-description\u003e\u003c/ods-catalog-card-description\u003e\n                \u003cods-catalog-card-keywords\u003e\u003c/ods-catalog-card-keywords\u003e\n                \u003cdiv class=\&#34;ods-catalog-card__metadata\&#34;\u003e\n                    \u003cods-catalog-card-metadata-item item-title=\&#34;Publisher\&#34; item-key=\&#34;publisher\&#34;\u003e\u003c/ods-catalog-card-metadata-item\u003e\n                    \u003cods-catalog-card-metadata-item item-title=\&#34;License\&#34; item-key=\&#34;license\&#34;\u003e\u003c/ods-catalog-card-metadata-item\u003e\n                \u003c/div\u003e\n            \u003c/ods-catalog-card-body\u003e\n            \u003cdiv class=\&#34;ods-catalog-card__visualizations\&#34;\u003e\n                \u003cdiv class=\&#34;stars\&#34;\u003e\n                    \u003cimg ng-repeat=\&#34;kw in dataset.metas.keyword track by $index\&#34;\n                         ng-if=\&#34;kw == &#39;academy&#39; || kw ==&#39;traffic&#39; || kw ==&#39;bicycle&#39;\&#34;\n                         src=\&#34;https://discovery.opendatasoft.com/assets/theme_image/stared.png\&#34; /\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/ods-catalog-card\u003e\n\n    \u003c/ods-result-enumerator\u003e\n\u003c/ods-catalog-context\u003e\u003c/div\u003e&#34;,
                                 "css": &#34;.catalog-grid .odswidget-result-enumerator__results {\n    display: grid;\n    grid-column-gap: 20px;\n    grid-row-gap: 20px;\n}\n@media screen and (min-width: 768px) {\n    .catalog-grid .odswidget-result-enumerator__results {\n        grid-template-columns: 1fr 1fr;\n    }\n}\nods-catalog-card {\n    height: 100%;\n}\n\n.ods-catalog-card {\n    margin-bottom: 0;\n}\n/* Resource starts here, DO NOT COPY before this line */\n/* ================================================== */\n\n/* Catalog Highlight\n   ========================================================================== */\nods-catalog-card.catalog-highlight .stars {\n    display: flex;\n    flex-direction: row;\n    flex-wrap: wrap;\n}\nods-catalog-card.catalog-highlight .stars img {\n    height: 35px;\n    width: 35px;\n    margin: 3px;\n}\n.ods-catalog-card-highlight .ods-catalog-card {\n    border: solid 2px #FFD700;\n}\n&#34; }'>
     </form>
 </div>
 
-<div class="ods-content">
-    <nav>
-        <div class="nav nav-tabs justify-content-center" id="navcatalog-cards-4-tab" role="tablist">
-        <a class="nav-item nav-link active" id="navcatalog-cards-4-live-tab" data-toggle="tab" href="#navcatalog-cards-4-live" role="tab" aria-controls="navcatalog-cards-4-live" aria-selected="true">Live snippet</a>
-        <a class="nav-item nav-link" id="navcatalog-cards-4-code-tab" data-toggle="tab" href="#navcatalog-cards-4-code" role="tab" aria-controls="navcatalog-cards-4-code" aria-selected="false">Get the code</a>
-</div>
+<section class="ods-content">
+    <nav class="nav nav-pills"
+         id="navcatalog-cards-4-tab"
+         role="tablist">
+        <a class="nav-link active"
+           id="navcatalog-cards-4-live-tab"
+           data-toggle="tab"
+           href="#navcatalog-cards-4-live"
+           role="tab"
+           aria-controls="navcatalog-cards-4-live"
+           aria-selected="true">
+            Live snippet
+        </a>
+        <a class="nav-link"
+           id="navcatalog-cards-4-code-tab"
+           data-toggle="tab"
+           href="#navcatalog-cards-4-code"
+           role="tab"
+           aria-controls="navcatalog-cards-4-code"
+           aria-selected="false">
+            Get the code
+        </a>
     </nav>
 
     <div class="tab-content" id="catalog-cards-4">
@@ -1338,6 +1454,22 @@ ods-catalog-card-keywords {
 
 &lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
 
 
 
@@ -1525,7 +1657,7 @@ ods-catalog-card.catalog-highlight .stars img {
             </div>
         </div>
     </div>
-</div>
+</section>
 
 
 
@@ -1545,19 +1677,35 @@ ods-catalog-card.catalog-highlight .stars img {
     <form id="form-catalog-cards-5" action="https://codepen.io/pen/define" method="POST" target="_blank">
         <input type="hidden" name="data" value='{
                                 "title": "New Pen!",
-                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n&#34;,
+                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\n&#34;,
                                 "editors": 110,
                                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-catalog-context context=\&#34;userclub\&#34;\n                     userclub-domain=\&#34;userclub\&#34;\n                     class=\&#34;catalog-grid\&#34;\u003e\n    \u003cods-result-enumerator context=\&#34;userclub\&#34; max=\&#34;4\&#34;\u003e\n        {{ dataset = item ; \&#34;\&#34; }}\n        \u003c!-- Resource starts here, DO NOT COPY before this line --\u003e\n        \u003cods-catalog-card\u003e\n            \u003cdiv class=\&#34;card__title\&#34;\n                 ng-class=\&#34;{&#39;card__title--stared&#39; : dataset.metas.keyword.indexOf(&#39;Demo&#39;) != -1}\&#34;\u003e\n                \u003ch2 ng-bind=\&#34;dataset.metas.title\&#34;\u003e\u003c/h2\u003e\n                \u003cods-theme-picto theme=\&#34;{{dataset.metas.theme}}\&#34; color=\&#34;white\&#34;\u003e\u003c/ods-theme-picto\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;card__content\&#34;\u003e\n                \u003cdiv class=\&#34;card__description-holder\&#34;\u003e\n                    \u003cp class=\&#34;card__description\&#34; ng-bind-html=\&#34;dataset.metas.description|shortSummary|prettyText\&#34;\u003e\u003c/p\u003e\n                    \u003cdiv class=\&#34;starred\&#34;\u003e\n                        \u003cimg ng-repeat=\&#34;kw in dataset.metas.keyword track by $index\&#34;\n                             ng-if=\&#34;kw == &#39;academy&#39; || kw ==&#39;traffic&#39; || kw ==&#39;bicycle&#39;\&#34;\n                             src=\&#34;https://discovery.opendatasoft.com/assets/theme_image/stared.png\&#34; /\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n                \u003cdiv ng-if=\&#34;dataset.metas.publisher == &#39;OpenDataSoft&#39;\&#34; class=\&#34;poweredby\&#34;\u003e\n                    Powered by OpenDataSoft\n                \u003c/div\u003e\n                \u003cods-catalog-card-keywords\u003e\u003c/ods-catalog-card-keywords\u003e\n            \u003c/div\u003e\n            \u003ca ods-main-click=\&#34;\&#34;\n               ng-href=\&#34;{{ &#39;/explore/dataset/&#39; &#43; dataset.datasetid &#43; &#39;/&#39; }}\&#34;\n               target=\&#34;_self\&#34;\u003e\n            \u003c/a\u003e\n        \u003c/ods-catalog-card\u003e\n\n    \u003c/ods-result-enumerator\u003e\n\u003c/ods-catalog-context\u003e\u003c/div\u003e&#34;,
                                 "css": &#34;.catalog-grid .odswidget-result-enumerator__results {\n    display: grid;\n    grid-column-gap: 20px;\n    grid-row-gap: 20px;\n}\n@media screen and (min-width: 768px) {\n    .catalog-grid .odswidget-result-enumerator__results {\n        grid-template-columns: 1fr 1fr;\n    }\n}\nods-catalog-card {\n    height: 100%;\n}\n\n.ods-catalog-card {\n    margin-bottom: 0;\n}\n/* Resource starts here, DO NOT COPY before this line */\n/* ================================================== */\n\n\n/* Full Custom Catalog Cards\n   ========================================================================== */\n.ods-catalog-card {\n    border-radius: 7px;\n    padding: 26px;\n    flex-direction: column;\n    padding: 26px;\n    transition: all .2s;\n}\n.ods-catalog-card:hover {\n    background-color: #f5f5f5;\n    -webkit-box-shadow: 0 0 10px 0 #e3e9f1;\n    box-shadow: 0 0 10px 0 #e3e9f1;\n}\n.ods-catalog-card .ods-catalog-card:hover:before {\n    display: none;\n}\n.ods-catalog-card .card__title {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    padding: 0;\n}\n.ods-catalog-card .card__title--starred:before {\n    content: &#39;\\f005&#39;;\n    color: #FFD700;\n    font-family: FontAwesome;\n    font-size: 1.3rem;\n    margin-right: 5px;\n}\n.ods-catalog-card .card__title h2 {\n    color: #1e0c33;\n    margin-bottom: 0;\n    font-weight: 200;\n}\n.ods-catalog-card .card__description-holder {\n    display: flex;\n    justify-content: space-between;\n}\n.ods-catalog-card .card__description {\n    padding: 15px;\n}\n.ods-catalog-card .starred {\n    display: flex;\n    margin: 10px;\n}\n.ods-catalog-card .starred img {\n    height: 40px;\n}\n.card__portal-favicon {\n    position: absolute;\n    bottom: 0px;\n    right: 5px;\n}\n.card__portal-favicon img {\n    height: 25px;\n    width: 25px;\n}\n.ods-catalog-card .odswidget.odswidget-picto.odswidget-theme-picto {\n    width: 32px;\n    height: 32px;\n}\n.ods-catalog-card .ods-svginliner__svg-container svg path,\n.ods-catalog-card .ods-svginliner__svg-container svg rect,\n.ods-catalog-card .ods-svginliner__svg-container svg polygon {\n    fill: #1e0c33 !important;\n}\n.ods-catalog-card__keywords {\n    margin-left: 20px;\n    margin-bottom: 10px;\n}\n.ods-catalog-card .poweredby {\n    transform: rotate(-16deg);\n    position: absolute;\n    top: 50px;\n    left: 50px;\n    font-size: 1.8em;\n    opacity: 0.5;\n    font-weight: 400;\n    color: #ec653d;\n    text-align: center;\n}\n&#34; }'>
     </form>
 </div>
 
-<div class="ods-content">
-    <nav>
-        <div class="nav nav-tabs justify-content-center" id="navcatalog-cards-5-tab" role="tablist">
-        <a class="nav-item nav-link active" id="navcatalog-cards-5-live-tab" data-toggle="tab" href="#navcatalog-cards-5-live" role="tab" aria-controls="navcatalog-cards-5-live" aria-selected="true">Live snippet</a>
-        <a class="nav-item nav-link" id="navcatalog-cards-5-code-tab" data-toggle="tab" href="#navcatalog-cards-5-code" role="tab" aria-controls="navcatalog-cards-5-code" aria-selected="false">Get the code</a>
-</div>
+<section class="ods-content">
+    <nav class="nav nav-pills"
+         id="navcatalog-cards-5-tab"
+         role="tablist">
+        <a class="nav-link active"
+           id="navcatalog-cards-5-live-tab"
+           data-toggle="tab"
+           href="#navcatalog-cards-5-live"
+           role="tab"
+           aria-controls="navcatalog-cards-5-live"
+           aria-selected="true">
+            Live snippet
+        </a>
+        <a class="nav-link"
+           id="navcatalog-cards-5-code-tab"
+           data-toggle="tab"
+           href="#navcatalog-cards-5-code"
+           role="tab"
+           aria-controls="navcatalog-cards-5-code"
+           aria-selected="false">
+            Get the code
+        </a>
     </nav>
 
     <div class="tab-content" id="catalog-cards-5">
@@ -1581,6 +1729,22 @@ ods-catalog-card.catalog-highlight .stars img {
 
 &lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
 
 
 
@@ -1906,7 +2070,7 @@ ods-catalog-card {
             </div>
         </div>
     </div>
-</div>
+</section>
 
 
 

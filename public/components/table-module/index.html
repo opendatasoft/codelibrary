@@ -222,7 +222,7 @@ Table module &ndash; Codelibrary
     <div class="column">
         
 
-<div class="content">
+<div class="content container-fluid mt-3">
     <div class="box">
         <h1 id="components-library---table-module">Components Library - Table Module</h1>
 
@@ -244,19 +244,35 @@ Check the example below to get the required CSS.</p>
     <form id="form-table-module-1" action="https://codepen.io/pen/define" method="POST" target="_blank">
         <input type="hidden" name="data" value='{
                                 "title": "New Pen!",
-                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n&#34;,
+                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\n&#34;,
                                 "editors": 110,
                                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;population\&#34;\n                     population-domain=\&#34;public\&#34;\n                     population-dataset=\&#34;population-millesimee-communes-2016\&#34;\u003e\n    \u003cdiv class=\&#34;table-module\&#34;\u003e\n        \u003ctable class=\&#34;table-basic\&#34;\n               ods-results=\&#34;regions\&#34;\n               ods-results-context=\&#34;population\&#34;\n               ods-results-max=\&#34;100\&#34;\u003e\n            \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth\u003eCommune\u003c/th\u003e\n                    \u003cth\u003ePopulation\u003c/th\u003e\n                    \u003cth\u003eCode Commune\u003c/th\u003e\n                    \u003cth\u003eRégion\u003c/th\u003e\n                \u003c/tr\u003e\n            \u003c/thead\u003e\n            \u003ctbody\u003e\n                \u003ctr ng-repeat=\&#34;region in regions\&#34;\u003e\n                    \u003cth scope=\&#34;row\&#34;\u003e\n                        {{ region.fields.nom_de_la_commune | capitalize }}\n                    \u003c/th\u003e\n                    \u003ctd\u003e\n                        {{ region.fields.population_totale }}\n                    \u003c/td\u003e\n                    \u003ctd\u003e\n                        {{ region.fields.code_commune }}\n                    \u003c/td\u003e\n                    \u003ctd\u003e\n                        {{ region.fields.nom_de_la_region }}\n                    \u003c/td\u003e\n                \u003c/tr\u003e\n            \u003c/tbody\u003e\n        \u003c/table\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
                                 "css": &#34;/* Table Module Basic\n   ========================================================================== */\n.table-module {\n  height: 400px;\n  overflow-y: auto;\n}\n.table-basic {\n  display: table;\n  border-collapse: collapse;\n  width: 100%;\n  white-space: nowrap;\n  background-color: #FFFFFF;\n}\n.table-basic thead th {\n  color: var(--titles);\n  background-color: #f6f8fb;\n  font-weight: 500;\n  padding: 13px 3px;\n  position: sticky;\n  top: 0;\n  z-index: 1;\n}\n.table-basic thead th:first-child,\n.table-basic tbody th {\n  padding-left: 13px;\n}\n.table-basic tr td,\n.table-basic tbody th {\n  font-weight: normal;\n  border-top: 1px solid #dee5ef;\n}\n.table-basic tr td {\n  padding: 13px 3px;\n}\n&#34; }'>
     </form>
 </div>
 
-<div class="ods-content">
-    <nav>
-        <div class="nav nav-tabs justify-content-center" id="navtable-module-1-tab" role="tablist">
-        <a class="nav-item nav-link active" id="navtable-module-1-live-tab" data-toggle="tab" href="#navtable-module-1-live" role="tab" aria-controls="navtable-module-1-live" aria-selected="true">Live snippet</a>
-        <a class="nav-item nav-link" id="navtable-module-1-code-tab" data-toggle="tab" href="#navtable-module-1-code" role="tab" aria-controls="navtable-module-1-code" aria-selected="false">Get the code</a>
-</div>
+<section class="ods-content">
+    <nav class="nav nav-pills"
+         id="navtable-module-1-tab"
+         role="tablist">
+        <a class="nav-link active"
+           id="navtable-module-1-live-tab"
+           data-toggle="tab"
+           href="#navtable-module-1-live"
+           role="tab"
+           aria-controls="navtable-module-1-live"
+           aria-selected="true">
+            Live snippet
+        </a>
+        <a class="nav-link"
+           id="navtable-module-1-code-tab"
+           data-toggle="tab"
+           href="#navtable-module-1-code"
+           role="tab"
+           aria-controls="navtable-module-1-code"
+           aria-selected="false">
+            Get the code
+        </a>
     </nav>
 
     <div class="tab-content" id="table-module-1">
@@ -280,6 +296,22 @@ Check the example below to get the required CSS.</p>
 
 &lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
 
 
 
@@ -471,7 +503,7 @@ Check the example below to get the required CSS.</p>
             </div>
         </div>
     </div>
-</div>
+</section>
 
 
 
@@ -493,19 +525,35 @@ Check the example below to get the required CSS.</p>
     <form id="form-table-module-2" action="https://codepen.io/pen/define" method="POST" target="_blank">
         <input type="hidden" name="data" value='{
                                 "title": "New Pen!",
-                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n&#34;,
+                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\n&#34;,
                                 "editors": 110,
                                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;population\&#34;\n                     population-domain=\&#34;public\&#34;\n                     population-dataset=\&#34;population-millesimee-communes-2016\&#34;\u003e\n    \u003cdiv class=\&#34;table-module\&#34;\u003e\n        \u003ctable class=\&#34;table-detail\&#34;\n               ods-results=\&#34;regions\&#34;\n               ods-results-context=\&#34;population\&#34;\n               ods-results-max=\&#34;100\&#34;\n               ng-init=\&#34;detail.open = &#39;&#39;\&#34;\u003e\n            \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth\u003eCommune\u003c/th\u003e\n                    \u003cth\u003ePopulation\u003c/th\u003e\n                    \u003cth\u003eCode Commune\u003c/th\u003e\n                    \u003cth\u003eRégion\u003c/th\u003e\n                \u003c/tr\u003e\n            \u003c/thead\u003e\n            \u003ctbody\u003e\n                \u003ctr ng-repeat-start=\&#34;(i, region) in regions\&#34;\u003e\n                    \u003cth ng-click=\&#34;detail.open = (detail.open == region.recordid ? &#39;&#39; : region.recordid)\&#34;\n                        ng-class=\&#34;{&#39;table-detail-active&#39;: detail.open == region.recordid}\&#34;\n                        scope=\&#34;row\&#34;\u003e\n                        {{ region.fields.nom_de_la_commune | capitalize }}\n                        \u003cspan class=\&#34;table-row-header-details\&#34;\u003e\n                            - Détails\n                            \u003ci class=\&#34;fa fa-fw\&#34; aria-hidden=\&#34;true\&#34;\n                               ng-class=\&#34;{&#39;fa-angle-up&#39;: detail.open == region.recordid,\n                                         &#39;fa-angle-down&#39;: detail.open != region.recordid}\&#34;\u003e\u003c/i\u003e\n                        \u003c/span\u003e\n                    \u003c/th\u003e\n                    \u003ctd\u003e\n                        {{ region.fields.population_totale }}\n                    \u003c/td\u003e\n                    \u003ctd\u003e\n                        {{ region.fields.code_commune }}\n                    \u003c/td\u003e\n                    \u003ctd\u003e\n                        {{ region.fields.nom_de_la_region }}\n                    \u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr class=\&#34;table-item-details\&#34;\n                    ng-repeat-end\n                    ng-show=\&#34;detail.open == region.recordid\&#34;\u003e\n                    \u003ctd colspan=\&#34;4\&#34;\u003e\n                        \u003cul\u003e\n                            \u003cli\u003e\n                                \u003cspan\u003eAnnée recensement : \u003c/span\u003e\n                                \u003cspan\u003e{{ region.fields.annee_recensement }}\u003c/span\u003e\n                            \u003c/li\u003e\n                            \u003cli ng-if=\&#34;region.fields.superficie \u003e 0\&#34;\u003e\n                                \u003cspan\u003eSuperficie de la commune : \u003c/span\u003e\n                                \u003cspan\u003e{{ region.fields.superficie }}\u003c/span\u003e\n                            \u003c/li\u003e\n                            \u003cli\u003e\n                                \u003cspan\u003eCode INSEE de la région : \u003c/span\u003e\n                                \u003cspan\u003e{{ region.fields.code_region }}\u003c/span\u003e\n                            \u003c/li\u003e\n                            \u003cli\u003e\n                                \u003cspan\u003eCode INSEE du département : \u003c/span\u003e\n                                \u003cspan\u003e{{ region.fields.code_departement }}\u003c/span\u003e\n                            \u003c/li\u003e\n                        \u003c/ul\u003e\n                    \u003c/td\u003e\n                \u003c/tr\u003e\n            \u003c/tbody\u003e\n        \u003c/table\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
                                 "css": &#34;/* Table with details panel\n   ========================================================================== */\n.table-module {\n  height: 400px;\n  overflow-y: auto;\n}\n.table-detail {\n  display: table;\n  border-collapse: collapse;\n  width: 100%;\n  white-space: nowrap;\n  background-color: #FFFFFF;\n}\n.table-detail thead th {\n  color: var(--titles);\n  background-color: #f6f8fb;\n  font-weight: 500;\n  padding: 13px 3px;\n  position: sticky;\n  top: 0;\n  z-index: 1;\n}\n.table-detail thead th:first-child,\n.table-detail tbody th {\n  padding-left: 13px;\n}\n.table-detail tr td,\n.table-detail tbody th {\n  font-weight: normal;\n  border-top: 1px solid #dee5ef;\n}\n.table-detail tr td {\n  padding: 13px 3px;\n}\n/* Summary */\n.table-row-header {\n  display: flex;\n  align-items: center;\n}\n.table-row-header-details {\n  opacity: .8;\n  margin: 0 3px;\n}\n.table-detail tbody tr th:hover {\n  color: var(--links);\n}\n/* Details */\n.table-detail-active {\n    color: var(--links);\n}\n.table-item-details {\n  padding-bottom: 26px;\n}\n.table-detail .table-item-details td {\n  border-top: none;\n}\n.table-detail .table-item-details td:first-child {\n  padding-left: 13px;\n}\n&#34; }'>
     </form>
 </div>
 
-<div class="ods-content">
-    <nav>
-        <div class="nav nav-tabs justify-content-center" id="navtable-module-2-tab" role="tablist">
-        <a class="nav-item nav-link active" id="navtable-module-2-live-tab" data-toggle="tab" href="#navtable-module-2-live" role="tab" aria-controls="navtable-module-2-live" aria-selected="true">Live snippet</a>
-        <a class="nav-item nav-link" id="navtable-module-2-code-tab" data-toggle="tab" href="#navtable-module-2-code" role="tab" aria-controls="navtable-module-2-code" aria-selected="false">Get the code</a>
-</div>
+<section class="ods-content">
+    <nav class="nav nav-pills"
+         id="navtable-module-2-tab"
+         role="tablist">
+        <a class="nav-link active"
+           id="navtable-module-2-live-tab"
+           data-toggle="tab"
+           href="#navtable-module-2-live"
+           role="tab"
+           aria-controls="navtable-module-2-live"
+           aria-selected="true">
+            Live snippet
+        </a>
+        <a class="nav-link"
+           id="navtable-module-2-code-tab"
+           data-toggle="tab"
+           href="#navtable-module-2-code"
+           role="tab"
+           aria-controls="navtable-module-2-code"
+           aria-selected="false">
+            Get the code
+        </a>
     </nav>
 
     <div class="tab-content" id="table-module-2">
@@ -529,6 +577,22 @@ Check the example below to get the required CSS.</p>
 
 &lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
 
 
 
@@ -836,7 +900,7 @@ Check the example below to get the required CSS.</p>
             </div>
         </div>
     </div>
-</div>
+</section>
 
 
 
@@ -858,19 +922,35 @@ Check the example below to get the required CSS and HTML in order to get the dro
     <form id="form-table-module-3" action="https://codepen.io/pen/define" method="POST" target="_blank">
         <input type="hidden" name="data" value='{
                                 "title": "New Pen!",
-                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n&#34;,
+                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\n&#34;,
                                 "editors": 110,
                                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;population\&#34;\n                     population-domain=\&#34;public\&#34;\n                     population-dataset=\&#34;population-millesimee-communes-2016\&#34;\u003e\n    \u003cdiv class=\&#34;table-module\&#34;\u003e\n        \u003ctable class=\&#34;table-basic\&#34;\n               ods-results=\&#34;regions\&#34;\n               ods-results-context=\&#34;population\&#34;\n               ods-results-max=\&#34;100\&#34;\n               ng-init=\&#34;dropdown.open = &#39;&#39;\&#34;\u003e\n            \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth\u003eCommune\u003c/th\u003e\n                    \u003cth\u003ePopulation\u003c/th\u003e\n                    \u003cth\u003eCode Commune\u003c/th\u003e\n                    \u003cth\u003eRégion\u003c/th\u003e\n                    \u003cth\u003e\u003c/th\u003e\n                \u003c/tr\u003e\n            \u003c/thead\u003e\n            \u003ctbody\u003e\n                \u003ctr ng-repeat=\&#34;region in regions\&#34;\u003e\n                    \u003cth scope=\&#34;row\&#34;\u003e\n                        {{ region.fields.nom_de_la_commune | capitalize }}\n                    \u003c/th\u003e\n                    \u003ctd\u003e\n                        {{ region.fields.population_totale }}\n                    \u003c/td\u003e\n                    \u003ctd\u003e\n                        {{ region.fields.code_commune }}\n                    \u003c/td\u003e\n                    \u003ctd\u003e\n                        {{ region.fields.nom_de_la_region }}\n                    \u003c/td\u003e\n                    \u003ctd\u003e\n                        \u003cdiv class=\&#34;table-dropdown-container\&#34;\u003e\n                            \u003cbutton class=\&#34;table-dropdown-button\&#34;\n                                    ng-click=\&#34;dropdown.open = (dropdown.open == region.recordid ? &#39;&#39; : region.recordid)\&#34;\n                                    ng-class=\&#34;{&#39;table-dropdown-button-active&#39;: dropdown.open == region.recordid}\&#34;\u003e\n                                \u003ci class=\&#34;fa fa-ellipsis-v\&#34;\u003e\u003c/i\u003e\n                            \u003c/button\u003e\n                            \u003cdiv class=\&#34;table-dropdown\&#34;\n                                 ng-class=\&#34;{&#39;table-dropdown-visible&#39; : dropdown.open == region.recordid }\&#34;\u003e\n                                \u003ca href=\&#34;#\&#34;\n                                   target=\&#34;_blank\&#34;\n                                   class=\&#34;table-dropdown-item\&#34;\u003e\n                                    Action 1\n                                \u003c/a\u003e\n                                \u003ca href=\&#34;#\&#34;\n                                   target=\&#34;_blank\&#34;\n                                   class=\&#34;table-dropdown-item\&#34;\u003e\n                                    Action 2\n                                \u003c/a\u003e\n                            \u003c/div\u003e\n                            \u003cdiv class=\&#34;table-dropdown-backdrop\&#34;\n                                 ng-click=\&#34;dropdown.open = &#39;&#39;\&#34;\n                                 ng-show=\&#34;dropdown.open != &#39;&#39;\&#34;\u003e\u003c/div\u003e\n                        \u003c/div\u003e\n                    \u003c/td\u003e\n                \u003c/tr\u003e\n            \u003c/tbody\u003e\n        \u003c/table\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
                                 "css": &#34;/* Table with dropdown\n   ========================================================================== */\n.table-module {\n  height: 400px;\n  overflow-y: auto;\n}\n.table-basic {\n  display: table;\n  border-collapse: collapse;\n  width: 100%;\n  white-space: nowrap;\n  background-color: #FFFFFF;\n}\n.table-basic thead th {\n  color: var(--titles);\n  background-color: #f6f8fb;\n  font-weight: 500;\n  padding: 13px 3px;\n  position: sticky;\n  top: 0;\n  z-index: 1;\n}\n.table-basic thead th:first-child,\n.table-basic tbody th {\n  padding-left: 13px;\n}\n.table-basic tr td,\n.table-basic tbody th {\n  font-weight: normal;\n  border-top: 1px solid #dee5ef;\n}\n.table-basic tr td {\n  padding: 13px 3px;\n}\n/* Dropdown */\n.table-dropdown-container {\n  position: relative;\n  margin-right: 4px;;\n}\n.table-dropdown-button {\n  width: 28px;\n  height: 28px;\n  padding: 0;\n  line-height: 1;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  background: white;\n  border: 1px solid transparent;\n  border-radius: 4px;\n  margin-left: auto;\n}\n.table-basic tr:hover .table-dropdown-button {\n  border-color: var(--highlight);\n}\n.table-dropdown-button-active {\n  box-shadow: 0 0 0 3px rgba(20, 46, 123, 0.3);\n  border-color: var(--highlight);\n}\n.table-dropdown {\n  visibility: hidden;\n  opacity: 0;\n  position: absolute;\n  z-index: 3;\n  top: 0;\n  right: 0;\n  border: 1px solid #FFFFFF;\n  border-radius: 4px;\n  border-color: rgba(222, 229, 239, 1);\n  padding: 13px;\n  white-space: nowrap;\n  background: white;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);\n  transition: visibility 0s, opacity 0.1s ease, top 0.1s ease;\n}\n.table-dropdown-visible {\n  visibility: visible;\n  opacity: 1;\n  top: 38px;\n}\n.table-dropdown-item {\n  padding: 2px 6px 2px 0;\n  display: block;\n}\n.table-dropdown-backdrop {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  cursor: auto;\n}\n&#34; }'>
     </form>
 </div>
 
-<div class="ods-content">
-    <nav>
-        <div class="nav nav-tabs justify-content-center" id="navtable-module-3-tab" role="tablist">
-        <a class="nav-item nav-link active" id="navtable-module-3-live-tab" data-toggle="tab" href="#navtable-module-3-live" role="tab" aria-controls="navtable-module-3-live" aria-selected="true">Live snippet</a>
-        <a class="nav-item nav-link" id="navtable-module-3-code-tab" data-toggle="tab" href="#navtable-module-3-code" role="tab" aria-controls="navtable-module-3-code" aria-selected="false">Get the code</a>
-</div>
+<section class="ods-content">
+    <nav class="nav nav-pills"
+         id="navtable-module-3-tab"
+         role="tablist">
+        <a class="nav-link active"
+           id="navtable-module-3-live-tab"
+           data-toggle="tab"
+           href="#navtable-module-3-live"
+           role="tab"
+           aria-controls="navtable-module-3-live"
+           aria-selected="true">
+            Live snippet
+        </a>
+        <a class="nav-link"
+           id="navtable-module-3-code-tab"
+           data-toggle="tab"
+           href="#navtable-module-3-code"
+           role="tab"
+           aria-controls="navtable-module-3-code"
+           aria-selected="false">
+            Get the code
+        </a>
     </nav>
 
     <div class="tab-content" id="table-module-3">
@@ -894,6 +974,22 @@ Check the example below to get the required CSS and HTML in order to get the dro
 
 &lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
 
 
 
@@ -1255,7 +1351,7 @@ Check the example below to get the required CSS and HTML in order to get the dro
             </div>
         </div>
     </div>
-</div>
+</section>
 
 
 
@@ -1276,19 +1372,35 @@ You need to add the <code>table-advanced</code> class to your table. If you want
     <form id="form-table-module-4" action="https://codepen.io/pen/define" method="POST" target="_blank">
         <input type="hidden" name="data" value='{
                                 "title": "New Pen!",
-                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n&#34;,
+                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\n&#34;,
                                 "editors": 110,
                                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;population\&#34;\n                     population-domain=\&#34;public\&#34;\n                     population-dataset=\&#34;population-millesimee-communes-2016\&#34;\u003e\n    \u003cdiv class=\&#34;table-module\&#34;\u003e\n        \u003ctable class=\&#34;table-advanced\&#34;\n               ods-results=\&#34;regions\&#34;\n               ods-results-context=\&#34;population\&#34;\n               ods-results-max=\&#34;100\&#34;\n               ng-init=\&#34;dropdown.open = &#39;&#39;; detail.open = &#39;&#39;\&#34;\u003e\n            \u003cthead\u003e\n                \u003ctr\u003e\n                    \u003cth\u003eCommune\u003c/th\u003e\n                    \u003cth\u003ePopulation\u003c/th\u003e\n                    \u003cth\u003eCode Commune\u003c/th\u003e\n                    \u003cth\u003eRégion\u003c/th\u003e\n                    \u003cth\u003e\u003c/th\u003e\n                \u003c/tr\u003e\n            \u003c/thead\u003e\n            \u003ctbody\u003e\n                \u003ctr ng-repeat-start=\&#34;(i, region) in regions\&#34;\u003e\n                    \u003cth ng-click=\&#34;detail.open = (detail.open == region.recordid ? &#39;&#39; : region.recordid)\&#34;\n                        ng-class=\&#34;{&#39;table-detail-active&#39;: detail.open == region.recordid}\&#34;\n                        scope=\&#34;row\&#34;\u003e\n                        {{ region.fields.nom_de_la_commune | capitalize }}\n                        \u003cspan class=\&#34;table-row-header-details\&#34;\u003e\n                            - Détails\n                            \u003ci class=\&#34;fa fa-fw\&#34; aria-hidden=\&#34;true\&#34;\n                               ng-class=\&#34;{&#39;fa-angle-up&#39;: detail.open == region.recordid,\n                                         &#39;fa-angle-down&#39;: detail.open != region.recordid}\&#34;\u003e\u003c/i\u003e\n                        \u003c/span\u003e\n                    \u003c/th\u003e\n                    \u003ctd\u003e\n                        {{ region.fields.population_totale }}\n                    \u003c/td\u003e\n                    \u003ctd\u003e\n                        {{ region.fields.code_commune }}\n                    \u003c/td\u003e\n                    \u003ctd\u003e\n                        {{ region.fields.nom_de_la_region }}\n                    \u003c/td\u003e\n                    \u003ctd\u003e\n                        \u003cdiv class=\&#34;table-dropdown-container\&#34;\u003e\n                            \u003cbutton class=\&#34;table-dropdown-button\&#34;\n                                    ng-click=\&#34;dropdown.open = (dropdown.open == region.recordid ? &#39;&#39; : region.recordid)\&#34;\n                                    ng-class=\&#34;{&#39;table-dropdown-button-active&#39;: dropdown.open == region.recordid}\&#34;\u003e\n                                \u003ci class=\&#34;fa fa-ellipsis-v\&#34;\u003e\u003c/i\u003e\n                            \u003c/button\u003e\n                            \u003cdiv class=\&#34;table-dropdown\&#34;\n                                 ng-class=\&#34;{&#39;table-dropdown-visible&#39; : dropdown.open == region.recordid }\&#34;\u003e\n                                \u003ca href=\&#34;#\&#34;\n                                   target=\&#34;_blank\&#34;\n                                   class=\&#34;table-dropdown-item\&#34;\u003e\n                                    Action 1\n                                \u003c/a\u003e\n                                \u003ca href=\&#34;#\&#34;\n                                   target=\&#34;_blank\&#34;\n                                   class=\&#34;table-dropdown-item\&#34;\u003e\n                                    Action 2\n                                \u003c/a\u003e\n                            \u003c/div\u003e\n                            \u003cdiv class=\&#34;table-dropdown-backdrop\&#34;\n                                 ng-click=\&#34;dropdown.open = &#39;&#39;\&#34;\n                                 ng-show=\&#34;dropdown.open != &#39;&#39;\&#34;\u003e\u003c/div\u003e\n                        \u003c/div\u003e\n                    \u003c/td\u003e\n                \u003c/tr\u003e\n                \u003ctr class=\&#34;table-item-details\&#34;\n                    ng-repeat-end\n                    ng-show=\&#34;detail.open == region.recordid\&#34;\u003e\n                    \u003ctd colspan=\&#34;4\&#34;\u003e\n                        \u003cul\u003e\n                            \u003cli\u003e\n                                \u003cspan\u003eAnnée recensement : \u003c/span\u003e\n                                \u003cspan\u003e{{ region.fields.annee_recensement }}\u003c/span\u003e\n                            \u003c/li\u003e\n                            \u003cli ng-if=\&#34;region.fields.superficie \u003e 0\&#34;\u003e\n                                \u003cspan\u003eSuperficie de la commune : \u003c/span\u003e\n                                \u003cspan\u003e{{ region.fields.superficie }}\u003c/span\u003e\n                            \u003c/li\u003e\n                            \u003cli\u003e\n                                \u003cspan\u003eCode INSEE de la région : \u003c/span\u003e\n                                \u003cspan\u003e{{ region.fields.code_region }}\u003c/span\u003e\n                            \u003c/li\u003e\n                            \u003cli\u003e\n                                \u003cspan\u003eCode INSEE du département : \u003c/span\u003e\n                                \u003cspan\u003e{{ region.fields.code_departement }}\u003c/span\u003e\n                            \u003c/li\u003e\n                        \u003c/ul\u003e\n                    \u003c/td\u003e\n                \u003c/tr\u003e\n            \u003c/tbody\u003e\n        \u003c/table\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
                                 "css": &#34;/* Table Advanced\n   ========================================================================== */\n.table-module {\n  height: 400px;\n  overflow-y: auto;\n}\n.table-advanced {\n  display: table;\n  border-collapse: collapse;\n  width: 100%;\n  white-space: nowrap;\n  background-color: #FFFFFF;\n}\n.table-advanced thead th {\n  color: var(--titles);\n  background-color: #f6f8fb;\n  font-weight: 500;\n  padding: 13px 3px;\n  position: sticky;\n  top: 0;\n  z-index: 1;\n}\n.table-advanced thead th:first-child,\n.table-advanced tbody th {\n  padding-left: 13px;\n}\n.table-advanced tr td,\n.table-advanced tbody th {\n  font-weight: normal;\n  border-top: 1px solid #dee5ef;\n}\n.table-advanced tr td {\n  padding: 13px 3px;\n}\n/* Dropdown */\n.table-dropdown-container {\n  position: relative;\n  margin-right: 4px;;\n}\n.table-dropdown-button {\n  width: 28px;\n  height: 28px;\n  padding: 0;\n  line-height: 1;\n  display: flex;\n  align-self: center;\n  justify-content: center;\n  background: white;\n  border: 1px solid transparent;\n  border-radius: 4px;\n  margin-left: auto;\n}\n.table-advanced tr:hover .table-dropdown-button {\n  border-color: var(--highlight);\n}\n.table-dropdown-button-active {\n  box-shadow: 0 0 0 3px rgba(20, 46, 123, 0.3);\n  border-color: var(--highlight);\n}\n.table-dropdown {\n  visibility: hidden;\n  opacity: 0;\n  position: absolute;\n  z-index: 3;\n  top: 0;\n  right: 0;\n  border: 1px solid #FFFFFF;\n  border-radius: 4px;\n  border-color: rgba(222, 229, 239, 1);\n  padding: 13px;\n  white-space: nowrap;\n  background: white;\n  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);\n  transition: visibility 0s, opacity 0.1s ease, top 0.1s ease;\n}\n.table-dropdown-visible {\n  visibility: visible;\n  opacity: 1;\n  top: 38px;\n}\n.table-dropdown-item {\n  padding: 2px 6px 2px 0;\n  display: block;\n}\n.table-dropdown-backdrop {\n  position: fixed;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  cursor: auto;\n}\n/* Summary */\n.table-row-header {\n  display: flex;\n  align-items: center;\n}\n.table-row-header-details {\n  opacity: .8;\n  margin: 0 3px;\n}\n/* Details */\n.table-advanced tbody tr th:hover {\n  color: var(--links);\n}\n.table-advanced-active {\n    color: var(--links);\n}\n.table-item-details {\n  padding-bottom: 26px;\n}\n.table-advanced .table-item-details td {\n  border-top: none;\n}\n.table-advanced .table-item-details td:first-child {\n  padding-left: 13px;\n}\n&#34; }'>
     </form>
 </div>
 
-<div class="ods-content">
-    <nav>
-        <div class="nav nav-tabs justify-content-center" id="navtable-module-4-tab" role="tablist">
-        <a class="nav-item nav-link active" id="navtable-module-4-live-tab" data-toggle="tab" href="#navtable-module-4-live" role="tab" aria-controls="navtable-module-4-live" aria-selected="true">Live snippet</a>
-        <a class="nav-item nav-link" id="navtable-module-4-code-tab" data-toggle="tab" href="#navtable-module-4-code" role="tab" aria-controls="navtable-module-4-code" aria-selected="false">Get the code</a>
-</div>
+<section class="ods-content">
+    <nav class="nav nav-pills"
+         id="navtable-module-4-tab"
+         role="tablist">
+        <a class="nav-link active"
+           id="navtable-module-4-live-tab"
+           data-toggle="tab"
+           href="#navtable-module-4-live"
+           role="tab"
+           aria-controls="navtable-module-4-live"
+           aria-selected="true">
+            Live snippet
+        </a>
+        <a class="nav-link"
+           id="navtable-module-4-code-tab"
+           data-toggle="tab"
+           href="#navtable-module-4-code"
+           role="tab"
+           aria-controls="navtable-module-4-code"
+           aria-selected="false">
+            Get the code
+        </a>
     </nav>
 
     <div class="tab-content" id="table-module-4">
@@ -1312,6 +1424,22 @@ You need to add the <code>table-advanced</code> class to your table. If you want
 
 &lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
 
 
 
@@ -1787,7 +1915,7 @@ You need to add the <code>table-advanced</code> class to your table. If you want
             </div>
         </div>
     </div>
-</div>
+</section>
 
 
 
