@@ -4,7 +4,7 @@
 
 {{ define "main" }}
 
-<section class="container">
+<section class="container home">
     <h1 class="title is-1">
         Codelibrary Home
     </h1>
@@ -14,31 +14,20 @@
     <p>
         Some random text about where you just landed
     </p>
-    <div class="columns mt-4">
-        <div class="column">
-            <div class="box">
-                <h1 class="title">
-                    Techtricks
-                </h1>
-                <p>Advanced, technical, </p>
-            </div>
-        </div>
-        <div class="column">
-            <div class="box">
-                <h1 class="title">
-                    Templates
-                </h1>
-                <p>The comforting temple for late people</p>
-            </div>
-        </div>
-        <div class="column">
-            <div class="box">
-                <h1 class="title">
-                    Components
-                </h1>
-                <p>Menu, Tabs, Select, a wide range of components to copy and paste into your Opendatasoft pages</p>
-            </div>
-        </div>
+    <div class="row justify-content-center mt-4">
+        {{ range $index, $elem := .Site.Sections }}
+            <a class="col-lg-5 col-md-6"
+               href="{{ $elem.RelPermalink }}">
+                <div class="box">
+                    <h1 class="title">{{ $elem.Title | humanize }}</h1>
+                    {{ $elem.Title | lower }}
+                    <p>{{ index .Site.Data.sections ($elem.Title | lower) | safeHTML }}</p>
+                </div>
+            </a>
+            {{ if eq $index 1 }}
+            <div class="w-100"></div>
+            {{ end }}
+        {{ end }}
     </div>
 </section>
 
