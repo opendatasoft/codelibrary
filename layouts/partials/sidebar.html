@@ -7,14 +7,11 @@
     <div id="algolia-results"></div>
 
     {{ $currentPage := . }}
-    <p class="menu-label">
-        Sections
-    </p>
     <ul class="menu-list">
         {{ range .Site.Menus.main }}
         {{ if eq $currentPage.Section .Page.Section }}
         <li>
-            <a class="{{ if $currentPage.IsMenuCurrent " main" . }}is-active{{ end }}" href="{{ .URL }}">
+            <a class="sidebar-subtitle {{ if $currentPage.IsMenuCurrent "main" . }}is-active{{ end }}" href="{{ .URL }}">
             {{ humanize .Name }}
             </a>
             <ul>
@@ -27,7 +24,8 @@
         </li>
         {{ else }}
         <li>
-            <a href="{{ .URL }}">
+            <a href="{{ .URL }}"
+               class="sidebar-subtitle">
                 {{ humanize .Name }}
             </a>
         </li>
@@ -37,7 +35,7 @@
     <p class="menu-label">
         Tags
     </p>
-    <div class="tags are-medium">
+    <div class="tags">
         {{ range .Site.Taxonomies.tags }}
         <a class="tag" href="{{ .Page.Permalink }}">
             {{ .Page.Title }}
