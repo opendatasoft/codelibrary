@@ -1,8 +1,10 @@
-<aside class="menu p-4">
+<aside class="sidebar menu">
+    <h2 class="title is-5 mt-3">
+        <a href="{{ .Site.BaseURL }}">Home</a>
+    </h2>
+
     <div id="algolia-box"></div>
     <div id="algolia-results"></div>
-
-    <h2 class="title is-5 mt-3"><a href="{{ .Site.BaseURL }}">Home</a></h2>
 
     {{ $currentPage := . }}
     <p class="menu-label">
@@ -37,7 +39,7 @@
     </p>
     <div class="tags are-medium">
         {{ range .Site.Taxonomies.tags }}
-        <a class="tag is-primary" href="{{ .Page.Permalink }}">
+        <a class="tag" href="{{ .Page.Permalink }}">
             {{ .Page.Title }}
         </a>
         {{ end }}
