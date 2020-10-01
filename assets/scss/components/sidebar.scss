@@ -9,14 +9,35 @@
   min-height: 100%;
 }
 
+.sidebar-logo-link {
+  margin-top: $spacing-200;
+  margin-bottom: $spacing-300;
+  display: inline-block;
+  transition: all .2s;
+}
+
+.sidebar-logo-link:hover {
+  opacity: .7;
+}
+
+.sidebar-logo {
+  width: 145px;
+  height: auto;
+}
+
 .menu {
   font-size: $size-6;
 }
+
 
 a.sidebar-subtitle {
   color: $black;
   padding-top: 8px;
   padding-bottom: 8px;
+}
+
+.menu-list {
+  margin-top: $spacing-200;
 }
 
 .menu-label {
@@ -44,9 +65,6 @@ a.sidebar-subtitle {
 
 
 /* Algolia */
-.ais-SearchBox {
-  margin-bottom: $spacing-200;
-}
 
 .ais-SearchBox-input {
   font-size: $size-6;
@@ -69,13 +87,14 @@ a.sidebar-subtitle {
   position: absolute;
   width: 500px;
   max-height: calc(100% - 80px - 110px);
+  box-shadow: 0 3px 6px -1px rgba(0,0,0,.2);
   padding: 10px;
-  border: 1px solid gainsboro;
-  border-radius: 5px;
-  background-color: #fefeff;
+  border: 1px solid #c4c8d8;
+  border-radius: $radius;
+  background-color: $white;
   overflow: auto;
   z-index: 1;
-
+  margin-top: 5px;
   display: none;
 }
 
@@ -111,24 +130,20 @@ $color-border-light: lighten($color-border, 15%);
 
 
 /* Override Algolia theme */
-.ais-Hits-list {
-  //margin-top: 0;
-}
 
 .ais-Hits-item, .ais-InfiniteHits-item, .ais-InfiniteResults-item, .ais-Results-item {
   width: 100%;
-  background-color: white;
-  border-width: 2px;
-  //padding: 0;
+  background-color: $box-background-color;
+  border: 1px solid $box-background-color;
+  border-radius: $radius;
+  box-shadow: none;
 
   .hit {
-    //padding: 1rem;
-    //margin: 0;
     display: block;
   }
 
   &:hover {
-    border: 2px solid $ods-bg-blue;
+    border-color: $secondary;
   }
 }
 

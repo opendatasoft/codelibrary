@@ -1,13 +1,23 @@
 <aside class="sidebar menu">
-    <h2 class="title is-5 mt-3">
-        <a href="{{ .Site.BaseURL }}">Home</a>
-    </h2>
+    <a href="{{ .Site.BaseURL }}"
+       class="sidebar-logo-link"
+       title="Go to Codelibrary homepage">
+        <img src="/img/ods-codelibrary-logo.svg"
+             class="sidebar-logo"
+             alt="Codelibrary Logo">
+    </a>
 
     <div id="algolia-box"></div>
     <div id="algolia-results"></div>
 
     {{ $currentPage := . }}
     <ul class="menu-list">
+        <li>
+            <a class="sidebar-subtitle"
+               href="{{ .Site.BaseURL }}">
+                Home
+            </a>
+        </li>
         {{ range .Site.Menus.main }}
         {{ if eq $currentPage.Section .Page.Section }}
         <li>
