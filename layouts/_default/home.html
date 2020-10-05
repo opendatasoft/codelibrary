@@ -4,7 +4,7 @@
 
 {{ define "main" }}
 
-<section class="container home">
+<section class="container home is-max-desktop mt-5">
     <h1 class="title is-1">
         Codelibrary Home
     </h1>
@@ -14,19 +14,16 @@
     <p>
         Some random text about where you just landed
     </p>
-    <div class="row justify-content-center mt-4">
+    <div class="columns is-multiline mt-4">
         {{ range $index, $elem := .Site.Sections }}
-            <a class="col-lg-5 col-md-6"
-               href="{{ $elem.RelPermalink }}">
-                <div class="box">
+            <div class="column is-half">
+                <a class="box"
+                href="{{ $elem.RelPermalink }}">
                     <h1 class="title">{{ $elem.Title | humanize }}</h1>
                     {{ $elem.Title | lower }}
                     <p>{{ index .Site.Data.sections ($elem.Title | lower) | safeHTML }}</p>
-                </div>
-            </a>
-            {{ if eq $index 1 }}
-            <div class="w-100"></div>
-            {{ end }}
+                </a>
+            </div>
         {{ end }}
     </div>
 </section>
