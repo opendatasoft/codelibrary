@@ -3,252 +3,270 @@
 {{ $stylesheet := path.Join .Page.File.Dir "stylesheet.css.inc" | readFile }}
 
 <div class="ods-content">
-    <nav>
-        <div class="nav nav-tabs justify-content-center" id="nav{{ .Page.Title | urlize}}-tab" role="tablist">
-            <a class="nav-item nav-link active" id="nav{{ .Page.Title | urlize}}-live-tab" data-toggle="tab"
-               href="#nav{{ .Page.Title | urlize}}-live" role="tab" aria-controls="nav{{ .Page.Title | urlize}}-live"
-               aria-selected="true">Live snippet</a>
-            <a class="nav-item nav-link" id="nav{{ .Page.Title | urlize}}-code-tab" data-toggle="tab"
-               href="#nav{{ .Page.Title | urlize}}-code" role="tab" aria-controls="nav{{ .Page.Title | urlize}}-code"
-               aria-selected="false">Get the code</a>
+    <section class="box box-live-example">
+        <div class="row">
+            <iframe id="iframe-{{ .Page.Title | urlize}}" width="100%" height="600px"
+                    src="{{ .Page.Params.iframe }}">
+            </iframe>
         </div>
-    </nav>
+    </section>
 
-    <div class="tab-content" id="{{ .Page.Title | urlize}}">
-        <div class="tab-pane fade show active" id="nav{{ .Page.Title | urlize}}-live" role="tabpanel"
-             aria-labelledby="nav{{ .Page.Title | urlize}}-live-tab">
-            <div class="row">
-                <iframe id="iframe-{{ .Page.Title | urlize}}" width="100%" height="600px"
-                        src="{{ .Page.Params.iframe }}">
-                </iframe>
-            </div>
-        </div>
-        <div class="tab-pane fade" id="nav{{ .Page.Title | urlize}}-code" role="tabpanel"
-             aria-labelledby="nav{{ .Page.Title | urlize}}-code-tab">
-            <div class="row">
-                <div class="col-2">
-                    <div class="nav flex-column nav-pills" id="code-{{ .Page.Title | urlize}}-tab" role="tablist"
-                         aria-orientation="vertical">
-                        <a class="nav-link active" id="code-{{ .Page.Title | urlize}}-colors-tab" data-toggle="pill"
-                           href="#code-{{ .Page.Title | urlize}}-colors-content" role="tab"
-                           aria-controls="code-{{ .Page.Title | urlize}}-colors-content" aria-selected="true">
+    <section class="box box-code mb-0">
+        <div class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <div class="btn-group nav" role="tablist">
+                        <a class="button btn"
+                           id="code-{{ .Page.Title | urlize}}-colors-tab"
+                           data-toggle="tab"
+                           href="#code-{{ .Page.Title | urlize}}-colors-content"
+                           role="tab"
+                           aria-controls="code-{{ .Page.Title | urlize}}-colors-content"
+                           aria-selected="true">
                             Colors
                         </a>
-                        <a class="nav-link" id="code-{{ .Page.Title | urlize}}-header-tab" data-toggle="pill"
-                           href="#code-{{ .Page.Title | urlize}}-header-content" role="tab"
-                           aria-controls="code-{{ .Page.Title | urlize}}-header-content" aria-selected="true">
+                        <a class="button btn"
+                           id="code-{{ .Page.Title | urlize}}-header-tab"
+                           data-toggle="pill"
+                           href="#code-{{ .Page.Title | urlize}}-header-content"
+                           role="tab"
+                           aria-controls="code-{{ .Page.Title | urlize}}-header-content"
+                           aria-selected="true">
                             Header
                         </a>
-                        <a class="nav-link" id="code-{{ .Page.Title | urlize}}-footer-tab" data-toggle="pill"
-                           href="#code-{{ .Page.Title | urlize}}-footer-content" role="tab"
-                           aria-controls="code-{{ .Page.Title | urlize}}-footer-content" aria-selected="true">
+                        <a class="button btn"
+                           id="code-{{ .Page.Title | urlize}}-footer-tab"
+                           data-toggle="pill"
+                           href="#code-{{ .Page.Title | urlize}}-footer-content"
+                           role="tab"
+                           aria-controls="code-{{ .Page.Title | urlize}}-footer-content"
+                           aria-selected="true">
                             Footer
                         </a>
-                        <a class="nav-link" id="code-{{ .Page.Title | urlize}}-css-tab" data-toggle="pill"
-                           href="#code-{{ .Page.Title | urlize}}-css-content" role="tab"
-                           aria-controls="code-{{ .Page.Title | urlize}}-css-content" aria-selected="false">
+                        <a class="button btn"
+                           id="code-{{ .Page.Title | urlize}}-css-tab"
+                           data-toggle="pill"
+                           href="#code-{{ .Page.Title | urlize}}-css-content"
+                           role="tab"
+                           aria-controls="code-{{ .Page.Title | urlize}}-css-content"
+                           aria-selected="false">
                             Stylesheet
                         </a>
                     </div>
                 </div>
-                <div class="col-10">
-                    <div class="tab-content" id="code-tabContent">
-                        <div class="tab-pane fade show active" id="code-{{ .Page.Title | urlize}}-colors-content"
-                             role="tabpanel" aria-labelledby="code-{{ .Page.Title | urlize}}-colors-tab">
-                            <div class="container colors row">
-                                <div class="col-sm-6">
-                                    <ul>
-                                        <li>
-                                            <div class="color">
+            </div>
+            <div class="level-right">
+                <button class="button is-rounded is-outlined">
+                    Copy
+                </button>
+            </div>
+        </div>
+        <div class="tab-content" id="code-tabContent">
+            <div class="tab-pane fade show active" id="code-{{ .Page.Title | urlize}}-colors-content"
+                 role="tabpanel" aria-labelledby="code-{{ .Page.Title | urlize}}-colors-tab">
+                <div class="container colors row">
+                    <div class="col-sm-6">
+                        <ul>
+                            <li>
+                                <div class="color">
                                                 <span class="color-preview"
                                                       style="background-color:{{ .Page.Params.text }}"></span>
-                                                <div class="highlight">
+                                    <div class="highlight">
                                                     <pre>
                                                         <code>{{ .Page.Params.text }}</code>
                                                     </pre>
-                                                </div>
-                                                Text
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="color">
+                                    </div>
+                                    Text
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color">
                                                 <span class="color-preview"
                                                       style="background-color:{{ .Page.Params.links }}"></span>
-                                                <div class="highlight">
+                                    <div class="highlight">
                                                     <pre>
                                                         <code>{{ .Page.Params.links }}</code>
                                                     </pre>
-                                                </div>
-                                                Links
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="color">
+                                    </div>
+                                    Links
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color">
                                                 <span class="color-preview"
                                                       style="background-color:{{ .Page.Params.titles }}"></span>
-                                                <div class="highlight">
+                                    <div class="highlight">
                                                     <pre>
                                                         <code>{{ .Page.Params.titles }}</code>
                                                     </pre>
-                                                </div>
-                                                Titles
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="color">
+                                    </div>
+                                    Titles
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color">
                                                 <span class="color-preview"
                                                       style="background-color:{{ .Page.Params.pagebackground }}"></span>
-                                                <div class="highlight">
+                                    <div class="highlight">
                                                     <pre>
                                                         <code>{{ .Page.Params.pagebackground }}</code>
                                                     </pre>
-                                                </div>
-                                                Page Background
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="color">
+                                    </div>
+                                    Page Background
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color">
                                                 <span class="color-preview"
                                                       style="background-color:{{ .Page.Params.highlight }}"></span>
-                                                <div class="highlight">
+                                    <div class="highlight">
                                                     <pre>
                                                         <code>{{ .Page.Params.highlight }}</code>
                                                     </pre>
-                                                </div>
-                                                Highlight
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="color">
+                                    </div>
+                                    Highlight
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color">
                                                 <span class="color-preview"
                                                       style="background-color:{{ .Page.Params.boxesbackground }}"></span>
-                                                <div class="highlight">
+                                    <div class="highlight">
                                                     <pre>
                                                         <code>{{ .Page.Params.boxesbackground }}</code>
                                                     </pre>
-                                                </div>
-                                                Boxes background
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="color">
+                                    </div>
+                                    Boxes background
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color">
                                                 <span class="color-preview"
                                                       style="background-color:{{ .Page.Params.boxesborder }}"></span>
-                                                <div class="highlight">
+                                    <div class="highlight">
                                                     <pre>
                                                         <code>{{ .Page.Params.boxesborder }}</code>
                                                     </pre>
-                                                </div>
-                                                Boxes border
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    </div>
+                                    Boxes border
                                 </div>
-                                <div class="col-sm-6">
-                                    <ul>
-                                        <li>
-                                            <div class="color">
-                                                <span class="color-preview"
-                                                      style="background-color:{{ .Page.Params.sectiontitles }}"></span>
-                                                <div class="highlight">
-                                                    <pre>
-                                                        <code>{{ .Page.Params.sectiontitles }}</code>
-                                                    </pre>
-                                                </div>
-                                                Section Titles
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <div class="color">
-                                                <span class="color-preview"
-                                                      style="background-color:{{ .Page.Params.sectiontitlesbackground }}"></span>
-                                                <div class="highlight">
-                                                    <pre>
-                                                        <code>{{ .Page.Params.sectiontitlesbackground }}</code>
-                                                    </pre>
-                                                </div>
-                                                Section titles background
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <div class="color">
-                                                <span class="color-preview"
-                                                      style="background-color:{{ .Page.Params.headerbackground }}"></span>
-                                                <div class="highlight">
-                                                    <pre>
-                                                        <code>{{ .Page.Params.headerbackground }}</code>
-                                                    </pre>
-                                                </div>
-                                                Header Background
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <div class="color">
-                                                <span class="color-preview"
-                                                      style="background-color:{{ .Page.Params.headerlinks }}"></span>
-                                                <div class="highlight">
-                                                    <pre>
-                                                        <code>{{ .Page.Params.headerlinks }}</code>
-                                                    </pre>
-                                                </div>
-                                                Links in the header
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <div class="color">
-                                                <span class="color-preview"
-                                                      style="background-color:{{ .Page.Params.footerbackground }}"></span>
-                                                <div class="highlight">
-                                                    <pre>
-                                                        <code>{{ .Page.Params.footerbackground }}</code>
-                                                    </pre>
-                                                </div>
-                                                Footer background
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <div class="color">
-                                                <span class="color-preview"
-                                                      style="background-color:{{ .Page.Params.footerlinks }}"></span>
-                                                <div class="highlight">
-                                                    <pre>
-                                                        <code>{{ .Page.Params.footerlinks }}</code>
-                                                    </pre>
-                                                </div>
-                                                Links in the footer
-                                            </div>
-                                        </li>
-                                    </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6">
+                        <ul>
+                            <li>
+                                <div class="color">
+                                    <span class="color-preview"
+                                          style="background-color:{{ .Page.Params.sectiontitles }}"></span>
+                                    <div class="highlight">
+                                        <pre>
+                                            <code>{{ .Page.Params.sectiontitles }}</code>
+                                        </pre>
+                                    </div>
+                                    Section Titles
                                 </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="code-{{ .Page.Title | urlize}}-header-content" role="tabpanel"
-                             aria-labelledby="code-{{ .Page.Title | urlize}}-header-tab">
-                            <div class="highlight">
-                                <pre class="language-html" data-lang="html"><code>{{ $header }}</code></pre>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="code-{{ .Page.Title | urlize}}-footer-content" role="tabpanel"
-                             aria-labelledby="code-{{ .Page.Title | urlize}}-footer-tab">
-                            <div class="highlight">
-                                <pre class="language-html" data-lang="html"><code>{{ $footer }}</code></pre>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="code-{{ .Page.Title | urlize}}-css-content" role="tabpanel"
-                             aria-labelledby="code-{{ .Page.Title | urlize}}-css-tab">
-                            <div class="highlight">
-                                <pre class="language-css" data-lang="css"><code>{{ $stylesheet }}</code></pre>
-                            </div>
-                        </div>
+                            </li>
+
+                            <li>
+                                <div class="color">
+                                    <span class="color-preview"
+                                          style="background-color:{{ .Page.Params.sectiontitlesbackground }}"></span>
+                                    <div class="highlight">
+                                        <pre>
+                                            <code>{{ .Page.Params.sectiontitlesbackground }}</code>
+                                        </pre>
+                                    </div>
+                                    Section titles background
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="color">
+                                    <span class="color-preview"
+                                          style="background-color:{{ .Page.Params.headerbackground }}"></span>
+                                    <div class="highlight">
+                                        <pre>
+                                            <code>{{ .Page.Params.headerbackground }}</code>
+                                        </pre>
+                                    </div>
+                                    Header Background
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="color">
+                                    <span class="color-preview"
+                                          style="background-color:{{ .Page.Params.headerlinks }}"></span>
+                                    <div class="highlight">
+                                        <pre>
+                                            <code>{{ .Page.Params.headerlinks }}</code>
+                                        </pre>
+                                    </div>
+                                    Links in the header
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="color">
+                                    <span class="color-preview"
+                                          style="background-color:{{ .Page.Params.footerbackground }}"></span>
+                                    <div class="highlight">
+                                        <pre>
+                                            <code>{{ .Page.Params.footerbackground }}</code>
+                                        </pre>
+                                    </div>
+                                    Footer background
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="color">
+                                    <span class="color-preview"
+                                          style="background-color:{{ .Page.Params.footerlinks }}"></span>
+                                    <div class="highlight">
+                                        <pre>
+                                            <code>{{ .Page.Params.footerlinks }}</code>
+                                        </pre>
+                                    </div>
+                                    Links in the footer
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
+            <div class="tab-pane fade"
+                 id="code-{{ .Page.Title | urlize}}-header-content"
+                 role="tabpanel"
+                 aria-labelledby="code-{{ .Page.Title | urlize}}-header-tab">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html">
+                        <code>{{ $header }}</code>
+                    </pre>
+                </div>
+            </div>
+            <div class="tab-pane fade"
+                 id="code-{{ .Page.Title | urlize}}-footer-content"
+                 role="tabpanel"
+                 aria-labelledby="code-{{ .Page.Title | urlize}}-footer-tab">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html">
+                        <code>{{ $footer }}</code>
+                    </pre>
+                </div>
+            </div>
+            <div class="tab-pane fade"
+                 id="code-{{ .Page.Title | urlize}}-css-content"
+                 role="tabpanel"
+                 aria-labelledby="code-{{ .Page.Title | urlize}}-css-tab">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css">
+                        <code>{{ $stylesheet }}</code>
+                    </pre>
+                </div>
+            </div>
         </div>
-    </div>
+    </section>
 </div>
 
