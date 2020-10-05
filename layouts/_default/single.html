@@ -4,15 +4,15 @@
 
 {{ define "main" }}
 
-<div class="content mt-3">
-    <div class="container is-max-desktop">
+<div class="content">
+    <div class="content-header container is-max-desktop mb-5">
         {{ .Content }}
     </div>
     {{ range .Page.Resources.Match "*/index.md" }}
     <div class="container">
         <div class="box">
         {{ .Content }}
-    </div>
+        </div>
     </div>
     {{ end }}
 </div>
