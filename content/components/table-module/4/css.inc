@@ -43,7 +43,7 @@
   padding: 0;
   line-height: 1;
   display: flex;
-  align-self: center;
+  align-items: center;
   justify-content: center;
   background: white;
   border: 1px solid transparent;
