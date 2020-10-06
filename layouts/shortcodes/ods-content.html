@@ -23,26 +23,24 @@
 
 <div class="ods-content">
     <section class="box box-live-example">
-        <div class="row">
-            <iframe id="iframe-{{ .Page.Title | urlize}}"
-                    width="100%" height="100%"
-                    src="about:blank"
-                    srcdoc="
+        <iframe id="iframe-{{ .Page.Title | urlize}}"
+                width="100%" height="100%"
+                src="about:blank"
+                srcdoc="
                 <head>{{ "/layouts/partials/includes.html" | readFile }}
-            {{ $style := resources.Get "scss/main.scss" | resources.ToCSS }}
-            <!--link rel='stylesheet' href='{{ $style.RelPermalink }}' /-->
-            </head>
-            <body>
-            <div ng-app='ods-widgets'>
-                {{ $html }}
-            </div>
-            <style type='text/css'>
-                {{ $css }}
-            </style>
-            </body>
-            ">
-            </iframe>
+        {{ $style := resources.Get "scss/main.scss" | resources.ToCSS }}
+        <!--link rel='stylesheet' href='{{ $style.RelPermalink }}' /-->
+        </head>
+        <body>
+        <div ng-app='ods-widgets'>
+            {{ $html }}
         </div>
+        <style type='text/css'>
+            {{ $css }}
+        </style>
+        </body>
+        ">
+        </iframe>
     </section>
 
     <section class="box box-code js-tabs">
