@@ -8,4 +8,4 @@ title: "Component 4"
 Button which allows content to be displayed or hidden on click.
 {{< /intro-content >}}
 
-{{< ods-content >}}
+{{< ods-content 120 >}}
