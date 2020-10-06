@@ -1,5 +1,17 @@
 /* Search Box Card
    ========================================================================== */
+.search-card {
+	background-color: rgba(0,0,0,.1);
+	padding: 39px;
+	border-radius: 4px;
+	margin-bottom: 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	text-align: center;
+	justify-content: center;
+	text-align: center;
+}
 .search-card-container {
 	display: flex;
 	justify-content: center;
