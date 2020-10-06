@@ -1,9 +1,9 @@
 ---
-title: "Search box 1"
+title: "Search box 2"
 ---
 
 {{< intro-content >}}
-## Search Box
+## Search Box inside card
 {{< /intro-content >}}
 
 {{< ods-content >}}
