@@ -43,67 +43,53 @@
         </div>
     </section>
 
-    <section class="box box-code mb-0">
-            <nav class="level">
-                <div class="level-left">
-                    <div class="level-item">
-                        <div class="btn-group nav" role="tablist">
-                                <a class="button btn"
-                                   id="{{ .Page.Title | urlize}}-html"
-                                   data-toggle="tab"
-                                   href="#code-{{ .Page.Title | urlize}}-html-content"
-                                   role="tab"
-                                   aria-controls="code-{{ .Page.Title | urlize}}-html-content"
-                                   aria-selected="true">
-                                    HTML
-                                </a>
-                                <a class="button btn"
-                                   id="{{ .Page.Title | urlize}}-css"
-                                   data-toggle="tab"
-                                   href="#code-{{ .Page.Title | urlize}}-css-content"
-                                   role="tab"
-                                   aria-controls="code-{{ .Page.Title | urlize}}-css-content"
-                                   aria-selected="false">
-                                    CSS
-                                </a>
-                                <a class="button btn"
-                                   target="_blank"
-                                   rel="noopener"
-                                   href="#"
-                                   title="Edit on CodePen"
-                                   onclick="document.getElementById('form-{{ .Page.Title | urlize}}').submit()">
-                                    Edit on Codepen
-                                </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="level-right">
-                    <button class="button is-rounded is-outlined">
-                        Copy
-                    </button>
-                </div>
-            </nav>
-
-
-            <div class="tab-content"
-                 id="code-tabContent">
-                <div class="tab-pane fade show active"
-                     id="code-{{ .Page.Title | urlize}}-html-content"
-                     role="tabpanel"
-                     aria-labelledby="code-{{ .Page.Title | urlize}}-html-tab">
-                    <div class="highlight">
-                        <pre class="language-html" data-lang="html"><code>{{ $html }}</code></pre>
-                    </div>
-                </div>
-                <div class="tab-pane fade"
-                     id="code-{{ .Page.Title | urlize}}-css-content"
-                     role="tabpanel"
-                     aria-labelledby="code-{{ .Page.Title | urlize}}-css-tab">
-                    <div class="highlight">
-                        <pre class="language-css" data-lang="css"><code>{{ $css }}</code></pre>
-                    </div>
+    <section class="box box-code mb-0 js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-rounded js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-{{ .Page.Title | urlize}}-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-rounded js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-{{ .Page.Title | urlize}}-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
+            <div class="level-right">
+                <a class="button is-rounded is-outlined"
+                   target="_blank"
+                   rel="noopener"
+                   href="#"
+                   title="Edit on CodePen"
+                   onclick="document.getElementById('form-{{ .Page.Title | urlize}}').submit()">
+                    Edit on Codepen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-{{ .Page.Title | urlize}}-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>{{ $html }}</code></pre>
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-{{ .Page.Title | urlize}}-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>{{ $css }}</code></pre>
+                </div>
+            </div>
+        </div>
     </section>
 </div>
 

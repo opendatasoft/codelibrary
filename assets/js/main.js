@@ -6,3 +6,6 @@ initSearch();
 
 import Prism from 'prismjs'
 Prism.highlightAll();
+
+//import 'van11y-accessible-tab-panel-aria'
+import './van11y'
