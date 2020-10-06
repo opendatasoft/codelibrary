@@ -1,17 +1,5 @@
 /* Search Box Card
    ========================================================================== */
-.search-card {
-	background-color: rgba(0,0,0,.1);
-	padding: 39px;
-	border-radius: 4px;
-	margin-bottom: 20px;
-	display: flex;
-	flex-direction: column;
-	align-items: stretch;
-	text-align: center;
-	justify-content: center;
-	text-align: center;
-}
 .search-card-container {
 	display: flex;
 	justify-content: center;
@@ -37,7 +25,10 @@
     max-width: 500px;
     padding: 8px 13px;
     border-radius: 4px 0 0 4px;
-    border: none;
+    border-top: 1px solid #cbd2db;
+    border-left: 1px solid #cbd2db;
+    border-bottom: 1px solid #cbd2db;
+    border-right: none;
     margin: 0 auto;
 }
 .search-card-submit-button {
@@ -54,5 +45,5 @@
 }
 .search-card-submit-button:hover {
 	text-decoration: none;
-	opacity: .7;
+	opacity: .8;
 }

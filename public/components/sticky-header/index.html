@@ -19,18 +19,10 @@ Sticky header &ndash; Codelibrary
     </script>
 
     
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
-            integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
-            crossorigin="anonymous"></script>
+    
 
     
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-          integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
-          crossorigin="anonymous">
+    
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
     <link rel="stylesheet"
@@ -39,82 +31,104 @@ Sticky header &ndash; Codelibrary
           crossorigin="anonymous">
 
     
-    <link rel="stylesheet" type="text/css" href="/scss/main.css" />
+    <link rel="stylesheet"
+          type="text/css"
+          href="/scss/main.css" />
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png">
+    <link rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png">
+    <link rel="shortcut icon"
+          href="/favicon.ico">
 </head>
 
 <body>
 
-
-
-
-<nav class="navbar navbar-expand-lg navbar-light is-fixed-top" role="navigation" aria-label="Main navigation">
+<nav class="navbar is-fixed-top"
+     role="navigation"
+     aria-label="Main navigation">
     <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-            <img src="/img/ods-logo-helphub.svg"/>
+        <a class="navbar-item"
+           href="/"
+           title="Back to the homepage">
+            <img src="/img/ods-logo-helphub.svg"
+                 alt="Helphub Logo"/>
         </a>
+        <button class="navbar-burger burger"
+                type="button"
+                data-toggle="collapse"
+                data-target="#helphubNavbar"
+                aria-controls="helphubNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            Help Hub
+        </button>
     </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#helphubNavbar"
-            aria-controls="helphubNavbar" aria-expanded="false" aria-label="Toggle navigation">
-        Help Hub
-    </button>
-    <div class="collapse navbar-collapse" id="helphubNavbar">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="https://help.opendatasoft.com/">
-                    Help Hub
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://help.opendatasoft.com/platform/en/">
-                    User guide
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link is-active" href="https://discovery.opendatasoft.com">
-                    Code Library
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://help.opendatasoft.com/faq-glossary/en/">
-                    FAQ
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://help.opendatasoft.com/widgets/">
-                    Widgets
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://help.opendatasoft.com/en/apis/">
-                    APIs
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://academy.opendatasoft.com/page/homepage">
-                    Academy
-                </a>
-            </li>
-    </div>
+    <div class="navbar-menu"
+         id="helphubNavbar">
+        <div class="navbar-start">
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/">
+                Help Hub
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/platform/en/">
+                User guide
+            </a>
+            <a class="navbar-item is-active"
+               href="https://discovery.opendatasoft.com">
+                Code Library
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/faq-glossary/en/">
+                FAQ
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/widgets/">
+                Widgets
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/en/apis/">
+                APIs
+            </a>
+            <a class="navbar-item"
+               href="https://academy.opendatasoft.com/page/homepage">
+                Academy
+            </a>
+        </div>
     </div>
 </nav>
 
 <div class="columns codelibrary">
-    <div class="column is-one-quarter">
-        <aside class="menu p-4">
+    <div class="column is-narrow">
+        <aside class="sidebar menu">
+    <a href="https://codelibrary.opendatasoft.com"
+       class="sidebar-logo-link"
+       title="Go to Codelibrary homepage">
+        <img src="/img/ods-codelibrary-logo.svg"
+             class="sidebar-logo"
+             alt="Codelibrary Logo">
+    </a>
+
     <div id="algolia-box"></div>
     <div id="algolia-results"></div>
 
-    <h2 class="title is-5 mt-3"><a href="https://codelibrary.opendatasoft.com">Home</a></h2>
-
     
-    <p class="menu-label">
-        Sections
-    </p>
     <ul class="menu-list">
+        <li>
+            <a class="sidebar-subtitle"
+               href="https://codelibrary.opendatasoft.com">
+                Home
+            </a>
+        </li>
         
         
         <li>
-            <a class="" href="/components/">
+            <a class="sidebar-subtitle " href="/components/">
             Components
             </a>
             <ul>
@@ -165,7 +179,8 @@ Sticky header &ndash; Codelibrary
         
         
         <li>
-            <a href="/page-templates/">
+            <a href="/page-templates/"
+               class="sidebar-subtitle">
                 Page templates
             </a>
         </li>
@@ -173,7 +188,8 @@ Sticky header &ndash; Codelibrary
         
         
         <li>
-            <a href="/portal-themes/">
+            <a href="/portal-themes/"
+               class="sidebar-subtitle">
                 Portal themes
             </a>
         </li>
@@ -181,7 +197,8 @@ Sticky header &ndash; Codelibrary
         
         
         <li>
-            <a href="/widget-tricks/">
+            <a href="/widget-tricks/"
+               class="sidebar-subtitle">
                 Widget tricks
             </a>
         </li>
@@ -191,37 +208,41 @@ Sticky header &ndash; Codelibrary
     <p class="menu-label">
         Tags
     </p>
-    <div class="tags are-medium">
+    <div class="tags">
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/aggregation/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/aggregation/">
             aggregation
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/chart/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/chart/">
             chart
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/display/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/display/">
             display
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/filter/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/filter/">
             filter
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/geo/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/geo/">
             geo
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/list/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/list/">
             list
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/navigation/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/navigation/">
             navigation
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/ods-analysis/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-aggregation/">
+            ods-aggregation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-analysis/">
             ods-analysis
         </a>
         
@@ -232,18 +253,24 @@ Sticky header &ndash; Codelibrary
     <div class="column">
         
 
-<div class="content container-fluid mt-3">
-    <div class="box">
-        <h1 id="sticky-header">Sticky header</h1>
+<div>
+    <div class="content-header container is-max-desktop mb-5">
+        <div class="content">
+            <h1 id="sticky-header">Sticky header</h1>
 <p>Sticky content is one that will stay positioned once the user scrolls past it (i.e: stuck in position). Unlike <code>position: fixed;</code>, sticky content is limited by its container and will stop scrolling once the end of the parent element is reached.</p>
 <p>To make an element sticky, you need to add the following CSS:</p>
 <p><code>position: sticky;</code>
 <code>top: 0;</code></p>
 
+        </div>
     </div>
     
-    <div class="box">
-        <h2 id="sticky-content-example">Sticky content example</h2>
+    <div class="container">
+        <div class="box box-example">
+            <div class="content">
+    <h2 id="sticky-content-example">Sticky content example</h2>
+
+</div>
 
 
 
@@ -252,46 +279,29 @@ Sticky header &ndash; Codelibrary
     
     
 
-    <form id="form-sticky-header-1" action="https://codepen.io/pen/define" method="POST" target="_blank">
-        <input type="hidden" name="data" value='{
-                                "title": "New Pen!",
-                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\n&#34;,
-                                "editors": 110,
-                                "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;placeholder-content\&#34;\u003e\n    \u003csection class=\&#34;sticky-content\&#34;\u003e\n        \u003ch2\u003e\n            Sticky content is here\n        \u003c/h2\u003e\n    \u003c/section\u003e\n    \u003ch3 class=\&#34;placeholder-title\&#34;\u003e\n        Page content is here\n    \u003c/h3\u003e\n\u003c/div\u003e\n\u003chr class=\&#34;placeholder-separator\&#34;\u003e\n\u003cdiv class=\&#34;placeholder-content\&#34;\u003e\n    \u003cbr\u003e\n    \u003ch3 class=\&#34;placeholder-title\&#34;\u003e\n        Page content is here\n    \u003c/h3\u003e\n    \u003csection class=\&#34;sticky-content\&#34;\u003e\n        \u003ch2\u003e\n            Sticky content is here\n        \u003c/h2\u003e\n    \u003c/section\u003e\n    \u003ch3 class=\&#34;placeholder-title\&#34;\u003e\n        More content here\n    \u003c/h3\u003e\n\u003c/div\u003e\n\u003c/div\u003e&#34;,
-                                "css": &#34;/* Sticky Content\n   ========================================================================== */\n.sticky-content {\n    position: sticky;\n    top: 0;\n    z-index: 10;\n    background-color: hotpink;\n    color: #FFFFFF;\n    padding: 3rem 20px;\n}\n.placeholder-content {\n    height: 600px;\n    background-color: lightgreen;\n}\n.placeholder-title {\n    margin-top: 1.5rem;\n    margin-bottom: 1.5rem;\n    padding-left: 20px;\n}\n.placeholder-separator {\n    margin-top: 3rem;\n    margin-bottom: 3rem;\n}\n&#34; }'>
+    <form id="form-sticky-header-1"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;placeholder-content\&#34;\u003e\n    \u003csection class=\&#34;sticky-content\&#34;\u003e\n        \u003ch2 class=\&#34;sticky-content-title\&#34;\u003e\n            Sticky content is here (scroll to test)\n        \u003c/h2\u003e\n    \u003c/section\u003e\n    \u003ch3 class=\&#34;placeholder-title\&#34;\u003e\n        Page content is here\n    \u003c/h3\u003e\n\u003c/div\u003e\n\u003chr class=\&#34;placeholder-separator\&#34;\u003e\n\u003cdiv class=\&#34;placeholder-content\&#34;\u003e\n    \u003cbr\u003e\n    \u003ch3 class=\&#34;placeholder-title\&#34;\u003e\n        Page content is here\n    \u003c/h3\u003e\n    \u003csection class=\&#34;sticky-content\&#34;\u003e\n        \u003ch2 class=\&#34;sticky-content-title\&#34;\u003e\n            Sticky content is here (scroll to test)\n        \u003c/h2\u003e\n    \u003c/section\u003e\n    \u003ch3 class=\&#34;placeholder-title\&#34;\u003e\n        More content here\n    \u003c/h3\u003e\n\u003c/div\u003e\n\u003c/div\u003e&#34;,
+               "css": &#34;/* Sticky Content\n   ========================================================================== */\n.sticky-content {\n    position: sticky;\n    top: 0;\n    z-index: 10;\n    background-color: #ffe4c4;\n    color: #FFFFFF;\n    padding: 3rem 20px;\n}\n.sticky-content-title {\n    margin: 0;\n}\n.placeholder-content {\n    height: 1000px;\n    background-color: yellow;\n    background: linear-gradient(180deg, rgba(255,255,0,1) 0%, rgba(255,140,0,1) 100%);\n}\n.placeholder-title {\n    margin-top: 1.5rem;\n    margin-bottom: 1.5rem;\n    padding-left: 20px;\n}\n.placeholder-separator {\n    margin-top: 3rem;\n    margin-bottom: 3rem;\n}\n&#34; }'>
     </form>
 </div>
 
-<section class="ods-content">
-    <nav class="nav nav-pills"
-         id="navsticky-header-1-tab"
-         role="tablist">
-        <a class="nav-link active"
-           id="navsticky-header-1-live-tab"
-           data-toggle="tab"
-           href="#navsticky-header-1-live"
-           role="tab"
-           aria-controls="navsticky-header-1-live"
-           aria-selected="true">
-            Live snippet
-        </a>
-        <a class="nav-link"
-           id="navsticky-header-1-code-tab"
-           data-toggle="tab"
-           href="#navsticky-header-1-code"
-           role="tab"
-           aria-controls="navsticky-header-1-code"
-           aria-selected="false">
-            Get the code
-        </a>
-    </nav>
-
-    <div class="tab-content" id="sticky-header-1">
-        <div class="tab-pane fade show active" id="navsticky-header-1-live" role="tabpanel" aria-labelledby="navsticky-header-1-live-tab">
-            <div class="row">
-                <iframe id="iframe-sticky-header-1" width="100%" height="600px" src="about:blank"
+<div class="ods-content">
+    <section class="box box-live-example">
+        <div class="row">
+            <iframe id="iframe-sticky-header-1"
+                    width="100%" height="100%"
+                    src="about:blank"
                     srcdoc="
-<head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+                <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
 
@@ -323,17 +333,25 @@ Sticky header &ndash; Codelibrary
     });
 &lt;/script&gt;
 
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
 
-
-
-<!--link rel='stylesheet' href='/scss/main.css' /-->
-</head>
-<body>
-<div ng-app='ods-widgets' class='container-fluid'>
-    &lt;div class=&#34;placeholder-content&#34;&gt;
+            
+            <!--link rel='stylesheet' href='/scss/main.css' /-->
+            </head>
+            <body>
+            <div ng-app='ods-widgets'>
+                &lt;div class=&#34;placeholder-content&#34;&gt;
     &lt;section class=&#34;sticky-content&#34;&gt;
-        &lt;h2&gt;
-            Sticky content is here
+        &lt;h2 class=&#34;sticky-content-title&#34;&gt;
+            Sticky content is here (scroll to test)
         &lt;/h2&gt;
     &lt;/section&gt;
     &lt;h3 class=&#34;placeholder-title&#34;&gt;
@@ -347,8 +365,8 @@ Sticky header &ndash; Codelibrary
         Page content is here
     &lt;/h3&gt;
     &lt;section class=&#34;sticky-content&#34;&gt;
-        &lt;h2&gt;
-            Sticky content is here
+        &lt;h2 class=&#34;sticky-content-title&#34;&gt;
+            Sticky content is here (scroll to test)
         &lt;/h2&gt;
     &lt;/section&gt;
     &lt;h3 class=&#34;placeholder-title&#34;&gt;
@@ -356,131 +374,174 @@ Sticky header &ndash; Codelibrary
     &lt;/h3&gt;
 &lt;/div&gt;
 
+            </div>
+            <style type='text/css'>
+                /* Sticky Content
+   ========================================================================== */
+.sticky-content {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #ffe4c4;
+    color: #FFFFFF;
+    padding: 3rem 20px;
+}
+.sticky-content-title {
+    margin: 0;
+}
+.placeholder-content {
+    height: 1000px;
+    background-color: yellow;
+    background: linear-gradient(180deg, rgba(255,255,0,1) 0%, rgba(255,140,0,1) 100%);
+}
+.placeholder-title {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-left: 20px;
+}
+.placeholder-separator {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+            </style>
+            </body>
+            ">
+            </iframe>
+        </div>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-rounded js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-sticky-header-1-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-rounded js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-sticky-header-1-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right">
+                <a class="button is-rounded is-outlined edit-on-codepen"
+                   target="_blank"
+                   rel="noopener"
+                   href="#"
+                   title="Edit on CodePen"
+                   onclick="document.getElementById('form-sticky-header-1').submit()">
+                    Edit on Codepen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-sticky-header-1-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;placeholder-content&#34;&gt;
+    &lt;section class=&#34;sticky-content&#34;&gt;
+        &lt;h2 class=&#34;sticky-content-title&#34;&gt;
+            Sticky content is here (scroll to test)
+        &lt;/h2&gt;
+    &lt;/section&gt;
+    &lt;h3 class=&#34;placeholder-title&#34;&gt;
+        Page content is here
+    &lt;/h3&gt;
+&lt;/div&gt;
+&lt;hr class=&#34;placeholder-separator&#34;&gt;
+&lt;div class=&#34;placeholder-content&#34;&gt;
+    &lt;br&gt;
+    &lt;h3 class=&#34;placeholder-title&#34;&gt;
+        Page content is here
+    &lt;/h3&gt;
+    &lt;section class=&#34;sticky-content&#34;&gt;
+        &lt;h2 class=&#34;sticky-content-title&#34;&gt;
+            Sticky content is here (scroll to test)
+        &lt;/h2&gt;
+    &lt;/section&gt;
+    &lt;h3 class=&#34;placeholder-title&#34;&gt;
+        More content here
+    &lt;/h3&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-sticky-header-1-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>/* Sticky Content
+   ========================================================================== */
+.sticky-content {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #ffe4c4;
+    color: #FFFFFF;
+    padding: 3rem 20px;
+}
+.sticky-content-title {
+    margin: 0;
+}
+.placeholder-content {
+    height: 1000px;
+    background-color: yellow;
+    background: linear-gradient(180deg, rgba(255,255,0,1) 0%, rgba(255,140,0,1) 100%);
+}
+.placeholder-title {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    padding-left: 20px;
+}
+.placeholder-separator {
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
 </div>
-<style type='text/css'>
-    /* Sticky Content
-   ========================================================================== */
-.sticky-content {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background-color: hotpink;
-    color: #FFFFFF;
-    padding: 3rem 20px;
-}
-.placeholder-content {
-    height: 600px;
-    background-color: lightgreen;
-}
-.placeholder-title {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    padding-left: 20px;
-}
-.placeholder-separator {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-}
 
-</style>
-</body>
-"></iframe>
-            </div>
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-sticky-header-1";
+            iframe = document.getElementById(iframeId);
+             
+            size =  null 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
         </div>
-        <div class="tab-pane fade" id="navsticky-header-1-code" role="tabpanel" aria-labelledby="navsticky-header-1-code-tab">
-            <div class="row">
-                <div class="col-2">
-                    <div class="nav flex-column nav-pills" id="code-sticky-header-1-tab" role="tablist" aria-orientation="vertical">
-                        <a class="nav-link active" id="code-sticky-header-1-html-tab" data-toggle="pill" href="#code-sticky-header-1-html-content" role="tab" aria-controls="code-sticky-header-1-html-content" aria-selected="true">
-                            HTML
-                        </a>
-                        <a class="nav-link" id="code-sticky-header-1-css-tab" data-toggle="pill" href="#code-sticky-header-1-css-content" role="tab" aria-controls="code-sticky-header-1-css-content" aria-selected="false">
-                            CSS
-                        </a>
-                    </div>
-
-                    <a class="edit-on-codepen" target="_blank" rel="noopener" href="#" title="Edit on CodePen"
-                       onclick="document.getElementById('form-sticky-header-1').submit()">
-                        <span class="codepen-edit-on-text">EDIT ON</span>
-                        <svg class="codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
-                        </svg>
-                    </a>
-                </div>
-                <div class="col-10">
-                    <div class="tab-content" id="code-tabContent">
-                        <div class="tab-pane fade show active" id="code-sticky-header-1-html-content" role="tabpanel" aria-labelledby="code-sticky-header-1-html-tab">
-                            <div class="highlight">
-                                <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;placeholder-content&#34;&gt;
-    &lt;section class=&#34;sticky-content&#34;&gt;
-        &lt;h2&gt;
-            Sticky content is here
-        &lt;/h2&gt;
-    &lt;/section&gt;
-    &lt;h3 class=&#34;placeholder-title&#34;&gt;
-        Page content is here
-    &lt;/h3&gt;
-&lt;/div&gt;
-&lt;hr class=&#34;placeholder-separator&#34;&gt;
-&lt;div class=&#34;placeholder-content&#34;&gt;
-    &lt;br&gt;
-    &lt;h3 class=&#34;placeholder-title&#34;&gt;
-        Page content is here
-    &lt;/h3&gt;
-    &lt;section class=&#34;sticky-content&#34;&gt;
-        &lt;h2&gt;
-            Sticky content is here
-        &lt;/h2&gt;
-    &lt;/section&gt;
-    &lt;h3 class=&#34;placeholder-title&#34;&gt;
-        More content here
-    &lt;/h3&gt;
-&lt;/div&gt;
-</code></pre>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="code-sticky-header-1-css-content" role="tabpanel" aria-labelledby="code-sticky-header-1-css-tab">
-                            <div class="highlight">
-                                <pre class="language-css" data-lang="css"><code>/* Sticky Content
-   ========================================================================== */
-.sticky-content {
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    background-color: hotpink;
-    color: #FFFFFF;
-    padding: 3rem 20px;
-}
-.placeholder-content {
-    height: 600px;
-    background-color: lightgreen;
-}
-.placeholder-title {
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    padding-left: 20px;
-}
-.placeholder-separator {
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-}
-</code></pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
     </div>
     
-    <div class="box">
-        <h2 id="basic-example">Basic Example</h2>
-<p>Using a sticky header on top of a visualization (in this example a graph) to show some relevant information, such as selected filters, or a link to see the dataset in the Explore page.</p>
+    <div class="container">
+        <div class="box box-example">
+            <div class="content">
+    <h2 id="basic-example">Basic Example</h2>
+<p>Using a sticky header on top of a visualization (in this example a graph) to show some relevant information, such as selected filters, or a link to see the dataset in the Explore page.
+</div>
 
 
 
@@ -489,46 +550,29 @@ Sticky header &ndash; Codelibrary
     
     
 
-    <form id="form-sticky-header-2" action="https://codepen.io/pen/define" method="POST" target="_blank">
-        <input type="hidden" name="data" value='{
-                                "title": "New Pen!",
-                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\n&#34;,
-                                "editors": 110,
-                                "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;shanghairanking\&#34;\n                     shanghairanking-domain=\&#34;public\&#34;\n                     shanghairanking-dataset=\&#34;shanghai-world-university-ranking\&#34;\n                     shanghairanking-parameters=\&#34;{&#39;sort&#39;:&#39;world_rank&#39;,&#39;timezone&#39;:&#39;Europe/Berlin&#39;}\&#34;\u003e\n    \u003csection class=\&#34;sticky-summary-wrapper\&#34;\u003e\n        \u003cdiv class=\&#34;sticky-summary\&#34;\u003e\n            \u003cdiv class=\&#34;sticky-summary-data\&#34;\u003e\n                \u003ch3\u003eTop 10\u003c/h3\u003e\n                \u003cdiv\u003e\n                    Dataset name: \u003cstrong\u003e{{ shanghairanking.name | capitalize }} \u003c/strong\u003e\n                \u003c/div\u003e\n                \u003cdiv\u003e\n                    Number of records: \u003cstrong\u003e{{ shanghairanking.dataset.metas.records_count | number }}\u003c/strong\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            \u003ca href=\&#34;https://data.opendatasoft.com/explore/dataset/shanghai-world-university-ranking%40public/information/?sort=world_rank\&#34; class=\&#34;sticky-summary-button\&#34;\u003e\n                View\n            \u003c/a\u003e\n        \u003c/div\u003e\n    \u003c/section\u003e\n    \u003cods-chart single-y-axis=\&#34;true\&#34;\n               display-legend=\&#34;false\&#34;\n               align-month=\&#34;true\&#34;\u003e\n        \u003cods-chart-query context=\&#34;shanghairanking\&#34;\n                         field-x=\&#34;country\&#34;\n                         maxpoints=\&#34;10\&#34;\n                         sort=\&#34;serie1-1\&#34;\u003e\n            \u003cods-chart-serie expression-y=\&#34;world_rank_int\&#34;\n                             chart-type=\&#34;column\&#34;\n                             function-y=\&#34;COUNT\&#34;\n                             color=\&#34;#142E7B\&#34;\n                             scientific-display=\&#34;true\&#34;\u003e\n            \u003c/ods-chart-serie\u003e\n        \u003c/ods-chart-query\u003e\n    \u003c/ods-chart\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
-                                "css": &#34;/* Sticky Summary\n========================================================================== */\n.sticky-summary-wrapper {\n    position: sticky;\n    z-index: 10;\n    top: 0;\n    left: 0;\n    background-color: #FFFFFF;\n    box-shadow: 0 2px 0 rgba(0,0,0,.2);\n}\n.sticky-summary {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 1rem;\n}\n.sticky-summary-data {\n    flex: 1 1 auto;\n    margin-right: 1rem;\n}\n.sticky-summary-button {\n    color: #FFFFFF;\n    background-color: #EC643C;\n    border: 1px solid #EC643C;\n    font-size: 1rem;\n    font-weight: normal;\n    padding: .5rem 1rem;\n    border-radius: 4px;\n    text-decoration: none;\n    cursor: pointer;\n}\n.sticky-summary-button:hover {\n    text-decoration: none;\n    background-color: #df4516;\n    border-color: #df4516;\n}\n      &#34; }'>
+    <form id="form-sticky-header-2"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;shanghairanking\&#34;\n                     shanghairanking-domain=\&#34;public\&#34;\n                     shanghairanking-dataset=\&#34;shanghai-world-university-ranking\&#34;\n                     shanghairanking-parameters=\&#34;{&#39;sort&#39;:&#39;world_rank&#39;,&#39;timezone&#39;:&#39;Europe/Berlin&#39;}\&#34;\u003e\n    \u003csection class=\&#34;sticky-summary-wrapper\&#34;\u003e\n        \u003cdiv class=\&#34;sticky-summary\&#34;\u003e\n            \u003cdiv class=\&#34;sticky-summary-data\&#34;\u003e\n                \u003ch3\u003eTop 10\u003c/h3\u003e\n                \u003cdiv\u003e\n                    Dataset name: \u003cstrong\u003e{{ shanghairanking.name | capitalize }} \u003c/strong\u003e\n                \u003c/div\u003e\n                \u003cdiv\u003e\n                    Number of records: \u003cstrong\u003e{{ shanghairanking.dataset.metas.records_count | number }}\u003c/strong\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            \u003ca href=\&#34;https://data.opendatasoft.com/explore/dataset/shanghai-world-university-ranking%40public/information/?sort=world_rank\&#34; class=\&#34;sticky-summary-button\&#34;\u003e\n                View\n            \u003c/a\u003e\n        \u003c/div\u003e\n    \u003c/section\u003e\n    \u003cods-chart single-y-axis=\&#34;true\&#34;\n               display-legend=\&#34;false\&#34;\n               align-month=\&#34;true\&#34;\u003e\n        \u003cods-chart-query context=\&#34;shanghairanking\&#34;\n                         field-x=\&#34;country\&#34;\n                         maxpoints=\&#34;10\&#34;\n                         sort=\&#34;serie1-1\&#34;\u003e\n            \u003cods-chart-serie expression-y=\&#34;world_rank_int\&#34;\n                             chart-type=\&#34;column\&#34;\n                             function-y=\&#34;COUNT\&#34;\n                             color=\&#34;#142E7B\&#34;\n                             scientific-display=\&#34;true\&#34;\u003e\n            \u003c/ods-chart-serie\u003e\n        \u003c/ods-chart-query\u003e\n    \u003c/ods-chart\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+               "css": &#34;/* Sticky Summary\n========================================================================== */\n.sticky-summary-wrapper {\n    position: sticky;\n    z-index: 10;\n    top: 0;\n    left: 0;\n    background-color: #FFFFFF;\n    box-shadow: 0 2px 0 rgba(0,0,0,.2);\n}\n.sticky-summary {\n    display: flex;\n    justify-content: space-between;\n    align-items: center;\n    padding: 1rem;\n}\n.sticky-summary-data {\n    flex: 1 1 auto;\n    margin-right: 1rem;\n}\n.sticky-summary-button {\n    color: #FFFFFF;\n    background-color: #EC643C;\n    border: 1px solid #EC643C;\n    font-size: 1rem;\n    font-weight: normal;\n    padding: .5rem 1rem;\n    border-radius: 4px;\n    text-decoration: none;\n    cursor: pointer;\n}\n.sticky-summary-button:hover {\n    text-decoration: none;\n    background-color: #df4516;\n    border-color: #df4516;\n}\n      &#34; }'>
     </form>
 </div>
 
-<section class="ods-content">
-    <nav class="nav nav-pills"
-         id="navsticky-header-2-tab"
-         role="tablist">
-        <a class="nav-link active"
-           id="navsticky-header-2-live-tab"
-           data-toggle="tab"
-           href="#navsticky-header-2-live"
-           role="tab"
-           aria-controls="navsticky-header-2-live"
-           aria-selected="true">
-            Live snippet
-        </a>
-        <a class="nav-link"
-           id="navsticky-header-2-code-tab"
-           data-toggle="tab"
-           href="#navsticky-header-2-code"
-           role="tab"
-           aria-controls="navsticky-header-2-code"
-           aria-selected="false">
-            Get the code
-        </a>
-    </nav>
-
-    <div class="tab-content" id="sticky-header-2">
-        <div class="tab-pane fade show active" id="navsticky-header-2-live" role="tabpanel" aria-labelledby="navsticky-header-2-live-tab">
-            <div class="row">
-                <iframe id="iframe-sticky-header-2" width="100%" height="600px" src="about:blank"
+<div class="ods-content">
+    <section class="box box-live-example">
+        <div class="row">
+            <iframe id="iframe-sticky-header-2"
+                    width="100%" height="100%"
+                    src="about:blank"
                     srcdoc="
-<head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+                <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
 
@@ -560,14 +604,22 @@ Sticky header &ndash; Codelibrary
     });
 &lt;/script&gt;
 
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
 
-
-
-<!--link rel='stylesheet' href='/scss/main.css' /-->
-</head>
-<body>
-<div ng-app='ods-widgets' class='container-fluid'>
-    &lt;ods-dataset-context context=&#34;shanghairanking&#34;
+            
+            <!--link rel='stylesheet' href='/scss/main.css' /-->
+            </head>
+            <body>
+            <div ng-app='ods-widgets'>
+                &lt;ods-dataset-context context=&#34;shanghairanking&#34;
                      shanghairanking-domain=&#34;public&#34;
                      shanghairanking-dataset=&#34;shanghai-world-university-ranking&#34;
                      shanghairanking-parameters=&#34;{&#39;sort&#39;:&#39;world_rank&#39;,&#39;timezone&#39;:&#39;Europe/Berlin&#39;}&#34;&gt;
@@ -604,9 +656,9 @@ Sticky header &ndash; Codelibrary
     &lt;/ods-chart&gt;
 &lt;/ods-dataset-context&gt;
 
-</div>
-<style type='text/css'>
-    /* Sticky Summary
+            </div>
+            <style type='text/css'>
+                /* Sticky Summary
 ========================================================================== */
 .sticky-summary-wrapper {
     position: sticky;
@@ -643,36 +695,51 @@ Sticky header &ndash; Codelibrary
     border-color: #df4516;
 }
       
-</style>
-</body>
-"></iframe>
-            </div>
+            </style>
+            </body>
+            ">
+            </iframe>
         </div>
-        <div class="tab-pane fade" id="navsticky-header-2-code" role="tabpanel" aria-labelledby="navsticky-header-2-code-tab">
-            <div class="row">
-                <div class="col-2">
-                    <div class="nav flex-column nav-pills" id="code-sticky-header-2-tab" role="tablist" aria-orientation="vertical">
-                        <a class="nav-link active" id="code-sticky-header-2-html-tab" data-toggle="pill" href="#code-sticky-header-2-html-content" role="tab" aria-controls="code-sticky-header-2-html-content" aria-selected="true">
-                            HTML
-                        </a>
-                        <a class="nav-link" id="code-sticky-header-2-css-tab" data-toggle="pill" href="#code-sticky-header-2-css-content" role="tab" aria-controls="code-sticky-header-2-css-content" aria-selected="false">
-                            CSS
-                        </a>
-                    </div>
+    </section>
 
-                    <a class="edit-on-codepen" target="_blank" rel="noopener" href="#" title="Edit on CodePen"
-                       onclick="document.getElementById('form-sticky-header-2').submit()">
-                        <span class="codepen-edit-on-text">EDIT ON</span>
-                        <svg class="codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
-                        </svg>
-                    </a>
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-rounded js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-sticky-header-2-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-rounded js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-sticky-header-2-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-10">
-                    <div class="tab-content" id="code-tabContent">
-                        <div class="tab-pane fade show active" id="code-sticky-header-2-html-content" role="tabpanel" aria-labelledby="code-sticky-header-2-html-tab">
-                            <div class="highlight">
-                                <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;shanghairanking&#34;
+            </div>
+            <div class="level-right">
+                <a class="button is-rounded is-outlined edit-on-codepen"
+                   target="_blank"
+                   rel="noopener"
+                   href="#"
+                   title="Edit on CodePen"
+                   onclick="document.getElementById('form-sticky-header-2').submit()">
+                    Edit on Codepen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-sticky-header-2-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;shanghairanking&#34;
                      shanghairanking-domain=&#34;public&#34;
                      shanghairanking-dataset=&#34;shanghai-world-university-ranking&#34;
                      shanghairanking-parameters=&#34;{&#39;sort&#39;:&#39;world_rank&#39;,&#39;timezone&#39;:&#39;Europe/Berlin&#39;}&#34;&gt;
@@ -709,11 +776,12 @@ Sticky header &ndash; Codelibrary
     &lt;/ods-chart&gt;
 &lt;/ods-dataset-context&gt;
 </code></pre>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="code-sticky-header-2-css-content" role="tabpanel" aria-labelledby="code-sticky-header-2-css-tab">
-                            <div class="highlight">
-                                <pre class="language-css" data-lang="css"><code>/* Sticky Summary
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-sticky-header-2-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>/* Sticky Summary
 ========================================================================== */
 .sticky-summary-wrapper {
     position: sticky;
@@ -750,17 +818,33 @@ Sticky header &ndash; Codelibrary
     border-color: #df4516;
 }
       </code></pre>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
 
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-sticky-header-2";
+            iframe = document.getElementById(iframeId);
+             
+            size =  null 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
 
-
+        </div>
     </div>
     
 </div>
@@ -791,7 +875,7 @@ Sticky header &ndash; Codelibrary
 
 <script>var process = { "env": { "NODE_ENV": "production" } }</script>
 <script type="text/javascript"
-        src="/index.min.d229c47fe26cebb9ddb9fdfb3ac53d290f50310011e2e0dedf5edcb38bece912.js"
+        src="/index.min.6d04f70d98b2a54bf63f54ca97494de059d307ec7785ae80a9966c0fec001f87.js"
         defer></script>
 
 </body>

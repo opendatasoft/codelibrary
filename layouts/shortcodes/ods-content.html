@@ -66,7 +66,7 @@
                 </div>
             </div>
             <div class="level-right">
-                <a class="button is-rounded is-outlined"
+                <a class="button is-rounded is-outlined edit-on-codepen"
                    target="_blank"
                    rel="noopener"
                    href="#"
@@ -100,15 +100,15 @@
         var loopId = setInterval(() => {
             iframeId = "iframe-{{ .Page.Title | urlize}}";
             iframe = document.getElementById(iframeId);
-            iframe.height = 1;
+            /*iframe.height = 1;*/
             size = {{ .Get 0 }}
-
+            /*console.log("loop for " + iframeId);*/
             if (iframe != undefined && iframe.contentWindow.document.body != undefined){
                 scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
                 if (iframe.height == size) {
                     clearInterval(loopId);
                 } else {
-                    iframe.height = size > 1 ? size : scrollHeight + 20;
+                    iframe.height = size > 1 ? size : scrollHeight;
                 }
             }
         }, 1000);

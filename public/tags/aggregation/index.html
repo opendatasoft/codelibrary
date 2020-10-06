@@ -19,18 +19,10 @@
     </script>
 
     
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
-            integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
-            crossorigin="anonymous"></script>
+    
 
     
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-          integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
-          crossorigin="anonymous">
+    
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
     <link rel="stylesheet"
@@ -39,82 +31,105 @@
           crossorigin="anonymous">
 
     
-    <link rel="stylesheet" type="text/css" href="/scss/main.css" />
+    <link rel="stylesheet"
+          type="text/css"
+          href="/scss/main.css" />
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png">
+    <link rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png">
+    <link rel="shortcut icon"
+          href="/favicon.ico">
 </head>
 
 <body>
 
-
-
-
-<nav class="navbar navbar-expand-lg navbar-light is-fixed-top" role="navigation" aria-label="Main navigation">
+<nav class="navbar is-fixed-top"
+     role="navigation"
+     aria-label="Main navigation">
     <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-            <img src="/img/ods-logo-helphub.svg"/>
+        <a class="navbar-item"
+           href="/"
+           title="Back to the homepage">
+            <img src="/img/ods-logo-helphub.svg"
+                 alt="Helphub Logo"/>
         </a>
+        <button class="navbar-burger burger"
+                type="button"
+                data-toggle="collapse"
+                data-target="#helphubNavbar"
+                aria-controls="helphubNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            Help Hub
+        </button>
     </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#helphubNavbar"
-            aria-controls="helphubNavbar" aria-expanded="false" aria-label="Toggle navigation">
-        Help Hub
-    </button>
-    <div class="collapse navbar-collapse" id="helphubNavbar">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="https://help.opendatasoft.com/">
-                    Help Hub
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://help.opendatasoft.com/platform/en/">
-                    User guide
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link is-active" href="https://discovery.opendatasoft.com">
-                    Code Library
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://help.opendatasoft.com/faq-glossary/en/">
-                    FAQ
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://help.opendatasoft.com/widgets/">
-                    Widgets
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://help.opendatasoft.com/en/apis/">
-                    APIs
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://academy.opendatasoft.com/page/homepage">
-                    Academy
-                </a>
-            </li>
-    </div>
+    <div class="navbar-menu"
+         id="helphubNavbar">
+        <div class="navbar-start">
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/">
+                Help Hub
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/platform/en/">
+                User guide
+            </a>
+            <a class="navbar-item is-active"
+               href="https://discovery.opendatasoft.com">
+                Code Library
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/faq-glossary/en/">
+                FAQ
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/widgets/">
+                Widgets
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/en/apis/">
+                APIs
+            </a>
+            <a class="navbar-item"
+               href="https://academy.opendatasoft.com/page/homepage">
+                Academy
+            </a>
+        </div>
     </div>
 </nav>
 
 <div class="columns codelibrary">
-    <div class="column is-one-quarter">
-        <aside class="menu p-4">
+    <div class="column is-narrow">
+        <aside class="sidebar menu">
+    <a href="https://codelibrary.opendatasoft.com"
+       class="sidebar-logo-link"
+       title="Go to Codelibrary homepage">
+        <img src="/img/ods-codelibrary-logo.svg"
+             class="sidebar-logo"
+             alt="Codelibrary Logo">
+    </a>
+
     <div id="algolia-box"></div>
     <div id="algolia-results"></div>
 
-    <h2 class="title is-5 mt-3"><a href="https://codelibrary.opendatasoft.com">Home</a></h2>
-
     
-    <p class="menu-label">
-        Sections
-    </p>
     <ul class="menu-list">
+        <li>
+            <a class="sidebar-subtitle"
+               href="https://codelibrary.opendatasoft.com">
+                Home
+            </a>
+        </li>
         
         
         <li>
-            <a href="/components/">
+            <a href="/components/"
+               class="sidebar-subtitle">
                 Components
             </a>
         </li>
@@ -122,7 +137,8 @@
         
         
         <li>
-            <a href="/page-templates/">
+            <a href="/page-templates/"
+               class="sidebar-subtitle">
                 Page templates
             </a>
         </li>
@@ -130,7 +146,8 @@
         
         
         <li>
-            <a href="/portal-themes/">
+            <a href="/portal-themes/"
+               class="sidebar-subtitle">
                 Portal themes
             </a>
         </li>
@@ -138,7 +155,8 @@
         
         
         <li>
-            <a href="/widget-tricks/">
+            <a href="/widget-tricks/"
+               class="sidebar-subtitle">
                 Widget tricks
             </a>
         </li>
@@ -148,37 +166,41 @@
     <p class="menu-label">
         Tags
     </p>
-    <div class="tags are-medium">
+    <div class="tags">
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/aggregation/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/aggregation/">
             aggregation
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/chart/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/chart/">
             chart
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/display/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/display/">
             display
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/filter/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/filter/">
             filter
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/geo/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/geo/">
             geo
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/list/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/list/">
             list
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/navigation/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/navigation/">
             navigation
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/ods-analysis/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-aggregation/">
+            ods-aggregation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-analysis/">
             ods-analysis
         </a>
         
@@ -225,6 +247,24 @@
                         <div class="tag">list</div>
                         
                         <div class="tag">aggregation</div>
+                        
+                    </div>
+                </div>
+            </a>
+        </li>
+        
+        <li class="col-4 mb-4">
+            <a href="https://codelibrary.opendatasoft.com/page-templates/observatory/" title="Observatory">
+                <div class="box">
+                    <h3 class="title is-5">Observatory</h3>
+                    <h4 class="subtitle is-7">Observatory </h4>
+                    <div class="tags">
+                        
+                        <div class="tag">display</div>
+                        
+                        <div class="tag">aggregation</div>
+                        
+                        <div class="tag">ods-aggregation</div>
                         
                     </div>
                 </div>
@@ -297,7 +337,7 @@
 
 <script>var process = { "env": { "NODE_ENV": "production" } }</script>
 <script type="text/javascript"
-        src="/index.min.d229c47fe26cebb9ddb9fdfb3ac53d290f50310011e2e0dedf5edcb38bece912.js"
+        src="/index.min.6d04f70d98b2a54bf63f54ca97494de059d307ec7785ae80a9966c0fec001f87.js"
         defer></script>
 
 </body>

@@ -1,7 +1,7 @@
 <div class="placeholder-content">
     <section class="sticky-content">
-        <h2>
-            Sticky content is here
+        <h2 class="sticky-content-title">
+            Sticky content is here (scroll to test)
         </h2>
     </section>
     <h3 class="placeholder-title">
@@ -15,8 +15,8 @@
         Page content is here
     </h3>
     <section class="sticky-content">
-        <h2>
-            Sticky content is here
+        <h2 class="sticky-content-title">
+            Sticky content is here (scroll to test)
         </h2>
     </section>
     <h3 class="placeholder-title">

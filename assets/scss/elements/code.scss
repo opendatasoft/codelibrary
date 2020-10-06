@@ -6,6 +6,8 @@
 
 pre {
   max-height: 600px;
+  overflow-y: auto;
+
   /* Hide scrollbar */
   &::-webkit-scrollbar {
     display: none; /* for Chrome, Safari and Opera */
@@ -22,20 +24,15 @@ pre {
   padding: 0;
 }
 
-a.edit-on-codepen {
-  text-decoration: none;
-  display: block;
-  padding: .5rem 1rem;
-
-  .codepen-edit-on-text {
-    color: rgb(104, 104, 104);
-    font-weight: 400;
-    letter-spacing: 2px;
-  }
-
-  .codepen-logo {
-    stroke: rgb(104, 104, 104);
-    width: 120px;
+.button.edit-on-codepen {
+  &::after {
+    content: '';
+    background-image: url("/img/fas-external-link.svg");
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    margin-left: $spacing-100/2;
   }
 }
 

@@ -19,18 +19,10 @@ Theme light &ndash; Codelibrary
     </script>
 
     
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
-            integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
-            crossorigin="anonymous"></script>
+    
 
     
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-          integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
-          crossorigin="anonymous">
+    
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
     <link rel="stylesheet"
@@ -39,82 +31,105 @@ Theme light &ndash; Codelibrary
           crossorigin="anonymous">
 
     
-    <link rel="stylesheet" type="text/css" href="/scss/main.css" />
+    <link rel="stylesheet"
+          type="text/css"
+          href="/scss/main.css" />
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png">
+    <link rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png">
+    <link rel="shortcut icon"
+          href="/favicon.ico">
 </head>
 
 <body>
 
-
-
-
-<nav class="navbar navbar-expand-lg navbar-light is-fixed-top" role="navigation" aria-label="Main navigation">
+<nav class="navbar is-fixed-top"
+     role="navigation"
+     aria-label="Main navigation">
     <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-            <img src="/img/ods-logo-helphub.svg"/>
+        <a class="navbar-item"
+           href="/"
+           title="Back to the homepage">
+            <img src="/img/ods-logo-helphub.svg"
+                 alt="Helphub Logo"/>
         </a>
+        <button class="navbar-burger burger"
+                type="button"
+                data-toggle="collapse"
+                data-target="#helphubNavbar"
+                aria-controls="helphubNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            Help Hub
+        </button>
     </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#helphubNavbar"
-            aria-controls="helphubNavbar" aria-expanded="false" aria-label="Toggle navigation">
-        Help Hub
-    </button>
-    <div class="collapse navbar-collapse" id="helphubNavbar">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="https://help.opendatasoft.com/">
-                    Help Hub
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://help.opendatasoft.com/platform/en/">
-                    User guide
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link is-active" href="https://discovery.opendatasoft.com">
-                    Code Library
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://help.opendatasoft.com/faq-glossary/en/">
-                    FAQ
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://help.opendatasoft.com/widgets/">
-                    Widgets
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://help.opendatasoft.com/en/apis/">
-                    APIs
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://academy.opendatasoft.com/page/homepage">
-                    Academy
-                </a>
-            </li>
-    </div>
+    <div class="navbar-menu"
+         id="helphubNavbar">
+        <div class="navbar-start">
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/">
+                Help Hub
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/platform/en/">
+                User guide
+            </a>
+            <a class="navbar-item is-active"
+               href="https://discovery.opendatasoft.com">
+                Code Library
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/faq-glossary/en/">
+                FAQ
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/widgets/">
+                Widgets
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/en/apis/">
+                APIs
+            </a>
+            <a class="navbar-item"
+               href="https://academy.opendatasoft.com/page/homepage">
+                Academy
+            </a>
+        </div>
     </div>
 </nav>
 
 <div class="columns codelibrary">
-    <div class="column is-one-quarter">
-        <aside class="menu p-4">
+    <div class="column is-narrow">
+        <aside class="sidebar menu">
+    <a href="https://codelibrary.opendatasoft.com"
+       class="sidebar-logo-link"
+       title="Go to Codelibrary homepage">
+        <img src="/img/ods-codelibrary-logo.svg"
+             class="sidebar-logo"
+             alt="Codelibrary Logo">
+    </a>
+
     <div id="algolia-box"></div>
     <div id="algolia-results"></div>
 
-    <h2 class="title is-5 mt-3"><a href="https://codelibrary.opendatasoft.com">Home</a></h2>
-
     
-    <p class="menu-label">
-        Sections
-    </p>
     <ul class="menu-list">
+        <li>
+            <a class="sidebar-subtitle"
+               href="https://codelibrary.opendatasoft.com">
+                Home
+            </a>
+        </li>
         
         
         <li>
-            <a href="/components/">
+            <a href="/components/"
+               class="sidebar-subtitle">
                 Components
             </a>
         </li>
@@ -122,7 +137,8 @@ Theme light &ndash; Codelibrary
         
         
         <li>
-            <a href="/page-templates/">
+            <a href="/page-templates/"
+               class="sidebar-subtitle">
                 Page templates
             </a>
         </li>
@@ -130,7 +146,7 @@ Theme light &ndash; Codelibrary
         
         
         <li>
-            <a class="" href="/portal-themes/">
+            <a class="sidebar-subtitle " href="/portal-themes/">
             Portal themes
             </a>
             <ul>
@@ -153,7 +169,8 @@ Theme light &ndash; Codelibrary
         
         
         <li>
-            <a href="/widget-tricks/">
+            <a href="/widget-tricks/"
+               class="sidebar-subtitle">
                 Widget tricks
             </a>
         </li>
@@ -163,37 +180,41 @@ Theme light &ndash; Codelibrary
     <p class="menu-label">
         Tags
     </p>
-    <div class="tags are-medium">
+    <div class="tags">
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/aggregation/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/aggregation/">
             aggregation
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/chart/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/chart/">
             chart
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/display/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/display/">
             display
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/filter/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/filter/">
             filter
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/geo/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/geo/">
             geo
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/list/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/list/">
             list
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/navigation/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/navigation/">
             navigation
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/ods-analysis/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-aggregation/">
+            ods-aggregation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-analysis/">
             ods-analysis
         </a>
         
@@ -204,247 +225,262 @@ Theme light &ndash; Codelibrary
     <div class="column">
         
 
-<div class="content container-fluid mt-3">
-    <div class="box">
-        <h1 id="theme-color">Theme color</h1>
+<div>
+    <div class="content-header container is-max-desktop mb-5">
+        <div class="content">
+            <h1 id="theme-color">Theme color</h1>
 
+        </div>
     </div>
     
-    <div class="box">
-        <h2 id="light---basic">Light - Basic</h2>
+    <div class="container">
+        <div class="box box-example">
+            <h2 id="light---basic">Light - Basic</h2>
 
 
 
 
 <div class="ods-content">
-    <nav>
-        <div class="nav nav-tabs justify-content-center" id="navtheme-light-basic-tab" role="tablist">
-            <a class="nav-item nav-link active" id="navtheme-light-basic-live-tab" data-toggle="tab"
-               href="#navtheme-light-basic-live" role="tab" aria-controls="navtheme-light-basic-live"
-               aria-selected="true">Live snippet</a>
-            <a class="nav-item nav-link" id="navtheme-light-basic-code-tab" data-toggle="tab"
-               href="#navtheme-light-basic-code" role="tab" aria-controls="navtheme-light-basic-code"
-               aria-selected="false">Get the code</a>
+    <section class="box box-live-example">
+        <div class="row">
+            <iframe id="iframe-theme-light-basic" width="100%" height="600px"
+                    src="https://light-basic-theme-discovery.opendatasoft.com/">
+            </iframe>
         </div>
-    </nav>
+    </section>
 
-    <div class="tab-content" id="theme-light-basic">
-        <div class="tab-pane fade show active" id="navtheme-light-basic-live" role="tabpanel"
-             aria-labelledby="navtheme-light-basic-live-tab">
-            <div class="row">
-                <iframe id="iframe-theme-light-basic" width="100%" height="600px"
-                        src="https://light-basic-theme-discovery.opendatasoft.com/">
-                </iframe>
-            </div>
-        </div>
-        <div class="tab-pane fade" id="navtheme-light-basic-code" role="tabpanel"
-             aria-labelledby="navtheme-light-basic-code-tab">
-            <div class="row">
-                <div class="col-2">
-                    <div class="nav flex-column nav-pills" id="code-theme-light-basic-tab" role="tablist"
-                         aria-orientation="vertical">
-                        <a class="nav-link active" id="code-theme-light-basic-colors-tab" data-toggle="pill"
-                           href="#code-theme-light-basic-colors-content" role="tab"
-                           aria-controls="code-theme-light-basic-colors-content" aria-selected="true">
+    <section class="box box-code mb-0">
+        <div class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <div class="btn-group nav" role="tablist">
+                        <a class="button btn"
+                           id="code-theme-light-basic-colors-tab"
+                           data-toggle="tab"
+                           href="#code-theme-light-basic-colors-content"
+                           role="tab"
+                           aria-controls="code-theme-light-basic-colors-content"
+                           aria-selected="true">
                             Colors
                         </a>
-                        <a class="nav-link" id="code-theme-light-basic-header-tab" data-toggle="pill"
-                           href="#code-theme-light-basic-header-content" role="tab"
-                           aria-controls="code-theme-light-basic-header-content" aria-selected="true">
+                        <a class="button btn"
+                           id="code-theme-light-basic-header-tab"
+                           data-toggle="pill"
+                           href="#code-theme-light-basic-header-content"
+                           role="tab"
+                           aria-controls="code-theme-light-basic-header-content"
+                           aria-selected="true">
                             Header
                         </a>
-                        <a class="nav-link" id="code-theme-light-basic-footer-tab" data-toggle="pill"
-                           href="#code-theme-light-basic-footer-content" role="tab"
-                           aria-controls="code-theme-light-basic-footer-content" aria-selected="true">
+                        <a class="button btn"
+                           id="code-theme-light-basic-footer-tab"
+                           data-toggle="pill"
+                           href="#code-theme-light-basic-footer-content"
+                           role="tab"
+                           aria-controls="code-theme-light-basic-footer-content"
+                           aria-selected="true">
                             Footer
                         </a>
-                        <a class="nav-link" id="code-theme-light-basic-css-tab" data-toggle="pill"
-                           href="#code-theme-light-basic-css-content" role="tab"
-                           aria-controls="code-theme-light-basic-css-content" aria-selected="false">
+                        <a class="button btn"
+                           id="code-theme-light-basic-css-tab"
+                           data-toggle="pill"
+                           href="#code-theme-light-basic-css-content"
+                           role="tab"
+                           aria-controls="code-theme-light-basic-css-content"
+                           aria-selected="false">
                             Stylesheet
                         </a>
                     </div>
                 </div>
-                <div class="col-10">
-                    <div class="tab-content" id="code-tabContent">
-                        <div class="tab-pane fade show active" id="code-theme-light-basic-colors-content"
-                             role="tabpanel" aria-labelledby="code-theme-light-basic-colors-tab">
-                            <div class="container colors row">
-                                <div class="col-sm-6">
-                                    <ul>
-                                        <li>
-                                            <div class="color">
+            </div>
+            <div class="level-right">
+                <button class="button is-rounded is-outlined">
+                    Copy
+                </button>
+            </div>
+        </div>
+        <div class="tab-content" id="code-tabContent">
+            <div class="tab-pane fade show active" id="code-theme-light-basic-colors-content"
+                 role="tabpanel" aria-labelledby="code-theme-light-basic-colors-tab">
+                <div class="container colors row">
+                    <div class="col-sm-6">
+                        <ul>
+                            <li>
+                                <div class="color">
                                                 <span class="color-preview"
                                                       style="background-color:#565656"></span>
-                                                <div class="highlight">
+                                    <div class="highlight">
                                                     <pre>
                                                         <code>#565656</code>
                                                     </pre>
-                                                </div>
-                                                Text
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="color">
+                                    </div>
+                                    Text
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color">
                                                 <span class="color-preview"
                                                       style="background-color:#0086D6"></span>
-                                                <div class="highlight">
+                                    <div class="highlight">
                                                     <pre>
                                                         <code>#0086D6</code>
                                                     </pre>
-                                                </div>
-                                                Links
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="color">
+                                    </div>
+                                    Links
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color">
                                                 <span class="color-preview"
                                                       style="background-color:#000000"></span>
-                                                <div class="highlight">
+                                    <div class="highlight">
                                                     <pre>
                                                         <code>#000000</code>
                                                     </pre>
-                                                </div>
-                                                Titles
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="color">
+                                    </div>
+                                    Titles
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color">
                                                 <span class="color-preview"
                                                       style="background-color:#F6F8FB"></span>
-                                                <div class="highlight">
+                                    <div class="highlight">
                                                     <pre>
                                                         <code>#F6F8FB</code>
                                                     </pre>
-                                                </div>
-                                                Page Background
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="color">
+                                    </div>
+                                    Page Background
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color">
                                                 <span class="color-preview"
                                                       style="background-color:#00C7B1"></span>
-                                                <div class="highlight">
+                                    <div class="highlight">
                                                     <pre>
                                                         <code>#00C7B1</code>
                                                     </pre>
-                                                </div>
-                                                Highlight
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="color">
+                                    </div>
+                                    Highlight
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color">
                                                 <span class="color-preview"
                                                       style="background-color:#FFFFFF"></span>
-                                                <div class="highlight">
+                                    <div class="highlight">
                                                     <pre>
                                                         <code>#FFFFFF</code>
                                                     </pre>
-                                                </div>
-                                                Boxes background
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="color">
+                                    </div>
+                                    Boxes background
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color">
                                                 <span class="color-preview"
                                                       style="background-color:#DEE5EF"></span>
-                                                <div class="highlight">
+                                    <div class="highlight">
                                                     <pre>
                                                         <code>#DEE5EF</code>
                                                     </pre>
-                                                </div>
-                                                Boxes border
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    </div>
+                                    Boxes border
                                 </div>
-                                <div class="col-sm-6">
-                                    <ul>
-                                        <li>
-                                            <div class="color">
-                                                <span class="color-preview"
-                                                      style="background-color:#000000"></span>
-                                                <div class="highlight">
-                                                    <pre>
-                                                        <code>#000000</code>
-                                                    </pre>
-                                                </div>
-                                                Section Titles
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <div class="color">
-                                                <span class="color-preview"
-                                                      style="background-color:#F6F8FB"></span>
-                                                <div class="highlight">
-                                                    <pre>
-                                                        <code>#F6F8FB</code>
-                                                    </pre>
-                                                </div>
-                                                Section titles background
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <div class="color">
-                                                <span class="color-preview"
-                                                      style="background-color:#FFFFFF"></span>
-                                                <div class="highlight">
-                                                    <pre>
-                                                        <code>#FFFFFF</code>
-                                                    </pre>
-                                                </div>
-                                                Header Background
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <div class="color">
-                                                <span class="color-preview"
-                                                      style="background-color:#000000"></span>
-                                                <div class="highlight">
-                                                    <pre>
-                                                        <code>#000000</code>
-                                                    </pre>
-                                                </div>
-                                                Links in the header
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <div class="color">
-                                                <span class="color-preview"
-                                                      style="background-color:#F6F8FB"></span>
-                                                <div class="highlight">
-                                                    <pre>
-                                                        <code>#F6F8FB</code>
-                                                    </pre>
-                                                </div>
-                                                Footer background
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <div class="color">
-                                                <span class="color-preview"
-                                                      style="background-color:#000000"></span>
-                                                <div class="highlight">
-                                                    <pre>
-                                                        <code>#000000</code>
-                                                    </pre>
-                                                </div>
-                                                Links in the footer
-                                            </div>
-                                        </li>
-                                    </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6">
+                        <ul>
+                            <li>
+                                <div class="color">
+                                    <span class="color-preview"
+                                          style="background-color:#000000"></span>
+                                    <div class="highlight">
+                                        <pre>
+                                            <code>#000000</code>
+                                        </pre>
+                                    </div>
+                                    Section Titles
                                 </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="code-theme-light-basic-header-content" role="tabpanel"
-                             aria-labelledby="code-theme-light-basic-header-tab">
-                            <div class="highlight">
-                                <pre class="language-html" data-lang="html"><code>&lt;nav class=&#34;ods-front-header portal-header&#34; ods-responsive-menu breakpoint=&#34;1000&#34;&gt;
+                            </li>
+
+                            <li>
+                                <div class="color">
+                                    <span class="color-preview"
+                                          style="background-color:#F6F8FB"></span>
+                                    <div class="highlight">
+                                        <pre>
+                                            <code>#F6F8FB</code>
+                                        </pre>
+                                    </div>
+                                    Section titles background
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="color">
+                                    <span class="color-preview"
+                                          style="background-color:#FFFFFF"></span>
+                                    <div class="highlight">
+                                        <pre>
+                                            <code>#FFFFFF</code>
+                                        </pre>
+                                    </div>
+                                    Header Background
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="color">
+                                    <span class="color-preview"
+                                          style="background-color:#000000"></span>
+                                    <div class="highlight">
+                                        <pre>
+                                            <code>#000000</code>
+                                        </pre>
+                                    </div>
+                                    Links in the header
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="color">
+                                    <span class="color-preview"
+                                          style="background-color:#F6F8FB"></span>
+                                    <div class="highlight">
+                                        <pre>
+                                            <code>#F6F8FB</code>
+                                        </pre>
+                                    </div>
+                                    Footer background
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="color">
+                                    <span class="color-preview"
+                                          style="background-color:#000000"></span>
+                                    <div class="highlight">
+                                        <pre>
+                                            <code>#000000</code>
+                                        </pre>
+                                    </div>
+                                    Links in the footer
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade"
+                 id="code-theme-light-basic-header-content"
+                 role="tabpanel"
+                 aria-labelledby="code-theme-light-basic-header-tab">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html">
+                        <code>&lt;nav class=&#34;ods-front-header portal-header&#34; ods-responsive-menu breakpoint=&#34;1000&#34;&gt;
     &lt;!--
         ---- Mobile View ----
         - Displayed when screen width is lower than the &#34;breakpoint&#34; value inserted above.
@@ -482,13 +518,17 @@ Theme light &ndash; Codelibrary
         &lt;/div&gt;
     &lt;/ods-responsive-menu-collapsible&gt;
 &lt;/nav&gt;
-</code></pre>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="code-theme-light-basic-footer-content" role="tabpanel"
-                             aria-labelledby="code-theme-light-basic-footer-tab">
-                            <div class="highlight">
-                                <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;ods-front-footer portal-footer&#34;&gt;
+</code>
+                    </pre>
+                </div>
+            </div>
+            <div class="tab-pane fade"
+                 id="code-theme-light-basic-footer-content"
+                 role="tabpanel"
+                 aria-labelledby="code-theme-light-basic-footer-tab">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html">
+                        <code>&lt;div class=&#34;ods-front-footer portal-footer&#34;&gt;
     &lt;div&gt;
        ##ods-logo## ##legal##
     &lt;/div&gt;
@@ -496,13 +536,17 @@ Theme light &ndash; Codelibrary
         ##language##
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="code-theme-light-basic-css-content" role="tabpanel"
-                             aria-labelledby="code-theme-light-basic-css-tab">
-                            <div class="highlight">
-                                <pre class="language-css" data-lang="css"><code>/* ==========================================================================
+</code>
+                    </pre>
+                </div>
+            </div>
+            <div class="tab-pane fade"
+                 id="code-theme-light-basic-css-content"
+                 role="tabpanel"
+                 aria-labelledby="code-theme-light-basic-css-tab">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css">
+                        <code>/* ==========================================================================
 LIGHT BASIC HEADER THEME
 ========================================================================== */
 /*
@@ -783,255 +827,267 @@ are page specific and which ones are generic and apply to the whole portal.
 .odswidget-facet--disjunctive .odswidget-facet__category:hover:before {
    content: &#39;&#39;;
 }
-</code></pre>
-                            </div>
-                        </div>
-                    </div>
+</code>
+                    </pre>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </div>
 
 
 
+        </div>
     </div>
     
-    <div class="box">
-        <h2 id="light---big-header">Light - big header</h2>
+    <div class="container">
+        <div class="box box-example">
+            <h2 id="light---big-header">Light - big header</h2>
 
 
 
 
 <div class="ods-content">
-    <nav>
-        <div class="nav nav-tabs justify-content-center" id="navtheme-light-big-header-tab" role="tablist">
-            <a class="nav-item nav-link active" id="navtheme-light-big-header-live-tab" data-toggle="tab"
-               href="#navtheme-light-big-header-live" role="tab" aria-controls="navtheme-light-big-header-live"
-               aria-selected="true">Live snippet</a>
-            <a class="nav-item nav-link" id="navtheme-light-big-header-code-tab" data-toggle="tab"
-               href="#navtheme-light-big-header-code" role="tab" aria-controls="navtheme-light-big-header-code"
-               aria-selected="false">Get the code</a>
+    <section class="box box-live-example">
+        <div class="row">
+            <iframe id="iframe-theme-light-big-header" width="100%" height="600px"
+                    src="https://light-big-header-theme-discovery.opendatasoft.com/">
+            </iframe>
         </div>
-    </nav>
+    </section>
 
-    <div class="tab-content" id="theme-light-big-header">
-        <div class="tab-pane fade show active" id="navtheme-light-big-header-live" role="tabpanel"
-             aria-labelledby="navtheme-light-big-header-live-tab">
-            <div class="row">
-                <iframe id="iframe-theme-light-big-header" width="100%" height="600px"
-                        src="https://light-big-header-theme-discovery.opendatasoft.com/">
-                </iframe>
-            </div>
-        </div>
-        <div class="tab-pane fade" id="navtheme-light-big-header-code" role="tabpanel"
-             aria-labelledby="navtheme-light-big-header-code-tab">
-            <div class="row">
-                <div class="col-2">
-                    <div class="nav flex-column nav-pills" id="code-theme-light-big-header-tab" role="tablist"
-                         aria-orientation="vertical">
-                        <a class="nav-link active" id="code-theme-light-big-header-colors-tab" data-toggle="pill"
-                           href="#code-theme-light-big-header-colors-content" role="tab"
-                           aria-controls="code-theme-light-big-header-colors-content" aria-selected="true">
+    <section class="box box-code mb-0">
+        <div class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <div class="btn-group nav" role="tablist">
+                        <a class="button btn"
+                           id="code-theme-light-big-header-colors-tab"
+                           data-toggle="tab"
+                           href="#code-theme-light-big-header-colors-content"
+                           role="tab"
+                           aria-controls="code-theme-light-big-header-colors-content"
+                           aria-selected="true">
                             Colors
                         </a>
-                        <a class="nav-link" id="code-theme-light-big-header-header-tab" data-toggle="pill"
-                           href="#code-theme-light-big-header-header-content" role="tab"
-                           aria-controls="code-theme-light-big-header-header-content" aria-selected="true">
+                        <a class="button btn"
+                           id="code-theme-light-big-header-header-tab"
+                           data-toggle="pill"
+                           href="#code-theme-light-big-header-header-content"
+                           role="tab"
+                           aria-controls="code-theme-light-big-header-header-content"
+                           aria-selected="true">
                             Header
                         </a>
-                        <a class="nav-link" id="code-theme-light-big-header-footer-tab" data-toggle="pill"
-                           href="#code-theme-light-big-header-footer-content" role="tab"
-                           aria-controls="code-theme-light-big-header-footer-content" aria-selected="true">
+                        <a class="button btn"
+                           id="code-theme-light-big-header-footer-tab"
+                           data-toggle="pill"
+                           href="#code-theme-light-big-header-footer-content"
+                           role="tab"
+                           aria-controls="code-theme-light-big-header-footer-content"
+                           aria-selected="true">
                             Footer
                         </a>
-                        <a class="nav-link" id="code-theme-light-big-header-css-tab" data-toggle="pill"
-                           href="#code-theme-light-big-header-css-content" role="tab"
-                           aria-controls="code-theme-light-big-header-css-content" aria-selected="false">
+                        <a class="button btn"
+                           id="code-theme-light-big-header-css-tab"
+                           data-toggle="pill"
+                           href="#code-theme-light-big-header-css-content"
+                           role="tab"
+                           aria-controls="code-theme-light-big-header-css-content"
+                           aria-selected="false">
                             Stylesheet
                         </a>
                     </div>
                 </div>
-                <div class="col-10">
-                    <div class="tab-content" id="code-tabContent">
-                        <div class="tab-pane fade show active" id="code-theme-light-big-header-colors-content"
-                             role="tabpanel" aria-labelledby="code-theme-light-big-header-colors-tab">
-                            <div class="container colors row">
-                                <div class="col-sm-6">
-                                    <ul>
-                                        <li>
-                                            <div class="color">
+            </div>
+            <div class="level-right">
+                <button class="button is-rounded is-outlined">
+                    Copy
+                </button>
+            </div>
+        </div>
+        <div class="tab-content" id="code-tabContent">
+            <div class="tab-pane fade show active" id="code-theme-light-big-header-colors-content"
+                 role="tabpanel" aria-labelledby="code-theme-light-big-header-colors-tab">
+                <div class="container colors row">
+                    <div class="col-sm-6">
+                        <ul>
+                            <li>
+                                <div class="color">
                                                 <span class="color-preview"
                                                       style="background-color:#565656"></span>
-                                                <div class="highlight">
+                                    <div class="highlight">
                                                     <pre>
                                                         <code>#565656</code>
                                                     </pre>
-                                                </div>
-                                                Text
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="color">
+                                    </div>
+                                    Text
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color">
                                                 <span class="color-preview"
                                                       style="background-color:#0086D6"></span>
-                                                <div class="highlight">
+                                    <div class="highlight">
                                                     <pre>
                                                         <code>#0086D6</code>
                                                     </pre>
-                                                </div>
-                                                Links
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="color">
+                                    </div>
+                                    Links
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color">
                                                 <span class="color-preview"
                                                       style="background-color:#000000"></span>
-                                                <div class="highlight">
+                                    <div class="highlight">
                                                     <pre>
                                                         <code>#000000</code>
                                                     </pre>
-                                                </div>
-                                                Titles
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="color">
+                                    </div>
+                                    Titles
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color">
                                                 <span class="color-preview"
                                                       style="background-color:#F6F8FB"></span>
-                                                <div class="highlight">
+                                    <div class="highlight">
                                                     <pre>
                                                         <code>#F6F8FB</code>
                                                     </pre>
-                                                </div>
-                                                Page Background
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="color">
+                                    </div>
+                                    Page Background
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color">
                                                 <span class="color-preview"
                                                       style="background-color:#00C7B1"></span>
-                                                <div class="highlight">
+                                    <div class="highlight">
                                                     <pre>
                                                         <code>#00C7B1</code>
                                                     </pre>
-                                                </div>
-                                                Highlight
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="color">
+                                    </div>
+                                    Highlight
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color">
                                                 <span class="color-preview"
                                                       style="background-color:#FFFFFF"></span>
-                                                <div class="highlight">
+                                    <div class="highlight">
                                                     <pre>
                                                         <code>#FFFFFF</code>
                                                     </pre>
-                                                </div>
-                                                Boxes background
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="color">
+                                    </div>
+                                    Boxes background
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color">
                                                 <span class="color-preview"
                                                       style="background-color:#DEE5EF"></span>
-                                                <div class="highlight">
+                                    <div class="highlight">
                                                     <pre>
                                                         <code>#DEE5EF</code>
                                                     </pre>
-                                                </div>
-                                                Boxes border
-                                            </div>
-                                        </li>
-                                    </ul>
+                                    </div>
+                                    Boxes border
                                 </div>
-                                <div class="col-sm-6">
-                                    <ul>
-                                        <li>
-                                            <div class="color">
-                                                <span class="color-preview"
-                                                      style="background-color:#000000"></span>
-                                                <div class="highlight">
-                                                    <pre>
-                                                        <code>#000000</code>
-                                                    </pre>
-                                                </div>
-                                                Section Titles
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <div class="color">
-                                                <span class="color-preview"
-                                                      style="background-color:#F6F8FB"></span>
-                                                <div class="highlight">
-                                                    <pre>
-                                                        <code>#F6F8FB</code>
-                                                    </pre>
-                                                </div>
-                                                Section titles background
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <div class="color">
-                                                <span class="color-preview"
-                                                      style="background-color:#FFFFFF"></span>
-                                                <div class="highlight">
-                                                    <pre>
-                                                        <code>#FFFFFF</code>
-                                                    </pre>
-                                                </div>
-                                                Header Background
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <div class="color">
-                                                <span class="color-preview"
-                                                      style="background-color:#000000"></span>
-                                                <div class="highlight">
-                                                    <pre>
-                                                        <code>#000000</code>
-                                                    </pre>
-                                                </div>
-                                                Links in the header
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <div class="color">
-                                                <span class="color-preview"
-                                                      style="background-color:#F6F8FB"></span>
-                                                <div class="highlight">
-                                                    <pre>
-                                                        <code>#F6F8FB</code>
-                                                    </pre>
-                                                </div>
-                                                Footer background
-                                            </div>
-                                        </li>
-
-                                        <li>
-                                            <div class="color">
-                                                <span class="color-preview"
-                                                      style="background-color:#000000"></span>
-                                                <div class="highlight">
-                                                    <pre>
-                                                        <code>#000000</code>
-                                                    </pre>
-                                                </div>
-                                                Links in the footer
-                                            </div>
-                                        </li>
-                                    </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6">
+                        <ul>
+                            <li>
+                                <div class="color">
+                                    <span class="color-preview"
+                                          style="background-color:#000000"></span>
+                                    <div class="highlight">
+                                        <pre>
+                                            <code>#000000</code>
+                                        </pre>
+                                    </div>
+                                    Section Titles
                                 </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="code-theme-light-big-header-header-content" role="tabpanel"
-                             aria-labelledby="code-theme-light-big-header-header-tab">
-                            <div class="highlight">
-                                <pre class="language-html" data-lang="html"><code>&lt;nav class=&#34;ods-front-header portal-header&#34; ods-responsive-menu breakpoint=&#34;1000&#34;&gt;
+                            </li>
+
+                            <li>
+                                <div class="color">
+                                    <span class="color-preview"
+                                          style="background-color:#F6F8FB"></span>
+                                    <div class="highlight">
+                                        <pre>
+                                            <code>#F6F8FB</code>
+                                        </pre>
+                                    </div>
+                                    Section titles background
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="color">
+                                    <span class="color-preview"
+                                          style="background-color:#FFFFFF"></span>
+                                    <div class="highlight">
+                                        <pre>
+                                            <code>#FFFFFF</code>
+                                        </pre>
+                                    </div>
+                                    Header Background
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="color">
+                                    <span class="color-preview"
+                                          style="background-color:#000000"></span>
+                                    <div class="highlight">
+                                        <pre>
+                                            <code>#000000</code>
+                                        </pre>
+                                    </div>
+                                    Links in the header
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="color">
+                                    <span class="color-preview"
+                                          style="background-color:#F6F8FB"></span>
+                                    <div class="highlight">
+                                        <pre>
+                                            <code>#F6F8FB</code>
+                                        </pre>
+                                    </div>
+                                    Footer background
+                                </div>
+                            </li>
+
+                            <li>
+                                <div class="color">
+                                    <span class="color-preview"
+                                          style="background-color:#000000"></span>
+                                    <div class="highlight">
+                                        <pre>
+                                            <code>#000000</code>
+                                        </pre>
+                                    </div>
+                                    Links in the footer
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade"
+                 id="code-theme-light-big-header-header-content"
+                 role="tabpanel"
+                 aria-labelledby="code-theme-light-big-header-header-tab">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html">
+                        <code>&lt;nav class=&#34;ods-front-header portal-header&#34; ods-responsive-menu breakpoint=&#34;1000&#34;&gt;
     &lt;!--
         ---- Mobile Header ----
         - Header items when screen size is lower than &#34;breakpoint&#34; variable above (pixel value).
@@ -1071,13 +1127,17 @@ are page specific and which ones are generic and apply to the whole portal.
         &lt;/div&gt;
     &lt;/ods-responsive-menu-collapsible&gt;
 &lt;/nav&gt;
-</code></pre>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="code-theme-light-big-header-footer-content" role="tabpanel"
-                             aria-labelledby="code-theme-light-big-header-footer-tab">
-                            <div class="highlight">
-                                <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;ods-front-footer portal-footer&#34;&gt;
+</code>
+                    </pre>
+                </div>
+            </div>
+            <div class="tab-pane fade"
+                 id="code-theme-light-big-header-footer-content"
+                 role="tabpanel"
+                 aria-labelledby="code-theme-light-big-header-footer-tab">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html">
+                        <code>&lt;div class=&#34;ods-front-footer portal-footer&#34;&gt;
     &lt;div&gt;
        ##ods-logo## ##legal##
     &lt;/div&gt;
@@ -1085,13 +1145,17 @@ are page specific and which ones are generic and apply to the whole portal.
         ##language##
     &lt;/div&gt;
 &lt;/div&gt;
-</code></pre>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="code-theme-light-big-header-css-content" role="tabpanel"
-                             aria-labelledby="code-theme-light-big-header-css-tab">
-                            <div class="highlight">
-                                <pre class="language-css" data-lang="css"><code>/* ==========================================================================
+</code>
+                    </pre>
+                </div>
+            </div>
+            <div class="tab-pane fade"
+                 id="code-theme-light-big-header-css-content"
+                 role="tabpanel"
+                 aria-labelledby="code-theme-light-big-header-css-tab">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css">
+                        <code>/* ==========================================================================
 LIGHT BIG HEADER THEME
 ========================================================================== */
 /*
@@ -1382,18 +1446,17 @@ are page specific and which ones are generic and apply to the whole portal.
 .odswidget-facet--disjunctive .odswidget-facet__category:hover:before {
    content: &#39;&#39;;
 }
-</code></pre>
-                            </div>
-                        </div>
-                    </div>
+</code>
+                    </pre>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </div>
 
 
 
+        </div>
     </div>
     
 </div>
@@ -1424,7 +1487,7 @@ are page specific and which ones are generic and apply to the whole portal.
 
 <script>var process = { "env": { "NODE_ENV": "production" } }</script>
 <script type="text/javascript"
-        src="/index.min.d229c47fe26cebb9ddb9fdfb3ac53d290f50310011e2e0dedf5edcb38bece912.js"
+        src="/index.min.6d04f70d98b2a54bf63f54ca97494de059d307ec7785ae80a9966c0fec001f87.js"
         defer></script>
 
 </body>

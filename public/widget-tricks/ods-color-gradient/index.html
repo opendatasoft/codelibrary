@@ -19,18 +19,10 @@ Ods-color-gradient &ndash; Codelibrary
     </script>
 
     
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-            crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
-            integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
-            crossorigin="anonymous"></script>
+    
 
     
-    <link rel="stylesheet"
-          href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
-          integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
-          crossorigin="anonymous">
+    
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
     <link rel="stylesheet"
@@ -39,82 +31,105 @@ Ods-color-gradient &ndash; Codelibrary
           crossorigin="anonymous">
 
     
-    <link rel="stylesheet" type="text/css" href="/scss/main.css" />
+    <link rel="stylesheet"
+          type="text/css"
+          href="/scss/main.css" />
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png">
+    <link rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png">
+    <link rel="shortcut icon"
+          href="/favicon.ico">
 </head>
 
 <body>
 
-
-
-
-<nav class="navbar navbar-expand-lg navbar-light is-fixed-top" role="navigation" aria-label="Main navigation">
+<nav class="navbar is-fixed-top"
+     role="navigation"
+     aria-label="Main navigation">
     <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-            <img src="/img/ods-logo-helphub.svg"/>
+        <a class="navbar-item"
+           href="/"
+           title="Back to the homepage">
+            <img src="/img/ods-logo-helphub.svg"
+                 alt="Helphub Logo"/>
         </a>
+        <button class="navbar-burger burger"
+                type="button"
+                data-toggle="collapse"
+                data-target="#helphubNavbar"
+                aria-controls="helphubNavbar"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            Help Hub
+        </button>
     </div>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#helphubNavbar"
-            aria-controls="helphubNavbar" aria-expanded="false" aria-label="Toggle navigation">
-        Help Hub
-    </button>
-    <div class="collapse navbar-collapse" id="helphubNavbar">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="https://help.opendatasoft.com/">
-                    Help Hub
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://help.opendatasoft.com/platform/en/">
-                    User guide
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link is-active" href="https://discovery.opendatasoft.com">
-                    Code Library
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://help.opendatasoft.com/faq-glossary/en/">
-                    FAQ
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://help.opendatasoft.com/widgets/">
-                    Widgets
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://help.opendatasoft.com/en/apis/">
-                    APIs
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="https://academy.opendatasoft.com/page/homepage">
-                    Academy
-                </a>
-            </li>
-    </div>
+    <div class="navbar-menu"
+         id="helphubNavbar">
+        <div class="navbar-start">
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/">
+                Help Hub
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/platform/en/">
+                User guide
+            </a>
+            <a class="navbar-item is-active"
+               href="https://discovery.opendatasoft.com">
+                Code Library
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/faq-glossary/en/">
+                FAQ
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/widgets/">
+                Widgets
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/en/apis/">
+                APIs
+            </a>
+            <a class="navbar-item"
+               href="https://academy.opendatasoft.com/page/homepage">
+                Academy
+            </a>
+        </div>
     </div>
 </nav>
 
 <div class="columns codelibrary">
-    <div class="column is-one-quarter">
-        <aside class="menu p-4">
+    <div class="column is-narrow">
+        <aside class="sidebar menu">
+    <a href="https://codelibrary.opendatasoft.com"
+       class="sidebar-logo-link"
+       title="Go to Codelibrary homepage">
+        <img src="/img/ods-codelibrary-logo.svg"
+             class="sidebar-logo"
+             alt="Codelibrary Logo">
+    </a>
+
     <div id="algolia-box"></div>
     <div id="algolia-results"></div>
 
-    <h2 class="title is-5 mt-3"><a href="https://codelibrary.opendatasoft.com">Home</a></h2>
-
     
-    <p class="menu-label">
-        Sections
-    </p>
     <ul class="menu-list">
+        <li>
+            <a class="sidebar-subtitle"
+               href="https://codelibrary.opendatasoft.com">
+                Home
+            </a>
+        </li>
         
         
         <li>
-            <a href="/components/">
+            <a href="/components/"
+               class="sidebar-subtitle">
                 Components
             </a>
         </li>
@@ -122,7 +137,8 @@ Ods-color-gradient &ndash; Codelibrary
         
         
         <li>
-            <a href="/page-templates/">
+            <a href="/page-templates/"
+               class="sidebar-subtitle">
                 Page templates
             </a>
         </li>
@@ -130,7 +146,8 @@ Ods-color-gradient &ndash; Codelibrary
         
         
         <li>
-            <a href="/portal-themes/">
+            <a href="/portal-themes/"
+               class="sidebar-subtitle">
                 Portal themes
             </a>
         </li>
@@ -138,7 +155,7 @@ Ods-color-gradient &ndash; Codelibrary
         
         
         <li>
-            <a class="" href="/widget-tricks/">
+            <a class="sidebar-subtitle " href="/widget-tricks/">
             Widget tricks
             </a>
             <ul>
@@ -167,37 +184,41 @@ Ods-color-gradient &ndash; Codelibrary
     <p class="menu-label">
         Tags
     </p>
-    <div class="tags are-medium">
+    <div class="tags">
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/aggregation/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/aggregation/">
             aggregation
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/chart/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/chart/">
             chart
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/display/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/display/">
             display
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/filter/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/filter/">
             filter
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/geo/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/geo/">
             geo
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/list/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/list/">
             list
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/navigation/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/navigation/">
             navigation
         </a>
         
-        <a class="tag is-primary" href="https://codelibrary.opendatasoft.com/tags/ods-analysis/">
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-aggregation/">
+            ods-aggregation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-analysis/">
             ods-analysis
         </a>
         
@@ -208,9 +229,10 @@ Ods-color-gradient &ndash; Codelibrary
     <div class="column">
         
 
-<div class="content container-fluid mt-3">
-    <div class="box">
-        <h1 id="ods-color-gradient--ods-map--a-choropleth-alternative">ods-color-gradient + ods-map : a choropleth alternative</h1>
+<div>
+    <div class="content-header container is-max-desktop mb-5">
+        <div class="content">
+            <h1 id="ods-color-gradient--ods-map--a-choropleth-alternative">ods-color-gradient + ods-map : a choropleth alternative</h1>
 <p>This <strong>map rendering technique</strong> allows to display on a map colored shaped based on the aggregation of <strong>a different dataset</strong>.</p>
 <p><strong>One dataset contains the data</strong> to make some statistical computation (Avg, sum, counting of numerical fields) and <strong>one dataset contains geographical information</strong> (geo shapes).</p>
 <p>The technique is very similar to a join at processing time, to enrich statistical data with geographical data. The only prerequisit is, like for a regular join, having a shared key between datasets to make the numerical aggregation match its geo shape.</p>
@@ -218,10 +240,12 @@ Ods-color-gradient &ndash; Codelibrary
 <p>For example: inhabitant dataset of a country can be rendered by region, departement, cities and so on as long as you have the geographical dataset of each administrative layers.</p>
 <p><strong>How it works:</strong> the technique is to aggregate the data with the ods-color-gradient to obtain the color gradient as a color object. Then feed an ods-map with this color object.</p>
 
+        </div>
     </div>
     
-    <div class="box">
-        <h2 id="color-departments-by-number-of-carpool-location">Color departments by number of carpool location</h2>
+    <div class="container">
+        <div class="box box-example">
+            <h2 id="color-departments-by-number-of-carpool-location">Color departments by number of carpool location</h2>
 
 
 
@@ -230,46 +254,29 @@ Ods-color-gradient &ndash; Codelibrary
     
     
 
-    <form id="form-ods-color-gradient-1" action="https://codepen.io/pen/define" method="POST" target="_blank">
-        <input type="hidden" name="data" value='{
-                                "title": "New Pen!",
-                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\n&#34;,
-                                "editors": 110,
-                                "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;reg,dep,carpool\&#34;\n                     reg-dataset=\&#34;regions-et-collectivites-doutre-mer-france\&#34;\n                     reg-domain=\&#34;userclub\&#34;\n                     dep-dataset=\&#34;departements-et-collectivites-doutre-mer-france\&#34;\n                     dep-domain=\&#34;userclub\&#34;\n                     carpool-dataset=\&#34;base-nationale-des-lieux-de-covoiturage-en-france\&#34;\n                     carpool-domain=\&#34;userclub\&#34;\u003e\n\n    \u003cdiv ods-color-gradient=\&#34;colorgradient\&#34;\n         ods-color-gradient-context=\&#34;carpool\&#34;\n         ods-color-gradient-x=\&#34;dep_code\&#34;\n         ods-color-gradient-serie=\&#34;COUNT()\&#34;\n         ods-color-gradient-high=\&#34;rgb(20, 33, 96)\&#34;\n         ods-color-gradient-low=\&#34;rgb(180, 197, 241)\&#34;\u003e\n\n        \u003cdiv class=\&#34;map-container\&#34;\u003e\n            \u003cods-map\u003e\n                \u003cods-map-layer context=\&#34;dep\&#34;\n                               color-categories=\&#34;colorgradient[&#39;colors&#39;]\&#34;\n                               color-by-field=\&#34;dep_code\&#34;\n                               color-categories-other=\&#34;lightgrey\&#34;\n                               display=\&#34;categories\&#34;\n                               shape-opacity=\&#34;0.95\&#34;\n                               title=\&#34;# of carpool parking\&#34;\u003e\n                \u003c/ods-map-layer\u003e\n            \u003c/ods-map\u003e\n\n            \u003cods-legend title=\&#34;# of carpool parking\&#34;\n                        color-gradient=\&#34;colorgradient\&#34;\n                        display=\&#34;linear\&#34;\n                        no-value-color=\&#34;lightgrey\&#34;\n                        decimal-precision=\&#34;0\&#34;\u003e\u003c/ods-legend\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\u003c/div\u003e&#34;,
-                                "css": &#34;.map-container {\n    position: relative;\n}\n\n.odswidget.odswidget-legend {\n    position: absolute;\n    top: 20px;\n    left: 57px;\n}&#34; }'>
+    <form id="form-ods-color-gradient-1"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;reg,dep,carpool\&#34;\n                     reg-dataset=\&#34;regions-et-collectivites-doutre-mer-france\&#34;\n                     reg-domain=\&#34;userclub\&#34;\n                     dep-dataset=\&#34;departements-et-collectivites-doutre-mer-france\&#34;\n                     dep-domain=\&#34;userclub\&#34;\n                     carpool-dataset=\&#34;base-nationale-des-lieux-de-covoiturage-en-france\&#34;\n                     carpool-domain=\&#34;userclub\&#34;\u003e\n\n    \u003cdiv ods-color-gradient=\&#34;colorgradient\&#34;\n         ods-color-gradient-context=\&#34;carpool\&#34;\n         ods-color-gradient-x=\&#34;dep_code\&#34;\n         ods-color-gradient-serie=\&#34;COUNT()\&#34;\n         ods-color-gradient-high=\&#34;rgb(20, 33, 96)\&#34;\n         ods-color-gradient-low=\&#34;rgb(180, 197, 241)\&#34;\u003e\n\n        \u003cdiv class=\&#34;map-container\&#34;\u003e\n            \u003cods-map\u003e\n                \u003cods-map-layer context=\&#34;dep\&#34;\n                               color-categories=\&#34;colorgradient[&#39;colors&#39;]\&#34;\n                               color-by-field=\&#34;dep_code\&#34;\n                               color-categories-other=\&#34;lightgrey\&#34;\n                               display=\&#34;categories\&#34;\n                               shape-opacity=\&#34;0.95\&#34;\n                               title=\&#34;# of carpool parking\&#34;\u003e\n                \u003c/ods-map-layer\u003e\n            \u003c/ods-map\u003e\n\n            \u003cods-legend title=\&#34;# of carpool parking\&#34;\n                        color-gradient=\&#34;colorgradient\&#34;\n                        display=\&#34;linear\&#34;\n                        no-value-color=\&#34;lightgrey\&#34;\n                        decimal-precision=\&#34;0\&#34;\u003e\u003c/ods-legend\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\u003c/div\u003e&#34;,
+               "css": &#34;.map-container {\n    position: relative;\n}\n\n.odswidget.odswidget-legend {\n    position: absolute;\n    top: 20px;\n    left: 57px;\n}&#34; }'>
     </form>
 </div>
 
-<section class="ods-content">
-    <nav class="nav nav-pills"
-         id="navods-color-gradient-1-tab"
-         role="tablist">
-        <a class="nav-link active"
-           id="navods-color-gradient-1-live-tab"
-           data-toggle="tab"
-           href="#navods-color-gradient-1-live"
-           role="tab"
-           aria-controls="navods-color-gradient-1-live"
-           aria-selected="true">
-            Live snippet
-        </a>
-        <a class="nav-link"
-           id="navods-color-gradient-1-code-tab"
-           data-toggle="tab"
-           href="#navods-color-gradient-1-code"
-           role="tab"
-           aria-controls="navods-color-gradient-1-code"
-           aria-selected="false">
-            Get the code
-        </a>
-    </nav>
-
-    <div class="tab-content" id="ods-color-gradient-1">
-        <div class="tab-pane fade show active" id="navods-color-gradient-1-live" role="tabpanel" aria-labelledby="navods-color-gradient-1-live-tab">
-            <div class="row">
-                <iframe id="iframe-ods-color-gradient-1" width="100%" height="600px" src="about:blank"
+<div class="ods-content">
+    <section class="box box-live-example">
+        <div class="row">
+            <iframe id="iframe-ods-color-gradient-1"
+                    width="100%" height="100%"
+                    src="about:blank"
                     srcdoc="
-<head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+                <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
 
@@ -301,14 +308,22 @@ Ods-color-gradient &ndash; Codelibrary
     });
 &lt;/script&gt;
 
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
 
-
-
-<!--link rel='stylesheet' href='/scss/main.css' /-->
-</head>
-<body>
-<div ng-app='ods-widgets' class='container-fluid'>
-    &lt;ods-dataset-context context=&#34;reg,dep,carpool&#34;
+            
+            <!--link rel='stylesheet' href='/scss/main.css' /-->
+            </head>
+            <body>
+            <div ng-app='ods-widgets'>
+                &lt;ods-dataset-context context=&#34;reg,dep,carpool&#34;
                      reg-dataset=&#34;regions-et-collectivites-doutre-mer-france&#34;
                      reg-domain=&#34;userclub&#34;
                      dep-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
@@ -344,9 +359,9 @@ Ods-color-gradient &ndash; Codelibrary
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/ods-dataset-context&gt;
-</div>
-<style type='text/css'>
-    .map-container {
+            </div>
+            <style type='text/css'>
+                .map-container {
     position: relative;
 }
 
@@ -355,36 +370,51 @@ Ods-color-gradient &ndash; Codelibrary
     top: 20px;
     left: 57px;
 }
-</style>
-</body>
-"></iframe>
-            </div>
+            </style>
+            </body>
+            ">
+            </iframe>
         </div>
-        <div class="tab-pane fade" id="navods-color-gradient-1-code" role="tabpanel" aria-labelledby="navods-color-gradient-1-code-tab">
-            <div class="row">
-                <div class="col-2">
-                    <div class="nav flex-column nav-pills" id="code-ods-color-gradient-1-tab" role="tablist" aria-orientation="vertical">
-                        <a class="nav-link active" id="code-ods-color-gradient-1-html-tab" data-toggle="pill" href="#code-ods-color-gradient-1-html-content" role="tab" aria-controls="code-ods-color-gradient-1-html-content" aria-selected="true">
-                            HTML
-                        </a>
-                        <a class="nav-link" id="code-ods-color-gradient-1-css-tab" data-toggle="pill" href="#code-ods-color-gradient-1-css-content" role="tab" aria-controls="code-ods-color-gradient-1-css-content" aria-selected="false">
-                            CSS
-                        </a>
-                    </div>
+    </section>
 
-                    <a class="edit-on-codepen" target="_blank" rel="noopener" href="#" title="Edit on CodePen"
-                       onclick="document.getElementById('form-ods-color-gradient-1').submit()">
-                        <span class="codepen-edit-on-text">EDIT ON</span>
-                        <svg class="codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
-                        </svg>
-                    </a>
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-rounded js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-ods-color-gradient-1-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-rounded js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-ods-color-gradient-1-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-10">
-                    <div class="tab-content" id="code-tabContent">
-                        <div class="tab-pane fade show active" id="code-ods-color-gradient-1-html-content" role="tabpanel" aria-labelledby="code-ods-color-gradient-1-html-tab">
-                            <div class="highlight">
-                                <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;reg,dep,carpool&#34;
+            </div>
+            <div class="level-right">
+                <a class="button is-rounded is-outlined edit-on-codepen"
+                   target="_blank"
+                   rel="noopener"
+                   href="#"
+                   title="Edit on CodePen"
+                   onclick="document.getElementById('form-ods-color-gradient-1').submit()">
+                    Edit on Codepen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-ods-color-gradient-1-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;reg,dep,carpool&#34;
                      reg-dataset=&#34;regions-et-collectivites-doutre-mer-france&#34;
                      reg-domain=&#34;userclub&#34;
                      dep-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
@@ -420,11 +450,12 @@ Ods-color-gradient &ndash; Codelibrary
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/ods-dataset-context&gt;</code></pre>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="code-ods-color-gradient-1-css-content" role="tabpanel" aria-labelledby="code-ods-color-gradient-1-css-tab">
-                            <div class="highlight">
-                                <pre class="language-css" data-lang="css"><code>.map-container {
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-ods-color-gradient-1-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>.map-container {
     position: relative;
 }
 
@@ -433,21 +464,38 @@ Ods-color-gradient &ndash; Codelibrary
     top: 20px;
     left: 57px;
 }</code></pre>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
 
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-ods-color-gradient-1";
+            iframe = document.getElementById(iframeId);
+             
+            size =  null 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
 
-
+        </div>
     </div>
     
-    <div class="box">
-        <h2 id="color-departments-by-number-of-carpool-location---spread-in-3-classes-of-color">Color departments by number of carpool location - spread in 3 classes of color</h2>
+    <div class="container">
+        <div class="box box-example">
+            <h2 id="color-departments-by-number-of-carpool-location---spread-in-3-classes-of-color">Color departments by number of carpool location - spread in 3 classes of color</h2>
 <p>Defining a number of classes (ie. number of different colors) allows to use <code>ods-legend</code> and it&rsquo;s <code>step</code> display.</p>
 
 
@@ -457,46 +505,29 @@ Ods-color-gradient &ndash; Codelibrary
     
     
 
-    <form id="form-ods-color-gradient-1" action="https://codepen.io/pen/define" method="POST" target="_blank">
-        <input type="hidden" name="data" value='{
-                                "title": "New Pen!",
-                                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\n&#34;,
-                                "editors": 110,
-                                "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;reg,dep,carpool\&#34;\n                     reg-dataset=\&#34;regions-et-collectivites-doutre-mer-france\&#34;\n                     reg-domain=\&#34;userclub\&#34;\n                     dep-dataset=\&#34;departements-et-collectivites-doutre-mer-france\&#34;\n                     dep-domain=\&#34;userclub\&#34;\n                     carpool-dataset=\&#34;base-nationale-des-lieux-de-covoiturage-en-france\&#34;\n                     carpool-domain=\&#34;userclub\&#34;\u003e\n\n    \u003cdiv ods-color-gradient=\&#34;colorgradient\&#34;\n         ods-color-gradient-context=\&#34;carpool\&#34;\n         ods-color-gradient-x=\&#34;dep_code\&#34;\n         ods-color-gradient-serie=\&#34;COUNT()\&#34;\n         ods-color-gradient-nb-classes=\&#34;3\&#34;\n         ods-color-gradient-high=\&#34;rgb(20, 33, 96)\&#34;\n         ods-color-gradient-low=\&#34;rgb(180, 197, 241)\&#34;\u003e\n\n        \u003cdiv class=\&#34;map-container\&#34;\u003e\n            \u003cods-map\u003e\n                \u003cods-map-layer context=\&#34;dep\&#34;\n                               color-categories=\&#34;colorgradient[&#39;colors&#39;]\&#34;\n                               color-by-field=\&#34;dep_code\&#34;\n                               color-categories-other=\&#34;lightgrey\&#34;\n                               display=\&#34;categories\&#34;\n                               shape-opacity=\&#34;0.95\&#34;\n                               title=\&#34;# of carpool parking\&#34;\u003e\n                \u003c/ods-map-layer\u003e\n            \u003c/ods-map\u003e\n\n            \u003cods-legend title=\&#34;# of carpool parking\&#34;\n                color-gradient=\&#34;colorgradient\&#34;\n                display=\&#34;steps\&#34;\n                no-value-color=\&#34;lightgrey\&#34;\n                decimal-precision=\&#34;0\&#34;\u003e\u003c/ods-legend\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\u003c/div\u003e&#34;,
-                                "css": &#34;.map-container {\n    position: relative;\n}\n\n.odswidget.odswidget-legend {\n    position: absolute;\n    top: 20px;\n    left: 57px;\n}&#34; }'>
+    <form id="form-ods-color-gradient-1"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;reg,dep,carpool\&#34;\n                     reg-dataset=\&#34;regions-et-collectivites-doutre-mer-france\&#34;\n                     reg-domain=\&#34;userclub\&#34;\n                     dep-dataset=\&#34;departements-et-collectivites-doutre-mer-france\&#34;\n                     dep-domain=\&#34;userclub\&#34;\n                     carpool-dataset=\&#34;base-nationale-des-lieux-de-covoiturage-en-france\&#34;\n                     carpool-domain=\&#34;userclub\&#34;\u003e\n\n    \u003cdiv ods-color-gradient=\&#34;colorgradient\&#34;\n         ods-color-gradient-context=\&#34;carpool\&#34;\n         ods-color-gradient-x=\&#34;dep_code\&#34;\n         ods-color-gradient-serie=\&#34;COUNT()\&#34;\n         ods-color-gradient-nb-classes=\&#34;3\&#34;\n         ods-color-gradient-high=\&#34;rgb(20, 33, 96)\&#34;\n         ods-color-gradient-low=\&#34;rgb(180, 197, 241)\&#34;\u003e\n\n        \u003cdiv class=\&#34;map-container\&#34;\u003e\n            \u003cods-map\u003e\n                \u003cods-map-layer context=\&#34;dep\&#34;\n                               color-categories=\&#34;colorgradient[&#39;colors&#39;]\&#34;\n                               color-by-field=\&#34;dep_code\&#34;\n                               color-categories-other=\&#34;lightgrey\&#34;\n                               display=\&#34;categories\&#34;\n                               shape-opacity=\&#34;0.95\&#34;\n                               title=\&#34;# of carpool parking\&#34;\u003e\n                \u003c/ods-map-layer\u003e\n            \u003c/ods-map\u003e\n\n            \u003cods-legend title=\&#34;# of carpool parking\&#34;\n                color-gradient=\&#34;colorgradient\&#34;\n                display=\&#34;steps\&#34;\n                no-value-color=\&#34;lightgrey\&#34;\n                decimal-precision=\&#34;0\&#34;\u003e\u003c/ods-legend\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\u003c/div\u003e&#34;,
+               "css": &#34;.map-container {\n    position: relative;\n}\n\n.odswidget.odswidget-legend {\n    position: absolute;\n    top: 20px;\n    left: 57px;\n}&#34; }'>
     </form>
 </div>
 
-<section class="ods-content">
-    <nav class="nav nav-pills"
-         id="navods-color-gradient-1-tab"
-         role="tablist">
-        <a class="nav-link active"
-           id="navods-color-gradient-1-live-tab"
-           data-toggle="tab"
-           href="#navods-color-gradient-1-live"
-           role="tab"
-           aria-controls="navods-color-gradient-1-live"
-           aria-selected="true">
-            Live snippet
-        </a>
-        <a class="nav-link"
-           id="navods-color-gradient-1-code-tab"
-           data-toggle="tab"
-           href="#navods-color-gradient-1-code"
-           role="tab"
-           aria-controls="navods-color-gradient-1-code"
-           aria-selected="false">
-            Get the code
-        </a>
-    </nav>
-
-    <div class="tab-content" id="ods-color-gradient-1">
-        <div class="tab-pane fade show active" id="navods-color-gradient-1-live" role="tabpanel" aria-labelledby="navods-color-gradient-1-live-tab">
-            <div class="row">
-                <iframe id="iframe-ods-color-gradient-1" width="100%" height="600px" src="about:blank"
+<div class="ods-content">
+    <section class="box box-live-example">
+        <div class="row">
+            <iframe id="iframe-ods-color-gradient-1"
+                    width="100%" height="100%"
+                    src="about:blank"
                     srcdoc="
-<head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+                <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
 
@@ -528,14 +559,22 @@ Ods-color-gradient &ndash; Codelibrary
     });
 &lt;/script&gt;
 
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
 
-
-
-<!--link rel='stylesheet' href='/scss/main.css' /-->
-</head>
-<body>
-<div ng-app='ods-widgets' class='container-fluid'>
-    &lt;ods-dataset-context context=&#34;reg,dep,carpool&#34;
+            
+            <!--link rel='stylesheet' href='/scss/main.css' /-->
+            </head>
+            <body>
+            <div ng-app='ods-widgets'>
+                &lt;ods-dataset-context context=&#34;reg,dep,carpool&#34;
                      reg-dataset=&#34;regions-et-collectivites-doutre-mer-france&#34;
                      reg-domain=&#34;userclub&#34;
                      dep-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
@@ -571,9 +610,9 @@ Ods-color-gradient &ndash; Codelibrary
             &lt;/div&gt;
         &lt;/div&gt;
 &lt;/ods-dataset-context&gt;
-</div>
-<style type='text/css'>
-    .map-container {
+            </div>
+            <style type='text/css'>
+                .map-container {
     position: relative;
 }
 
@@ -582,36 +621,51 @@ Ods-color-gradient &ndash; Codelibrary
     top: 20px;
     left: 57px;
 }
-</style>
-</body>
-"></iframe>
-            </div>
+            </style>
+            </body>
+            ">
+            </iframe>
         </div>
-        <div class="tab-pane fade" id="navods-color-gradient-1-code" role="tabpanel" aria-labelledby="navods-color-gradient-1-code-tab">
-            <div class="row">
-                <div class="col-2">
-                    <div class="nav flex-column nav-pills" id="code-ods-color-gradient-1-tab" role="tablist" aria-orientation="vertical">
-                        <a class="nav-link active" id="code-ods-color-gradient-1-html-tab" data-toggle="pill" href="#code-ods-color-gradient-1-html-content" role="tab" aria-controls="code-ods-color-gradient-1-html-content" aria-selected="true">
-                            HTML
-                        </a>
-                        <a class="nav-link" id="code-ods-color-gradient-1-css-tab" data-toggle="pill" href="#code-ods-color-gradient-1-css-content" role="tab" aria-controls="code-ods-color-gradient-1-css-content" aria-selected="false">
-                            CSS
-                        </a>
-                    </div>
+    </section>
 
-                    <a class="edit-on-codepen" target="_blank" rel="noopener" href="#" title="Edit on CodePen"
-                       onclick="document.getElementById('form-ods-color-gradient-1').submit()">
-                        <span class="codepen-edit-on-text">EDIT ON</span>
-                        <svg class="codepen-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 138 26" fill="none" stroke="#000" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M80 6h-9v14h9m34-14h-9v14h9m-3-7h-6m-28 0h-6m51 7V6l11 14V6M22 16.7L33 24l11-7.3V9.3L33 2 22 9.3v7.4zm22 0L33 9.3l-11 7.4m0-7.4l11 7.3 11-7.3M33 2v7.3m0 7.4V24m55-10h6c2.2 0 4-1.8 4-4s-1.8-4-4-4h-6v14M15 8c-1.3-1.3-3-2-5-2-4 0-7 3-7 7s3 7 7 7c2 0 3.7-.8 5-2m49-5c0 4-3 7-7 7h-5V6h5c4 0 7 3 7 7z"></path>
-                        </svg>
-                    </a>
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-rounded js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-ods-color-gradient-1-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-rounded js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-ods-color-gradient-1-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col-10">
-                    <div class="tab-content" id="code-tabContent">
-                        <div class="tab-pane fade show active" id="code-ods-color-gradient-1-html-content" role="tabpanel" aria-labelledby="code-ods-color-gradient-1-html-tab">
-                            <div class="highlight">
-                                <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;reg,dep,carpool&#34;
+            </div>
+            <div class="level-right">
+                <a class="button is-rounded is-outlined edit-on-codepen"
+                   target="_blank"
+                   rel="noopener"
+                   href="#"
+                   title="Edit on CodePen"
+                   onclick="document.getElementById('form-ods-color-gradient-1').submit()">
+                    Edit on Codepen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-ods-color-gradient-1-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;reg,dep,carpool&#34;
                      reg-dataset=&#34;regions-et-collectivites-doutre-mer-france&#34;
                      reg-domain=&#34;userclub&#34;
                      dep-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
@@ -647,11 +701,12 @@ Ods-color-gradient &ndash; Codelibrary
             &lt;/div&gt;
         &lt;/div&gt;
 &lt;/ods-dataset-context&gt;</code></pre>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="code-ods-color-gradient-1-css-content" role="tabpanel" aria-labelledby="code-ods-color-gradient-1-css-tab">
-                            <div class="highlight">
-                                <pre class="language-css" data-lang="css"><code>.map-container {
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-ods-color-gradient-1-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>.map-container {
     position: relative;
 }
 
@@ -660,17 +715,33 @@ Ods-color-gradient &ndash; Codelibrary
     top: 20px;
     left: 57px;
 }</code></pre>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+</div>
 
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-ods-color-gradient-1";
+            iframe = document.getElementById(iframeId);
+             
+            size =  null 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
 
-
+        </div>
     </div>
     
 </div>
@@ -701,7 +772,7 @@ Ods-color-gradient &ndash; Codelibrary
 
 <script>var process = { "env": { "NODE_ENV": "production" } }</script>
 <script type="text/javascript"
-        src="/index.min.d229c47fe26cebb9ddb9fdfb3ac53d290f50310011e2e0dedf5edcb38bece912.js"
+        src="/index.min.6d04f70d98b2a54bf63f54ca97494de059d307ec7785ae80a9966c0fec001f87.js"
         defer></script>
 
 </body>
