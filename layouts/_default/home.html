@@ -4,30 +4,31 @@
 
 {{ define "main" }}
 
-<section class="container home is-max-desktop mt-5">
-    <h1 class="title is-1">
-        Codelibrary Home
-    </h1>
-    <h2 class="subtitle">
-        The place to <span style="text-decoration: line-through;">be</span> copy
-    </h2>
-    <p>
-        Some random text about where you just landed
-    </p>
-    <div class="columns is-multiline mt-4">
+<div class="content">
+    <section class="content-header container is-max-desktop">
+        <h1 class="title">
+            Codelibrary
+        </h1>
+        <h2 class="subtitle">
+            The place to <span style="text-decoration: line-through;">be</span> copy
+        </h2>
+    </section>
+    <section class="home-results container">
         {{ range $index, $elem := .Site.Sections }}
-            <div class="column is-half">
-                <a class="box"
-                href="{{ $elem.RelPermalink }}">
-                    <h1 class="title">{{ $elem.Title | humanize }}</h1>
-                    {{ $elem.Title | lower }}
-                    <p>{{ index .Site.Data.sections ($elem.Title | lower) | safeHTML }}</p>
-                </a>
+        <a class="card card-home"
+           href="{{ $elem.RelPermalink }}">
+            <div class="card-content">
+                <h1 class="title">
+                    {{ $elem.Title | humanize }}
+                </h1>
+                <p class="subtitle">
+                    {{ index .Site.Data.sections ($elem.Title | lower) | safeHTML }}
+                </p>
             </div>
+        </a>
         {{ end }}
-    </div>
-</section>
-
+    </section>
+</div>
 {{ end }}
 
 

@@ -1,14 +1,14 @@
 {{ define "main" }}
 <div class="content">
-    <div class="content-header container is-max-desktop mb-5">
+    <section class="content-header container is-max-desktop mb-5">
         <h1 class="title">
             {{ if eq "tags" .Type }}Tag: {{ end}}{{ .Title | humanize }}
         </h1>
         <h2 class="subtitle is-3">
             {{ index .Site.Data.sections .Page.Section | safeHTML }}
         </h2>
-    </div>
-    <div class="list-results">
+    </section>
+    <section class="list-results">
         {{ range (.Paginator (.Site.Params.listPaginate | default 20)).Pages }}
         <a href="{{ .Permalink }}"
            class="card card-list"
@@ -30,6 +30,6 @@
             </div>
         </a>
         {{ end }}
-    </div>
+    </section>
 </div>
 {{ end }}
