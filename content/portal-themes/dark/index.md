@@ -1,5 +1,5 @@
 ---
-title: "Theme dark"
+title: "Dark theme"
 description: ""
 tags: []
 resources:

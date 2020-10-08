@@ -1,6 +1,6 @@
 ---
 title: "Sticky header"
-description: ""
+description: "Sticky content will stay positioned once the user scrolls past it."
 tags: ["navigation"]
 resources:
 - src: '*/'

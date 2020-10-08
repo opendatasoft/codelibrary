@@ -1,5 +1,5 @@
 ---
-title: "Theme color"
+title: "Colored theme"
 description: ""
 tags: []
 resources:

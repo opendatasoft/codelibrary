@@ -1,7 +1,7 @@
 ---
 title: "Catalog cards"
 date: 2020-08-24T15:57:58+02:00
-description: "Override default catalog cards to highlight key metadata for your business"
+description: "Override default catalog cards to highlight key metadata for your business."
 tags: ["display", "navigation"]
 resources:
 - src: '*/'

@@ -1,6 +1,6 @@
 ---
 title: "ODS Analysis"
-description: "This widget exposes the results of an analysis. It can be used to display aggregations like sums, averages, min or max of numerical values, as a table, a custom chart or advanced KPIs"
+description: "This widget exposes the results of an analysis. It can be used to display aggregations like sums, averages, min or max of numerical values, as a table, a custom chart or advanced KPIs."
 tags: ["ods-analysis", "aggregation", "chart", "display"]
 resources:
 - src: '*/'
