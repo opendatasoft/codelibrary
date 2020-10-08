@@ -1,23 +1,35 @@
 {{ define "main" }}
-<div class="container-fluid">
-    <h1 class="title is-1 mt-4">{{ if eq "tags" .Type }}Tag: {{ end}}{{ .Title | humanize }}</h1>
-    <h3 class="subtitle is-3 mt-4">{{ index .Site.Data.sections .Page.Section | safeHTML }}</h3>
-    <ul class="row">
+<div class="content">
+    <div class="content-header container is-max-desktop mb-5">
+        <h1 class="title">
+            {{ if eq "tags" .Type }}Tag: {{ end}}{{ .Title | humanize }}
+        </h1>
+        <h2 class="subtitle is-3">
+            {{ index .Site.Data.sections .Page.Section | safeHTML }}
+        </h2>
+    </div>
+    <div class="list-results">
         {{ range (.Paginator (.Site.Params.listPaginate | default 20)).Pages }}
-        <li class="col-4 mb-4">
-            <a href="{{ .Permalink }}" title="{{ .Title }}">
-                <div class="box">
-                    <h3 class="title is-5">{{ .Title }}</h3>
-                    <h4 class="subtitle is-7">{{ if eq "" .Description}}{{ .Summary }}{{ else }}{{ .Description }}{{ end }}</h4>
-                    <div class="tags">
-                        {{ range .Params.tags }}
-                        <div class="tag">{{ . }}</div>
-                        {{ end }}
+        <a href="{{ .Permalink }}"
+           class="card card-list"
+           title="{{ .Title }}">
+            <div class="card-content">
+                <h3 class="title">
+                    {{ .Title }}
+                </h3>
+                <p class="subtitle">
+                    {{ if eq "" .Description}}{{ .Summary }}{{ else }}{{ .Description }}{{ end }}
+                </p>
+                <div class="tags">
+                    {{ range .Params.tags }}
+                    <div class="tag">
+                        {{ . }}
                     </div>
+                    {{ end }}
                 </div>
-            </a>
-        </li>
+            </div>
+        </a>
         {{ end }}
-    </ul>
+    </div>
 </div>
 {{ end }}
