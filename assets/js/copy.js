@@ -20,7 +20,7 @@ export const initCopyToCB = (event) => {
       containerEl.parentNode.style.position = 'relative';
 
       const button = document.createElement('button');
-      button.className = 'button button-copy is-rounded';
+      button.className = 'button button-copy is-rounded is-primary is-outlined';
       button.type = 'button';
       button.innerText = copyText;
 

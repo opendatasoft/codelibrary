@@ -7,5 +7,5 @@ resources:
   title: 'Section #:counter'
 ---
 
-# Theme color
+# Dark Theme
 

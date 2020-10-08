@@ -25,7 +25,9 @@ resources:
   title: 'Stylesheet'
 ---
 
-## Color - Basic
+{{< intro-content >}}
+## Basic
+{{< /intro-content >}}
 
 {{< ods-theme >}}
 
