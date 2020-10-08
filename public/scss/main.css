@@ -34,6 +34,8 @@
    ========================================================================== */
 /* Footer
    ========================================================================== */
+/* Card
+   ========================================================================== */
 /* Finally import bulma */
 /* Bulma Utilities */
 @keyframes spinAround {
@@ -2946,9 +2948,9 @@ a.tag:hover {
     content: "\0227B"; }
 
 .card {
-  background-color: white;
+  background-color: #f6f8fb;
   border-radius: 0.25rem;
-  box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+  box-shadow: none;
   color: #4a4a4a;
   max-width: 100%;
   overflow: hidden;
@@ -6305,25 +6307,6 @@ label.panel-block {
   margin: inherit; }
 
 /* Codelibrary */
-.home a .box {
-  height: 100%; }
-
-.home a:hover .box {
-  border: 1px solid black;
-  margin: -1px;
-  box-shadow: unset; }
-
-.row > .col,
-.row > [class*="col-"] {
-  margin-top: var(--bs-gutter-x); }
-
-.row.row-equal-height {
-  display: flex;
-  flex-wrap: wrap; }
-
-.row.row-equal-height:before, .row.row-equal-height:after {
-  content: normal; }
-
 /* Code style. Codepen buttons
    ========================================================================== */
 /* Everything related to code/iframe/codepen etc... */
@@ -6679,6 +6662,44 @@ a.sidebar-subtitle {
   .codelibrary .column:last-child {
     margin-right: 1.5em; }
 
+/* Pages that use the list.html layout
+   ========================================================================== */
+.card-list,
+.card-home {
+  height: 100%;
+  display: block;
+  border: 1px solid #f6f8fb;
+  transition: all .2s; }
+
+.card-list:hover,
+.card-home:hover {
+  border-color: #142e7b; }
+
+.card-home {
+  min-height: 160px; }
+
+/* Pages that use the list.html layout
+   ========================================================================== */
+.list-results {
+  display: grid;
+  row-gap: 20px; }
+
+@media (min-width: 769px) {
+  .list-results {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px; } }
+
+/* Pages that use the list.html layout
+   ========================================================================== */
+.home-results {
+  display: grid;
+  row-gap: 20px; }
+
+@media (min-width: 769px) {
+  .home-results {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px; } }
+
 /* Override bootstrap tabs and pills */
 .nav.nav-pills .nav-link {
   font-size: 0.85rem;
@@ -6696,3 +6717,6 @@ a.sidebar-subtitle {
 
 body {
   background-color: #FFFFFF; }
+
+.codelibrary {
+  min-height: calc(100vh - 141px); }

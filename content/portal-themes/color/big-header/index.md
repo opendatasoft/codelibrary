@@ -25,7 +25,9 @@ resources:
   title: 'Stylesheet'
 ---
 
+{{< intro-content >}}
 ## Color - big header
+{{< /intro-content >}}
 
 {{< ods-theme >}}
 

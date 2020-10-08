@@ -7,5 +7,6 @@ resources:
   title: 'Section #:counter'
 ---
 
+{{< intro-content >}}
 # Theme color
-
+{{< /intro-content >}}

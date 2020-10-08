@@ -7,6 +7,7 @@ resources:
   title: 'Section #:counter'
 ---
 
+{{< intro-content >}}
 # Ods-analysis, a quick intro
 
 **The technical documentation says :**
@@ -19,3 +20,4 @@ _Ods-analysis is the way to get the values behind a chart ! What you can do with
 
 The syntax is different, but options and parameters are pretty similar. You have a context, an X axis, you define series, optionnaly you sort the results.
 To conclude, we can say that : **ods-analysis is the low level widget of ods-chart, its underlying layer !**
+{{< /intro-content >}}

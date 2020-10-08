@@ -7,5 +7,6 @@ resources:
   title: 'Section #:counter'
 ---
 
+{{< intro-content >}}
 # Components library - Search module
-
+{{< /intro-content >}}
