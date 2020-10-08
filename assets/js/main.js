@@ -11,3 +11,6 @@ Prism.highlightAll();
 import './van11y'
 
 //import '@fortawesome/fontawesome-free/js/all'
+
+import { responsiveNavbar } from './navbar.js';
+responsiveNavbar()
