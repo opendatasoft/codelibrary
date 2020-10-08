@@ -7,5 +7,6 @@ resources:
   title: 'Section #:counter'
 ---
 
+{{< intro-content >}}
 # Components Library - Table Module
-
+{{< /intro-content >}}
