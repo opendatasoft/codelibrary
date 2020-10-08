@@ -2,6 +2,9 @@
  * ES2015 accessible tabs panel system, using ARIA
  * Website: https://van11y.net/accessible-tab-panel/
  * License MIT: https://github.com/nico3333fr/van11y-accessible-tab-panel-aria/blob/master/LICENSE
+ *
+ * Modified to work with BULMA CSS Framework.
+ * ie. add is-active class on active tabs and panels
  */
 (doc => {
 
@@ -28,6 +31,7 @@
     const TABS_LISTITEM_STYLE = 'van11ytabs__item';
     const TABS_LINK_STYLE = 'van11ytabs__link';
     const TABS_CONTENT_STYLE = 'van11ytabs__content';
+    const TABS_IS_ACTIVE_STYLE = 'is-active';
 
     const TABS_HX_DEFAULT_CLASS = 'invisible';
 
@@ -67,6 +71,16 @@
         }
     }
 
+    const setActive = (el) => {
+        addClass(el, TABS_IS_ACTIVE_STYLE);
+        addClass(el.parentNode, TABS_IS_ACTIVE_STYLE);
+    }
+
+    const setInactive = (el) => {
+        removeClass(el, TABS_IS_ACTIVE_STYLE);
+        removeClass(el.parentNode, TABS_IS_ACTIVE_STYLE);
+    }
+
     const hasClass = (el, className) => {
         if (el.classList) {
             return el.classList.contains(className); // IE 10+
@@ -89,14 +103,14 @@
                     [ATTR_SELECTED]: 'false',
                     'tabindex': '-1'
                 });
-                removeClass(link_node,"is-active");
+                setInactive(link_node);
             });
     }
     const unSelectContents = (elts) => {
         elts
             .forEach((content_node) => {
                 content_node.setAttribute(ATTR_HIDDEN, true);
-                removeClass(content_node, "is-active");
+                setInactive(content_node);
             });
     }
 
@@ -106,9 +120,9 @@
             [ATTR_SELECTED]: 'true',
             'tabindex': '0'
         });
-        addClass(el,"is-active");
+        addClass(el,"is-active"); addClass(el.parentNode,"is-active");
         destination.removeAttribute(ATTR_HIDDEN);
-        addClass(destination,"is-active");
+        addClass(destination,"is-active"); addClass(destination.parentNode,"is-active");
         setTimeout(function () {
             el.focus();
         }, 0);
@@ -224,7 +238,7 @@
                         'tabindex': '-1',
                         [ATTR_SELECTED]: 'false'
                     });
-                    removeClass(tabListLink, "is-active");
+                    setInactive(tabListLink);
 
                     // panel controlled
                     setAttributes(panelControlled, {
@@ -233,7 +247,7 @@
                         [ATTR_LABELLEDBY]: TABS_PREFIX_IDS + idHref
                     });
                     addClass(panelControlled, prefixClassName + TABS_CONTENT_STYLE);
-                    removeClass(panelControlled, "is-active");
+                    setInactive(panelControlled);
 
                     // if already selected
                     if (panelSelected && noTabSelected) {
@@ -284,13 +298,13 @@
                                 unSelectContents($tabListPanels);
                                 // select this one
                                 nodeHashed.removeAttribute(ATTR_HIDDEN);
-                                addClass(nodeHashed, "is-active");
+                                setActive(nodeHashed);
                                 let linkHashed = findById(TABS_PREFIX_IDS + hash);
                                 setAttributes(linkHashed, {
                                     'tabindex': '0',
                                     [ATTR_SELECTED]: 'true'
                                 });
-                                addClass(linkHashed, "is-active");
+                                setActive(linkHashed);
                                 noTabSelected = false;
                             } else {
                                 // search if hash is IN tabs
@@ -302,13 +316,13 @@
                                     // select this one
                                     let panelParent = findById(panelParentId);
                                     panelParent.removeAttribute(ATTR_HIDDEN);
-                                    addClass(panelParent, "is-active");
+                                    setActive(panelParent);
                                     let linkParent = findById(TABS_PREFIX_IDS + panelParentId);
                                     setAttributes(linkParent, {
                                         'tabindex': '0',
                                         [ATTR_SELECTED]: 'true'
                                     });
-                                    addClass(linkParent, "is-active");
+                                    setActive(linkParent);
                                     noTabSelected = false;
                                 }
                             }
@@ -322,10 +336,10 @@
                         'tabindex': '0',
                         [ATTR_SELECTED]: 'true'
                     });
-                    addClass($tabListLinks[0], "is-active");
+                    setActive($tabListLinks[0]);
                     let panelFirst = findById($tabListLinks[0].getAttribute(ATTR_CONTROLS));
                     panelFirst.removeAttribute(ATTR_HIDDEN);
-                    addClass(panelFirst, "is-active");
+                    setActive(panelFirst);
                 }
 
             });
