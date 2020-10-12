@@ -1,3 +1,16 @@
+export const addAnchorsToHeaders = () => {
+    var img = document.createElement('img');
+    img.src = '/img/fas-link.svg';
+    var h2s = document.querySelectorAll('.content h2');
+    h2s.forEach((el) => {
+        var a = document.createElement('a');
+        a.classList.add('anchor-link');
+        a.href = "#" + el.id;
+        a.appendChild(img.cloneNode());
+        el.appendChild(a);
+    });
+}
+
 function slugify(separator = "-") {
     return this
         .toString()
@@ -9,4 +22,4 @@ function slugify(separator = "-") {
         .replace(/\s+/g, separator);
 };
 
-export default () => { slugify }
+export default () => { addAnchorsToHeaders, slugify }

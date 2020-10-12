@@ -1,5 +1,8 @@
 import { initCopyToCB } from './copy.js'
-window.addEventListener("DOMContentLoaded", initCopyToCB, {once: true})
+window.addEventListener("DOMContentLoaded", initCopyToCB, {once: true});
+
+import { addAnchorsToHeaders } from './utils'
+window.addEventListener("DOMContentLoaded", addAnchorsToHeaders);
 
 import { initSearch } from './algolia.js'
 initSearch();
