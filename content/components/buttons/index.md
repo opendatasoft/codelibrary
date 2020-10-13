@@ -7,6 +7,5 @@ resources:
   title: 'Section #:counter'
 ---
 
-{{< intro-content >}}
+
 # Components library - Buttons
-{{< /intro-content >}}

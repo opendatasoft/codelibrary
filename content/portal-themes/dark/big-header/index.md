@@ -25,9 +25,9 @@ resources:
   title: 'Stylesheet'
 ---
 
-{{< intro-content >}}
+
 ## Big header
-{{< /intro-content >}}
+
 
 {{< ods-theme >}}
 
