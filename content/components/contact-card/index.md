@@ -6,7 +6,4 @@ resources:
 - src: '*/'
   title: 'Section #:counter'
 ---
-
-{{< intro-content >}}
 # Components library - Contact Card
-{{< /intro-content >}}
