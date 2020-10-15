@@ -7,6 +7,6 @@ resources:
   title: 'Section #:counter'
 ---
 
-{{< intro-content >}}
+
 # Observatory 
-{{< /intro-content >}}
+

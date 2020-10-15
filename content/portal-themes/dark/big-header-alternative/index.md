@@ -25,10 +25,10 @@ resources:
   title: 'Stylesheet'
 ---
 
-{{< intro-content >}}
-## Big header alternative
-{{< /intro-content >}}
 
-{{< ods-theme >}}
+## Big header alternative
+
+
+
 
 

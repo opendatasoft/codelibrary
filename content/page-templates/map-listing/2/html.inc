@@ -19,6 +19,10 @@
                          ctx-domain="{{ domain }}"
                          ctx-dataset="{{ datasetid }}">
 
+        <span ng-repeat="field in ctx.dataset.fields">
+            {{ ctxfields[field.name] = field.label; '' }}
+        </span>
+
         <aside class="modal">
             <div class="modal-header">
                 <h1 class="modal-title">
@@ -137,6 +141,9 @@
                  toolbar-fullscreen="false">
             <ods-map-layer-group>
                 <ods-map-layer context="ctx"
+                               refine-on-click-context="ctx"
+                               refine-on-click-map-field="{{ resultTitle }}"
+                               refine-on-click-context-field="{{ resultTitle }}"
                                color="#0098c3"
                                picto="college"
                                show-marker="true"

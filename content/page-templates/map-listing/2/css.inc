@@ -1,7 +1,8 @@
 /* General Layout
 ========================================================================== */
 
-.main--page {
+body, .main--page {
+    padding: 0;
     margin: 0;
 }
 
@@ -114,8 +115,13 @@ ods-dataset-context {
     margin-bottom: 20px;
 }
 
+.filter-list > div {
+    width: 100%;
+}
+
 .dropdown {
     display: inline-block;
+    width: 100%;
     margin: 13px 0 0 0;
     position: relative;
 }
@@ -123,6 +129,7 @@ ods-dataset-context {
 /* Button */
 
 .dropdown-button {
+    width: 100%;
     font-size: 1rem;
     color: var(--text);
     border: 1px solid #cbd2db;
@@ -157,7 +164,7 @@ ods-dataset-context {
     border: 1px solid #dee5ef;
     border-radius: 4px;
     box-shadow: 0px 2px 4px rgba(0,0,0,0.15);
-    max-width: 350px;
+    width: 100%;
     overflow-x: auto;
     visibility: hidden;
     opacity: 0;

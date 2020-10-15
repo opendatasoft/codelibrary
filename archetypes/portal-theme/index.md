@@ -27,6 +27,6 @@ resources:
 
 ## Theme
 
-{{< ods-theme >}}
+
 
 
