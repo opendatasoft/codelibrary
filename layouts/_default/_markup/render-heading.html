@@ -1,6 +1,8 @@
 <h{{ .Level }} class="title" id="{{ .Anchor | safeURL }}">
   {{ .Text | safeHTML }}
-  <a class="is-link" href="#{{ .Anchor | safeURL }}">
-    #
-  </a>
+  {{ if gt .Level 1 }}
+    <a class="is-link" href="#{{ .Anchor | safeURL }}">
+      <img src="/img/fas-link.svg" />
+    </a>
+  {{ end }}
 </h{{ .Level }}>
