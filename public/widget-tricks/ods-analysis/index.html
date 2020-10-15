@@ -247,6 +247,7 @@ To conclude, we can say that : <strong>ods-analysis is the low level widget of o
     
     <div class="container">
         <div class="box box-example">
+          <div class="content">
             <h2 class="title" id="what-an-ods-analysis-results-object-looks-like">
   What an ods-analysis results object looks like
   
@@ -259,6 +260,8 @@ To conclude, we can say that : <strong>ods-analysis is the low level widget of o
 It&rsquo;s value is a json array and each item contains the <strong>x</strong> value of the analysis, and <strong>one to many series</strong>.</p>
 <p>Compare, side-by-side the ods-chart values and the ods-analysis results. They both have the same settings (x axis, series, number of results and sort parameters)</p>
 
+          </div>
+          
 
 
 <div class="codepen">
@@ -283,11 +286,11 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
 
 <div class="ods-content">
     <section class="box box-live-example">
-      <iframe id="iframe-ods-analysis-1"
+        <iframe id="iframe-ods-analysis-1"
                 width="100%" height="100%"
                 src="about:blank"
                 srcdoc="
-        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+          <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
 
@@ -329,12 +332,10 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
     });
 &lt;/script&gt;
 
-          
-          <!--link rel='stylesheet' href='/scss/main.css' /-->
-        </head>
-        <body>
-        <div ng-app='ods-widgets'>
-            &lt;ods-dataset-context context=&#34;shanghaiworlduniversityranking&#34;
+          </head>
+          <body>
+          <div ng-app='ods-widgets'>
+              &lt;ods-dataset-context context=&#34;shanghaiworlduniversityranking&#34;
                      shanghaiworlduniversityranking-dataset=&#34;shanghai-world-university-ranking&#34;
                      shanghaiworlduniversityranking-domain=&#34;public&#34;
                      shanghaiworlduniversityranking-parameters=&#34;{&#39;sort&#39;:&#39;world_rank&#39;}&#34;&gt;
@@ -382,12 +383,12 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/ods-dataset-context&gt;
-        </div>
-        <style type='text/css'>
-            
-        </style>
-        </body>
-        ">
+          </div>
+          <style type='text/css'>
+              
+          </style>
+          </body>
+          ">
         </iframe>
     </section>
 
@@ -508,12 +509,12 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
     });
 </script>
 
-
         </div>
     </div>
     
     <div class="container">
         <div class="box box-example">
+          <div class="content">
             <h2 class="title" id="top-10">
   Top 10
   
@@ -524,6 +525,8 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
 </h2>
 <p>Like with charts, it&rsquo;s conveniant to use ods-analysis to sort aggregations by the computed serie (like for exemple the sum or average of numerical fields). In this example, the ods-analysis results object is used to print lines of an HTML table to display the information as a table.</p>
 
+          </div>
+          
 
 
 <div class="codepen">
@@ -548,11 +551,11 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
 
 <div class="ods-content">
     <section class="box box-live-example">
-      <iframe id="iframe-ods-analysis-2"
+        <iframe id="iframe-ods-analysis-2"
                 width="100%" height="100%"
                 src="about:blank"
                 srcdoc="
-        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+          <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
 
@@ -594,12 +597,10 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
     });
 &lt;/script&gt;
 
-          
-          <!--link rel='stylesheet' href='/scss/main.css' /-->
-        </head>
-        <body>
-        <div ng-app='ods-widgets'>
-            &lt;ods-dataset-context context=&#34;population&#34;
+          </head>
+          <body>
+          <div ng-app='ods-widgets'>
+              &lt;ods-dataset-context context=&#34;population&#34;
                      population-domain=&#34;discovery&#34;
                      population-dataset=&#34;population-millesimee-communes-2016@public&#34;&gt;
     &lt;div class=&#34;row&#34;&gt;
@@ -639,9 +640,9 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
     &lt;/div&gt;
 &lt;/ods-dataset-context&gt;
 
-        </div>
-        <style type='text/css'>
-            #top10 table {
+          </div>
+          <style type='text/css'>
+              #top10 table {
     width: 100%;
 }
 #top10 tr th, #top10 tr td {
@@ -670,9 +671,9 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
     font-size: 1.2em;
 }
 
-        </style>
-        </body>
-        ">
+          </style>
+          </body>
+          ">
         </iframe>
     </section>
 
@@ -813,12 +814,12 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
     });
 </script>
 
-
         </div>
     </div>
     
     <div class="container">
         <div class="box box-example">
+          <div class="content">
             <h2 class="title" id="minmax-bestworst-sizelength">
   Min/Max, Best/Worst, Size/Length
   
@@ -831,6 +832,8 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
 <p>When you analyse your domain statistics, you can compute an ods-analysis with the user ID or IP address as the X axis, and then get the length of the ods-analysis results. It then correspond to the number of different users that reached your domain.</p>
 <p>In the following example, we get the best or worst universities, by ranking score.</p>
 
+          </div>
+          
 
 
 <div class="codepen">
@@ -855,11 +858,11 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
 
 <div class="ods-content">
     <section class="box box-live-example">
-      <iframe id="iframe-ods-analysis-3"
+        <iframe id="iframe-ods-analysis-3"
                 width="100%" height="100%"
                 src="about:blank"
                 srcdoc="
-        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+          <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
 
@@ -901,12 +904,10 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
     });
 &lt;/script&gt;
 
-          
-          <!--link rel='stylesheet' href='/scss/main.css' /-->
-        </head>
-        <body>
-        <div ng-app='ods-widgets'>
-            &lt;ods-dataset-context context=&#34;shanghai&#34;
+          </head>
+          <body>
+          <div ng-app='ods-widgets'>
+              &lt;ods-dataset-context context=&#34;shanghai&#34;
                      shanghai-dataset=&#34;shanghai-world-university-ranking&#34;
                      shanghai-domain=&#34;public&#34;&gt;
     &lt;div class=&#34;row&#34;&gt;
@@ -991,12 +992,12 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
     &lt;/div&gt;
 &lt;/ods-dataset-context&gt;
 
-        </div>
-        <style type='text/css'>
-            
-        </style>
-        </body>
-        ">
+          </div>
+          <style type='text/css'>
+              
+          </style>
+          </body>
+          ">
         </iframe>
     </section>
 
@@ -1154,12 +1155,12 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
     });
 </script>
 
-
         </div>
     </div>
     
     <div class="container">
         <div class="box box-example">
+          <div class="content">
             <h2 class="title" id="multiple-aggregations-at-once">
   Multiple aggregations at once
   
@@ -1170,6 +1171,8 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
 </h2>
 <p>Instead of using several contexts filtered on several values of the same field, and then computing an <strong>ods-aggregation</strong> for each context. An <strong>ods-analysis</strong> if often the good choice to compute them all with only one API Call (it&rsquo;s way faster and more efficient).</p>
 
+          </div>
+          
 
 
 <div class="codepen">
@@ -1194,11 +1197,11 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
 
 <div class="ods-content">
     <section class="box box-live-example">
-      <iframe id="iframe-ods-analysis-4"
+        <iframe id="iframe-ods-analysis-4"
                 width="100%" height="100%"
                 src="about:blank"
                 srcdoc="
-        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+          <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
 
@@ -1240,12 +1243,10 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
     });
 &lt;/script&gt;
 
-          
-          <!--link rel='stylesheet' href='/scss/main.css' /-->
-        </head>
-        <body>
-        <div ng-app='ods-widgets'>
-            &lt;ods-dataset-context context=&#34;population&#34;
+          </head>
+          <body>
+          <div ng-app='ods-widgets'>
+              &lt;ods-dataset-context context=&#34;population&#34;
                      population-domain=&#34;public&#34;
                      population-dataset=&#34;population-millesimee-communes-2016&#34;&gt;
     &lt;div class=&#34;row&#34;&gt;
@@ -1302,9 +1303,9 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
     &lt;/div&gt;
 &lt;/ods-dataset-context&gt;
 
-        </div>
-        <style type='text/css'>
-            .kpi-bloc {
+          </div>
+          <style type='text/css'>
+              .kpi-bloc {
     border: 1px solid;
     padding: 2px;
     margin-bottom: 15px;
@@ -1331,9 +1332,9 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
 .ratio {
     font-size: 0.9em;
 }
-        </style>
-        </body>
-        ">
+          </style>
+          </body>
+          ">
         </iframe>
     </section>
 
@@ -1489,12 +1490,12 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
     });
 </script>
 
-
         </div>
     </div>
     
     <div class="container">
         <div class="box box-example">
+          <div class="content">
             <h2 class="title" id="htmlcss-home-made-chart">
   HTML/CSS Home-made chart
   
@@ -1506,6 +1507,8 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
 <p>For specific cases, <strong>ods-analysis, combined with some advanced HTML and CSS</strong> can be a complex but smart choice for data visualizations.</p>
 <p>In this example, a very simple bar chart is made by creating one line for each X values, the width of the bar is defined by its serie. Then, by clicking on the bar, it expends and opens a chart to have more details on the selected information.</p>
 
+          </div>
+          
 
 
 <div class="codepen">
@@ -1530,11 +1533,11 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
 
 <div class="ods-content">
     <section class="box box-live-example">
-      <iframe id="iframe-ods-analysis-5"
+        <iframe id="iframe-ods-analysis-5"
                 width="100%" height="100%"
                 src="about:blank"
                 srcdoc="
-        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+          <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
 
@@ -1576,12 +1579,10 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
     });
 &lt;/script&gt;
 
-          
-          <!--link rel='stylesheet' href='/scss/main.css' /-->
-        </head>
-        <body>
-        <div ng-app='ods-widgets'>
-            &lt;ods-dataset-context context=&#34;populationmillesime&#34;
+          </head>
+          <body>
+          <div ng-app='ods-widgets'>
+              &lt;ods-dataset-context context=&#34;populationmillesime&#34;
            populationmillesime-domain=&#34;public&#34;
            populationmillesime-dataset=&#34;population-francaise-communes&#34;
            populationmillesime-parameters=&#34;{&#39;refine.annee_recensement&#39;:&#39;2016&#39;}&#34;&gt;
@@ -1658,9 +1659,9 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
     &lt;/div&gt;
 &lt;/ods-dataset-context&gt;
 
-        </div>
-        <style type='text/css'>
-            .homemadechart__line {
+          </div>
+          <style type='text/css'>
+              .homemadechart__line {
     position: relative;
     width: 100%;
     margin: 5px 0;
@@ -1707,9 +1708,9 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
     padding: 20px 30px 0px;
 }
 
-        </style>
-        </body>
-        ">
+          </style>
+          </body>
+          ">
         </iframe>
     </section>
 
@@ -1905,12 +1906,12 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
     });
 </script>
 
-
         </div>
     </div>
     
     <div class="container">
         <div class="box box-example">
+          <div class="content">
             <h2 class="title" id="toobject-angularjs-filter">
   <strong>toObject</strong> AngularJS filter
   
@@ -1922,6 +1923,8 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
 <p>A custom AngularJS filter can help to switch from a json array to a json dict by defining the desired key contained in the array items.</p>
 <p>The main usage is to pick specific items easily in the json object instead of iterating over each elements.</p>
 
+          </div>
+          
 
 
 <div class="codepen">
@@ -1946,11 +1949,11 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
 
 <div class="ods-content">
     <section class="box box-live-example">
-      <iframe id="iframe-ods-analysis-6"
+        <iframe id="iframe-ods-analysis-6"
                 width="100%" height="100%"
                 src="about:blank"
                 srcdoc="
-        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+          <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
 
@@ -1992,12 +1995,10 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
     });
 &lt;/script&gt;
 
-          
-          <!--link rel='stylesheet' href='/scss/main.css' /-->
-        </head>
-        <body>
-        <div ng-app='ods-widgets'>
-            &lt;ods-dataset-context context=&#34;shanghaiworlduniversityranking&#34;
+          </head>
+          <body>
+          <div ng-app='ods-widgets'>
+              &lt;ods-dataset-context context=&#34;shanghaiworlduniversityranking&#34;
                      shanghaiworlduniversityranking-dataset=&#34;shanghai-world-university-ranking&#34;
                      shanghaiworlduniversityranking-domain=&#34;public&#34;
                      shanghaiworlduniversityranking-parameters=&#34;{&#39;sort&#39;:&#39;world_rank&#39;}&#34;&gt;
@@ -2040,12 +2041,12 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
     &lt;/div&gt;
 &lt;/ods-dataset-context&gt;
 
-        </div>
-        <style type='text/css'>
-            
-        </style>
-        </body>
-        ">
+          </div>
+          <style type='text/css'>
+              
+          </style>
+          </body>
+          ">
         </iframe>
     </section>
 
@@ -2160,7 +2161,6 @@ It&rsquo;s value is a json array and each item contains the <strong>x</strong> v
         }, 1000);
     });
 </script>
-
 
         </div>
     </div>

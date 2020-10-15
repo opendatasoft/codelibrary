@@ -1,5 +1,6 @@
 ---
 title: "Component 4"
+height: 120
 ---
 
 

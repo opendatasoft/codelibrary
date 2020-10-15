@@ -1,5 +1,6 @@
 ---
 title: "Component 1"
+height: 70
 ---
 
 

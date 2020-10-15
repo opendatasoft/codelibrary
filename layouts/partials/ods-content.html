@@ -27,10 +27,7 @@
                 width="100%" height="100%"
                 src="about:blank"
                 srcdoc="
-          <head>
-            {{ partial "includes.html" }}
-            {{ $style := resources.Get "scss/main.scss" | resources.ToCSS }}
-            <!--link rel='stylesheet' href='{{ $style.RelPermalink }}' /-->
+          <head>{{ "/layouts/partials/includes.html" | readFile }}
           </head>
           <body>
           <div ng-app='ods-widgets'>
