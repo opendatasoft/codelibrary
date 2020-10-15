@@ -29,6 +29,6 @@ resources:
 ## Big header
 
 
-{{< ods-theme >}}
+
 
 

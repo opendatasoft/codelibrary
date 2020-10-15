@@ -1,5 +1,6 @@
 ---
 title: "Use a map as a selector and display results on the side "
+height: 120
 ---
 
 ## Use a map as a selector and display results on the side
@@ -11,5 +12,3 @@ This template propose a 2 steps dynamic view. First you propose a map with click
 
 **This template is the best solution when you desire to display a lot of information and that just can't fit in the default tooltip !**
 **N.B.:** grey areas help the user to come back to the map quickly if they want to change their selection
-
-

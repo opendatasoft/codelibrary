@@ -29,6 +29,6 @@ resources:
 ## Basic
 
 
-{{< ods-theme >}}
+
 
 

@@ -1,0 +1,25 @@
+{{ define "title" }}
+{{ .Title }} &ndash; {{ .Site.Title }}
+{{ end }}
+
+{{ define "main" }}
+
+<section>
+    <div class="content-header container is-max-desktop mb-5">
+        <div class="content">
+            {{ .Content }}
+        </div>
+    </div>
+    {{ range .Page.Resources.Match "*/index.md" }}
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            {{ .Content }}
+          </div>
+          {{ partial "ods-theme.html" .}}
+        </div>
+    </div>
+    {{ end }}
+</section>
+
+{{ end }}
