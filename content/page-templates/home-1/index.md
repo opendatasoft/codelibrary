@@ -6,6 +6,6 @@ resources:
   title: 'Section #:counter'
 ---
 
-{{< intro-content >}}
+
 # Home page 1
-{{< /intro-content >}}
+

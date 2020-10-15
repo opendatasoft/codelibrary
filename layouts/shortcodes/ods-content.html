@@ -23,13 +23,12 @@
 
 <div class="ods-content">
     <section class="box box-live-example">
-        <iframe id="iframe-{{ .Page.Title | urlize}}"
+      <iframe id="iframe-{{ .Page.Title | urlize}}"
                 width="100%" height="100%"
-                src="about:blank"
-                srcdoc="
-                <head>{{ "/layouts/partials/includes.html" | readFile }}
-        {{ $style := resources.Get "scss/main.scss" | resources.ToCSS }}
-        <!--link rel='stylesheet' href='{{ $style.RelPermalink }}' /-->
+                src="about:blank">
+        <head>{{ "/layouts/partials/includes.html" | readFile }}
+          {{ $style := resources.Get "scss/main.scss" | resources.ToCSS }}
+          <!--link rel='stylesheet' href='{{ $style.RelPermalink }}' /-->
         </head>
         <body>
         <div ng-app='ods-widgets'>
