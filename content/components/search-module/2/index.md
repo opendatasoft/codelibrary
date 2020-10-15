@@ -8,4 +8,3 @@ title: "Search module 2"
 Based on the search module above, we can add `ods-results` to list search matches
 
 
-{{< ods-content >}}

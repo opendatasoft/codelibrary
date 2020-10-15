@@ -9,4 +9,3 @@ date: 2020-08-24T15:57:58+02:00
 Some styling upgrades to the default card to give it a sleeker look.
 
 
-{{< ods-content >}}

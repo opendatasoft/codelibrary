@@ -10,4 +10,3 @@ You need to add the `table-basic` class to your table. If you want to make the h
 Check the example below to get the required CSS and HTML in order to get the dropdown button working.
 
 
-{{< ods-content >}}

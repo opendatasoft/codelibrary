@@ -10,4 +10,3 @@ A custom AngularJS filter can help to switch from a json array to a json dict by
 The main usage is to pick specific items easily in the json object instead of iterating over each elements.
 
 
-{{< ods-content >}}

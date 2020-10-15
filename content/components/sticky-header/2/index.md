@@ -9,4 +9,3 @@ Using a sticky header on top of a visualization (in this example a graph) to sho
 
 
 
-{{< ods-content >}}

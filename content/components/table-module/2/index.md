@@ -10,4 +10,3 @@ If you want to make the header of the table sticky, you will need to add a conta
 Check the example below to get the required CSS.
 
 
-{{< ods-content >}}

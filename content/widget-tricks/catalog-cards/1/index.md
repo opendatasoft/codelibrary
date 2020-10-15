@@ -9,4 +9,3 @@ date: 2020-08-24T15:57:58+02:00
 The default look & feel of catalog cards for any new Opendatasoft portal.
 
 
-{{< ods-content >}}

@@ -30,5 +30,3 @@ resources:
 
 
 {{< ods-theme >}}
-
-

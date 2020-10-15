@@ -8,4 +8,3 @@ title: "Observatory 1"
 Analytic view with KPIs and charts, map view with multiple data layers
 
 
-{{< ods-content >}}

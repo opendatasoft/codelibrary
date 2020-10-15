@@ -12,4 +12,3 @@ When you analyse your domain statistics, you can compute an ods-analysis with th
 In the following example, we get the best or worst universities, by ranking score.
 
 
-{{< ods-content >}}

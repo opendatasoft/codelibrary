@@ -11,4 +11,3 @@ For more information about how to compute metrics, see [ods-aggregation resource
 
 
 
-{{< ods-content >}}

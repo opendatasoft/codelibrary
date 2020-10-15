@@ -8,4 +8,4 @@ title: "Image card 1"
 Card with text over an image background.
 
 
-{{< ods-content >}}
+
