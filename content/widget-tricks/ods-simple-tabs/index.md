@@ -1,7 +1,7 @@
 ---
 title: "Ods-simple-tabs"
 description: "Style and layout suggestions for the ods-simple-tabs widget."
-tags: ["display"]
+tags: ["display", "navigation"]
 resources:
 - src: '*/'
   title: 'Section #:counter'
