@@ -1,5 +1,5 @@
 ---
-title: "Minimized layers control and map controls on the left "
+title: "2 - Minimized layers control and map controls on the left "
 height: 500
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Simple case"
+title: "1 - Simple case"
 height: 500
 ---
 

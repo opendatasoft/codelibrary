@@ -1,5 +1,5 @@
 ---
-title: "Custom legend - simple"
+title: "3 - Custom legend - simple"
 height: 500
 ---
 
