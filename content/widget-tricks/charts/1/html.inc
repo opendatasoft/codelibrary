@@ -53,7 +53,7 @@
                     <div class="chart-title">
                         <b>Number of winning</b> or <b>losing</b> points for <b>Super Bowl</b> events since 1967.
                     </div>
-                    <ods-dataset-context context="superbowlpublic" superbowlpublic-dataset="super-bowl" superbowlpublic-domain="public">
+                    <ods-dataset-context context="superbowlpublic" superbowlpublic-dataset="super-bowl" superbowlpublic-domain="publici">
                         <ods-chart single-y-axis="true">
                             <ods-chart-query context="superbowlpublic" field-x="date" timescale="year" stacked="normal">
                                 <ods-chart-serie expression-y="winning_pts"

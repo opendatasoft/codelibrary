@@ -7,4 +7,4 @@ resources:
   title: 'Section #:counter'
 ---
 
-# Components library -
+# Charts tricks
