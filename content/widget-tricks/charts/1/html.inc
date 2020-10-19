@@ -29,7 +29,7 @@
                     <div class="chart-title">
                         <b>Sum of available beds</b> for each types of hospital.
                     </div>
-                    <ods-dataset-context context="ushospitals" ushospitals-dataset="us-hospitals" domain="discovery">
+                    <ods-dataset-context context="ushospitals" ushospitals-dataset="us-hospitals" ushospitals-domain="userclub">
                         <ods-chart label-x="Hospital types">
                             <ods-chart-query context="ushospitals" field-x="type" sort="serie1-1">
                                 <ods-chart-serie expression-y="beds" chart-type="bar" function-y="SUM" logarithmic="true" label-y="Number of beds" color="#1E0C33" scientific-display="true">
@@ -53,7 +53,7 @@
                     <div class="chart-title">
                         <b>Number of winning</b> or <b>losing</b> points for <b>Super Bowl</b> events since 1967.
                     </div>
-                    <ods-dataset-context context="superbowlpublic" superbowlpublic-dataset="super-bowl@public">
+                    <ods-dataset-context context="superbowlpublic" superbowlpublic-dataset="super-bowl" superbowlpublic-domain="public">
                         <ods-chart single-y-axis="true">
                             <ods-chart-query context="superbowlpublic" field-x="date" timescale="year" stacked="normal">
                                 <ods-chart-serie expression-y="winning_pts"
