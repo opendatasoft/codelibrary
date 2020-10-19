@@ -1,5 +1,5 @@
 ---
-title: "ods-range-slider"
+title: "Timeline Custom View"
 description: ""
 tags: ["display", "navigation", "list"]
 resources:
@@ -7,4 +7,4 @@ resources:
   title: 'Section #:counter'
 ---
 
-# Timeline custom view
+# Timeline Custom View
