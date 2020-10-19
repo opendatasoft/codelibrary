@@ -1,8 +1,6 @@
 ---
-title: "Component 1"
-height: 70
+title: "Dashboard"
+height: 800
 ---
 
-## Component
-
-Text
+Get straight to the point with this efficient dashboard layout. 
