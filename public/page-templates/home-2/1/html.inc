@@ -120,12 +120,12 @@
         <div class="content-card">
             <div class="row">
                 <div class="col-sm-6">
-                    <ods-dataset-context context="donneesairfranceklm" donneesairfranceklm-dataset="donnees-air-france-klm">
-                        <ods-map no-refit="true" scroll-wheel-zoom="false" location="4,39.43619,12.7002" display-legend="false">
-                            <ods-map-layer-group>
-                                <ods-map-layer context="donneesairfranceklm" color="#C32D1C" picto="ods-circle" show-marker="true" display="auto" shape-opacity="0.5" point-opacity="1" border-color="#FFFFFF" border-opacity="1" border-size="1" border-pattern="solid" caption="true" title="Données Air France KLM" size="4" size-min="3" size-max="5" size-function="linear" ></ods-map-layer>
-                            </ods-map-layer-group>
-                        </ods-map>
+                    <ods-dataset-context context="ctx"
+                                         ctx-domain="userclub"
+                                         ctx-dataset="base-nationale-des-lieux-de-covoiturage-en-france"
+                                         ctx-parameters="{'refine.reg_name':'Pays de la Loire'}">
+                        <ods-map context="ctx" scroll-wheel-zoom="false" basemap="jawg.streets"></ods-map>
+
                     </ods-dataset-context>
                 </div>
                 <div class="col-sm-6">
@@ -151,15 +151,17 @@
         <div class="content-card">
             <div class="row">
                 <div class="col-sm-6">
-                    <ods-dataset-context context="oilprices" oilprices-dataset="oil-prices" oilprices-parameters="{'timezone':'Europe/Berlin'}">
-                        <ods-chart timescale="month" align-month="true">
-                            <ods-chart-query context="oilprices" field-x="date" maxpoints="0" timescale="month">
-                                <ods-chart-serie expression-y="brent_spot_price" chart-type="areaspline" function-y="AVG" color="#142E7B" scientific-display="true">
-                                </ods-chart-serie>
-                                <ods-chart-serie expression-y="wti_spot_price" chart-type="areaspline" function-y="STDDEV" color="#00C7B1" scientific-display="true">
+                    <ods-dataset-context context="ctx"
+                                         ctx-domain="userclub"
+                                         ctx-dataset="base-nationale-des-lieux-de-covoiturage-en-france"
+                                         ctx-parameters="{'timezone':'Europe/Berlin'}">
+                        <ods-chart single-y-axis="true" scientific-display="true" labels-x-length="20" align-month="true">
+                            <ods-chart-query context="ctx" field-x="reg_name" maxpoints="0" sort="serie1-1">
+                                <ods-chart-serie expression-y="spot_size" chart-type="bar" function-y="SUM" color="#EC643C" scientific-display="true">
                                 </ods-chart-serie>
                             </ods-chart-query>
                         </ods-chart>
+
                     </ods-dataset-context>
                 </div>
                 <div class="col-sm-6">
@@ -191,13 +193,17 @@
                     <h2 class="content-card-title">
                         Title Chart #1
                     </h2>
-                    <ods-dataset-context context="globalairportdatabase" globalairportdatabase-dataset="globalairportdatabase">
-                        <ods-chart align-month="true">
-                            <ods-chart-query context="globalairportdatabase" field-x="column_5" maxpoints="10">
-                                <ods-chart-serie expression-y="column_15" chart-type="pie" function-y="COUNT" color="range-Dark2" scientific-display="true">
+                    <ods-dataset-context context="ctx"
+                                         ctx-domain="userclub"
+                                         ctx-dataset="base-nationale-des-lieux-de-covoiturage-en-france"
+                                         ctx-parameters="{'timezone':'Europe/Berlin'}">
+                        <ods-chart single-y-axis="true" scientific-display="true" labels-x-length="20" align-month="true">
+                            <ods-chart-query context="ctx" field-x="reg_name" maxpoints="0" sort="serie1-1">
+                                <ods-chart-serie expression-y="spot_size" chart-type="bar" function-y="SUM" color="#EC643C" scientific-display="true">
                                 </ods-chart-serie>
                             </ods-chart-query>
                         </ods-chart>
+
                     </ods-dataset-context>
                 </div>
             </div>
@@ -207,15 +213,17 @@
                     <h2 class="content-card-title">
                         Title Chart #2
                     </h2>
-                    <ods-dataset-context context="worldbankglobalfinancialdevelopment" worldbankglobalfinancialdevelopment-dataset="worldbank-global-financial-development" worldbankglobalfinancialdevelopment-parameters="{'timezone':'Europe/Berlin'}">
-                        <ods-chart timescale="year" display-legend="false" align-month="false">
-                            <ods-chart-query context="worldbankglobalfinancialdevelopment" field-x="year" maxpoints="0" timescale="year">
-                                <ods-chart-serie expression-y="value" chart-type="arearange" function-y="COUNT" color="#8da0cb" scientific-display="true" subseries='[{"func":"MIN","yAxis":"value"},{"func":"MAX","yAxis":"value"}]'>
-                                </ods-chart-serie>
-                                <ods-chart-serie expression-y="value" chart-type="line" function-y="AVG" color="#fc8d62" scientific-display="true">
+                    <ods-dataset-context context="ctx"
+                                         ctx-domain="userclub"
+                                         ctx-dataset="base-nationale-des-lieux-de-covoiturage-en-france"
+                                         ctx-parameters="{'timezone':'Europe/Berlin'}">
+                        <ods-chart single-y-axis="true" scientific-display="true" labels-x-length="20" align-month="true">
+                            <ods-chart-query context="ctx" field-x="reg_name" maxpoints="0" sort="serie1-1">
+                                <ods-chart-serie expression-y="spot_size" chart-type="bar" function-y="SUM" color="#EC643C" scientific-display="true">
                                 </ods-chart-serie>
                             </ods-chart-query>
                         </ods-chart>
+
                     </ods-dataset-context>
                 </div>
             </div>

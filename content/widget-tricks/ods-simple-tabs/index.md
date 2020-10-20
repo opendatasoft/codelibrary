@@ -1,5 +1,5 @@
 ---
-title: "Ods-simple-tabs"
+title: "ods-simple-tabs"
 description: "Style and layout suggestions for the ods-simple-tabs widget."
 tags: ["display", "navigation"]
 resources:

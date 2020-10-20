@@ -1,0 +1,1732 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+    <title>
+        
+Filters as an HTML Select &ndash; Codelibrary
+
+    </title>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41201218-21"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-41201218-21');
+    </script>
+
+    
+    
+
+    
+    
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css"
+          integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8="
+          crossorigin="anonymous">
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href="/scss/main.css" />
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png">
+    <link rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png">
+    <link rel="shortcut icon"
+          href="/favicon.ico">
+</head>
+
+<body>
+
+<nav class="navbar is-fixed-top"
+     role="navigation"
+     aria-label="Main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item"
+           href="/"
+           title="Back to the homepage">
+            <img src="/img/ods-logo-helphub.svg"
+                 alt="Helphub Logo"/>
+        </a>
+        <button class="navbar-burger burger"
+                type="button"
+                data-target="helphubNavbar"
+                aria-controls="helphubNavbar"
+                aria-expanded="false"
+                aria-label="Menu">
+            Help Hub
+        </button>
+    </div>
+    <div class="navbar-menu"
+         id="helphubNavbar">
+        <div class="navbar-start">
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/">
+                Help Hub
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/platform/en/">
+                User guide
+            </a>
+            <a class="navbar-item is-active"
+               href="https://discovery.opendatasoft.com">
+                Code Library
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/faq-glossary/en/">
+                FAQ
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/widgets/">
+                Widgets
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/en/apis/">
+                APIs
+            </a>
+            <a class="navbar-item"
+               href="https://academy.opendatasoft.com/page/homepage">
+                Academy
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="columns codelibrary">
+    <div class="column is-narrow">
+        <aside class="sidebar menu">
+    <a href="https://codelibrary.opendatasoft.com"
+       class="sidebar-logo-link"
+       title="Go to Codelibrary homepage">
+        <img src="/img/ods-codelibrary-logo.svg"
+             class="sidebar-logo"
+             alt="Codelibrary Logo">
+    </a>
+
+    <div id="algolia-box"></div>
+    <div id="algolia-results"></div>
+
+    
+    <ul class="menu-list">
+        <li>
+            <a class="sidebar-subtitle"
+               href="https://codelibrary.opendatasoft.com">
+                Home
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="/components/"
+               class="sidebar-subtitle">
+                Components
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a href="/page-templates/"
+               class="sidebar-subtitle">
+                Page templates
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a href="/portal-themes/"
+               class="sidebar-subtitle">
+                Portal themes
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="sidebar-subtitle " href="/widget-tricks/">
+            Widget tricks
+            </a>
+            <ul>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/svg-maps/">SVG Maps</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/charts/">Chart Samples</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/custom-tooltip/">Custom tooltip</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/dates/">Dates</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/drill-down/">Drill-down chart</a>
+                </li>
+                
+                <li>
+                    <a class="is-active" href="https://codelibrary.opendatasoft.com/widget-tricks/filter-as-list/">Filters as an HTML Select</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-aggregation/">ods-aggregation</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-analysis/">ods-analysis</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-color-gradient/">ods-color-gradient &amp; ods-legend</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-map-tricks/">ods-map: Refine &amp; Zoom</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-map-css/">ods-map: CSS Hacks</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-pop-in/">ods-pop-in</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-date-range-slider/">ods-range-slider</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-simple-tabs/">ods-simple-tabs</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/share-print/">Share and print</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/timeline/">Timeline Custom View</a>
+                </li>
+                
+            </ul>
+        </li>
+        
+        
+    </ul>
+    <p class="menu-label">
+        Tags
+    </p>
+    <div class="tags">
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/aggregation/">
+            aggregation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/chart/">
+            chart
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/date/">
+            date
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/display/">
+            display
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/filter/">
+            filter
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/geo/">
+            geo
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/list/">
+            list
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/map/">
+            map
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/navigation/">
+            navigation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-aggregation/">
+            ods-aggregation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-analysis/">
+            ods-analysis
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-maps/">
+            ods-maps
+        </a>
+        
+    </div>
+</aside>
+
+    </div>
+    <div class="column">
+        
+
+<section>
+    <div class="content-header container is-max-desktop mb-5">
+        <div class="content">
+            <h1 class="title" id="filters-as-an-html-selects">
+  Filters as an HTML Selects
+  
+</h1>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <h2 class="title" id="simple-case">
+  Simple case
+  
+    <a class="is-link" href="#simple-case">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+<p>Powered by ods-facet-results, the simpler case, a list of choice, you pick one, it refines !</p>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-1-simple-case"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003c!-- Important here: the disjunctive (multi filter) mode for the facet to still display other values even if one is selected --\u003e\n\u003cods-dataset-context context=\&#34;swr\&#34;\n                     swr-dataset=\&#34;shanghai-world-university-ranking\&#34;\n                     swr-domain=\&#34;public\&#34;\n                     swr-parameters=\&#34;{&#39;disjunctive.country&#39;:true}\&#34;\u003e\n    \u003cdiv class=\&#34;row\&#34;\u003e\n        \u003cdiv class=\&#34;col-sm-4\&#34;\n             ods-facet-results=\&#34;items\&#34;\n             ods-facet-results-context=\&#34;swr\&#34;\n             ods-facet-results-facet-name=\&#34;country\&#34;\n             ods-facet-results-sort=\&#34;alphanum\&#34;\u003e\n            \u003ch3\u003e\n                Select a country\n            \u003c/h3\u003e\n            \u003ch5\u003e\n                \&#34;ranks\&#34;: number of ranking score over years in the dataset\n            \u003c/h5\u003e\n            \u003cselect ng-model=\&#34;swr.parameters[&#39;refine.country&#39;]\&#34;\n                    ng-options=\&#34;item.path as (item.name&#43;&#39; (&#39;&#43;item.count&#43;&#39; rank&#39;&#43;(item.count\u003e1?&#39;s&#39;:&#39;&#39;)&#43;&#39;)&#39;) for item in items\&#34;\n                    ng-selected=\&#34;swr.parameters[&#39;refine.country&#39;] == item.path\&#34;\u003e\n                \u003coption value=\&#34;\&#34;\u003e-- All countries --\u003c/option\u003e\n            \u003c/select\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;col-sm-8\&#34;\u003e\n            \u003cods-chart single-y-axis=\&#34;true\&#34; min=\&#34;0\&#34; max=\&#34;100\&#34; step=\&#34;10\&#34; labels-x-length=\&#34;30\&#34; align-month=\&#34;true\&#34;\u003e\n                \u003cods-chart-query context=\&#34;swr\&#34; field-x=\&#34;university_name\&#34; maxpoints=\&#34;10\&#34; sort=\&#34;serie1-1\&#34;\u003e\n                    \u003cods-chart-serie expression-y=\&#34;pub\&#34; chart-type=\&#34;bar\&#34; function-y=\&#34;AVG\&#34; label-y=\&#34;Average score (research paper publication)\&#34; color=\&#34;#1B6698\&#34; display-units=\&#34;false\&#34; display-values=\&#34;true\&#34; scientific-display=\&#34;false\&#34;\u003e\n                    \u003c/ods-chart-serie\u003e\n                \u003c/ods-chart-query\u003e\n            \u003c/ods-chart\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+               "css": &#34;&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-1-simple-case"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+        </head>
+        <body>
+        <div ng-app='ods-widgets'>
+            &lt;!-- Important here: the disjunctive (multi filter) mode for the facet to still display other values even if one is selected --&gt;
+&lt;ods-dataset-context context=&#34;swr&#34;
+                     swr-dataset=&#34;shanghai-world-university-ranking&#34;
+                     swr-domain=&#34;public&#34;
+                     swr-parameters=&#34;{&#39;disjunctive.country&#39;:true}&#34;&gt;
+    &lt;div class=&#34;row&#34;&gt;
+        &lt;div class=&#34;col-sm-4&#34;
+             ods-facet-results=&#34;items&#34;
+             ods-facet-results-context=&#34;swr&#34;
+             ods-facet-results-facet-name=&#34;country&#34;
+             ods-facet-results-sort=&#34;alphanum&#34;&gt;
+            &lt;h3&gt;
+                Select a country
+            &lt;/h3&gt;
+            &lt;h5&gt;
+                &#34;ranks&#34;: number of ranking score over years in the dataset
+            &lt;/h5&gt;
+            &lt;select ng-model=&#34;swr.parameters[&#39;refine.country&#39;]&#34;
+                    ng-options=&#34;item.path as (item.name&#43;&#39; (&#39;&#43;item.count&#43;&#39; rank&#39;&#43;(item.count&gt;1?&#39;s&#39;:&#39;&#39;)&#43;&#39;)&#39;) for item in items&#34;
+                    ng-selected=&#34;swr.parameters[&#39;refine.country&#39;] == item.path&#34;&gt;
+                &lt;option value=&#34;&#34;&gt;-- All countries --&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-sm-8&#34;&gt;
+            &lt;ods-chart single-y-axis=&#34;true&#34; min=&#34;0&#34; max=&#34;100&#34; step=&#34;10&#34; labels-x-length=&#34;30&#34; align-month=&#34;true&#34;&gt;
+                &lt;ods-chart-query context=&#34;swr&#34; field-x=&#34;university_name&#34; maxpoints=&#34;10&#34; sort=&#34;serie1-1&#34;&gt;
+                    &lt;ods-chart-serie expression-y=&#34;pub&#34; chart-type=&#34;bar&#34; function-y=&#34;AVG&#34; label-y=&#34;Average score (research paper publication)&#34; color=&#34;#1B6698&#34; display-units=&#34;false&#34; display-values=&#34;true&#34; scientific-display=&#34;false&#34;&gt;
+                    &lt;/ods-chart-serie&gt;
+                &lt;/ods-chart-query&gt;
+            &lt;/ods-chart&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+
+        </div>
+        <style type='text/css'>
+            
+        </style>
+        </body>
+        ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-1-simple-case-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-1-simple-case-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right">
+                <a class="button is-primary is-outlined edit-on-codepen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-1-simple-case').submit()">
+                    Edit on CodePen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-1-simple-case-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;!-- Important here: the disjunctive (multi filter) mode for the facet to still display other values even if one is selected --&gt;
+&lt;ods-dataset-context context=&#34;swr&#34;
+                     swr-dataset=&#34;shanghai-world-university-ranking&#34;
+                     swr-domain=&#34;public&#34;
+                     swr-parameters=&#34;{&#39;disjunctive.country&#39;:true}&#34;&gt;
+    &lt;div class=&#34;row&#34;&gt;
+        &lt;div class=&#34;col-sm-4&#34;
+             ods-facet-results=&#34;items&#34;
+             ods-facet-results-context=&#34;swr&#34;
+             ods-facet-results-facet-name=&#34;country&#34;
+             ods-facet-results-sort=&#34;alphanum&#34;&gt;
+            &lt;h3&gt;
+                Select a country
+            &lt;/h3&gt;
+            &lt;h5&gt;
+                &#34;ranks&#34;: number of ranking score over years in the dataset
+            &lt;/h5&gt;
+            &lt;select ng-model=&#34;swr.parameters[&#39;refine.country&#39;]&#34;
+                    ng-options=&#34;item.path as (item.name&#43;&#39; (&#39;&#43;item.count&#43;&#39; rank&#39;&#43;(item.count&gt;1?&#39;s&#39;:&#39;&#39;)&#43;&#39;)&#39;) for item in items&#34;
+                    ng-selected=&#34;swr.parameters[&#39;refine.country&#39;] == item.path&#34;&gt;
+                &lt;option value=&#34;&#34;&gt;-- All countries --&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-sm-8&#34;&gt;
+            &lt;ods-chart single-y-axis=&#34;true&#34; min=&#34;0&#34; max=&#34;100&#34; step=&#34;10&#34; labels-x-length=&#34;30&#34; align-month=&#34;true&#34;&gt;
+                &lt;ods-chart-query context=&#34;swr&#34; field-x=&#34;university_name&#34; maxpoints=&#34;10&#34; sort=&#34;serie1-1&#34;&gt;
+                    &lt;ods-chart-serie expression-y=&#34;pub&#34; chart-type=&#34;bar&#34; function-y=&#34;AVG&#34; label-y=&#34;Average score (research paper publication)&#34; color=&#34;#1B6698&#34; display-units=&#34;false&#34; display-values=&#34;true&#34; scientific-display=&#34;false&#34;&gt;
+                    &lt;/ods-chart-serie&gt;
+                &lt;/ods-chart-query&gt;
+            &lt;/ods-chart&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+</code></pre>
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-1-simple-case-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code></code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-1-simple-case";
+            iframe = document.getElementById(iframeId);
+             
+            size =  500 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <h2 class="title" id="simple-case-with-default-selection">
+  Simple case, with default selection
+  
+    <a class="is-link" href="#simple-case-with-default-selection">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+<p>A more complex case where an ods-results enumerator get a value to set a default selection</p>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-2-simple-case-with-default-selection"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;sirenepublic,sirenepublicfacetlistingonly\&#34;\n                      sirenepublic-dataset=\&#34;sirene\&#34;\n                      sirenepublic-domain=\&#34;public\&#34;\n                      sirenepublic-parameters=\&#34;{&#39;q&#39;:&#39;ddebact:[2010 TO 2019]&#39;,\n                                              &#39;disjunctive.ddebact&#39;:true}\&#34;\n                      sirenepublicfacetlistingonly-dataset=\&#34;sirene\&#34;\n                      sirenepublicfacetlistingonly-domain=\&#34;public\&#34;\n                      sirenepublicfacetlistingonly-parameters=\&#34;{&#39;q&#39;:&#39;ddebact:[2010 TO 2019]&#39;,\n                                                              &#39;disjunctive.ddebact&#39;:true}\&#34;\u003e\n    \u003cdiv class=\&#34;row\&#34;\u003e\n        \u003cdiv class=\&#34;col-sm-4\&#34;\n             ng-init=\&#34;years = {&#39;values&#39;:undefined}\&#34;\u003e\n            \u003cspan ods-facet-results=\&#34;results\&#34;\n                  ods-facet-results-context=\&#34;sirenepublicfacetlistingonly\&#34;\n                  ods-facet-results-facet-name=\&#34;ddebact\&#34;\n                  ods-facet-results-sort=\&#34;-alphanum\&#34;\u003e\n                {{ years.values = results; \&#34;\&#34; }}\n                \u003cdiv class=\&#34;filtres-facet-titre\&#34;\u003e\n                    Pick a year :\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;controler\&#34;\n                     ng-if=\&#34;years.values\&#34;\n                     ng-init=\&#34;selection = years.values[0].path\&#34;\u003e\n                    {{ sirenepublic.parameters[&#39;refine.ddebact&#39;] = selection ; &#39;&#39; }}\n                    \u003cdiv class=\&#34;input-range-with-button\&#34;\u003e\n                        \u003cdiv class=\&#34;controler-button\&#34;\n                             ng-class=\&#34;{&#39;disabled&#39;: selection == years.values[years.values.length-1].path}\&#34;\n                             ng-click=\&#34;selection = (selection == years.values[years.values.length-1].path? selection : 1*selection-1)\&#34;\u003e\n                            \u003ci class=\&#34;fa fa-angle-left\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                        \u003c/div\u003e\n                        \u003cdiv class=\&#34;controler-button controler-selection\&#34;\u003e\n                            \u003cselect ng-model=\&#34;selection\&#34;\u003e\n                                \u003coption ng-repeat=\&#34;year in years.values\&#34;\n                                        ng-selected=\&#34;selection == year.path\&#34;\n                                        value=\&#34;{{ year.path }}\&#34;\u003e\n                                    {{ year.name }} ({{ year.count | number }} companies)\n                                \u003c/option\u003e\n                            \u003c/select\u003e\n                        \u003c/div\u003e\n                        \u003cdiv class=\&#34;controler-button\&#34;\n                             ng-class=\&#34;{&#39;disabled&#39;: selection == years.values[0].path }\&#34;\n                             ng-click=\&#34;selection = (selection == years.values[0].path ? selection : 1*selection&#43;1)\&#34;\u003e\n                            \u003ci class=\&#34;fa fa-angle-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/span\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;col-sm-8\&#34;\u003e\n            \u003cods-chart ng-if=\&#34;sirenepublic.parameters[&#39;refine.ddebact&#39;]\&#34;\n                       align-month=\&#34;true\&#34;\u003e\n                \u003cods-chart-query context=\&#34;sirenepublic\&#34; field-x=\&#34;ddebact\&#34; maxpoints=\&#34;0\&#34; timescale=\&#34;month\&#34;\u003e\n                    \u003cods-chart-serie chart-type=\&#34;column\&#34; function-y=\&#34;COUNT\&#34; color=\&#34;#1B6698\&#34; scientific-display=\&#34;true\&#34;\u003e\n                    \u003c/ods-chart-serie\u003e\n                \u003c/ods-chart-query\u003e\n            \u003c/ods-chart\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+               "css": &#34;/* DATE SELECTOR */\n.input-range-with-button {\n    display: flex;\n}\n.controler-button {\n    border: 1px solid;\n    background-color: #e5e5e5;\n    border-color: #ccc;\n    font-weight: 500;\n    min-width: 42px;\n    height: 42px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n.controler-button:nth-child(1) {\n    border-radius: 0.5em 0 0 0.5em;\n}\n.controler-button:nth-child(3) {\n    border-radius: 0 0.5em 0.5em 0;\n}\n.controler-button:hover {\n    background-color: #ccc;\n}\n.controler-button.controler-selection select {\n    box-sizing: border-box;\n    -webkit-box-sizing: border-box;\n    -moz-box-sizing: border-box;\n    -webkit-appearance: none;\n    -moz-appearance: none;\n    appearance: none;\n    border: none;\n    border-radius: 0px;\n    width: 100%;\n    height: 100%;\n    padding-left: 10px;\n    padding-right: 25px;\n}\n.controler-button.controler-selection::after {\n    position:absolute;\n    right:.5rem;\n    content:&#39;\\2193&#39;;\n    pointer-events: none;\n}\n.controler-selection {\n    width: auto;\n    position: relative;\n}\n.controler-selection:hover {\n    background-color: #e5e5e5;\n}\n.controler-button.disabled {\n    color: #adadad;\n}\n.controler-button.disabled:hover {\n    cursor: inherit;\n    background-color: #e5e5e5;\n}\n      \n&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-2-simple-case-with-default-selection"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+        </head>
+        <body>
+        <div ng-app='ods-widgets'>
+            &lt;ods-dataset-context context=&#34;sirenepublic,sirenepublicfacetlistingonly&#34;
+                      sirenepublic-dataset=&#34;sirene&#34;
+                      sirenepublic-domain=&#34;public&#34;
+                      sirenepublic-parameters=&#34;{&#39;q&#39;:&#39;ddebact:[2010 TO 2019]&#39;,
+                                              &#39;disjunctive.ddebact&#39;:true}&#34;
+                      sirenepublicfacetlistingonly-dataset=&#34;sirene&#34;
+                      sirenepublicfacetlistingonly-domain=&#34;public&#34;
+                      sirenepublicfacetlistingonly-parameters=&#34;{&#39;q&#39;:&#39;ddebact:[2010 TO 2019]&#39;,
+                                                              &#39;disjunctive.ddebact&#39;:true}&#34;&gt;
+    &lt;div class=&#34;row&#34;&gt;
+        &lt;div class=&#34;col-sm-4&#34;
+             ng-init=&#34;years = {&#39;values&#39;:undefined}&#34;&gt;
+            &lt;span ods-facet-results=&#34;results&#34;
+                  ods-facet-results-context=&#34;sirenepublicfacetlistingonly&#34;
+                  ods-facet-results-facet-name=&#34;ddebact&#34;
+                  ods-facet-results-sort=&#34;-alphanum&#34;&gt;
+                {{ years.values = results; &#34;&#34; }}
+                &lt;div class=&#34;filtres-facet-titre&#34;&gt;
+                    Pick a year :
+                &lt;/div&gt;
+                &lt;div class=&#34;controler&#34;
+                     ng-if=&#34;years.values&#34;
+                     ng-init=&#34;selection = years.values[0].path&#34;&gt;
+                    {{ sirenepublic.parameters[&#39;refine.ddebact&#39;] = selection ; &#39;&#39; }}
+                    &lt;div class=&#34;input-range-with-button&#34;&gt;
+                        &lt;div class=&#34;controler-button&#34;
+                             ng-class=&#34;{&#39;disabled&#39;: selection == years.values[years.values.length-1].path}&#34;
+                             ng-click=&#34;selection = (selection == years.values[years.values.length-1].path? selection : 1*selection-1)&#34;&gt;
+                            &lt;i class=&#34;fa fa-angle-left&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;controler-button controler-selection&#34;&gt;
+                            &lt;select ng-model=&#34;selection&#34;&gt;
+                                &lt;option ng-repeat=&#34;year in years.values&#34;
+                                        ng-selected=&#34;selection == year.path&#34;
+                                        value=&#34;{{ year.path }}&#34;&gt;
+                                    {{ year.name }} ({{ year.count | number }} companies)
+                                &lt;/option&gt;
+                            &lt;/select&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;controler-button&#34;
+                             ng-class=&#34;{&#39;disabled&#39;: selection == years.values[0].path }&#34;
+                             ng-click=&#34;selection = (selection == years.values[0].path ? selection : 1*selection&#43;1)&#34;&gt;
+                            &lt;i class=&#34;fa fa-angle-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-sm-8&#34;&gt;
+            &lt;ods-chart ng-if=&#34;sirenepublic.parameters[&#39;refine.ddebact&#39;]&#34;
+                       align-month=&#34;true&#34;&gt;
+                &lt;ods-chart-query context=&#34;sirenepublic&#34; field-x=&#34;ddebact&#34; maxpoints=&#34;0&#34; timescale=&#34;month&#34;&gt;
+                    &lt;ods-chart-serie chart-type=&#34;column&#34; function-y=&#34;COUNT&#34; color=&#34;#1B6698&#34; scientific-display=&#34;true&#34;&gt;
+                    &lt;/ods-chart-serie&gt;
+                &lt;/ods-chart-query&gt;
+            &lt;/ods-chart&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+
+        </div>
+        <style type='text/css'>
+            /* DATE SELECTOR */
+.input-range-with-button {
+    display: flex;
+}
+.controler-button {
+    border: 1px solid;
+    background-color: #e5e5e5;
+    border-color: #ccc;
+    font-weight: 500;
+    min-width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.controler-button:nth-child(1) {
+    border-radius: 0.5em 0 0 0.5em;
+}
+.controler-button:nth-child(3) {
+    border-radius: 0 0.5em 0.5em 0;
+}
+.controler-button:hover {
+    background-color: #ccc;
+}
+.controler-button.controler-selection select {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 25px;
+}
+.controler-button.controler-selection::after {
+    position:absolute;
+    right:.5rem;
+    content:&#39;\2193&#39;;
+    pointer-events: none;
+}
+.controler-selection {
+    width: auto;
+    position: relative;
+}
+.controler-selection:hover {
+    background-color: #e5e5e5;
+}
+.controler-button.disabled {
+    color: #adadad;
+}
+.controler-button.disabled:hover {
+    cursor: inherit;
+    background-color: #e5e5e5;
+}
+      
+
+        </style>
+        </body>
+        ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-2-simple-case-with-default-selection-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-2-simple-case-with-default-selection-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right">
+                <a class="button is-primary is-outlined edit-on-codepen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-2-simple-case-with-default-selection').submit()">
+                    Edit on CodePen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-2-simple-case-with-default-selection-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;sirenepublic,sirenepublicfacetlistingonly&#34;
+                      sirenepublic-dataset=&#34;sirene&#34;
+                      sirenepublic-domain=&#34;public&#34;
+                      sirenepublic-parameters=&#34;{&#39;q&#39;:&#39;ddebact:[2010 TO 2019]&#39;,
+                                              &#39;disjunctive.ddebact&#39;:true}&#34;
+                      sirenepublicfacetlistingonly-dataset=&#34;sirene&#34;
+                      sirenepublicfacetlistingonly-domain=&#34;public&#34;
+                      sirenepublicfacetlistingonly-parameters=&#34;{&#39;q&#39;:&#39;ddebact:[2010 TO 2019]&#39;,
+                                                              &#39;disjunctive.ddebact&#39;:true}&#34;&gt;
+    &lt;div class=&#34;row&#34;&gt;
+        &lt;div class=&#34;col-sm-4&#34;
+             ng-init=&#34;years = {&#39;values&#39;:undefined}&#34;&gt;
+            &lt;span ods-facet-results=&#34;results&#34;
+                  ods-facet-results-context=&#34;sirenepublicfacetlistingonly&#34;
+                  ods-facet-results-facet-name=&#34;ddebact&#34;
+                  ods-facet-results-sort=&#34;-alphanum&#34;&gt;
+                {{ years.values = results; &#34;&#34; }}
+                &lt;div class=&#34;filtres-facet-titre&#34;&gt;
+                    Pick a year :
+                &lt;/div&gt;
+                &lt;div class=&#34;controler&#34;
+                     ng-if=&#34;years.values&#34;
+                     ng-init=&#34;selection = years.values[0].path&#34;&gt;
+                    {{ sirenepublic.parameters[&#39;refine.ddebact&#39;] = selection ; &#39;&#39; }}
+                    &lt;div class=&#34;input-range-with-button&#34;&gt;
+                        &lt;div class=&#34;controler-button&#34;
+                             ng-class=&#34;{&#39;disabled&#39;: selection == years.values[years.values.length-1].path}&#34;
+                             ng-click=&#34;selection = (selection == years.values[years.values.length-1].path? selection : 1*selection-1)&#34;&gt;
+                            &lt;i class=&#34;fa fa-angle-left&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;controler-button controler-selection&#34;&gt;
+                            &lt;select ng-model=&#34;selection&#34;&gt;
+                                &lt;option ng-repeat=&#34;year in years.values&#34;
+                                        ng-selected=&#34;selection == year.path&#34;
+                                        value=&#34;{{ year.path }}&#34;&gt;
+                                    {{ year.name }} ({{ year.count | number }} companies)
+                                &lt;/option&gt;
+                            &lt;/select&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;controler-button&#34;
+                             ng-class=&#34;{&#39;disabled&#39;: selection == years.values[0].path }&#34;
+                             ng-click=&#34;selection = (selection == years.values[0].path ? selection : 1*selection&#43;1)&#34;&gt;
+                            &lt;i class=&#34;fa fa-angle-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-sm-8&#34;&gt;
+            &lt;ods-chart ng-if=&#34;sirenepublic.parameters[&#39;refine.ddebact&#39;]&#34;
+                       align-month=&#34;true&#34;&gt;
+                &lt;ods-chart-query context=&#34;sirenepublic&#34; field-x=&#34;ddebact&#34; maxpoints=&#34;0&#34; timescale=&#34;month&#34;&gt;
+                    &lt;ods-chart-serie chart-type=&#34;column&#34; function-y=&#34;COUNT&#34; color=&#34;#1B6698&#34; scientific-display=&#34;true&#34;&gt;
+                    &lt;/ods-chart-serie&gt;
+                &lt;/ods-chart-query&gt;
+            &lt;/ods-chart&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+</code></pre>
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-2-simple-case-with-default-selection-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>/* DATE SELECTOR */
+.input-range-with-button {
+    display: flex;
+}
+.controler-button {
+    border: 1px solid;
+    background-color: #e5e5e5;
+    border-color: #ccc;
+    font-weight: 500;
+    min-width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.controler-button:nth-child(1) {
+    border-radius: 0.5em 0 0 0.5em;
+}
+.controler-button:nth-child(3) {
+    border-radius: 0 0.5em 0.5em 0;
+}
+.controler-button:hover {
+    background-color: #ccc;
+}
+.controler-button.controler-selection select {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 25px;
+}
+.controler-button.controler-selection::after {
+    position:absolute;
+    right:.5rem;
+    content:&#39;\2193&#39;;
+    pointer-events: none;
+}
+.controler-selection {
+    width: auto;
+    position: relative;
+}
+.controler-selection:hover {
+    background-color: #e5e5e5;
+}
+.controler-button.disabled {
+    color: #adadad;
+}
+.controler-button.disabled:hover {
+    cursor: inherit;
+    background-color: #e5e5e5;
+}
+      
+</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-2-simple-case-with-default-selection";
+            iframe = document.getElementById(iframeId);
+             
+            size =  500 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <h2 class="title" id="year-selector-with-previous-and-next-buttons">
+  Year selector with previous and next buttons
+  
+    <a class="is-link" href="#year-selector-with-previous-and-next-buttons">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+<p>Still powered by ods-facet-results, a date scenario where the year is the value selection, and arrows can increase or descrease the selected year, impacting also the HTML select selection.</p>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-3-year-selector-with-previous-and-next-buttons"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003c!-- Important here: in addition of the important disjunctive param, you need to think about the sort param to get the expected 1st record with ods-results --\u003e\n\u003cods-dataset-context context=\&#34;swr\&#34;\n                      swr-dataset=\&#34;shanghai-world-university-ranking\&#34;\n                      swr-domain=\&#34;public\&#34;\n                     swr-parameters=\&#34;{&#39;disjunctive.country&#39;:true,\n                                     &#39;sort&#39;:&#39;total_score&#39;}\&#34;\n                     ng-init=\&#34;default = {&#39;selection&#39;:undefined}\&#34;\u003e\n    \u003c!-- Important here: store the result in a global variable to use it later --\u003e\n    \u003cspan ng-repeat=\&#34;item in items\&#34; ods-results=\&#34;items\&#34; ods-results-context=\&#34;swr\&#34; ods-results-max=\&#34;1\&#34;\u003e\n        {{ default.selection = item.fields.country ; \&#34;\&#34; }}\n    \u003c/span\u003e\n    \u003cdiv class=\&#34;row\&#34;\u003e\n        \u003cdiv class=\&#34;col-sm-4\&#34;\u003e\n            \u003ch3\u003e\n                Select a country\n            \u003c/h3\u003e\n            \u003ch5\u003e\n                Default selection: country having the university with the best score.\n            \u003c/h5\u003e\n            \u003c!-- Important here: ng-init is executed only once, it&#39;s perfect to set the first refine at start-up --\u003e\n            \u003c!-- Important here: only display the select once default.selection exists --\u003e\n            \u003cselect ng-if=\&#34;default.selection\&#34;\n                    ng-model=\&#34;swr.parameters[&#39;refine.country&#39;]\&#34;\n                    ng-init=\&#34;swr.parameters[&#39;refine.country&#39;] = default.selection\&#34;\u003e\n                \u003coption ods-facet-results=\&#34;items\&#34;\n                        ods-facet-results-context=\&#34;swr\&#34;\n                        ods-facet-results-facet-name=\&#34;country\&#34;\n                        ods-facet-results-sort=\&#34;alphanum\&#34;\n                        ng-repeat=\&#34;item in items\&#34;\n                        value=\&#34;{{item.name}}\&#34;\n                        ng-selected=\&#34;item.name == default.selection\&#34;\u003e\n                    {{item.name}} ({{item.count}} rank{{item.count\u003e1?&#39;s&#39;:&#39;&#39;}})\n                \u003c/option\u003e\n            \u003c/select\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;col-sm-8\&#34;\u003e\n            \u003cods-chart single-y-axis=\&#34;true\&#34; min=\&#34;0\&#34; max=\&#34;100\&#34; step=\&#34;10\&#34; labels-x-length=\&#34;30\&#34; align-month=\&#34;true\&#34;\u003e\n                \u003cods-chart-query context=\&#34;swr\&#34; field-x=\&#34;university_name\&#34; maxpoints=\&#34;10\&#34; sort=\&#34;serie1-1\&#34;\u003e\n                    \u003cods-chart-serie expression-y=\&#34;pub\&#34; chart-type=\&#34;bar\&#34; function-y=\&#34;AVG\&#34; label-y=\&#34;Average score (research paper publication)\&#34; color=\&#34;#1B6698\&#34; display-units=\&#34;false\&#34; display-values=\&#34;true\&#34; scientific-display=\&#34;false\&#34;\u003e\n                    \u003c/ods-chart-serie\u003e\n                \u003c/ods-chart-query\u003e\n            \u003c/ods-chart\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+               "css": &#34;&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-3-year-selector-with-previous-and-next-buttons"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+        </head>
+        <body>
+        <div ng-app='ods-widgets'>
+            &lt;!-- Important here: in addition of the important disjunctive param, you need to think about the sort param to get the expected 1st record with ods-results --&gt;
+&lt;ods-dataset-context context=&#34;swr&#34;
+                      swr-dataset=&#34;shanghai-world-university-ranking&#34;
+                      swr-domain=&#34;public&#34;
+                     swr-parameters=&#34;{&#39;disjunctive.country&#39;:true,
+                                     &#39;sort&#39;:&#39;total_score&#39;}&#34;
+                     ng-init=&#34;default = {&#39;selection&#39;:undefined}&#34;&gt;
+    &lt;!-- Important here: store the result in a global variable to use it later --&gt;
+    &lt;span ng-repeat=&#34;item in items&#34; ods-results=&#34;items&#34; ods-results-context=&#34;swr&#34; ods-results-max=&#34;1&#34;&gt;
+        {{ default.selection = item.fields.country ; &#34;&#34; }}
+    &lt;/span&gt;
+    &lt;div class=&#34;row&#34;&gt;
+        &lt;div class=&#34;col-sm-4&#34;&gt;
+            &lt;h3&gt;
+                Select a country
+            &lt;/h3&gt;
+            &lt;h5&gt;
+                Default selection: country having the university with the best score.
+            &lt;/h5&gt;
+            &lt;!-- Important here: ng-init is executed only once, it&#39;s perfect to set the first refine at start-up --&gt;
+            &lt;!-- Important here: only display the select once default.selection exists --&gt;
+            &lt;select ng-if=&#34;default.selection&#34;
+                    ng-model=&#34;swr.parameters[&#39;refine.country&#39;]&#34;
+                    ng-init=&#34;swr.parameters[&#39;refine.country&#39;] = default.selection&#34;&gt;
+                &lt;option ods-facet-results=&#34;items&#34;
+                        ods-facet-results-context=&#34;swr&#34;
+                        ods-facet-results-facet-name=&#34;country&#34;
+                        ods-facet-results-sort=&#34;alphanum&#34;
+                        ng-repeat=&#34;item in items&#34;
+                        value=&#34;{{item.name}}&#34;
+                        ng-selected=&#34;item.name == default.selection&#34;&gt;
+                    {{item.name}} ({{item.count}} rank{{item.count&gt;1?&#39;s&#39;:&#39;&#39;}})
+                &lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-sm-8&#34;&gt;
+            &lt;ods-chart single-y-axis=&#34;true&#34; min=&#34;0&#34; max=&#34;100&#34; step=&#34;10&#34; labels-x-length=&#34;30&#34; align-month=&#34;true&#34;&gt;
+                &lt;ods-chart-query context=&#34;swr&#34; field-x=&#34;university_name&#34; maxpoints=&#34;10&#34; sort=&#34;serie1-1&#34;&gt;
+                    &lt;ods-chart-serie expression-y=&#34;pub&#34; chart-type=&#34;bar&#34; function-y=&#34;AVG&#34; label-y=&#34;Average score (research paper publication)&#34; color=&#34;#1B6698&#34; display-units=&#34;false&#34; display-values=&#34;true&#34; scientific-display=&#34;false&#34;&gt;
+                    &lt;/ods-chart-serie&gt;
+                &lt;/ods-chart-query&gt;
+            &lt;/ods-chart&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+
+        </div>
+        <style type='text/css'>
+            
+        </style>
+        </body>
+        ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-3-year-selector-with-previous-and-next-buttons-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-3-year-selector-with-previous-and-next-buttons-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right">
+                <a class="button is-primary is-outlined edit-on-codepen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-3-year-selector-with-previous-and-next-buttons').submit()">
+                    Edit on CodePen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-3-year-selector-with-previous-and-next-buttons-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;!-- Important here: in addition of the important disjunctive param, you need to think about the sort param to get the expected 1st record with ods-results --&gt;
+&lt;ods-dataset-context context=&#34;swr&#34;
+                      swr-dataset=&#34;shanghai-world-university-ranking&#34;
+                      swr-domain=&#34;public&#34;
+                     swr-parameters=&#34;{&#39;disjunctive.country&#39;:true,
+                                     &#39;sort&#39;:&#39;total_score&#39;}&#34;
+                     ng-init=&#34;default = {&#39;selection&#39;:undefined}&#34;&gt;
+    &lt;!-- Important here: store the result in a global variable to use it later --&gt;
+    &lt;span ng-repeat=&#34;item in items&#34; ods-results=&#34;items&#34; ods-results-context=&#34;swr&#34; ods-results-max=&#34;1&#34;&gt;
+        {{ default.selection = item.fields.country ; &#34;&#34; }}
+    &lt;/span&gt;
+    &lt;div class=&#34;row&#34;&gt;
+        &lt;div class=&#34;col-sm-4&#34;&gt;
+            &lt;h3&gt;
+                Select a country
+            &lt;/h3&gt;
+            &lt;h5&gt;
+                Default selection: country having the university with the best score.
+            &lt;/h5&gt;
+            &lt;!-- Important here: ng-init is executed only once, it&#39;s perfect to set the first refine at start-up --&gt;
+            &lt;!-- Important here: only display the select once default.selection exists --&gt;
+            &lt;select ng-if=&#34;default.selection&#34;
+                    ng-model=&#34;swr.parameters[&#39;refine.country&#39;]&#34;
+                    ng-init=&#34;swr.parameters[&#39;refine.country&#39;] = default.selection&#34;&gt;
+                &lt;option ods-facet-results=&#34;items&#34;
+                        ods-facet-results-context=&#34;swr&#34;
+                        ods-facet-results-facet-name=&#34;country&#34;
+                        ods-facet-results-sort=&#34;alphanum&#34;
+                        ng-repeat=&#34;item in items&#34;
+                        value=&#34;{{item.name}}&#34;
+                        ng-selected=&#34;item.name == default.selection&#34;&gt;
+                    {{item.name}} ({{item.count}} rank{{item.count&gt;1?&#39;s&#39;:&#39;&#39;}})
+                &lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-sm-8&#34;&gt;
+            &lt;ods-chart single-y-axis=&#34;true&#34; min=&#34;0&#34; max=&#34;100&#34; step=&#34;10&#34; labels-x-length=&#34;30&#34; align-month=&#34;true&#34;&gt;
+                &lt;ods-chart-query context=&#34;swr&#34; field-x=&#34;university_name&#34; maxpoints=&#34;10&#34; sort=&#34;serie1-1&#34;&gt;
+                    &lt;ods-chart-serie expression-y=&#34;pub&#34; chart-type=&#34;bar&#34; function-y=&#34;AVG&#34; label-y=&#34;Average score (research paper publication)&#34; color=&#34;#1B6698&#34; display-units=&#34;false&#34; display-values=&#34;true&#34; scientific-display=&#34;false&#34;&gt;
+                    &lt;/ods-chart-serie&gt;
+                &lt;/ods-chart-query&gt;
+            &lt;/ods-chart&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+</code></pre>
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-3-year-selector-with-previous-and-next-buttons-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code></code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-3-year-selector-with-previous-and-next-buttons";
+            iframe = document.getElementById(iframeId);
+             
+            size =  500 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <h2 class="title" id="months-over-several-years-range-selector">
+  Months over several years range selector
+  
+    <a class="is-link" href="#months-over-several-years-range-selector">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+<p>Most complex scenario as the selector will keep an iterator to see witch value is selected, and compute the date each time another selection is made. It&rsquo;s based on this iterator by starting from the starting date and increasing the number of months by this iterator to get back to the selection. It manipulates facets, dates, and advanced angularJs expression.</p>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-4-months-over-several-years-range-selector"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003c!-- Important here: 2 contexts, one to display, one to get the date range and execute the ods-analysis. This secondary contexts MUST NOT be refined --\u003e\n\u003cods-dataset-context context=\&#34;sirenepublic,sirenepublicfordaterange\&#34;\n                     sirenepublic-dataset=\&#34;sirene\&#34;\n                     sirenepublic-domain=\&#34;public\&#34;\n                     sirenepublicfordaterange-dataset=\&#34;sirene\&#34;\n                     sirenepublicfordaterange-domain=\&#34;public\&#34;\n                     sirenepublicfordaterange-parameters=\&#34;{&#39;q&#39;:&#39;ddebact:[2010 TO 2019]&#39;}\&#34;\n                     ng-init=\&#34;range = {&#39;months&#39;:undefined}\&#34;\u003e\n    \u003c!-- Important here: get the list of months over years in the dataset, it will fuel the HTML select --\u003e\n    \u003cspan ods-analysis=\&#34;analyze\&#34;\n          ods-analysis-context=\&#34;sirenepublicfordaterange\&#34;\n          ods-analysis-x=\&#34;ddebact.year\&#34;\n          ods-analysis-x-month=\&#34;ddebact.month\&#34;\n          ods-analysis-serie-cnt=\&#34;COUNT()\&#34;\u003e\n        {{ range.months = analyze.results ; \&#34;\&#34; }}\n    \u003c/span\u003e\n    \u003c!-- Important here: see that elements are displayed once range.months exists, not before --\u003e\n    \u003cdiv class=\&#34;row\&#34;\n         ng-init=\&#34;selected = {}\&#34;\u003e\n        \u003cdiv class=\&#34;col-sm-4\&#34;\u003e\n            \u003cdiv class=\&#34;filtres-facet-titre\&#34;\u003e\n                From :\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;controler\&#34; ng-if=\&#34;range.months\&#34;\n                 ng-init=\&#34;max = range.months.length-1;\n                          selectionfrom = &#39;0&#39;;\&#34;\u003e\n                \u003cdiv class=\&#34;input-range-with-button\&#34;\u003e\n                    \u003cdiv class=\&#34;controler-button\&#34;\n                         ng-class=\&#34;{&#39;disabled&#39;: selectionfrom == 0}\&#34;\n                         ng-click=\&#34;selectionfrom = (selectionfrom\u003c1?selectionfrom:selectionfrom-1)\&#34;\u003e\n                        \u003ci class=\&#34;fa fa-angle-left\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;controler-button controler-selection\&#34;\u003e\n                        \u003cselect ng-model=\&#34;selectionfrom\&#34;\u003e\n                            \u003coption ng-repeat=\&#34;(i,month) in range.months\&#34;\n                                    ng-selected=\&#34;selectionfrom == i\&#34;\n                                    value=\&#34;{{ 1*i }}\&#34;\u003e\n                                {{ (month.x.year &#43; (month.x.month\u003e=10?&#39;-&#39;:&#39;-0&#39;) &#43; month.x.month) | moment: &#39;MMMM YYYY&#39; | capitalize }}\n                            \u003c/option\u003e\n                        \u003c/select\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;controler-button\&#34;\n                         ng-class=\&#34;{&#39;disabled&#39;: selectionfrom == max}\&#34;\n                         ng-click=\&#34;selectionfrom = (selectionfrom\u003e=max?1*selectionfrom:1*selectionfrom&#43;1);\&#34;\u003e\n                        \u003ci class=\&#34;fa fa-angle-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                    \u003c/div\u003e\n                    \u003c!-- get the date, format it, and store it into a variable for later use --\u003e\n                    {{ safe_for_ie = ((range.months[0].x.year &#43; (month.x.month\u003e=10?&#39;-&#39;:&#39;-0&#39;) &#43; range.months[0].x.month) | momentadd : &#39;months&#39; : selectionfrom | moment: &#39;Y-M&#39;);\n                    (safe_for_ie | stringify | split:\&#34;-\&#34;)[1] \u0026lt; 10 ?\n                    selected.datefrom=(safe_for_ie | stringify | split:\&#34;-\&#34;)[0] &#43; \&#34;-0\&#34; &#43; (safe_for_ie | stringify | split:\&#34;-\&#34;)[1]\n                    :\n                    selected.datefrom=safe_for_ie  ; \&#34;\&#34;}}\n                \u003c/div\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;filtres-facet-titre\&#34;\u003e\n                To :\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;controler\&#34; ng-if=\&#34;range.months\&#34;\n                 ng-init=\&#34;max=range.months.length-1;\n                          selectionto=max;\&#34;\u003e\n                \u003cdiv class=\&#34;input-range-with-button\&#34;\u003e\n                    \u003cdiv class=\&#34;controler-button\&#34;\n                         ng-class=\&#34;{&#39;disabled&#39;: selectionto == 0}\&#34;\n                         ng-click=\&#34;selectionto = (selectionto\u003c1?selectionto:selectionto-1);\&#34;\u003e\n                        \u003ci class=\&#34;fa fa-angle-left\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;controler-button controler-selection\&#34;\u003e\n                        \u003cselect ng-model=\&#34;selectionto\&#34;\u003e\n                            \u003coption ng-repeat=\&#34;(i,month) in range.months\&#34;\n                                    ng-selected=\&#34;selectionto == i\&#34;\n                                    value=\&#34;{{ 1*i }}\&#34;\u003e\n                                {{ (month.x.year &#43; (month.x.month\u003e=10?&#39;-&#39;:&#39;-0&#39;) &#43; month.x.month) | moment: &#39;MMMM YYYY&#39; | capitalize }}\n                            \u003c/option\u003e\n                        \u003c/select\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;controler-button\&#34;\n                         ng-class=\&#34;{&#39;disabled&#39;: selectionto == max}\&#34;\n                         ng-click=\&#34;selectionto = (selectionto\u003e=max?1*selectionto:1*selectionto&#43;1);\&#34;\u003e\n                        \u003ci class=\&#34;fa fa-angle-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                    \u003c/div\u003e\n                    \u003c!-- get the date, format it, and store it into a variable for later use --\u003e\n                    {{ safe_for_ie = ((range.months[0].x.year &#43; (month.x.month\u003e=10?&#39;-&#39;:&#39;-0&#39;) &#43; range.months[0].x.month) | momentadd : &#39;months&#39; : selectionto | moment: &#39;Y-M&#39;);\n                    (safe_for_ie | stringify | split:\&#34;-\&#34;)[1] \u0026lt; 10 ?\n                    selected.dateto=(safe_for_ie | stringify | split:\&#34;-\&#34;)[0] &#43; \&#34;-0\&#34; &#43; (safe_for_ie | stringify | split:\&#34;-\&#34;)[1]\n                    :\n                    selected.dateto=safe_for_ie  ; \&#34;\&#34;}}\n                \u003c/div\u003e\n            \u003c/div\u003e\n            \u003ch4 ng-if=\&#34;selected.datefrom \u0026\u0026 selected.dateto\&#34;\u003e\n                Search query = \u003cspan style=\&#34;font-weight: 200\&#34;\u003e{{ sirenepublic.parameters[&#39;q&#39;] = \&#34;ddebact:[\&#34; &#43; selected.datefrom &#43; \&#34; TO \&#34; &#43; selected.dateto &#43; \&#34;]\&#34;; }}\u003c/span\u003e\n            \u003c/h4\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;col-sm-8\&#34;\u003e\n            \u003cods-chart ng-if=\&#34;range.months\&#34;\n                       align-month=\&#34;true\&#34;\u003e\n                \u003cods-chart-query context=\&#34;sirenepublic\&#34; field-x=\&#34;ddebact\&#34; maxpoints=\&#34;0\&#34; timescale=\&#34;month\&#34;\u003e\n                    \u003cods-chart-serie chart-type=\&#34;column\&#34; function-y=\&#34;COUNT\&#34; color=\&#34;#1B6698\&#34; scientific-display=\&#34;true\&#34;\u003e\n                    \u003c/ods-chart-serie\u003e\n                \u003c/ods-chart-query\u003e\n            \u003c/ods-chart\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+               "css": &#34;/* DATE SELECTOR */\n.input-range-with-button {\n    display: flex;\n}\n.controler-button {\n    border: 1px solid;\n    background-color: #e5e5e5;\n    border-color: #ccc;\n    font-weight: 500;\n    min-width: 42px;\n    height: 42px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n.controler-button:nth-child(1) {\n    border-radius: 0.5em 0 0 0.5em;\n}\n.controler-button:nth-child(3) {\n    border-radius: 0 0.5em 0.5em 0;\n}\n.controler-button:hover {\n    background-color: #ccc;\n}\n.controler-button.controler-selection select {\n    box-sizing: border-box;\n    -webkit-box-sizing: border-box;\n    -moz-box-sizing: border-box;\n    -webkit-appearance: none;\n    -moz-appearance: none;\n    appearance: none;\n    border: none;\n    border-radius: 0px;\n    width: 100%;\n    height: 100%;\n    padding-left: 10px;\n    padding-right: 25px;\n}\n.controler-button.controler-selection::after {\n    position:absolute;\n    right:.5rem;\n    content:&#39;\\2193&#39;;\n    pointer-events: none;\n}\n.controler-selection {\n    position: relative;\n}\n.controler-selection:hover {\n    background-color: #e5e5e5;\n}\n.controler-button.disabled {\n    color: #adadad;\n}\n.controler-button.disabled:hover {\n    cursor: inherit;\n    background-color: #e5e5e5;\n}\n      \n&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-4-months-over-several-years-range-selector"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+        </head>
+        <body>
+        <div ng-app='ods-widgets'>
+            &lt;!-- Important here: 2 contexts, one to display, one to get the date range and execute the ods-analysis. This secondary contexts MUST NOT be refined --&gt;
+&lt;ods-dataset-context context=&#34;sirenepublic,sirenepublicfordaterange&#34;
+                     sirenepublic-dataset=&#34;sirene&#34;
+                     sirenepublic-domain=&#34;public&#34;
+                     sirenepublicfordaterange-dataset=&#34;sirene&#34;
+                     sirenepublicfordaterange-domain=&#34;public&#34;
+                     sirenepublicfordaterange-parameters=&#34;{&#39;q&#39;:&#39;ddebact:[2010 TO 2019]&#39;}&#34;
+                     ng-init=&#34;range = {&#39;months&#39;:undefined}&#34;&gt;
+    &lt;!-- Important here: get the list of months over years in the dataset, it will fuel the HTML select --&gt;
+    &lt;span ods-analysis=&#34;analyze&#34;
+          ods-analysis-context=&#34;sirenepublicfordaterange&#34;
+          ods-analysis-x=&#34;ddebact.year&#34;
+          ods-analysis-x-month=&#34;ddebact.month&#34;
+          ods-analysis-serie-cnt=&#34;COUNT()&#34;&gt;
+        {{ range.months = analyze.results ; &#34;&#34; }}
+    &lt;/span&gt;
+    &lt;!-- Important here: see that elements are displayed once range.months exists, not before --&gt;
+    &lt;div class=&#34;row&#34;
+         ng-init=&#34;selected = {}&#34;&gt;
+        &lt;div class=&#34;col-sm-4&#34;&gt;
+            &lt;div class=&#34;filtres-facet-titre&#34;&gt;
+                From :
+            &lt;/div&gt;
+            &lt;div class=&#34;controler&#34; ng-if=&#34;range.months&#34;
+                 ng-init=&#34;max = range.months.length-1;
+                          selectionfrom = &#39;0&#39;;&#34;&gt;
+                &lt;div class=&#34;input-range-with-button&#34;&gt;
+                    &lt;div class=&#34;controler-button&#34;
+                         ng-class=&#34;{&#39;disabled&#39;: selectionfrom == 0}&#34;
+                         ng-click=&#34;selectionfrom = (selectionfrom&lt;1?selectionfrom:selectionfrom-1)&#34;&gt;
+                        &lt;i class=&#34;fa fa-angle-left&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;controler-button controler-selection&#34;&gt;
+                        &lt;select ng-model=&#34;selectionfrom&#34;&gt;
+                            &lt;option ng-repeat=&#34;(i,month) in range.months&#34;
+                                    ng-selected=&#34;selectionfrom == i&#34;
+                                    value=&#34;{{ 1*i }}&#34;&gt;
+                                {{ (month.x.year &#43; (month.x.month&gt;=10?&#39;-&#39;:&#39;-0&#39;) &#43; month.x.month) | moment: &#39;MMMM YYYY&#39; | capitalize }}
+                            &lt;/option&gt;
+                        &lt;/select&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;controler-button&#34;
+                         ng-class=&#34;{&#39;disabled&#39;: selectionfrom == max}&#34;
+                         ng-click=&#34;selectionfrom = (selectionfrom&gt;=max?1*selectionfrom:1*selectionfrom&#43;1);&#34;&gt;
+                        &lt;i class=&#34;fa fa-angle-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;!-- get the date, format it, and store it into a variable for later use --&gt;
+                    {{ safe_for_ie = ((range.months[0].x.year &#43; (month.x.month&gt;=10?&#39;-&#39;:&#39;-0&#39;) &#43; range.months[0].x.month) | momentadd : &#39;months&#39; : selectionfrom | moment: &#39;Y-M&#39;);
+                    (safe_for_ie | stringify | split:&#34;-&#34;)[1] &amp;lt; 10 ?
+                    selected.datefrom=(safe_for_ie | stringify | split:&#34;-&#34;)[0] &#43; &#34;-0&#34; &#43; (safe_for_ie | stringify | split:&#34;-&#34;)[1]
+                    :
+                    selected.datefrom=safe_for_ie  ; &#34;&#34;}}
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;filtres-facet-titre&#34;&gt;
+                To :
+            &lt;/div&gt;
+            &lt;div class=&#34;controler&#34; ng-if=&#34;range.months&#34;
+                 ng-init=&#34;max=range.months.length-1;
+                          selectionto=max;&#34;&gt;
+                &lt;div class=&#34;input-range-with-button&#34;&gt;
+                    &lt;div class=&#34;controler-button&#34;
+                         ng-class=&#34;{&#39;disabled&#39;: selectionto == 0}&#34;
+                         ng-click=&#34;selectionto = (selectionto&lt;1?selectionto:selectionto-1);&#34;&gt;
+                        &lt;i class=&#34;fa fa-angle-left&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;controler-button controler-selection&#34;&gt;
+                        &lt;select ng-model=&#34;selectionto&#34;&gt;
+                            &lt;option ng-repeat=&#34;(i,month) in range.months&#34;
+                                    ng-selected=&#34;selectionto == i&#34;
+                                    value=&#34;{{ 1*i }}&#34;&gt;
+                                {{ (month.x.year &#43; (month.x.month&gt;=10?&#39;-&#39;:&#39;-0&#39;) &#43; month.x.month) | moment: &#39;MMMM YYYY&#39; | capitalize }}
+                            &lt;/option&gt;
+                        &lt;/select&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;controler-button&#34;
+                         ng-class=&#34;{&#39;disabled&#39;: selectionto == max}&#34;
+                         ng-click=&#34;selectionto = (selectionto&gt;=max?1*selectionto:1*selectionto&#43;1);&#34;&gt;
+                        &lt;i class=&#34;fa fa-angle-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;!-- get the date, format it, and store it into a variable for later use --&gt;
+                    {{ safe_for_ie = ((range.months[0].x.year &#43; (month.x.month&gt;=10?&#39;-&#39;:&#39;-0&#39;) &#43; range.months[0].x.month) | momentadd : &#39;months&#39; : selectionto | moment: &#39;Y-M&#39;);
+                    (safe_for_ie | stringify | split:&#34;-&#34;)[1] &amp;lt; 10 ?
+                    selected.dateto=(safe_for_ie | stringify | split:&#34;-&#34;)[0] &#43; &#34;-0&#34; &#43; (safe_for_ie | stringify | split:&#34;-&#34;)[1]
+                    :
+                    selected.dateto=safe_for_ie  ; &#34;&#34;}}
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;h4 ng-if=&#34;selected.datefrom &amp;&amp; selected.dateto&#34;&gt;
+                Search query = &lt;span style=&#34;font-weight: 200&#34;&gt;{{ sirenepublic.parameters[&#39;q&#39;] = &#34;ddebact:[&#34; &#43; selected.datefrom &#43; &#34; TO &#34; &#43; selected.dateto &#43; &#34;]&#34;; }}&lt;/span&gt;
+            &lt;/h4&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-sm-8&#34;&gt;
+            &lt;ods-chart ng-if=&#34;range.months&#34;
+                       align-month=&#34;true&#34;&gt;
+                &lt;ods-chart-query context=&#34;sirenepublic&#34; field-x=&#34;ddebact&#34; maxpoints=&#34;0&#34; timescale=&#34;month&#34;&gt;
+                    &lt;ods-chart-serie chart-type=&#34;column&#34; function-y=&#34;COUNT&#34; color=&#34;#1B6698&#34; scientific-display=&#34;true&#34;&gt;
+                    &lt;/ods-chart-serie&gt;
+                &lt;/ods-chart-query&gt;
+            &lt;/ods-chart&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+
+        </div>
+        <style type='text/css'>
+            /* DATE SELECTOR */
+.input-range-with-button {
+    display: flex;
+}
+.controler-button {
+    border: 1px solid;
+    background-color: #e5e5e5;
+    border-color: #ccc;
+    font-weight: 500;
+    min-width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.controler-button:nth-child(1) {
+    border-radius: 0.5em 0 0 0.5em;
+}
+.controler-button:nth-child(3) {
+    border-radius: 0 0.5em 0.5em 0;
+}
+.controler-button:hover {
+    background-color: #ccc;
+}
+.controler-button.controler-selection select {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 25px;
+}
+.controler-button.controler-selection::after {
+    position:absolute;
+    right:.5rem;
+    content:&#39;\2193&#39;;
+    pointer-events: none;
+}
+.controler-selection {
+    position: relative;
+}
+.controler-selection:hover {
+    background-color: #e5e5e5;
+}
+.controler-button.disabled {
+    color: #adadad;
+}
+.controler-button.disabled:hover {
+    cursor: inherit;
+    background-color: #e5e5e5;
+}
+      
+
+        </style>
+        </body>
+        ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-4-months-over-several-years-range-selector-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-4-months-over-several-years-range-selector-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right">
+                <a class="button is-primary is-outlined edit-on-codepen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-4-months-over-several-years-range-selector').submit()">
+                    Edit on CodePen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-4-months-over-several-years-range-selector-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;!-- Important here: 2 contexts, one to display, one to get the date range and execute the ods-analysis. This secondary contexts MUST NOT be refined --&gt;
+&lt;ods-dataset-context context=&#34;sirenepublic,sirenepublicfordaterange&#34;
+                     sirenepublic-dataset=&#34;sirene&#34;
+                     sirenepublic-domain=&#34;public&#34;
+                     sirenepublicfordaterange-dataset=&#34;sirene&#34;
+                     sirenepublicfordaterange-domain=&#34;public&#34;
+                     sirenepublicfordaterange-parameters=&#34;{&#39;q&#39;:&#39;ddebact:[2010 TO 2019]&#39;}&#34;
+                     ng-init=&#34;range = {&#39;months&#39;:undefined}&#34;&gt;
+    &lt;!-- Important here: get the list of months over years in the dataset, it will fuel the HTML select --&gt;
+    &lt;span ods-analysis=&#34;analyze&#34;
+          ods-analysis-context=&#34;sirenepublicfordaterange&#34;
+          ods-analysis-x=&#34;ddebact.year&#34;
+          ods-analysis-x-month=&#34;ddebact.month&#34;
+          ods-analysis-serie-cnt=&#34;COUNT()&#34;&gt;
+        {{ range.months = analyze.results ; &#34;&#34; }}
+    &lt;/span&gt;
+    &lt;!-- Important here: see that elements are displayed once range.months exists, not before --&gt;
+    &lt;div class=&#34;row&#34;
+         ng-init=&#34;selected = {}&#34;&gt;
+        &lt;div class=&#34;col-sm-4&#34;&gt;
+            &lt;div class=&#34;filtres-facet-titre&#34;&gt;
+                From :
+            &lt;/div&gt;
+            &lt;div class=&#34;controler&#34; ng-if=&#34;range.months&#34;
+                 ng-init=&#34;max = range.months.length-1;
+                          selectionfrom = &#39;0&#39;;&#34;&gt;
+                &lt;div class=&#34;input-range-with-button&#34;&gt;
+                    &lt;div class=&#34;controler-button&#34;
+                         ng-class=&#34;{&#39;disabled&#39;: selectionfrom == 0}&#34;
+                         ng-click=&#34;selectionfrom = (selectionfrom&lt;1?selectionfrom:selectionfrom-1)&#34;&gt;
+                        &lt;i class=&#34;fa fa-angle-left&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;controler-button controler-selection&#34;&gt;
+                        &lt;select ng-model=&#34;selectionfrom&#34;&gt;
+                            &lt;option ng-repeat=&#34;(i,month) in range.months&#34;
+                                    ng-selected=&#34;selectionfrom == i&#34;
+                                    value=&#34;{{ 1*i }}&#34;&gt;
+                                {{ (month.x.year &#43; (month.x.month&gt;=10?&#39;-&#39;:&#39;-0&#39;) &#43; month.x.month) | moment: &#39;MMMM YYYY&#39; | capitalize }}
+                            &lt;/option&gt;
+                        &lt;/select&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;controler-button&#34;
+                         ng-class=&#34;{&#39;disabled&#39;: selectionfrom == max}&#34;
+                         ng-click=&#34;selectionfrom = (selectionfrom&gt;=max?1*selectionfrom:1*selectionfrom&#43;1);&#34;&gt;
+                        &lt;i class=&#34;fa fa-angle-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;!-- get the date, format it, and store it into a variable for later use --&gt;
+                    {{ safe_for_ie = ((range.months[0].x.year &#43; (month.x.month&gt;=10?&#39;-&#39;:&#39;-0&#39;) &#43; range.months[0].x.month) | momentadd : &#39;months&#39; : selectionfrom | moment: &#39;Y-M&#39;);
+                    (safe_for_ie | stringify | split:&#34;-&#34;)[1] &amp;lt; 10 ?
+                    selected.datefrom=(safe_for_ie | stringify | split:&#34;-&#34;)[0] &#43; &#34;-0&#34; &#43; (safe_for_ie | stringify | split:&#34;-&#34;)[1]
+                    :
+                    selected.datefrom=safe_for_ie  ; &#34;&#34;}}
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;filtres-facet-titre&#34;&gt;
+                To :
+            &lt;/div&gt;
+            &lt;div class=&#34;controler&#34; ng-if=&#34;range.months&#34;
+                 ng-init=&#34;max=range.months.length-1;
+                          selectionto=max;&#34;&gt;
+                &lt;div class=&#34;input-range-with-button&#34;&gt;
+                    &lt;div class=&#34;controler-button&#34;
+                         ng-class=&#34;{&#39;disabled&#39;: selectionto == 0}&#34;
+                         ng-click=&#34;selectionto = (selectionto&lt;1?selectionto:selectionto-1);&#34;&gt;
+                        &lt;i class=&#34;fa fa-angle-left&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;controler-button controler-selection&#34;&gt;
+                        &lt;select ng-model=&#34;selectionto&#34;&gt;
+                            &lt;option ng-repeat=&#34;(i,month) in range.months&#34;
+                                    ng-selected=&#34;selectionto == i&#34;
+                                    value=&#34;{{ 1*i }}&#34;&gt;
+                                {{ (month.x.year &#43; (month.x.month&gt;=10?&#39;-&#39;:&#39;-0&#39;) &#43; month.x.month) | moment: &#39;MMMM YYYY&#39; | capitalize }}
+                            &lt;/option&gt;
+                        &lt;/select&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;controler-button&#34;
+                         ng-class=&#34;{&#39;disabled&#39;: selectionto == max}&#34;
+                         ng-click=&#34;selectionto = (selectionto&gt;=max?1*selectionto:1*selectionto&#43;1);&#34;&gt;
+                        &lt;i class=&#34;fa fa-angle-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                    &lt;!-- get the date, format it, and store it into a variable for later use --&gt;
+                    {{ safe_for_ie = ((range.months[0].x.year &#43; (month.x.month&gt;=10?&#39;-&#39;:&#39;-0&#39;) &#43; range.months[0].x.month) | momentadd : &#39;months&#39; : selectionto | moment: &#39;Y-M&#39;);
+                    (safe_for_ie | stringify | split:&#34;-&#34;)[1] &amp;lt; 10 ?
+                    selected.dateto=(safe_for_ie | stringify | split:&#34;-&#34;)[0] &#43; &#34;-0&#34; &#43; (safe_for_ie | stringify | split:&#34;-&#34;)[1]
+                    :
+                    selected.dateto=safe_for_ie  ; &#34;&#34;}}
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;h4 ng-if=&#34;selected.datefrom &amp;&amp; selected.dateto&#34;&gt;
+                Search query = &lt;span style=&#34;font-weight: 200&#34;&gt;{{ sirenepublic.parameters[&#39;q&#39;] = &#34;ddebact:[&#34; &#43; selected.datefrom &#43; &#34; TO &#34; &#43; selected.dateto &#43; &#34;]&#34;; }}&lt;/span&gt;
+            &lt;/h4&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-sm-8&#34;&gt;
+            &lt;ods-chart ng-if=&#34;range.months&#34;
+                       align-month=&#34;true&#34;&gt;
+                &lt;ods-chart-query context=&#34;sirenepublic&#34; field-x=&#34;ddebact&#34; maxpoints=&#34;0&#34; timescale=&#34;month&#34;&gt;
+                    &lt;ods-chart-serie chart-type=&#34;column&#34; function-y=&#34;COUNT&#34; color=&#34;#1B6698&#34; scientific-display=&#34;true&#34;&gt;
+                    &lt;/ods-chart-serie&gt;
+                &lt;/ods-chart-query&gt;
+            &lt;/ods-chart&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+</code></pre>
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-4-months-over-several-years-range-selector-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>/* DATE SELECTOR */
+.input-range-with-button {
+    display: flex;
+}
+.controler-button {
+    border: 1px solid;
+    background-color: #e5e5e5;
+    border-color: #ccc;
+    font-weight: 500;
+    min-width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.controler-button:nth-child(1) {
+    border-radius: 0.5em 0 0 0.5em;
+}
+.controler-button:nth-child(3) {
+    border-radius: 0 0.5em 0.5em 0;
+}
+.controler-button:hover {
+    background-color: #ccc;
+}
+.controler-button.controler-selection select {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 25px;
+}
+.controler-button.controler-selection::after {
+    position:absolute;
+    right:.5rem;
+    content:&#39;\2193&#39;;
+    pointer-events: none;
+}
+.controler-selection {
+    position: relative;
+}
+.controler-selection:hover {
+    background-color: #e5e5e5;
+}
+.controler-button.disabled {
+    color: #adadad;
+}
+.controler-button.disabled:hover {
+    cursor: inherit;
+    background-color: #e5e5e5;
+}
+      
+</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-4-months-over-several-years-range-selector";
+            iframe = document.getElementById(iframeId);
+             
+            size =  500 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+        </div>
+    </div>
+    
+</section>
+
+
+    </div>
+</div>
+
+<footer class="footer">
+    <a href="https://www.opendatasoft.com"
+       class="footer-link"
+       title="Opendatasoft website">
+        <img src="/img/ods-logo.svg"
+             class="footer-logo"
+             alt="Opendatasoft logo"
+        />
+    </a>
+    <span class="footer-copyright">
+        &copy; Copyright 2020
+    </span>
+</footer>
+
+
+
+
+
+
+
+<script>var process = { "env": { "NODE_ENV": "production" } }</script>
+<script type="text/javascript"
+        src="/index.min.11fcc0d6f8a0b04671eb0a5fb2bb06b89618c60744ea73effdb557ad43fd44a6.js"
+        defer></script>
+
+</body>
+</html>

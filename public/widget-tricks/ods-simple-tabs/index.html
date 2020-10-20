@@ -1,0 +1,1717 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+    <title>
+        
+ods-simple-tabs &ndash; Codelibrary
+
+    </title>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41201218-21"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-41201218-21');
+    </script>
+
+    
+    
+
+    
+    
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css"
+          integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8="
+          crossorigin="anonymous">
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href="/scss/main.css" />
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png">
+    <link rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png">
+    <link rel="shortcut icon"
+          href="/favicon.ico">
+</head>
+
+<body>
+
+<nav class="navbar is-fixed-top"
+     role="navigation"
+     aria-label="Main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item"
+           href="/"
+           title="Back to the homepage">
+            <img src="/img/ods-logo-helphub.svg"
+                 alt="Helphub Logo"/>
+        </a>
+        <button class="navbar-burger burger"
+                type="button"
+                data-target="helphubNavbar"
+                aria-controls="helphubNavbar"
+                aria-expanded="false"
+                aria-label="Menu">
+            Help Hub
+        </button>
+    </div>
+    <div class="navbar-menu"
+         id="helphubNavbar">
+        <div class="navbar-start">
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/">
+                Help Hub
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/platform/en/">
+                User guide
+            </a>
+            <a class="navbar-item is-active"
+               href="https://discovery.opendatasoft.com">
+                Code Library
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/faq-glossary/en/">
+                FAQ
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/widgets/">
+                Widgets
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/en/apis/">
+                APIs
+            </a>
+            <a class="navbar-item"
+               href="https://academy.opendatasoft.com/page/homepage">
+                Academy
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="columns codelibrary">
+    <div class="column is-narrow">
+        <aside class="sidebar menu">
+    <a href="https://codelibrary.opendatasoft.com"
+       class="sidebar-logo-link"
+       title="Go to Codelibrary homepage">
+        <img src="/img/ods-codelibrary-logo.svg"
+             class="sidebar-logo"
+             alt="Codelibrary Logo">
+    </a>
+
+    <div id="algolia-box"></div>
+    <div id="algolia-results"></div>
+
+    
+    <ul class="menu-list">
+        <li>
+            <a class="sidebar-subtitle"
+               href="https://codelibrary.opendatasoft.com">
+                Home
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="/components/"
+               class="sidebar-subtitle">
+                Components
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a href="/page-templates/"
+               class="sidebar-subtitle">
+                Page templates
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a href="/portal-themes/"
+               class="sidebar-subtitle">
+                Portal themes
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="sidebar-subtitle " href="/widget-tricks/">
+            Widget tricks
+            </a>
+            <ul>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/svg-maps/">SVG Maps</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/charts/">Chart Samples</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/custom-tooltip/">Custom tooltip</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/dates/">Dates</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/drill-down/">Drill-down chart</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/filter-as-list/">Filters as an HTML Select</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-aggregation/">ods-aggregation</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-analysis/">ods-analysis</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-color-gradient/">ods-color-gradient &amp; ods-legend</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-map-tricks/">ods-map: Refine &amp; Zoom</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-map-css/">ods-map: CSS Hacks</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-pop-in/">ods-pop-in</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-date-range-slider/">ods-range-slider</a>
+                </li>
+                
+                <li>
+                    <a class="is-active" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-simple-tabs/">ods-simple-tabs</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/share-print/">Share and print</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/timeline/">Timeline Custom View</a>
+                </li>
+                
+            </ul>
+        </li>
+        
+        
+    </ul>
+    <p class="menu-label">
+        Tags
+    </p>
+    <div class="tags">
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/aggregation/">
+            aggregation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/chart/">
+            chart
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/date/">
+            date
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/display/">
+            display
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/filter/">
+            filter
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/geo/">
+            geo
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/list/">
+            list
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/map/">
+            map
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/navigation/">
+            navigation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-aggregation/">
+            ods-aggregation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-analysis/">
+            ods-analysis
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-maps/">
+            ods-maps
+        </a>
+        
+    </div>
+</aside>
+
+    </div>
+    <div class="column">
+        
+
+<section>
+    <div class="content-header container is-max-desktop mb-5">
+        <div class="content">
+            <h1 class="title" id="ods-simple-tabs-usages">
+  ods-simple-tabs usages
+  
+</h1>
+<p>The <code>ods-simple-tabs</code> widget can be used to have a tabbed interface that allows you to switch between different views. It has a simplified CSS making it easy to modify the style or layout.
+Below are a few different styles that can be applied to the widget in order to fit different use cases.</p>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <h2 class="title" id="default-look">
+  Default Look
+  
+    <a class="is-link" href="#default-look">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-ods-simple-tabs-1"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;velib\&#34; \n                     velib-dataset=\&#34;velib-disponibilite-en-temps-reel\&#34;\n                     velib-domain=\&#34;parisdata\&#34;\u003e\n    \u003cods-simple-tabs\u003e\n        \u003cods-simple-tab label=\&#34;Velib\&#34; \n                        fontawesome-class=\&#34;bicycle\&#34;\n                        keep-content=\&#34;true\&#34;\u003e\n            \u003cp\u003e\n                L’objectif du service Vélib’ Métropole est de faciliter le développement de nouvelles mobilités sur le territoire francilien, en complément de l’offre de transport existante.\n            \u003c/p\u003e\n            \u003cods-table context=\&#34;velib\&#34;\u003e\u003c/ods-table\u003e\n        \u003c/ods-simple-tab\u003e\n        \u003cods-simple-tab label=\&#34;Stations\&#34;\u003e\n            \u003cods-map no-refit=\&#34;true\&#34; \n                     scroll-wheel-zoom=\&#34;false\&#34; \n                     display-control=\&#34;true\&#34; \n                     search-box=\&#34;true\&#34; \n                     toolbar-fullscreen=\&#34;true\&#34;\n                     toolbar-geolocation=\&#34;true\&#34; \n                     basemap=\&#34;jawg.sunny\&#34; \n                     location=\&#34;12,48.85593,2.35192\&#34;\u003e\n                \u003cods-map-layer-group\u003e\n                    \u003cods-map-layer context=\&#34;velib\&#34; \n                                   color=\&#34;#C32D1C\&#34; \n                                   picto=\&#34;ods-bicycle\&#34; \n                                   show-marker=\&#34;true\&#34; \n                                   display=\&#34;auto\&#34; \n                                   shape-opacity=\&#34;0.5\&#34; \n                                   point-opacity=\&#34;1\&#34; \n                                   border-color=\&#34;#FFFFFF\&#34;\n                                   border-opacity=\&#34;1\&#34; \n                                   border-size=\&#34;1\&#34; \n                                   border-pattern=\&#34;solid\&#34; \n                                   caption=\&#34;true\&#34; \n                                   title=\&#34;Vélib - Vélos et bornes - Disponibilité temps réel\&#34; \n                                   description=\&#34;Jeu de données présentant la disponibilité des bornettes, vélos\n                                                mécaniques et électriques des stations Vélib’ Métropole.\&#34; \n                                   size=\&#34;4\&#34; \n                                   size-min=\&#34;3\&#34; \n                                   size-max=\&#34;5\&#34; \n                                   size-function=\&#34;linear\&#34;\u003e\u003c/ods-map-layer\u003e\n                \u003c/ods-map-layer-group\u003e\n            \u003c/ods-map\u003e\n        \u003c/ods-simple-tab\u003e\n        \u003cods-simple-tab label=\&#34;Top 10 disponibilité\&#34;\n                        fontawesome-class=\&#34;line-chart\&#34;\u003e\n                \u003cods-chart single-y-axis=\&#34;true\&#34; \n                           align-month=\&#34;true\&#34;\u003e\n                    \u003cods-chart-query context=\&#34;velib\&#34; \n                                     field-x=\&#34;name\&#34; \n                                     maxpoints=\&#34;10\&#34; \n                                     sort=\&#34;serie1-1\&#34;\u003e\n                        \u003cods-chart-serie expression-y=\&#34;numbikesavailable\&#34; \n                                         chart-type=\&#34;column\&#34; \n                                         function-y=\&#34;SUM\&#34; \n                                         color=\&#34;#142E7B\&#34; \n                                         scientific-display=\&#34;true\&#34;\u003e\n                        \u003c/ods-chart-serie\u003e\n                    \u003c/ods-chart-query\u003e\n                \u003c/ods-chart\u003e\n        \u003c/ods-simple-tab\u003e\n    \u003c/ods-simple-tabs\u003e\n\u003c/ods-dataset-context\u003e\n      \u003c/div\u003e&#34;,
+               "css": &#34;&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-ods-simple-tabs-1"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+        </head>
+        <body>
+        <div ng-app='ods-widgets'>
+            &lt;ods-dataset-context context=&#34;velib&#34; 
+                     velib-dataset=&#34;velib-disponibilite-en-temps-reel&#34;
+                     velib-domain=&#34;parisdata&#34;&gt;
+    &lt;ods-simple-tabs&gt;
+        &lt;ods-simple-tab label=&#34;Velib&#34; 
+                        fontawesome-class=&#34;bicycle&#34;
+                        keep-content=&#34;true&#34;&gt;
+            &lt;p&gt;
+                L’objectif du service Vélib’ Métropole est de faciliter le développement de nouvelles mobilités sur le territoire francilien, en complément de l’offre de transport existante.
+            &lt;/p&gt;
+            &lt;ods-table context=&#34;velib&#34;&gt;&lt;/ods-table&gt;
+        &lt;/ods-simple-tab&gt;
+        &lt;ods-simple-tab label=&#34;Stations&#34;&gt;
+            &lt;ods-map no-refit=&#34;true&#34; 
+                     scroll-wheel-zoom=&#34;false&#34; 
+                     display-control=&#34;true&#34; 
+                     search-box=&#34;true&#34; 
+                     toolbar-fullscreen=&#34;true&#34;
+                     toolbar-geolocation=&#34;true&#34; 
+                     basemap=&#34;jawg.sunny&#34; 
+                     location=&#34;12,48.85593,2.35192&#34;&gt;
+                &lt;ods-map-layer-group&gt;
+                    &lt;ods-map-layer context=&#34;velib&#34; 
+                                   color=&#34;#C32D1C&#34; 
+                                   picto=&#34;ods-bicycle&#34; 
+                                   show-marker=&#34;true&#34; 
+                                   display=&#34;auto&#34; 
+                                   shape-opacity=&#34;0.5&#34; 
+                                   point-opacity=&#34;1&#34; 
+                                   border-color=&#34;#FFFFFF&#34;
+                                   border-opacity=&#34;1&#34; 
+                                   border-size=&#34;1&#34; 
+                                   border-pattern=&#34;solid&#34; 
+                                   caption=&#34;true&#34; 
+                                   title=&#34;Vélib - Vélos et bornes - Disponibilité temps réel&#34; 
+                                   description=&#34;Jeu de données présentant la disponibilité des bornettes, vélos
+                                                mécaniques et électriques des stations Vélib’ Métropole.&#34; 
+                                   size=&#34;4&#34; 
+                                   size-min=&#34;3&#34; 
+                                   size-max=&#34;5&#34; 
+                                   size-function=&#34;linear&#34;&gt;&lt;/ods-map-layer&gt;
+                &lt;/ods-map-layer-group&gt;
+            &lt;/ods-map&gt;
+        &lt;/ods-simple-tab&gt;
+        &lt;ods-simple-tab label=&#34;Top 10 disponibilité&#34;
+                        fontawesome-class=&#34;line-chart&#34;&gt;
+                &lt;ods-chart single-y-axis=&#34;true&#34; 
+                           align-month=&#34;true&#34;&gt;
+                    &lt;ods-chart-query context=&#34;velib&#34; 
+                                     field-x=&#34;name&#34; 
+                                     maxpoints=&#34;10&#34; 
+                                     sort=&#34;serie1-1&#34;&gt;
+                        &lt;ods-chart-serie expression-y=&#34;numbikesavailable&#34; 
+                                         chart-type=&#34;column&#34; 
+                                         function-y=&#34;SUM&#34; 
+                                         color=&#34;#142E7B&#34; 
+                                         scientific-display=&#34;true&#34;&gt;
+                        &lt;/ods-chart-serie&gt;
+                    &lt;/ods-chart-query&gt;
+                &lt;/ods-chart&gt;
+        &lt;/ods-simple-tab&gt;
+    &lt;/ods-simple-tabs&gt;
+&lt;/ods-dataset-context&gt;
+      
+        </div>
+        <style type='text/css'>
+            
+        </style>
+        </body>
+        ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-ods-simple-tabs-1-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-ods-simple-tabs-1-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right">
+                <a class="button is-primary is-outlined edit-on-codepen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-ods-simple-tabs-1').submit()">
+                    Edit on CodePen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-ods-simple-tabs-1-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;velib&#34; 
+                     velib-dataset=&#34;velib-disponibilite-en-temps-reel&#34;
+                     velib-domain=&#34;parisdata&#34;&gt;
+    &lt;ods-simple-tabs&gt;
+        &lt;ods-simple-tab label=&#34;Velib&#34; 
+                        fontawesome-class=&#34;bicycle&#34;
+                        keep-content=&#34;true&#34;&gt;
+            &lt;p&gt;
+                L’objectif du service Vélib’ Métropole est de faciliter le développement de nouvelles mobilités sur le territoire francilien, en complément de l’offre de transport existante.
+            &lt;/p&gt;
+            &lt;ods-table context=&#34;velib&#34;&gt;&lt;/ods-table&gt;
+        &lt;/ods-simple-tab&gt;
+        &lt;ods-simple-tab label=&#34;Stations&#34;&gt;
+            &lt;ods-map no-refit=&#34;true&#34; 
+                     scroll-wheel-zoom=&#34;false&#34; 
+                     display-control=&#34;true&#34; 
+                     search-box=&#34;true&#34; 
+                     toolbar-fullscreen=&#34;true&#34;
+                     toolbar-geolocation=&#34;true&#34; 
+                     basemap=&#34;jawg.sunny&#34; 
+                     location=&#34;12,48.85593,2.35192&#34;&gt;
+                &lt;ods-map-layer-group&gt;
+                    &lt;ods-map-layer context=&#34;velib&#34; 
+                                   color=&#34;#C32D1C&#34; 
+                                   picto=&#34;ods-bicycle&#34; 
+                                   show-marker=&#34;true&#34; 
+                                   display=&#34;auto&#34; 
+                                   shape-opacity=&#34;0.5&#34; 
+                                   point-opacity=&#34;1&#34; 
+                                   border-color=&#34;#FFFFFF&#34;
+                                   border-opacity=&#34;1&#34; 
+                                   border-size=&#34;1&#34; 
+                                   border-pattern=&#34;solid&#34; 
+                                   caption=&#34;true&#34; 
+                                   title=&#34;Vélib - Vélos et bornes - Disponibilité temps réel&#34; 
+                                   description=&#34;Jeu de données présentant la disponibilité des bornettes, vélos
+                                                mécaniques et électriques des stations Vélib’ Métropole.&#34; 
+                                   size=&#34;4&#34; 
+                                   size-min=&#34;3&#34; 
+                                   size-max=&#34;5&#34; 
+                                   size-function=&#34;linear&#34;&gt;&lt;/ods-map-layer&gt;
+                &lt;/ods-map-layer-group&gt;
+            &lt;/ods-map&gt;
+        &lt;/ods-simple-tab&gt;
+        &lt;ods-simple-tab label=&#34;Top 10 disponibilité&#34;
+                        fontawesome-class=&#34;line-chart&#34;&gt;
+                &lt;ods-chart single-y-axis=&#34;true&#34; 
+                           align-month=&#34;true&#34;&gt;
+                    &lt;ods-chart-query context=&#34;velib&#34; 
+                                     field-x=&#34;name&#34; 
+                                     maxpoints=&#34;10&#34; 
+                                     sort=&#34;serie1-1&#34;&gt;
+                        &lt;ods-chart-serie expression-y=&#34;numbikesavailable&#34; 
+                                         chart-type=&#34;column&#34; 
+                                         function-y=&#34;SUM&#34; 
+                                         color=&#34;#142E7B&#34; 
+                                         scientific-display=&#34;true&#34;&gt;
+                        &lt;/ods-chart-serie&gt;
+                    &lt;/ods-chart-query&gt;
+                &lt;/ods-chart&gt;
+        &lt;/ods-simple-tab&gt;
+    &lt;/ods-simple-tabs&gt;
+&lt;/ods-dataset-context&gt;
+      </code></pre>
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-ods-simple-tabs-1-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code></code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-ods-simple-tabs-1";
+            iframe = document.getElementById(iframeId);
+             
+            size =  null 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <h2 class="title" id="tab-pills">
+  Tab Pills
+  
+    <a class="is-link" href="#tab-pills">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+<p>A different style for the tab navigation.</p>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-ods-simple-tabs-2"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;velib\&#34; \n                     velib-dataset=\&#34;velib-disponibilite-en-temps-reel\&#34;\n                     velib-domain=\&#34;parisdata\&#34;\u003e\n    \u003cods-simple-tabs class=\&#34;tab-pills\&#34;\u003e\n        \u003cods-simple-tab label=\&#34;Velib\&#34; \n                        fontawesome-class=\&#34;bicycle\&#34;\n                        keep-content=\&#34;true\&#34;\u003e\n            \u003cp\u003e\n                L’objectif du service Vélib’ Métropole est de faciliter le développement de nouvelles mobilités sur le territoire francilien, en complément de l’offre de transport existante.\n            \u003c/p\u003e\n            \u003cods-table context=\&#34;velib\&#34;\u003e\u003c/ods-table\u003e\n        \u003c/ods-simple-tab\u003e\n        \u003cods-simple-tab label=\&#34;Stations\&#34;\u003e\n            \u003cods-map no-refit=\&#34;true\&#34; \n                     scroll-wheel-zoom=\&#34;false\&#34; \n                     display-control=\&#34;true\&#34; \n                     search-box=\&#34;true\&#34; \n                     toolbar-fullscreen=\&#34;true\&#34;\n                     toolbar-geolocation=\&#34;true\&#34; \n                     basemap=\&#34;jawg.sunny\&#34; \n                     location=\&#34;12,48.85593,2.35192\&#34;\u003e\n                \u003cods-map-layer-group\u003e\n                    \u003cods-map-layer context=\&#34;velib\&#34; \n                                   color=\&#34;#C32D1C\&#34; \n                                   picto=\&#34;ods-bicycle\&#34; \n                                   show-marker=\&#34;true\&#34; \n                                   display=\&#34;auto\&#34; \n                                   shape-opacity=\&#34;0.5\&#34; \n                                   point-opacity=\&#34;1\&#34; \n                                   border-color=\&#34;#FFFFFF\&#34;\n                                   border-opacity=\&#34;1\&#34; \n                                   border-size=\&#34;1\&#34; \n                                   border-pattern=\&#34;solid\&#34; \n                                   caption=\&#34;true\&#34; \n                                   title=\&#34;Vélib - Vélos et bornes - Disponibilité temps réel\&#34; \n                                   description=\&#34;Jeu de données présentant la disponibilité des bornettes, vélos\n                                                mécaniques et électriques des stations Vélib’ Métropole.\&#34; \n                                   size=\&#34;4\&#34; \n                                   size-min=\&#34;3\&#34; \n                                   size-max=\&#34;5\&#34; \n                                   size-function=\&#34;linear\&#34;\u003e\u003c/ods-map-layer\u003e\n                \u003c/ods-map-layer-group\u003e\n            \u003c/ods-map\u003e\n        \u003c/ods-simple-tab\u003e\n        \u003cods-simple-tab label=\&#34;Top 10 disponibilité\&#34;\u003e\n            \u003cods-chart single-y-axis=\&#34;true\&#34; \n                       align-month=\&#34;true\&#34;\u003e\n                \u003cods-chart-query context=\&#34;velib\&#34; \n                                 field-x=\&#34;name\&#34; \n                                 maxpoints=\&#34;10\&#34; \n                                 sort=\&#34;serie1-1\&#34;\u003e\n                    \u003cods-chart-serie expression-y=\&#34;numbikesavailable\&#34; \n                                     chart-type=\&#34;column\&#34; \n                                     function-y=\&#34;SUM\&#34; \n                                     color=\&#34;#142E7B\&#34; \n                                     scientific-display=\&#34;true\&#34;\u003e\n                    \u003c/ods-chart-serie\u003e\n                \u003c/ods-chart-query\u003e\n            \u003c/ods-chart\u003e\n        \u003c/ods-simple-tab\u003e\n    \u003c/ods-simple-tabs\u003e\n\u003c/ods-dataset-context\u003e\n      \u003c/div\u003e&#34;,
+               "css": &#34;/* Tab Pills\n   ========================================================================== */\n.tab-pills .ods-simple-tabs-nav-link {\n    padding: 0.5rem 1.5rem;\n    border-bottom: 0;\n    border-radius: 30px;\n    background-color: transparent;\n}\n.tab-pills .ods-simple-tabs-nav-link:hover {\n    color: var(--links);\n}\n.tab-pills .ods-simple-tabs-nav-link-active {\n    background-color: var(--links);\n}\n.tab-pills .ods-simple-tabs-nav-link-active,\n.tab-pills .ods-simple-tabs-nav-link-active:hover {\n    color: #FFFFFF;\n}\n      &#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-ods-simple-tabs-2"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+        </head>
+        <body>
+        <div ng-app='ods-widgets'>
+            &lt;ods-dataset-context context=&#34;velib&#34; 
+                     velib-dataset=&#34;velib-disponibilite-en-temps-reel&#34;
+                     velib-domain=&#34;parisdata&#34;&gt;
+    &lt;ods-simple-tabs class=&#34;tab-pills&#34;&gt;
+        &lt;ods-simple-tab label=&#34;Velib&#34; 
+                        fontawesome-class=&#34;bicycle&#34;
+                        keep-content=&#34;true&#34;&gt;
+            &lt;p&gt;
+                L’objectif du service Vélib’ Métropole est de faciliter le développement de nouvelles mobilités sur le territoire francilien, en complément de l’offre de transport existante.
+            &lt;/p&gt;
+            &lt;ods-table context=&#34;velib&#34;&gt;&lt;/ods-table&gt;
+        &lt;/ods-simple-tab&gt;
+        &lt;ods-simple-tab label=&#34;Stations&#34;&gt;
+            &lt;ods-map no-refit=&#34;true&#34; 
+                     scroll-wheel-zoom=&#34;false&#34; 
+                     display-control=&#34;true&#34; 
+                     search-box=&#34;true&#34; 
+                     toolbar-fullscreen=&#34;true&#34;
+                     toolbar-geolocation=&#34;true&#34; 
+                     basemap=&#34;jawg.sunny&#34; 
+                     location=&#34;12,48.85593,2.35192&#34;&gt;
+                &lt;ods-map-layer-group&gt;
+                    &lt;ods-map-layer context=&#34;velib&#34; 
+                                   color=&#34;#C32D1C&#34; 
+                                   picto=&#34;ods-bicycle&#34; 
+                                   show-marker=&#34;true&#34; 
+                                   display=&#34;auto&#34; 
+                                   shape-opacity=&#34;0.5&#34; 
+                                   point-opacity=&#34;1&#34; 
+                                   border-color=&#34;#FFFFFF&#34;
+                                   border-opacity=&#34;1&#34; 
+                                   border-size=&#34;1&#34; 
+                                   border-pattern=&#34;solid&#34; 
+                                   caption=&#34;true&#34; 
+                                   title=&#34;Vélib - Vélos et bornes - Disponibilité temps réel&#34; 
+                                   description=&#34;Jeu de données présentant la disponibilité des bornettes, vélos
+                                                mécaniques et électriques des stations Vélib’ Métropole.&#34; 
+                                   size=&#34;4&#34; 
+                                   size-min=&#34;3&#34; 
+                                   size-max=&#34;5&#34; 
+                                   size-function=&#34;linear&#34;&gt;&lt;/ods-map-layer&gt;
+                &lt;/ods-map-layer-group&gt;
+            &lt;/ods-map&gt;
+        &lt;/ods-simple-tab&gt;
+        &lt;ods-simple-tab label=&#34;Top 10 disponibilité&#34;&gt;
+            &lt;ods-chart single-y-axis=&#34;true&#34; 
+                       align-month=&#34;true&#34;&gt;
+                &lt;ods-chart-query context=&#34;velib&#34; 
+                                 field-x=&#34;name&#34; 
+                                 maxpoints=&#34;10&#34; 
+                                 sort=&#34;serie1-1&#34;&gt;
+                    &lt;ods-chart-serie expression-y=&#34;numbikesavailable&#34; 
+                                     chart-type=&#34;column&#34; 
+                                     function-y=&#34;SUM&#34; 
+                                     color=&#34;#142E7B&#34; 
+                                     scientific-display=&#34;true&#34;&gt;
+                    &lt;/ods-chart-serie&gt;
+                &lt;/ods-chart-query&gt;
+            &lt;/ods-chart&gt;
+        &lt;/ods-simple-tab&gt;
+    &lt;/ods-simple-tabs&gt;
+&lt;/ods-dataset-context&gt;
+      
+        </div>
+        <style type='text/css'>
+            /* Tab Pills
+   ========================================================================== */
+.tab-pills .ods-simple-tabs-nav-link {
+    padding: 0.5rem 1.5rem;
+    border-bottom: 0;
+    border-radius: 30px;
+    background-color: transparent;
+}
+.tab-pills .ods-simple-tabs-nav-link:hover {
+    color: var(--links);
+}
+.tab-pills .ods-simple-tabs-nav-link-active {
+    background-color: var(--links);
+}
+.tab-pills .ods-simple-tabs-nav-link-active,
+.tab-pills .ods-simple-tabs-nav-link-active:hover {
+    color: #FFFFFF;
+}
+      
+        </style>
+        </body>
+        ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-ods-simple-tabs-2-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-ods-simple-tabs-2-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right">
+                <a class="button is-primary is-outlined edit-on-codepen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-ods-simple-tabs-2').submit()">
+                    Edit on CodePen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-ods-simple-tabs-2-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;velib&#34; 
+                     velib-dataset=&#34;velib-disponibilite-en-temps-reel&#34;
+                     velib-domain=&#34;parisdata&#34;&gt;
+    &lt;ods-simple-tabs class=&#34;tab-pills&#34;&gt;
+        &lt;ods-simple-tab label=&#34;Velib&#34; 
+                        fontawesome-class=&#34;bicycle&#34;
+                        keep-content=&#34;true&#34;&gt;
+            &lt;p&gt;
+                L’objectif du service Vélib’ Métropole est de faciliter le développement de nouvelles mobilités sur le territoire francilien, en complément de l’offre de transport existante.
+            &lt;/p&gt;
+            &lt;ods-table context=&#34;velib&#34;&gt;&lt;/ods-table&gt;
+        &lt;/ods-simple-tab&gt;
+        &lt;ods-simple-tab label=&#34;Stations&#34;&gt;
+            &lt;ods-map no-refit=&#34;true&#34; 
+                     scroll-wheel-zoom=&#34;false&#34; 
+                     display-control=&#34;true&#34; 
+                     search-box=&#34;true&#34; 
+                     toolbar-fullscreen=&#34;true&#34;
+                     toolbar-geolocation=&#34;true&#34; 
+                     basemap=&#34;jawg.sunny&#34; 
+                     location=&#34;12,48.85593,2.35192&#34;&gt;
+                &lt;ods-map-layer-group&gt;
+                    &lt;ods-map-layer context=&#34;velib&#34; 
+                                   color=&#34;#C32D1C&#34; 
+                                   picto=&#34;ods-bicycle&#34; 
+                                   show-marker=&#34;true&#34; 
+                                   display=&#34;auto&#34; 
+                                   shape-opacity=&#34;0.5&#34; 
+                                   point-opacity=&#34;1&#34; 
+                                   border-color=&#34;#FFFFFF&#34;
+                                   border-opacity=&#34;1&#34; 
+                                   border-size=&#34;1&#34; 
+                                   border-pattern=&#34;solid&#34; 
+                                   caption=&#34;true&#34; 
+                                   title=&#34;Vélib - Vélos et bornes - Disponibilité temps réel&#34; 
+                                   description=&#34;Jeu de données présentant la disponibilité des bornettes, vélos
+                                                mécaniques et électriques des stations Vélib’ Métropole.&#34; 
+                                   size=&#34;4&#34; 
+                                   size-min=&#34;3&#34; 
+                                   size-max=&#34;5&#34; 
+                                   size-function=&#34;linear&#34;&gt;&lt;/ods-map-layer&gt;
+                &lt;/ods-map-layer-group&gt;
+            &lt;/ods-map&gt;
+        &lt;/ods-simple-tab&gt;
+        &lt;ods-simple-tab label=&#34;Top 10 disponibilité&#34;&gt;
+            &lt;ods-chart single-y-axis=&#34;true&#34; 
+                       align-month=&#34;true&#34;&gt;
+                &lt;ods-chart-query context=&#34;velib&#34; 
+                                 field-x=&#34;name&#34; 
+                                 maxpoints=&#34;10&#34; 
+                                 sort=&#34;serie1-1&#34;&gt;
+                    &lt;ods-chart-serie expression-y=&#34;numbikesavailable&#34; 
+                                     chart-type=&#34;column&#34; 
+                                     function-y=&#34;SUM&#34; 
+                                     color=&#34;#142E7B&#34; 
+                                     scientific-display=&#34;true&#34;&gt;
+                    &lt;/ods-chart-serie&gt;
+                &lt;/ods-chart-query&gt;
+            &lt;/ods-chart&gt;
+        &lt;/ods-simple-tab&gt;
+    &lt;/ods-simple-tabs&gt;
+&lt;/ods-dataset-context&gt;
+      </code></pre>
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-ods-simple-tabs-2-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>/* Tab Pills
+   ========================================================================== */
+.tab-pills .ods-simple-tabs-nav-link {
+    padding: 0.5rem 1.5rem;
+    border-bottom: 0;
+    border-radius: 30px;
+    background-color: transparent;
+}
+.tab-pills .ods-simple-tabs-nav-link:hover {
+    color: var(--links);
+}
+.tab-pills .ods-simple-tabs-nav-link-active {
+    background-color: var(--links);
+}
+.tab-pills .ods-simple-tabs-nav-link-active,
+.tab-pills .ods-simple-tabs-nav-link-active:hover {
+    color: #FFFFFF;
+}
+      </code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-ods-simple-tabs-2";
+            iframe = document.getElementById(iframeId);
+             
+            size =  null 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <h2 class="title" id="horizontal-layout">
+  Horizontal Layout
+  
+    <a class="is-link" href="#horizontal-layout">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+<p>Display the tab navigation bar horizontally, next to the tab content. The responsive design has been taken into account and while on a small screen the tab navigation bar is above of the content.</p>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-ods-simple-tabs-3"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;velib\&#34; \n                     velib-dataset=\&#34;velib-disponibilite-en-temps-reel\&#34;\n                     velib-domain=\&#34;parisdata\&#34;\u003e\n    \u003cods-simple-tabs class=\&#34;tab-horizontal\&#34;\u003e\n        \u003cods-simple-tab label=\&#34;Velib\&#34; \n                        fontawesome-class=\&#34;bicycle\&#34;\n                        keep-content=\&#34;true\&#34;\u003e\n            \u003cp\u003e\n                L’objectif du service Vélib’ Métropole est de faciliter le développement de nouvelles mobilités sur le territoire francilien, en complément de l’offre de transport existante.\n            \u003c/p\u003e\n            \u003cods-table context=\&#34;velib\&#34;\u003e\u003c/ods-table\u003e\n        \u003c/ods-simple-tab\u003e\n        \u003cods-simple-tab label=\&#34;Stations\&#34;\u003e\n            \u003cods-map no-refit=\&#34;true\&#34; \n                     scroll-wheel-zoom=\&#34;false\&#34; \n                     display-control=\&#34;true\&#34; \n                     search-box=\&#34;true\&#34; \n                     toolbar-fullscreen=\&#34;true\&#34;\n                     toolbar-geolocation=\&#34;true\&#34; \n                     basemap=\&#34;jawg.sunny\&#34; \n                     location=\&#34;12,48.85593,2.35192\&#34;\u003e\n                \u003cods-map-layer-group\u003e\n                    \u003cods-map-layer context=\&#34;velib\&#34; \n                                   color=\&#34;#C32D1C\&#34; \n                                   picto=\&#34;ods-bicycle\&#34; \n                                   show-marker=\&#34;true\&#34; \n                                   display=\&#34;auto\&#34; \n                                   shape-opacity=\&#34;0.5\&#34; \n                                   point-opacity=\&#34;1\&#34; \n                                   border-color=\&#34;#FFFFFF\&#34;\n                                   border-opacity=\&#34;1\&#34; \n                                   border-size=\&#34;1\&#34; \n                                   border-pattern=\&#34;solid\&#34; \n                                   caption=\&#34;true\&#34; \n                                   title=\&#34;Vélib - Vélos et bornes - Disponibilité temps réel\&#34; \n                                   description=\&#34;Jeu de données présentant la disponibilité des bornettes, vélos\n                                                mécaniques et électriques des stations Vélib’ Métropole.\&#34; \n                                   size=\&#34;4\&#34; \n                                   size-min=\&#34;3\&#34; \n                                   size-max=\&#34;5\&#34; \n                                   size-function=\&#34;linear\&#34;\u003e\u003c/ods-map-layer\u003e\n                \u003c/ods-map-layer-group\u003e\n            \u003c/ods-map\u003e\n        \u003c/ods-simple-tab\u003e\n        \u003cods-simple-tab label=\&#34;Top 10 disponibilité\&#34;\u003e\n            \u003cods-chart single-y-axis=\&#34;true\&#34; \n                       align-month=\&#34;true\&#34;\u003e\n                \u003cods-chart-query context=\&#34;velib\&#34; \n                                 field-x=\&#34;name\&#34; \n                                 maxpoints=\&#34;10\&#34; \n                                 sort=\&#34;serie1-1\&#34;\u003e\n                    \u003cods-chart-serie expression-y=\&#34;numbikesavailable\&#34; \n                                     chart-type=\&#34;column\&#34; \n                                     function-y=\&#34;SUM\&#34; \n                                     color=\&#34;#142E7B\&#34; \n                                     scientific-display=\&#34;true\&#34;\u003e\n                    \u003c/ods-chart-serie\u003e\n                \u003c/ods-chart-query\u003e\n            \u003c/ods-chart\u003e\n        \u003c/ods-simple-tab\u003e\n    \u003c/ods-simple-tabs\u003e\n\u003c/ods-dataset-context\u003e\n      \u003c/div\u003e&#34;,
+               "css": &#34;/* Horizontal Tabs\n   ========================================================================== */\n.tab-horizontal {\n    display: flex;\n    flex-direction: column;\n}\n@media (min-width: 767px) {\n    .tab-horizontal {\n        flex-direction: row;\n    }\n}\n@media (min-width: 767px) {\n    .tab-horizontal .ods-simple-tabs-nav {\n        flex: 0 0 15%;\n        margin-right: 10px;\n        flex-direction: column;\n        overflow-x: inherit;\n    }    \n}\n.tab-horizontal .ods-simple-tabs-nav-link {\n    border-radius: 4px;\n    border-bottom: none;\n}\n.tab-horizontal .ods-simple-tabs-nav-link:hover {\n    color: var(--links);\n}\n.tab-horizontal .ods-simple-tabs-nav-link-active {\n    background-color: var(--links);\n}\n.tab-horizontal .ods-simple-tabs-nav-link-active,\n.tab-horizontal .ods-simple-tabs-nav-link-active:hover {\n    color: #FFFFFF;\n}\n@media (min-width: 767px) {\n    .tab-horizontal .ods-simple-tabs-content {\n        flex: 1 1 auto;\n        overflow: auto;\n    }    \n}\n      &#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-ods-simple-tabs-3"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+        </head>
+        <body>
+        <div ng-app='ods-widgets'>
+            &lt;ods-dataset-context context=&#34;velib&#34; 
+                     velib-dataset=&#34;velib-disponibilite-en-temps-reel&#34;
+                     velib-domain=&#34;parisdata&#34;&gt;
+    &lt;ods-simple-tabs class=&#34;tab-horizontal&#34;&gt;
+        &lt;ods-simple-tab label=&#34;Velib&#34; 
+                        fontawesome-class=&#34;bicycle&#34;
+                        keep-content=&#34;true&#34;&gt;
+            &lt;p&gt;
+                L’objectif du service Vélib’ Métropole est de faciliter le développement de nouvelles mobilités sur le territoire francilien, en complément de l’offre de transport existante.
+            &lt;/p&gt;
+            &lt;ods-table context=&#34;velib&#34;&gt;&lt;/ods-table&gt;
+        &lt;/ods-simple-tab&gt;
+        &lt;ods-simple-tab label=&#34;Stations&#34;&gt;
+            &lt;ods-map no-refit=&#34;true&#34; 
+                     scroll-wheel-zoom=&#34;false&#34; 
+                     display-control=&#34;true&#34; 
+                     search-box=&#34;true&#34; 
+                     toolbar-fullscreen=&#34;true&#34;
+                     toolbar-geolocation=&#34;true&#34; 
+                     basemap=&#34;jawg.sunny&#34; 
+                     location=&#34;12,48.85593,2.35192&#34;&gt;
+                &lt;ods-map-layer-group&gt;
+                    &lt;ods-map-layer context=&#34;velib&#34; 
+                                   color=&#34;#C32D1C&#34; 
+                                   picto=&#34;ods-bicycle&#34; 
+                                   show-marker=&#34;true&#34; 
+                                   display=&#34;auto&#34; 
+                                   shape-opacity=&#34;0.5&#34; 
+                                   point-opacity=&#34;1&#34; 
+                                   border-color=&#34;#FFFFFF&#34;
+                                   border-opacity=&#34;1&#34; 
+                                   border-size=&#34;1&#34; 
+                                   border-pattern=&#34;solid&#34; 
+                                   caption=&#34;true&#34; 
+                                   title=&#34;Vélib - Vélos et bornes - Disponibilité temps réel&#34; 
+                                   description=&#34;Jeu de données présentant la disponibilité des bornettes, vélos
+                                                mécaniques et électriques des stations Vélib’ Métropole.&#34; 
+                                   size=&#34;4&#34; 
+                                   size-min=&#34;3&#34; 
+                                   size-max=&#34;5&#34; 
+                                   size-function=&#34;linear&#34;&gt;&lt;/ods-map-layer&gt;
+                &lt;/ods-map-layer-group&gt;
+            &lt;/ods-map&gt;
+        &lt;/ods-simple-tab&gt;
+        &lt;ods-simple-tab label=&#34;Top 10 disponibilité&#34;&gt;
+            &lt;ods-chart single-y-axis=&#34;true&#34; 
+                       align-month=&#34;true&#34;&gt;
+                &lt;ods-chart-query context=&#34;velib&#34; 
+                                 field-x=&#34;name&#34; 
+                                 maxpoints=&#34;10&#34; 
+                                 sort=&#34;serie1-1&#34;&gt;
+                    &lt;ods-chart-serie expression-y=&#34;numbikesavailable&#34; 
+                                     chart-type=&#34;column&#34; 
+                                     function-y=&#34;SUM&#34; 
+                                     color=&#34;#142E7B&#34; 
+                                     scientific-display=&#34;true&#34;&gt;
+                    &lt;/ods-chart-serie&gt;
+                &lt;/ods-chart-query&gt;
+            &lt;/ods-chart&gt;
+        &lt;/ods-simple-tab&gt;
+    &lt;/ods-simple-tabs&gt;
+&lt;/ods-dataset-context&gt;
+      
+        </div>
+        <style type='text/css'>
+            /* Horizontal Tabs
+   ========================================================================== */
+.tab-horizontal {
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 767px) {
+    .tab-horizontal {
+        flex-direction: row;
+    }
+}
+@media (min-width: 767px) {
+    .tab-horizontal .ods-simple-tabs-nav {
+        flex: 0 0 15%;
+        margin-right: 10px;
+        flex-direction: column;
+        overflow-x: inherit;
+    }    
+}
+.tab-horizontal .ods-simple-tabs-nav-link {
+    border-radius: 4px;
+    border-bottom: none;
+}
+.tab-horizontal .ods-simple-tabs-nav-link:hover {
+    color: var(--links);
+}
+.tab-horizontal .ods-simple-tabs-nav-link-active {
+    background-color: var(--links);
+}
+.tab-horizontal .ods-simple-tabs-nav-link-active,
+.tab-horizontal .ods-simple-tabs-nav-link-active:hover {
+    color: #FFFFFF;
+}
+@media (min-width: 767px) {
+    .tab-horizontal .ods-simple-tabs-content {
+        flex: 1 1 auto;
+        overflow: auto;
+    }    
+}
+      
+        </style>
+        </body>
+        ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-ods-simple-tabs-3-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-ods-simple-tabs-3-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right">
+                <a class="button is-primary is-outlined edit-on-codepen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-ods-simple-tabs-3').submit()">
+                    Edit on CodePen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-ods-simple-tabs-3-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;velib&#34; 
+                     velib-dataset=&#34;velib-disponibilite-en-temps-reel&#34;
+                     velib-domain=&#34;parisdata&#34;&gt;
+    &lt;ods-simple-tabs class=&#34;tab-horizontal&#34;&gt;
+        &lt;ods-simple-tab label=&#34;Velib&#34; 
+                        fontawesome-class=&#34;bicycle&#34;
+                        keep-content=&#34;true&#34;&gt;
+            &lt;p&gt;
+                L’objectif du service Vélib’ Métropole est de faciliter le développement de nouvelles mobilités sur le territoire francilien, en complément de l’offre de transport existante.
+            &lt;/p&gt;
+            &lt;ods-table context=&#34;velib&#34;&gt;&lt;/ods-table&gt;
+        &lt;/ods-simple-tab&gt;
+        &lt;ods-simple-tab label=&#34;Stations&#34;&gt;
+            &lt;ods-map no-refit=&#34;true&#34; 
+                     scroll-wheel-zoom=&#34;false&#34; 
+                     display-control=&#34;true&#34; 
+                     search-box=&#34;true&#34; 
+                     toolbar-fullscreen=&#34;true&#34;
+                     toolbar-geolocation=&#34;true&#34; 
+                     basemap=&#34;jawg.sunny&#34; 
+                     location=&#34;12,48.85593,2.35192&#34;&gt;
+                &lt;ods-map-layer-group&gt;
+                    &lt;ods-map-layer context=&#34;velib&#34; 
+                                   color=&#34;#C32D1C&#34; 
+                                   picto=&#34;ods-bicycle&#34; 
+                                   show-marker=&#34;true&#34; 
+                                   display=&#34;auto&#34; 
+                                   shape-opacity=&#34;0.5&#34; 
+                                   point-opacity=&#34;1&#34; 
+                                   border-color=&#34;#FFFFFF&#34;
+                                   border-opacity=&#34;1&#34; 
+                                   border-size=&#34;1&#34; 
+                                   border-pattern=&#34;solid&#34; 
+                                   caption=&#34;true&#34; 
+                                   title=&#34;Vélib - Vélos et bornes - Disponibilité temps réel&#34; 
+                                   description=&#34;Jeu de données présentant la disponibilité des bornettes, vélos
+                                                mécaniques et électriques des stations Vélib’ Métropole.&#34; 
+                                   size=&#34;4&#34; 
+                                   size-min=&#34;3&#34; 
+                                   size-max=&#34;5&#34; 
+                                   size-function=&#34;linear&#34;&gt;&lt;/ods-map-layer&gt;
+                &lt;/ods-map-layer-group&gt;
+            &lt;/ods-map&gt;
+        &lt;/ods-simple-tab&gt;
+        &lt;ods-simple-tab label=&#34;Top 10 disponibilité&#34;&gt;
+            &lt;ods-chart single-y-axis=&#34;true&#34; 
+                       align-month=&#34;true&#34;&gt;
+                &lt;ods-chart-query context=&#34;velib&#34; 
+                                 field-x=&#34;name&#34; 
+                                 maxpoints=&#34;10&#34; 
+                                 sort=&#34;serie1-1&#34;&gt;
+                    &lt;ods-chart-serie expression-y=&#34;numbikesavailable&#34; 
+                                     chart-type=&#34;column&#34; 
+                                     function-y=&#34;SUM&#34; 
+                                     color=&#34;#142E7B&#34; 
+                                     scientific-display=&#34;true&#34;&gt;
+                    &lt;/ods-chart-serie&gt;
+                &lt;/ods-chart-query&gt;
+            &lt;/ods-chart&gt;
+        &lt;/ods-simple-tab&gt;
+    &lt;/ods-simple-tabs&gt;
+&lt;/ods-dataset-context&gt;
+      </code></pre>
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-ods-simple-tabs-3-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>/* Horizontal Tabs
+   ========================================================================== */
+.tab-horizontal {
+    display: flex;
+    flex-direction: column;
+}
+@media (min-width: 767px) {
+    .tab-horizontal {
+        flex-direction: row;
+    }
+}
+@media (min-width: 767px) {
+    .tab-horizontal .ods-simple-tabs-nav {
+        flex: 0 0 15%;
+        margin-right: 10px;
+        flex-direction: column;
+        overflow-x: inherit;
+    }    
+}
+.tab-horizontal .ods-simple-tabs-nav-link {
+    border-radius: 4px;
+    border-bottom: none;
+}
+.tab-horizontal .ods-simple-tabs-nav-link:hover {
+    color: var(--links);
+}
+.tab-horizontal .ods-simple-tabs-nav-link-active {
+    background-color: var(--links);
+}
+.tab-horizontal .ods-simple-tabs-nav-link-active,
+.tab-horizontal .ods-simple-tabs-nav-link-active:hover {
+    color: #FFFFFF;
+}
+@media (min-width: 767px) {
+    .tab-horizontal .ods-simple-tabs-content {
+        flex: 1 1 auto;
+        overflow: auto;
+    }    
+}
+      </code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-ods-simple-tabs-3";
+            iframe = document.getElementById(iframeId);
+             
+            size =  null 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <h2 class="title" id="dot-tabs">
+  Dot Tabs
+  
+    <a class="is-link" href="#dot-tabs">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+<p>The tabs navigation is presented using dots on the bottom of the tabbed content.</p>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-ods-simple-tabs-4"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;kpi-card\&#34;\u003e\n    \u003cods-simple-tabs class=\&#34;tab-dots\&#34;\u003e\n        \u003cods-simple-tab keep-content=\&#34;true\&#34;\u003e\n            \u003ci class=\&#34;kpi-icon fa fa-gitlab\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n            \u003ch2 class=\&#34;kpi-title\&#34;\u003e\n                5,983\n            \u003c/h2\u003e\n            \u003cp class=\&#34;kpi-description\&#34;\u003e\n                Dignissim suspendisse in est ante in nibh nisl tincidunt eget\n            \u003c/p\u003e\n        \u003c/ods-simple-tab\u003e\n        \u003cods-simple-tab keep-content=\&#34;true\&#34;\u003e\n            \u003ci class=\&#34;kpi-icon fa fa-houzz\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n            \u003ch2 class=\&#34;kpi-title\&#34;\u003e\n                18.3k\n            \u003c/h2\u003e\n            \u003cp class=\&#34;kpi-description\&#34;\u003e\n                Quam vulputate dignissim suspendisse in est ante in nibh. Faucibus nisl tincidunt eget nullam non nisi est sit amet\n            \u003c/p\u003e\n        \u003c/ods-simple-tab\u003e\n        \u003cods-simple-tab keep-content=\&#34;true\&#34;\u003e\n            \u003ci class=\&#34;kpi-icon fa fa-houzz\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n            \u003ch2 class=\&#34;kpi-title\&#34;\u003e\n                8.3k\n            \u003c/h2\u003e\n            \u003cp class=\&#34;kpi-description\&#34;\u003e\n                Quam vulputate\n            \u003c/p\u003e\n        \u003c/ods-simple-tab\u003e\n    \u003c/ods-simple-tabs\u003e\n\u003c/div\u003e\n      \u003c/div\u003e&#34;,
+               "css": &#34;/* Tab dots\n   ========================================================================== */\n.tab-dots {\n    display: flex;\n    flex-direction: column-reverse;\n    margin-bottom: 0;\n}\n.tab-dots .ods-simple-tabs-nav {\n    margin-top: 20px;\n    margin-bottom: 0;\n    justify-content: center;    \n}\n.tab-dots .ods-simple-tabs-nav-link {\n    border: none;\n    padding: 0;\n    width: 14px;\n    height: 14px;\n    border-radius: 50%;\n    background-color: rgba(0,0,0,.2);\n    margin: 0 4px;\n}\n.tab-dots .ods-simple-tabs-nav-link:hover,\n.tab-dots .ods-simple-tabs-nav-link-active {\n    background-color: var(--links);\n}\n/* KPI Card\n========================================================================== */\n.kpi-card {\n    background-color: var(--boxes-background);\n    height: 100%;\n    padding: 39px;\n    border-radius: 4px;\n    margin-bottom: 20px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -ms-flex-direction: column;\n    flex-direction: column;\n    -webkit-box-align: center;\n    -ms-flex-align: center;\n    align-items: center;\n    text-align: center;\n    -webkit-box-pack: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    text-align: center;\n}\n.kpi-icon {\n    color: var(--highlight);\n    color: var(--secondary-color);\n    font-size: 4rem;\n    margin-top: 0;\n    margin-bottom: 13px;\t\n    max-width: 100%;\n}\n.kpi-title {\n    font-weight: normal;\n    color: var(--highlight);\n    font-size: 3.2rem;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n.kpi-description { \n    color: var(--text);\n    font-size: 1rem;\n    line-height: 1.5;\n    font-weight: normal;\n    margin-top: 0;\n    margin-bottom: 0;\n    max-width: 100%;\n}\n      &#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-ods-simple-tabs-4"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+        </head>
+        <body>
+        <div ng-app='ods-widgets'>
+            &lt;div class=&#34;kpi-card&#34;&gt;
+    &lt;ods-simple-tabs class=&#34;tab-dots&#34;&gt;
+        &lt;ods-simple-tab keep-content=&#34;true&#34;&gt;
+            &lt;i class=&#34;kpi-icon fa fa-gitlab&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;h2 class=&#34;kpi-title&#34;&gt;
+                5,983
+            &lt;/h2&gt;
+            &lt;p class=&#34;kpi-description&#34;&gt;
+                Dignissim suspendisse in est ante in nibh nisl tincidunt eget
+            &lt;/p&gt;
+        &lt;/ods-simple-tab&gt;
+        &lt;ods-simple-tab keep-content=&#34;true&#34;&gt;
+            &lt;i class=&#34;kpi-icon fa fa-houzz&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;h2 class=&#34;kpi-title&#34;&gt;
+                18.3k
+            &lt;/h2&gt;
+            &lt;p class=&#34;kpi-description&#34;&gt;
+                Quam vulputate dignissim suspendisse in est ante in nibh. Faucibus nisl tincidunt eget nullam non nisi est sit amet
+            &lt;/p&gt;
+        &lt;/ods-simple-tab&gt;
+        &lt;ods-simple-tab keep-content=&#34;true&#34;&gt;
+            &lt;i class=&#34;kpi-icon fa fa-houzz&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;h2 class=&#34;kpi-title&#34;&gt;
+                8.3k
+            &lt;/h2&gt;
+            &lt;p class=&#34;kpi-description&#34;&gt;
+                Quam vulputate
+            &lt;/p&gt;
+        &lt;/ods-simple-tab&gt;
+    &lt;/ods-simple-tabs&gt;
+&lt;/div&gt;
+      
+        </div>
+        <style type='text/css'>
+            /* Tab dots
+   ========================================================================== */
+.tab-dots {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 0;
+}
+.tab-dots .ods-simple-tabs-nav {
+    margin-top: 20px;
+    margin-bottom: 0;
+    justify-content: center;    
+}
+.tab-dots .ods-simple-tabs-nav-link {
+    border: none;
+    padding: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,.2);
+    margin: 0 4px;
+}
+.tab-dots .ods-simple-tabs-nav-link:hover,
+.tab-dots .ods-simple-tabs-nav-link-active {
+    background-color: var(--links);
+}
+/* KPI Card
+========================================================================== */
+.kpi-card {
+    background-color: var(--boxes-background);
+    height: 100%;
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+.kpi-icon {
+    color: var(--highlight);
+    color: var(--secondary-color);
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 13px;	
+    max-width: 100%;
+}
+.kpi-title {
+    font-weight: normal;
+    color: var(--highlight);
+    font-size: 3.2rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+.kpi-description { 
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 100%;
+}
+      
+        </style>
+        </body>
+        ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-ods-simple-tabs-4-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-ods-simple-tabs-4-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right">
+                <a class="button is-primary is-outlined edit-on-codepen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-ods-simple-tabs-4').submit()">
+                    Edit on CodePen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-ods-simple-tabs-4-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;kpi-card&#34;&gt;
+    &lt;ods-simple-tabs class=&#34;tab-dots&#34;&gt;
+        &lt;ods-simple-tab keep-content=&#34;true&#34;&gt;
+            &lt;i class=&#34;kpi-icon fa fa-gitlab&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;h2 class=&#34;kpi-title&#34;&gt;
+                5,983
+            &lt;/h2&gt;
+            &lt;p class=&#34;kpi-description&#34;&gt;
+                Dignissim suspendisse in est ante in nibh nisl tincidunt eget
+            &lt;/p&gt;
+        &lt;/ods-simple-tab&gt;
+        &lt;ods-simple-tab keep-content=&#34;true&#34;&gt;
+            &lt;i class=&#34;kpi-icon fa fa-houzz&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;h2 class=&#34;kpi-title&#34;&gt;
+                18.3k
+            &lt;/h2&gt;
+            &lt;p class=&#34;kpi-description&#34;&gt;
+                Quam vulputate dignissim suspendisse in est ante in nibh. Faucibus nisl tincidunt eget nullam non nisi est sit amet
+            &lt;/p&gt;
+        &lt;/ods-simple-tab&gt;
+        &lt;ods-simple-tab keep-content=&#34;true&#34;&gt;
+            &lt;i class=&#34;kpi-icon fa fa-houzz&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;h2 class=&#34;kpi-title&#34;&gt;
+                8.3k
+            &lt;/h2&gt;
+            &lt;p class=&#34;kpi-description&#34;&gt;
+                Quam vulputate
+            &lt;/p&gt;
+        &lt;/ods-simple-tab&gt;
+    &lt;/ods-simple-tabs&gt;
+&lt;/div&gt;
+      </code></pre>
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-ods-simple-tabs-4-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>/* Tab dots
+   ========================================================================== */
+.tab-dots {
+    display: flex;
+    flex-direction: column-reverse;
+    margin-bottom: 0;
+}
+.tab-dots .ods-simple-tabs-nav {
+    margin-top: 20px;
+    margin-bottom: 0;
+    justify-content: center;    
+}
+.tab-dots .ods-simple-tabs-nav-link {
+    border: none;
+    padding: 0;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,.2);
+    margin: 0 4px;
+}
+.tab-dots .ods-simple-tabs-nav-link:hover,
+.tab-dots .ods-simple-tabs-nav-link-active {
+    background-color: var(--links);
+}
+/* KPI Card
+========================================================================== */
+.kpi-card {
+    background-color: var(--boxes-background);
+    height: 100%;
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+.kpi-icon {
+    color: var(--highlight);
+    color: var(--secondary-color);
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 13px;	
+    max-width: 100%;
+}
+.kpi-title {
+    font-weight: normal;
+    color: var(--highlight);
+    font-size: 3.2rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+.kpi-description { 
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 100%;
+}
+      </code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-ods-simple-tabs-4";
+            iframe = document.getElementById(iframeId);
+             
+            size =  null 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+        </div>
+    </div>
+    
+</section>
+
+
+    </div>
+</div>
+
+<footer class="footer">
+    <a href="https://www.opendatasoft.com"
+       class="footer-link"
+       title="Opendatasoft website">
+        <img src="/img/ods-logo.svg"
+             class="footer-logo"
+             alt="Opendatasoft logo"
+        />
+    </a>
+    <span class="footer-copyright">
+        &copy; Copyright 2020
+    </span>
+</footer>
+
+
+
+
+
+
+
+<script>var process = { "env": { "NODE_ENV": "production" } }</script>
+<script type="text/javascript"
+        src="/index.min.11fcc0d6f8a0b04671eb0a5fb2bb06b89618c60744ea73effdb557ad43fd44a6.js"
+        defer></script>
+
+</body>
+</html>
