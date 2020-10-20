@@ -16,7 +16,7 @@
 <script type="text/javascript" src="/js/ods-catalog-card.js"></script>
 
 <script type="text/javascript">
-    angular.module('ods-widgets').config(function(ODSWidgetsConfigProvider) {
+    angular.module('ods-widgets').config(function (ODSWidgetsConfigProvider) {
         ODSWidgetsConfigProvider.setConfig({
             "basemaps": [
                 {
@@ -25,13 +25,63 @@
                     "jawg_apikey": "opendatasoft-community"
                 }
             ],
+            "themes": {
+                'Health': {
+                    'url': 'https://public.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg',
+                    'color': '#167935'
+                },
+                'Culture, Heritage': {
+                    'url': 'https://public.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg',
+                    'color': '#0944B8'
+                },
+                'Education, Training, Research, Teaching': {
+                    'url': 'https://public.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg',
+                    'color': '#162583'
+                },
+                'Environment': {
+                    'url': 'https://public.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg',
+                    'color': '#8CCA1F'
+                },
+                'Transport, Movements': {
+                    'url': 'https://public.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg',
+                    'color': '#8F44C0'
+                },
+                'Spatial planning, Town planning, Buildings, Equipment, Housing': {
+                    'url': 'https://public.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg',
+                    'color': '#35BBE8'
+                },
+                'Economy, Business, SME, Economic development, Employment': {
+                    'url': 'https://public.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg',
+                    'color': '#149D72'
+                },
+                'Administration, Government, Public finances, Citizenship': {
+                    'url': 'https://public.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg',
+                    'color': '#0944B8'
+                },
+                'Justice, Safety, Police, Crime': {
+                    'url': 'https://public.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg',
+                    'color': '#311357'
+                },
+                'Sports, Leisure': {
+                    'url': 'https://public.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg',
+                    'color': '#F82618'
+                },
+                'Accommodation, Hospitality Industry': {
+                    'url': 'https://public.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg',
+                    'color': '#7A0316'
+                },
+                'Services, Social': {
+                    'url': 'https://public.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg',
+                    'color': '#F9811E'
+                },
+            },
             "mapPrependAttribution": "Jawg apikey NOT suitable for production"
         });
     });
 </script>
 
 <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
         document.querySelectorAll('a[href="#"]').forEach((el) => {
             el.addEventListener('click', (event) => {
                 event.preventDefault();
