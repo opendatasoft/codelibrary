@@ -1,6 +1,5 @@
 ---
 title: "3 - Custom legend - simple"
-height: 500
 ---
 
 ## Custom legend - simple

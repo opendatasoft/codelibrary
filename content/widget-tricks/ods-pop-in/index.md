@@ -1,5 +1,5 @@
 ---
-title: "Ods-pop-in"
+title: "ods-pop-in"
 description: "Display content in a pop-in window."
 tags: ["display"]
 resources:

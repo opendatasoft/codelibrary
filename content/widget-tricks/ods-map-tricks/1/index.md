@@ -1,5 +1,5 @@
 ---
-title: "ods-maps tricks - 1"
+title: "ods-map refine zoom 1"
 ---
 
 ## Map as a selector

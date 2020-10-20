@@ -1,0 +1,1165 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+    <title>
+        
+ods-range-slider &ndash; Codelibrary
+
+    </title>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41201218-21"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-41201218-21');
+    </script>
+
+    
+    
+
+    
+    
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css"
+          integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8="
+          crossorigin="anonymous">
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href="/scss/main.css" />
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png">
+    <link rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png">
+    <link rel="shortcut icon"
+          href="/favicon.ico">
+</head>
+
+<body>
+
+<nav class="navbar is-fixed-top"
+     role="navigation"
+     aria-label="Main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item"
+           href="/"
+           title="Back to the homepage">
+            <img src="/img/ods-logo-helphub.svg"
+                 alt="Helphub Logo"/>
+        </a>
+        <button class="navbar-burger burger"
+                type="button"
+                data-target="helphubNavbar"
+                aria-controls="helphubNavbar"
+                aria-expanded="false"
+                aria-label="Menu">
+            Help Hub
+        </button>
+    </div>
+    <div class="navbar-menu"
+         id="helphubNavbar">
+        <div class="navbar-start">
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/">
+                Help Hub
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/platform/en/">
+                User guide
+            </a>
+            <a class="navbar-item is-active"
+               href="https://discovery.opendatasoft.com">
+                Code Library
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/faq-glossary/en/">
+                FAQ
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/widgets/">
+                Widgets
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/en/apis/">
+                APIs
+            </a>
+            <a class="navbar-item"
+               href="https://academy.opendatasoft.com/page/homepage">
+                Academy
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="columns codelibrary">
+    <div class="column is-narrow">
+        <aside class="sidebar menu">
+    <a href="https://codelibrary.opendatasoft.com"
+       class="sidebar-logo-link"
+       title="Go to Codelibrary homepage">
+        <img src="/img/ods-codelibrary-logo.svg"
+             class="sidebar-logo"
+             alt="Codelibrary Logo">
+    </a>
+
+    <div id="algolia-box"></div>
+    <div id="algolia-results"></div>
+
+    
+    <ul class="menu-list">
+        <li>
+            <a class="sidebar-subtitle"
+               href="https://codelibrary.opendatasoft.com">
+                Home
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="/components/"
+               class="sidebar-subtitle">
+                Components
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a href="/page-templates/"
+               class="sidebar-subtitle">
+                Page templates
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a href="/portal-themes/"
+               class="sidebar-subtitle">
+                Portal themes
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="sidebar-subtitle " href="/widget-tricks/">
+            Widget tricks
+            </a>
+            <ul>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/svg-maps/">SVG Maps</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/charts/">Chart Samples</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/custom-tooltip/">Custom tooltip</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/dates/">Dates</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/drill-down/">Drill-down chart</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/filter-as-list/">Filters as an HTML Select</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-aggregation/">ods-aggregation</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-analysis/">ods-analysis</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-color-gradient/">ods-color-gradient &amp; ods-legend</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-map-tricks/">ods-map: Refine &amp; Zoom</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-map-css/">ods-map: CSS Hacks</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-pop-in/">ods-pop-in</a>
+                </li>
+                
+                <li>
+                    <a class="is-active" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-date-range-slider/">ods-range-slider</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-simple-tabs/">ods-simple-tabs</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/share-print/">Share and print</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/timeline/">Timeline Custom View</a>
+                </li>
+                
+            </ul>
+        </li>
+        
+        
+    </ul>
+    <p class="menu-label">
+        Tags
+    </p>
+    <div class="tags">
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/aggregation/">
+            aggregation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/chart/">
+            chart
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/date/">
+            date
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/display/">
+            display
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/filter/">
+            filter
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/geo/">
+            geo
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/list/">
+            list
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/map/">
+            map
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/navigation/">
+            navigation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-aggregation/">
+            ods-aggregation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-analysis/">
+            ods-analysis
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-maps/">
+            ods-maps
+        </a>
+        
+    </div>
+</aside>
+
+    </div>
+    <div class="column">
+        
+
+<section>
+    <div class="content-header container is-max-desktop mb-5">
+        <div class="content">
+            <h1 class="title" id="timeline-custom-view">
+  Timeline custom view
+  
+</h1>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <h2 class="title" id="range-slider-by-day">
+  Range slider by day
+  
+    <a class="is-link" href="#range-slider-by-day">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+<p>From and to selectors to easily catch a range of date for your dashboards.</p>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-1-range-slider-by-day"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;ctx\&#34;\n                     ctx-dataset=\&#34;evenements-publics-cibul\&#34; \n                     ctx-domain=\&#34;public\&#34;\n                     ctx-parameters=\&#34;{&#39;sort&#39;:&#39;-date_start&#39;}\&#34;\u003e\n    \u003ch3\u003e\n        Date de début de l&#39;événement\n    \u003c/h3\u003e\n    \u003cods-date-range-slider context=\&#34;ctx\&#34;\n                           date-format=\&#34;DD MMM YYYY\&#34;\n                           initial-from=\&#34;2018/01/01\&#34;\n                           initial-to=\&#34;2019/01/01\&#34;\n                           date-field=\&#34;date_start\&#34;\n                           start-bound=\&#34;&#39;2017/01/01&#39;\&#34;\n                           end-bound=\&#34;&#39;now&#39;\&#34;\u003e\n    \u003c/ods-date-range-slider\u003e\n    \u003cdiv class=\&#34;row\&#34;\u003e\n        \u003cdiv class=\&#34;col-md-12\&#34;\u003e\n            \u003cods-table context=\&#34;ctx\&#34;\u003e\u003c/ods-table\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+               "css": &#34;.odswidget-date-range-slider {\n    margin:5px 20px 15px;\n}\n      \n&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-1-range-slider-by-day"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+        </head>
+        <body>
+        <div ng-app='ods-widgets'>
+            &lt;ods-dataset-context context=&#34;ctx&#34;
+                     ctx-dataset=&#34;evenements-publics-cibul&#34; 
+                     ctx-domain=&#34;public&#34;
+                     ctx-parameters=&#34;{&#39;sort&#39;:&#39;-date_start&#39;}&#34;&gt;
+    &lt;h3&gt;
+        Date de début de l&#39;événement
+    &lt;/h3&gt;
+    &lt;ods-date-range-slider context=&#34;ctx&#34;
+                           date-format=&#34;DD MMM YYYY&#34;
+                           initial-from=&#34;2018/01/01&#34;
+                           initial-to=&#34;2019/01/01&#34;
+                           date-field=&#34;date_start&#34;
+                           start-bound=&#34;&#39;2017/01/01&#39;&#34;
+                           end-bound=&#34;&#39;now&#39;&#34;&gt;
+    &lt;/ods-date-range-slider&gt;
+    &lt;div class=&#34;row&#34;&gt;
+        &lt;div class=&#34;col-md-12&#34;&gt;
+            &lt;ods-table context=&#34;ctx&#34;&gt;&lt;/ods-table&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+
+        </div>
+        <style type='text/css'>
+            .odswidget-date-range-slider {
+    margin:5px 20px 15px;
+}
+      
+
+        </style>
+        </body>
+        ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-1-range-slider-by-day-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-1-range-slider-by-day-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right">
+                <a class="button is-primary is-outlined edit-on-codepen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-1-range-slider-by-day').submit()">
+                    Edit on CodePen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-1-range-slider-by-day-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;ctx&#34;
+                     ctx-dataset=&#34;evenements-publics-cibul&#34; 
+                     ctx-domain=&#34;public&#34;
+                     ctx-parameters=&#34;{&#39;sort&#39;:&#39;-date_start&#39;}&#34;&gt;
+    &lt;h3&gt;
+        Date de début de l&#39;événement
+    &lt;/h3&gt;
+    &lt;ods-date-range-slider context=&#34;ctx&#34;
+                           date-format=&#34;DD MMM YYYY&#34;
+                           initial-from=&#34;2018/01/01&#34;
+                           initial-to=&#34;2019/01/01&#34;
+                           date-field=&#34;date_start&#34;
+                           start-bound=&#34;&#39;2017/01/01&#39;&#34;
+                           end-bound=&#34;&#39;now&#39;&#34;&gt;
+    &lt;/ods-date-range-slider&gt;
+    &lt;div class=&#34;row&#34;&gt;
+        &lt;div class=&#34;col-md-12&#34;&gt;
+            &lt;ods-table context=&#34;ctx&#34;&gt;&lt;/ods-table&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+</code></pre>
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-1-range-slider-by-day-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>.odswidget-date-range-slider {
+    margin:5px 20px 15px;
+}
+      
+</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-1-range-slider-by-day";
+            iframe = document.getElementById(iframeId);
+             
+            size =  550 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <h2 class="title" id="range-slider-by-year">
+  Range slider by year
+  
+    <a class="is-link" href="#range-slider-by-year">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+<p>From and to selectors to easily catch a range of date for your dashboards.</p>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-2-range-slider-by-year"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;ctx\&#34;\n                       ctx-dataset=\&#34;shanghai-world-university-ranking\&#34;\n                       ctx-domain=\&#34;public\&#34;\u003e\n      \u003ch3\u003e\n          Classement de Shanghai des universités - moyenne du score par ans\n      \u003c/h3\u003e\n      \u003cods-date-range-slider context=\&#34;ctx\&#34;\n                             date-format=\&#34;YYYY\&#34;\n                             initial-from=\&#34;2010/01/01\&#34;\n                             initial-to=\&#34;2015/01/01\&#34;\n                             precision=\&#34;year\&#34;\n                             date-field=\&#34;year\&#34;\n                             start-bound=\&#34;&#39;2005/01/01&#39;\&#34;\n                             end-bound=\&#34;&#39;2018/01/01&#39;\&#34;\u003e\n      \u003c/ods-date-range-slider\u003e\n      \u003cdiv class=\&#34;row\&#34;\u003e\n          \u003cdiv class=\&#34;col-md-12\&#34;\u003e\n              \u003cods-chart single-y-axis=\&#34;true\&#34; min=\&#34;0\&#34; max=\&#34;101\&#34; step=\&#34;5\&#34; labels-x-length=\&#34;35\&#34; align-month=\&#34;true\&#34;\u003e\n                  \u003cods-chart-query context=\&#34;ctx\&#34; field-x=\&#34;university_name\&#34; maxpoints=\&#34;20\&#34; sort=\&#34;serie1-1\&#34;\u003e\n                      \u003cods-chart-serie expression-y=\&#34;total_score\&#34; chart-type=\&#34;bar\&#34; function-y=\&#34;AVG\&#34; label-y=\&#34;Moyenne du score sur la plage sélectionnée\&#34; color=\&#34;#FF515A\&#34; display-units=\&#34;false\&#34; display-values=\&#34;true\&#34; scientific-display=\&#34;true\&#34;\u003e\n                      \u003c/ods-chart-serie\u003e\n                  \u003c/ods-chart-query\u003e\n              \u003c/ods-chart\u003e\n          \u003c/div\u003e\n      \u003c/div\u003e\n  \u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+               "css": &#34;.odswidget-date-range-slider {\n    margin:5px 20px 15px;\n}\n      \n&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-2-range-slider-by-year"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+        </head>
+        <body>
+        <div ng-app='ods-widgets'>
+            &lt;ods-dataset-context context=&#34;ctx&#34;
+                       ctx-dataset=&#34;shanghai-world-university-ranking&#34;
+                       ctx-domain=&#34;public&#34;&gt;
+      &lt;h3&gt;
+          Classement de Shanghai des universités - moyenne du score par ans
+      &lt;/h3&gt;
+      &lt;ods-date-range-slider context=&#34;ctx&#34;
+                             date-format=&#34;YYYY&#34;
+                             initial-from=&#34;2010/01/01&#34;
+                             initial-to=&#34;2015/01/01&#34;
+                             precision=&#34;year&#34;
+                             date-field=&#34;year&#34;
+                             start-bound=&#34;&#39;2005/01/01&#39;&#34;
+                             end-bound=&#34;&#39;2018/01/01&#39;&#34;&gt;
+      &lt;/ods-date-range-slider&gt;
+      &lt;div class=&#34;row&#34;&gt;
+          &lt;div class=&#34;col-md-12&#34;&gt;
+              &lt;ods-chart single-y-axis=&#34;true&#34; min=&#34;0&#34; max=&#34;101&#34; step=&#34;5&#34; labels-x-length=&#34;35&#34; align-month=&#34;true&#34;&gt;
+                  &lt;ods-chart-query context=&#34;ctx&#34; field-x=&#34;university_name&#34; maxpoints=&#34;20&#34; sort=&#34;serie1-1&#34;&gt;
+                      &lt;ods-chart-serie expression-y=&#34;total_score&#34; chart-type=&#34;bar&#34; function-y=&#34;AVG&#34; label-y=&#34;Moyenne du score sur la plage sélectionnée&#34; color=&#34;#FF515A&#34; display-units=&#34;false&#34; display-values=&#34;true&#34; scientific-display=&#34;true&#34;&gt;
+                      &lt;/ods-chart-serie&gt;
+                  &lt;/ods-chart-query&gt;
+              &lt;/ods-chart&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/ods-dataset-context&gt;
+
+        </div>
+        <style type='text/css'>
+            .odswidget-date-range-slider {
+    margin:5px 20px 15px;
+}
+      
+
+        </style>
+        </body>
+        ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-2-range-slider-by-year-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-2-range-slider-by-year-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right">
+                <a class="button is-primary is-outlined edit-on-codepen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-2-range-slider-by-year').submit()">
+                    Edit on CodePen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-2-range-slider-by-year-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;ctx&#34;
+                       ctx-dataset=&#34;shanghai-world-university-ranking&#34;
+                       ctx-domain=&#34;public&#34;&gt;
+      &lt;h3&gt;
+          Classement de Shanghai des universités - moyenne du score par ans
+      &lt;/h3&gt;
+      &lt;ods-date-range-slider context=&#34;ctx&#34;
+                             date-format=&#34;YYYY&#34;
+                             initial-from=&#34;2010/01/01&#34;
+                             initial-to=&#34;2015/01/01&#34;
+                             precision=&#34;year&#34;
+                             date-field=&#34;year&#34;
+                             start-bound=&#34;&#39;2005/01/01&#39;&#34;
+                             end-bound=&#34;&#39;2018/01/01&#39;&#34;&gt;
+      &lt;/ods-date-range-slider&gt;
+      &lt;div class=&#34;row&#34;&gt;
+          &lt;div class=&#34;col-md-12&#34;&gt;
+              &lt;ods-chart single-y-axis=&#34;true&#34; min=&#34;0&#34; max=&#34;101&#34; step=&#34;5&#34; labels-x-length=&#34;35&#34; align-month=&#34;true&#34;&gt;
+                  &lt;ods-chart-query context=&#34;ctx&#34; field-x=&#34;university_name&#34; maxpoints=&#34;20&#34; sort=&#34;serie1-1&#34;&gt;
+                      &lt;ods-chart-serie expression-y=&#34;total_score&#34; chart-type=&#34;bar&#34; function-y=&#34;AVG&#34; label-y=&#34;Moyenne du score sur la plage sélectionnée&#34; color=&#34;#FF515A&#34; display-units=&#34;false&#34; display-values=&#34;true&#34; scientific-display=&#34;true&#34;&gt;
+                      &lt;/ods-chart-serie&gt;
+                  &lt;/ods-chart-query&gt;
+              &lt;/ods-chart&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+  &lt;/ods-dataset-context&gt;
+</code></pre>
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-2-range-slider-by-year-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>.odswidget-date-range-slider {
+    margin:5px 20px 15px;
+}
+      
+</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-2-range-slider-by-year";
+            iframe = document.getElementById(iframeId);
+             
+            size =  550 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <h2 class="title" id="custom-colors">
+  Custom colors
+  
+    <a class="is-link" href="#custom-colors">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+<p>The range and the selectors colors can be overridden with some CSS.</p>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-3-custom-colors"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;ctx\&#34;\n                     ctx-dataset=\&#34;shanghai-world-university-ranking@public\&#34;\n                     ctx-domain=\&#34;public\&#34;\u003e\n    \u003ch3\u003e\n        Ods-date-range-slider by year\n    \u003c/h3\u003e\n    \u003cdiv id=\&#34;c1\&#34;\u003e\n        \u003cods-date-range-slider context=\&#34;ctx\&#34;\n\n                               date-format=\&#34;YYYY\&#34;\n\n                               initial-from=\&#34;2010/01/01\&#34;\n                               initial-to=\&#34;2015/01/01\&#34;\n\n                               precision=\&#34;year\&#34;\n\n                               date-field=\&#34;year\&#34;\n\n                               start-bound=\&#34;&#39;2005/01/01&#39;\&#34;\n                               end-bound=\&#34;&#39;2018/01/01&#39;\&#34;\u003e\n        \u003c/ods-date-range-slider\u003e\n\n        \u003cdiv id=\&#34;c2\&#34;\u003e\n            \u003cods-date-range-slider context=\&#34;ctx\&#34;\n\n                                   date-format=\&#34;YYYY\&#34;\n\n                                   initial-from=\&#34;2010/01/01\&#34;\n                                   initial-to=\&#34;2015/01/01\&#34;\n\n                                   precision=\&#34;year\&#34;\n\n                                   date-field=\&#34;year\&#34;\n\n                                   start-bound=\&#34;&#39;2005/01/01&#39;\&#34;\n                                   end-bound=\&#34;&#39;2018/01/01&#39;\&#34;\u003e\n            \u003c/ods-date-range-slider\u003e\n        \u003c/div\u003e\n\n        \u003cdiv id=\&#34;c3\&#34;\u003e\n            \u003cods-date-range-slider context=\&#34;ctx\&#34;\n\n                                   date-format=\&#34;YYYY\&#34;\n\n                                   initial-from=\&#34;2010/01/01\&#34;\n                                   initial-to=\&#34;2015/01/01\&#34;\n\n                                   precision=\&#34;year\&#34;\n\n                                   date-field=\&#34;year\&#34;\n\n                                   start-bound=\&#34;&#39;2005/01/01&#39;\&#34;\n                                   end-bound=\&#34;&#39;2018/01/01&#39;\&#34;\u003e\n            \u003c/ods-date-range-slider\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+               "css": &#34;#c1 .odswidget-date-range-slider .irs--flat .irs-handle\u003ei:first-child,\n#c1 .odswidget-date-range-slider .irs--flat .irs-bar,\n#c1 .odswidget-date-range-slider .irs--flat .irs-from,\n#c1 .odswidget-date-range-slider .irs--flat .irs-to,\n#c1 .odswidget-date-range-slider .irs--flat .irs-single,\n#c1 .odswidget-date-range-slider .irs--flat .irs-handle.state_hover\u003ei:first-child,\n#c1 .odswidget-date-range-slider .irs--flat .irs-handle:hover\u003ei:first-child {\n    background-color: blue;\n}\n\n#c1 .odswidget-date-range-slider .irs--flat .irs-from:before,\n#c1 .odswidget-date-range-slider .irs--flat .irs-to:before,\n#c1 .odswidget-date-range-slider .irs--flat .irs-single:before {\n    border-top-color: blue;\n}\n\n#c2 .odswidget-date-range-slider .irs--flat .irs-handle\u003ei:first-child,\n#c2 .odswidget-date-range-slider .irs--flat .irs-bar,\n#c2 .odswidget-date-range-slider .irs--flat .irs-from,\n#c2 .odswidget-date-range-slider .irs--flat .irs-to,\n#c2 .odswidget-date-range-slider .irs--flat .irs-single,\n#c2 .odswidget-date-range-slider .irs--flat .irs-handle.state_hover\u003ei:first-child,\n#c2 .odswidget-date-range-slider .irs--flat .irs-handle:hover\u003ei:first-child {\n    background-color: green;\n}\n\n#c2 .odswidget-date-range-slider .irs--flat .irs-from:before,\n#c2 .odswidget-date-range-slider .irs--flat .irs-to:before,\n#c2 .odswidget-date-range-slider .irs--flat .irs-single:before {\n    border-top-color: green;\n}\n\n#c3 .odswidget-date-range-slider .irs--flat .irs-handle\u003ei:first-child,\n#c3 .odswidget-date-range-slider .irs--flat .irs-bar,\n#c3 .odswidget-date-range-slider .irs--flat .irs-from,\n#c3 .odswidget-date-range-slider .irs--flat .irs-to,\n#c3 .odswidget-date-range-slider .irs--flat .irs-single,\n#c3 .odswidget-date-range-slider .irs--flat .irs-handle.state_hover\u003ei:first-child,\n#c3 .odswidget-date-range-slider .irs--flat .irs-handle:hover\u003ei:first-child {\n    background-color: red;\n}\n\n#c3 .odswidget-date-range-slider .irs--flat .irs-from:before,\n#c3 .odswidget-date-range-slider .irs--flat .irs-to:before,\n#c3 .odswidget-date-range-slider .irs--flat .irs-single:before {\n    border-top-color: red;\n}\n&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-3-custom-colors"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+        </head>
+        <body>
+        <div ng-app='ods-widgets'>
+            &lt;ods-dataset-context context=&#34;ctx&#34;
+                     ctx-dataset=&#34;shanghai-world-university-ranking@public&#34;
+                     ctx-domain=&#34;public&#34;&gt;
+    &lt;h3&gt;
+        Ods-date-range-slider by year
+    &lt;/h3&gt;
+    &lt;div id=&#34;c1&#34;&gt;
+        &lt;ods-date-range-slider context=&#34;ctx&#34;
+
+                               date-format=&#34;YYYY&#34;
+
+                               initial-from=&#34;2010/01/01&#34;
+                               initial-to=&#34;2015/01/01&#34;
+
+                               precision=&#34;year&#34;
+
+                               date-field=&#34;year&#34;
+
+                               start-bound=&#34;&#39;2005/01/01&#39;&#34;
+                               end-bound=&#34;&#39;2018/01/01&#39;&#34;&gt;
+        &lt;/ods-date-range-slider&gt;
+
+        &lt;div id=&#34;c2&#34;&gt;
+            &lt;ods-date-range-slider context=&#34;ctx&#34;
+
+                                   date-format=&#34;YYYY&#34;
+
+                                   initial-from=&#34;2010/01/01&#34;
+                                   initial-to=&#34;2015/01/01&#34;
+
+                                   precision=&#34;year&#34;
+
+                                   date-field=&#34;year&#34;
+
+                                   start-bound=&#34;&#39;2005/01/01&#39;&#34;
+                                   end-bound=&#34;&#39;2018/01/01&#39;&#34;&gt;
+            &lt;/ods-date-range-slider&gt;
+        &lt;/div&gt;
+
+        &lt;div id=&#34;c3&#34;&gt;
+            &lt;ods-date-range-slider context=&#34;ctx&#34;
+
+                                   date-format=&#34;YYYY&#34;
+
+                                   initial-from=&#34;2010/01/01&#34;
+                                   initial-to=&#34;2015/01/01&#34;
+
+                                   precision=&#34;year&#34;
+
+                                   date-field=&#34;year&#34;
+
+                                   start-bound=&#34;&#39;2005/01/01&#39;&#34;
+                                   end-bound=&#34;&#39;2018/01/01&#39;&#34;&gt;
+            &lt;/ods-date-range-slider&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+
+        </div>
+        <style type='text/css'>
+            #c1 .odswidget-date-range-slider .irs--flat .irs-handle&gt;i:first-child,
+#c1 .odswidget-date-range-slider .irs--flat .irs-bar,
+#c1 .odswidget-date-range-slider .irs--flat .irs-from,
+#c1 .odswidget-date-range-slider .irs--flat .irs-to,
+#c1 .odswidget-date-range-slider .irs--flat .irs-single,
+#c1 .odswidget-date-range-slider .irs--flat .irs-handle.state_hover&gt;i:first-child,
+#c1 .odswidget-date-range-slider .irs--flat .irs-handle:hover&gt;i:first-child {
+    background-color: blue;
+}
+
+#c1 .odswidget-date-range-slider .irs--flat .irs-from:before,
+#c1 .odswidget-date-range-slider .irs--flat .irs-to:before,
+#c1 .odswidget-date-range-slider .irs--flat .irs-single:before {
+    border-top-color: blue;
+}
+
+#c2 .odswidget-date-range-slider .irs--flat .irs-handle&gt;i:first-child,
+#c2 .odswidget-date-range-slider .irs--flat .irs-bar,
+#c2 .odswidget-date-range-slider .irs--flat .irs-from,
+#c2 .odswidget-date-range-slider .irs--flat .irs-to,
+#c2 .odswidget-date-range-slider .irs--flat .irs-single,
+#c2 .odswidget-date-range-slider .irs--flat .irs-handle.state_hover&gt;i:first-child,
+#c2 .odswidget-date-range-slider .irs--flat .irs-handle:hover&gt;i:first-child {
+    background-color: green;
+}
+
+#c2 .odswidget-date-range-slider .irs--flat .irs-from:before,
+#c2 .odswidget-date-range-slider .irs--flat .irs-to:before,
+#c2 .odswidget-date-range-slider .irs--flat .irs-single:before {
+    border-top-color: green;
+}
+
+#c3 .odswidget-date-range-slider .irs--flat .irs-handle&gt;i:first-child,
+#c3 .odswidget-date-range-slider .irs--flat .irs-bar,
+#c3 .odswidget-date-range-slider .irs--flat .irs-from,
+#c3 .odswidget-date-range-slider .irs--flat .irs-to,
+#c3 .odswidget-date-range-slider .irs--flat .irs-single,
+#c3 .odswidget-date-range-slider .irs--flat .irs-handle.state_hover&gt;i:first-child,
+#c3 .odswidget-date-range-slider .irs--flat .irs-handle:hover&gt;i:first-child {
+    background-color: red;
+}
+
+#c3 .odswidget-date-range-slider .irs--flat .irs-from:before,
+#c3 .odswidget-date-range-slider .irs--flat .irs-to:before,
+#c3 .odswidget-date-range-slider .irs--flat .irs-single:before {
+    border-top-color: red;
+}
+
+        </style>
+        </body>
+        ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-3-custom-colors-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-3-custom-colors-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right">
+                <a class="button is-primary is-outlined edit-on-codepen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-3-custom-colors').submit()">
+                    Edit on CodePen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-3-custom-colors-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;ctx&#34;
+                     ctx-dataset=&#34;shanghai-world-university-ranking@public&#34;
+                     ctx-domain=&#34;public&#34;&gt;
+    &lt;h3&gt;
+        Ods-date-range-slider by year
+    &lt;/h3&gt;
+    &lt;div id=&#34;c1&#34;&gt;
+        &lt;ods-date-range-slider context=&#34;ctx&#34;
+
+                               date-format=&#34;YYYY&#34;
+
+                               initial-from=&#34;2010/01/01&#34;
+                               initial-to=&#34;2015/01/01&#34;
+
+                               precision=&#34;year&#34;
+
+                               date-field=&#34;year&#34;
+
+                               start-bound=&#34;&#39;2005/01/01&#39;&#34;
+                               end-bound=&#34;&#39;2018/01/01&#39;&#34;&gt;
+        &lt;/ods-date-range-slider&gt;
+
+        &lt;div id=&#34;c2&#34;&gt;
+            &lt;ods-date-range-slider context=&#34;ctx&#34;
+
+                                   date-format=&#34;YYYY&#34;
+
+                                   initial-from=&#34;2010/01/01&#34;
+                                   initial-to=&#34;2015/01/01&#34;
+
+                                   precision=&#34;year&#34;
+
+                                   date-field=&#34;year&#34;
+
+                                   start-bound=&#34;&#39;2005/01/01&#39;&#34;
+                                   end-bound=&#34;&#39;2018/01/01&#39;&#34;&gt;
+            &lt;/ods-date-range-slider&gt;
+        &lt;/div&gt;
+
+        &lt;div id=&#34;c3&#34;&gt;
+            &lt;ods-date-range-slider context=&#34;ctx&#34;
+
+                                   date-format=&#34;YYYY&#34;
+
+                                   initial-from=&#34;2010/01/01&#34;
+                                   initial-to=&#34;2015/01/01&#34;
+
+                                   precision=&#34;year&#34;
+
+                                   date-field=&#34;year&#34;
+
+                                   start-bound=&#34;&#39;2005/01/01&#39;&#34;
+                                   end-bound=&#34;&#39;2018/01/01&#39;&#34;&gt;
+            &lt;/ods-date-range-slider&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+</code></pre>
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-3-custom-colors-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>#c1 .odswidget-date-range-slider .irs--flat .irs-handle&gt;i:first-child,
+#c1 .odswidget-date-range-slider .irs--flat .irs-bar,
+#c1 .odswidget-date-range-slider .irs--flat .irs-from,
+#c1 .odswidget-date-range-slider .irs--flat .irs-to,
+#c1 .odswidget-date-range-slider .irs--flat .irs-single,
+#c1 .odswidget-date-range-slider .irs--flat .irs-handle.state_hover&gt;i:first-child,
+#c1 .odswidget-date-range-slider .irs--flat .irs-handle:hover&gt;i:first-child {
+    background-color: blue;
+}
+
+#c1 .odswidget-date-range-slider .irs--flat .irs-from:before,
+#c1 .odswidget-date-range-slider .irs--flat .irs-to:before,
+#c1 .odswidget-date-range-slider .irs--flat .irs-single:before {
+    border-top-color: blue;
+}
+
+#c2 .odswidget-date-range-slider .irs--flat .irs-handle&gt;i:first-child,
+#c2 .odswidget-date-range-slider .irs--flat .irs-bar,
+#c2 .odswidget-date-range-slider .irs--flat .irs-from,
+#c2 .odswidget-date-range-slider .irs--flat .irs-to,
+#c2 .odswidget-date-range-slider .irs--flat .irs-single,
+#c2 .odswidget-date-range-slider .irs--flat .irs-handle.state_hover&gt;i:first-child,
+#c2 .odswidget-date-range-slider .irs--flat .irs-handle:hover&gt;i:first-child {
+    background-color: green;
+}
+
+#c2 .odswidget-date-range-slider .irs--flat .irs-from:before,
+#c2 .odswidget-date-range-slider .irs--flat .irs-to:before,
+#c2 .odswidget-date-range-slider .irs--flat .irs-single:before {
+    border-top-color: green;
+}
+
+#c3 .odswidget-date-range-slider .irs--flat .irs-handle&gt;i:first-child,
+#c3 .odswidget-date-range-slider .irs--flat .irs-bar,
+#c3 .odswidget-date-range-slider .irs--flat .irs-from,
+#c3 .odswidget-date-range-slider .irs--flat .irs-to,
+#c3 .odswidget-date-range-slider .irs--flat .irs-single,
+#c3 .odswidget-date-range-slider .irs--flat .irs-handle.state_hover&gt;i:first-child,
+#c3 .odswidget-date-range-slider .irs--flat .irs-handle:hover&gt;i:first-child {
+    background-color: red;
+}
+
+#c3 .odswidget-date-range-slider .irs--flat .irs-from:before,
+#c3 .odswidget-date-range-slider .irs--flat .irs-to:before,
+#c3 .odswidget-date-range-slider .irs--flat .irs-single:before {
+    border-top-color: red;
+}
+</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-3-custom-colors";
+            iframe = document.getElementById(iframeId);
+             
+            size =  300 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+        </div>
+    </div>
+    
+</section>
+
+
+    </div>
+</div>
+
+<footer class="footer">
+    <a href="https://www.opendatasoft.com"
+       class="footer-link"
+       title="Opendatasoft website">
+        <img src="/img/ods-logo.svg"
+             class="footer-logo"
+             alt="Opendatasoft logo"
+        />
+    </a>
+    <span class="footer-copyright">
+        &copy; Copyright 2020
+    </span>
+</footer>
+
+
+
+
+
+
+
+<script>var process = { "env": { "NODE_ENV": "production" } }</script>
+<script type="text/javascript"
+        src="/index.min.11fcc0d6f8a0b04671eb0a5fb2bb06b89618c60744ea73effdb557ad43fd44a6.js"
+        defer></script>
+
+</body>
+</html>

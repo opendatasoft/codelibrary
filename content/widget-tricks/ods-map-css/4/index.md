@@ -1,6 +1,5 @@
 ---
 title: "4 - Custom legend - simple inlined "
-height: 500
 ---
 
 ## Custom legend - simple inlined

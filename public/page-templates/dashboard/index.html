@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+    <title>
+        
+Dashboard &ndash; Codelibrary
+
+    </title>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41201218-21"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-41201218-21');
+    </script>
+
+    
+    
+
+    
+    
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css"
+          integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8="
+          crossorigin="anonymous">
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href="/scss/main.css" />
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png">
+    <link rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png">
+    <link rel="shortcut icon"
+          href="/favicon.ico">
+</head>
+
+<body>
+
+<nav class="navbar is-fixed-top"
+     role="navigation"
+     aria-label="Main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item"
+           href="/"
+           title="Back to the homepage">
+            <img src="/img/ods-logo-helphub.svg"
+                 alt="Helphub Logo"/>
+        </a>
+        <button class="navbar-burger burger"
+                type="button"
+                data-target="helphubNavbar"
+                aria-controls="helphubNavbar"
+                aria-expanded="false"
+                aria-label="Menu">
+            Help Hub
+        </button>
+    </div>
+    <div class="navbar-menu"
+         id="helphubNavbar">
+        <div class="navbar-start">
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/">
+                Help Hub
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/platform/en/">
+                User guide
+            </a>
+            <a class="navbar-item is-active"
+               href="https://discovery.opendatasoft.com">
+                Code Library
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/faq-glossary/en/">
+                FAQ
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/widgets/">
+                Widgets
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/en/apis/">
+                APIs
+            </a>
+            <a class="navbar-item"
+               href="https://academy.opendatasoft.com/page/homepage">
+                Academy
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="columns codelibrary">
+    <div class="column is-narrow">
+        <aside class="sidebar menu">
+    <a href="https://codelibrary.opendatasoft.com"
+       class="sidebar-logo-link"
+       title="Go to Codelibrary homepage">
+        <img src="/img/ods-codelibrary-logo.svg"
+             class="sidebar-logo"
+             alt="Codelibrary Logo">
+    </a>
+
+    <div id="algolia-box"></div>
+    <div id="algolia-results"></div>
+
+    
+    <ul class="menu-list">
+        <li>
+            <a class="sidebar-subtitle"
+               href="https://codelibrary.opendatasoft.com">
+                Home
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="/components/"
+               class="sidebar-subtitle">
+                Components
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="sidebar-subtitle " href="/page-templates/">
+            Page templates
+            </a>
+            <ul>
+                
+                <li>
+                    <a class="is-active" href="https://codelibrary.opendatasoft.com/page-templates/dashboard/">Dashboard</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/page-templates/fullscreen-map/">Fullscreen map with filters</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/page-templates/home-1/">Home 1</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/page-templates/home-2/">Home 2</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/page-templates/home-3/">Home 3</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/page-templates/light-dashboard/">Light Dashboard</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/page-templates/listing-generator/">Listing generator</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/page-templates/map-listing/">Map Listing</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/page-templates/map-refine/">Map Refine</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/page-templates/observatory/">Observatory</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/page-templates/regional-covid/">Regional COVID-19</a>
+                </li>
+                
+            </ul>
+        </li>
+        
+        
+        
+        <li>
+            <a href="/portal-themes/"
+               class="sidebar-subtitle">
+                Portal themes
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a href="/widget-tricks/"
+               class="sidebar-subtitle">
+                Widget tricks
+            </a>
+        </li>
+        
+        
+    </ul>
+    <p class="menu-label">
+        Tags
+    </p>
+    <div class="tags">
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/aggregation/">
+            aggregation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/chart/">
+            chart
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/date/">
+            date
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/display/">
+            display
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/filter/">
+            filter
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/geo/">
+            geo
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/list/">
+            list
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/map/">
+            map
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/navigation/">
+            navigation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-aggregation/">
+            ods-aggregation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-analysis/">
+            ods-analysis
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-maps/">
+            ods-maps
+        </a>
+        
+    </div>
+</aside>
+
+    </div>
+    <div class="column">
+        
+
+<section>
+    <div class="content-header container is-max-desktop mb-5">
+        <div class="content">
+            <h1 class="title" id="dashboard-template">
+  Dashboard template
+  
+</h1>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <p>Get straight to the point with this efficient dashboard layout.</p>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-dashboard"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;stats\&#34;\n                     stats-dataset=\&#34;resume-statistique-communes-departements-et-regions-france-2012-2013-2014\&#34;\n                     stats-domain=\&#34;public\&#34;\u003e\n    \u003cdiv class=\&#34;container\&#34;\u003e\n        \u003ch1 class=\&#34;titre\&#34;\u003e\n            Dashboard template 1 \u003cspan class=\&#34;smaller\&#34;\u003eby OpenDataSoft\u003c/span\u003e\n        \u003c/h1\u003e\n        \u003cods-tabs\u003e\n            \u003cods-pane title=\&#34;Vue analytics 1\&#34; icon=\&#34;pie-chart\&#34; pane-auto-unload=\&#34;true\&#34;\u003e\n                \u003cdiv class=\&#34;row\&#34;\u003e\n                    \u003cdiv class=\&#34;box col-md-4\&#34;\u003e\n                        \u003cdiv class=\&#34;grey-box half-box\&#34;\u003e\n                            \u003ch2 class=\&#34;title\&#34;\u003e\n                                Population\n                            \u003c/h2\u003e\n                            \u003ch3 class=\&#34;description\&#34;\u003e\n                                en 2012\n                            \u003c/h3\u003e\n                            \u003cp class=\&#34;kpi\&#34;\n                               ods-aggregation=\&#34;agg\&#34;\n                               ods-aggregation-context=\&#34;stats\&#34;\n                               ods-aggregation-function=\&#34;SUM\&#34;\n                               ods-aggregation-expression=\&#34;population_en_2012\&#34;\u003e\n                                {{ agg | number }}\n                            \u003c/p\u003e\n                        \u003c/div\u003e\n                        \u003cdiv class=\&#34;grey-box half-box\&#34;\u003e\n                            \u003ch2 class=\&#34;title\&#34;\u003e\n                                Nombre de ménages\n                            \u003c/h2\u003e\n                            \u003ch3 class=\&#34;description\&#34;\u003e\n                                en 2012\n                            \u003c/h3\u003e\n                            \u003cp class=\&#34;kpi\&#34;\n                               ods-aggregation=\&#34;agg\&#34;\n                               ods-aggregation-context=\&#34;stats\&#34;\n                               ods-aggregation-function=\&#34;SUM\&#34;\n                               ods-aggregation-expression=\&#34;menages_en_2012\&#34;\u003e\n                                {{ agg | number : 0 }}\n                            \u003c/p\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;box col-md-8\&#34;\u003e\n                        \u003cdiv class=\&#34;grey-box\&#34;\u003e\n                            \u003ch2 class=\&#34;title\&#34;\u003e\n                                Evolution de la population\n                            \u003c/h2\u003e\n                            \u003ch3 class=\&#34;description\&#34;\u003e\n                                France 2007 et 2012\n                            \u003c/h3\u003e\n                            \u003cods-chart single-y-axis=\&#34;true\&#34;\u003e\n                                \u003cods-chart-query context=\&#34;stats\&#34; field-x=\&#34;region\&#34; maxpoints=\&#34;50\&#34; sort=\&#34;serie1-1\&#34;\u003e\n                                    \u003cods-chart-serie expression-y=\&#34;population_en_2012\&#34; chart-type=\&#34;column\&#34; function-y=\&#34;AVG\&#34; color=\&#34;#2C3F56\&#34; scientific-display=\&#34;true\&#34;\u003e\n                                    \u003c/ods-chart-serie\u003e\n                                    \u003cods-chart-serie expression-y=\&#34;population_en_2007\&#34; chart-type=\&#34;column\&#34; function-y=\&#34;AVG\&#34; color=\&#34;#EC643C\&#34; scientific-display=\&#34;true\&#34;\u003e\n                                    \u003c/ods-chart-serie\u003e\n                                \u003c/ods-chart-query\u003e\n                            \u003c/ods-chart\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;row\&#34;\u003e\n                    \u003cdiv class=\&#34;box col-md-8\&#34;\u003e\n                        \u003cdiv class=\&#34;grey-box\&#34;\u003e\n                            \u003ch2 class=\&#34;title\&#34;\u003e\n                                Naissance par métropole\n                            \u003c/h2\u003e\n                            \u003ch3 class=\&#34;description\&#34;\u003e\n                                De 2007 à 2012\n                            \u003c/h3\u003e\n                            \u003cods-chart single-y-axis=\&#34;true\&#34;\u003e\n                                \u003cods-chart-query context=\&#34;stats\&#34; field-x=\&#34;metropole\&#34; maxpoints=\&#34;50\&#34;\u003e\n                                    \u003cods-chart-serie expression-y=\&#34;naissances_entre_2007_et_2012\&#34; chart-type=\&#34;treemap\&#34; function-y=\&#34;AVG\&#34; scientific-display=\&#34;true\&#34;\u003e\n                                    \u003c/ods-chart-serie\u003e\n                                \u003c/ods-chart-query\u003e\n                            \u003c/ods-chart\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;box col-md-4\&#34;\u003e\n                        \u003cdiv class=\&#34;grey-box half-box\&#34;\u003e\n                            \u003ch2 class=\&#34;title\&#34;\u003e\n                                Actifs\n                            \u003c/h2\u003e\n                            \u003ch3 class=\&#34;description\&#34;\u003e\n                                15 - 64 ans en 2012\n                            \u003c/h3\u003e\n                            \u003cp class=\&#34;kpi\&#34;\n                               ods-aggregation=\&#34;agg\&#34;\n                               ods-aggregation-context=\&#34;stats\&#34;\n                               ods-aggregation-function=\&#34;SUM\&#34;\n                               ods-aggregation-expression=\&#34;actifs_15_64_ans_en_2012\&#34;\u003e\n                                {{ agg | number : 0 }}\n                            \u003c/p\u003e\n                        \u003c/div\u003e\n                        \u003cdiv class=\&#34;grey-box half-box\&#34;\u003e\n                            \u003ch2 class=\&#34;title\&#34;\u003e\n                                Chomeurs\n                            \u003c/h2\u003e\n                            \u003ch3 class=\&#34;description\&#34;\u003e\n                                15 - 64 ans en 2012\n                            \u003c/h3\u003e\n                            \u003cp class=\&#34;kpi\&#34;\n                               ods-aggregation=\&#34;agg\&#34;\n                               ods-aggregation-context=\&#34;stats\&#34;\n                               ods-aggregation-function=\&#34;SUM\&#34;\n                               ods-aggregation-expression=\&#34;chomeurs_15_64_ans_en_2012\&#34;\u003e\n                                {{ agg | number : 0 }}\n                            \u003c/p\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/ods-pane\u003e\n            \u003cods-pane title=\&#34;Vue analytics 2\&#34; icon=\&#34;map\&#34; pane-auto-unload=\&#34;true\&#34;\u003e\n                \u003cdiv class=\&#34;row\&#34;\u003e\n                    \u003cdiv class=\&#34;box col-md-12\&#34;\u003e\n                        \u003ch2 class=\&#34;grey-box\&#34;\u003e\n                            Logements\n                        \u003c/h2\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;row\&#34;\u003e\n                    \u003cdiv class=\&#34;box col-md-4\&#34;\u003e\n                        \u003cdiv class=\&#34;grey-box half-box\&#34;\u003e\n                            \u003ch2 class=\&#34;title\&#34;\u003e\n                                Nombre de logements\n                            \u003c/h2\u003e\n                            \u003ch3 class=\&#34;description\&#34;\u003e\n                                en 2012\n                            \u003c/h3\u003e\n                            \u003cp class=\&#34;kpi\&#34;\n                               ods-aggregation=\&#34;agg\&#34;\n                               ods-aggregation-context=\&#34;stats\&#34;\n                               ods-aggregation-function=\&#34;SUM\&#34;\n                               ods-aggregation-expression=\&#34;logements_en_2012\&#34;\u003e\n                                {{ agg | number : 0 }}\n                            \u003c/p\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;box col-md-4\&#34;\u003e\n                        \u003cdiv class=\&#34;grey-box half-box\&#34;\u003e\n                            \u003ch2 class=\&#34;title\&#34;\u003e\n                                Résidences principales\n                            \u003c/h2\u003e\n                            \u003ch3 class=\&#34;description\&#34;\u003e\n                                en 2012\n                            \u003c/h3\u003e\n                            \u003cp class=\&#34;kpi\&#34;\n                               ods-aggregation=\&#34;agg\&#34;\n                               ods-aggregation-context=\&#34;stats\&#34;\n                               ods-aggregation-function=\&#34;SUM\&#34;\n                               ods-aggregation-expression=\&#34;residences_principales_en_2012\&#34;\u003e\n                                {{ agg | number : 0 }}\n                            \u003c/p\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;box col-md-4\&#34;\u003e\n                        \u003cdiv class=\&#34;grey-box half-box\&#34;\u003e\n                            \u003ch2 class=\&#34;title\&#34;\u003e\n                                Résidences secondaires et logts occasionnels\n                            \u003c/h2\u003e\n                            \u003ch3 class=\&#34;description\&#34;\u003e\n                                en 2012\n                            \u003c/h3\u003e\n                            \u003cp class=\&#34;kpi\&#34;\n                               ods-aggregation=\&#34;agg\&#34;\n                               ods-aggregation-context=\&#34;stats\&#34;\n                               ods-aggregation-function=\&#34;SUM\&#34;\n                               ods-aggregation-expression=\&#34;res_secondaires_et_logts_occasionnels_en_2012\&#34;\u003e\n                                {{ agg | number : 0 }}\n                            \u003c/p\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;row\&#34;\u003e\n                    \u003cdiv class=\&#34;box col-md-12\&#34;\u003e\n                        \u003ch2 class=\&#34;grey-box\&#34;\u003e\n                            Ménages fiscaux\n                        \u003c/h2\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;row\&#34;\u003e\n                    \u003cdiv class=\&#34;box col-md-4\&#34;\u003e\n                        \u003cdiv class=\&#34;grey-box half-box\&#34;\u003e\n                            \u003ch2 class=\&#34;title\&#34;\u003e\n                                Nombre de ménages fiscaux\n                            \u003c/h2\u003e\n                            \u003ch3 class=\&#34;description\&#34;\u003e\n                                en 2012\n                            \u003c/h3\u003e\n                            \u003cp class=\&#34;kpi\&#34;\n                               ods-aggregation=\&#34;agg\&#34;\n                               ods-aggregation-context=\&#34;stats\&#34;\n                               ods-aggregation-function=\&#34;SUM\&#34;\n                               ods-aggregation-expression=\&#34;nombre_de_menages_fiscaux_en_2012\&#34;\u003e\n                                {{ agg | number : 0 }}\n                            \u003c/p\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;box col-md-4\&#34;\u003e\n                        \u003cdiv class=\&#34;grey-box half-box\&#34;\u003e\n                            \u003ch2 class=\&#34;title\&#34;\u003e\n                                Part des ménages fiscaux imposés\n                            \u003c/h2\u003e\n                            \u003ch3 class=\&#34;description\&#34;\u003e\n                                en 2012\n                            \u003c/h3\u003e\n                            \u003cp class=\&#34;kpi\&#34;\n                               ods-aggregation=\&#34;agg\&#34;\n                               ods-aggregation-context=\&#34;stats\&#34;\n                               ods-aggregation-function=\&#34;SUM\&#34;\n                               ods-aggregation-expression=\&#34;part_des_menages_fiscaux_imposes_en_2012\&#34;\u003e\n                                {{ agg | number : 0 }}\n                            \u003c/p\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;box col-md-4\&#34;\u003e\n                        \u003cdiv class=\&#34;grey-box half-box\&#34;\u003e\n                            \u003ch2 class=\&#34;title\&#34;\u003e\n                                Mediane du revenu disponible par US\n                            \u003c/h2\u003e\n                            \u003ch3 class=\&#34;description\&#34;\u003e\n                                en 2012\n                            \u003c/h3\u003e\n                            \u003cp class=\&#34;kpi\&#34;\n                               ods-aggregation=\&#34;agg\&#34;\n                               ods-aggregation-context=\&#34;stats\&#34;\n                               ods-aggregation-function=\&#34;AVG\&#34;\n                               ods-aggregation-expression=\&#34;mediane_du_revenu_disponible_par_uc_en_2012\&#34;\u003e\n                                {{ agg | number : 0 }}\n                            \u003c/p\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/ods-pane\u003e\n        \u003c/ods-tabs\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+               "css": &#34;h1 .smaller {\n    font-size: 0.5em;\n}\nh2 .smaller {\n    font-size: 0.8em;\n}\n.ods-box {\n    border-radius: 0px;\n}\n.titre {\n    border-bottom: 1px solid black;\n    width: 100%;\n}\n/* BOX */\n.box {\n    padding-left: 3px;\n    padding-right: 3px;\n}\n.grey-box {\n    background: #eee;\n    border-radius: 0;\n    padding: 20px;\n    margin-bottom: 6px;\n    height: 418px;\n}\n.grey-box.half-box {\n    height: 206px;\n}\n/* BOX CONTENT */\n.title {\n    font-size: 1em;\n    margin: 0 auto;\n}\n.description {\n    margin: 0 auto;\n    color: grey;\n    font-size: 0.7em;\n    font-weight: 100;\n}\n.kpi {\n    font-size: 1.66em;\n    margin-top: 40px;\n    font-weight: 500;\n    text-align: center;\n}\n/* BOX Title Line */\nh2.grey-box {\n    height: 70px;\n    font-size: 1.3em;\n}\n/* CHARTS */\n.ods-chart {\n    height: 350px;\n}\n.odswidget-charts {\n    margin-top: 10px;\n}\n.odswidget-table {\n    height: 338px;\n    margin-top: 10px;\n}\nrect.highcharts-background {\n    fill: #eee !important;\n}\ntspan.highcharts-text-outline {\n    display: none;\n}\n      \n&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-dashboard"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+        </head>
+        <body>
+        <div ng-app='ods-widgets'>
+            &lt;ods-dataset-context context=&#34;stats&#34;
+                     stats-dataset=&#34;resume-statistique-communes-departements-et-regions-france-2012-2013-2014&#34;
+                     stats-domain=&#34;public&#34;&gt;
+    &lt;div class=&#34;container&#34;&gt;
+        &lt;h1 class=&#34;titre&#34;&gt;
+            Dashboard template 1 &lt;span class=&#34;smaller&#34;&gt;by OpenDataSoft&lt;/span&gt;
+        &lt;/h1&gt;
+        &lt;ods-tabs&gt;
+            &lt;ods-pane title=&#34;Vue analytics 1&#34; icon=&#34;pie-chart&#34; pane-auto-unload=&#34;true&#34;&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;box col-md-4&#34;&gt;
+                        &lt;div class=&#34;grey-box half-box&#34;&gt;
+                            &lt;h2 class=&#34;title&#34;&gt;
+                                Population
+                            &lt;/h2&gt;
+                            &lt;h3 class=&#34;description&#34;&gt;
+                                en 2012
+                            &lt;/h3&gt;
+                            &lt;p class=&#34;kpi&#34;
+                               ods-aggregation=&#34;agg&#34;
+                               ods-aggregation-context=&#34;stats&#34;
+                               ods-aggregation-function=&#34;SUM&#34;
+                               ods-aggregation-expression=&#34;population_en_2012&#34;&gt;
+                                {{ agg | number }}
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;grey-box half-box&#34;&gt;
+                            &lt;h2 class=&#34;title&#34;&gt;
+                                Nombre de ménages
+                            &lt;/h2&gt;
+                            &lt;h3 class=&#34;description&#34;&gt;
+                                en 2012
+                            &lt;/h3&gt;
+                            &lt;p class=&#34;kpi&#34;
+                               ods-aggregation=&#34;agg&#34;
+                               ods-aggregation-context=&#34;stats&#34;
+                               ods-aggregation-function=&#34;SUM&#34;
+                               ods-aggregation-expression=&#34;menages_en_2012&#34;&gt;
+                                {{ agg | number : 0 }}
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;box col-md-8&#34;&gt;
+                        &lt;div class=&#34;grey-box&#34;&gt;
+                            &lt;h2 class=&#34;title&#34;&gt;
+                                Evolution de la population
+                            &lt;/h2&gt;
+                            &lt;h3 class=&#34;description&#34;&gt;
+                                France 2007 et 2012
+                            &lt;/h3&gt;
+                            &lt;ods-chart single-y-axis=&#34;true&#34;&gt;
+                                &lt;ods-chart-query context=&#34;stats&#34; field-x=&#34;region&#34; maxpoints=&#34;50&#34; sort=&#34;serie1-1&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;population_en_2012&#34; chart-type=&#34;column&#34; function-y=&#34;AVG&#34; color=&#34;#2C3F56&#34; scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;population_en_2007&#34; chart-type=&#34;column&#34; function-y=&#34;AVG&#34; color=&#34;#EC643C&#34; scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;box col-md-8&#34;&gt;
+                        &lt;div class=&#34;grey-box&#34;&gt;
+                            &lt;h2 class=&#34;title&#34;&gt;
+                                Naissance par métropole
+                            &lt;/h2&gt;
+                            &lt;h3 class=&#34;description&#34;&gt;
+                                De 2007 à 2012
+                            &lt;/h3&gt;
+                            &lt;ods-chart single-y-axis=&#34;true&#34;&gt;
+                                &lt;ods-chart-query context=&#34;stats&#34; field-x=&#34;metropole&#34; maxpoints=&#34;50&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;naissances_entre_2007_et_2012&#34; chart-type=&#34;treemap&#34; function-y=&#34;AVG&#34; scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;box col-md-4&#34;&gt;
+                        &lt;div class=&#34;grey-box half-box&#34;&gt;
+                            &lt;h2 class=&#34;title&#34;&gt;
+                                Actifs
+                            &lt;/h2&gt;
+                            &lt;h3 class=&#34;description&#34;&gt;
+                                15 - 64 ans en 2012
+                            &lt;/h3&gt;
+                            &lt;p class=&#34;kpi&#34;
+                               ods-aggregation=&#34;agg&#34;
+                               ods-aggregation-context=&#34;stats&#34;
+                               ods-aggregation-function=&#34;SUM&#34;
+                               ods-aggregation-expression=&#34;actifs_15_64_ans_en_2012&#34;&gt;
+                                {{ agg | number : 0 }}
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;grey-box half-box&#34;&gt;
+                            &lt;h2 class=&#34;title&#34;&gt;
+                                Chomeurs
+                            &lt;/h2&gt;
+                            &lt;h3 class=&#34;description&#34;&gt;
+                                15 - 64 ans en 2012
+                            &lt;/h3&gt;
+                            &lt;p class=&#34;kpi&#34;
+                               ods-aggregation=&#34;agg&#34;
+                               ods-aggregation-context=&#34;stats&#34;
+                               ods-aggregation-function=&#34;SUM&#34;
+                               ods-aggregation-expression=&#34;chomeurs_15_64_ans_en_2012&#34;&gt;
+                                {{ agg | number : 0 }}
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/ods-pane&gt;
+            &lt;ods-pane title=&#34;Vue analytics 2&#34; icon=&#34;map&#34; pane-auto-unload=&#34;true&#34;&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;box col-md-12&#34;&gt;
+                        &lt;h2 class=&#34;grey-box&#34;&gt;
+                            Logements
+                        &lt;/h2&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;box col-md-4&#34;&gt;
+                        &lt;div class=&#34;grey-box half-box&#34;&gt;
+                            &lt;h2 class=&#34;title&#34;&gt;
+                                Nombre de logements
+                            &lt;/h2&gt;
+                            &lt;h3 class=&#34;description&#34;&gt;
+                                en 2012
+                            &lt;/h3&gt;
+                            &lt;p class=&#34;kpi&#34;
+                               ods-aggregation=&#34;agg&#34;
+                               ods-aggregation-context=&#34;stats&#34;
+                               ods-aggregation-function=&#34;SUM&#34;
+                               ods-aggregation-expression=&#34;logements_en_2012&#34;&gt;
+                                {{ agg | number : 0 }}
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;box col-md-4&#34;&gt;
+                        &lt;div class=&#34;grey-box half-box&#34;&gt;
+                            &lt;h2 class=&#34;title&#34;&gt;
+                                Résidences principales
+                            &lt;/h2&gt;
+                            &lt;h3 class=&#34;description&#34;&gt;
+                                en 2012
+                            &lt;/h3&gt;
+                            &lt;p class=&#34;kpi&#34;
+                               ods-aggregation=&#34;agg&#34;
+                               ods-aggregation-context=&#34;stats&#34;
+                               ods-aggregation-function=&#34;SUM&#34;
+                               ods-aggregation-expression=&#34;residences_principales_en_2012&#34;&gt;
+                                {{ agg | number : 0 }}
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;box col-md-4&#34;&gt;
+                        &lt;div class=&#34;grey-box half-box&#34;&gt;
+                            &lt;h2 class=&#34;title&#34;&gt;
+                                Résidences secondaires et logts occasionnels
+                            &lt;/h2&gt;
+                            &lt;h3 class=&#34;description&#34;&gt;
+                                en 2012
+                            &lt;/h3&gt;
+                            &lt;p class=&#34;kpi&#34;
+                               ods-aggregation=&#34;agg&#34;
+                               ods-aggregation-context=&#34;stats&#34;
+                               ods-aggregation-function=&#34;SUM&#34;
+                               ods-aggregation-expression=&#34;res_secondaires_et_logts_occasionnels_en_2012&#34;&gt;
+                                {{ agg | number : 0 }}
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;box col-md-12&#34;&gt;
+                        &lt;h2 class=&#34;grey-box&#34;&gt;
+                            Ménages fiscaux
+                        &lt;/h2&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;box col-md-4&#34;&gt;
+                        &lt;div class=&#34;grey-box half-box&#34;&gt;
+                            &lt;h2 class=&#34;title&#34;&gt;
+                                Nombre de ménages fiscaux
+                            &lt;/h2&gt;
+                            &lt;h3 class=&#34;description&#34;&gt;
+                                en 2012
+                            &lt;/h3&gt;
+                            &lt;p class=&#34;kpi&#34;
+                               ods-aggregation=&#34;agg&#34;
+                               ods-aggregation-context=&#34;stats&#34;
+                               ods-aggregation-function=&#34;SUM&#34;
+                               ods-aggregation-expression=&#34;nombre_de_menages_fiscaux_en_2012&#34;&gt;
+                                {{ agg | number : 0 }}
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;box col-md-4&#34;&gt;
+                        &lt;div class=&#34;grey-box half-box&#34;&gt;
+                            &lt;h2 class=&#34;title&#34;&gt;
+                                Part des ménages fiscaux imposés
+                            &lt;/h2&gt;
+                            &lt;h3 class=&#34;description&#34;&gt;
+                                en 2012
+                            &lt;/h3&gt;
+                            &lt;p class=&#34;kpi&#34;
+                               ods-aggregation=&#34;agg&#34;
+                               ods-aggregation-context=&#34;stats&#34;
+                               ods-aggregation-function=&#34;SUM&#34;
+                               ods-aggregation-expression=&#34;part_des_menages_fiscaux_imposes_en_2012&#34;&gt;
+                                {{ agg | number : 0 }}
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;box col-md-4&#34;&gt;
+                        &lt;div class=&#34;grey-box half-box&#34;&gt;
+                            &lt;h2 class=&#34;title&#34;&gt;
+                                Mediane du revenu disponible par US
+                            &lt;/h2&gt;
+                            &lt;h3 class=&#34;description&#34;&gt;
+                                en 2012
+                            &lt;/h3&gt;
+                            &lt;p class=&#34;kpi&#34;
+                               ods-aggregation=&#34;agg&#34;
+                               ods-aggregation-context=&#34;stats&#34;
+                               ods-aggregation-function=&#34;AVG&#34;
+                               ods-aggregation-expression=&#34;mediane_du_revenu_disponible_par_uc_en_2012&#34;&gt;
+                                {{ agg | number : 0 }}
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/ods-pane&gt;
+        &lt;/ods-tabs&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+
+        </div>
+        <style type='text/css'>
+            h1 .smaller {
+    font-size: 0.5em;
+}
+h2 .smaller {
+    font-size: 0.8em;
+}
+.ods-box {
+    border-radius: 0px;
+}
+.titre {
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+/* BOX */
+.box {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.grey-box {
+    background: #eee;
+    border-radius: 0;
+    padding: 20px;
+    margin-bottom: 6px;
+    height: 418px;
+}
+.grey-box.half-box {
+    height: 206px;
+}
+/* BOX CONTENT */
+.title {
+    font-size: 1em;
+    margin: 0 auto;
+}
+.description {
+    margin: 0 auto;
+    color: grey;
+    font-size: 0.7em;
+    font-weight: 100;
+}
+.kpi {
+    font-size: 1.66em;
+    margin-top: 40px;
+    font-weight: 500;
+    text-align: center;
+}
+/* BOX Title Line */
+h2.grey-box {
+    height: 70px;
+    font-size: 1.3em;
+}
+/* CHARTS */
+.ods-chart {
+    height: 350px;
+}
+.odswidget-charts {
+    margin-top: 10px;
+}
+.odswidget-table {
+    height: 338px;
+    margin-top: 10px;
+}
+rect.highcharts-background {
+    fill: #eee !important;
+}
+tspan.highcharts-text-outline {
+    display: none;
+}
+      
+
+        </style>
+        </body>
+        ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-dashboard-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-dashboard-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right">
+                <a class="button is-primary is-outlined edit-on-codepen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-dashboard').submit()">
+                    Edit on CodePen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-dashboard-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;stats&#34;
+                     stats-dataset=&#34;resume-statistique-communes-departements-et-regions-france-2012-2013-2014&#34;
+                     stats-domain=&#34;public&#34;&gt;
+    &lt;div class=&#34;container&#34;&gt;
+        &lt;h1 class=&#34;titre&#34;&gt;
+            Dashboard template 1 &lt;span class=&#34;smaller&#34;&gt;by OpenDataSoft&lt;/span&gt;
+        &lt;/h1&gt;
+        &lt;ods-tabs&gt;
+            &lt;ods-pane title=&#34;Vue analytics 1&#34; icon=&#34;pie-chart&#34; pane-auto-unload=&#34;true&#34;&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;box col-md-4&#34;&gt;
+                        &lt;div class=&#34;grey-box half-box&#34;&gt;
+                            &lt;h2 class=&#34;title&#34;&gt;
+                                Population
+                            &lt;/h2&gt;
+                            &lt;h3 class=&#34;description&#34;&gt;
+                                en 2012
+                            &lt;/h3&gt;
+                            &lt;p class=&#34;kpi&#34;
+                               ods-aggregation=&#34;agg&#34;
+                               ods-aggregation-context=&#34;stats&#34;
+                               ods-aggregation-function=&#34;SUM&#34;
+                               ods-aggregation-expression=&#34;population_en_2012&#34;&gt;
+                                {{ agg | number }}
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;grey-box half-box&#34;&gt;
+                            &lt;h2 class=&#34;title&#34;&gt;
+                                Nombre de ménages
+                            &lt;/h2&gt;
+                            &lt;h3 class=&#34;description&#34;&gt;
+                                en 2012
+                            &lt;/h3&gt;
+                            &lt;p class=&#34;kpi&#34;
+                               ods-aggregation=&#34;agg&#34;
+                               ods-aggregation-context=&#34;stats&#34;
+                               ods-aggregation-function=&#34;SUM&#34;
+                               ods-aggregation-expression=&#34;menages_en_2012&#34;&gt;
+                                {{ agg | number : 0 }}
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;box col-md-8&#34;&gt;
+                        &lt;div class=&#34;grey-box&#34;&gt;
+                            &lt;h2 class=&#34;title&#34;&gt;
+                                Evolution de la population
+                            &lt;/h2&gt;
+                            &lt;h3 class=&#34;description&#34;&gt;
+                                France 2007 et 2012
+                            &lt;/h3&gt;
+                            &lt;ods-chart single-y-axis=&#34;true&#34;&gt;
+                                &lt;ods-chart-query context=&#34;stats&#34; field-x=&#34;region&#34; maxpoints=&#34;50&#34; sort=&#34;serie1-1&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;population_en_2012&#34; chart-type=&#34;column&#34; function-y=&#34;AVG&#34; color=&#34;#2C3F56&#34; scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;population_en_2007&#34; chart-type=&#34;column&#34; function-y=&#34;AVG&#34; color=&#34;#EC643C&#34; scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;box col-md-8&#34;&gt;
+                        &lt;div class=&#34;grey-box&#34;&gt;
+                            &lt;h2 class=&#34;title&#34;&gt;
+                                Naissance par métropole
+                            &lt;/h2&gt;
+                            &lt;h3 class=&#34;description&#34;&gt;
+                                De 2007 à 2012
+                            &lt;/h3&gt;
+                            &lt;ods-chart single-y-axis=&#34;true&#34;&gt;
+                                &lt;ods-chart-query context=&#34;stats&#34; field-x=&#34;metropole&#34; maxpoints=&#34;50&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;naissances_entre_2007_et_2012&#34; chart-type=&#34;treemap&#34; function-y=&#34;AVG&#34; scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;box col-md-4&#34;&gt;
+                        &lt;div class=&#34;grey-box half-box&#34;&gt;
+                            &lt;h2 class=&#34;title&#34;&gt;
+                                Actifs
+                            &lt;/h2&gt;
+                            &lt;h3 class=&#34;description&#34;&gt;
+                                15 - 64 ans en 2012
+                            &lt;/h3&gt;
+                            &lt;p class=&#34;kpi&#34;
+                               ods-aggregation=&#34;agg&#34;
+                               ods-aggregation-context=&#34;stats&#34;
+                               ods-aggregation-function=&#34;SUM&#34;
+                               ods-aggregation-expression=&#34;actifs_15_64_ans_en_2012&#34;&gt;
+                                {{ agg | number : 0 }}
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;grey-box half-box&#34;&gt;
+                            &lt;h2 class=&#34;title&#34;&gt;
+                                Chomeurs
+                            &lt;/h2&gt;
+                            &lt;h3 class=&#34;description&#34;&gt;
+                                15 - 64 ans en 2012
+                            &lt;/h3&gt;
+                            &lt;p class=&#34;kpi&#34;
+                               ods-aggregation=&#34;agg&#34;
+                               ods-aggregation-context=&#34;stats&#34;
+                               ods-aggregation-function=&#34;SUM&#34;
+                               ods-aggregation-expression=&#34;chomeurs_15_64_ans_en_2012&#34;&gt;
+                                {{ agg | number : 0 }}
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/ods-pane&gt;
+            &lt;ods-pane title=&#34;Vue analytics 2&#34; icon=&#34;map&#34; pane-auto-unload=&#34;true&#34;&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;box col-md-12&#34;&gt;
+                        &lt;h2 class=&#34;grey-box&#34;&gt;
+                            Logements
+                        &lt;/h2&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;box col-md-4&#34;&gt;
+                        &lt;div class=&#34;grey-box half-box&#34;&gt;
+                            &lt;h2 class=&#34;title&#34;&gt;
+                                Nombre de logements
+                            &lt;/h2&gt;
+                            &lt;h3 class=&#34;description&#34;&gt;
+                                en 2012
+                            &lt;/h3&gt;
+                            &lt;p class=&#34;kpi&#34;
+                               ods-aggregation=&#34;agg&#34;
+                               ods-aggregation-context=&#34;stats&#34;
+                               ods-aggregation-function=&#34;SUM&#34;
+                               ods-aggregation-expression=&#34;logements_en_2012&#34;&gt;
+                                {{ agg | number : 0 }}
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;box col-md-4&#34;&gt;
+                        &lt;div class=&#34;grey-box half-box&#34;&gt;
+                            &lt;h2 class=&#34;title&#34;&gt;
+                                Résidences principales
+                            &lt;/h2&gt;
+                            &lt;h3 class=&#34;description&#34;&gt;
+                                en 2012
+                            &lt;/h3&gt;
+                            &lt;p class=&#34;kpi&#34;
+                               ods-aggregation=&#34;agg&#34;
+                               ods-aggregation-context=&#34;stats&#34;
+                               ods-aggregation-function=&#34;SUM&#34;
+                               ods-aggregation-expression=&#34;residences_principales_en_2012&#34;&gt;
+                                {{ agg | number : 0 }}
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;box col-md-4&#34;&gt;
+                        &lt;div class=&#34;grey-box half-box&#34;&gt;
+                            &lt;h2 class=&#34;title&#34;&gt;
+                                Résidences secondaires et logts occasionnels
+                            &lt;/h2&gt;
+                            &lt;h3 class=&#34;description&#34;&gt;
+                                en 2012
+                            &lt;/h3&gt;
+                            &lt;p class=&#34;kpi&#34;
+                               ods-aggregation=&#34;agg&#34;
+                               ods-aggregation-context=&#34;stats&#34;
+                               ods-aggregation-function=&#34;SUM&#34;
+                               ods-aggregation-expression=&#34;res_secondaires_et_logts_occasionnels_en_2012&#34;&gt;
+                                {{ agg | number : 0 }}
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;box col-md-12&#34;&gt;
+                        &lt;h2 class=&#34;grey-box&#34;&gt;
+                            Ménages fiscaux
+                        &lt;/h2&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;box col-md-4&#34;&gt;
+                        &lt;div class=&#34;grey-box half-box&#34;&gt;
+                            &lt;h2 class=&#34;title&#34;&gt;
+                                Nombre de ménages fiscaux
+                            &lt;/h2&gt;
+                            &lt;h3 class=&#34;description&#34;&gt;
+                                en 2012
+                            &lt;/h3&gt;
+                            &lt;p class=&#34;kpi&#34;
+                               ods-aggregation=&#34;agg&#34;
+                               ods-aggregation-context=&#34;stats&#34;
+                               ods-aggregation-function=&#34;SUM&#34;
+                               ods-aggregation-expression=&#34;nombre_de_menages_fiscaux_en_2012&#34;&gt;
+                                {{ agg | number : 0 }}
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;box col-md-4&#34;&gt;
+                        &lt;div class=&#34;grey-box half-box&#34;&gt;
+                            &lt;h2 class=&#34;title&#34;&gt;
+                                Part des ménages fiscaux imposés
+                            &lt;/h2&gt;
+                            &lt;h3 class=&#34;description&#34;&gt;
+                                en 2012
+                            &lt;/h3&gt;
+                            &lt;p class=&#34;kpi&#34;
+                               ods-aggregation=&#34;agg&#34;
+                               ods-aggregation-context=&#34;stats&#34;
+                               ods-aggregation-function=&#34;SUM&#34;
+                               ods-aggregation-expression=&#34;part_des_menages_fiscaux_imposes_en_2012&#34;&gt;
+                                {{ agg | number : 0 }}
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;box col-md-4&#34;&gt;
+                        &lt;div class=&#34;grey-box half-box&#34;&gt;
+                            &lt;h2 class=&#34;title&#34;&gt;
+                                Mediane du revenu disponible par US
+                            &lt;/h2&gt;
+                            &lt;h3 class=&#34;description&#34;&gt;
+                                en 2012
+                            &lt;/h3&gt;
+                            &lt;p class=&#34;kpi&#34;
+                               ods-aggregation=&#34;agg&#34;
+                               ods-aggregation-context=&#34;stats&#34;
+                               ods-aggregation-function=&#34;AVG&#34;
+                               ods-aggregation-expression=&#34;mediane_du_revenu_disponible_par_uc_en_2012&#34;&gt;
+                                {{ agg | number : 0 }}
+                            &lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/ods-pane&gt;
+        &lt;/ods-tabs&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+</code></pre>
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-dashboard-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>h1 .smaller {
+    font-size: 0.5em;
+}
+h2 .smaller {
+    font-size: 0.8em;
+}
+.ods-box {
+    border-radius: 0px;
+}
+.titre {
+    border-bottom: 1px solid black;
+    width: 100%;
+}
+/* BOX */
+.box {
+    padding-left: 3px;
+    padding-right: 3px;
+}
+.grey-box {
+    background: #eee;
+    border-radius: 0;
+    padding: 20px;
+    margin-bottom: 6px;
+    height: 418px;
+}
+.grey-box.half-box {
+    height: 206px;
+}
+/* BOX CONTENT */
+.title {
+    font-size: 1em;
+    margin: 0 auto;
+}
+.description {
+    margin: 0 auto;
+    color: grey;
+    font-size: 0.7em;
+    font-weight: 100;
+}
+.kpi {
+    font-size: 1.66em;
+    margin-top: 40px;
+    font-weight: 500;
+    text-align: center;
+}
+/* BOX Title Line */
+h2.grey-box {
+    height: 70px;
+    font-size: 1.3em;
+}
+/* CHARTS */
+.ods-chart {
+    height: 350px;
+}
+.odswidget-charts {
+    margin-top: 10px;
+}
+.odswidget-table {
+    height: 338px;
+    margin-top: 10px;
+}
+rect.highcharts-background {
+    fill: #eee !important;
+}
+tspan.highcharts-text-outline {
+    display: none;
+}
+      
+</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-dashboard";
+            iframe = document.getElementById(iframeId);
+             
+            size =  800 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+        </div>
+    </div>
+    
+</section>
+
+
+    </div>
+</div>
+
+<footer class="footer">
+    <a href="https://www.opendatasoft.com"
+       class="footer-link"
+       title="Opendatasoft website">
+        <img src="/img/ods-logo.svg"
+             class="footer-logo"
+             alt="Opendatasoft logo"
+        />
+    </a>
+    <span class="footer-copyright">
+        &copy; Copyright 2020
+    </span>
+</footer>
+
+
+
+
+
+
+
+<script>var process = { "env": { "NODE_ENV": "production" } }</script>
+<script type="text/javascript"
+        src="/index.min.11fcc0d6f8a0b04671eb0a5fb2bb06b89618c60744ea73effdb557ad43fd44a6.js"
+        defer></script>
+
+</body>
+</html>

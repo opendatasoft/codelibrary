@@ -1,5 +1,5 @@
 ---
-title: "ods-maps tricks - 2"
+title: "ods-map refine zoom 2"
 ---
 
 ## Map drilldown

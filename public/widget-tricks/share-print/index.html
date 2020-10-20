@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+    <title>
+        
+Share and print &ndash; Codelibrary
+
+    </title>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41201218-21"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-41201218-21');
+    </script>
+
+    
+    
+
+    
+    
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css"
+          integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8="
+          crossorigin="anonymous">
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href="/scss/main.css" />
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png">
+    <link rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png">
+    <link rel="shortcut icon"
+          href="/favicon.ico">
+</head>
+
+<body>
+
+<nav class="navbar is-fixed-top"
+     role="navigation"
+     aria-label="Main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item"
+           href="/"
+           title="Back to the homepage">
+            <img src="/img/ods-logo-helphub.svg"
+                 alt="Helphub Logo"/>
+        </a>
+        <button class="navbar-burger burger"
+                type="button"
+                data-target="helphubNavbar"
+                aria-controls="helphubNavbar"
+                aria-expanded="false"
+                aria-label="Menu">
+            Help Hub
+        </button>
+    </div>
+    <div class="navbar-menu"
+         id="helphubNavbar">
+        <div class="navbar-start">
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/">
+                Help Hub
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/platform/en/">
+                User guide
+            </a>
+            <a class="navbar-item is-active"
+               href="https://discovery.opendatasoft.com">
+                Code Library
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/faq-glossary/en/">
+                FAQ
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/widgets/">
+                Widgets
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/en/apis/">
+                APIs
+            </a>
+            <a class="navbar-item"
+               href="https://academy.opendatasoft.com/page/homepage">
+                Academy
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="columns codelibrary">
+    <div class="column is-narrow">
+        <aside class="sidebar menu">
+    <a href="https://codelibrary.opendatasoft.com"
+       class="sidebar-logo-link"
+       title="Go to Codelibrary homepage">
+        <img src="/img/ods-codelibrary-logo.svg"
+             class="sidebar-logo"
+             alt="Codelibrary Logo">
+    </a>
+
+    <div id="algolia-box"></div>
+    <div id="algolia-results"></div>
+
+    
+    <ul class="menu-list">
+        <li>
+            <a class="sidebar-subtitle"
+               href="https://codelibrary.opendatasoft.com">
+                Home
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="/components/"
+               class="sidebar-subtitle">
+                Components
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a href="/page-templates/"
+               class="sidebar-subtitle">
+                Page templates
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a href="/portal-themes/"
+               class="sidebar-subtitle">
+                Portal themes
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="sidebar-subtitle " href="/widget-tricks/">
+            Widget tricks
+            </a>
+            <ul>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/svg-maps/">SVG Maps</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/charts/">Chart Samples</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/custom-tooltip/">Custom tooltip</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/dates/">Dates</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/drill-down/">Drill-down chart</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/filter-as-list/">Filters as an HTML Select</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-aggregation/">ods-aggregation</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-analysis/">ods-analysis</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-color-gradient/">ods-color-gradient &amp; ods-legend</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-map-tricks/">ods-map: Refine &amp; Zoom</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-map-css/">ods-map: CSS Hacks</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-pop-in/">ods-pop-in</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-date-range-slider/">ods-range-slider</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-simple-tabs/">ods-simple-tabs</a>
+                </li>
+                
+                <li>
+                    <a class="is-active" href="https://codelibrary.opendatasoft.com/widget-tricks/share-print/">Share and print</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/timeline/">Timeline Custom View</a>
+                </li>
+                
+            </ul>
+        </li>
+        
+        
+    </ul>
+    <p class="menu-label">
+        Tags
+    </p>
+    <div class="tags">
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/aggregation/">
+            aggregation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/chart/">
+            chart
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/date/">
+            date
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/display/">
+            display
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/filter/">
+            filter
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/geo/">
+            geo
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/list/">
+            list
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/map/">
+            map
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/navigation/">
+            navigation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-aggregation/">
+            ods-aggregation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-analysis/">
+            ods-analysis
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-maps/">
+            ods-maps
+        </a>
+        
+    </div>
+</aside>
+
+    </div>
+    <div class="column">
+        
+
+<section>
+    <div class="content-header container is-max-desktop mb-5">
+        <div class="content">
+            <h1 class="title" id="share-and-print">
+  Share and print
+  
+</h1>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <h2 class="title" id="browse-search-filter-then-share-or-print-">
+  Browse, Search, Filter then Share or Print !
+  
+    <a class="is-link" href="#browse-search-filter-then-share-or-print-">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+<p>This resource highlights the urlsync parameter that allows users to copy/share the URL with applied filters and query. It also proposes a scenario of a dedicated page to print a specific record&rsquo;s metadata.</p>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-component-1"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;container\&#34;\u003e\n    \u003cods-dataset-context context=\&#34;ctx\&#34;\n                         ctx-dataset=\&#34;record-stores0\&#34;\n                         ctx-domain=\&#34;public\&#34;\n                         ctx-urlsync=\&#34;true\&#34;\u003e\n        \u003cdiv class=\&#34;row ods-box\&#34;\u003e\n            \u003ch3\u003e\n                Share by copying this link :\n            \u003c/h3\u003e\n            \u003ch3 class=\&#34;red-box\&#34;\u003e\n                Filter and have a look to your browser URL ! It&#39;s synced !\n            \u003c/h3\u003e\n            \u003ch4\u003e\n                \u003ca href=\&#34;?{{ ctx.getQueryStringURL() }}\&#34;\n                   target=\&#34;_blank\&#34;\u003ehttps://discovery.opendatasoft.com/pages/demo-urlsync/?{{ ctx.getQueryStringURL() }}\u003c/a\u003e\n            \u003c/h4\u003e\n            \u003ch3\u003e\n                Share through social network or by email:\n            \u003c/h3\u003e\n            \u003cdiv class=\&#34;boutons\&#34; style=\&#34;font-size: 1.6rem;\&#34;\u003e\n                \u003ca href=\&#34;https://twitter.com/intent/tweet?text=Opendatasoft Page Test;url=https%3A%2F%2Fdiscovery.opendatasoft.com%2Fpages%2Fdemo-urlsync%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--twitter\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-twitter ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdiscovery.opendatasoft.com%2Fpages%2Fdemo-urlsync%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--facebook\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-facebook ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;https://plus.google.com/share?url=https%3A%2F%2Fdiscovery.opendatasoft.com%2Fpages%2Fdemo-urlsync%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--google-plus\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-google-plus ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fdiscovery.opendatasoft.com%2Fpages%2Fdemo-urlsync%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\u0026amp;mini=true\u0026amp;title=Opendatasoft Page Test;source=Opendatasoft\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--linkedin\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-linkedin ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;mailto:?subject=Opendatasoft Page Test\u0026amp;body=https%3A%2F%2Fdiscovery.opendatasoft.com%2Fpages%2Fdemo-urlsync%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--mail\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-envelope ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;row ods-box\&#34;\u003e\n            \u003ch3\u003e\n                A dashboard : Music record store in the world\n            \u003c/h3\u003e\n            \u003cdiv class=\&#34;col-md-3 ods-box\&#34;\u003e\n                \u003cods-text-search context=\&#34;ctx\&#34; placeholder=\&#34;disc, records, music...\&#34;\u003e\u003c/ods-text-search\u003e\n                \u003cods-filter-summary context=\&#34;ctx\&#34;\u003e\u003c/ods-filter-summary\u003e\n                \u003cods-facets context=\&#34;ctx\&#34;\u003e\u003c/ods-facets\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;col-md-9 ods-box\&#34;\u003e\n                \u003cods-map\u003e\n                    \u003cods-map-layer context=\&#34;ctx\&#34;\u003e\n                        \u003cdiv\u003e\n                            \u003ch3\u003e\n                                {{ record.fields.name }}\n                            \u003c/h3\u003e\n                            \u003cp style=\&#34;font-style:italic; color:grey; font-weight:300\&#34;\u003e\n                                {{ record.fields.address }}\n                            \u003c/p\u003e\n                            \u003cdiv style=\&#34;line-height: 0px;\&#34;\u003e\n                                \u003cp\u003e\n                                    \u003cspan style=\&#34;font-style:italic;\&#34;\u003eHas closed \u003c/span\u003e\u003cb style=\&#34;font-size:1.2em\&#34;\u003e{{ record.fields.hasclosed }}\u003c/b\u003e\n                                \u003c/p\u003e\n                                \u003cp\u003e\n                                    \u003cspan style=\&#34;font-style:italic;\&#34;\u003eActive \u003c/span\u003e\u003cb style=\&#34;font-size:1.2em\&#34;\u003e{{ record.fields.active }}\u003c/b\u003e\n                                \u003c/p\u003e\n                                \u003cp\u003e\n                                    \u003cspan style=\&#34;font-style:italic;\&#34;\u003eReviewers \u003c/span\u003e\u003cb style=\&#34;font-size:1.2em\&#34;\u003e{{ record.fields.ratecnt }}\u003c/b\u003e\n                                \u003c/p\u003e\n                            \u003c/div\u003e\n                            \u003ca style=\&#34;position: absolute; right: 0px; bottom: 0px; color: #1e0c33; font-weight: 600; font-size: 1.1em;\&#34;\n                               href=\&#34;/pages/demo-urlsync-card?q=city:%22{{ record.fields.city }}%22 AND name:%22{{ record.fields.name }}%22\&#34;\n                               target=\&#34;_blank\&#34;\u003eGo to the store card\u003c/a\u003e\n                        \u003c/div\u003e\n                    \u003c/ods-map-layer\u003e\n                \u003c/ods-map\u003e\n                \u003cdiv class=\&#34;ods-box\&#34;\u003e\n                    \u003cods-table context=\&#34;ctx\&#34;\u003e\u003c/ods-table\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\n\u003c/div\u003e&#34;,
+               "css": &#34;&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-component-1"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+        </head>
+        <body>
+        <div ng-app='ods-widgets'>
+            &lt;div class=&#34;container&#34;&gt;
+    &lt;ods-dataset-context context=&#34;ctx&#34;
+                         ctx-dataset=&#34;record-stores0&#34;
+                         ctx-domain=&#34;public&#34;
+                         ctx-urlsync=&#34;true&#34;&gt;
+        &lt;div class=&#34;row ods-box&#34;&gt;
+            &lt;h3&gt;
+                Share by copying this link :
+            &lt;/h3&gt;
+            &lt;h3 class=&#34;red-box&#34;&gt;
+                Filter and have a look to your browser URL ! It&#39;s synced !
+            &lt;/h3&gt;
+            &lt;h4&gt;
+                &lt;a href=&#34;?{{ ctx.getQueryStringURL() }}&#34;
+                   target=&#34;_blank&#34;&gt;https://discovery.opendatasoft.com/pages/demo-urlsync/?{{ ctx.getQueryStringURL() }}&lt;/a&gt;
+            &lt;/h4&gt;
+            &lt;h3&gt;
+                Share through social network or by email:
+            &lt;/h3&gt;
+            &lt;div class=&#34;boutons&#34; style=&#34;font-size: 1.6rem;&#34;&gt;
+                &lt;a href=&#34;https://twitter.com/intent/tweet?text=Opendatasoft Page Test;url=https%3A%2F%2Fdiscovery.opendatasoft.com%2Fpages%2Fdemo-urlsync%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
+                   class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--twitter&#34;
+                   target=&#34;_blank&#34;&gt;
+                    &lt;i class=&#34;fa fa-twitter ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+                &lt;a href=&#34;https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdiscovery.opendatasoft.com%2Fpages%2Fdemo-urlsync%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
+                   class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--facebook&#34;
+                   target=&#34;_blank&#34;&gt;
+                    &lt;i class=&#34;fa fa-facebook ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+                &lt;a href=&#34;https://plus.google.com/share?url=https%3A%2F%2Fdiscovery.opendatasoft.com%2Fpages%2Fdemo-urlsync%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
+                   class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--google-plus&#34;
+                   target=&#34;_blank&#34;&gt;
+                    &lt;i class=&#34;fa fa-google-plus ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+                &lt;a href=&#34;https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fdiscovery.opendatasoft.com%2Fpages%2Fdemo-urlsync%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&amp;amp;mini=true&amp;amp;title=Opendatasoft Page Test;source=Opendatasoft&#34;
+                   class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--linkedin&#34;
+                   target=&#34;_blank&#34;&gt;
+                    &lt;i class=&#34;fa fa-linkedin ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+                &lt;a href=&#34;mailto:?subject=Opendatasoft Page Test&amp;amp;body=https%3A%2F%2Fdiscovery.opendatasoft.com%2Fpages%2Fdemo-urlsync%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
+                   class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--mail&#34;
+                   target=&#34;_blank&#34;&gt;
+                    &lt;i class=&#34;fa fa-envelope ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;row ods-box&#34;&gt;
+            &lt;h3&gt;
+                A dashboard : Music record store in the world
+            &lt;/h3&gt;
+            &lt;div class=&#34;col-md-3 ods-box&#34;&gt;
+                &lt;ods-text-search context=&#34;ctx&#34; placeholder=&#34;disc, records, music...&#34;&gt;&lt;/ods-text-search&gt;
+                &lt;ods-filter-summary context=&#34;ctx&#34;&gt;&lt;/ods-filter-summary&gt;
+                &lt;ods-facets context=&#34;ctx&#34;&gt;&lt;/ods-facets&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-9 ods-box&#34;&gt;
+                &lt;ods-map&gt;
+                    &lt;ods-map-layer context=&#34;ctx&#34;&gt;
+                        &lt;div&gt;
+                            &lt;h3&gt;
+                                {{ record.fields.name }}
+                            &lt;/h3&gt;
+                            &lt;p style=&#34;font-style:italic; color:grey; font-weight:300&#34;&gt;
+                                {{ record.fields.address }}
+                            &lt;/p&gt;
+                            &lt;div style=&#34;line-height: 0px;&#34;&gt;
+                                &lt;p&gt;
+                                    &lt;span style=&#34;font-style:italic;&#34;&gt;Has closed &lt;/span&gt;&lt;b style=&#34;font-size:1.2em&#34;&gt;{{ record.fields.hasclosed }}&lt;/b&gt;
+                                &lt;/p&gt;
+                                &lt;p&gt;
+                                    &lt;span style=&#34;font-style:italic;&#34;&gt;Active &lt;/span&gt;&lt;b style=&#34;font-size:1.2em&#34;&gt;{{ record.fields.active }}&lt;/b&gt;
+                                &lt;/p&gt;
+                                &lt;p&gt;
+                                    &lt;span style=&#34;font-style:italic;&#34;&gt;Reviewers &lt;/span&gt;&lt;b style=&#34;font-size:1.2em&#34;&gt;{{ record.fields.ratecnt }}&lt;/b&gt;
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;a style=&#34;position: absolute; right: 0px; bottom: 0px; color: #1e0c33; font-weight: 600; font-size: 1.1em;&#34;
+                               href=&#34;/pages/demo-urlsync-card?q=city:%22{{ record.fields.city }}%22 AND name:%22{{ record.fields.name }}%22&#34;
+                               target=&#34;_blank&#34;&gt;Go to the store card&lt;/a&gt;
+                        &lt;/div&gt;
+                    &lt;/ods-map-layer&gt;
+                &lt;/ods-map&gt;
+                &lt;div class=&#34;ods-box&#34;&gt;
+                    &lt;ods-table context=&#34;ctx&#34;&gt;&lt;/ods-table&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/ods-dataset-context&gt;
+&lt;/div&gt;
+
+        </div>
+        <style type='text/css'>
+            
+        </style>
+        </body>
+        ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-component-1-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-component-1-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right">
+                <a class="button is-primary is-outlined edit-on-codepen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-component-1').submit()">
+                    Edit on CodePen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-component-1-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;container&#34;&gt;
+    &lt;ods-dataset-context context=&#34;ctx&#34;
+                         ctx-dataset=&#34;record-stores0&#34;
+                         ctx-domain=&#34;public&#34;
+                         ctx-urlsync=&#34;true&#34;&gt;
+        &lt;div class=&#34;row ods-box&#34;&gt;
+            &lt;h3&gt;
+                Share by copying this link :
+            &lt;/h3&gt;
+            &lt;h3 class=&#34;red-box&#34;&gt;
+                Filter and have a look to your browser URL ! It&#39;s synced !
+            &lt;/h3&gt;
+            &lt;h4&gt;
+                &lt;a href=&#34;?{{ ctx.getQueryStringURL() }}&#34;
+                   target=&#34;_blank&#34;&gt;https://discovery.opendatasoft.com/pages/demo-urlsync/?{{ ctx.getQueryStringURL() }}&lt;/a&gt;
+            &lt;/h4&gt;
+            &lt;h3&gt;
+                Share through social network or by email:
+            &lt;/h3&gt;
+            &lt;div class=&#34;boutons&#34; style=&#34;font-size: 1.6rem;&#34;&gt;
+                &lt;a href=&#34;https://twitter.com/intent/tweet?text=Opendatasoft Page Test;url=https%3A%2F%2Fdiscovery.opendatasoft.com%2Fpages%2Fdemo-urlsync%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
+                   class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--twitter&#34;
+                   target=&#34;_blank&#34;&gt;
+                    &lt;i class=&#34;fa fa-twitter ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+                &lt;a href=&#34;https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdiscovery.opendatasoft.com%2Fpages%2Fdemo-urlsync%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
+                   class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--facebook&#34;
+                   target=&#34;_blank&#34;&gt;
+                    &lt;i class=&#34;fa fa-facebook ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+                &lt;a href=&#34;https://plus.google.com/share?url=https%3A%2F%2Fdiscovery.opendatasoft.com%2Fpages%2Fdemo-urlsync%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
+                   class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--google-plus&#34;
+                   target=&#34;_blank&#34;&gt;
+                    &lt;i class=&#34;fa fa-google-plus ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+                &lt;a href=&#34;https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fdiscovery.opendatasoft.com%2Fpages%2Fdemo-urlsync%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&amp;amp;mini=true&amp;amp;title=Opendatasoft Page Test;source=Opendatasoft&#34;
+                   class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--linkedin&#34;
+                   target=&#34;_blank&#34;&gt;
+                    &lt;i class=&#34;fa fa-linkedin ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+                &lt;a href=&#34;mailto:?subject=Opendatasoft Page Test&amp;amp;body=https%3A%2F%2Fdiscovery.opendatasoft.com%2Fpages%2Fdemo-urlsync%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
+                   class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--mail&#34;
+                   target=&#34;_blank&#34;&gt;
+                    &lt;i class=&#34;fa fa-envelope ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;row ods-box&#34;&gt;
+            &lt;h3&gt;
+                A dashboard : Music record store in the world
+            &lt;/h3&gt;
+            &lt;div class=&#34;col-md-3 ods-box&#34;&gt;
+                &lt;ods-text-search context=&#34;ctx&#34; placeholder=&#34;disc, records, music...&#34;&gt;&lt;/ods-text-search&gt;
+                &lt;ods-filter-summary context=&#34;ctx&#34;&gt;&lt;/ods-filter-summary&gt;
+                &lt;ods-facets context=&#34;ctx&#34;&gt;&lt;/ods-facets&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-9 ods-box&#34;&gt;
+                &lt;ods-map&gt;
+                    &lt;ods-map-layer context=&#34;ctx&#34;&gt;
+                        &lt;div&gt;
+                            &lt;h3&gt;
+                                {{ record.fields.name }}
+                            &lt;/h3&gt;
+                            &lt;p style=&#34;font-style:italic; color:grey; font-weight:300&#34;&gt;
+                                {{ record.fields.address }}
+                            &lt;/p&gt;
+                            &lt;div style=&#34;line-height: 0px;&#34;&gt;
+                                &lt;p&gt;
+                                    &lt;span style=&#34;font-style:italic;&#34;&gt;Has closed &lt;/span&gt;&lt;b style=&#34;font-size:1.2em&#34;&gt;{{ record.fields.hasclosed }}&lt;/b&gt;
+                                &lt;/p&gt;
+                                &lt;p&gt;
+                                    &lt;span style=&#34;font-style:italic;&#34;&gt;Active &lt;/span&gt;&lt;b style=&#34;font-size:1.2em&#34;&gt;{{ record.fields.active }}&lt;/b&gt;
+                                &lt;/p&gt;
+                                &lt;p&gt;
+                                    &lt;span style=&#34;font-style:italic;&#34;&gt;Reviewers &lt;/span&gt;&lt;b style=&#34;font-size:1.2em&#34;&gt;{{ record.fields.ratecnt }}&lt;/b&gt;
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;a style=&#34;position: absolute; right: 0px; bottom: 0px; color: #1e0c33; font-weight: 600; font-size: 1.1em;&#34;
+                               href=&#34;/pages/demo-urlsync-card?q=city:%22{{ record.fields.city }}%22 AND name:%22{{ record.fields.name }}%22&#34;
+                               target=&#34;_blank&#34;&gt;Go to the store card&lt;/a&gt;
+                        &lt;/div&gt;
+                    &lt;/ods-map-layer&gt;
+                &lt;/ods-map&gt;
+                &lt;div class=&#34;ods-box&#34;&gt;
+                    &lt;ods-table context=&#34;ctx&#34;&gt;&lt;/ods-table&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/ods-dataset-context&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-component-1-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code></code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-component-1";
+            iframe = document.getElementById(iframeId);
+             
+            size =  800 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+        </div>
+    </div>
+    
+</section>
+
+
+    </div>
+</div>
+
+<footer class="footer">
+    <a href="https://www.opendatasoft.com"
+       class="footer-link"
+       title="Opendatasoft website">
+        <img src="/img/ods-logo.svg"
+             class="footer-logo"
+             alt="Opendatasoft logo"
+        />
+    </a>
+    <span class="footer-copyright">
+        &copy; Copyright 2020
+    </span>
+</footer>
+
+
+
+
+
+
+
+<script>var process = { "env": { "NODE_ENV": "production" } }</script>
+<script type="text/javascript"
+        src="/index.min.11fcc0d6f8a0b04671eb0a5fb2bb06b89618c60744ea73effdb557ad43fd44a6.js"
+        defer></script>
+
+</body>
+</html>

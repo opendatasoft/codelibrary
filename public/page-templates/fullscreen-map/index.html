@@ -1,0 +1,1501 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+    <title>
+        
+Fullscreen map with filters &ndash; Codelibrary
+
+    </title>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41201218-21"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-41201218-21');
+    </script>
+
+    
+    
+
+    
+    
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css"
+          integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8="
+          crossorigin="anonymous">
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href="/scss/main.css" />
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png">
+    <link rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png">
+    <link rel="shortcut icon"
+          href="/favicon.ico">
+</head>
+
+<body>
+
+<nav class="navbar is-fixed-top"
+     role="navigation"
+     aria-label="Main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item"
+           href="/"
+           title="Back to the homepage">
+            <img src="/img/ods-logo-helphub.svg"
+                 alt="Helphub Logo"/>
+        </a>
+        <button class="navbar-burger burger"
+                type="button"
+                data-target="helphubNavbar"
+                aria-controls="helphubNavbar"
+                aria-expanded="false"
+                aria-label="Menu">
+            Help Hub
+        </button>
+    </div>
+    <div class="navbar-menu"
+         id="helphubNavbar">
+        <div class="navbar-start">
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/">
+                Help Hub
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/platform/en/">
+                User guide
+            </a>
+            <a class="navbar-item is-active"
+               href="https://discovery.opendatasoft.com">
+                Code Library
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/faq-glossary/en/">
+                FAQ
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/widgets/">
+                Widgets
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/en/apis/">
+                APIs
+            </a>
+            <a class="navbar-item"
+               href="https://academy.opendatasoft.com/page/homepage">
+                Academy
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="columns codelibrary">
+    <div class="column is-narrow">
+        <aside class="sidebar menu">
+    <a href="https://codelibrary.opendatasoft.com"
+       class="sidebar-logo-link"
+       title="Go to Codelibrary homepage">
+        <img src="/img/ods-codelibrary-logo.svg"
+             class="sidebar-logo"
+             alt="Codelibrary Logo">
+    </a>
+
+    <div id="algolia-box"></div>
+    <div id="algolia-results"></div>
+
+    
+    <ul class="menu-list">
+        <li>
+            <a class="sidebar-subtitle"
+               href="https://codelibrary.opendatasoft.com">
+                Home
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="/components/"
+               class="sidebar-subtitle">
+                Components
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="sidebar-subtitle " href="/page-templates/">
+            Page templates
+            </a>
+            <ul>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/page-templates/dashboard/">Dashboard</a>
+                </li>
+                
+                <li>
+                    <a class="is-active" href="https://codelibrary.opendatasoft.com/page-templates/fullscreen-map/">Fullscreen map with filters</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/page-templates/home-1/">Home 1</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/page-templates/home-2/">Home 2</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/page-templates/home-3/">Home 3</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/page-templates/light-dashboard/">Light Dashboard</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/page-templates/listing-generator/">Listing generator</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/page-templates/map-listing/">Map Listing</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/page-templates/map-refine/">Map Refine</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/page-templates/observatory/">Observatory</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/page-templates/regional-covid/">Regional COVID-19</a>
+                </li>
+                
+            </ul>
+        </li>
+        
+        
+        
+        <li>
+            <a href="/portal-themes/"
+               class="sidebar-subtitle">
+                Portal themes
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a href="/widget-tricks/"
+               class="sidebar-subtitle">
+                Widget tricks
+            </a>
+        </li>
+        
+        
+    </ul>
+    <p class="menu-label">
+        Tags
+    </p>
+    <div class="tags">
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/aggregation/">
+            aggregation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/chart/">
+            chart
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/date/">
+            date
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/display/">
+            display
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/filter/">
+            filter
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/geo/">
+            geo
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/list/">
+            list
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/map/">
+            map
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/navigation/">
+            navigation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-aggregation/">
+            ods-aggregation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-analysis/">
+            ods-analysis
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-maps/">
+            ods-maps
+        </a>
+        
+    </div>
+</aside>
+
+    </div>
+    <div class="column">
+        
+
+<section>
+    <div class="content-header container is-max-desktop mb-5">
+        <div class="content">
+            <h1 class="title" id="fullscreen-map-with-filters">
+  Fullscreen map with filters
+  
+</h1>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <h2 class="title" id="fullscreen-map">
+  Fullscreen map
+  
+    <a class="is-link" href="#fullscreen-map">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+<p>The resource proposes a full screen map visualization. Ideal for datasets which key visuazation is the map. This resource contains filters and analytics drawers to propose filtering features and charts or KPI visualizations on top of the map. The example here uses air quality data.</p>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-fullscreen-map"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;ctx\&#34;\n                     ctx-dataset=\&#34;openaq\&#34;\n                     ctx-domain=\&#34;public\&#34;\n                     ctx-parameters=\&#34;{&#39;q.forcefilter&#39;:&#39;measurements_value \u003c 1000&#39;}\&#34;\n                     ng-init=\&#34;activemaplayer = &#39;measurements&#39;;\n                              search = {&#39;query&#39; : &#39;&#39;};\&#34;\u003e\n    {{\n    nb_active_filters =\n    (ctx.parameters[\&#34;refine.location\&#34;].length\u003e=0?1:0) &#43;\n    (ctx.parameters[\&#34;refine.measurements_sourcename\&#34;].length\u003e=0?1:0) &#43;\n    (ctx.parameters[\&#34;refine.measurements_parameter\&#34;].length\u003e=0?1:0) ; \&#34;\&#34;\n    }}\n    \u003cdiv class=\&#34;left\&#34;\n         ng-init=\&#34;leftmodal = false\&#34;\u003e\n        \u003cdiv href=\&#34;#\&#34;\n             class=\&#34;filter-btn\&#34;\n             ng-class=\&#34;{&#39;filter-btn--active&#39;: leftmodal}\&#34;\n             ng-click=\&#34;leftmodal = !leftmodal\&#34;\u003e\n            Filters\n            \u003cspan class=\&#34;filtered\&#34; ng-if=\&#34;nb_active_filters \u003e 0\&#34;\u003e\n                ({{ nb_active_filters }})\n            \u003c/span\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;modal\&#34; ng-class=\&#34;{&#39;modal-active&#39;:leftmodal}\&#34;\u003e\n            \u003cdiv class=\&#34;modal__header\&#34;\u003e\n                \u003cdiv href=\&#34;#\&#34;\n                     class=\&#34;closebtn\&#34;\n                     ng-click=\&#34;leftmodal = false\&#34;\u003e\n                    \u003cspan\u003e\u0026lt;\u003c/span\u003e Close\n                \u003c/div\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;modal__content\&#34;\u003e\n                \u003cdiv class=\&#34;ods-filters-placeholder\&#34; ods-sticky-scrollable=\&#34;\&#34;\u003e\n                    \u003cdiv class=\&#34;\&#34;\u003e\n                        \u003ch1 class=\&#34;ods-filters__count\&#34;\u003e\n                            \u003cspan class=\&#34;ods-filters__count-number ng-binding\&#34;\u003e{{ctx.nhits | number}}\u003c/span\u003e\n                            \u003cspan class=\&#34;ods-filters__count-units\&#34;\u003eAir measurements\u003c/span\u003e\n                        \u003c/h1\u003e\n                        \u003cods-filter-summary context=\&#34;ctx\&#34; exclude=\&#34;refine.measurements_parameter,q.forcefilter\&#34;\u003e\u003c/ods-filter-summary\u003e\n                        \u003ch1 class=\&#34;ods-filters__filters\&#34;\u003e\n                            Filters\n                        \u003c/h1\u003e\n                        \u003cods-facets context=\&#34;ctx\&#34;\u003e\n                            \u003ch3\u003e\n                                Polluant\n                            \u003c/h3\u003e\n                            \u003cods-facet name=\&#34;measurements_parameter\&#34;\n                                       ng-click=\&#34;activemaplayer = &#39;measurements&#39;\&#34;\u003e\u003c/ods-facet\u003e\n                            \u003ch3\u003e\n                                Location\n                            \u003c/h3\u003e\n                            \u003cods-facet name=\&#34;location\&#34;\u003e\u003c/ods-facet\u003e\n                        \u003c/ods-facets\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n    \u003cdiv class=\&#34;right\&#34;\n         ng-init=\&#34;rightmodal\&#34;\u003e\n        \u003cdiv href=\&#34;#\&#34;\n             class=\&#34;filter-btn\&#34;\n             ng-class=\&#34;{&#39;filter-btn--active&#39;: rightmodal}\&#34;\n             ng-click=\&#34;rightmodal = !rightmodal\&#34;\u003e\n            Analytics\n            \u003c!--span class=\&#34;filtered\&#34; ng-if=\&#34;nb_active_filters \u003e 0\&#34;\u003e\n                ({{ nb_active_filters }})\n            \u003c/span--\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;modal\&#34; ng-class=\&#34;{&#39;modal-active&#39;:rightmodal}\&#34;\u003e\n            \u003cdiv class=\&#34;modal__header\&#34;\u003e\n                \u003cdiv href=\&#34;#\&#34;\n                     class=\&#34;closebtn\&#34;\n                     ng-click=\&#34;rightmodal = false\&#34;\u003e\n                    Close \u003cspan\u003e\u0026gt;\u003c/span\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;modal__content\&#34;\u003e\n                \u003ch3\u003e\n                    Average {{ activemaplayer }} evolution over months\n                \u003c/h3\u003e\n                \u003cods-chart timescale=\&#34;year\&#34; display-legend=\&#34;false\&#34; align-month=\&#34;true\&#34;\u003e\n                    \u003cods-chart-query context=\&#34;ctx\&#34; field-x=\&#34;measurements_lastupdated\&#34; maxpoints=\&#34;5\&#34; timescale=\&#34;month\&#34;\u003e\n                        \u003cods-chart-serie expression-y=\&#34;measurements_value\&#34; chart-type=\&#34;spline\&#34; function-y=\&#34;AVG\&#34; label-y=\&#34;Average value evolution over time\&#34; color=\&#34;#CF4626\&#34; display-values=\&#34;true\&#34; display-stack-values=\&#34;false\&#34; logarithmic=\&#34;false\&#34; scientific-display=\&#34;true\&#34;\u003e\n                        \u003c/ods-chart-serie\u003e\n                    \u003c/ods-chart-query\u003e\n                \u003c/ods-chart\u003e\n                \u003ch3\u003e\n                    Most measured pollutant\n                \u003c/h3\u003e\n                \u003cods-chart display-legend=\&#34;false\&#34; align-month=\&#34;true\&#34;\u003e\n                    \u003cods-chart-query context=\&#34;ctx\&#34; field-x=\&#34;measurements_parameter\&#34; maxpoints=\&#34;5\&#34; sort=\&#34;serie1-1\&#34;\n                                     category-colors=\&#34;{&#39;NO2&#39;:&#39;#F4F2ED&#39;,&#39;O3&#39;:&#39;#6a83ab&#39;,&#39;PM10&#39;:&#39;#CF4626&#39;,&#39;SO2&#39;:&#39;#45423E&#39;,&#39;PM2.5&#39;:&#39;#CF4626&#39;,&#39;CO&#39;:&#39;#6B83AB&#39;,&#39;BC&#39;:&#39;#45423E&#39;}\&#34;\u003e\n                        \u003cods-chart-serie expression-y=\&#34;measurements_value\&#34; chart-type=\&#34;pie\&#34; function-y=\&#34;COUNT\&#34; label-y=\&#34;Most measured pollutant\&#34;\n                                         color=\&#34;range-custom\&#34; display-values=\&#34;false\&#34; display-stack-values=\&#34;false\&#34; logarithmic=\&#34;false\&#34; scientific-display=\&#34;true\&#34;\u003e\n                        \u003c/ods-chart-serie\u003e\n                    \u003c/ods-chart-query\u003e\n                \u003c/ods-chart\u003e\n                \u003ch3\u003e\n                    Most active source\n                \u003c/h3\u003e\n                \u003cods-chart display-legend=\&#34;false\&#34; align-month=\&#34;true\&#34;\u003e\n                    \u003cods-chart-query context=\&#34;ctx\&#34; field-x=\&#34;measurements_sourcename\&#34; maxpoints=\&#34;5\&#34; sort=\&#34;serie1-1\&#34;\u003e\n                        \u003cods-chart-serie expression-y=\&#34;measurements_value\&#34; chart-type=\&#34;column\&#34; function-y=\&#34;COUNT\&#34; label-y=\&#34;Most active source\&#34; color=\&#34;#CF4626\&#34; display-values=\&#34;true\&#34; display-stack-values=\&#34;false\&#34; logarithmic=\&#34;false\&#34; scientific-display=\&#34;true\&#34;\u003e\n                        \u003c/ods-chart-serie\u003e\n                    \u003c/ods-chart-query\u003e\n                \u003c/ods-chart\u003e\n                \u003ch3\u003e\n                    Most active location\n                \u003c/h3\u003e\n                \u003cods-chart display-legend=\&#34;false\&#34; align-month=\&#34;true\&#34;\u003e\n                    \u003cods-chart-query context=\&#34;ctx\&#34; field-x=\&#34;location\&#34; maxpoints=\&#34;5\&#34; sort=\&#34;serie1-1\&#34;\u003e\n                        \u003cods-chart-serie expression-y=\&#34;measurements_value\&#34; chart-type=\&#34;pie\&#34; function-y=\&#34;COUNT\&#34; label-y=\&#34;Most active source\&#34; display-values=\&#34;false\&#34; display-stack-values=\&#34;false\&#34; logarithmic=\&#34;false\&#34; scientific-display=\&#34;true\&#34; color=\&#34;#cf4526\&#34;\u003e\n                        \u003c/ods-chart-serie\u003e\n                    \u003c/ods-chart-query\u003e\n                \u003c/ods-chart\u003e\n            \u003c/div\u003e\n            \u003c!--div class=\&#34;modal__footer\&#34;\u003e\n            Recherchez, cliquez pour sélectionner et filtrer, puis revenez pour voir votre rapport mis à jour\n        \u003c/div--\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n    \u003cdiv class=\&#34;search-module\&#34;\u003e\n        \u003cdiv class=\&#34;input-holder\&#34;\u003e\n            \u003cdiv class=\&#34;zoom-before-input\&#34;\u003e\u003ci class=\&#34;fa fa-search\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\u003c/div\u003e\n            \u003cinput type=\&#34;text\&#34;\n                   name=\&#34;xzxzzxzxzxzxzxzxzxxzxzzxx\&#34;\n                   autocomplete=\&#34;off\&#34;\n                   placeholder=\&#34;Search...\&#34;\n                   ng-model=\&#34;search[&#39;query&#39;]\&#34;\n                   ng-model-options=\&#34;{ updateOn: &#39;keyup&#39;,\n                                     debounce: { &#39;default&#39;: 500, &#39;blur&#39;: 0 }}\&#34;\n                   ng-change=\&#34;ctx.parameters[&#39;q&#39;] = search[&#39;query&#39;];\&#34; /\u003e\n            \u003cdiv class=\&#34;clear-button\&#34;\n                 ng-if=\&#34;search[&#39;query&#39;]\&#34;\n                 ng-click=\&#34;search.query = undefined;\n                           ctx.parameters[&#39;q&#39;] = null\&#34;\u003e\n                \u003ci class=\&#34;fa fa-ban\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;input-holder dark\&#34;\n             ods-tooltip=\&#34;\u003cspan style=&#39;font-size:1.4em; font-weight: 200;&#39;\u003eMeasurements\u003c/strong\u003e\&#34;\n             ng-click=\&#34;activemaplayer = &#39;measurements&#39;;\n                       ctx.parameters[&#39;refine.measurements_parameter&#39;] = undefined;\&#34;\u003e\n            \u003ci class=\&#34;fa fa-map-marker\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;input-holder red\&#34;\n             ods-tooltip=\&#34;\u003cspan style=&#39;font-size:1.4em; font-weight: 200;&#39;\u003ePM10 Heatmap\u003c/strong\u003e\&#34;\n             ng-click=\&#34;activemaplayer = &#39;PM10&#39;;\n                       ctx.parameters[&#39;refine.measurements_parameter&#39;] = &#39;PM10&#39;;\&#34;\u003e\n            \u003cods-picto url=\&#34;&#39;/static/pictos/img/set-v3/pictos/fire.svg&#39;\&#34; color=\&#34;&#39;#f4f2ec&#39;\&#34;\u003e\u003c/ods-picto\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;input-holder blue\&#34;\n             ods-tooltip=\&#34;\u003cspan style=&#39;font-size:1.4em; font-weight: 200;&#39;\u003eOzone Heatmap\u003c/strong\u003e\&#34;\n             ng-click=\&#34;activemaplayer = &#39;O3&#39;;\n                       ctx.parameters[&#39;refine.measurements_parameter&#39;] = &#39;O3&#39;;\&#34;\u003e\n            \u003cods-picto url=\&#34;&#39;/static/pictos/img/set-v3/pictos/fire.svg&#39;\&#34; color=\&#34;&#39;#f4f2ec&#39;\&#34;\u003e\u003c/ods-picto\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n    \u003cdiv class=\&#34;kpi-module\&#34;\n         ng-if=\&#34;ctx.parameters[&#39;refine.measurements_parameter&#39;]\&#34;\n         ods-aggregation=\&#34;min,max,avg\&#34;\n         ods-aggregation-min-context=\&#34;ctx\&#34;\n         ods-aggregation-min-function=\&#34;MIN\&#34;\n         ods-aggregation-min-expression=\&#34;measurements_value\&#34;\n         ods-aggregation-max-context=\&#34;ctx\&#34;\n         ods-aggregation-max-function=\&#34;MAX\&#34;\n         ods-aggregation-max-expression=\&#34;measurements_value\&#34;\n         ods-aggregation-avg-context=\&#34;ctx\&#34;\n         ods-aggregation-avg-function=\&#34;AVG\&#34;\n         ods-aggregation-avg-expression=\&#34;measurements_value\&#34;\u003e\n        \u003cdiv class=\&#34;kpi\&#34; ng-if=\&#34;activemaplayer != &#39;measurements&#39;\&#34;\n             ng-class=\&#34;{\n                       &#39;blue&#39;:activemaplayer==&#39;O3&#39;,\n                       &#39;red&#39;:activemaplayer==&#39;PM10&#39;\n                       }\&#34;\u003e\n            \u003cdiv class=\&#34;kpi-title\&#34;\u003eMin {{ activemaplayer }}\u003c/div\u003e\n            \u003cdiv class=\&#34;kpi-title--unit\&#34;\u003eMinimum value measurement\u003c/div\u003e\n            \u003cdiv class=\&#34;kpi-value\&#34;\u003e{{ min | number : 1 }}\u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;kpi\&#34; ng-if=\&#34;activemaplayer != &#39;measurements&#39;\&#34;\n             ng-class=\&#34;{\n                       &#39;blue&#39;:activemaplayer==&#39;O3&#39;,\n                       &#39;red&#39;:activemaplayer==&#39;PM10&#39;\n                       }\&#34;\u003e\n            \u003cdiv class=\&#34;kpi-title\&#34;\u003eAvg {{ activemaplayer }}\u003c/div\u003e\n            \u003cdiv class=\&#34;kpi-title--unit\&#34;\u003eAverage value measurement\u003c/div\u003e\n            \u003cdiv class=\&#34;kpi-value\&#34;\u003e{{ avg | number : 1 }}\u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;kpi\&#34; ng-if=\&#34;activemaplayer != &#39;measurements&#39;\&#34;\n             ng-class=\&#34;{\n                       &#39;blue&#39;:activemaplayer==&#39;O3&#39;,\n                       &#39;red&#39;:activemaplayer==&#39;PM10&#39;\n                       }\&#34;\u003e\n            \u003cdiv class=\&#34;kpi-title\&#34;\u003eMax {{ activemaplayer }}\u003c/div\u003e\n            \u003cdiv class=\&#34;kpi-title--unit\&#34;\u003eMaximum value measurement\u003c/div\u003e\n            \u003cdiv class=\&#34;kpi-value\&#34;\u003e{{ max | number : 1 }}\u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n    \u003cods-map no-refit=\&#34;true\&#34; scroll-wheel-zoom=\&#34;true\&#34; display-control=\&#34;false\&#34;\n             display-control-single-layer=\&#34;false\&#34;\n             toolbar-fullscreen=\&#34;false\&#34;\n             basemap=\&#34;mapbox.light\&#34;\u003e\n        \u003cods-map-layer context=\&#34;ctx\&#34;\n                       show-if=\&#34;activemaplayer == &#39;measurements&#39;\&#34;\n                       color=\&#34;#45423E\&#34; picto=\&#34;ods-connected_temp\&#34; show-marker=\&#34;false\&#34; display=\&#34;auto\&#34; shape-opacity=\&#34;0.5\&#34; point-opacity=\&#34;1\&#34; border-color=\&#34;#FFFFFF\&#34; border-opacity=\&#34;1\&#34; border-size=\&#34;1\&#34; border-pattern=\&#34;solid\&#34;\n                       caption=\&#34;false\&#34; caption-picto-color=\&#34;#E5E5E5\&#34; title=\&#34;Air Quality measurements\&#34; size=\&#34;5\&#34; size-min=\&#34;2\&#34; size-max=\&#34;6\&#34; size-function=\&#34;linear\&#34;\u003e\n            \u003cul style=\&#34;display: block; list-style-type: none; padding:0; margin:0;\&#34;\u003e\n                \u003cli\u003e\u003cstrong style=\&#34;font-size:17px;\&#34;\u003e{{ record.fields.location }}\u003c/strong\u003e\u003c/li\u003e\n                \u003cli\u003e{{ record.fields.measurements_lastupdated | date:&#39;medium&#39;}}\u003c/li\u003e\n                \u003cli\u003e\u003cstrong\u003e\u003ci class=\&#34;fa fa-leaf\&#34;\u003e\u003c/i\u003e {{ record.fields.measurements_parameter }}: {{ record.fields.measurements_value }} {{ record.fields.measurements_unit }}\u003c/strong\u003e\u003c/li\u003e\n                \u003cli\u003e(source: {{ record.fields.measurements_sourcename }})\u003c/li\u003e\n            \u003c/ul\u003e\n        \u003c/ods-map-layer\u003e\n        \u003cods-map-layer context=\&#34;ctx\&#34;\n                       show-if=\&#34;activemaplayer == &#39;PM10&#39;\&#34;\n                       color-gradient=\&#34;{&#39;1&#39;:&#39;#FFFFFF&#39;,&#39;0.3&#39;:&#39;#FF0000&#39;,&#39;0.6&#39;:&#39;#FFFF00&#39;}\&#34; picto=\&#34;ods-connected_temp\&#34; show-marker=\&#34;false\&#34; display=\&#34;heatmap\&#34;radius=\&#34;1\&#34; function=\&#34;AVG\&#34; expression=\&#34;measurements_value\&#34; shape-opacity=\&#34;0.5\&#34; point-opacity=\&#34;1\&#34; border-color=\&#34;#FFFFFF\&#34; border-opacity=\&#34;1\&#34; border-size=\&#34;1\&#34; border-pattern=\&#34;solid\&#34;\n                       caption=\&#34;false\&#34; caption-picto-color=\&#34;#E5E5E5\&#34; title=\&#34;PM10 Heatmap\&#34; size-function=\&#34;log\&#34;\u003e\u003c/ods-map-layer\u003e\n        \u003cods-map-layer context=\&#34;ctx\&#34;\n                       show-if=\&#34;activemaplayer == &#39;O3&#39;\&#34;\n                       color-gradient=\&#34;{&#39;1&#39;:&#39;#00FAFA&#39;,&#39;0.2&#39;:&#39;#000000&#39;,&#39;0.4&#39;:&#39;#183567&#39;,&#39;0.6&#39;:&#39;#2E649E&#39;,&#39;0.8&#39;:&#39;#17ADCB&#39;}\&#34; picto=\&#34;ods-connected_temp\&#34; show-marker=\&#34;false\&#34; display=\&#34;heatmap\&#34;radius=\&#34;1\&#34; function=\&#34;AVG\&#34; expression=\&#34;measurements_value\&#34; shape-opacity=\&#34;0.5\&#34; point-opacity=\&#34;1\&#34; border-color=\&#34;#FFFFFF\&#34; border-opacity=\&#34;1\&#34; border-size=\&#34;1\&#34; border-pattern=\&#34;solid\&#34;\n                       caption=\&#34;false\&#34; caption-picto-color=\&#34;#E5E5E5\&#34; title=\&#34;O3 Heatmap\&#34; size-function=\&#34;log\&#34;\u003e\u003c/ods-map-layer\u003e\n    \u003c/ods-map\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+               "css": &#34;body, h1, h2, h3 {\n    color: #45423E;\n}\nbody {\n    padding: 0;\n}\nmain {\n    margin: 0;\n}\n.main--page {\n    margin-top: 0px;\n}\n.ods-front-header, .ods-front-footer, .ods-content:after, footer {\n    display: none;\n}\nods-dataset-context {\n    position: relative;\n}\n.odswidget.odswidget-map {\n    width: 100%;\n    height: 100vh;\n}\n.leaflet-popup-content {\n    width: 350px !important;\n}\n.odswidget-record-image {\n    text-align: center;\n}\n.ods-filters__filters, .ods-filters__count {\n    color: #f4f2ec;\n    background-color: #6B83AB;\n}\nods-facets h3 {\n    color: #45423c;\n}\nrect.highcharts-background {\n    fill: transparent !important;\n}\n.highcharts-yaxis {\n    display: none;\n}\n/* Button */\n.filter-btn {\n    position: absolute;\n    top: 225px;\n    left: -15px;\n    transform: rotate(-90deg);\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    font-size: 1.4em;\n    width: 200px;\n    height: 40px;\n    padding: 11px;\n    border: #F4F2ED;\n    border-radius: 0px 0px 4px 4px;\n    transition: ease-in 0.3s;\n    box-shadow: 4px 4px 12px -1px #94928c;\n    text-decoration: none;\n    z-index: 3;\n    color: #f4f2ec;\n    background-color: #6B83AB;\n}\n.filter-btn--active {\n    left: 315px;\n}\n.filter-btn:hover {\n    box-shadow: 0 10px 26px 5px #a7a49d;\n}\nspan.filtered {\n    color: red;\n    margin: 0px 4px;\n    font-weight: 600;\n}\n/* MODAL */\n.modal {\n    display: flex;\n    flex-direction: column;\n    height: -webkit-calc(100vh - 195px);\n    height: -moz-calc(100vh - 195px);\n    height: calc(100vh - 195px);\n    margin-top: 105px;\n    left: 45px;\n    width: 20px;\n    position: absolute;\n    background-color: #f4f2ec;\n    border-radius: 4px;\n    border-left: 8px solid #6B83AB;\n    z-index: 3;\n    overflow: hidden; /* Disable horizontal scroll */\n    transition: ease-in 0.3s;\n}\n.modal-active {\n    width: 350px;\n}\n.modal__header,\n.modal__footer {\n    height: 65px;\n    background-color: #F4F2ED;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    opacity: 0;\n    transition: opacity 0s;\n}\n.modal-active .modal__header, .modal-active .modal__footer {\n    opacity: 1;\n    transition-delay: 0.3s;\n}\n.modal__header {\n    border-bottom: 1px solid #bbbbbb;\n}\n.modal__footer {\n    border-top: 1px solid #bbbbbb;\n}\n.modal__content {\n    height: 100%;\n    overflow-y: auto;\n    padding: 25px;\n    opacity: 0;\n    transition: opacity 0s;\n}\n.modal-active .modal__content {\n    opacity: 1;\n    transition-delay: 0.3s;\n}\n/* The button used to close the modal */\n.closebtn {\n    font-size: 2.5em;\n    font-weight: 200;\n}\n.closebtn span {\n    font-weight: 300;\n}\n.closebtn:hover,\n.closebtn:focus {\n    color: #000;\n    text-decoration: none;\n    cursor: pointer;\n}\n/* specific right modal */\n.right {\n    position: relative;\n}\n.right .filter-btn {\n    right: 0px;\n    left: initial;\n    transform: rotate(90deg);\n    background-color: #CF4626;\n    top: -webkit-calc(100vh - 180px);\n    top: -moz-calc(100vh - 180px);\n    top: calc(100vh - 180px);\n}\n.right .modal {\n    right: 60px;\n    left: initial;\n    border-left: none;\n    border-right: 7px solid #CF4626;\n    height: -webkit-calc(100vh - 130px);\n    height: -moz-calc(100vh - 130px);\n    height: calc(100vh - 130px);\n    margin-top: 100px;\n}\n.right .filter-btn--active {\n    left: initial;\n    right: 430px;\n}\n.right .modal-active {\n    width: 450px;\n}\n/* specific because charts are loaded inside */\n.right .modal__content {\n    width: 450px;\n}\n/* SEARCH MODULE */\n.search-module {\n    position: fixed;\n    left: 0;\n    right: 0;\n    margin-left: auto;\n    margin-right: auto;\n    z-index: 2;\n    top: 20px;\n    width: 400px;\n    font-size: 1.1em;\n    font-weight: 300;\n    display: flex;\n}\n.zoom-before-input {\n    color: #ababab;\n    font-size: 1.3em;\n}\n.input-holder, .odswidget-timerange__from, .odswidget-timerange__to {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    min-width: 55px; /* used for ODS picto */\n    font-size: 1.4em; /* used for fontawesome picto */\n    max-height: 55px;\n    border: 1px solid #e4e4e4;\n    padding: 11px;\n    margin: 3px;\n    border-radius: 4px;\n    box-shadow: 1px 1px 5px gainsboro;\n    background-color: #f4f2ec;\n    z-index: 2;\n}\n.input-holder:hover {\n    box-shadow: 1px 1px 10px 3px #74716c;\n}\n.input-holder input, .odswidget-timerange__from input, .odswidget-timerange__to input {\n    border: none;\n    width: 100%;\n    margin-left: 8px;\n    background-color: #f4f2ec;\n}\n.input-holder input:focus, .odswidget-timerange__from input:focus, .odswidget-timerange__to input:focus {\n    outline: 0;\n}\n.input-holder .odswidget-picto {\n    height: 30px;\n    width: 30px;\n}\n.clear-button {\n    font-size: 1.3em;\n}\n.blue {\n    border: 1px solid #6a83ab;\n    background-color: #6a83ab;\n    color: #f4f2ec;\n}\n.red {\n    border: 1px solid #cf4526;\n    background-color: #cf4526;\n    color: #f4f2ec;\n}\n.dark {\n    border: 1px solid #45423E;\n    background-color: #45423E;\n    color: #f4f2ec;\n}\n/* KPI MODULE */\n.kpi-module {\n    position: fixed;\n    left: 0;\n    right: 0;\n    margin-left: auto;\n    margin-right: auto;\n    z-index: 2;\n    bottom: 20px;\n    width: 600px;\n    display: flex;\n}\n.kpi {\n    width: 100%;\n    margin: 5px;\n    padding: 0px 7px;\n    background-color: #45423Eb5;\n    border: 2px solid #45423Ed4;\n    border-radius: 4px;\n    color: #f4f2ec;\n}\n.kpi.blue {\n    border: 2px solid #6a83abd4;\n    background-color: #6a83abb5;\n}\n.kpi.red {\n    border: 2px solid #cf4526d4;\n    background-color: #cf4526b5;\n}\n.kpi-title {\n    font-weight: 600;\n    font-size: 1.3em;\n}\n.kpi-title--unit {\n    font-weight: 100;\n    font-size: 0.8em;\n}\n.kpi-value {\n    font-weight: 400;\n    font-size: 2em;\n    text-align: center;\n}\n      \n&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-fullscreen-map"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+        </head>
+        <body>
+        <div ng-app='ods-widgets'>
+            &lt;ods-dataset-context context=&#34;ctx&#34;
+                     ctx-dataset=&#34;openaq&#34;
+                     ctx-domain=&#34;public&#34;
+                     ctx-parameters=&#34;{&#39;q.forcefilter&#39;:&#39;measurements_value &lt; 1000&#39;}&#34;
+                     ng-init=&#34;activemaplayer = &#39;measurements&#39;;
+                              search = {&#39;query&#39; : &#39;&#39;};&#34;&gt;
+    {{
+    nb_active_filters =
+    (ctx.parameters[&#34;refine.location&#34;].length&gt;=0?1:0) &#43;
+    (ctx.parameters[&#34;refine.measurements_sourcename&#34;].length&gt;=0?1:0) &#43;
+    (ctx.parameters[&#34;refine.measurements_parameter&#34;].length&gt;=0?1:0) ; &#34;&#34;
+    }}
+    &lt;div class=&#34;left&#34;
+         ng-init=&#34;leftmodal = false&#34;&gt;
+        &lt;div href=&#34;#&#34;
+             class=&#34;filter-btn&#34;
+             ng-class=&#34;{&#39;filter-btn--active&#39;: leftmodal}&#34;
+             ng-click=&#34;leftmodal = !leftmodal&#34;&gt;
+            Filters
+            &lt;span class=&#34;filtered&#34; ng-if=&#34;nb_active_filters &gt; 0&#34;&gt;
+                ({{ nb_active_filters }})
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;modal&#34; ng-class=&#34;{&#39;modal-active&#39;:leftmodal}&#34;&gt;
+            &lt;div class=&#34;modal__header&#34;&gt;
+                &lt;div href=&#34;#&#34;
+                     class=&#34;closebtn&#34;
+                     ng-click=&#34;leftmodal = false&#34;&gt;
+                    &lt;span&gt;&amp;lt;&lt;/span&gt; Close
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;modal__content&#34;&gt;
+                &lt;div class=&#34;ods-filters-placeholder&#34; ods-sticky-scrollable=&#34;&#34;&gt;
+                    &lt;div class=&#34;&#34;&gt;
+                        &lt;h1 class=&#34;ods-filters__count&#34;&gt;
+                            &lt;span class=&#34;ods-filters__count-number ng-binding&#34;&gt;{{ctx.nhits | number}}&lt;/span&gt;
+                            &lt;span class=&#34;ods-filters__count-units&#34;&gt;Air measurements&lt;/span&gt;
+                        &lt;/h1&gt;
+                        &lt;ods-filter-summary context=&#34;ctx&#34; exclude=&#34;refine.measurements_parameter,q.forcefilter&#34;&gt;&lt;/ods-filter-summary&gt;
+                        &lt;h1 class=&#34;ods-filters__filters&#34;&gt;
+                            Filters
+                        &lt;/h1&gt;
+                        &lt;ods-facets context=&#34;ctx&#34;&gt;
+                            &lt;h3&gt;
+                                Polluant
+                            &lt;/h3&gt;
+                            &lt;ods-facet name=&#34;measurements_parameter&#34;
+                                       ng-click=&#34;activemaplayer = &#39;measurements&#39;&#34;&gt;&lt;/ods-facet&gt;
+                            &lt;h3&gt;
+                                Location
+                            &lt;/h3&gt;
+                            &lt;ods-facet name=&#34;location&#34;&gt;&lt;/ods-facet&gt;
+                        &lt;/ods-facets&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;right&#34;
+         ng-init=&#34;rightmodal&#34;&gt;
+        &lt;div href=&#34;#&#34;
+             class=&#34;filter-btn&#34;
+             ng-class=&#34;{&#39;filter-btn--active&#39;: rightmodal}&#34;
+             ng-click=&#34;rightmodal = !rightmodal&#34;&gt;
+            Analytics
+            &lt;!--span class=&#34;filtered&#34; ng-if=&#34;nb_active_filters &gt; 0&#34;&gt;
+                ({{ nb_active_filters }})
+            &lt;/span--&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;modal&#34; ng-class=&#34;{&#39;modal-active&#39;:rightmodal}&#34;&gt;
+            &lt;div class=&#34;modal__header&#34;&gt;
+                &lt;div href=&#34;#&#34;
+                     class=&#34;closebtn&#34;
+                     ng-click=&#34;rightmodal = false&#34;&gt;
+                    Close &lt;span&gt;&amp;gt;&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;modal__content&#34;&gt;
+                &lt;h3&gt;
+                    Average {{ activemaplayer }} evolution over months
+                &lt;/h3&gt;
+                &lt;ods-chart timescale=&#34;year&#34; display-legend=&#34;false&#34; align-month=&#34;true&#34;&gt;
+                    &lt;ods-chart-query context=&#34;ctx&#34; field-x=&#34;measurements_lastupdated&#34; maxpoints=&#34;5&#34; timescale=&#34;month&#34;&gt;
+                        &lt;ods-chart-serie expression-y=&#34;measurements_value&#34; chart-type=&#34;spline&#34; function-y=&#34;AVG&#34; label-y=&#34;Average value evolution over time&#34; color=&#34;#CF4626&#34; display-values=&#34;true&#34; display-stack-values=&#34;false&#34; logarithmic=&#34;false&#34; scientific-display=&#34;true&#34;&gt;
+                        &lt;/ods-chart-serie&gt;
+                    &lt;/ods-chart-query&gt;
+                &lt;/ods-chart&gt;
+                &lt;h3&gt;
+                    Most measured pollutant
+                &lt;/h3&gt;
+                &lt;ods-chart display-legend=&#34;false&#34; align-month=&#34;true&#34;&gt;
+                    &lt;ods-chart-query context=&#34;ctx&#34; field-x=&#34;measurements_parameter&#34; maxpoints=&#34;5&#34; sort=&#34;serie1-1&#34;
+                                     category-colors=&#34;{&#39;NO2&#39;:&#39;#F4F2ED&#39;,&#39;O3&#39;:&#39;#6a83ab&#39;,&#39;PM10&#39;:&#39;#CF4626&#39;,&#39;SO2&#39;:&#39;#45423E&#39;,&#39;PM2.5&#39;:&#39;#CF4626&#39;,&#39;CO&#39;:&#39;#6B83AB&#39;,&#39;BC&#39;:&#39;#45423E&#39;}&#34;&gt;
+                        &lt;ods-chart-serie expression-y=&#34;measurements_value&#34; chart-type=&#34;pie&#34; function-y=&#34;COUNT&#34; label-y=&#34;Most measured pollutant&#34;
+                                         color=&#34;range-custom&#34; display-values=&#34;false&#34; display-stack-values=&#34;false&#34; logarithmic=&#34;false&#34; scientific-display=&#34;true&#34;&gt;
+                        &lt;/ods-chart-serie&gt;
+                    &lt;/ods-chart-query&gt;
+                &lt;/ods-chart&gt;
+                &lt;h3&gt;
+                    Most active source
+                &lt;/h3&gt;
+                &lt;ods-chart display-legend=&#34;false&#34; align-month=&#34;true&#34;&gt;
+                    &lt;ods-chart-query context=&#34;ctx&#34; field-x=&#34;measurements_sourcename&#34; maxpoints=&#34;5&#34; sort=&#34;serie1-1&#34;&gt;
+                        &lt;ods-chart-serie expression-y=&#34;measurements_value&#34; chart-type=&#34;column&#34; function-y=&#34;COUNT&#34; label-y=&#34;Most active source&#34; color=&#34;#CF4626&#34; display-values=&#34;true&#34; display-stack-values=&#34;false&#34; logarithmic=&#34;false&#34; scientific-display=&#34;true&#34;&gt;
+                        &lt;/ods-chart-serie&gt;
+                    &lt;/ods-chart-query&gt;
+                &lt;/ods-chart&gt;
+                &lt;h3&gt;
+                    Most active location
+                &lt;/h3&gt;
+                &lt;ods-chart display-legend=&#34;false&#34; align-month=&#34;true&#34;&gt;
+                    &lt;ods-chart-query context=&#34;ctx&#34; field-x=&#34;location&#34; maxpoints=&#34;5&#34; sort=&#34;serie1-1&#34;&gt;
+                        &lt;ods-chart-serie expression-y=&#34;measurements_value&#34; chart-type=&#34;pie&#34; function-y=&#34;COUNT&#34; label-y=&#34;Most active source&#34; display-values=&#34;false&#34; display-stack-values=&#34;false&#34; logarithmic=&#34;false&#34; scientific-display=&#34;true&#34; color=&#34;#cf4526&#34;&gt;
+                        &lt;/ods-chart-serie&gt;
+                    &lt;/ods-chart-query&gt;
+                &lt;/ods-chart&gt;
+            &lt;/div&gt;
+            &lt;!--div class=&#34;modal__footer&#34;&gt;
+            Recherchez, cliquez pour sélectionner et filtrer, puis revenez pour voir votre rapport mis à jour
+        &lt;/div--&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;search-module&#34;&gt;
+        &lt;div class=&#34;input-holder&#34;&gt;
+            &lt;div class=&#34;zoom-before-input&#34;&gt;&lt;i class=&#34;fa fa-search&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&lt;/div&gt;
+            &lt;input type=&#34;text&#34;
+                   name=&#34;xzxzzxzxzxzxzxzxzxxzxzzxx&#34;
+                   autocomplete=&#34;off&#34;
+                   placeholder=&#34;Search...&#34;
+                   ng-model=&#34;search[&#39;query&#39;]&#34;
+                   ng-model-options=&#34;{ updateOn: &#39;keyup&#39;,
+                                     debounce: { &#39;default&#39;: 500, &#39;blur&#39;: 0 }}&#34;
+                   ng-change=&#34;ctx.parameters[&#39;q&#39;] = search[&#39;query&#39;];&#34; /&gt;
+            &lt;div class=&#34;clear-button&#34;
+                 ng-if=&#34;search[&#39;query&#39;]&#34;
+                 ng-click=&#34;search.query = undefined;
+                           ctx.parameters[&#39;q&#39;] = null&#34;&gt;
+                &lt;i class=&#34;fa fa-ban&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;input-holder dark&#34;
+             ods-tooltip=&#34;&lt;span style=&#39;font-size:1.4em; font-weight: 200;&#39;&gt;Measurements&lt;/strong&gt;&#34;
+             ng-click=&#34;activemaplayer = &#39;measurements&#39;;
+                       ctx.parameters[&#39;refine.measurements_parameter&#39;] = undefined;&#34;&gt;
+            &lt;i class=&#34;fa fa-map-marker&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;input-holder red&#34;
+             ods-tooltip=&#34;&lt;span style=&#39;font-size:1.4em; font-weight: 200;&#39;&gt;PM10 Heatmap&lt;/strong&gt;&#34;
+             ng-click=&#34;activemaplayer = &#39;PM10&#39;;
+                       ctx.parameters[&#39;refine.measurements_parameter&#39;] = &#39;PM10&#39;;&#34;&gt;
+            &lt;ods-picto url=&#34;&#39;/static/pictos/img/set-v3/pictos/fire.svg&#39;&#34; color=&#34;&#39;#f4f2ec&#39;&#34;&gt;&lt;/ods-picto&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;input-holder blue&#34;
+             ods-tooltip=&#34;&lt;span style=&#39;font-size:1.4em; font-weight: 200;&#39;&gt;Ozone Heatmap&lt;/strong&gt;&#34;
+             ng-click=&#34;activemaplayer = &#39;O3&#39;;
+                       ctx.parameters[&#39;refine.measurements_parameter&#39;] = &#39;O3&#39;;&#34;&gt;
+            &lt;ods-picto url=&#34;&#39;/static/pictos/img/set-v3/pictos/fire.svg&#39;&#34; color=&#34;&#39;#f4f2ec&#39;&#34;&gt;&lt;/ods-picto&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;kpi-module&#34;
+         ng-if=&#34;ctx.parameters[&#39;refine.measurements_parameter&#39;]&#34;
+         ods-aggregation=&#34;min,max,avg&#34;
+         ods-aggregation-min-context=&#34;ctx&#34;
+         ods-aggregation-min-function=&#34;MIN&#34;
+         ods-aggregation-min-expression=&#34;measurements_value&#34;
+         ods-aggregation-max-context=&#34;ctx&#34;
+         ods-aggregation-max-function=&#34;MAX&#34;
+         ods-aggregation-max-expression=&#34;measurements_value&#34;
+         ods-aggregation-avg-context=&#34;ctx&#34;
+         ods-aggregation-avg-function=&#34;AVG&#34;
+         ods-aggregation-avg-expression=&#34;measurements_value&#34;&gt;
+        &lt;div class=&#34;kpi&#34; ng-if=&#34;activemaplayer != &#39;measurements&#39;&#34;
+             ng-class=&#34;{
+                       &#39;blue&#39;:activemaplayer==&#39;O3&#39;,
+                       &#39;red&#39;:activemaplayer==&#39;PM10&#39;
+                       }&#34;&gt;
+            &lt;div class=&#34;kpi-title&#34;&gt;Min {{ activemaplayer }}&lt;/div&gt;
+            &lt;div class=&#34;kpi-title--unit&#34;&gt;Minimum value measurement&lt;/div&gt;
+            &lt;div class=&#34;kpi-value&#34;&gt;{{ min | number : 1 }}&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;kpi&#34; ng-if=&#34;activemaplayer != &#39;measurements&#39;&#34;
+             ng-class=&#34;{
+                       &#39;blue&#39;:activemaplayer==&#39;O3&#39;,
+                       &#39;red&#39;:activemaplayer==&#39;PM10&#39;
+                       }&#34;&gt;
+            &lt;div class=&#34;kpi-title&#34;&gt;Avg {{ activemaplayer }}&lt;/div&gt;
+            &lt;div class=&#34;kpi-title--unit&#34;&gt;Average value measurement&lt;/div&gt;
+            &lt;div class=&#34;kpi-value&#34;&gt;{{ avg | number : 1 }}&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;kpi&#34; ng-if=&#34;activemaplayer != &#39;measurements&#39;&#34;
+             ng-class=&#34;{
+                       &#39;blue&#39;:activemaplayer==&#39;O3&#39;,
+                       &#39;red&#39;:activemaplayer==&#39;PM10&#39;
+                       }&#34;&gt;
+            &lt;div class=&#34;kpi-title&#34;&gt;Max {{ activemaplayer }}&lt;/div&gt;
+            &lt;div class=&#34;kpi-title--unit&#34;&gt;Maximum value measurement&lt;/div&gt;
+            &lt;div class=&#34;kpi-value&#34;&gt;{{ max | number : 1 }}&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;ods-map no-refit=&#34;true&#34; scroll-wheel-zoom=&#34;true&#34; display-control=&#34;false&#34;
+             display-control-single-layer=&#34;false&#34;
+             toolbar-fullscreen=&#34;false&#34;
+             basemap=&#34;mapbox.light&#34;&gt;
+        &lt;ods-map-layer context=&#34;ctx&#34;
+                       show-if=&#34;activemaplayer == &#39;measurements&#39;&#34;
+                       color=&#34;#45423E&#34; picto=&#34;ods-connected_temp&#34; show-marker=&#34;false&#34; display=&#34;auto&#34; shape-opacity=&#34;0.5&#34; point-opacity=&#34;1&#34; border-color=&#34;#FFFFFF&#34; border-opacity=&#34;1&#34; border-size=&#34;1&#34; border-pattern=&#34;solid&#34;
+                       caption=&#34;false&#34; caption-picto-color=&#34;#E5E5E5&#34; title=&#34;Air Quality measurements&#34; size=&#34;5&#34; size-min=&#34;2&#34; size-max=&#34;6&#34; size-function=&#34;linear&#34;&gt;
+            &lt;ul style=&#34;display: block; list-style-type: none; padding:0; margin:0;&#34;&gt;
+                &lt;li&gt;&lt;strong style=&#34;font-size:17px;&#34;&gt;{{ record.fields.location }}&lt;/strong&gt;&lt;/li&gt;
+                &lt;li&gt;{{ record.fields.measurements_lastupdated | date:&#39;medium&#39;}}&lt;/li&gt;
+                &lt;li&gt;&lt;strong&gt;&lt;i class=&#34;fa fa-leaf&#34;&gt;&lt;/i&gt; {{ record.fields.measurements_parameter }}: {{ record.fields.measurements_value }} {{ record.fields.measurements_unit }}&lt;/strong&gt;&lt;/li&gt;
+                &lt;li&gt;(source: {{ record.fields.measurements_sourcename }})&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/ods-map-layer&gt;
+        &lt;ods-map-layer context=&#34;ctx&#34;
+                       show-if=&#34;activemaplayer == &#39;PM10&#39;&#34;
+                       color-gradient=&#34;{&#39;1&#39;:&#39;#FFFFFF&#39;,&#39;0.3&#39;:&#39;#FF0000&#39;,&#39;0.6&#39;:&#39;#FFFF00&#39;}&#34; picto=&#34;ods-connected_temp&#34; show-marker=&#34;false&#34; display=&#34;heatmap&#34;radius=&#34;1&#34; function=&#34;AVG&#34; expression=&#34;measurements_value&#34; shape-opacity=&#34;0.5&#34; point-opacity=&#34;1&#34; border-color=&#34;#FFFFFF&#34; border-opacity=&#34;1&#34; border-size=&#34;1&#34; border-pattern=&#34;solid&#34;
+                       caption=&#34;false&#34; caption-picto-color=&#34;#E5E5E5&#34; title=&#34;PM10 Heatmap&#34; size-function=&#34;log&#34;&gt;&lt;/ods-map-layer&gt;
+        &lt;ods-map-layer context=&#34;ctx&#34;
+                       show-if=&#34;activemaplayer == &#39;O3&#39;&#34;
+                       color-gradient=&#34;{&#39;1&#39;:&#39;#00FAFA&#39;,&#39;0.2&#39;:&#39;#000000&#39;,&#39;0.4&#39;:&#39;#183567&#39;,&#39;0.6&#39;:&#39;#2E649E&#39;,&#39;0.8&#39;:&#39;#17ADCB&#39;}&#34; picto=&#34;ods-connected_temp&#34; show-marker=&#34;false&#34; display=&#34;heatmap&#34;radius=&#34;1&#34; function=&#34;AVG&#34; expression=&#34;measurements_value&#34; shape-opacity=&#34;0.5&#34; point-opacity=&#34;1&#34; border-color=&#34;#FFFFFF&#34; border-opacity=&#34;1&#34; border-size=&#34;1&#34; border-pattern=&#34;solid&#34;
+                       caption=&#34;false&#34; caption-picto-color=&#34;#E5E5E5&#34; title=&#34;O3 Heatmap&#34; size-function=&#34;log&#34;&gt;&lt;/ods-map-layer&gt;
+    &lt;/ods-map&gt;
+&lt;/ods-dataset-context&gt;
+
+        </div>
+        <style type='text/css'>
+            body, h1, h2, h3 {
+    color: #45423E;
+}
+body {
+    padding: 0;
+}
+main {
+    margin: 0;
+}
+.main--page {
+    margin-top: 0px;
+}
+.ods-front-header, .ods-front-footer, .ods-content:after, footer {
+    display: none;
+}
+ods-dataset-context {
+    position: relative;
+}
+.odswidget.odswidget-map {
+    width: 100%;
+    height: 100vh;
+}
+.leaflet-popup-content {
+    width: 350px !important;
+}
+.odswidget-record-image {
+    text-align: center;
+}
+.ods-filters__filters, .ods-filters__count {
+    color: #f4f2ec;
+    background-color: #6B83AB;
+}
+ods-facets h3 {
+    color: #45423c;
+}
+rect.highcharts-background {
+    fill: transparent !important;
+}
+.highcharts-yaxis {
+    display: none;
+}
+/* Button */
+.filter-btn {
+    position: absolute;
+    top: 225px;
+    left: -15px;
+    transform: rotate(-90deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4em;
+    width: 200px;
+    height: 40px;
+    padding: 11px;
+    border: #F4F2ED;
+    border-radius: 0px 0px 4px 4px;
+    transition: ease-in 0.3s;
+    box-shadow: 4px 4px 12px -1px #94928c;
+    text-decoration: none;
+    z-index: 3;
+    color: #f4f2ec;
+    background-color: #6B83AB;
+}
+.filter-btn--active {
+    left: 315px;
+}
+.filter-btn:hover {
+    box-shadow: 0 10px 26px 5px #a7a49d;
+}
+span.filtered {
+    color: red;
+    margin: 0px 4px;
+    font-weight: 600;
+}
+/* MODAL */
+.modal {
+    display: flex;
+    flex-direction: column;
+    height: -webkit-calc(100vh - 195px);
+    height: -moz-calc(100vh - 195px);
+    height: calc(100vh - 195px);
+    margin-top: 105px;
+    left: 45px;
+    width: 20px;
+    position: absolute;
+    background-color: #f4f2ec;
+    border-radius: 4px;
+    border-left: 8px solid #6B83AB;
+    z-index: 3;
+    overflow: hidden; /* Disable horizontal scroll */
+    transition: ease-in 0.3s;
+}
+.modal-active {
+    width: 350px;
+}
+.modal__header,
+.modal__footer {
+    height: 65px;
+    background-color: #F4F2ED;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0s;
+}
+.modal-active .modal__header, .modal-active .modal__footer {
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+.modal__header {
+    border-bottom: 1px solid #bbbbbb;
+}
+.modal__footer {
+    border-top: 1px solid #bbbbbb;
+}
+.modal__content {
+    height: 100%;
+    overflow-y: auto;
+    padding: 25px;
+    opacity: 0;
+    transition: opacity 0s;
+}
+.modal-active .modal__content {
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+/* The button used to close the modal */
+.closebtn {
+    font-size: 2.5em;
+    font-weight: 200;
+}
+.closebtn span {
+    font-weight: 300;
+}
+.closebtn:hover,
+.closebtn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* specific right modal */
+.right {
+    position: relative;
+}
+.right .filter-btn {
+    right: 0px;
+    left: initial;
+    transform: rotate(90deg);
+    background-color: #CF4626;
+    top: -webkit-calc(100vh - 180px);
+    top: -moz-calc(100vh - 180px);
+    top: calc(100vh - 180px);
+}
+.right .modal {
+    right: 60px;
+    left: initial;
+    border-left: none;
+    border-right: 7px solid #CF4626;
+    height: -webkit-calc(100vh - 130px);
+    height: -moz-calc(100vh - 130px);
+    height: calc(100vh - 130px);
+    margin-top: 100px;
+}
+.right .filter-btn--active {
+    left: initial;
+    right: 430px;
+}
+.right .modal-active {
+    width: 450px;
+}
+/* specific because charts are loaded inside */
+.right .modal__content {
+    width: 450px;
+}
+/* SEARCH MODULE */
+.search-module {
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    top: 20px;
+    width: 400px;
+    font-size: 1.1em;
+    font-weight: 300;
+    display: flex;
+}
+.zoom-before-input {
+    color: #ababab;
+    font-size: 1.3em;
+}
+.input-holder, .odswidget-timerange__from, .odswidget-timerange__to {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 55px; /* used for ODS picto */
+    font-size: 1.4em; /* used for fontawesome picto */
+    max-height: 55px;
+    border: 1px solid #e4e4e4;
+    padding: 11px;
+    margin: 3px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 5px gainsboro;
+    background-color: #f4f2ec;
+    z-index: 2;
+}
+.input-holder:hover {
+    box-shadow: 1px 1px 10px 3px #74716c;
+}
+.input-holder input, .odswidget-timerange__from input, .odswidget-timerange__to input {
+    border: none;
+    width: 100%;
+    margin-left: 8px;
+    background-color: #f4f2ec;
+}
+.input-holder input:focus, .odswidget-timerange__from input:focus, .odswidget-timerange__to input:focus {
+    outline: 0;
+}
+.input-holder .odswidget-picto {
+    height: 30px;
+    width: 30px;
+}
+.clear-button {
+    font-size: 1.3em;
+}
+.blue {
+    border: 1px solid #6a83ab;
+    background-color: #6a83ab;
+    color: #f4f2ec;
+}
+.red {
+    border: 1px solid #cf4526;
+    background-color: #cf4526;
+    color: #f4f2ec;
+}
+.dark {
+    border: 1px solid #45423E;
+    background-color: #45423E;
+    color: #f4f2ec;
+}
+/* KPI MODULE */
+.kpi-module {
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    bottom: 20px;
+    width: 600px;
+    display: flex;
+}
+.kpi {
+    width: 100%;
+    margin: 5px;
+    padding: 0px 7px;
+    background-color: #45423Eb5;
+    border: 2px solid #45423Ed4;
+    border-radius: 4px;
+    color: #f4f2ec;
+}
+.kpi.blue {
+    border: 2px solid #6a83abd4;
+    background-color: #6a83abb5;
+}
+.kpi.red {
+    border: 2px solid #cf4526d4;
+    background-color: #cf4526b5;
+}
+.kpi-title {
+    font-weight: 600;
+    font-size: 1.3em;
+}
+.kpi-title--unit {
+    font-weight: 100;
+    font-size: 0.8em;
+}
+.kpi-value {
+    font-weight: 400;
+    font-size: 2em;
+    text-align: center;
+}
+      
+
+        </style>
+        </body>
+        ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-fullscreen-map-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-fullscreen-map-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right">
+                <a class="button is-primary is-outlined edit-on-codepen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-fullscreen-map').submit()">
+                    Edit on CodePen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-fullscreen-map-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;ctx&#34;
+                     ctx-dataset=&#34;openaq&#34;
+                     ctx-domain=&#34;public&#34;
+                     ctx-parameters=&#34;{&#39;q.forcefilter&#39;:&#39;measurements_value &lt; 1000&#39;}&#34;
+                     ng-init=&#34;activemaplayer = &#39;measurements&#39;;
+                              search = {&#39;query&#39; : &#39;&#39;};&#34;&gt;
+    {{
+    nb_active_filters =
+    (ctx.parameters[&#34;refine.location&#34;].length&gt;=0?1:0) &#43;
+    (ctx.parameters[&#34;refine.measurements_sourcename&#34;].length&gt;=0?1:0) &#43;
+    (ctx.parameters[&#34;refine.measurements_parameter&#34;].length&gt;=0?1:0) ; &#34;&#34;
+    }}
+    &lt;div class=&#34;left&#34;
+         ng-init=&#34;leftmodal = false&#34;&gt;
+        &lt;div href=&#34;#&#34;
+             class=&#34;filter-btn&#34;
+             ng-class=&#34;{&#39;filter-btn--active&#39;: leftmodal}&#34;
+             ng-click=&#34;leftmodal = !leftmodal&#34;&gt;
+            Filters
+            &lt;span class=&#34;filtered&#34; ng-if=&#34;nb_active_filters &gt; 0&#34;&gt;
+                ({{ nb_active_filters }})
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;modal&#34; ng-class=&#34;{&#39;modal-active&#39;:leftmodal}&#34;&gt;
+            &lt;div class=&#34;modal__header&#34;&gt;
+                &lt;div href=&#34;#&#34;
+                     class=&#34;closebtn&#34;
+                     ng-click=&#34;leftmodal = false&#34;&gt;
+                    &lt;span&gt;&amp;lt;&lt;/span&gt; Close
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;modal__content&#34;&gt;
+                &lt;div class=&#34;ods-filters-placeholder&#34; ods-sticky-scrollable=&#34;&#34;&gt;
+                    &lt;div class=&#34;&#34;&gt;
+                        &lt;h1 class=&#34;ods-filters__count&#34;&gt;
+                            &lt;span class=&#34;ods-filters__count-number ng-binding&#34;&gt;{{ctx.nhits | number}}&lt;/span&gt;
+                            &lt;span class=&#34;ods-filters__count-units&#34;&gt;Air measurements&lt;/span&gt;
+                        &lt;/h1&gt;
+                        &lt;ods-filter-summary context=&#34;ctx&#34; exclude=&#34;refine.measurements_parameter,q.forcefilter&#34;&gt;&lt;/ods-filter-summary&gt;
+                        &lt;h1 class=&#34;ods-filters__filters&#34;&gt;
+                            Filters
+                        &lt;/h1&gt;
+                        &lt;ods-facets context=&#34;ctx&#34;&gt;
+                            &lt;h3&gt;
+                                Polluant
+                            &lt;/h3&gt;
+                            &lt;ods-facet name=&#34;measurements_parameter&#34;
+                                       ng-click=&#34;activemaplayer = &#39;measurements&#39;&#34;&gt;&lt;/ods-facet&gt;
+                            &lt;h3&gt;
+                                Location
+                            &lt;/h3&gt;
+                            &lt;ods-facet name=&#34;location&#34;&gt;&lt;/ods-facet&gt;
+                        &lt;/ods-facets&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;right&#34;
+         ng-init=&#34;rightmodal&#34;&gt;
+        &lt;div href=&#34;#&#34;
+             class=&#34;filter-btn&#34;
+             ng-class=&#34;{&#39;filter-btn--active&#39;: rightmodal}&#34;
+             ng-click=&#34;rightmodal = !rightmodal&#34;&gt;
+            Analytics
+            &lt;!--span class=&#34;filtered&#34; ng-if=&#34;nb_active_filters &gt; 0&#34;&gt;
+                ({{ nb_active_filters }})
+            &lt;/span--&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;modal&#34; ng-class=&#34;{&#39;modal-active&#39;:rightmodal}&#34;&gt;
+            &lt;div class=&#34;modal__header&#34;&gt;
+                &lt;div href=&#34;#&#34;
+                     class=&#34;closebtn&#34;
+                     ng-click=&#34;rightmodal = false&#34;&gt;
+                    Close &lt;span&gt;&amp;gt;&lt;/span&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;modal__content&#34;&gt;
+                &lt;h3&gt;
+                    Average {{ activemaplayer }} evolution over months
+                &lt;/h3&gt;
+                &lt;ods-chart timescale=&#34;year&#34; display-legend=&#34;false&#34; align-month=&#34;true&#34;&gt;
+                    &lt;ods-chart-query context=&#34;ctx&#34; field-x=&#34;measurements_lastupdated&#34; maxpoints=&#34;5&#34; timescale=&#34;month&#34;&gt;
+                        &lt;ods-chart-serie expression-y=&#34;measurements_value&#34; chart-type=&#34;spline&#34; function-y=&#34;AVG&#34; label-y=&#34;Average value evolution over time&#34; color=&#34;#CF4626&#34; display-values=&#34;true&#34; display-stack-values=&#34;false&#34; logarithmic=&#34;false&#34; scientific-display=&#34;true&#34;&gt;
+                        &lt;/ods-chart-serie&gt;
+                    &lt;/ods-chart-query&gt;
+                &lt;/ods-chart&gt;
+                &lt;h3&gt;
+                    Most measured pollutant
+                &lt;/h3&gt;
+                &lt;ods-chart display-legend=&#34;false&#34; align-month=&#34;true&#34;&gt;
+                    &lt;ods-chart-query context=&#34;ctx&#34; field-x=&#34;measurements_parameter&#34; maxpoints=&#34;5&#34; sort=&#34;serie1-1&#34;
+                                     category-colors=&#34;{&#39;NO2&#39;:&#39;#F4F2ED&#39;,&#39;O3&#39;:&#39;#6a83ab&#39;,&#39;PM10&#39;:&#39;#CF4626&#39;,&#39;SO2&#39;:&#39;#45423E&#39;,&#39;PM2.5&#39;:&#39;#CF4626&#39;,&#39;CO&#39;:&#39;#6B83AB&#39;,&#39;BC&#39;:&#39;#45423E&#39;}&#34;&gt;
+                        &lt;ods-chart-serie expression-y=&#34;measurements_value&#34; chart-type=&#34;pie&#34; function-y=&#34;COUNT&#34; label-y=&#34;Most measured pollutant&#34;
+                                         color=&#34;range-custom&#34; display-values=&#34;false&#34; display-stack-values=&#34;false&#34; logarithmic=&#34;false&#34; scientific-display=&#34;true&#34;&gt;
+                        &lt;/ods-chart-serie&gt;
+                    &lt;/ods-chart-query&gt;
+                &lt;/ods-chart&gt;
+                &lt;h3&gt;
+                    Most active source
+                &lt;/h3&gt;
+                &lt;ods-chart display-legend=&#34;false&#34; align-month=&#34;true&#34;&gt;
+                    &lt;ods-chart-query context=&#34;ctx&#34; field-x=&#34;measurements_sourcename&#34; maxpoints=&#34;5&#34; sort=&#34;serie1-1&#34;&gt;
+                        &lt;ods-chart-serie expression-y=&#34;measurements_value&#34; chart-type=&#34;column&#34; function-y=&#34;COUNT&#34; label-y=&#34;Most active source&#34; color=&#34;#CF4626&#34; display-values=&#34;true&#34; display-stack-values=&#34;false&#34; logarithmic=&#34;false&#34; scientific-display=&#34;true&#34;&gt;
+                        &lt;/ods-chart-serie&gt;
+                    &lt;/ods-chart-query&gt;
+                &lt;/ods-chart&gt;
+                &lt;h3&gt;
+                    Most active location
+                &lt;/h3&gt;
+                &lt;ods-chart display-legend=&#34;false&#34; align-month=&#34;true&#34;&gt;
+                    &lt;ods-chart-query context=&#34;ctx&#34; field-x=&#34;location&#34; maxpoints=&#34;5&#34; sort=&#34;serie1-1&#34;&gt;
+                        &lt;ods-chart-serie expression-y=&#34;measurements_value&#34; chart-type=&#34;pie&#34; function-y=&#34;COUNT&#34; label-y=&#34;Most active source&#34; display-values=&#34;false&#34; display-stack-values=&#34;false&#34; logarithmic=&#34;false&#34; scientific-display=&#34;true&#34; color=&#34;#cf4526&#34;&gt;
+                        &lt;/ods-chart-serie&gt;
+                    &lt;/ods-chart-query&gt;
+                &lt;/ods-chart&gt;
+            &lt;/div&gt;
+            &lt;!--div class=&#34;modal__footer&#34;&gt;
+            Recherchez, cliquez pour sélectionner et filtrer, puis revenez pour voir votre rapport mis à jour
+        &lt;/div--&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;search-module&#34;&gt;
+        &lt;div class=&#34;input-holder&#34;&gt;
+            &lt;div class=&#34;zoom-before-input&#34;&gt;&lt;i class=&#34;fa fa-search&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;&lt;/div&gt;
+            &lt;input type=&#34;text&#34;
+                   name=&#34;xzxzzxzxzxzxzxzxzxxzxzzxx&#34;
+                   autocomplete=&#34;off&#34;
+                   placeholder=&#34;Search...&#34;
+                   ng-model=&#34;search[&#39;query&#39;]&#34;
+                   ng-model-options=&#34;{ updateOn: &#39;keyup&#39;,
+                                     debounce: { &#39;default&#39;: 500, &#39;blur&#39;: 0 }}&#34;
+                   ng-change=&#34;ctx.parameters[&#39;q&#39;] = search[&#39;query&#39;];&#34; /&gt;
+            &lt;div class=&#34;clear-button&#34;
+                 ng-if=&#34;search[&#39;query&#39;]&#34;
+                 ng-click=&#34;search.query = undefined;
+                           ctx.parameters[&#39;q&#39;] = null&#34;&gt;
+                &lt;i class=&#34;fa fa-ban&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;input-holder dark&#34;
+             ods-tooltip=&#34;&lt;span style=&#39;font-size:1.4em; font-weight: 200;&#39;&gt;Measurements&lt;/strong&gt;&#34;
+             ng-click=&#34;activemaplayer = &#39;measurements&#39;;
+                       ctx.parameters[&#39;refine.measurements_parameter&#39;] = undefined;&#34;&gt;
+            &lt;i class=&#34;fa fa-map-marker&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;input-holder red&#34;
+             ods-tooltip=&#34;&lt;span style=&#39;font-size:1.4em; font-weight: 200;&#39;&gt;PM10 Heatmap&lt;/strong&gt;&#34;
+             ng-click=&#34;activemaplayer = &#39;PM10&#39;;
+                       ctx.parameters[&#39;refine.measurements_parameter&#39;] = &#39;PM10&#39;;&#34;&gt;
+            &lt;ods-picto url=&#34;&#39;/static/pictos/img/set-v3/pictos/fire.svg&#39;&#34; color=&#34;&#39;#f4f2ec&#39;&#34;&gt;&lt;/ods-picto&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;input-holder blue&#34;
+             ods-tooltip=&#34;&lt;span style=&#39;font-size:1.4em; font-weight: 200;&#39;&gt;Ozone Heatmap&lt;/strong&gt;&#34;
+             ng-click=&#34;activemaplayer = &#39;O3&#39;;
+                       ctx.parameters[&#39;refine.measurements_parameter&#39;] = &#39;O3&#39;;&#34;&gt;
+            &lt;ods-picto url=&#34;&#39;/static/pictos/img/set-v3/pictos/fire.svg&#39;&#34; color=&#34;&#39;#f4f2ec&#39;&#34;&gt;&lt;/ods-picto&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;kpi-module&#34;
+         ng-if=&#34;ctx.parameters[&#39;refine.measurements_parameter&#39;]&#34;
+         ods-aggregation=&#34;min,max,avg&#34;
+         ods-aggregation-min-context=&#34;ctx&#34;
+         ods-aggregation-min-function=&#34;MIN&#34;
+         ods-aggregation-min-expression=&#34;measurements_value&#34;
+         ods-aggregation-max-context=&#34;ctx&#34;
+         ods-aggregation-max-function=&#34;MAX&#34;
+         ods-aggregation-max-expression=&#34;measurements_value&#34;
+         ods-aggregation-avg-context=&#34;ctx&#34;
+         ods-aggregation-avg-function=&#34;AVG&#34;
+         ods-aggregation-avg-expression=&#34;measurements_value&#34;&gt;
+        &lt;div class=&#34;kpi&#34; ng-if=&#34;activemaplayer != &#39;measurements&#39;&#34;
+             ng-class=&#34;{
+                       &#39;blue&#39;:activemaplayer==&#39;O3&#39;,
+                       &#39;red&#39;:activemaplayer==&#39;PM10&#39;
+                       }&#34;&gt;
+            &lt;div class=&#34;kpi-title&#34;&gt;Min {{ activemaplayer }}&lt;/div&gt;
+            &lt;div class=&#34;kpi-title--unit&#34;&gt;Minimum value measurement&lt;/div&gt;
+            &lt;div class=&#34;kpi-value&#34;&gt;{{ min | number : 1 }}&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;kpi&#34; ng-if=&#34;activemaplayer != &#39;measurements&#39;&#34;
+             ng-class=&#34;{
+                       &#39;blue&#39;:activemaplayer==&#39;O3&#39;,
+                       &#39;red&#39;:activemaplayer==&#39;PM10&#39;
+                       }&#34;&gt;
+            &lt;div class=&#34;kpi-title&#34;&gt;Avg {{ activemaplayer }}&lt;/div&gt;
+            &lt;div class=&#34;kpi-title--unit&#34;&gt;Average value measurement&lt;/div&gt;
+            &lt;div class=&#34;kpi-value&#34;&gt;{{ avg | number : 1 }}&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;kpi&#34; ng-if=&#34;activemaplayer != &#39;measurements&#39;&#34;
+             ng-class=&#34;{
+                       &#39;blue&#39;:activemaplayer==&#39;O3&#39;,
+                       &#39;red&#39;:activemaplayer==&#39;PM10&#39;
+                       }&#34;&gt;
+            &lt;div class=&#34;kpi-title&#34;&gt;Max {{ activemaplayer }}&lt;/div&gt;
+            &lt;div class=&#34;kpi-title--unit&#34;&gt;Maximum value measurement&lt;/div&gt;
+            &lt;div class=&#34;kpi-value&#34;&gt;{{ max | number : 1 }}&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;ods-map no-refit=&#34;true&#34; scroll-wheel-zoom=&#34;true&#34; display-control=&#34;false&#34;
+             display-control-single-layer=&#34;false&#34;
+             toolbar-fullscreen=&#34;false&#34;
+             basemap=&#34;mapbox.light&#34;&gt;
+        &lt;ods-map-layer context=&#34;ctx&#34;
+                       show-if=&#34;activemaplayer == &#39;measurements&#39;&#34;
+                       color=&#34;#45423E&#34; picto=&#34;ods-connected_temp&#34; show-marker=&#34;false&#34; display=&#34;auto&#34; shape-opacity=&#34;0.5&#34; point-opacity=&#34;1&#34; border-color=&#34;#FFFFFF&#34; border-opacity=&#34;1&#34; border-size=&#34;1&#34; border-pattern=&#34;solid&#34;
+                       caption=&#34;false&#34; caption-picto-color=&#34;#E5E5E5&#34; title=&#34;Air Quality measurements&#34; size=&#34;5&#34; size-min=&#34;2&#34; size-max=&#34;6&#34; size-function=&#34;linear&#34;&gt;
+            &lt;ul style=&#34;display: block; list-style-type: none; padding:0; margin:0;&#34;&gt;
+                &lt;li&gt;&lt;strong style=&#34;font-size:17px;&#34;&gt;{{ record.fields.location }}&lt;/strong&gt;&lt;/li&gt;
+                &lt;li&gt;{{ record.fields.measurements_lastupdated | date:&#39;medium&#39;}}&lt;/li&gt;
+                &lt;li&gt;&lt;strong&gt;&lt;i class=&#34;fa fa-leaf&#34;&gt;&lt;/i&gt; {{ record.fields.measurements_parameter }}: {{ record.fields.measurements_value }} {{ record.fields.measurements_unit }}&lt;/strong&gt;&lt;/li&gt;
+                &lt;li&gt;(source: {{ record.fields.measurements_sourcename }})&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/ods-map-layer&gt;
+        &lt;ods-map-layer context=&#34;ctx&#34;
+                       show-if=&#34;activemaplayer == &#39;PM10&#39;&#34;
+                       color-gradient=&#34;{&#39;1&#39;:&#39;#FFFFFF&#39;,&#39;0.3&#39;:&#39;#FF0000&#39;,&#39;0.6&#39;:&#39;#FFFF00&#39;}&#34; picto=&#34;ods-connected_temp&#34; show-marker=&#34;false&#34; display=&#34;heatmap&#34;radius=&#34;1&#34; function=&#34;AVG&#34; expression=&#34;measurements_value&#34; shape-opacity=&#34;0.5&#34; point-opacity=&#34;1&#34; border-color=&#34;#FFFFFF&#34; border-opacity=&#34;1&#34; border-size=&#34;1&#34; border-pattern=&#34;solid&#34;
+                       caption=&#34;false&#34; caption-picto-color=&#34;#E5E5E5&#34; title=&#34;PM10 Heatmap&#34; size-function=&#34;log&#34;&gt;&lt;/ods-map-layer&gt;
+        &lt;ods-map-layer context=&#34;ctx&#34;
+                       show-if=&#34;activemaplayer == &#39;O3&#39;&#34;
+                       color-gradient=&#34;{&#39;1&#39;:&#39;#00FAFA&#39;,&#39;0.2&#39;:&#39;#000000&#39;,&#39;0.4&#39;:&#39;#183567&#39;,&#39;0.6&#39;:&#39;#2E649E&#39;,&#39;0.8&#39;:&#39;#17ADCB&#39;}&#34; picto=&#34;ods-connected_temp&#34; show-marker=&#34;false&#34; display=&#34;heatmap&#34;radius=&#34;1&#34; function=&#34;AVG&#34; expression=&#34;measurements_value&#34; shape-opacity=&#34;0.5&#34; point-opacity=&#34;1&#34; border-color=&#34;#FFFFFF&#34; border-opacity=&#34;1&#34; border-size=&#34;1&#34; border-pattern=&#34;solid&#34;
+                       caption=&#34;false&#34; caption-picto-color=&#34;#E5E5E5&#34; title=&#34;O3 Heatmap&#34; size-function=&#34;log&#34;&gt;&lt;/ods-map-layer&gt;
+    &lt;/ods-map&gt;
+&lt;/ods-dataset-context&gt;
+</code></pre>
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-fullscreen-map-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>body, h1, h2, h3 {
+    color: #45423E;
+}
+body {
+    padding: 0;
+}
+main {
+    margin: 0;
+}
+.main--page {
+    margin-top: 0px;
+}
+.ods-front-header, .ods-front-footer, .ods-content:after, footer {
+    display: none;
+}
+ods-dataset-context {
+    position: relative;
+}
+.odswidget.odswidget-map {
+    width: 100%;
+    height: 100vh;
+}
+.leaflet-popup-content {
+    width: 350px !important;
+}
+.odswidget-record-image {
+    text-align: center;
+}
+.ods-filters__filters, .ods-filters__count {
+    color: #f4f2ec;
+    background-color: #6B83AB;
+}
+ods-facets h3 {
+    color: #45423c;
+}
+rect.highcharts-background {
+    fill: transparent !important;
+}
+.highcharts-yaxis {
+    display: none;
+}
+/* Button */
+.filter-btn {
+    position: absolute;
+    top: 225px;
+    left: -15px;
+    transform: rotate(-90deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4em;
+    width: 200px;
+    height: 40px;
+    padding: 11px;
+    border: #F4F2ED;
+    border-radius: 0px 0px 4px 4px;
+    transition: ease-in 0.3s;
+    box-shadow: 4px 4px 12px -1px #94928c;
+    text-decoration: none;
+    z-index: 3;
+    color: #f4f2ec;
+    background-color: #6B83AB;
+}
+.filter-btn--active {
+    left: 315px;
+}
+.filter-btn:hover {
+    box-shadow: 0 10px 26px 5px #a7a49d;
+}
+span.filtered {
+    color: red;
+    margin: 0px 4px;
+    font-weight: 600;
+}
+/* MODAL */
+.modal {
+    display: flex;
+    flex-direction: column;
+    height: -webkit-calc(100vh - 195px);
+    height: -moz-calc(100vh - 195px);
+    height: calc(100vh - 195px);
+    margin-top: 105px;
+    left: 45px;
+    width: 20px;
+    position: absolute;
+    background-color: #f4f2ec;
+    border-radius: 4px;
+    border-left: 8px solid #6B83AB;
+    z-index: 3;
+    overflow: hidden; /* Disable horizontal scroll */
+    transition: ease-in 0.3s;
+}
+.modal-active {
+    width: 350px;
+}
+.modal__header,
+.modal__footer {
+    height: 65px;
+    background-color: #F4F2ED;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0s;
+}
+.modal-active .modal__header, .modal-active .modal__footer {
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+.modal__header {
+    border-bottom: 1px solid #bbbbbb;
+}
+.modal__footer {
+    border-top: 1px solid #bbbbbb;
+}
+.modal__content {
+    height: 100%;
+    overflow-y: auto;
+    padding: 25px;
+    opacity: 0;
+    transition: opacity 0s;
+}
+.modal-active .modal__content {
+    opacity: 1;
+    transition-delay: 0.3s;
+}
+/* The button used to close the modal */
+.closebtn {
+    font-size: 2.5em;
+    font-weight: 200;
+}
+.closebtn span {
+    font-weight: 300;
+}
+.closebtn:hover,
+.closebtn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* specific right modal */
+.right {
+    position: relative;
+}
+.right .filter-btn {
+    right: 0px;
+    left: initial;
+    transform: rotate(90deg);
+    background-color: #CF4626;
+    top: -webkit-calc(100vh - 180px);
+    top: -moz-calc(100vh - 180px);
+    top: calc(100vh - 180px);
+}
+.right .modal {
+    right: 60px;
+    left: initial;
+    border-left: none;
+    border-right: 7px solid #CF4626;
+    height: -webkit-calc(100vh - 130px);
+    height: -moz-calc(100vh - 130px);
+    height: calc(100vh - 130px);
+    margin-top: 100px;
+}
+.right .filter-btn--active {
+    left: initial;
+    right: 430px;
+}
+.right .modal-active {
+    width: 450px;
+}
+/* specific because charts are loaded inside */
+.right .modal__content {
+    width: 450px;
+}
+/* SEARCH MODULE */
+.search-module {
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    top: 20px;
+    width: 400px;
+    font-size: 1.1em;
+    font-weight: 300;
+    display: flex;
+}
+.zoom-before-input {
+    color: #ababab;
+    font-size: 1.3em;
+}
+.input-holder, .odswidget-timerange__from, .odswidget-timerange__to {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 55px; /* used for ODS picto */
+    font-size: 1.4em; /* used for fontawesome picto */
+    max-height: 55px;
+    border: 1px solid #e4e4e4;
+    padding: 11px;
+    margin: 3px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 5px gainsboro;
+    background-color: #f4f2ec;
+    z-index: 2;
+}
+.input-holder:hover {
+    box-shadow: 1px 1px 10px 3px #74716c;
+}
+.input-holder input, .odswidget-timerange__from input, .odswidget-timerange__to input {
+    border: none;
+    width: 100%;
+    margin-left: 8px;
+    background-color: #f4f2ec;
+}
+.input-holder input:focus, .odswidget-timerange__from input:focus, .odswidget-timerange__to input:focus {
+    outline: 0;
+}
+.input-holder .odswidget-picto {
+    height: 30px;
+    width: 30px;
+}
+.clear-button {
+    font-size: 1.3em;
+}
+.blue {
+    border: 1px solid #6a83ab;
+    background-color: #6a83ab;
+    color: #f4f2ec;
+}
+.red {
+    border: 1px solid #cf4526;
+    background-color: #cf4526;
+    color: #f4f2ec;
+}
+.dark {
+    border: 1px solid #45423E;
+    background-color: #45423E;
+    color: #f4f2ec;
+}
+/* KPI MODULE */
+.kpi-module {
+    position: fixed;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    z-index: 2;
+    bottom: 20px;
+    width: 600px;
+    display: flex;
+}
+.kpi {
+    width: 100%;
+    margin: 5px;
+    padding: 0px 7px;
+    background-color: #45423Eb5;
+    border: 2px solid #45423Ed4;
+    border-radius: 4px;
+    color: #f4f2ec;
+}
+.kpi.blue {
+    border: 2px solid #6a83abd4;
+    background-color: #6a83abb5;
+}
+.kpi.red {
+    border: 2px solid #cf4526d4;
+    background-color: #cf4526b5;
+}
+.kpi-title {
+    font-weight: 600;
+    font-size: 1.3em;
+}
+.kpi-title--unit {
+    font-weight: 100;
+    font-size: 0.8em;
+}
+.kpi-value {
+    font-weight: 400;
+    font-size: 2em;
+    text-align: center;
+}
+      
+</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-fullscreen-map";
+            iframe = document.getElementById(iframeId);
+             
+            size =  800 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+        </div>
+    </div>
+    
+</section>
+
+
+    </div>
+</div>
+
+<footer class="footer">
+    <a href="https://www.opendatasoft.com"
+       class="footer-link"
+       title="Opendatasoft website">
+        <img src="/img/ods-logo.svg"
+             class="footer-logo"
+             alt="Opendatasoft logo"
+        />
+    </a>
+    <span class="footer-copyright">
+        &copy; Copyright 2020
+    </span>
+</footer>
+
+
+
+
+
+
+
+<script>var process = { "env": { "NODE_ENV": "production" } }</script>
+<script type="text/javascript"
+        src="/index.min.11fcc0d6f8a0b04671eb0a5fb2bb06b89618c60744ea73effdb557ad43fd44a6.js"
+        defer></script>
+
+</body>
+</html>

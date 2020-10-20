@@ -30,7 +30,7 @@
                     <ods-map-layer context="shanghai"
                                    display="choropleth"
                                    function="AVG"
-                                   expression="world_rank_integer"
+                                   expression="world_rank_int"
                                    color-numeric-ranges="{'120':'#000000','175':'#2E3539','225':'#5D6A73','350':'#8C9FAD','500':'#BBD5E7'}"
                                    color-undefined="#FFFFFF"
                                    color-out-of-bounds="#FFFFFF"
@@ -69,7 +69,7 @@
                      ods-analysis-context="shanghai"
                      ods-analysis-x="university_name"
                      ods-analysis-max="0"
-                     ods-analysis-serie-agg="AVG(world_rank_integer)"
+                     ods-analysis-serie-agg="AVG(world_rank_int)"
                      ods-analysis-sort="-agg">
                     <ul>
                         <li class="univ">
@@ -102,22 +102,17 @@
             </div>
             <div class="map-drawer-container__drawer map-drawer-container__drawer__full">
                 <h2>
-                    {{ shanghaihistoric.parameters['refine.university_name'] }} ({{ shanghai.parameters['refine.country'] }})
+                    {{ shanghaihistoric.parameters['refine.university_name'] }} ({{
+                    shanghai.parameters['refine.country'] }})
                 </h2>
-                <ods-tabs layout="simple-nav" pane-auto-unload="true">
-                    <ods-pane title="Chart">
-                        <ods-chart timescale="year" display-legend="false" align-month="false">
-                            <ods-chart-query context="shanghaihistoric" field-x="year" maxpoints="200" timescale="year">
-                                <ods-chart-serie expression-y="world_rank_integer" chart-type="column" function-y="AVG" label-y="Ranking range per year" color="#142E7B" display-units="true" scientific-display="true">
-                                </ods-chart-serie>
-                            </ods-chart-query>
-                        </ods-chart>
-                    </ods-pane>
-                    <ods-pane title="Table" pane-auto-unload="true">
-                        <ods-table context="shanghaihistoric"
-                                   displayed-fields="world_rank,national_rank,year"></ods-table>
-                    </ods-pane>
-                </ods-tabs>
+                <ods-chart timescale="year" display-legend="false" align-month="false">
+                    <ods-chart-query context="shanghaihistoric" field-x="year" maxpoints="200" timescale="year">
+                        <ods-chart-serie expression-y="world_rank_int" chart-type="column" function-y="AVG"
+                                         label-y="Ranking range per year" color="#142E7B" display-units="true"
+                                         scientific-display="true">
+                        </ods-chart-serie>
+                    </ods-chart-query>
+                </ods-chart>
             </div>
         </div>
     </div>

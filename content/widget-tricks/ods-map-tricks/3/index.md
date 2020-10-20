@@ -1,5 +1,5 @@
 ---
-title: "ods-maps tricks - 3"
+title: "ods-map refine zoom 3"
 ---
 
 ## Dynamic map by zoom level

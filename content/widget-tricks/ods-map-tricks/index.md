@@ -1,5 +1,5 @@
 ---
-title: "ods-maps Tricks"
+title: "ods-map: Refine & Zoom"
 description: ""
 tags: ["ods-maps", "geo", "filter", "display"]
 resources:
@@ -7,5 +7,5 @@ resources:
   title: 'Section #:counter'
 ---
 
-# ods-maps tricks 
+# ods-map: Refine & Zoom 
 
