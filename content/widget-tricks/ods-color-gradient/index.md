@@ -1,5 +1,5 @@
 ---
-title: "Ods-color-gradient"
+title: "ods-color-gradient & ods-legend"
 description: "This widget computes a gradient of colors based on a numerical aggregation. It's mainly used to color the shapes of a map for analytics purposes."
 tags: ["display", "aggregation", "geo"]
 resources:

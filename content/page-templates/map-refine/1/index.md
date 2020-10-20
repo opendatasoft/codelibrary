@@ -1,6 +1,5 @@
 ---
-title: "Use a map as a selector and display results on the side "
-height: 120
+title: "map refine 1"
 ---
 
 ## Use a map as a selector and display results on the side

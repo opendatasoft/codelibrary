@@ -1,0 +1,1119 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+    <title>
+        
+Custom tooltip &ndash; Codelibrary
+
+    </title>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41201218-21"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-41201218-21');
+    </script>
+
+    
+    
+
+    
+    
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css"
+          integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8="
+          crossorigin="anonymous">
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href="/scss/main.css" />
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png">
+    <link rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png">
+    <link rel="shortcut icon"
+          href="/favicon.ico">
+</head>
+
+<body>
+
+<nav class="navbar is-fixed-top"
+     role="navigation"
+     aria-label="Main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item"
+           href="/"
+           title="Back to the homepage">
+            <img src="/img/ods-logo-helphub.svg"
+                 alt="Helphub Logo"/>
+        </a>
+        <button class="navbar-burger burger"
+                type="button"
+                data-target="helphubNavbar"
+                aria-controls="helphubNavbar"
+                aria-expanded="false"
+                aria-label="Menu">
+            Help Hub
+        </button>
+    </div>
+    <div class="navbar-menu"
+         id="helphubNavbar">
+        <div class="navbar-start">
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/">
+                Help Hub
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/platform/en/">
+                User guide
+            </a>
+            <a class="navbar-item is-active"
+               href="https://discovery.opendatasoft.com">
+                Code Library
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/faq-glossary/en/">
+                FAQ
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/widgets/">
+                Widgets
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/en/apis/">
+                APIs
+            </a>
+            <a class="navbar-item"
+               href="https://academy.opendatasoft.com/page/homepage">
+                Academy
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="columns codelibrary">
+    <div class="column is-narrow">
+        <aside class="sidebar menu">
+    <a href="https://codelibrary.opendatasoft.com"
+       class="sidebar-logo-link"
+       title="Go to Codelibrary homepage">
+        <img src="/img/ods-codelibrary-logo.svg"
+             class="sidebar-logo"
+             alt="Codelibrary Logo">
+    </a>
+
+    <div id="algolia-box"></div>
+    <div id="algolia-results"></div>
+
+    
+    <ul class="menu-list">
+        <li>
+            <a class="sidebar-subtitle"
+               href="https://codelibrary.opendatasoft.com">
+                Home
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="/components/"
+               class="sidebar-subtitle">
+                Components
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a href="/page-templates/"
+               class="sidebar-subtitle">
+                Page templates
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a href="/portal-themes/"
+               class="sidebar-subtitle">
+                Portal themes
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="sidebar-subtitle " href="/widget-tricks/">
+            Widget tricks
+            </a>
+            <ul>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/catalog-cards/">Catalog cards</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/svg-maps/">SVG Maps</a>
+                </li>
+                
+                <li>
+                    <a class="is-active" href="https://codelibrary.opendatasoft.com/widget-tricks/custom-tooltip/">Custom tooltip</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/dates/">Dates</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/drill-down/">Drill-down chart</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-aggregation/">ods-aggregation</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-analysis/">ods-analysis</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-color-gradient/">ods-color-gradient &amp; ods-legend</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-map-tricks/">ods-maps Tricks</a>
+                </li>
+                
+            </ul>
+        </li>
+        
+        
+    </ul>
+    <p class="menu-label">
+        Tags
+    </p>
+    <div class="tags">
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/aggregation/">
+            aggregation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/chart/">
+            chart
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/date/">
+            date
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/display/">
+            display
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/filter/">
+            filter
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/geo/">
+            geo
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/list/">
+            list
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/map/">
+            map
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/navigation/">
+            navigation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-aggregation/">
+            ods-aggregation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-analysis/">
+            ods-analysis
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-maps/">
+            ods-maps
+        </a>
+        
+    </div>
+</aside>
+
+    </div>
+    <div class="column">
+        
+
+<section>
+    <div class="content-header container is-max-desktop mb-5">
+        <div class="content">
+            <h1 class="title" id="custom-tooltip">
+  Custom tooltip
+  
+</h1>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <h2 class="title" id="default-tooltip">
+  Default tooltip
+  
+    <a class="is-link" href="#default-tooltip">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+<p>Information is displayed with OpenDataSoft Map default style</p>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-custom-tooltip-1"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;ushospitals\&#34;\n                     ushospitals-dataset=\&#34;us-hospitals\&#34;\n                     ushospitals-domain=\&#34;userclub\&#34;\u003e\n    \u003cods-map style=\&#34;height:500px\&#34; location=\&#34;8,41.35826,-72.23511\&#34; scroll-wheel-zoom=\&#34;false\&#34;\u003e\n        \u003cods-map-layer color=\&#34;#2C3F56\&#34; context=\&#34;ushospitals\&#34;\u003e\u003c/ods-map-layer\u003e\n    \u003c/ods-map\u003e\n\u003c/ods-dataset-context\u003e\u003c/div\u003e&#34;,
+               "css": &#34;&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+        <iframe id="iframe-custom-tooltip-1"
+                width="100%" height="100%"
+                src="about:blank"
+                srcdoc="
+          <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+          </head>
+          <body>
+          <div ng-app='ods-widgets'>
+              &lt;ods-dataset-context context=&#34;ushospitals&#34;
+                     ushospitals-dataset=&#34;us-hospitals&#34;
+                     ushospitals-domain=&#34;userclub&#34;&gt;
+    &lt;ods-map style=&#34;height:500px&#34; location=&#34;8,41.35826,-72.23511&#34; scroll-wheel-zoom=&#34;false&#34;&gt;
+        &lt;ods-map-layer color=&#34;#2C3F56&#34; context=&#34;ushospitals&#34;&gt;&lt;/ods-map-layer&gt;
+    &lt;/ods-map&gt;
+&lt;/ods-dataset-context&gt;
+          </div>
+          <style type='text/css'>
+              
+          </style>
+          </body>
+          ">
+        </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-custom-tooltip-1-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-custom-tooltip-1-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right">
+                <a class="button is-primary is-outlined edit-on-codepen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-custom-tooltip-1').submit()">
+                    Edit on CodePen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-custom-tooltip-1-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;ushospitals&#34;
+                     ushospitals-dataset=&#34;us-hospitals&#34;
+                     ushospitals-domain=&#34;userclub&#34;&gt;
+    &lt;ods-map style=&#34;height:500px&#34; location=&#34;8,41.35826,-72.23511&#34; scroll-wheel-zoom=&#34;false&#34;&gt;
+        &lt;ods-map-layer color=&#34;#2C3F56&#34; context=&#34;ushospitals&#34;&gt;&lt;/ods-map-layer&gt;
+    &lt;/ods-map&gt;
+&lt;/ods-dataset-context&gt;</code></pre>
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-custom-tooltip-1-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code></code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-custom-tooltip-1";
+            iframe = document.getElementById(iframeId);
+             
+            size =  null 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <h2 class="title" id="advanced-tooltip">
+  Advanced tooltip
+  
+    <a class="is-link" href="#advanced-tooltip">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+<p>Information is displayed differently with colors, icons and links</p>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-custom-tooltip-2"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;ushospitals\&#34;\n                     ushospitals-dataset=\&#34;us-hospitals\&#34;\n                     ushospitals-domain=\&#34;userclub\&#34;\u003e\n    \u003cods-map style=\&#34;height:500px\&#34; location=\&#34;8,41.35826,-72.23511\&#34; scroll-wheel-zoom=\&#34;false\&#34;\u003e\n        \u003cods-map-layer picto=\&#34;hospital\&#34; color=\&#34;#2C3F56\&#34; context=\&#34;ushospitals\&#34;\u003e\n            \u003cul style=\&#34;display: block; list-style-type: none; color: #2c3f56; padding:0; margin:0;\&#34;\u003e\n                \u003cli\u003e\n                    \u003cstrong style=\&#34;font-size:17px;\&#34;\u003e{{ record.fields.name | limitTo:25 }}\u003c/strong\u003e\n                \u003c/li\u003e\n                \u003cli style=\&#34;color:#bbb;\&#34;\u003e{{ record.fields.address | limitTo:140 }}\u003c/li\u003e\n                \u003cli style=\&#34;font-style:italic;color:#bbb;\&#34;\u003e{{ record.fields.city | limitTo:140 }}\n                    \u003cbr/\u003e\n                \u003c/li\u003e\n                \u003cbr/\u003e\n                \u003cli style=\&#34;color:#ec643c; font-size:15px;\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-hospital-o\&#34;\u003e\u003c/i\u003e {{record.fields.type}}\n                \u003c/li\u003e\n                \u003cli style=\&#34;font-size:15px;\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-calendar-o\&#34;\u003e\u003c/i\u003e\n                    \u003cspan style=\&#34;font-size: 14px; color: #bcbcbc;\&#34;\u003eEstablished\u003c/span\u003e {{record.fields.date_creat | date}}\n                \u003c/li\u003e\n                \u003cli style=\&#34;font-size:15px;\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-medkit\&#34;\u003e\u003c/i\u003e\n                    \u003cspan style=\&#34;font-size: 14px; color: #bcbcbc;\&#34;\u003eTrauma\u003c/span\u003e {{record.fields.trauma }}\n                \u003c/li\u003e\n                \u003cli style=\&#34;font-size:15px;\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-dot-circle-o\&#34;\u003e\u003c/i\u003e\n                    \u003cspan style=\&#34;font-size: 14px; color: #bcbcbc;\&#34;\u003eHelipad\u003c/span\u003e {{record.fields.helipad}}\n                \u003c/li\u003e\n                \u003cli\u003e\n                    \u003cul style=\&#34;list-style-type: none; color: #2c3f56;padding:0 0 15px;margin-top:0px;\&#34;\u003e\n                        \u003cli\u003e\n                            \u003cstrong style=\&#34;font-size:15px;\&#34;\u003e\n                                \u003ci aria-hidden=\&#34;true\&#34; class=\&#34;fa fa-users\&#34;\u003e\u003c/i\u003e\n                                \u003cspan style=\&#34;color: #bcbcbc;\&#34;\u003ePopulation/Beds\u003c/span\u003e {{record.fields.population}}\n                            \u003c/strong\u003e\n                        \u003c/li\u003e\n                        \u003cli style=\&#34;float:right;\&#34;\u003e\n                            \u003cstrong style=\&#34;font-size:13px;\&#34;\u003e\n                                \u003ca ng-href=\&#34;{{record.fields.website}}\&#34; style=\&#34;color:#ec643c;\&#34; target=\&#34;_blank\&#34;\u003eSource\u003c/a\u003e\n                            \u003c/strong\u003e\n                            \u003ci class=\&#34;fa fa-external-link\&#34; style=\&#34;color:#ec643c;\&#34;\u003e\u003c/i\u003e\n                        \u003c/li\u003e\n                    \u003c/ul\u003e\n                \u003c/li\u003e\n            \u003c/ul\u003e\n        \u003c/ods-map-layer\u003e\n    \u003c/ods-map\u003e\n\u003c/ods-dataset-context\u003e\u003c/div\u003e&#34;,
+               "css": &#34;&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+        <iframe id="iframe-custom-tooltip-2"
+                width="100%" height="100%"
+                src="about:blank"
+                srcdoc="
+          <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+          </head>
+          <body>
+          <div ng-app='ods-widgets'>
+              &lt;ods-dataset-context context=&#34;ushospitals&#34;
+                     ushospitals-dataset=&#34;us-hospitals&#34;
+                     ushospitals-domain=&#34;userclub&#34;&gt;
+    &lt;ods-map style=&#34;height:500px&#34; location=&#34;8,41.35826,-72.23511&#34; scroll-wheel-zoom=&#34;false&#34;&gt;
+        &lt;ods-map-layer picto=&#34;hospital&#34; color=&#34;#2C3F56&#34; context=&#34;ushospitals&#34;&gt;
+            &lt;ul style=&#34;display: block; list-style-type: none; color: #2c3f56; padding:0; margin:0;&#34;&gt;
+                &lt;li&gt;
+                    &lt;strong style=&#34;font-size:17px;&#34;&gt;{{ record.fields.name | limitTo:25 }}&lt;/strong&gt;
+                &lt;/li&gt;
+                &lt;li style=&#34;color:#bbb;&#34;&gt;{{ record.fields.address | limitTo:140 }}&lt;/li&gt;
+                &lt;li style=&#34;font-style:italic;color:#bbb;&#34;&gt;{{ record.fields.city | limitTo:140 }}
+                    &lt;br/&gt;
+                &lt;/li&gt;
+                &lt;br/&gt;
+                &lt;li style=&#34;color:#ec643c; font-size:15px;&#34;&gt;
+                    &lt;i class=&#34;fa fa-hospital-o&#34;&gt;&lt;/i&gt; {{record.fields.type}}
+                &lt;/li&gt;
+                &lt;li style=&#34;font-size:15px;&#34;&gt;
+                    &lt;i class=&#34;fa fa-calendar-o&#34;&gt;&lt;/i&gt;
+                    &lt;span style=&#34;font-size: 14px; color: #bcbcbc;&#34;&gt;Established&lt;/span&gt; {{record.fields.date_creat | date}}
+                &lt;/li&gt;
+                &lt;li style=&#34;font-size:15px;&#34;&gt;
+                    &lt;i class=&#34;fa fa-medkit&#34;&gt;&lt;/i&gt;
+                    &lt;span style=&#34;font-size: 14px; color: #bcbcbc;&#34;&gt;Trauma&lt;/span&gt; {{record.fields.trauma }}
+                &lt;/li&gt;
+                &lt;li style=&#34;font-size:15px;&#34;&gt;
+                    &lt;i class=&#34;fa fa-dot-circle-o&#34;&gt;&lt;/i&gt;
+                    &lt;span style=&#34;font-size: 14px; color: #bcbcbc;&#34;&gt;Helipad&lt;/span&gt; {{record.fields.helipad}}
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;ul style=&#34;list-style-type: none; color: #2c3f56;padding:0 0 15px;margin-top:0px;&#34;&gt;
+                        &lt;li&gt;
+                            &lt;strong style=&#34;font-size:15px;&#34;&gt;
+                                &lt;i aria-hidden=&#34;true&#34; class=&#34;fa fa-users&#34;&gt;&lt;/i&gt;
+                                &lt;span style=&#34;color: #bcbcbc;&#34;&gt;Population/Beds&lt;/span&gt; {{record.fields.population}}
+                            &lt;/strong&gt;
+                        &lt;/li&gt;
+                        &lt;li style=&#34;float:right;&#34;&gt;
+                            &lt;strong style=&#34;font-size:13px;&#34;&gt;
+                                &lt;a ng-href=&#34;{{record.fields.website}}&#34; style=&#34;color:#ec643c;&#34; target=&#34;_blank&#34;&gt;Source&lt;/a&gt;
+                            &lt;/strong&gt;
+                            &lt;i class=&#34;fa fa-external-link&#34; style=&#34;color:#ec643c;&#34;&gt;&lt;/i&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/ods-map-layer&gt;
+    &lt;/ods-map&gt;
+&lt;/ods-dataset-context&gt;
+          </div>
+          <style type='text/css'>
+              
+          </style>
+          </body>
+          ">
+        </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-custom-tooltip-2-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-custom-tooltip-2-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right">
+                <a class="button is-primary is-outlined edit-on-codepen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-custom-tooltip-2').submit()">
+                    Edit on CodePen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-custom-tooltip-2-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;ushospitals&#34;
+                     ushospitals-dataset=&#34;us-hospitals&#34;
+                     ushospitals-domain=&#34;userclub&#34;&gt;
+    &lt;ods-map style=&#34;height:500px&#34; location=&#34;8,41.35826,-72.23511&#34; scroll-wheel-zoom=&#34;false&#34;&gt;
+        &lt;ods-map-layer picto=&#34;hospital&#34; color=&#34;#2C3F56&#34; context=&#34;ushospitals&#34;&gt;
+            &lt;ul style=&#34;display: block; list-style-type: none; color: #2c3f56; padding:0; margin:0;&#34;&gt;
+                &lt;li&gt;
+                    &lt;strong style=&#34;font-size:17px;&#34;&gt;{{ record.fields.name | limitTo:25 }}&lt;/strong&gt;
+                &lt;/li&gt;
+                &lt;li style=&#34;color:#bbb;&#34;&gt;{{ record.fields.address | limitTo:140 }}&lt;/li&gt;
+                &lt;li style=&#34;font-style:italic;color:#bbb;&#34;&gt;{{ record.fields.city | limitTo:140 }}
+                    &lt;br/&gt;
+                &lt;/li&gt;
+                &lt;br/&gt;
+                &lt;li style=&#34;color:#ec643c; font-size:15px;&#34;&gt;
+                    &lt;i class=&#34;fa fa-hospital-o&#34;&gt;&lt;/i&gt; {{record.fields.type}}
+                &lt;/li&gt;
+                &lt;li style=&#34;font-size:15px;&#34;&gt;
+                    &lt;i class=&#34;fa fa-calendar-o&#34;&gt;&lt;/i&gt;
+                    &lt;span style=&#34;font-size: 14px; color: #bcbcbc;&#34;&gt;Established&lt;/span&gt; {{record.fields.date_creat | date}}
+                &lt;/li&gt;
+                &lt;li style=&#34;font-size:15px;&#34;&gt;
+                    &lt;i class=&#34;fa fa-medkit&#34;&gt;&lt;/i&gt;
+                    &lt;span style=&#34;font-size: 14px; color: #bcbcbc;&#34;&gt;Trauma&lt;/span&gt; {{record.fields.trauma }}
+                &lt;/li&gt;
+                &lt;li style=&#34;font-size:15px;&#34;&gt;
+                    &lt;i class=&#34;fa fa-dot-circle-o&#34;&gt;&lt;/i&gt;
+                    &lt;span style=&#34;font-size: 14px; color: #bcbcbc;&#34;&gt;Helipad&lt;/span&gt; {{record.fields.helipad}}
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;ul style=&#34;list-style-type: none; color: #2c3f56;padding:0 0 15px;margin-top:0px;&#34;&gt;
+                        &lt;li&gt;
+                            &lt;strong style=&#34;font-size:15px;&#34;&gt;
+                                &lt;i aria-hidden=&#34;true&#34; class=&#34;fa fa-users&#34;&gt;&lt;/i&gt;
+                                &lt;span style=&#34;color: #bcbcbc;&#34;&gt;Population/Beds&lt;/span&gt; {{record.fields.population}}
+                            &lt;/strong&gt;
+                        &lt;/li&gt;
+                        &lt;li style=&#34;float:right;&#34;&gt;
+                            &lt;strong style=&#34;font-size:13px;&#34;&gt;
+                                &lt;a ng-href=&#34;{{record.fields.website}}&#34; style=&#34;color:#ec643c;&#34; target=&#34;_blank&#34;&gt;Source&lt;/a&gt;
+                            &lt;/strong&gt;
+                            &lt;i class=&#34;fa fa-external-link&#34; style=&#34;color:#ec643c;&#34;&gt;&lt;/i&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/ods-map-layer&gt;
+    &lt;/ods-map&gt;
+&lt;/ods-dataset-context&gt;</code></pre>
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-custom-tooltip-2-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code></code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-custom-tooltip-2";
+            iframe = document.getElementById(iframeId);
+             
+            size =  null 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <h2 class="title" id="analytics-tooltip">
+  Analytics tooltip
+  
+    <a class="is-link" href="#analytics-tooltip">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+<p>Tooltip presents dynamic aggregation based on the dataset API. A smaller value than the average will be in red, a greater one in green</p>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-custom-tooltip-3"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;ushospitals\&#34;\n                     ushospitals-dataset=\&#34;us-hospitals\&#34;\n                     ushospitals-domain=\&#34;userclub\&#34;\u003e\n    \u003cdiv class=\&#34;caption\&#34;\u003e\n        \u003cli style=\&#34;display: inline;\&#34; class=\&#34;green\&#34;\u003eHigher than average\u003c/li\u003e\n        \u003cli style=\&#34;display: inline;\&#34; class=\&#34;red\&#34;\u003eLower than average\u003c/li\u003e\n    \u003c/div\u003e\n    \u003cods-map id=\&#34;analytics\&#34; style=\&#34;height:500px\&#34; location=\&#34;8,41.35826,-72.23511\&#34; scroll-wheel-zoom=\&#34;false\&#34;\u003e\n        \u003cods-map-layer color=\&#34;#2C3F56\&#34; picto=\&#34;hospital\&#34; context=\&#34;ushospitals\&#34;\u003e\n            \u003cul style=\&#34;display: block; list-style-type: none; color: #2c3f56; padding:0; margin:0;\&#34;\u003e\n                \u003cli\u003e\n                    \u003cstrong style=\&#34;font-size:17px;\&#34;\u003e{{ record.fields.name | limitTo:25 }}\u003c/strong\u003e\n                \u003c/li\u003e\n                \u003cli style=\&#34;color:#bbb;\&#34;\u003e{{ record.fields.address | limitTo:140 }}\u003c/li\u003e\n                \u003cli style=\&#34;font-style:italic;color:#bbb;\&#34;\u003e{{ record.fields.city | limitTo:140 }}\n                    \u003cbr/\u003e\n                \u003c/li\u003e\n                \u003cbr/\u003e\n                \u003cods-dataset-context context=\&#34;type,state\&#34;\n                                     type-domain=\&#34;userclub\&#34;\n                                     type-dataset=\&#34;us-hospitals\&#34;\n                                     type-parameters=\&#34;{&#39;refine.type&#39;:&#39;&#39;&#43;record.fields.type}\&#34;\n                                     state-domain=\&#34;userclub\&#34;\n                                     state-dataset=\&#34;us-hospitals\&#34;\n                                     state-parameters=\&#34;{&#39;refine.state&#39;:&#39;&#39;&#43;record.fields.state}\&#34;\u003e\n                    \u003cdiv style=\&#34;\&#34; ods-aggregation=\&#34;aggtype\&#34; ods-aggregation-context=\&#34;type\&#34;\n                         ods-aggregation-function=\&#34;AVG\&#34; ods-aggregation-expression=\&#34;beds\&#34;\u003e\n                        \u003cli style=\&#34;color:#ec643c; font-size:15px; border-left: 3px solid #f19073;padding-left: 5px;\&#34;\u003e\n                            \u003ci class=\&#34;fa fa-bed\&#34;\u003e\u003c/i\u003eAvg # of beds for\n                        \u003c/li\u003e\n                        \u003cli style=\&#34;color: #ec643c;font-size: 15px;text-align: center;\&#34;\u003e\n                            \u003cstrong\u003e{{record.fields.type}}\u003c/strong\u003e\n                        \u003c/li\u003e\n                        \u003cli ng-if=\&#34;!aggtype\&#34; style=\&#34;text-align:center;font-size:20px\&#34;\u003e\n                            \u003cods-spinner\u003e\u003c/ods-spinner\u003e\n                        \u003c/li\u003e\n                        \u003cli ng-if=\&#34;aggtype\&#34; style=\&#34;text-align:center;\&#34;\n                            ng-class=\&#34;{&#39;red&#39;: record.fields.beds \u003c aggtype, &#39;green&#39; : record.fields.beds \u003eaggtype}\&#34;\u003e\n                            \u003cstrong style=\&#34;font-size:20px;\&#34;\u003e{{ aggtype | number : 1 }}\u003c/strong\u003e\n                        \u003c/li\u003e\n                    \u003c/div\u003e\n                    \u003cbr/\u003e\n                    \u003cdiv style=\&#34;\&#34; ods-aggregation=\&#34;aggstate\&#34; ods-aggregation-context=\&#34;state\&#34;\n                         ods-aggregation-function=\&#34;AVG\&#34; ods-aggregation-expression=\&#34;beds\&#34;\u003e\n                        \u003cli style=\&#34;color: #ec643c;font-size: 15px;text-align: center;\&#34;\u003e\n                            \u003cstrong\u003e{{record.fields.state}}\u003c/strong\u003e\n                        \u003c/li\u003e\n                        \u003cli ng-if=\&#34;!aggstate\&#34; style=\&#34;text-align:center;font-size:20px\&#34;\u003e\n                            \u003cods-spinner\u003e\u003c/ods-spinner\u003e\n                        \u003c/li\u003e\n                        \u003cli ng-if=\&#34;aggstate\&#34; style=\&#34;text-align:center;\&#34;\n                            ng-class=\&#34;{&#39;red&#39;: record.fields.beds \u003c aggstate, &#39;green&#39; : record.fields.beds \u003eaggstate}\&#34;\u003e\n                            \u003cstrong style=\&#34;font-size:20px;\&#34;\u003e{{ aggstate | number : 1 }}\u003c/strong\u003e\n                        \u003c/li\u003e\n                    \u003c/div\u003e\n                \u003c/ods-dataset-context\u003e\n                \u003cli style=\&#34;margin-top: 20px\&#34;\u003e\n                    \u003cul style=\&#34;list-style-type: none; color: #2c3f56;padding:0 0 15px;margin-top:0px;\&#34;\u003e\n                        \u003cli style=\&#34;display: inline;float:left;\&#34;\u003e\n                            \u003cstrong style=\&#34;font-size:15px;\&#34;\u003e\n                                \u003ci aria-hidden=\&#34;true\&#34; class=\&#34;fa fa-users\&#34;\u003e\u003c/i\u003ePopulation/Beds : {{record.fields.beds}}\n                            \u003c/strong\u003e\n                        \u003c/li\u003e\n                        \u003cli style=\&#34;display: inline;float:right;\&#34;\u003e\n                            \u003cstrong style=\&#34;font-size:13px;\&#34;\u003e\n                                \u003ca ng-href=\&#34;{{record.fields.website}}\&#34; style=\&#34;color:#ec643c;\&#34; target=\&#34;_blank\&#34;\u003eSource\u003c/a\u003e\n                            \u003c/strong\u003e\n                            \u003ci class=\&#34;fa fa-external-link\&#34; style=\&#34;color:#ec643c;\&#34;\u003e\u003c/i\u003e\n                        \u003c/li\u003e\n                    \u003c/ul\u003e\n                \u003c/li\u003e\n            \u003c/ul\u003e\n        \u003c/ods-map-layer\u003e\n    \u003c/ods-map\u003e\n\u003c/ods-dataset-context\u003e\u003c/div\u003e&#34;,
+               "css": &#34;.leaflet-popup-content {\n    width: 350px !important;\n}\n.caption {\n    position: absolute;\n    right: 0px;\n    top: -25px;\n}\n.red {\n    color: #E23F32;\n}\n.red:before {\n    content: &#39;\\f0ab&#39;;\n    font-family: FontAwesome;\n}\n.green {\n    color: #3EA538;\n}\n.green:before {\n    content: &#39;\\f0aa&#39;;\n    font-family: FontAwesome;\n}\n&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+        <iframe id="iframe-custom-tooltip-3"
+                width="100%" height="100%"
+                src="about:blank"
+                srcdoc="
+          <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+          </head>
+          <body>
+          <div ng-app='ods-widgets'>
+              &lt;ods-dataset-context context=&#34;ushospitals&#34;
+                     ushospitals-dataset=&#34;us-hospitals&#34;
+                     ushospitals-domain=&#34;userclub&#34;&gt;
+    &lt;div class=&#34;caption&#34;&gt;
+        &lt;li style=&#34;display: inline;&#34; class=&#34;green&#34;&gt;Higher than average&lt;/li&gt;
+        &lt;li style=&#34;display: inline;&#34; class=&#34;red&#34;&gt;Lower than average&lt;/li&gt;
+    &lt;/div&gt;
+    &lt;ods-map id=&#34;analytics&#34; style=&#34;height:500px&#34; location=&#34;8,41.35826,-72.23511&#34; scroll-wheel-zoom=&#34;false&#34;&gt;
+        &lt;ods-map-layer color=&#34;#2C3F56&#34; picto=&#34;hospital&#34; context=&#34;ushospitals&#34;&gt;
+            &lt;ul style=&#34;display: block; list-style-type: none; color: #2c3f56; padding:0; margin:0;&#34;&gt;
+                &lt;li&gt;
+                    &lt;strong style=&#34;font-size:17px;&#34;&gt;{{ record.fields.name | limitTo:25 }}&lt;/strong&gt;
+                &lt;/li&gt;
+                &lt;li style=&#34;color:#bbb;&#34;&gt;{{ record.fields.address | limitTo:140 }}&lt;/li&gt;
+                &lt;li style=&#34;font-style:italic;color:#bbb;&#34;&gt;{{ record.fields.city | limitTo:140 }}
+                    &lt;br/&gt;
+                &lt;/li&gt;
+                &lt;br/&gt;
+                &lt;ods-dataset-context context=&#34;type,state&#34;
+                                     type-domain=&#34;userclub&#34;
+                                     type-dataset=&#34;us-hospitals&#34;
+                                     type-parameters=&#34;{&#39;refine.type&#39;:&#39;&#39;&#43;record.fields.type}&#34;
+                                     state-domain=&#34;userclub&#34;
+                                     state-dataset=&#34;us-hospitals&#34;
+                                     state-parameters=&#34;{&#39;refine.state&#39;:&#39;&#39;&#43;record.fields.state}&#34;&gt;
+                    &lt;div style=&#34;&#34; ods-aggregation=&#34;aggtype&#34; ods-aggregation-context=&#34;type&#34;
+                         ods-aggregation-function=&#34;AVG&#34; ods-aggregation-expression=&#34;beds&#34;&gt;
+                        &lt;li style=&#34;color:#ec643c; font-size:15px; border-left: 3px solid #f19073;padding-left: 5px;&#34;&gt;
+                            &lt;i class=&#34;fa fa-bed&#34;&gt;&lt;/i&gt;Avg # of beds for
+                        &lt;/li&gt;
+                        &lt;li style=&#34;color: #ec643c;font-size: 15px;text-align: center;&#34;&gt;
+                            &lt;strong&gt;{{record.fields.type}}&lt;/strong&gt;
+                        &lt;/li&gt;
+                        &lt;li ng-if=&#34;!aggtype&#34; style=&#34;text-align:center;font-size:20px&#34;&gt;
+                            &lt;ods-spinner&gt;&lt;/ods-spinner&gt;
+                        &lt;/li&gt;
+                        &lt;li ng-if=&#34;aggtype&#34; style=&#34;text-align:center;&#34;
+                            ng-class=&#34;{&#39;red&#39;: record.fields.beds &lt; aggtype, &#39;green&#39; : record.fields.beds &gt;aggtype}&#34;&gt;
+                            &lt;strong style=&#34;font-size:20px;&#34;&gt;{{ aggtype | number : 1 }}&lt;/strong&gt;
+                        &lt;/li&gt;
+                    &lt;/div&gt;
+                    &lt;br/&gt;
+                    &lt;div style=&#34;&#34; ods-aggregation=&#34;aggstate&#34; ods-aggregation-context=&#34;state&#34;
+                         ods-aggregation-function=&#34;AVG&#34; ods-aggregation-expression=&#34;beds&#34;&gt;
+                        &lt;li style=&#34;color: #ec643c;font-size: 15px;text-align: center;&#34;&gt;
+                            &lt;strong&gt;{{record.fields.state}}&lt;/strong&gt;
+                        &lt;/li&gt;
+                        &lt;li ng-if=&#34;!aggstate&#34; style=&#34;text-align:center;font-size:20px&#34;&gt;
+                            &lt;ods-spinner&gt;&lt;/ods-spinner&gt;
+                        &lt;/li&gt;
+                        &lt;li ng-if=&#34;aggstate&#34; style=&#34;text-align:center;&#34;
+                            ng-class=&#34;{&#39;red&#39;: record.fields.beds &lt; aggstate, &#39;green&#39; : record.fields.beds &gt;aggstate}&#34;&gt;
+                            &lt;strong style=&#34;font-size:20px;&#34;&gt;{{ aggstate | number : 1 }}&lt;/strong&gt;
+                        &lt;/li&gt;
+                    &lt;/div&gt;
+                &lt;/ods-dataset-context&gt;
+                &lt;li style=&#34;margin-top: 20px&#34;&gt;
+                    &lt;ul style=&#34;list-style-type: none; color: #2c3f56;padding:0 0 15px;margin-top:0px;&#34;&gt;
+                        &lt;li style=&#34;display: inline;float:left;&#34;&gt;
+                            &lt;strong style=&#34;font-size:15px;&#34;&gt;
+                                &lt;i aria-hidden=&#34;true&#34; class=&#34;fa fa-users&#34;&gt;&lt;/i&gt;Population/Beds : {{record.fields.beds}}
+                            &lt;/strong&gt;
+                        &lt;/li&gt;
+                        &lt;li style=&#34;display: inline;float:right;&#34;&gt;
+                            &lt;strong style=&#34;font-size:13px;&#34;&gt;
+                                &lt;a ng-href=&#34;{{record.fields.website}}&#34; style=&#34;color:#ec643c;&#34; target=&#34;_blank&#34;&gt;Source&lt;/a&gt;
+                            &lt;/strong&gt;
+                            &lt;i class=&#34;fa fa-external-link&#34; style=&#34;color:#ec643c;&#34;&gt;&lt;/i&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/ods-map-layer&gt;
+    &lt;/ods-map&gt;
+&lt;/ods-dataset-context&gt;
+          </div>
+          <style type='text/css'>
+              .leaflet-popup-content {
+    width: 350px !important;
+}
+.caption {
+    position: absolute;
+    right: 0px;
+    top: -25px;
+}
+.red {
+    color: #E23F32;
+}
+.red:before {
+    content: &#39;\f0ab&#39;;
+    font-family: FontAwesome;
+}
+.green {
+    color: #3EA538;
+}
+.green:before {
+    content: &#39;\f0aa&#39;;
+    font-family: FontAwesome;
+}
+
+          </style>
+          </body>
+          ">
+        </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-custom-tooltip-3-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-custom-tooltip-3-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right">
+                <a class="button is-primary is-outlined edit-on-codepen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-custom-tooltip-3').submit()">
+                    Edit on CodePen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-custom-tooltip-3-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;ushospitals&#34;
+                     ushospitals-dataset=&#34;us-hospitals&#34;
+                     ushospitals-domain=&#34;userclub&#34;&gt;
+    &lt;div class=&#34;caption&#34;&gt;
+        &lt;li style=&#34;display: inline;&#34; class=&#34;green&#34;&gt;Higher than average&lt;/li&gt;
+        &lt;li style=&#34;display: inline;&#34; class=&#34;red&#34;&gt;Lower than average&lt;/li&gt;
+    &lt;/div&gt;
+    &lt;ods-map id=&#34;analytics&#34; style=&#34;height:500px&#34; location=&#34;8,41.35826,-72.23511&#34; scroll-wheel-zoom=&#34;false&#34;&gt;
+        &lt;ods-map-layer color=&#34;#2C3F56&#34; picto=&#34;hospital&#34; context=&#34;ushospitals&#34;&gt;
+            &lt;ul style=&#34;display: block; list-style-type: none; color: #2c3f56; padding:0; margin:0;&#34;&gt;
+                &lt;li&gt;
+                    &lt;strong style=&#34;font-size:17px;&#34;&gt;{{ record.fields.name | limitTo:25 }}&lt;/strong&gt;
+                &lt;/li&gt;
+                &lt;li style=&#34;color:#bbb;&#34;&gt;{{ record.fields.address | limitTo:140 }}&lt;/li&gt;
+                &lt;li style=&#34;font-style:italic;color:#bbb;&#34;&gt;{{ record.fields.city | limitTo:140 }}
+                    &lt;br/&gt;
+                &lt;/li&gt;
+                &lt;br/&gt;
+                &lt;ods-dataset-context context=&#34;type,state&#34;
+                                     type-domain=&#34;userclub&#34;
+                                     type-dataset=&#34;us-hospitals&#34;
+                                     type-parameters=&#34;{&#39;refine.type&#39;:&#39;&#39;&#43;record.fields.type}&#34;
+                                     state-domain=&#34;userclub&#34;
+                                     state-dataset=&#34;us-hospitals&#34;
+                                     state-parameters=&#34;{&#39;refine.state&#39;:&#39;&#39;&#43;record.fields.state}&#34;&gt;
+                    &lt;div style=&#34;&#34; ods-aggregation=&#34;aggtype&#34; ods-aggregation-context=&#34;type&#34;
+                         ods-aggregation-function=&#34;AVG&#34; ods-aggregation-expression=&#34;beds&#34;&gt;
+                        &lt;li style=&#34;color:#ec643c; font-size:15px; border-left: 3px solid #f19073;padding-left: 5px;&#34;&gt;
+                            &lt;i class=&#34;fa fa-bed&#34;&gt;&lt;/i&gt;Avg # of beds for
+                        &lt;/li&gt;
+                        &lt;li style=&#34;color: #ec643c;font-size: 15px;text-align: center;&#34;&gt;
+                            &lt;strong&gt;{{record.fields.type}}&lt;/strong&gt;
+                        &lt;/li&gt;
+                        &lt;li ng-if=&#34;!aggtype&#34; style=&#34;text-align:center;font-size:20px&#34;&gt;
+                            &lt;ods-spinner&gt;&lt;/ods-spinner&gt;
+                        &lt;/li&gt;
+                        &lt;li ng-if=&#34;aggtype&#34; style=&#34;text-align:center;&#34;
+                            ng-class=&#34;{&#39;red&#39;: record.fields.beds &lt; aggtype, &#39;green&#39; : record.fields.beds &gt;aggtype}&#34;&gt;
+                            &lt;strong style=&#34;font-size:20px;&#34;&gt;{{ aggtype | number : 1 }}&lt;/strong&gt;
+                        &lt;/li&gt;
+                    &lt;/div&gt;
+                    &lt;br/&gt;
+                    &lt;div style=&#34;&#34; ods-aggregation=&#34;aggstate&#34; ods-aggregation-context=&#34;state&#34;
+                         ods-aggregation-function=&#34;AVG&#34; ods-aggregation-expression=&#34;beds&#34;&gt;
+                        &lt;li style=&#34;color: #ec643c;font-size: 15px;text-align: center;&#34;&gt;
+                            &lt;strong&gt;{{record.fields.state}}&lt;/strong&gt;
+                        &lt;/li&gt;
+                        &lt;li ng-if=&#34;!aggstate&#34; style=&#34;text-align:center;font-size:20px&#34;&gt;
+                            &lt;ods-spinner&gt;&lt;/ods-spinner&gt;
+                        &lt;/li&gt;
+                        &lt;li ng-if=&#34;aggstate&#34; style=&#34;text-align:center;&#34;
+                            ng-class=&#34;{&#39;red&#39;: record.fields.beds &lt; aggstate, &#39;green&#39; : record.fields.beds &gt;aggstate}&#34;&gt;
+                            &lt;strong style=&#34;font-size:20px;&#34;&gt;{{ aggstate | number : 1 }}&lt;/strong&gt;
+                        &lt;/li&gt;
+                    &lt;/div&gt;
+                &lt;/ods-dataset-context&gt;
+                &lt;li style=&#34;margin-top: 20px&#34;&gt;
+                    &lt;ul style=&#34;list-style-type: none; color: #2c3f56;padding:0 0 15px;margin-top:0px;&#34;&gt;
+                        &lt;li style=&#34;display: inline;float:left;&#34;&gt;
+                            &lt;strong style=&#34;font-size:15px;&#34;&gt;
+                                &lt;i aria-hidden=&#34;true&#34; class=&#34;fa fa-users&#34;&gt;&lt;/i&gt;Population/Beds : {{record.fields.beds}}
+                            &lt;/strong&gt;
+                        &lt;/li&gt;
+                        &lt;li style=&#34;display: inline;float:right;&#34;&gt;
+                            &lt;strong style=&#34;font-size:13px;&#34;&gt;
+                                &lt;a ng-href=&#34;{{record.fields.website}}&#34; style=&#34;color:#ec643c;&#34; target=&#34;_blank&#34;&gt;Source&lt;/a&gt;
+                            &lt;/strong&gt;
+                            &lt;i class=&#34;fa fa-external-link&#34; style=&#34;color:#ec643c;&#34;&gt;&lt;/i&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/ods-map-layer&gt;
+    &lt;/ods-map&gt;
+&lt;/ods-dataset-context&gt;</code></pre>
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-custom-tooltip-3-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>.leaflet-popup-content {
+    width: 350px !important;
+}
+.caption {
+    position: absolute;
+    right: 0px;
+    top: -25px;
+}
+.red {
+    color: #E23F32;
+}
+.red:before {
+    content: &#39;\f0ab&#39;;
+    font-family: FontAwesome;
+}
+.green {
+    color: #3EA538;
+}
+.green:before {
+    content: &#39;\f0aa&#39;;
+    font-family: FontAwesome;
+}
+</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-custom-tooltip-3";
+            iframe = document.getElementById(iframeId);
+             
+            size =  null 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+        </div>
+    </div>
+    
+</section>
+
+
+    </div>
+</div>
+
+<footer class="footer">
+    <a href="https://www.opendatasoft.com"
+       class="footer-link"
+       title="Opendatasoft website">
+        <img src="/img/ods-logo.svg"
+             class="footer-logo"
+             alt="Opendatasoft logo"
+        />
+    </a>
+    <span class="footer-copyright">
+        &copy; Copyright 2020
+    </span>
+</footer>
+
+
+
+
+
+
+
+<script>var process = { "env": { "NODE_ENV": "production" } }</script>
+<script type="text/javascript"
+        src="/index.min.11fcc0d6f8a0b04671eb0a5fb2bb06b89618c60744ea73effdb557ad43fd44a6.js"
+        defer></script>
+
+</body>
+</html>

@@ -1,5 +1,5 @@
 ---
-title: "Reuse example - Shanghai university ranking"
+title: "map refine 2"
 ---
 
 ## Reuse example - Shanghai university ranking

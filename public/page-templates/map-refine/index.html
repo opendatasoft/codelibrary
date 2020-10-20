@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+    <title>
+        
+Map Refine &ndash; Codelibrary
+
+    </title>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41201218-21"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-41201218-21');
+    </script>
+
+    
+    
+
+    
+    
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css"
+          integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8="
+          crossorigin="anonymous">
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href="/scss/main.css" />
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png">
+    <link rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png">
+    <link rel="shortcut icon"
+          href="/favicon.ico">
+</head>
+
+<body>
+
+<nav class="navbar is-fixed-top"
+     role="navigation"
+     aria-label="Main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item"
+           href="/"
+           title="Back to the homepage">
+            <img src="/img/ods-logo-helphub.svg"
+                 alt="Helphub Logo"/>
+        </a>
+        <button class="navbar-burger burger"
+                type="button"
+                data-target="helphubNavbar"
+                aria-controls="helphubNavbar"
+                aria-expanded="false"
+                aria-label="Menu">
+            Help Hub
+        </button>
+    </div>
+    <div class="navbar-menu"
+         id="helphubNavbar">
+        <div class="navbar-start">
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/">
+                Help Hub
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/platform/en/">
+                User guide
+            </a>
+            <a class="navbar-item is-active"
+               href="https://discovery.opendatasoft.com">
+                Code Library
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/faq-glossary/en/">
+                FAQ
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/widgets/">
+                Widgets
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/en/apis/">
+                APIs
+            </a>
+            <a class="navbar-item"
+               href="https://academy.opendatasoft.com/page/homepage">
+                Academy
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="columns codelibrary">
+    <div class="column is-narrow">
+        <aside class="sidebar menu">
+    <a href="https://codelibrary.opendatasoft.com"
+       class="sidebar-logo-link"
+       title="Go to Codelibrary homepage">
+        <img src="/img/ods-codelibrary-logo.svg"
+             class="sidebar-logo"
+             alt="Codelibrary Logo">
+    </a>
+
+    <div id="algolia-box"></div>
+    <div id="algolia-results"></div>
+
+    
+    <ul class="menu-list">
+        <li>
+            <a class="sidebar-subtitle"
+               href="https://codelibrary.opendatasoft.com">
+                Home
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="/components/"
+               class="sidebar-subtitle">
+                Components
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="sidebar-subtitle " href="/page-templates/">
+            Page templates
+            </a>
+            <ul>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/page-templates/home-1/">Home 1</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/page-templates/home-2/">Home 2</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/page-templates/home-3/">Home 3</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/page-templates/listing-generator/">Listing generator</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/page-templates/map-listing/">Map Listing</a>
+                </li>
+                
+                <li>
+                    <a class="is-active" href="https://codelibrary.opendatasoft.com/page-templates/map-refine/">Map Refine</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/page-templates/observatory/">Observatory</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/page-templates/regional-covid/">Regional COVID-19</a>
+                </li>
+                
+            </ul>
+        </li>
+        
+        
+        
+        <li>
+            <a href="/portal-themes/"
+               class="sidebar-subtitle">
+                Portal themes
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a href="/widget-tricks/"
+               class="sidebar-subtitle">
+                Widget tricks
+            </a>
+        </li>
+        
+        
+    </ul>
+    <p class="menu-label">
+        Tags
+    </p>
+    <div class="tags">
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/aggregation/">
+            aggregation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/chart/">
+            chart
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/date/">
+            date
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/display/">
+            display
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/filter/">
+            filter
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/geo/">
+            geo
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/list/">
+            list
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/map/">
+            map
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/navigation/">
+            navigation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-aggregation/">
+            ods-aggregation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-analysis/">
+            ods-analysis
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-maps/">
+            ods-maps
+        </a>
+        
+    </div>
+</aside>
+
+    </div>
+    <div class="column">
+        
+
+<section>
+    <div class="content-header container is-max-desktop mb-5">
+        <div class="content">
+            <h1 class="title" id="page-template---map--refine">
+  Page template - Map &amp; Refine
+  
+</h1>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <h2 class="title" id="use-a-map-as-a-selector-and-display-results-on-the-side">
+  Use a map as a selector and display results on the side
+  
+    <a class="is-link" href="#use-a-map-as-a-selector-and-display-results-on-the-side">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+<p>This template propose a 2 steps dynamic view. First you propose a map with clickable points or shapes.</p>
+<ul>
+<li>Global information are displayed on the side.</li>
+<li>Then, the user clic on the map, it then open a drawer with specific information relative to the selection.</li>
+<li>Finally, if the user wants to know more about this selection, a second drawer expend to take almost all the screen width.</li>
+</ul>
+<p><strong>This template is the best solution when you desire to display a lot of information and that just can&rsquo;t fit in the default tooltip !</strong>
+<strong>N.B.:</strong> grey areas help the user to come back to the map quickly if they want to change their selection</p>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-map-refine-1"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;ods-box donotcopy-specific\&#34;\n     ng-init=\&#34;donotcopy = { &#39;simulaterefineonclick&#39; : false}\&#34;\u003e\n    \u003cdiv class=\&#34;map-drawer-container\&#34;\n         ng-class=\&#34;{\n                   &#39;map-drawer-container--active&#39;: donotcopy.simulaterefineonclick,\n                   &#39;map-drawer-container--active-full&#39;: drawer.status}\&#34;\n         ng-init=\&#34;drawer = {&#39;status&#39;:false}\&#34;\u003e\n        \u003cdiv class=\&#34;map-drawer-container__map\&#34;\u003e\n            \u003cdiv class=\&#34;map-drawer-container__backdrop\&#34;\n                 ng-click=\&#34;donotcopy.simulaterefineonclick = undefined;\n                           drawer.status = false\&#34;\n                 ng-class=\&#34;{&#39;map-drawer-container__backdrop--active&#39;: donotcopy.simulaterefineonclick }\&#34;\u003e\n            \u003c/div\u003e\n            \u003ch1\u003e\n                Map\n            \u003c/h1\u003e\n            \u003cdiv class=\&#34;ods-button\&#34;\n                 ng-click=\&#34;donotcopy.simulaterefineonclick = true\&#34;\u003eRefine-on-click\u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;map-drawer-container__info\&#34;\u003e\n            \u003ch2\u003e\n                General info here\n            \u003c/h2\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;map-drawer-container__drawer map-drawer-container__drawer__partial\&#34;\u003e\n            \u003cdiv class=\&#34;map-drawer-container__drawer__close\&#34;\n                 ng-click=\&#34;donotcopy.simulaterefineonclick = undefined;\n                           drawer.status = false\&#34;\u003e\n                \u003ci class=\&#34;fa fa-times\&#34;\u003e\u003c/i\u003e\n            \u003c/div\u003e\n            \u003ch2\u003e\n                Specific info here\n            \u003c/h2\u003e\n            \u003cdiv class=\&#34;ods-button\&#34;\n                 ng-click=\&#34;drawer.status = !drawer.status\&#34;\u003e\n                Expend / See more\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;map-drawer-container__drawer map-drawer-container__drawer__full\&#34;\u003e\n            \u003ch2\u003e\n                More info here\n            \u003c/h2\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\n      \n\u003c/div\u003e&#34;,
+               "css": &#34;/* TEMPLATE */\n:root {\n    --drawer-width: 270px;\n    --map-width: calc(100% - var(--drawer-width));\n    --backdrop-width-when-modal-active: 75px;\n    --drawer-background-color: white;\n}\n.map-drawer-container {\n    display: flex;\n    position: relative;\n    overflow: hidden;\n}\n.map-drawer-container__map {\n    position:relative;\n    width: var(--map-width);\n}\n.map-drawer-container__info {\n    width: var(--drawer-width);\n}\n/* BACKDROP (black screen when modal active) */\n.map-drawer-container__backdrop {\n    visibility: hidden;\n    opacity: 0;\n    position: absolute;\n    height: 100%;\n    width: 100%;\n    z-index: 9;\n    background-color: #000;\n    cursor: default;\n    -webkit-transition: visibility .5s,opacity .5s;\n    transition: visibility .5s,opacity .5s;\n}\n.map-drawer-container__backdrop--active {\n    visibility: visible;\n    opacity: .45; /* make a more or less darker backdrop, 1:totally dark, 0:totally transparent (invisibile) */\n}\n.map-drawer-container__drawer {\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    background-color: var(--drawer-background-color);\n    transition: 0.3s;\n}\n.map-drawer-container__drawer__partial {\n    right: calc(-1 * var(--drawer-width));\n    width: var(--drawer-width);\n    z-index: 11;\n}\n.map-drawer-container__drawer__full {\n    right: calc(-1 * var(--map-width));\n    width: calc(var(--map-width) - var(--backdrop-width-when-modal-active));\n    z-index: 10;\n}\n.map-drawer-container__drawer__close {\n    position: absolute;\n    top: 0px;\n    right: 8px;\n    font-size: 1.5em;\n}\n/* active state partial drawer */\n.map-drawer-container--active .map-drawer-container__drawer__partial {\n    right: 0;\n}\n/* active state full drawer */\n.map-drawer-container--active-full .map-drawer-container__drawer__full {\n    right: var(--drawer-width);\n}\n/* DO NOT COPY */\n.donotcopy-specific .map-drawer-container {\n    height: 600px;\n    text-align: center;\n}\n.donotcopy-specific .map-drawer-container__info,\n.donotcopy-specific .map-drawer-container__drawer__partial,\n.donotcopy-specific .map-drawer-container__drawer__full {\n    border: 4px solid;\n    padding: 50px;\n}\n.donotcopy-specific .map-drawer-container__map {\n    background-color: lightblue;\n}\n.donotcopy-specific .map-drawer-container__info {\n    background-color: lightgray;\n}\n.donotcopy-specific .map-drawer-container__drawer__partial {\n    background-color: lightgreen;\n}\n.donotcopy-specific .map-drawer-container__drawer__full {\n    background-color: lightpink;\n}\n.donotcopy-specific h1, .donotcopy-specific h2 {\n}\n      &#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+        <iframe id="iframe-map-refine-1"
+                width="100%" height="100%"
+                src="about:blank"
+                srcdoc="
+          <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+          </head>
+          <body>
+          <div ng-app='ods-widgets'>
+              &lt;div class=&#34;ods-box donotcopy-specific&#34;
+     ng-init=&#34;donotcopy = { &#39;simulaterefineonclick&#39; : false}&#34;&gt;
+    &lt;div class=&#34;map-drawer-container&#34;
+         ng-class=&#34;{
+                   &#39;map-drawer-container--active&#39;: donotcopy.simulaterefineonclick,
+                   &#39;map-drawer-container--active-full&#39;: drawer.status}&#34;
+         ng-init=&#34;drawer = {&#39;status&#39;:false}&#34;&gt;
+        &lt;div class=&#34;map-drawer-container__map&#34;&gt;
+            &lt;div class=&#34;map-drawer-container__backdrop&#34;
+                 ng-click=&#34;donotcopy.simulaterefineonclick = undefined;
+                           drawer.status = false&#34;
+                 ng-class=&#34;{&#39;map-drawer-container__backdrop--active&#39;: donotcopy.simulaterefineonclick }&#34;&gt;
+            &lt;/div&gt;
+            &lt;h1&gt;
+                Map
+            &lt;/h1&gt;
+            &lt;div class=&#34;ods-button&#34;
+                 ng-click=&#34;donotcopy.simulaterefineonclick = true&#34;&gt;Refine-on-click&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;map-drawer-container__info&#34;&gt;
+            &lt;h2&gt;
+                General info here
+            &lt;/h2&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;map-drawer-container__drawer map-drawer-container__drawer__partial&#34;&gt;
+            &lt;div class=&#34;map-drawer-container__drawer__close&#34;
+                 ng-click=&#34;donotcopy.simulaterefineonclick = undefined;
+                           drawer.status = false&#34;&gt;
+                &lt;i class=&#34;fa fa-times&#34;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;h2&gt;
+                Specific info here
+            &lt;/h2&gt;
+            &lt;div class=&#34;ods-button&#34;
+                 ng-click=&#34;drawer.status = !drawer.status&#34;&gt;
+                Expend / See more
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;map-drawer-container__drawer map-drawer-container__drawer__full&#34;&gt;
+            &lt;h2&gt;
+                More info here
+            &lt;/h2&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+      
+
+          </div>
+          <style type='text/css'>
+              /* TEMPLATE */
+:root {
+    --drawer-width: 270px;
+    --map-width: calc(100% - var(--drawer-width));
+    --backdrop-width-when-modal-active: 75px;
+    --drawer-background-color: white;
+}
+.map-drawer-container {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+.map-drawer-container__map {
+    position:relative;
+    width: var(--map-width);
+}
+.map-drawer-container__info {
+    width: var(--drawer-width);
+}
+/* BACKDROP (black screen when modal active) */
+.map-drawer-container__backdrop {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+    background-color: #000;
+    cursor: default;
+    -webkit-transition: visibility .5s,opacity .5s;
+    transition: visibility .5s,opacity .5s;
+}
+.map-drawer-container__backdrop--active {
+    visibility: visible;
+    opacity: .45; /* make a more or less darker backdrop, 1:totally dark, 0:totally transparent (invisibile) */
+}
+.map-drawer-container__drawer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: var(--drawer-background-color);
+    transition: 0.3s;
+}
+.map-drawer-container__drawer__partial {
+    right: calc(-1 * var(--drawer-width));
+    width: var(--drawer-width);
+    z-index: 11;
+}
+.map-drawer-container__drawer__full {
+    right: calc(-1 * var(--map-width));
+    width: calc(var(--map-width) - var(--backdrop-width-when-modal-active));
+    z-index: 10;
+}
+.map-drawer-container__drawer__close {
+    position: absolute;
+    top: 0px;
+    right: 8px;
+    font-size: 1.5em;
+}
+/* active state partial drawer */
+.map-drawer-container--active .map-drawer-container__drawer__partial {
+    right: 0;
+}
+/* active state full drawer */
+.map-drawer-container--active-full .map-drawer-container__drawer__full {
+    right: var(--drawer-width);
+}
+/* DO NOT COPY */
+.donotcopy-specific .map-drawer-container {
+    height: 600px;
+    text-align: center;
+}
+.donotcopy-specific .map-drawer-container__info,
+.donotcopy-specific .map-drawer-container__drawer__partial,
+.donotcopy-specific .map-drawer-container__drawer__full {
+    border: 4px solid;
+    padding: 50px;
+}
+.donotcopy-specific .map-drawer-container__map {
+    background-color: lightblue;
+}
+.donotcopy-specific .map-drawer-container__info {
+    background-color: lightgray;
+}
+.donotcopy-specific .map-drawer-container__drawer__partial {
+    background-color: lightgreen;
+}
+.donotcopy-specific .map-drawer-container__drawer__full {
+    background-color: lightpink;
+}
+.donotcopy-specific h1, .donotcopy-specific h2 {
+}
+      
+          </style>
+          </body>
+          ">
+        </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-map-refine-1-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-map-refine-1-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right">
+                <a class="button is-primary is-outlined edit-on-codepen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-map-refine-1').submit()">
+                    Edit on CodePen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-map-refine-1-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;ods-box donotcopy-specific&#34;
+     ng-init=&#34;donotcopy = { &#39;simulaterefineonclick&#39; : false}&#34;&gt;
+    &lt;div class=&#34;map-drawer-container&#34;
+         ng-class=&#34;{
+                   &#39;map-drawer-container--active&#39;: donotcopy.simulaterefineonclick,
+                   &#39;map-drawer-container--active-full&#39;: drawer.status}&#34;
+         ng-init=&#34;drawer = {&#39;status&#39;:false}&#34;&gt;
+        &lt;div class=&#34;map-drawer-container__map&#34;&gt;
+            &lt;div class=&#34;map-drawer-container__backdrop&#34;
+                 ng-click=&#34;donotcopy.simulaterefineonclick = undefined;
+                           drawer.status = false&#34;
+                 ng-class=&#34;{&#39;map-drawer-container__backdrop--active&#39;: donotcopy.simulaterefineonclick }&#34;&gt;
+            &lt;/div&gt;
+            &lt;h1&gt;
+                Map
+            &lt;/h1&gt;
+            &lt;div class=&#34;ods-button&#34;
+                 ng-click=&#34;donotcopy.simulaterefineonclick = true&#34;&gt;Refine-on-click&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;map-drawer-container__info&#34;&gt;
+            &lt;h2&gt;
+                General info here
+            &lt;/h2&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;map-drawer-container__drawer map-drawer-container__drawer__partial&#34;&gt;
+            &lt;div class=&#34;map-drawer-container__drawer__close&#34;
+                 ng-click=&#34;donotcopy.simulaterefineonclick = undefined;
+                           drawer.status = false&#34;&gt;
+                &lt;i class=&#34;fa fa-times&#34;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;h2&gt;
+                Specific info here
+            &lt;/h2&gt;
+            &lt;div class=&#34;ods-button&#34;
+                 ng-click=&#34;drawer.status = !drawer.status&#34;&gt;
+                Expend / See more
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;map-drawer-container__drawer map-drawer-container__drawer__full&#34;&gt;
+            &lt;h2&gt;
+                More info here
+            &lt;/h2&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+      
+</code></pre>
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-map-refine-1-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>/* TEMPLATE */
+:root {
+    --drawer-width: 270px;
+    --map-width: calc(100% - var(--drawer-width));
+    --backdrop-width-when-modal-active: 75px;
+    --drawer-background-color: white;
+}
+.map-drawer-container {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+.map-drawer-container__map {
+    position:relative;
+    width: var(--map-width);
+}
+.map-drawer-container__info {
+    width: var(--drawer-width);
+}
+/* BACKDROP (black screen when modal active) */
+.map-drawer-container__backdrop {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+    background-color: #000;
+    cursor: default;
+    -webkit-transition: visibility .5s,opacity .5s;
+    transition: visibility .5s,opacity .5s;
+}
+.map-drawer-container__backdrop--active {
+    visibility: visible;
+    opacity: .45; /* make a more or less darker backdrop, 1:totally dark, 0:totally transparent (invisibile) */
+}
+.map-drawer-container__drawer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: var(--drawer-background-color);
+    transition: 0.3s;
+}
+.map-drawer-container__drawer__partial {
+    right: calc(-1 * var(--drawer-width));
+    width: var(--drawer-width);
+    z-index: 11;
+}
+.map-drawer-container__drawer__full {
+    right: calc(-1 * var(--map-width));
+    width: calc(var(--map-width) - var(--backdrop-width-when-modal-active));
+    z-index: 10;
+}
+.map-drawer-container__drawer__close {
+    position: absolute;
+    top: 0px;
+    right: 8px;
+    font-size: 1.5em;
+}
+/* active state partial drawer */
+.map-drawer-container--active .map-drawer-container__drawer__partial {
+    right: 0;
+}
+/* active state full drawer */
+.map-drawer-container--active-full .map-drawer-container__drawer__full {
+    right: var(--drawer-width);
+}
+/* DO NOT COPY */
+.donotcopy-specific .map-drawer-container {
+    height: 600px;
+    text-align: center;
+}
+.donotcopy-specific .map-drawer-container__info,
+.donotcopy-specific .map-drawer-container__drawer__partial,
+.donotcopy-specific .map-drawer-container__drawer__full {
+    border: 4px solid;
+    padding: 50px;
+}
+.donotcopy-specific .map-drawer-container__map {
+    background-color: lightblue;
+}
+.donotcopy-specific .map-drawer-container__info {
+    background-color: lightgray;
+}
+.donotcopy-specific .map-drawer-container__drawer__partial {
+    background-color: lightgreen;
+}
+.donotcopy-specific .map-drawer-container__drawer__full {
+    background-color: lightpink;
+}
+.donotcopy-specific h1, .donotcopy-specific h2 {
+}
+      </code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-map-refine-1";
+            iframe = document.getElementById(iframeId);
+             
+            size =  null 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <h2 class="title" id="reuse-example---shanghai-university-ranking">
+  Reuse example - Shanghai university ranking
+  
+    <a class="is-link" href="#reuse-example---shanghai-university-ranking">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+<p>Pick a country to see it&rsquo;s universtities
+Click on the chart icon to see it&rsquo;s ranking evolution over years</p>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-map-refine-2"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;shanghai,shanghaihistoric\&#34;\n                     shanghai-dataset=\&#34;shanghai-world-university-ranking\&#34;\n                     shanghai-domain=\&#34;userclub\&#34;\n                     shanghaihistoric-dataset=\&#34;shanghai-world-university-ranking\&#34;\n                     shanghaihistoric-domain=\&#34;userclub\&#34;\n                     shanghaihistoric-parameters=\&#34;{&#39;sort&#39;:&#39;year&#39;}\&#34;\u003e\n    \u003cdiv class=\&#34;ods-box\&#34;\u003e\n        \u003ch2\u003e\n            Shanghai World University Ranking\n        \u003c/h2\u003e\n        \u003cdiv class=\&#34;map-drawer-container\&#34;\n             ng-class=\&#34;{\n                       &#39;map-drawer-container--active&#39;: shanghai.parameters[&#39;refine.country&#39;],\n                       &#39;map-drawer-container--active-full&#39;: drawer.status}\&#34;\n             ng-init=\&#34;drawer = {&#39;status&#39;:false}\&#34;\u003e\n            \u003cdiv class=\&#34;map-drawer-container__map\&#34;\u003e\n                \u003cdiv class=\&#34;map-drawer-container__backdrop\&#34;\n                     ng-click=\&#34;shanghai.parameters[&#39;refine.country&#39;] = undefined;\n                               shanghaihistoric.parameters[&#39;refine.university_namex&#39;] = undefined;\n                               drawer.status = false\&#34;\n                     ng-class=\&#34;{&#39;map-drawer-container__backdrop--active&#39;: shanghai.parameters[&#39;refine.country&#39;] }\&#34;\u003e\n                \u003c/div\u003e\n                \u003cods-map no-refit=\&#34;false\&#34;\n                         scroll-wheel-zoom=\&#34;true\&#34;\n                         display-control=\&#34;false\&#34;\n                         toolbar-fullscreen=\&#34;false\&#34;\n                         toolbar-drawing=\&#34;false\&#34;\n                         toolbar-geolocation=\&#34;false\&#34;\n                         location=\&#34;2,33.39542,4.10444\&#34;\u003e\n                    \u003cods-map-layer context=\&#34;shanghai\&#34;\n                                   display=\&#34;choropleth\&#34;\n                                   function=\&#34;AVG\&#34;\n                                   expression=\&#34;world_rank_integer\&#34;\n                                   color-numeric-ranges=\&#34;{&#39;120&#39;:&#39;#000000&#39;,&#39;175&#39;:&#39;#2E3539&#39;,&#39;225&#39;:&#39;#5D6A73&#39;,&#39;350&#39;:&#39;#8C9FAD&#39;,&#39;500&#39;:&#39;#BBD5E7&#39;}\&#34;\n                                   color-undefined=\&#34;#FFFFFF\&#34;\n                                   color-out-of-bounds=\&#34;#FFFFFF\&#34;\n                                   color-numeric-range-min=\&#34;1\&#34;\n                                   shape-opacity=\&#34;0.9\&#34;\n                                   caption=\&#34;false\&#34;\n                                   refine-on-click-context=\&#34;[shanghai,shanghaihistoric]\&#34;\n                                   refine-on-click-shanghai-context-field=\&#34;country\&#34;\n                                   refine-on-click-shanghai-map-field=\&#34;country\&#34;\n                                   refine-on-click-shanghai-replace-refine=\&#34;true\&#34;\n                                   refine-on-click-shanghaihistoric-context-field=\&#34;country\&#34;\n                                   refine-on-click-shanghaihistoric-map-field=\&#34;country\&#34;\n                                   refine-on-click-shanghaihistoric-replace-refine=\&#34;true\&#34;\u003e\n                    \u003c/ods-map-layer\u003e\n                \u003c/ods-map\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;map-drawer-container__info\&#34;\u003e\n                \u003ch2\u003e\n                    Pick a country on the map\n                \u003c/h2\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;map-drawer-container__drawer map-drawer-container__drawer__partial\&#34;\u003e\n                \u003cdiv class=\&#34;map-drawer-container__drawer__close\&#34;\n                     ng-click=\&#34;shanghai.parameters[&#39;refine.country&#39;] = undefined;\n                               shanghaihistoric.parameters[&#39;refine.university_namex&#39;] = undefined;\n                               drawer.status = false\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-times\&#34;\u003e\u003c/i\u003e\n                \u003c/div\u003e\n                \u003ch2\u003e\n                    {{ shanghai.parameters[&#39;refine.country&#39;] }} universities\n                \u003c/h2\u003e\n                \u003ch3\u003e\n                    sorted by average ranking\n                \u003c/h3\u003e\n                \u003cdiv ods-analysis=\&#34;univs\&#34;\n                     ods-analysis-context=\&#34;shanghai\&#34;\n                     ods-analysis-x=\&#34;university_name\&#34;\n                     ods-analysis-max=\&#34;0\&#34;\n                     ods-analysis-serie-agg=\&#34;AVG(world_rank_integer)\&#34;\n                     ods-analysis-sort=\&#34;-agg\&#34;\u003e\n                    \u003cul\u003e\n                        \u003cli class=\&#34;univ\&#34;\u003e\n                            \u003cdiv class=\&#34;univ-name\&#34;\u003e\n                                University\n                            \u003c/div\u003e\n                            \u003cdiv class=\&#34;univ-score\&#34;\u003e\n                                Avg. rank\n                            \u003c/div\u003e\n                            \u003cdiv class=\&#34;univ-seemore\&#34;\u003e\n                                \u003ci class=\&#34;fa fa-line-chart\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                            \u003c/div\u003e\n                        \u003cli ng-repeat=\&#34;univ in univs.results\&#34;\n                            class=\&#34;univ\&#34;\u003e\n                            \u003cdiv class=\&#34;univ-name\&#34;\n                                 ng-class=\&#34;{&#39;univ-selected&#39;: shanghaihistoric.parameters[&#39;refine.university_name&#39;] == univ.x}\&#34;\u003e\n                                {{ univ.x }}\n                            \u003c/div\u003e\n                            \u003cdiv class=\&#34;univ-score\&#34;\u003e\n                                {{ univ.agg | number : 0 }}\n                            \u003c/div\u003e\n                            \u003cdiv class=\&#34;univ-seemore\&#34;\n                                 ng-click=\&#34;shanghaihistoric.parameters[&#39;refine.university_name&#39;] = univ.x;\n                                           drawer.status = true\&#34;\u003e\n                                \u003ci class=\&#34;fa fa-line-chart\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                            \u003c/div\u003e\n                        \u003c/li\u003e\n                    \u003c/ul\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;map-drawer-container__drawer map-drawer-container__drawer__full\&#34;\u003e\n                \u003ch2\u003e\n                    {{ shanghaihistoric.parameters[&#39;refine.university_name&#39;] }} ({{ shanghai.parameters[&#39;refine.country&#39;] }})\n                \u003c/h2\u003e\n                \u003cods-tabs layout=\&#34;simple-nav\&#34; pane-auto-unload=\&#34;true\&#34;\u003e\n                    \u003cods-pane title=\&#34;Chart\&#34;\u003e\n                        \u003cods-chart timescale=\&#34;year\&#34; display-legend=\&#34;false\&#34; align-month=\&#34;false\&#34;\u003e\n                            \u003cods-chart-query context=\&#34;shanghaihistoric\&#34; field-x=\&#34;year\&#34; maxpoints=\&#34;200\&#34; timescale=\&#34;year\&#34;\u003e\n                                \u003cods-chart-serie expression-y=\&#34;world_rank_integer\&#34; chart-type=\&#34;column\&#34; function-y=\&#34;AVG\&#34; label-y=\&#34;Ranking range per year\&#34; color=\&#34;#142E7B\&#34; display-units=\&#34;true\&#34; scientific-display=\&#34;true\&#34;\u003e\n                                \u003c/ods-chart-serie\u003e\n                            \u003c/ods-chart-query\u003e\n                        \u003c/ods-chart\u003e\n                    \u003c/ods-pane\u003e\n                    \u003cods-pane title=\&#34;Table\&#34; pane-auto-unload=\&#34;true\&#34;\u003e\n                        \u003cods-table context=\&#34;shanghaihistoric\&#34;\n                                   displayed-fields=\&#34;world_rank,national_rank,year\&#34;\u003e\u003c/ods-table\u003e\n                    \u003c/ods-pane\u003e\n                \u003c/ods-tabs\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+               "css": &#34;/* Tempalte maprefine */\n:root {\n    --drawer-width: 320px;\n    --map-width: calc(100% - var(--drawer-width));\n    --backdrop-width-when-modal-active: 75px;\n    --drawer-background-color: white;\n}\n.map-drawer-container {\n    display: flex;\n    position: relative;\n    overflow: hidden;\n}\n.map-drawer-container__map {\n    position:relative;\n    width: var(--map-width);\n}\n.map-drawer-container__info {\n    width: var(--drawer-width);\n}\n/* BACKDROP (black screen when modal active) */\n.map-drawer-container__backdrop {\n    visibility: hidden;\n    opacity: 0;\n    position: absolute;\n    height: 100%;\n    width: 100%;\n    z-index: 9;\n    background-color: #000;\n    cursor: default;\n    -webkit-transition: visibility .5s,opacity .5s;\n    transition: visibility .5s,opacity .5s;\n}\n.map-drawer-container__backdrop--active {\n    visibility: visible;\n    opacity: .45; /* make a more or less darker backdrop, 1:totally dark, 0:totally transparent (invisibile) */\n}\n.map-drawer-container__drawer {\n    position: absolute;\n    top: 0;\n    bottom: 0;\n    background-color: var(--drawer-background-color);\n    transition: 0.3s;\n}\n.map-drawer-container__drawer__partial {\n    right: calc(-1 * var(--drawer-width));\n    width: var(--drawer-width);\n    z-index: 11;\n}\n.map-drawer-container__drawer__full {\n    right: calc(-1 * var(--map-width));\n    width: calc(var(--map-width) - var(--backdrop-width-when-modal-active));\n    z-index: 10;\n}\n.map-drawer-container__drawer__close {\n    position: absolute;\n    top: 0px;\n    right: 8px;\n    font-size: 1.5em;\n}\n/* active state partial drawer */\n.map-drawer-container--active .map-drawer-container__drawer__partial {\n    right: 0;\n}\n/* active state full drawer */\n.map-drawer-container--active-full .map-drawer-container__drawer__full {\n    right: var(--drawer-width);\n}\n/* Example specific */\n.odswidget.odswidget-map {\n    height: 500px;\n}\n.map-drawer-container__info {\n    background-color: #f8f8f8;\n    padding: 5px 10px;\n}\n.app h2, .map-drawer-container__drawer h2, .map-drawer-container__info h2 {\n    font-weight: 300;\n    color: black;\n    text-align: center;\n}\n.map-drawer-container__drawer {\n    padding: 5px 10px;\n}\n.map-drawer-container__drawer h3 {\n    font-weight: 100;\n    color: black;\n    margin-top: 0px;\n    text-align: center;\n}\nul {\n    list-style: none;\n    position: relative;\n    padding: 0;\n    overflow: auto;\n}\nli.univ {\n    display: flex;\n    justify-content: space-between;\n    margin: 3px 0px;\n}\nli.univ:first-child {\n    border-bottom: 1px solid;\n    font-weight: 200;\n}\n.univ-name {\n    width: 100%;\n    font-weight: 100;\n    margin-left: 5px;\n}\n.univ-score {\n    margin: 0 5px;\n    font-weight: 600;\n}\nli.univ:first-child .univ-score {\n    width: 100%;\n    text-align: right;\n}\n.univ-selected {\n    border-left: 3px solid;\n    padding-left: 2px;\n    margin-left: 0;\n}\n      \n&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+        <iframe id="iframe-map-refine-2"
+                width="100%" height="100%"
+                src="about:blank"
+                srcdoc="
+          <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+          </head>
+          <body>
+          <div ng-app='ods-widgets'>
+              &lt;ods-dataset-context context=&#34;shanghai,shanghaihistoric&#34;
+                     shanghai-dataset=&#34;shanghai-world-university-ranking&#34;
+                     shanghai-domain=&#34;userclub&#34;
+                     shanghaihistoric-dataset=&#34;shanghai-world-university-ranking&#34;
+                     shanghaihistoric-domain=&#34;userclub&#34;
+                     shanghaihistoric-parameters=&#34;{&#39;sort&#39;:&#39;year&#39;}&#34;&gt;
+    &lt;div class=&#34;ods-box&#34;&gt;
+        &lt;h2&gt;
+            Shanghai World University Ranking
+        &lt;/h2&gt;
+        &lt;div class=&#34;map-drawer-container&#34;
+             ng-class=&#34;{
+                       &#39;map-drawer-container--active&#39;: shanghai.parameters[&#39;refine.country&#39;],
+                       &#39;map-drawer-container--active-full&#39;: drawer.status}&#34;
+             ng-init=&#34;drawer = {&#39;status&#39;:false}&#34;&gt;
+            &lt;div class=&#34;map-drawer-container__map&#34;&gt;
+                &lt;div class=&#34;map-drawer-container__backdrop&#34;
+                     ng-click=&#34;shanghai.parameters[&#39;refine.country&#39;] = undefined;
+                               shanghaihistoric.parameters[&#39;refine.university_namex&#39;] = undefined;
+                               drawer.status = false&#34;
+                     ng-class=&#34;{&#39;map-drawer-container__backdrop--active&#39;: shanghai.parameters[&#39;refine.country&#39;] }&#34;&gt;
+                &lt;/div&gt;
+                &lt;ods-map no-refit=&#34;false&#34;
+                         scroll-wheel-zoom=&#34;true&#34;
+                         display-control=&#34;false&#34;
+                         toolbar-fullscreen=&#34;false&#34;
+                         toolbar-drawing=&#34;false&#34;
+                         toolbar-geolocation=&#34;false&#34;
+                         location=&#34;2,33.39542,4.10444&#34;&gt;
+                    &lt;ods-map-layer context=&#34;shanghai&#34;
+                                   display=&#34;choropleth&#34;
+                                   function=&#34;AVG&#34;
+                                   expression=&#34;world_rank_integer&#34;
+                                   color-numeric-ranges=&#34;{&#39;120&#39;:&#39;#000000&#39;,&#39;175&#39;:&#39;#2E3539&#39;,&#39;225&#39;:&#39;#5D6A73&#39;,&#39;350&#39;:&#39;#8C9FAD&#39;,&#39;500&#39;:&#39;#BBD5E7&#39;}&#34;
+                                   color-undefined=&#34;#FFFFFF&#34;
+                                   color-out-of-bounds=&#34;#FFFFFF&#34;
+                                   color-numeric-range-min=&#34;1&#34;
+                                   shape-opacity=&#34;0.9&#34;
+                                   caption=&#34;false&#34;
+                                   refine-on-click-context=&#34;[shanghai,shanghaihistoric]&#34;
+                                   refine-on-click-shanghai-context-field=&#34;country&#34;
+                                   refine-on-click-shanghai-map-field=&#34;country&#34;
+                                   refine-on-click-shanghai-replace-refine=&#34;true&#34;
+                                   refine-on-click-shanghaihistoric-context-field=&#34;country&#34;
+                                   refine-on-click-shanghaihistoric-map-field=&#34;country&#34;
+                                   refine-on-click-shanghaihistoric-replace-refine=&#34;true&#34;&gt;
+                    &lt;/ods-map-layer&gt;
+                &lt;/ods-map&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;map-drawer-container__info&#34;&gt;
+                &lt;h2&gt;
+                    Pick a country on the map
+                &lt;/h2&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;map-drawer-container__drawer map-drawer-container__drawer__partial&#34;&gt;
+                &lt;div class=&#34;map-drawer-container__drawer__close&#34;
+                     ng-click=&#34;shanghai.parameters[&#39;refine.country&#39;] = undefined;
+                               shanghaihistoric.parameters[&#39;refine.university_namex&#39;] = undefined;
+                               drawer.status = false&#34;&gt;
+                    &lt;i class=&#34;fa fa-times&#34;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;h2&gt;
+                    {{ shanghai.parameters[&#39;refine.country&#39;] }} universities
+                &lt;/h2&gt;
+                &lt;h3&gt;
+                    sorted by average ranking
+                &lt;/h3&gt;
+                &lt;div ods-analysis=&#34;univs&#34;
+                     ods-analysis-context=&#34;shanghai&#34;
+                     ods-analysis-x=&#34;university_name&#34;
+                     ods-analysis-max=&#34;0&#34;
+                     ods-analysis-serie-agg=&#34;AVG(world_rank_integer)&#34;
+                     ods-analysis-sort=&#34;-agg&#34;&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&#34;univ&#34;&gt;
+                            &lt;div class=&#34;univ-name&#34;&gt;
+                                University
+                            &lt;/div&gt;
+                            &lt;div class=&#34;univ-score&#34;&gt;
+                                Avg. rank
+                            &lt;/div&gt;
+                            &lt;div class=&#34;univ-seemore&#34;&gt;
+                                &lt;i class=&#34;fa fa-line-chart&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;li ng-repeat=&#34;univ in univs.results&#34;
+                            class=&#34;univ&#34;&gt;
+                            &lt;div class=&#34;univ-name&#34;
+                                 ng-class=&#34;{&#39;univ-selected&#39;: shanghaihistoric.parameters[&#39;refine.university_name&#39;] == univ.x}&#34;&gt;
+                                {{ univ.x }}
+                            &lt;/div&gt;
+                            &lt;div class=&#34;univ-score&#34;&gt;
+                                {{ univ.agg | number : 0 }}
+                            &lt;/div&gt;
+                            &lt;div class=&#34;univ-seemore&#34;
+                                 ng-click=&#34;shanghaihistoric.parameters[&#39;refine.university_name&#39;] = univ.x;
+                                           drawer.status = true&#34;&gt;
+                                &lt;i class=&#34;fa fa-line-chart&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;map-drawer-container__drawer map-drawer-container__drawer__full&#34;&gt;
+                &lt;h2&gt;
+                    {{ shanghaihistoric.parameters[&#39;refine.university_name&#39;] }} ({{ shanghai.parameters[&#39;refine.country&#39;] }})
+                &lt;/h2&gt;
+                &lt;ods-tabs layout=&#34;simple-nav&#34; pane-auto-unload=&#34;true&#34;&gt;
+                    &lt;ods-pane title=&#34;Chart&#34;&gt;
+                        &lt;ods-chart timescale=&#34;year&#34; display-legend=&#34;false&#34; align-month=&#34;false&#34;&gt;
+                            &lt;ods-chart-query context=&#34;shanghaihistoric&#34; field-x=&#34;year&#34; maxpoints=&#34;200&#34; timescale=&#34;year&#34;&gt;
+                                &lt;ods-chart-serie expression-y=&#34;world_rank_integer&#34; chart-type=&#34;column&#34; function-y=&#34;AVG&#34; label-y=&#34;Ranking range per year&#34; color=&#34;#142E7B&#34; display-units=&#34;true&#34; scientific-display=&#34;true&#34;&gt;
+                                &lt;/ods-chart-serie&gt;
+                            &lt;/ods-chart-query&gt;
+                        &lt;/ods-chart&gt;
+                    &lt;/ods-pane&gt;
+                    &lt;ods-pane title=&#34;Table&#34; pane-auto-unload=&#34;true&#34;&gt;
+                        &lt;ods-table context=&#34;shanghaihistoric&#34;
+                                   displayed-fields=&#34;world_rank,national_rank,year&#34;&gt;&lt;/ods-table&gt;
+                    &lt;/ods-pane&gt;
+                &lt;/ods-tabs&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+
+          </div>
+          <style type='text/css'>
+              /* Tempalte maprefine */
+:root {
+    --drawer-width: 320px;
+    --map-width: calc(100% - var(--drawer-width));
+    --backdrop-width-when-modal-active: 75px;
+    --drawer-background-color: white;
+}
+.map-drawer-container {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+.map-drawer-container__map {
+    position:relative;
+    width: var(--map-width);
+}
+.map-drawer-container__info {
+    width: var(--drawer-width);
+}
+/* BACKDROP (black screen when modal active) */
+.map-drawer-container__backdrop {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+    background-color: #000;
+    cursor: default;
+    -webkit-transition: visibility .5s,opacity .5s;
+    transition: visibility .5s,opacity .5s;
+}
+.map-drawer-container__backdrop--active {
+    visibility: visible;
+    opacity: .45; /* make a more or less darker backdrop, 1:totally dark, 0:totally transparent (invisibile) */
+}
+.map-drawer-container__drawer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: var(--drawer-background-color);
+    transition: 0.3s;
+}
+.map-drawer-container__drawer__partial {
+    right: calc(-1 * var(--drawer-width));
+    width: var(--drawer-width);
+    z-index: 11;
+}
+.map-drawer-container__drawer__full {
+    right: calc(-1 * var(--map-width));
+    width: calc(var(--map-width) - var(--backdrop-width-when-modal-active));
+    z-index: 10;
+}
+.map-drawer-container__drawer__close {
+    position: absolute;
+    top: 0px;
+    right: 8px;
+    font-size: 1.5em;
+}
+/* active state partial drawer */
+.map-drawer-container--active .map-drawer-container__drawer__partial {
+    right: 0;
+}
+/* active state full drawer */
+.map-drawer-container--active-full .map-drawer-container__drawer__full {
+    right: var(--drawer-width);
+}
+/* Example specific */
+.odswidget.odswidget-map {
+    height: 500px;
+}
+.map-drawer-container__info {
+    background-color: #f8f8f8;
+    padding: 5px 10px;
+}
+.app h2, .map-drawer-container__drawer h2, .map-drawer-container__info h2 {
+    font-weight: 300;
+    color: black;
+    text-align: center;
+}
+.map-drawer-container__drawer {
+    padding: 5px 10px;
+}
+.map-drawer-container__drawer h3 {
+    font-weight: 100;
+    color: black;
+    margin-top: 0px;
+    text-align: center;
+}
+ul {
+    list-style: none;
+    position: relative;
+    padding: 0;
+    overflow: auto;
+}
+li.univ {
+    display: flex;
+    justify-content: space-between;
+    margin: 3px 0px;
+}
+li.univ:first-child {
+    border-bottom: 1px solid;
+    font-weight: 200;
+}
+.univ-name {
+    width: 100%;
+    font-weight: 100;
+    margin-left: 5px;
+}
+.univ-score {
+    margin: 0 5px;
+    font-weight: 600;
+}
+li.univ:first-child .univ-score {
+    width: 100%;
+    text-align: right;
+}
+.univ-selected {
+    border-left: 3px solid;
+    padding-left: 2px;
+    margin-left: 0;
+}
+      
+
+          </style>
+          </body>
+          ">
+        </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-map-refine-2-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-map-refine-2-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right">
+                <a class="button is-primary is-outlined edit-on-codepen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-map-refine-2').submit()">
+                    Edit on CodePen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-map-refine-2-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;shanghai,shanghaihistoric&#34;
+                     shanghai-dataset=&#34;shanghai-world-university-ranking&#34;
+                     shanghai-domain=&#34;userclub&#34;
+                     shanghaihistoric-dataset=&#34;shanghai-world-university-ranking&#34;
+                     shanghaihistoric-domain=&#34;userclub&#34;
+                     shanghaihistoric-parameters=&#34;{&#39;sort&#39;:&#39;year&#39;}&#34;&gt;
+    &lt;div class=&#34;ods-box&#34;&gt;
+        &lt;h2&gt;
+            Shanghai World University Ranking
+        &lt;/h2&gt;
+        &lt;div class=&#34;map-drawer-container&#34;
+             ng-class=&#34;{
+                       &#39;map-drawer-container--active&#39;: shanghai.parameters[&#39;refine.country&#39;],
+                       &#39;map-drawer-container--active-full&#39;: drawer.status}&#34;
+             ng-init=&#34;drawer = {&#39;status&#39;:false}&#34;&gt;
+            &lt;div class=&#34;map-drawer-container__map&#34;&gt;
+                &lt;div class=&#34;map-drawer-container__backdrop&#34;
+                     ng-click=&#34;shanghai.parameters[&#39;refine.country&#39;] = undefined;
+                               shanghaihistoric.parameters[&#39;refine.university_namex&#39;] = undefined;
+                               drawer.status = false&#34;
+                     ng-class=&#34;{&#39;map-drawer-container__backdrop--active&#39;: shanghai.parameters[&#39;refine.country&#39;] }&#34;&gt;
+                &lt;/div&gt;
+                &lt;ods-map no-refit=&#34;false&#34;
+                         scroll-wheel-zoom=&#34;true&#34;
+                         display-control=&#34;false&#34;
+                         toolbar-fullscreen=&#34;false&#34;
+                         toolbar-drawing=&#34;false&#34;
+                         toolbar-geolocation=&#34;false&#34;
+                         location=&#34;2,33.39542,4.10444&#34;&gt;
+                    &lt;ods-map-layer context=&#34;shanghai&#34;
+                                   display=&#34;choropleth&#34;
+                                   function=&#34;AVG&#34;
+                                   expression=&#34;world_rank_integer&#34;
+                                   color-numeric-ranges=&#34;{&#39;120&#39;:&#39;#000000&#39;,&#39;175&#39;:&#39;#2E3539&#39;,&#39;225&#39;:&#39;#5D6A73&#39;,&#39;350&#39;:&#39;#8C9FAD&#39;,&#39;500&#39;:&#39;#BBD5E7&#39;}&#34;
+                                   color-undefined=&#34;#FFFFFF&#34;
+                                   color-out-of-bounds=&#34;#FFFFFF&#34;
+                                   color-numeric-range-min=&#34;1&#34;
+                                   shape-opacity=&#34;0.9&#34;
+                                   caption=&#34;false&#34;
+                                   refine-on-click-context=&#34;[shanghai,shanghaihistoric]&#34;
+                                   refine-on-click-shanghai-context-field=&#34;country&#34;
+                                   refine-on-click-shanghai-map-field=&#34;country&#34;
+                                   refine-on-click-shanghai-replace-refine=&#34;true&#34;
+                                   refine-on-click-shanghaihistoric-context-field=&#34;country&#34;
+                                   refine-on-click-shanghaihistoric-map-field=&#34;country&#34;
+                                   refine-on-click-shanghaihistoric-replace-refine=&#34;true&#34;&gt;
+                    &lt;/ods-map-layer&gt;
+                &lt;/ods-map&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;map-drawer-container__info&#34;&gt;
+                &lt;h2&gt;
+                    Pick a country on the map
+                &lt;/h2&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;map-drawer-container__drawer map-drawer-container__drawer__partial&#34;&gt;
+                &lt;div class=&#34;map-drawer-container__drawer__close&#34;
+                     ng-click=&#34;shanghai.parameters[&#39;refine.country&#39;] = undefined;
+                               shanghaihistoric.parameters[&#39;refine.university_namex&#39;] = undefined;
+                               drawer.status = false&#34;&gt;
+                    &lt;i class=&#34;fa fa-times&#34;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+                &lt;h2&gt;
+                    {{ shanghai.parameters[&#39;refine.country&#39;] }} universities
+                &lt;/h2&gt;
+                &lt;h3&gt;
+                    sorted by average ranking
+                &lt;/h3&gt;
+                &lt;div ods-analysis=&#34;univs&#34;
+                     ods-analysis-context=&#34;shanghai&#34;
+                     ods-analysis-x=&#34;university_name&#34;
+                     ods-analysis-max=&#34;0&#34;
+                     ods-analysis-serie-agg=&#34;AVG(world_rank_integer)&#34;
+                     ods-analysis-sort=&#34;-agg&#34;&gt;
+                    &lt;ul&gt;
+                        &lt;li class=&#34;univ&#34;&gt;
+                            &lt;div class=&#34;univ-name&#34;&gt;
+                                University
+                            &lt;/div&gt;
+                            &lt;div class=&#34;univ-score&#34;&gt;
+                                Avg. rank
+                            &lt;/div&gt;
+                            &lt;div class=&#34;univ-seemore&#34;&gt;
+                                &lt;i class=&#34;fa fa-line-chart&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;li ng-repeat=&#34;univ in univs.results&#34;
+                            class=&#34;univ&#34;&gt;
+                            &lt;div class=&#34;univ-name&#34;
+                                 ng-class=&#34;{&#39;univ-selected&#39;: shanghaihistoric.parameters[&#39;refine.university_name&#39;] == univ.x}&#34;&gt;
+                                {{ univ.x }}
+                            &lt;/div&gt;
+                            &lt;div class=&#34;univ-score&#34;&gt;
+                                {{ univ.agg | number : 0 }}
+                            &lt;/div&gt;
+                            &lt;div class=&#34;univ-seemore&#34;
+                                 ng-click=&#34;shanghaihistoric.parameters[&#39;refine.university_name&#39;] = univ.x;
+                                           drawer.status = true&#34;&gt;
+                                &lt;i class=&#34;fa fa-line-chart&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                            &lt;/div&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;map-drawer-container__drawer map-drawer-container__drawer__full&#34;&gt;
+                &lt;h2&gt;
+                    {{ shanghaihistoric.parameters[&#39;refine.university_name&#39;] }} ({{ shanghai.parameters[&#39;refine.country&#39;] }})
+                &lt;/h2&gt;
+                &lt;ods-tabs layout=&#34;simple-nav&#34; pane-auto-unload=&#34;true&#34;&gt;
+                    &lt;ods-pane title=&#34;Chart&#34;&gt;
+                        &lt;ods-chart timescale=&#34;year&#34; display-legend=&#34;false&#34; align-month=&#34;false&#34;&gt;
+                            &lt;ods-chart-query context=&#34;shanghaihistoric&#34; field-x=&#34;year&#34; maxpoints=&#34;200&#34; timescale=&#34;year&#34;&gt;
+                                &lt;ods-chart-serie expression-y=&#34;world_rank_integer&#34; chart-type=&#34;column&#34; function-y=&#34;AVG&#34; label-y=&#34;Ranking range per year&#34; color=&#34;#142E7B&#34; display-units=&#34;true&#34; scientific-display=&#34;true&#34;&gt;
+                                &lt;/ods-chart-serie&gt;
+                            &lt;/ods-chart-query&gt;
+                        &lt;/ods-chart&gt;
+                    &lt;/ods-pane&gt;
+                    &lt;ods-pane title=&#34;Table&#34; pane-auto-unload=&#34;true&#34;&gt;
+                        &lt;ods-table context=&#34;shanghaihistoric&#34;
+                                   displayed-fields=&#34;world_rank,national_rank,year&#34;&gt;&lt;/ods-table&gt;
+                    &lt;/ods-pane&gt;
+                &lt;/ods-tabs&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+</code></pre>
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-map-refine-2-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>/* Tempalte maprefine */
+:root {
+    --drawer-width: 320px;
+    --map-width: calc(100% - var(--drawer-width));
+    --backdrop-width-when-modal-active: 75px;
+    --drawer-background-color: white;
+}
+.map-drawer-container {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+.map-drawer-container__map {
+    position:relative;
+    width: var(--map-width);
+}
+.map-drawer-container__info {
+    width: var(--drawer-width);
+}
+/* BACKDROP (black screen when modal active) */
+.map-drawer-container__backdrop {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 9;
+    background-color: #000;
+    cursor: default;
+    -webkit-transition: visibility .5s,opacity .5s;
+    transition: visibility .5s,opacity .5s;
+}
+.map-drawer-container__backdrop--active {
+    visibility: visible;
+    opacity: .45; /* make a more or less darker backdrop, 1:totally dark, 0:totally transparent (invisibile) */
+}
+.map-drawer-container__drawer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: var(--drawer-background-color);
+    transition: 0.3s;
+}
+.map-drawer-container__drawer__partial {
+    right: calc(-1 * var(--drawer-width));
+    width: var(--drawer-width);
+    z-index: 11;
+}
+.map-drawer-container__drawer__full {
+    right: calc(-1 * var(--map-width));
+    width: calc(var(--map-width) - var(--backdrop-width-when-modal-active));
+    z-index: 10;
+}
+.map-drawer-container__drawer__close {
+    position: absolute;
+    top: 0px;
+    right: 8px;
+    font-size: 1.5em;
+}
+/* active state partial drawer */
+.map-drawer-container--active .map-drawer-container__drawer__partial {
+    right: 0;
+}
+/* active state full drawer */
+.map-drawer-container--active-full .map-drawer-container__drawer__full {
+    right: var(--drawer-width);
+}
+/* Example specific */
+.odswidget.odswidget-map {
+    height: 500px;
+}
+.map-drawer-container__info {
+    background-color: #f8f8f8;
+    padding: 5px 10px;
+}
+.app h2, .map-drawer-container__drawer h2, .map-drawer-container__info h2 {
+    font-weight: 300;
+    color: black;
+    text-align: center;
+}
+.map-drawer-container__drawer {
+    padding: 5px 10px;
+}
+.map-drawer-container__drawer h3 {
+    font-weight: 100;
+    color: black;
+    margin-top: 0px;
+    text-align: center;
+}
+ul {
+    list-style: none;
+    position: relative;
+    padding: 0;
+    overflow: auto;
+}
+li.univ {
+    display: flex;
+    justify-content: space-between;
+    margin: 3px 0px;
+}
+li.univ:first-child {
+    border-bottom: 1px solid;
+    font-weight: 200;
+}
+.univ-name {
+    width: 100%;
+    font-weight: 100;
+    margin-left: 5px;
+}
+.univ-score {
+    margin: 0 5px;
+    font-weight: 600;
+}
+li.univ:first-child .univ-score {
+    width: 100%;
+    text-align: right;
+}
+.univ-selected {
+    border-left: 3px solid;
+    padding-left: 2px;
+    margin-left: 0;
+}
+      
+</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-map-refine-2";
+            iframe = document.getElementById(iframeId);
+             
+            size =  null 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+        </div>
+    </div>
+    
+</section>
+
+
+    </div>
+</div>
+
+<footer class="footer">
+    <a href="https://www.opendatasoft.com"
+       class="footer-link"
+       title="Opendatasoft website">
+        <img src="/img/ods-logo.svg"
+             class="footer-logo"
+             alt="Opendatasoft logo"
+        />
+    </a>
+    <span class="footer-copyright">
+        &copy; Copyright 2020
+    </span>
+</footer>
+
+
+
+
+
+
+
+<script>var process = { "env": { "NODE_ENV": "production" } }</script>
+<script type="text/javascript"
+        src="/index.min.11fcc0d6f8a0b04671eb0a5fb2bb06b89618c60744ea73effdb557ad43fd44a6.js"
+        defer></script>
+
+</body>
+</html>

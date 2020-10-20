@@ -1,5 +1,6 @@
 ---
 title: "Map Listing 2"
+height: 700
 ---
 
 ## Fullscreen Map

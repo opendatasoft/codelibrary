@@ -143,12 +143,12 @@
 					<h2 class="content-card-title">
 						Title Map #01
 					</h2>
-					<ods-dataset-context context="streetart" streetart-dataset="street-art">
-					    <ods-map no-refit="true" scroll-wheel-zoom="false" location="14,50.85145,4.35263" toolbar-drawing="false" toolbar-fullscreen="false" display-legend="false">
-					        <ods-map-layer-group>
-					            <ods-map-layer context="streetart" color="#C32D1C" picto="ods-circle" show-marker="true" display="auto" shape-opacity="0.5" point-opacity="1" border-color="#FFFFFF" border-opacity="1" border-size="1" border-pattern="solid" caption="true" title="Street Art" description="Street Art supported by the City of Brussels." size="4" size-min="3" size-max="5" size-function="linear"></ods-map-layer>
-					        </ods-map-layer-group>
-					    </ods-map>
+					<ods-dataset-context context="ctx"
+										 ctx-domain="userclub"
+										 ctx-dataset="base-nationale-des-lieux-de-covoiturage-en-france"
+										 ctx-parameters="{'refine.reg_name':'Pays de la Loire'}">
+						<ods-map context="ctx" scroll-wheel-zoom="false" basemap="jawg.streets"></ods-map>
+
 					</ods-dataset-context>
 				</div>
 			</div>
@@ -157,15 +157,17 @@
 					<h2 class="content-card-title">
 						Title Chart #01
 					</h2>
-					<ods-dataset-context context="worldbankglobalfinancialdevelopment" worldbankglobalfinancialdevelopment-dataset="worldbank-global-financial-development" worldbankglobalfinancialdevelopment-parameters="{'timezone':'Europe/Berlin'}">
-					    <ods-chart timescale="year" display-legend="false" align-month="false">
-					        <ods-chart-query context="worldbankglobalfinancialdevelopment" field-x="year" maxpoints="0" timescale="year">
-					            <ods-chart-serie expression-y="value" chart-type="arearange" function-y="COUNT" color="#8da0cb" scientific-display="true" subseries='[{"func":"MIN","yAxis":"value"},{"func":"MAX","yAxis":"value"}]'>
-					            </ods-chart-serie>
-					            <ods-chart-serie expression-y="value" chart-type="line" function-y="AVG" color="#fc8d62" scientific-display="true">
-					            </ods-chart-serie>
-					        </ods-chart-query>
-					    </ods-chart>
+					<ods-dataset-context context="ctx"
+										 ctx-domain="userclub"
+										 ctx-dataset="base-nationale-des-lieux-de-covoiturage-en-france"
+										 ctx-parameters="{'timezone':'Europe/Berlin'}">
+						<ods-chart single-y-axis="true" scientific-display="true" labels-x-length="20" align-month="true">
+							<ods-chart-query context="ctx" field-x="reg_name" maxpoints="0" sort="serie1-1">
+								<ods-chart-serie expression-y="spot_size" chart-type="bar" function-y="SUM" color="#EC643C" scientific-display="true">
+								</ods-chart-serie>
+							</ods-chart-query>
+						</ods-chart>
+
 					</ods-dataset-context>
 				</div>
 			</div>

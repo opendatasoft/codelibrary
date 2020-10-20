@@ -1,0 +1,2042 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+    <title>
+        
+Dates &ndash; Codelibrary
+
+    </title>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41201218-21"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-41201218-21');
+    </script>
+
+    
+    
+
+    
+    
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css"
+          integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8="
+          crossorigin="anonymous">
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href="/scss/main.css" />
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png">
+    <link rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png">
+    <link rel="shortcut icon"
+          href="/favicon.ico">
+</head>
+
+<body>
+
+<nav class="navbar is-fixed-top"
+     role="navigation"
+     aria-label="Main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item"
+           href="/"
+           title="Back to the homepage">
+            <img src="/img/ods-logo-helphub.svg"
+                 alt="Helphub Logo"/>
+        </a>
+        <button class="navbar-burger burger"
+                type="button"
+                data-target="helphubNavbar"
+                aria-controls="helphubNavbar"
+                aria-expanded="false"
+                aria-label="Menu">
+            Help Hub
+        </button>
+    </div>
+    <div class="navbar-menu"
+         id="helphubNavbar">
+        <div class="navbar-start">
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/">
+                Help Hub
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/platform/en/">
+                User guide
+            </a>
+            <a class="navbar-item is-active"
+               href="https://discovery.opendatasoft.com">
+                Code Library
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/faq-glossary/en/">
+                FAQ
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/widgets/">
+                Widgets
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/en/apis/">
+                APIs
+            </a>
+            <a class="navbar-item"
+               href="https://academy.opendatasoft.com/page/homepage">
+                Academy
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="columns codelibrary">
+    <div class="column is-narrow">
+        <aside class="sidebar menu">
+    <a href="https://codelibrary.opendatasoft.com"
+       class="sidebar-logo-link"
+       title="Go to Codelibrary homepage">
+        <img src="/img/ods-codelibrary-logo.svg"
+             class="sidebar-logo"
+             alt="Codelibrary Logo">
+    </a>
+
+    <div id="algolia-box"></div>
+    <div id="algolia-results"></div>
+
+    
+    <ul class="menu-list">
+        <li>
+            <a class="sidebar-subtitle"
+               href="https://codelibrary.opendatasoft.com">
+                Home
+            </a>
+        </li>
+        
+        
+        <li>
+            <a href="/components/"
+               class="sidebar-subtitle">
+                Components
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a href="/page-templates/"
+               class="sidebar-subtitle">
+                Page templates
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a href="/portal-themes/"
+               class="sidebar-subtitle">
+                Portal themes
+            </a>
+        </li>
+        
+        
+        
+        <li>
+            <a class="sidebar-subtitle " href="/widget-tricks/">
+            Widget tricks
+            </a>
+            <ul>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/catalog-cards/">Catalog cards</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/svg-maps/">SVG Maps</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/custom-tooltip/">Custom tooltip</a>
+                </li>
+                
+                <li>
+                    <a class="is-active" href="https://codelibrary.opendatasoft.com/widget-tricks/dates/">Dates</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/drill-down/">Drill-down chart</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-aggregation/">ods-aggregation</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-analysis/">ods-analysis</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-color-gradient/">ods-color-gradient &amp; ods-legend</a>
+                </li>
+                
+                <li>
+                    <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-map-tricks/">ods-maps Tricks</a>
+                </li>
+                
+            </ul>
+        </li>
+        
+        
+    </ul>
+    <p class="menu-label">
+        Tags
+    </p>
+    <div class="tags">
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/aggregation/">
+            aggregation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/chart/">
+            chart
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/date/">
+            date
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/display/">
+            display
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/filter/">
+            filter
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/geo/">
+            geo
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/list/">
+            list
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/map/">
+            map
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/navigation/">
+            navigation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-aggregation/">
+            ods-aggregation
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-analysis/">
+            ods-analysis
+        </a>
+        
+        <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-maps/">
+            ods-maps
+        </a>
+        
+    </div>
+</aside>
+
+    </div>
+    <div class="column">
+        
+
+<section>
+    <div class="content-header container is-max-desktop mb-5">
+        <div class="content">
+            <h1 class="title" id="dates">
+  Dates
+  
+</h1>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <h2 class="title" id="last-three-months-default-selection">
+  &lsquo;Last three months&rsquo; default selection
+  
+    <a class="is-link" href="#last-three-months-default-selection">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+<p>The default start date is set to now minus 3 months, and the default end date is set to now.
+(MM/DD/YYYY format)</p>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-dates-1"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;ds\&#34;\n                     ds-dataset=\&#34;evenements-publics-openagenda\&#34;\n                     ds-domain=\&#34;userclub\&#34;\n                     ds-parameters=\&#34;{&#39;sort&#39;:&#39;date_start&#39;}\&#34;\u003e\n    \u003cdiv ods-datetime=\&#34;now\&#34;\u003e\n        \u003cods-timerange display-time=\&#34;false\&#34; date-format=\&#34;MM/DD/YYYY\&#34; context=\&#34;ds\&#34; default-from=\&#34;{{ now | momentadd : &#39;months&#39; : -3 }}\&#34; default-to=\&#34;{{ now }}\&#34;\u003e\u003c/ods-timerange\u003e\n    \u003c/div\u003e\n    \u003cbr/\u003e\n    \u003cods-table context=\&#34;ds\&#34;\u003e\u003c/ods-table\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+               "css": &#34;&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+        <iframe id="iframe-dates-1"
+                width="100%" height="100%"
+                src="about:blank"
+                srcdoc="
+          <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+          </head>
+          <body>
+          <div ng-app='ods-widgets'>
+              &lt;ods-dataset-context context=&#34;ds&#34;
+                     ds-dataset=&#34;evenements-publics-openagenda&#34;
+                     ds-domain=&#34;userclub&#34;
+                     ds-parameters=&#34;{&#39;sort&#39;:&#39;date_start&#39;}&#34;&gt;
+    &lt;div ods-datetime=&#34;now&#34;&gt;
+        &lt;ods-timerange display-time=&#34;false&#34; date-format=&#34;MM/DD/YYYY&#34; context=&#34;ds&#34; default-from=&#34;{{ now | momentadd : &#39;months&#39; : -3 }}&#34; default-to=&#34;{{ now }}&#34;&gt;&lt;/ods-timerange&gt;
+    &lt;/div&gt;
+    &lt;br/&gt;
+    &lt;ods-table context=&#34;ds&#34;&gt;&lt;/ods-table&gt;
+&lt;/ods-dataset-context&gt;
+
+          </div>
+          <style type='text/css'>
+              
+          </style>
+          </body>
+          ">
+        </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-dates-1-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-dates-1-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right">
+                <a class="button is-primary is-outlined edit-on-codepen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-dates-1').submit()">
+                    Edit on CodePen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-dates-1-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;ds&#34;
+                     ds-dataset=&#34;evenements-publics-openagenda&#34;
+                     ds-domain=&#34;userclub&#34;
+                     ds-parameters=&#34;{&#39;sort&#39;:&#39;date_start&#39;}&#34;&gt;
+    &lt;div ods-datetime=&#34;now&#34;&gt;
+        &lt;ods-timerange display-time=&#34;false&#34; date-format=&#34;MM/DD/YYYY&#34; context=&#34;ds&#34; default-from=&#34;{{ now | momentadd : &#39;months&#39; : -3 }}&#34; default-to=&#34;{{ now }}&#34;&gt;&lt;/ods-timerange&gt;
+    &lt;/div&gt;
+    &lt;br/&gt;
+    &lt;ods-table context=&#34;ds&#34;&gt;&lt;/ods-table&gt;
+&lt;/ods-dataset-context&gt;
+</code></pre>
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-dates-1-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code></code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-dates-1";
+            iframe = document.getElementById(iframeId);
+             
+            size =  null 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <h2 class="title" id="compute-the-range-date-size-in-days-or-hours-etc">
+  Compute the range date size (in days or hours etc&hellip;)
+  
+    <a class="is-link" href="#compute-the-range-date-size-in-days-or-hours-etc">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+<p>Get the number of hours, days, months or any units you&rsquo;d like between the from and to selection.</p>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-dates-2"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;ds\&#34;\n                     ds-dataset=\&#34;evenements-publics-openagenda\&#34;\n                     ds-domain=\&#34;userclub\&#34;\n                     ds-parameters=\&#34;{&#39;sort&#39;:&#39;date_start&#39;}\&#34;\n                     ng-init=\&#34;dates = {&#39;to&#39;: &#39;&#39;, &#39;from&#39;: &#39;&#39;}\&#34;\u003e\n    \u003cdiv ods-datetime=\&#34;now\&#34;\u003e\n        \u003cods-timerange display-time=\&#34;false\&#34;\n                       date-format=\&#34;MM/DD/YYYY\&#34;\n                       context=\&#34;ds\&#34;\n                       default-from=\&#34;{{ now | momentadd : &#39;months&#39; : -1 }}\&#34;\n                       default-to=\&#34;{{ now }}\&#34;\n                       to=\&#34;dates.to\&#34;\n                       from=\&#34;dates.from\&#34;\u003e\n        \u003c/ods-timerange\u003e\n        {{ nbdays = (dates.to | momentdiff : dates.from : &#39;days&#39;) ; \&#34;\&#34; }}\n        \u003ch4\u003eCurrent selection : {{ nbdays }} day{{nbdays\u003e1?&#39;s&#39;:&#39;&#39;}} range\u003c/h4\u003e\n        \u003cp\u003eThis value can then help to have different behavior/displays in your dashboard depending on the date range.\n            \u003cbr/\u003eThe typical usecase is to display a chart with hour precision in case of a small range of a few days, and switch to a day chart precision in case of a several week range selection. The dashboard can then adapt the chart precision to make it more readable.\n        \u003c/p\u003e\n        \u003ch4 ng-if=\&#34;nbdays \u003c= 90\&#34;\u003eLess or equals than 3 months range\u003c/h4\u003e\n        \u003ch4 ng-if=\&#34;nbdays \u003e90\&#34;\u003eMore than 3 months range\u003c/h4\u003e\n        \u003cbr/\u003e\n        \u003ch3\u003eOther date comparators can detect if a date if before or after another one\u003c/h3\u003e\n        \u003ch4 ng-if=\&#34;dates.from | isAfter : now\&#34;\u003e&#39;From&#39; selection is in the futur\u003c/h4\u003e\n        \u003ch4 ng-if=\&#34;dates.from | isBefore : (now | momentadd : &#39;days&#39; : -1)\&#34;\u003e&#39;From&#39; selection is in the past\u003c/h4\u003e\n        \u003ch4 ng-if=\&#34;!(dates.from | isBefore : (now | momentadd : &#39;days&#39; : -1)) \u0026\u0026 !(dates.from | isAfter : now)\&#34;\u003e&#39;From&#39; selection is today !\u003c/h4\u003e\n        \u003ch4 ng-if=\&#34;dates.to | isAfter : (now | momentadd : &#39;days&#39; : 1)\&#34;\u003e&#39;To&#39; selection is in the futur\u003c/h4\u003e\n        \u003ch4 ng-if=\&#34;dates.to | isBefore : now\&#34;\u003e&#39;To&#39; selection is in the past\u003c/h4\u003e\n        \u003ch4 ng-if=\&#34;!(dates.to | isAfter : (now | momentadd : &#39;days&#39; : 1)) \u0026\u0026 !(dates.to | isBefore : now)\&#34;\u003e&#39;To&#39; selection is today !\u003c/h4\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+               "css": &#34;&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+        <iframe id="iframe-dates-2"
+                width="100%" height="100%"
+                src="about:blank"
+                srcdoc="
+          <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+          </head>
+          <body>
+          <div ng-app='ods-widgets'>
+              &lt;ods-dataset-context context=&#34;ds&#34;
+                     ds-dataset=&#34;evenements-publics-openagenda&#34;
+                     ds-domain=&#34;userclub&#34;
+                     ds-parameters=&#34;{&#39;sort&#39;:&#39;date_start&#39;}&#34;
+                     ng-init=&#34;dates = {&#39;to&#39;: &#39;&#39;, &#39;from&#39;: &#39;&#39;}&#34;&gt;
+    &lt;div ods-datetime=&#34;now&#34;&gt;
+        &lt;ods-timerange display-time=&#34;false&#34;
+                       date-format=&#34;MM/DD/YYYY&#34;
+                       context=&#34;ds&#34;
+                       default-from=&#34;{{ now | momentadd : &#39;months&#39; : -1 }}&#34;
+                       default-to=&#34;{{ now }}&#34;
+                       to=&#34;dates.to&#34;
+                       from=&#34;dates.from&#34;&gt;
+        &lt;/ods-timerange&gt;
+        {{ nbdays = (dates.to | momentdiff : dates.from : &#39;days&#39;) ; &#34;&#34; }}
+        &lt;h4&gt;Current selection : {{ nbdays }} day{{nbdays&gt;1?&#39;s&#39;:&#39;&#39;}} range&lt;/h4&gt;
+        &lt;p&gt;This value can then help to have different behavior/displays in your dashboard depending on the date range.
+            &lt;br/&gt;The typical usecase is to display a chart with hour precision in case of a small range of a few days, and switch to a day chart precision in case of a several week range selection. The dashboard can then adapt the chart precision to make it more readable.
+        &lt;/p&gt;
+        &lt;h4 ng-if=&#34;nbdays &lt;= 90&#34;&gt;Less or equals than 3 months range&lt;/h4&gt;
+        &lt;h4 ng-if=&#34;nbdays &gt;90&#34;&gt;More than 3 months range&lt;/h4&gt;
+        &lt;br/&gt;
+        &lt;h3&gt;Other date comparators can detect if a date if before or after another one&lt;/h3&gt;
+        &lt;h4 ng-if=&#34;dates.from | isAfter : now&#34;&gt;&#39;From&#39; selection is in the futur&lt;/h4&gt;
+        &lt;h4 ng-if=&#34;dates.from | isBefore : (now | momentadd : &#39;days&#39; : -1)&#34;&gt;&#39;From&#39; selection is in the past&lt;/h4&gt;
+        &lt;h4 ng-if=&#34;!(dates.from | isBefore : (now | momentadd : &#39;days&#39; : -1)) &amp;&amp; !(dates.from | isAfter : now)&#34;&gt;&#39;From&#39; selection is today !&lt;/h4&gt;
+        &lt;h4 ng-if=&#34;dates.to | isAfter : (now | momentadd : &#39;days&#39; : 1)&#34;&gt;&#39;To&#39; selection is in the futur&lt;/h4&gt;
+        &lt;h4 ng-if=&#34;dates.to | isBefore : now&#34;&gt;&#39;To&#39; selection is in the past&lt;/h4&gt;
+        &lt;h4 ng-if=&#34;!(dates.to | isAfter : (now | momentadd : &#39;days&#39; : 1)) &amp;&amp; !(dates.to | isBefore : now)&#34;&gt;&#39;To&#39; selection is today !&lt;/h4&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+
+          </div>
+          <style type='text/css'>
+              
+          </style>
+          </body>
+          ">
+        </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-dates-2-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-dates-2-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right">
+                <a class="button is-primary is-outlined edit-on-codepen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-dates-2').submit()">
+                    Edit on CodePen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-dates-2-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;ds&#34;
+                     ds-dataset=&#34;evenements-publics-openagenda&#34;
+                     ds-domain=&#34;userclub&#34;
+                     ds-parameters=&#34;{&#39;sort&#39;:&#39;date_start&#39;}&#34;
+                     ng-init=&#34;dates = {&#39;to&#39;: &#39;&#39;, &#39;from&#39;: &#39;&#39;}&#34;&gt;
+    &lt;div ods-datetime=&#34;now&#34;&gt;
+        &lt;ods-timerange display-time=&#34;false&#34;
+                       date-format=&#34;MM/DD/YYYY&#34;
+                       context=&#34;ds&#34;
+                       default-from=&#34;{{ now | momentadd : &#39;months&#39; : -1 }}&#34;
+                       default-to=&#34;{{ now }}&#34;
+                       to=&#34;dates.to&#34;
+                       from=&#34;dates.from&#34;&gt;
+        &lt;/ods-timerange&gt;
+        {{ nbdays = (dates.to | momentdiff : dates.from : &#39;days&#39;) ; &#34;&#34; }}
+        &lt;h4&gt;Current selection : {{ nbdays }} day{{nbdays&gt;1?&#39;s&#39;:&#39;&#39;}} range&lt;/h4&gt;
+        &lt;p&gt;This value can then help to have different behavior/displays in your dashboard depending on the date range.
+            &lt;br/&gt;The typical usecase is to display a chart with hour precision in case of a small range of a few days, and switch to a day chart precision in case of a several week range selection. The dashboard can then adapt the chart precision to make it more readable.
+        &lt;/p&gt;
+        &lt;h4 ng-if=&#34;nbdays &lt;= 90&#34;&gt;Less or equals than 3 months range&lt;/h4&gt;
+        &lt;h4 ng-if=&#34;nbdays &gt;90&#34;&gt;More than 3 months range&lt;/h4&gt;
+        &lt;br/&gt;
+        &lt;h3&gt;Other date comparators can detect if a date if before or after another one&lt;/h3&gt;
+        &lt;h4 ng-if=&#34;dates.from | isAfter : now&#34;&gt;&#39;From&#39; selection is in the futur&lt;/h4&gt;
+        &lt;h4 ng-if=&#34;dates.from | isBefore : (now | momentadd : &#39;days&#39; : -1)&#34;&gt;&#39;From&#39; selection is in the past&lt;/h4&gt;
+        &lt;h4 ng-if=&#34;!(dates.from | isBefore : (now | momentadd : &#39;days&#39; : -1)) &amp;&amp; !(dates.from | isAfter : now)&#34;&gt;&#39;From&#39; selection is today !&lt;/h4&gt;
+        &lt;h4 ng-if=&#34;dates.to | isAfter : (now | momentadd : &#39;days&#39; : 1)&#34;&gt;&#39;To&#39; selection is in the futur&lt;/h4&gt;
+        &lt;h4 ng-if=&#34;dates.to | isBefore : now&#34;&gt;&#39;To&#39; selection is in the past&lt;/h4&gt;
+        &lt;h4 ng-if=&#34;!(dates.to | isAfter : (now | momentadd : &#39;days&#39; : 1)) &amp;&amp; !(dates.to | isBefore : now)&#34;&gt;&#39;To&#39; selection is today !&lt;/h4&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+</code></pre>
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-dates-2-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code></code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-dates-2";
+            iframe = document.getElementById(iframeId);
+             
+            size =  null 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <h2 class="title" id="filter-on-two-different-date-fields-start-and-end-date">
+  Filter on two different date fields (start and end date)
+  
+    <a class="is-link" href="#filter-on-two-different-date-fields-start-and-end-date">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+<p>This example uses the ods-timerange widget to set from and to date, and then filters an events dataset on two different fields.</p>
+<p>This is particuarily useful for events datasets with a beginning date of the event and an end date. The timerange selection helps the user to provide his availability, and the result displays events available on this selected period.</p>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-dates-3"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;ds\&#34;\n                     ds-dataset=\&#34;evenements-publics-openagenda\&#34;\n                     ds-domain=\&#34;userclub\&#34;\n                     ds-parameters=\&#34;{&#39;sort&#39;:&#39;date_start&#39;}\&#34;\u003e\n    \u003cdiv ods-datetime=\&#34;now\&#34;\u003e\n        \u003cods-timerange display-time=\&#34;false\&#34;\n                       date-format=\&#34;MM/DD/YYYY\&#34;\n                       context=\&#34;ds\&#34;\n                       default-from=\&#34;{{ now | momentadd : &#39;days&#39; : -2 }}\&#34;\n                       default-to=\&#34;{{ now }}\&#34;\n                       to=\&#34;dates.to\&#34;\n                       from=\&#34;dates.from\&#34;\u003e\u003c/ods-timerange\u003e\n        {{ ds.parameters[&#39;q&#39;] = &#39;date_start:[1900-01-01 TO &#39; &#43; (dates.to?dates.to:&#39;2099-01-01&#39;) &#43; &#39;] AND date_end \u003e= &#39; &#43; (dates.from?dates.from:&#39;1900-01-01&#39;) ; \&#34;\&#34; }}\n        \u003cbr/\u003e\n        \u003cods-table context=\&#34;ds\&#34;\u003e\u003c/ods-table\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+               "css": &#34;&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+        <iframe id="iframe-dates-3"
+                width="100%" height="100%"
+                src="about:blank"
+                srcdoc="
+          <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+          </head>
+          <body>
+          <div ng-app='ods-widgets'>
+              &lt;ods-dataset-context context=&#34;ds&#34;
+                     ds-dataset=&#34;evenements-publics-openagenda&#34;
+                     ds-domain=&#34;userclub&#34;
+                     ds-parameters=&#34;{&#39;sort&#39;:&#39;date_start&#39;}&#34;&gt;
+    &lt;div ods-datetime=&#34;now&#34;&gt;
+        &lt;ods-timerange display-time=&#34;false&#34;
+                       date-format=&#34;MM/DD/YYYY&#34;
+                       context=&#34;ds&#34;
+                       default-from=&#34;{{ now | momentadd : &#39;days&#39; : -2 }}&#34;
+                       default-to=&#34;{{ now }}&#34;
+                       to=&#34;dates.to&#34;
+                       from=&#34;dates.from&#34;&gt;&lt;/ods-timerange&gt;
+        {{ ds.parameters[&#39;q&#39;] = &#39;date_start:[1900-01-01 TO &#39; &#43; (dates.to?dates.to:&#39;2099-01-01&#39;) &#43; &#39;] AND date_end &gt;= &#39; &#43; (dates.from?dates.from:&#39;1900-01-01&#39;) ; &#34;&#34; }}
+        &lt;br/&gt;
+        &lt;ods-table context=&#34;ds&#34;&gt;&lt;/ods-table&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+
+          </div>
+          <style type='text/css'>
+              
+          </style>
+          </body>
+          ">
+        </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-dates-3-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-dates-3-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right">
+                <a class="button is-primary is-outlined edit-on-codepen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-dates-3').submit()">
+                    Edit on CodePen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-dates-3-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;ds&#34;
+                     ds-dataset=&#34;evenements-publics-openagenda&#34;
+                     ds-domain=&#34;userclub&#34;
+                     ds-parameters=&#34;{&#39;sort&#39;:&#39;date_start&#39;}&#34;&gt;
+    &lt;div ods-datetime=&#34;now&#34;&gt;
+        &lt;ods-timerange display-time=&#34;false&#34;
+                       date-format=&#34;MM/DD/YYYY&#34;
+                       context=&#34;ds&#34;
+                       default-from=&#34;{{ now | momentadd : &#39;days&#39; : -2 }}&#34;
+                       default-to=&#34;{{ now }}&#34;
+                       to=&#34;dates.to&#34;
+                       from=&#34;dates.from&#34;&gt;&lt;/ods-timerange&gt;
+        {{ ds.parameters[&#39;q&#39;] = &#39;date_start:[1900-01-01 TO &#39; &#43; (dates.to?dates.to:&#39;2099-01-01&#39;) &#43; &#39;] AND date_end &gt;= &#39; &#43; (dates.from?dates.from:&#39;1900-01-01&#39;) ; &#34;&#34; }}
+        &lt;br/&gt;
+        &lt;ods-table context=&#34;ds&#34;&gt;&lt;/ods-table&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+</code></pre>
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-dates-3-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code></code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-dates-3";
+            iframe = document.getElementById(iframeId);
+             
+            size =  null 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <h2 class="title" id="select-current-past-or-next-week">
+  Select current, past or next week
+  
+    <a class="is-link" href="#select-current-past-or-next-week">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+<p>This is an extract of <a href="https://apps.opendatasoft.com/fr/canteen-menu">the school canteen menu app</a></p>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-dates-4"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;menuscantines\&#34;\n                     menuscantines-dataset=\&#34;menus-cantines\&#34;\n                     menuscantines-domain=\&#34;rennes-metropole\&#34;\n                     menuscantines-parameters=\&#34;{&#39;sort&#39;:&#39;-date&#39;,&#39;refine.secteur&#39;:&#39;1&#39;}\&#34;\n                     ng-init=\&#34;weekselect = 0\&#34;\u003e\n    \u003cdiv class=\&#34;container app\&#34;\u003e\n        {{ menuscantines.parameters[&#39;q&#39;] = \&#34;date:[#now(weeks=\&#34; &#43; (weekselect - 1) &#43; \&#34;,weekday=6) TO #now(weeks=\&#34; &#43;\n        (weekselect) &#43; \&#34;,weekday=4)]\&#34;; \&#34;\&#34;\n        }}\n        \u003cdiv class=\&#34;weeks-selects\&#34;\u003e\n            \u003cdiv class=\&#34;week-select\&#34; ng-class=\&#34;{&#39;week-selected&#39;: weekselect == -1}\&#34;\n                 ng-click=\&#34;weekselect = -1\&#34;\u003e\n                Past week\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;week-select\&#34; ng-class=\&#34;{&#39;week-selected&#39;: weekselect == 0}\&#34;\n                 ng-click=\&#34;weekselect = 0\&#34;\u003e\n                Current week\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;week-select\&#34; ng-class=\&#34;{&#39;week-selected&#39;: weekselect == 1}\&#34;\n                 ng-click=\&#34;weekselect = 1\&#34;\u003e\n                Next week\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cul class=\&#34;menus\&#34;\u003e\n            \u003cli\u003e\n                \u003cdiv class=\&#34;ods-box canteenmenu-ods-box header\&#34;\u003e\n                    \u003cdiv class=\&#34;logos\&#34;\u003e\n                        \u003cimg src=\&#34;https://discovery.opendatasoft.com/assets/theme_image/rennes_logo.png\&#34;/\u003e\n                    \u003c/div\u003e\n                    \u003ch1\u003e\n                        School canteen menu \u003cbr/\u003e\n                        City of Rennes\n                    \u003c/h1\u003e\n                    \u003cdiv class=\&#34;row items\&#34;\u003e\n                        \u003cdiv class=\&#34;item type\&#34;\u003e\n                            \u003ch2\u003e\n                                Starter\n                            \u003c/h2\u003e\n                        \u003c/div\u003e\n                        \u003cdiv class=\&#34;item type\&#34;\u003e\n                            \u003ch2\u003e\n                                Main course\n                            \u003c/h2\u003e\n                        \u003c/div\u003e\n                        \u003cdiv class=\&#34;item type\&#34;\u003e\n                            \u003ch2\u003e\n                                Vegetables\n                            \u003c/h2\u003e\n                        \u003c/div\u003e\n                        \u003cdiv class=\&#34;item type\&#34;\u003e\n                            \u003ch2\u003e\n                                Dairy\n                            \u003c/h2\u003e\n                        \u003c/div\u003e\n                        \u003cdiv class=\&#34;item type\&#34;\u003e\n                            \u003ch2\u003e\n                                Desert\n                            \u003c/h2\u003e\n                        \u003c/div\u003e\n                        \u003cdiv class=\&#34;item type\&#34;\u003e\n                            \u003ch2\u003e\n                                Snack\n                            \u003c/h2\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/li\u003e\n            \u003cli ng-repeat=\&#34;menu in menus\&#34;\n                ods-results=\&#34;menus\&#34;\n                ods-results-context=\&#34;menuscantines\&#34;\n                class=\&#34;menu\&#34;\u003e\n                \u003cdiv class=\&#34;ods-box\&#34;\u003e\n                    \u003ch2\u003e\n                        \u003cspan class=\&#34;stronger\&#34;\u003e{{ menu.fields.date | date : &#39;fullDate&#39; | capitalize }}\u003c/span\u003e\n                    \u003c/h2\u003e\n                    \u003cdiv class=\&#34;row items\&#34;\u003e\n                        \u003cdiv class=\&#34;item plat\&#34;\u003e\n                            \u003ch3\u003e\n                                {{ menu.fields.entree }}\n                            \u003c/h3\u003e\n                            \u003cdiv class=\&#34;item logo\&#34;\u003e\n                                \u003c!--h3\u003e\n                {{ menu.fields.code_entree }}\n            \u003c/h3--\u003e\n                                \u003cimg ng-if=\&#34;menu.fields.code_entree.indexOf(&#39;AB&#39;) \u003e= 0\&#34;\n                                     src=\&#34;https://discovery.opendatasoft.com/assets/theme_image/ab.png\&#34;/\u003e\n                                \u003cimg ng-if=\&#34;menu.fields.code_entree.indexOf(&#39;VBF&#39;) \u003e= 0\&#34;\n                                     src=\&#34;https://discovery.opendatasoft.com/assets/theme_image/vbf.png\&#34;/\u003e\n                                \u003cimg ng-if=\&#34;menu.fields.code_entree.indexOf(&#39;VPF&#39;) \u003e= 0\&#34;\n                                     src=\&#34;https://discovery.opendatasoft.com/assets/theme_image/vpf.png\&#34;/\u003e\n                                \u003cimg ng-if=\&#34;menu.fields.code_entree.indexOf(&#39;EBR&#39;) \u003e= 0\&#34;\n                                     src=\&#34;https://discovery.opendatasoft.com/assets/theme_image/ebr.jpg\&#34;/\u003e\n                            \u003c/div\u003e\n                        \u003c/div\u003e\n                        \u003cdiv class=\&#34;item plat\&#34;\u003e\n                            \u003ch3\u003e\n                                {{ menu.fields.plat }}\n                            \u003c/h3\u003e\n                            \u003cdiv class=\&#34;item logo\&#34;\u003e\n                                \u003c!--h3\u003e\n                {{ menu.fields.code_plat }}\n            \u003c/h3--\u003e\n                                \u003cimg ng-if=\&#34;menu.fields.code_plat.indexOf(&#39;AB&#39;) \u003e= 0\&#34;\n                                     src=\&#34;https://discovery.opendatasoft.com/assets/theme_image/ab.png\&#34;/\u003e\n                                \u003cimg ng-if=\&#34;menu.fields.code_plat.indexOf(&#39;VBF&#39;) \u003e= 0\&#34;\n                                     src=\&#34;https://discovery.opendatasoft.com/assets/theme_image/vbf.png\&#34;/\u003e\n                                \u003cimg ng-if=\&#34;menu.fields.code_plat.indexOf(&#39;VPF&#39;) \u003e= 0\&#34;\n                                     src=\&#34;https://discovery.opendatasoft.com/assets/theme_image/vpf.png\&#34;/\u003e\n                                \u003cimg ng-if=\&#34;menu.fields.code_plat.indexOf(&#39;EBR&#39;) \u003e= 0\&#34;\n                                     src=\&#34;https://discovery.opendatasoft.com/assets/theme_image/ebr.jpg\&#34;/\u003e\n                            \u003c/div\u003e\n                        \u003c/div\u003e\n                        \u003cdiv class=\&#34;item plat\&#34;\u003e\n                            \u003ch3\u003e\n                                {{ menu.fields.legumes }}\n                            \u003c/h3\u003e\n                            \u003cdiv class=\&#34;item logo\&#34;\u003e\n                                \u003c!--h3\u003e\n                {{ menu.fields.code_legumes }}\n            \u003c/h3--\u003e\n                                \u003cimg ng-if=\&#34;menu.fields.code_legumes.indexOf(&#39;AB&#39;) \u003e= 0\&#34;\n                                     src=\&#34;https://discovery.opendatasoft.com/assets/theme_image/ab.png\&#34;/\u003e\n                                \u003cimg ng-if=\&#34;menu.fields.code_legumes.indexOf(&#39;VBF&#39;) \u003e= 0\&#34;\n                                     src=\&#34;https://discovery.opendatasoft.com/assets/theme_image/vbf.png\&#34;/\u003e\n                                \u003cimg ng-if=\&#34;menu.fields.code_legumes.indexOf(&#39;VPF&#39;) \u003e= 0\&#34;\n                                     src=\&#34;https://discovery.opendatasoft.com/assets/theme_image/vpf.png\&#34;/\u003e\n                                \u003cimg ng-if=\&#34;menu.fields.code_legumes.indexOf(&#39;EBR&#39;) \u003e= 0\&#34;\n                                     src=\&#34;https://discovery.opendatasoft.com/assets/theme_image/ebr.jpg\&#34;/\u003e\n                            \u003c/div\u003e\n                        \u003c/div\u003e\n                        \u003cdiv class=\&#34;item plat\&#34;\u003e\n                            \u003ch3\u003e\n                                {{ menu.fields.laitage }}\n                            \u003c/h3\u003e\n                            \u003cdiv class=\&#34;item logo\&#34;\u003e\n                                \u003c!--h3\u003e\n                {{ menu.fields.code_laitage }}\n            \u003c/h3--\u003e\n                                \u003cimg ng-if=\&#34;menu.fields.code_laitage.indexOf(&#39;AB&#39;) \u003e= 0\&#34;\n                                     src=\&#34;https://discovery.opendatasoft.com/assets/theme_image/ab.png\&#34;/\u003e\n                                \u003cimg ng-if=\&#34;menu.fields.code_laitage.indexOf(&#39;VBF&#39;) \u003e= 0\&#34;\n                                     src=\&#34;https://discovery.opendatasoft.com/assets/theme_image/vbf.png\&#34;/\u003e\n                                \u003cimg ng-if=\&#34;menu.fields.code_laitage.indexOf(&#39;VPF&#39;) \u003e= 0\&#34;\n                                     src=\&#34;https://discovery.opendatasoft.com/assets/theme_image/vpf.png\&#34;/\u003e\n                                \u003cimg ng-if=\&#34;menu.fields.code_laitage.indexOf(&#39;EBR&#39;) \u003e= 0\&#34;\n                                     src=\&#34;https://discovery.opendatasoft.com/assets/theme_image/ebr.jpg\&#34;/\u003e\n                            \u003c/div\u003e\n                        \u003c/div\u003e\n                        \u003cdiv class=\&#34;item plat\&#34;\u003e\n                            \u003ch3\u003e\n                                {{ menu.fields.dessert }}\n                            \u003c/h3\u003e\n                            \u003cdiv class=\&#34;item logo\&#34;\u003e\n                                \u003c!--h3\u003e\n                {{ menu.fields.code_dessert }}\n            \u003c/h3--\u003e\n                                \u003cimg ng-if=\&#34;menu.fields.code_dessert.indexOf(&#39;AB&#39;) \u003e= 0\&#34;\n                                     src=\&#34;https://discovery.opendatasoft.com/assets/theme_image/ab.png\&#34;/\u003e\n                                \u003cimg ng-if=\&#34;menu.fields.code_dessert.indexOf(&#39;VBF&#39;) \u003e= 0\&#34;\n                                     src=\&#34;https://discovery.opendatasoft.com/assets/theme_image/vbf.png\&#34;/\u003e\n                                \u003cimg ng-if=\&#34;menu.fields.code_dessert.indexOf(&#39;VPF&#39;) \u003e= 0\&#34;\n                                     src=\&#34;https://discovery.opendatasoft.com/assets/theme_image/vpf.png\&#34;/\u003e\n                                \u003cimg ng-if=\&#34;menu.fields.code_dessert.indexOf(&#39;EBR&#39;) \u003e= 0\&#34;\n                                     src=\&#34;https://discovery.opendatasoft.com/assets/theme_image/ebr.jpg\&#34;/\u003e\n                            \u003c/div\u003e\n                        \u003c/div\u003e\n                        \u003cdiv class=\&#34;item plat\&#34;\u003e\n                            \u003ch3\u003e\n                                {{ menu.fields.gouter }}\n                            \u003c/h3\u003e\n                            \u003cdiv class=\&#34;item logo\&#34;\u003e\n                                \u003c!--h3\u003e\n                {{ menu.fields.code_gouter }}\n            \u003c/h3--\u003e\n                                \u003cimg ng-if=\&#34;menu.fields.code_gouter.indexOf(&#39;AB&#39;) \u003e= 0\&#34;\n                                     src=\&#34;https://discovery.opendatasoft.com/assets/theme_image/ab.png\&#34;/\u003e\n                                \u003cimg ng-if=\&#34;menu.fields.code_gouter.indexOf(&#39;VBF&#39;) \u003e= 0\&#34;\n                                     src=\&#34;https://discovery.opendatasoft.com/assets/theme_image/vbf.png\&#34;/\u003e\n                                \u003cimg ng-if=\&#34;menu.fields.code_gouter.indexOf(&#39;VPF&#39;) \u003e= 0\&#34;\n                                     src=\&#34;https://discovery.opendatasoft.com/assets/theme_image/vpf.png\&#34;/\u003e\n                                \u003cimg ng-if=\&#34;menu.fields.code_gouter.indexOf(&#39;EBR&#39;) \u003e= 0\&#34;\n                                     src=\&#34;https://discovery.opendatasoft.com/assets/theme_image/ebr.jpg\&#34;/\u003e\n                            \u003c/div\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;row items\&#34;\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/li\u003e\n        \u003c/ul\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+               "css": &#34;.app {\n    max-width: 760px;\n}\nul {\n    list-style: none;\n}\n.header {\n    position: relative;\n}\n.logos {\n    position: absolute;\n    right: 15px;\n}\n.logos img:nth-child(1) {\n    height: 50px;\n}\n/*.logos img:nth-child(2) {\nposition: absolute;\nright: 0;\nwidth: 149px;\nheight: 49px;\n}*/\n.menus {\n    text-align: center;\n}\nh1 {\n    margin: 0px 0px 30px 15px;\n    text-align: left;\n    margin-top: 3px;\n}\n.menu h2 {\n    margin-bottom: 15px;\n    font-size: 1.2em;\n}\n.items {\n    display: flex;\n    justify-content: space-around;\n    flex-wrap: wrap;\n}\n.type {\n    margin: 0px 5px;\n}\n.logo {\n    width: 110px;\n}\n.logo img {\n    max-height: 30px;\n    max-width: 30px;\n}\n.item.type h2 {\n    width: 105px;\n}\n.item.plat h3 {\n    width: 110px;\n    font-size: 1.1em;\n}\n.stronger {\n    font-weight: 400;\n}\n.weeks-selects {\n    display: flex;\n    justify-content: center;\n}\n.week-select {\n    padding: 5px 0;\n    margin: 5px;\n    border: 1px solid #1f0d3340;\n    width: 201px;\n    text-align: center;\n}\n.week-select:hover {\n    border-bottom: 1px solid #1f0d33;\n}\n.week-selected {\n    border-color: #1f0d33;\n    font-weight: 500;\n    background-color: white;\n}\n@media print {\n    header, footer, #debug, .weeks-selects, .external-links {\n        display: none;\n    }\n    .ods-box.header {\n        border: none;\n    }\n}\n&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+        <iframe id="iframe-dates-4"
+                width="100%" height="100%"
+                src="about:blank"
+                srcdoc="
+          <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+          </head>
+          <body>
+          <div ng-app='ods-widgets'>
+              &lt;ods-dataset-context context=&#34;menuscantines&#34;
+                     menuscantines-dataset=&#34;menus-cantines&#34;
+                     menuscantines-domain=&#34;rennes-metropole&#34;
+                     menuscantines-parameters=&#34;{&#39;sort&#39;:&#39;-date&#39;,&#39;refine.secteur&#39;:&#39;1&#39;}&#34;
+                     ng-init=&#34;weekselect = 0&#34;&gt;
+    &lt;div class=&#34;container app&#34;&gt;
+        {{ menuscantines.parameters[&#39;q&#39;] = &#34;date:[#now(weeks=&#34; &#43; (weekselect - 1) &#43; &#34;,weekday=6) TO #now(weeks=&#34; &#43;
+        (weekselect) &#43; &#34;,weekday=4)]&#34;; &#34;&#34;
+        }}
+        &lt;div class=&#34;weeks-selects&#34;&gt;
+            &lt;div class=&#34;week-select&#34; ng-class=&#34;{&#39;week-selected&#39;: weekselect == -1}&#34;
+                 ng-click=&#34;weekselect = -1&#34;&gt;
+                Past week
+            &lt;/div&gt;
+            &lt;div class=&#34;week-select&#34; ng-class=&#34;{&#39;week-selected&#39;: weekselect == 0}&#34;
+                 ng-click=&#34;weekselect = 0&#34;&gt;
+                Current week
+            &lt;/div&gt;
+            &lt;div class=&#34;week-select&#34; ng-class=&#34;{&#39;week-selected&#39;: weekselect == 1}&#34;
+                 ng-click=&#34;weekselect = 1&#34;&gt;
+                Next week
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;ul class=&#34;menus&#34;&gt;
+            &lt;li&gt;
+                &lt;div class=&#34;ods-box canteenmenu-ods-box header&#34;&gt;
+                    &lt;div class=&#34;logos&#34;&gt;
+                        &lt;img src=&#34;https://discovery.opendatasoft.com/assets/theme_image/rennes_logo.png&#34;/&gt;
+                    &lt;/div&gt;
+                    &lt;h1&gt;
+                        School canteen menu &lt;br/&gt;
+                        City of Rennes
+                    &lt;/h1&gt;
+                    &lt;div class=&#34;row items&#34;&gt;
+                        &lt;div class=&#34;item type&#34;&gt;
+                            &lt;h2&gt;
+                                Starter
+                            &lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;item type&#34;&gt;
+                            &lt;h2&gt;
+                                Main course
+                            &lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;item type&#34;&gt;
+                            &lt;h2&gt;
+                                Vegetables
+                            &lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;item type&#34;&gt;
+                            &lt;h2&gt;
+                                Dairy
+                            &lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;item type&#34;&gt;
+                            &lt;h2&gt;
+                                Desert
+                            &lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;item type&#34;&gt;
+                            &lt;h2&gt;
+                                Snack
+                            &lt;/h2&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li ng-repeat=&#34;menu in menus&#34;
+                ods-results=&#34;menus&#34;
+                ods-results-context=&#34;menuscantines&#34;
+                class=&#34;menu&#34;&gt;
+                &lt;div class=&#34;ods-box&#34;&gt;
+                    &lt;h2&gt;
+                        &lt;span class=&#34;stronger&#34;&gt;{{ menu.fields.date | date : &#39;fullDate&#39; | capitalize }}&lt;/span&gt;
+                    &lt;/h2&gt;
+                    &lt;div class=&#34;row items&#34;&gt;
+                        &lt;div class=&#34;item plat&#34;&gt;
+                            &lt;h3&gt;
+                                {{ menu.fields.entree }}
+                            &lt;/h3&gt;
+                            &lt;div class=&#34;item logo&#34;&gt;
+                                &lt;!--h3&gt;
+                {{ menu.fields.code_entree }}
+            &lt;/h3--&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_entree.indexOf(&#39;AB&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/ab.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_entree.indexOf(&#39;VBF&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/vbf.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_entree.indexOf(&#39;VPF&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/vpf.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_entree.indexOf(&#39;EBR&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/ebr.jpg&#34;/&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;item plat&#34;&gt;
+                            &lt;h3&gt;
+                                {{ menu.fields.plat }}
+                            &lt;/h3&gt;
+                            &lt;div class=&#34;item logo&#34;&gt;
+                                &lt;!--h3&gt;
+                {{ menu.fields.code_plat }}
+            &lt;/h3--&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_plat.indexOf(&#39;AB&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/ab.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_plat.indexOf(&#39;VBF&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/vbf.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_plat.indexOf(&#39;VPF&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/vpf.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_plat.indexOf(&#39;EBR&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/ebr.jpg&#34;/&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;item plat&#34;&gt;
+                            &lt;h3&gt;
+                                {{ menu.fields.legumes }}
+                            &lt;/h3&gt;
+                            &lt;div class=&#34;item logo&#34;&gt;
+                                &lt;!--h3&gt;
+                {{ menu.fields.code_legumes }}
+            &lt;/h3--&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_legumes.indexOf(&#39;AB&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/ab.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_legumes.indexOf(&#39;VBF&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/vbf.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_legumes.indexOf(&#39;VPF&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/vpf.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_legumes.indexOf(&#39;EBR&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/ebr.jpg&#34;/&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;item plat&#34;&gt;
+                            &lt;h3&gt;
+                                {{ menu.fields.laitage }}
+                            &lt;/h3&gt;
+                            &lt;div class=&#34;item logo&#34;&gt;
+                                &lt;!--h3&gt;
+                {{ menu.fields.code_laitage }}
+            &lt;/h3--&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_laitage.indexOf(&#39;AB&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/ab.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_laitage.indexOf(&#39;VBF&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/vbf.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_laitage.indexOf(&#39;VPF&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/vpf.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_laitage.indexOf(&#39;EBR&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/ebr.jpg&#34;/&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;item plat&#34;&gt;
+                            &lt;h3&gt;
+                                {{ menu.fields.dessert }}
+                            &lt;/h3&gt;
+                            &lt;div class=&#34;item logo&#34;&gt;
+                                &lt;!--h3&gt;
+                {{ menu.fields.code_dessert }}
+            &lt;/h3--&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_dessert.indexOf(&#39;AB&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/ab.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_dessert.indexOf(&#39;VBF&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/vbf.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_dessert.indexOf(&#39;VPF&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/vpf.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_dessert.indexOf(&#39;EBR&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/ebr.jpg&#34;/&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;item plat&#34;&gt;
+                            &lt;h3&gt;
+                                {{ menu.fields.gouter }}
+                            &lt;/h3&gt;
+                            &lt;div class=&#34;item logo&#34;&gt;
+                                &lt;!--h3&gt;
+                {{ menu.fields.code_gouter }}
+            &lt;/h3--&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_gouter.indexOf(&#39;AB&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/ab.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_gouter.indexOf(&#39;VBF&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/vbf.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_gouter.indexOf(&#39;VPF&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/vpf.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_gouter.indexOf(&#39;EBR&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/ebr.jpg&#34;/&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;row items&#34;&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+
+          </div>
+          <style type='text/css'>
+              .app {
+    max-width: 760px;
+}
+ul {
+    list-style: none;
+}
+.header {
+    position: relative;
+}
+.logos {
+    position: absolute;
+    right: 15px;
+}
+.logos img:nth-child(1) {
+    height: 50px;
+}
+/*.logos img:nth-child(2) {
+position: absolute;
+right: 0;
+width: 149px;
+height: 49px;
+}*/
+.menus {
+    text-align: center;
+}
+h1 {
+    margin: 0px 0px 30px 15px;
+    text-align: left;
+    margin-top: 3px;
+}
+.menu h2 {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+.items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.type {
+    margin: 0px 5px;
+}
+.logo {
+    width: 110px;
+}
+.logo img {
+    max-height: 30px;
+    max-width: 30px;
+}
+.item.type h2 {
+    width: 105px;
+}
+.item.plat h3 {
+    width: 110px;
+    font-size: 1.1em;
+}
+.stronger {
+    font-weight: 400;
+}
+.weeks-selects {
+    display: flex;
+    justify-content: center;
+}
+.week-select {
+    padding: 5px 0;
+    margin: 5px;
+    border: 1px solid #1f0d3340;
+    width: 201px;
+    text-align: center;
+}
+.week-select:hover {
+    border-bottom: 1px solid #1f0d33;
+}
+.week-selected {
+    border-color: #1f0d33;
+    font-weight: 500;
+    background-color: white;
+}
+@media print {
+    header, footer, #debug, .weeks-selects, .external-links {
+        display: none;
+    }
+    .ods-box.header {
+        border: none;
+    }
+}
+
+          </style>
+          </body>
+          ">
+        </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-dates-4-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-dates-4-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right">
+                <a class="button is-primary is-outlined edit-on-codepen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-dates-4').submit()">
+                    Edit on CodePen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-dates-4-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;menuscantines&#34;
+                     menuscantines-dataset=&#34;menus-cantines&#34;
+                     menuscantines-domain=&#34;rennes-metropole&#34;
+                     menuscantines-parameters=&#34;{&#39;sort&#39;:&#39;-date&#39;,&#39;refine.secteur&#39;:&#39;1&#39;}&#34;
+                     ng-init=&#34;weekselect = 0&#34;&gt;
+    &lt;div class=&#34;container app&#34;&gt;
+        {{ menuscantines.parameters[&#39;q&#39;] = &#34;date:[#now(weeks=&#34; &#43; (weekselect - 1) &#43; &#34;,weekday=6) TO #now(weeks=&#34; &#43;
+        (weekselect) &#43; &#34;,weekday=4)]&#34;; &#34;&#34;
+        }}
+        &lt;div class=&#34;weeks-selects&#34;&gt;
+            &lt;div class=&#34;week-select&#34; ng-class=&#34;{&#39;week-selected&#39;: weekselect == -1}&#34;
+                 ng-click=&#34;weekselect = -1&#34;&gt;
+                Past week
+            &lt;/div&gt;
+            &lt;div class=&#34;week-select&#34; ng-class=&#34;{&#39;week-selected&#39;: weekselect == 0}&#34;
+                 ng-click=&#34;weekselect = 0&#34;&gt;
+                Current week
+            &lt;/div&gt;
+            &lt;div class=&#34;week-select&#34; ng-class=&#34;{&#39;week-selected&#39;: weekselect == 1}&#34;
+                 ng-click=&#34;weekselect = 1&#34;&gt;
+                Next week
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;ul class=&#34;menus&#34;&gt;
+            &lt;li&gt;
+                &lt;div class=&#34;ods-box canteenmenu-ods-box header&#34;&gt;
+                    &lt;div class=&#34;logos&#34;&gt;
+                        &lt;img src=&#34;https://discovery.opendatasoft.com/assets/theme_image/rennes_logo.png&#34;/&gt;
+                    &lt;/div&gt;
+                    &lt;h1&gt;
+                        School canteen menu &lt;br/&gt;
+                        City of Rennes
+                    &lt;/h1&gt;
+                    &lt;div class=&#34;row items&#34;&gt;
+                        &lt;div class=&#34;item type&#34;&gt;
+                            &lt;h2&gt;
+                                Starter
+                            &lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;item type&#34;&gt;
+                            &lt;h2&gt;
+                                Main course
+                            &lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;item type&#34;&gt;
+                            &lt;h2&gt;
+                                Vegetables
+                            &lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;item type&#34;&gt;
+                            &lt;h2&gt;
+                                Dairy
+                            &lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;item type&#34;&gt;
+                            &lt;h2&gt;
+                                Desert
+                            &lt;/h2&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;item type&#34;&gt;
+                            &lt;h2&gt;
+                                Snack
+                            &lt;/h2&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+            &lt;li ng-repeat=&#34;menu in menus&#34;
+                ods-results=&#34;menus&#34;
+                ods-results-context=&#34;menuscantines&#34;
+                class=&#34;menu&#34;&gt;
+                &lt;div class=&#34;ods-box&#34;&gt;
+                    &lt;h2&gt;
+                        &lt;span class=&#34;stronger&#34;&gt;{{ menu.fields.date | date : &#39;fullDate&#39; | capitalize }}&lt;/span&gt;
+                    &lt;/h2&gt;
+                    &lt;div class=&#34;row items&#34;&gt;
+                        &lt;div class=&#34;item plat&#34;&gt;
+                            &lt;h3&gt;
+                                {{ menu.fields.entree }}
+                            &lt;/h3&gt;
+                            &lt;div class=&#34;item logo&#34;&gt;
+                                &lt;!--h3&gt;
+                {{ menu.fields.code_entree }}
+            &lt;/h3--&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_entree.indexOf(&#39;AB&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/ab.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_entree.indexOf(&#39;VBF&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/vbf.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_entree.indexOf(&#39;VPF&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/vpf.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_entree.indexOf(&#39;EBR&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/ebr.jpg&#34;/&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;item plat&#34;&gt;
+                            &lt;h3&gt;
+                                {{ menu.fields.plat }}
+                            &lt;/h3&gt;
+                            &lt;div class=&#34;item logo&#34;&gt;
+                                &lt;!--h3&gt;
+                {{ menu.fields.code_plat }}
+            &lt;/h3--&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_plat.indexOf(&#39;AB&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/ab.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_plat.indexOf(&#39;VBF&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/vbf.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_plat.indexOf(&#39;VPF&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/vpf.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_plat.indexOf(&#39;EBR&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/ebr.jpg&#34;/&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;item plat&#34;&gt;
+                            &lt;h3&gt;
+                                {{ menu.fields.legumes }}
+                            &lt;/h3&gt;
+                            &lt;div class=&#34;item logo&#34;&gt;
+                                &lt;!--h3&gt;
+                {{ menu.fields.code_legumes }}
+            &lt;/h3--&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_legumes.indexOf(&#39;AB&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/ab.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_legumes.indexOf(&#39;VBF&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/vbf.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_legumes.indexOf(&#39;VPF&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/vpf.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_legumes.indexOf(&#39;EBR&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/ebr.jpg&#34;/&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;item plat&#34;&gt;
+                            &lt;h3&gt;
+                                {{ menu.fields.laitage }}
+                            &lt;/h3&gt;
+                            &lt;div class=&#34;item logo&#34;&gt;
+                                &lt;!--h3&gt;
+                {{ menu.fields.code_laitage }}
+            &lt;/h3--&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_laitage.indexOf(&#39;AB&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/ab.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_laitage.indexOf(&#39;VBF&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/vbf.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_laitage.indexOf(&#39;VPF&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/vpf.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_laitage.indexOf(&#39;EBR&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/ebr.jpg&#34;/&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;item plat&#34;&gt;
+                            &lt;h3&gt;
+                                {{ menu.fields.dessert }}
+                            &lt;/h3&gt;
+                            &lt;div class=&#34;item logo&#34;&gt;
+                                &lt;!--h3&gt;
+                {{ menu.fields.code_dessert }}
+            &lt;/h3--&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_dessert.indexOf(&#39;AB&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/ab.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_dessert.indexOf(&#39;VBF&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/vbf.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_dessert.indexOf(&#39;VPF&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/vpf.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_dessert.indexOf(&#39;EBR&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/ebr.jpg&#34;/&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;item plat&#34;&gt;
+                            &lt;h3&gt;
+                                {{ menu.fields.gouter }}
+                            &lt;/h3&gt;
+                            &lt;div class=&#34;item logo&#34;&gt;
+                                &lt;!--h3&gt;
+                {{ menu.fields.code_gouter }}
+            &lt;/h3--&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_gouter.indexOf(&#39;AB&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/ab.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_gouter.indexOf(&#39;VBF&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/vbf.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_gouter.indexOf(&#39;VPF&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/vpf.png&#34;/&gt;
+                                &lt;img ng-if=&#34;menu.fields.code_gouter.indexOf(&#39;EBR&#39;) &gt;= 0&#34;
+                                     src=&#34;https://discovery.opendatasoft.com/assets/theme_image/ebr.jpg&#34;/&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;row items&#34;&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+</code></pre>
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-dates-4-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>.app {
+    max-width: 760px;
+}
+ul {
+    list-style: none;
+}
+.header {
+    position: relative;
+}
+.logos {
+    position: absolute;
+    right: 15px;
+}
+.logos img:nth-child(1) {
+    height: 50px;
+}
+/*.logos img:nth-child(2) {
+position: absolute;
+right: 0;
+width: 149px;
+height: 49px;
+}*/
+.menus {
+    text-align: center;
+}
+h1 {
+    margin: 0px 0px 30px 15px;
+    text-align: left;
+    margin-top: 3px;
+}
+.menu h2 {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+}
+.items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.type {
+    margin: 0px 5px;
+}
+.logo {
+    width: 110px;
+}
+.logo img {
+    max-height: 30px;
+    max-width: 30px;
+}
+.item.type h2 {
+    width: 105px;
+}
+.item.plat h3 {
+    width: 110px;
+    font-size: 1.1em;
+}
+.stronger {
+    font-weight: 400;
+}
+.weeks-selects {
+    display: flex;
+    justify-content: center;
+}
+.week-select {
+    padding: 5px 0;
+    margin: 5px;
+    border: 1px solid #1f0d3340;
+    width: 201px;
+    text-align: center;
+}
+.week-select:hover {
+    border-bottom: 1px solid #1f0d33;
+}
+.week-selected {
+    border-color: #1f0d33;
+    font-weight: 500;
+    background-color: white;
+}
+@media print {
+    header, footer, #debug, .weeks-selects, .external-links {
+        display: none;
+    }
+    .ods-box.header {
+        border: none;
+    }
+}
+</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-dates-4";
+            iframe = document.getElementById(iframeId);
+             
+            size =  null 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <h2 class="title" id="single-date-picker--range-slider">
+  Single date picker + range slider
+  
+    <a class="is-link" href="#single-date-picker--range-slider">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+<p>This example highlights two usages. The ability to have a single date picker instead of two usually. But also the use of sliders to play with date ranges.</p>
+<p>This combination is pretty useful to facilitate range selection for the end user.</p>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-dates-5"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function() {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;ds,timerange\&#34;\n                     ds-dataset=\&#34;evenements-publics-openagenda\&#34;\n                     ds-domain=\&#34;userclub\&#34;\n                     timerange-dataset=\&#34;evenements-publics-openagenda\&#34;\n                     timerange-domain=\&#34;userclub\&#34;\n                     ds-parameters=\&#34;{&#39;sort&#39;:&#39;date_start&#39;}\&#34;\n                     ng-init=\&#34;dates = {&#39;to&#39;: &#39;&#39;, &#39;from&#39;: &#39;&#39;};\n                                              dayrange = 7\&#34;\u003e\n    \u003cp style=\&#34;text-align: center\&#34;\u003e\n        \u003cstrong\u003eCurrent selection:\u003c/strong\u003e events starting from the \u003cstrong\u003e{{ dates.from | date }}\u003c/strong\u003e to the\n        \u003cstrong\u003e{{ (dates.from | momentadd : &#39;days&#39; : dayrange) | date }}\u003c/strong\u003e (\u003cstrong\u003e&#43;{{ dayrange }}\n        day{{dayrange\u003e1?&#39;s&#39;:&#39;&#39;}}\u003c/strong\u003e)\n    \u003c/p\u003e\n    \u003cdiv class=\&#34;controlers\&#34;\u003e\n        \u003cdiv class=\&#34;controler control-date\&#34;\u003e\n            \u003ch2\u003e\n                Starting date\n            \u003c/h2\u003e\n            \u003cdiv ods-datetime=\&#34;now\&#34;\u003e\n                \u003cods-timerange display-time=\&#34;false\&#34;\n                               date-format=\&#34;MM/DD/YYYY\&#34;\n                               context=\&#34;timerange\&#34;\n                               default-from=\&#34;{{ now }}\&#34;\n                               default-to=\&#34;{{ now }}\&#34;\n                               to=\&#34;dates.to\&#34;\n                               from=\&#34;dates.from\&#34;\u003e\n                \u003c/ods-timerange\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;controler control-range\&#34;\u003e\n            \u003ch2\u003e\n                Day range\n            \u003c/h2\u003e\n            \u003cdiv class=\&#34;input-range-with-button\&#34;\u003e\n                \u003cinput type=\&#34;range\&#34; min=\&#34;0\&#34; max=\&#34;14\&#34; step=\&#34;1\&#34;\n                       ng-model=\&#34;dayrange\&#34;\n                       ng-model-options=\&#34;{ debounce: { &#39;default&#39;: 300 }}\&#34;/\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n    \u003cpre\u003e{{ ds.parameters[&#39;q&#39;] = &#39;date_start:[&#39; &#43; dates.from &#43; &#39; TO &#39; &#43; (dates.from | momentadd : &#39;days&#39; : 1*dayrange &#43; 1) &#43; &#39;]&#39; ;  }}\u003c/pre\u003e\n    \u003cbr/\u003e\n    \u003cods-chart\u003e\n        \u003cods-chart-query context=\&#34;ds\&#34; field-x=\&#34;date_start\&#34; maxpoints=\&#34;0\&#34; timescale=\&#34;day\&#34;\u003e\n            \u003cods-chart-serie chart-type=\&#34;column\&#34; function-y=\&#34;COUNT\&#34; label-y=\&#34;Number of events\&#34; color=\&#34;#2C3F56\&#34;\n                             scientific-display=\&#34;true\&#34;\u003e\n            \u003c/ods-chart-serie\u003e\n        \u003c/ods-chart-query\u003e\n    \u003c/ods-chart\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+               "css": &#34;/* TIMERANGE */\n.odswidget-timerange__to {\n    display: none;\n}\n.odswidget-timerange {\n    display: flex;\n    flex-wrap: wrap;\n    justify-content: center;\n}\n.input-holder, .odswidget-timerange__from {\n    border: 1px solid #e4e4e4;\n    padding: 10px;\n    border-radius: 3px;\n    box-shadow: 1px 1px 5px gainsboro;\n    background-color: white;\n    z-index: 2;\n    margin-bottom: 10px;\n    display: flex;\n    align-items: center;\n    margin: 3px;\n}\n.odswidget-timerange__from {\n    margin-right: 10px;\n}\n.input-holder input, .odswidget-timerange__from input {\n    border: none;\n    width: 110px;\n    margin-left: 8px;\n}\n.input-holder input:focus, .odswidget-timerange__from input:focus {\n    outline: 0;\n}\n/* SLIDER / RANGE */\n.controler {\n    display: flex;\n    margin: 2px 15px;\n}\n.controler h2 {\n    line-height: 2em;\n    margin-right: 10px;\n}\n.control-hour input[type=range] {\n    width: 150px;\n}\n.control-range input[type=range] {\n    width: 200px;\n}\n.input-range-with-button {\n    line-height: 3.5em;\n}\n.controler .ods-button i.fa {\n    vertical-align: middle;\n}\n&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+        <iframe id="iframe-dates-5"
+                width="100%" height="100%"
+                src="about:blank"
+                srcdoc="
+          <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function(ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function() {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+          </head>
+          <body>
+          <div ng-app='ods-widgets'>
+              &lt;ods-dataset-context context=&#34;ds,timerange&#34;
+                     ds-dataset=&#34;evenements-publics-openagenda&#34;
+                     ds-domain=&#34;userclub&#34;
+                     timerange-dataset=&#34;evenements-publics-openagenda&#34;
+                     timerange-domain=&#34;userclub&#34;
+                     ds-parameters=&#34;{&#39;sort&#39;:&#39;date_start&#39;}&#34;
+                     ng-init=&#34;dates = {&#39;to&#39;: &#39;&#39;, &#39;from&#39;: &#39;&#39;};
+                                              dayrange = 7&#34;&gt;
+    &lt;p style=&#34;text-align: center&#34;&gt;
+        &lt;strong&gt;Current selection:&lt;/strong&gt; events starting from the &lt;strong&gt;{{ dates.from | date }}&lt;/strong&gt; to the
+        &lt;strong&gt;{{ (dates.from | momentadd : &#39;days&#39; : dayrange) | date }}&lt;/strong&gt; (&lt;strong&gt;&#43;{{ dayrange }}
+        day{{dayrange&gt;1?&#39;s&#39;:&#39;&#39;}}&lt;/strong&gt;)
+    &lt;/p&gt;
+    &lt;div class=&#34;controlers&#34;&gt;
+        &lt;div class=&#34;controler control-date&#34;&gt;
+            &lt;h2&gt;
+                Starting date
+            &lt;/h2&gt;
+            &lt;div ods-datetime=&#34;now&#34;&gt;
+                &lt;ods-timerange display-time=&#34;false&#34;
+                               date-format=&#34;MM/DD/YYYY&#34;
+                               context=&#34;timerange&#34;
+                               default-from=&#34;{{ now }}&#34;
+                               default-to=&#34;{{ now }}&#34;
+                               to=&#34;dates.to&#34;
+                               from=&#34;dates.from&#34;&gt;
+                &lt;/ods-timerange&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;controler control-range&#34;&gt;
+            &lt;h2&gt;
+                Day range
+            &lt;/h2&gt;
+            &lt;div class=&#34;input-range-with-button&#34;&gt;
+                &lt;input type=&#34;range&#34; min=&#34;0&#34; max=&#34;14&#34; step=&#34;1&#34;
+                       ng-model=&#34;dayrange&#34;
+                       ng-model-options=&#34;{ debounce: { &#39;default&#39;: 300 }}&#34;/&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;pre&gt;{{ ds.parameters[&#39;q&#39;] = &#39;date_start:[&#39; &#43; dates.from &#43; &#39; TO &#39; &#43; (dates.from | momentadd : &#39;days&#39; : 1*dayrange &#43; 1) &#43; &#39;]&#39; ;  }}&lt;/pre&gt;
+    &lt;br/&gt;
+    &lt;ods-chart&gt;
+        &lt;ods-chart-query context=&#34;ds&#34; field-x=&#34;date_start&#34; maxpoints=&#34;0&#34; timescale=&#34;day&#34;&gt;
+            &lt;ods-chart-serie chart-type=&#34;column&#34; function-y=&#34;COUNT&#34; label-y=&#34;Number of events&#34; color=&#34;#2C3F56&#34;
+                             scientific-display=&#34;true&#34;&gt;
+            &lt;/ods-chart-serie&gt;
+        &lt;/ods-chart-query&gt;
+    &lt;/ods-chart&gt;
+&lt;/ods-dataset-context&gt;
+
+          </div>
+          <style type='text/css'>
+              /* TIMERANGE */
+.odswidget-timerange__to {
+    display: none;
+}
+.odswidget-timerange {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.input-holder, .odswidget-timerange__from {
+    border: 1px solid #e4e4e4;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px gainsboro;
+    background-color: white;
+    z-index: 2;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    margin: 3px;
+}
+.odswidget-timerange__from {
+    margin-right: 10px;
+}
+.input-holder input, .odswidget-timerange__from input {
+    border: none;
+    width: 110px;
+    margin-left: 8px;
+}
+.input-holder input:focus, .odswidget-timerange__from input:focus {
+    outline: 0;
+}
+/* SLIDER / RANGE */
+.controler {
+    display: flex;
+    margin: 2px 15px;
+}
+.controler h2 {
+    line-height: 2em;
+    margin-right: 10px;
+}
+.control-hour input[type=range] {
+    width: 150px;
+}
+.control-range input[type=range] {
+    width: 200px;
+}
+.input-range-with-button {
+    line-height: 3.5em;
+}
+.controler .ods-button i.fa {
+    vertical-align: middle;
+}
+
+          </style>
+          </body>
+          ">
+        </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-dates-5-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        <li class="button is-primary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-dates-5-css-content">
+                                CSS
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right">
+                <a class="button is-primary is-outlined edit-on-codepen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-dates-5').submit()">
+                    Edit on CodePen
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-dates-5-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;ds,timerange&#34;
+                     ds-dataset=&#34;evenements-publics-openagenda&#34;
+                     ds-domain=&#34;userclub&#34;
+                     timerange-dataset=&#34;evenements-publics-openagenda&#34;
+                     timerange-domain=&#34;userclub&#34;
+                     ds-parameters=&#34;{&#39;sort&#39;:&#39;date_start&#39;}&#34;
+                     ng-init=&#34;dates = {&#39;to&#39;: &#39;&#39;, &#39;from&#39;: &#39;&#39;};
+                                              dayrange = 7&#34;&gt;
+    &lt;p style=&#34;text-align: center&#34;&gt;
+        &lt;strong&gt;Current selection:&lt;/strong&gt; events starting from the &lt;strong&gt;{{ dates.from | date }}&lt;/strong&gt; to the
+        &lt;strong&gt;{{ (dates.from | momentadd : &#39;days&#39; : dayrange) | date }}&lt;/strong&gt; (&lt;strong&gt;&#43;{{ dayrange }}
+        day{{dayrange&gt;1?&#39;s&#39;:&#39;&#39;}}&lt;/strong&gt;)
+    &lt;/p&gt;
+    &lt;div class=&#34;controlers&#34;&gt;
+        &lt;div class=&#34;controler control-date&#34;&gt;
+            &lt;h2&gt;
+                Starting date
+            &lt;/h2&gt;
+            &lt;div ods-datetime=&#34;now&#34;&gt;
+                &lt;ods-timerange display-time=&#34;false&#34;
+                               date-format=&#34;MM/DD/YYYY&#34;
+                               context=&#34;timerange&#34;
+                               default-from=&#34;{{ now }}&#34;
+                               default-to=&#34;{{ now }}&#34;
+                               to=&#34;dates.to&#34;
+                               from=&#34;dates.from&#34;&gt;
+                &lt;/ods-timerange&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;controler control-range&#34;&gt;
+            &lt;h2&gt;
+                Day range
+            &lt;/h2&gt;
+            &lt;div class=&#34;input-range-with-button&#34;&gt;
+                &lt;input type=&#34;range&#34; min=&#34;0&#34; max=&#34;14&#34; step=&#34;1&#34;
+                       ng-model=&#34;dayrange&#34;
+                       ng-model-options=&#34;{ debounce: { &#39;default&#39;: 300 }}&#34;/&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;pre&gt;{{ ds.parameters[&#39;q&#39;] = &#39;date_start:[&#39; &#43; dates.from &#43; &#39; TO &#39; &#43; (dates.from | momentadd : &#39;days&#39; : 1*dayrange &#43; 1) &#43; &#39;]&#39; ;  }}&lt;/pre&gt;
+    &lt;br/&gt;
+    &lt;ods-chart&gt;
+        &lt;ods-chart-query context=&#34;ds&#34; field-x=&#34;date_start&#34; maxpoints=&#34;0&#34; timescale=&#34;day&#34;&gt;
+            &lt;ods-chart-serie chart-type=&#34;column&#34; function-y=&#34;COUNT&#34; label-y=&#34;Number of events&#34; color=&#34;#2C3F56&#34;
+                             scientific-display=&#34;true&#34;&gt;
+            &lt;/ods-chart-serie&gt;
+        &lt;/ods-chart-query&gt;
+    &lt;/ods-chart&gt;
+&lt;/ods-dataset-context&gt;
+</code></pre>
+                </div>
+            </div>
+            <div class="js-tabcontent"
+                 id="code-dates-5-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>/* TIMERANGE */
+.odswidget-timerange__to {
+    display: none;
+}
+.odswidget-timerange {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.input-holder, .odswidget-timerange__from {
+    border: 1px solid #e4e4e4;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 5px gainsboro;
+    background-color: white;
+    z-index: 2;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    margin: 3px;
+}
+.odswidget-timerange__from {
+    margin-right: 10px;
+}
+.input-holder input, .odswidget-timerange__from input {
+    border: none;
+    width: 110px;
+    margin-left: 8px;
+}
+.input-holder input:focus, .odswidget-timerange__from input:focus {
+    outline: 0;
+}
+/* SLIDER / RANGE */
+.controler {
+    display: flex;
+    margin: 2px 15px;
+}
+.controler h2 {
+    line-height: 2em;
+    margin-right: 10px;
+}
+.control-hour input[type=range] {
+    width: 150px;
+}
+.control-range input[type=range] {
+    width: 200px;
+}
+.input-range-with-button {
+    line-height: 3.5em;
+}
+.controler .ods-button i.fa {
+    vertical-align: middle;
+}
+</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-dates-5";
+            iframe = document.getElementById(iframeId);
+             
+            size =  null 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+        </div>
+    </div>
+    
+</section>
+
+
+    </div>
+</div>
+
+<footer class="footer">
+    <a href="https://www.opendatasoft.com"
+       class="footer-link"
+       title="Opendatasoft website">
+        <img src="/img/ods-logo.svg"
+             class="footer-logo"
+             alt="Opendatasoft logo"
+        />
+    </a>
+    <span class="footer-copyright">
+        &copy; Copyright 2020
+    </span>
+</footer>
+
+
+
+
+
+
+
+<script>var process = { "env": { "NODE_ENV": "production" } }</script>
+<script type="text/javascript"
+        src="/index.min.11fcc0d6f8a0b04671eb0a5fb2bb06b89618c60744ea73effdb557ad43fd44a6.js"
+        defer></script>
+
+</body>
+</html>
