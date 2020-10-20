@@ -1,7 +1,7 @@
 ---
 title: "Timeline Custom View"
 description: ""
-tags: ["display", "navigation", "list"]
+tags: ["display", "list"]
 resources:
 - src: '*/'
   title: 'Section #:counter'

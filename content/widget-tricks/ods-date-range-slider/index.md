@@ -1,7 +1,7 @@
 ---
 title: "ods-range-slider"
 description: ""
-tags: ["display", "navigation", "list"]
+tags: ["list", "filter"]
 resources:
 - src: '*/'
   title: 'Section #:counter'

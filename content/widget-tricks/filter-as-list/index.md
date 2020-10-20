@@ -1,7 +1,7 @@
 ---
 title: "Filters as an HTML Select"
 description: ""
-tags: ["display", "navigation", "list"]
+tags: ["display", "navigation", "list", "filter"]
 resources:
 - src: '*/'
   title: 'Section #:counter'

@@ -1,10 +1,10 @@
 ---
 title: "Dashboard"
 description: ""
-tags: ["display", "navigation", "list"]
+tags: ["display", "navigation"]
 resources:
 - src: '*/'
   title: 'Section #:counter'
 ---
 
-# Dashboard template 
+# Dashboard template

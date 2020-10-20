@@ -1,7 +1,7 @@
 ---
 title: "ods-map: CSS Hacks"
 description: ""
-tags: ["display", "navigation", "list"]
+tags: ["display", "ods-maps", "geo"]
 resources:
 - src: '*/'
   title: 'Section #:counter'

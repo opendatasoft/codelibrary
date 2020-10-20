@@ -1,7 +1,7 @@
 ---
 title: "Chart Samples"
 description: ""
-tags: ["charts"]
+tags: ["chart", "aggregation"]
 resources:
 - src: '*/'
   title: 'Section #:counter'
