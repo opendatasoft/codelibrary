@@ -4,34 +4,6 @@ import {searchBox, hits, configure} from 'instantsearch.js/es/widgets';
 import connectHits from 'instantsearch.js/es/connectors/infinite-hits/connectInfiniteHitsWithInsights';
 import "./algolia_insight"
 
-var hit = `
-    <a class="hit" href="{{{permalink}}}">
-        <div class="hit-head">
-            <p class="title is-6 hit-title">{{{_highlightResult.title.value}}}</p>
-            <p class="hit-categories">
-                {{#_highlightResult.categories}}
-                <span class="tag is-info">{{value}}</span>
-                {{/_highlightResult.categories}}
-            </p>
-        </div>
-        <div class="hit-content">
-            <p class="hit-summary content has-text-grey">
-                {{{print}}}
-            </p>
-            <ul class="tags">
-                {{#_highlightResult.tags}}
-                <li class="tag is-info is-light">{{{value}}}</li>
-                {{/_highlightResult.tags}}
-            </ul>
-        </div>
-    </a>
-    `;
-var empty = `
-    <div id="no-results-message">
-        <p>We didn't find any results for the search <em>"{{query}}"</em>.</p>
-    </div>
-    `;
-
 export function initSearch() {
     const search = instantsearch({
         indexName: 'prod_codelibrary',
@@ -53,37 +25,6 @@ export function initSearch() {
             autofocus: true,
             placeholder: 'Search for content'
         }),
-
-        /*hits({
-            container: "#algolia-results",
-            templates: {
-                item: hit,
-                empty: empty,
-            },
-            transformItems: items => {
-                items.forEach(item => {
-                    /!* Algo :
-                    highlighted description more important than highlighted content.
-                    If any available, get the description or the content if description is empty
-                     *!/
-                    if (item._snippetResult.description.matchLevel != "none") {
-                        item.print = item._snippetResult.description.value;
-                    } else {
-                        if (item._snippetResult.content.matchLevel != "none") {
-                            item.print = item._snippetResult.content.value;
-                        } else {
-                            if (item._snippetResult.description.value == "") {
-                                item.print = item._snippetResult.content.value;
-                            } else {
-                                item.print = item._snippetResult.description.value;
-                            }
-                        }
-                    }
-                    console.log(item);
-                });
-                return items;
-            }
-        })*/
     ]);
 
     const renderHits = (renderOptions, isFirstRender) => {
@@ -91,26 +32,46 @@ export function initSearch() {
         if (renderOptions.results == undefined) {
             return;
         }
+        /*
+<div class="hit-head">
+    <span class="hit-section">${hit._highlightResult.section.value}</span>
+    /
+    <span class="hit-title">${instantsearch.highlight({attribute: 'title', hit: hit})}</span>
+</div>
+<div class="hit-content">
+    <p class="hit-summary">
+        ${hit.print}
+    </p>
+    <ul class="tags">
+        ${hit._highlightResult.tags.map(tag => `<li class="tag">${tag.value}</li>`).join('')}
+    </ul>
+</div>
+         */
         widgetParams.container.innerHTML = `
             ${hits.length > 0 ? `
                 <div class="ais-Hits-list">
                   ${hits
                 .map(
                     hit => `
-                            <a class="ais-Hits-item" data-rel-path="${hit.relpermalink}" data-object-id="${hit.objectID}" href="${hit.relpermalink}">
-                                    <div class="hit-head">
-                                        <p class="title is-6">${instantsearch.highlight({attribute: 'title', hit: hit})}</p>
-                                        <span class="tag is-info">${hit._highlightResult.section.value}</span>
+                        <a class="ais-Hits-item" data-rel-path="${hit.relpermalink}" data-object-id="${hit.objectID}" href="${hit.relpermalink}">
+                            <div class="hit-head">
+                                <div class="level">
+                                    <div class="level-left">
+                                        <span class="hit-section">${hit._highlightResult.section.value}</span>
+                                        <span class="hit-separator">/</span>
+                                        <span class="hit-title">${instantsearch.highlight({attribute: 'title', hit: hit})}</span>
                                     </div>
-                                    <div class="hit-content">
-                                        <p class="hit-summary content has-text-grey">
-                                            ${hit.print}
-                                        </p>
-                                        <ul class="tags">
-                                            ${hit._highlightResult.tags.map(tag => `<li class="tag is-info is-light">${tag.value}</li>`).join('')}
-                                        </ul>
-                                    </div>
-                            </a>
+                                </div>
+                            </div>
+                            <div class="hit-content">
+                                <p class="hit-summary">
+                                    ${hit.print}
+                                </p>
+                                <span class="hit-tags">
+                                        Tags: ${hit._highlightResult.tags.map(tag => `${tag.value}`).join(', ')}
+                                </span>
+                            </div>
+                        </a>
                       `
                 )
                 .join('')}

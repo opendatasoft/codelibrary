@@ -41,7 +41,7 @@ a.sidebar-subtitle {
 }
 
 .menu-label {
-  background-color:$light;
+  background-color: $light;
   border-radius: $radius;
   padding: 6px;
   text-transform: capitalize;
@@ -63,8 +63,9 @@ a.sidebar-subtitle {
   height: 12px;
 }
 
-
-/* Algolia */
+/*********************************/
+/********* ALGOLIA SEARCH ********/
+/*********************************/
 
 .ais-SearchBox-input {
   font-size: $size-6;
@@ -86,9 +87,8 @@ a.sidebar-subtitle {
 #algolia-results {
   position: absolute;
   width: 500px;
-  max-height: calc(100% - 80px - 110px);
-  box-shadow: 0 3px 6px -1px rgba(0,0,0,.2);
-  padding: 10px;
+  max-height: calc(100% - 80px - 160px);
+  box-shadow: 0 3px 6px -1px rgba(0, 0, 0, .2);
   border: 1px solid #c4c8d8;
   border-radius: $radius;
   background-color: $white;
@@ -98,21 +98,71 @@ a.sidebar-subtitle {
   display: none;
 }
 
-.hit-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+.ais-Hits-list {
+  margin: 0;
+}
+
+a.ais-Hits-item {
+  color: $text;
+  width: 100%;
+  box-shadow: none;
+  background-color: inherit;
+  border: none;
+  border-radius: 0;
+  padding: 13px;
+  margin: 0;
+
+  &:hover {
+    background-color: $light;
+  }
+
+  .hit-head {
+    .hit-section {
+      //font-weight: 500;
+      opacity: 0.7;
+    }
+
+    .hit-separator {
+      margin: 0 3px;
+    }
+
+    .hit-title {
+      font-weight: 600;
+    }
+  }
+
+  .hit-content {
+    .hit-summary {
+      font-size: 0.9em;
+      font-weight: 400;
+      margin-top: 3px;
+    }
+    .hit-tags {
+      font-size: 0.7em;
+      opacity: 0.8;
+      font-weight: 400;
+    }
+  }
+}
+
+
+.ais-SearchBox-input:focus {
+  outline: lightblue auto 1px;
+}
+
+mark.ais-Highlight-highlighted, mark {
+  background-color: hsl(219, 70%, 96%);
 }
 
 // Footer
 $color-border: #EEE;
 $color-border-light: lighten($color-border, 15%);
 .algolia-docsearch-footer {
-  border-top: 1px solid $color-border-light;
+  border-top: 1px solid $light;
   text-align: right;
   font-size: 12px;
-  padding: 4px 2px 0 0;
-  color: #333;
+  padding: 3px 6px 1px 0;
+  color: $text;
 
   .algolia-docsearch-footer--logo {
     display: inline-block !important;
@@ -126,33 +176,4 @@ $color-border-light: lighten($color-border, 15%);
     background-size: contain;
     vertical-align: middle;
   }
-}
-
-
-/* Override Algolia theme */
-
-.ais-Hits-item, .ais-InfiniteHits-item, .ais-InfiniteResults-item, .ais-Results-item {
-  width: 100%;
-  background-color: $box-background-color;
-  border: 1px solid $box-background-color;
-  border-radius: $radius;
-  box-shadow: none;
-
-  .hit {
-    display: block;
-  }
-
-  &:hover {
-    border-color: $primary;
-  }
-}
-
-.ais-SearchBox-input:focus {
-  outline: lightblue auto 1px;
-}
-
-.mark, mark {
-  padding: 0;
-  background-color: hsl(219, 70%, 96%);
-  font-weight: 600;
 }
