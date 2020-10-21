@@ -1,5 +1,4 @@
-<ods-catalog-context context="catalog"
-                     catalog-domain="discovery">
+<ods-catalog-context context="catalog">
     <section class="container-fluid"> 
         <div class="row row-equal-height" 
              ods-facet-results="themes"
