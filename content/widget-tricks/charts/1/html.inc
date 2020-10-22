@@ -34,7 +34,7 @@
                         </h5>
                     </div>
                 </div>
-                <div class="spacer"/>
+                <div class="spacer"></div>
                 <div class="row">
                     <div class="col-md-9">
                         <h3>
@@ -92,7 +92,7 @@
                             <b>Gazoline (all types) consumer price index</b> fluctuation over years.
                         </div>
                         <ods-dataset-context context="cpigasoline"
-                                             cpigasoline-domain="public"
+                                             cpigasoline-domain="discovery"
                                              cpigasoline-dataset="consumer-price-index-all-urban-consumers"
                                              cpigasoline-parameters="{'refine.area_name':'U.S. city average','refine.item_name':'Gasoline (all types)'}">
                             <ods-chart timescale="year" single-y-axis="true"
@@ -123,14 +123,14 @@
                         </h5>
                     </div>
                 </div>
-                <div class="spacer"/>
+                <div class="spacer"></div>
                 <div class="row">
                     <div class="col-md-9">
                         <div class="chart-title">
                             Same chart with boxplot.
                         </div>
                         <ods-dataset-context context="consumerpriceindexallurbanconsumers"
-                                             consumerpriceindexallurbanconsumers-domain="public"
+                                             consumerpriceindexallurbanconsumers-domain="discovery"
                                              consumerpriceindexallurbanconsumers-dataset="consumer-price-index-all-urban-consumers"
                                              consumerpriceindexallurbanconsumers-parameters="{'refine.area_name':'U.S. city average','refine.item_name':'Gasoline (all types)'}">
                             <ods-chart timescale="month" scientific-display="true">
@@ -160,7 +160,7 @@
                         </h5>
                     </div>
                 </div>
-                <div class="spacer"/>
+                <div class="spacer"></div>
                 <div class="row">
                     <div class="col-md-9">
                         <h3>
@@ -172,10 +172,10 @@
                             home</b>.
                         </div>
                         <ods-dataset-context context="cpialcoholicawayfromhome,cpialcoholicathome"
-                                             cpialcoholicawayfromhome-domain="public"
+                                             cpialcoholicawayfromhome-domain="discovery"
                                              cpialcoholicawayfromhome-dataset="consumer-price-index-all-urban-consumers"
                                              cpialcoholicawayfromhome-parameters="{'refine.area_name':'U.S. city average','refine.item_name':'Alcoholic beverages away from home'}"
-                                             cpialcoholicathome-domain="public"
+                                             cpialcoholicathome-domain="discovery"
                                              cpialcoholicathome-dataset="consumer-price-index-all-urban-consumers"
                                              cpialcoholicathome-parameters="{'refine.area_name':'U.S. city average','refine.item_name':'Alcoholic beverages at home'}">
                             <ods-chart timescale="year" single-y-axis="true"
@@ -268,7 +268,7 @@
                         </h5>
                     </div>
                 </div>
-                <div class="spacer"/>
+                <div class="spacer"></div>
                 <div class="row">
                     <div class="col-md-9">
                         <h3>
@@ -278,12 +278,12 @@
                             <b>Number of sport equipment</b> in <b>Paris and suburbs area</b> by <b>familly</b>.
                         </div>
                         <ods-dataset-context context="ensembledesequipementssportifsdiledefranceen2016"
-                                             ensembledesequipementssportifsdiledefranceen2016-domain="public"
+                                             ensembledesequipementssportifsdiledefranceen2016-domain="discovery"
                                              ensembledesequipementssportifsdiledefranceen2016-dataset="ensemble-des-equipements-sportifs-dile-de-france-en-2016">
                             <ods-chart>
                                 <ods-chart-query context="ensembledesequipementssportifsdiledefranceen2016"
                                                  field-x="eqt_fam" maxpoints="50" sort="serie1-1">
-                                    <ods-chart-serie chart-type="treemap" function-y="COUNT" color="range-custom"
+                                    <ods-chart-serie chart-type="treemap" function-y="COUNT" color="range-Paired"
                                                      scientific-display="true">
                                     </ods-chart-serie>
                                 </ods-chart-query>
@@ -296,14 +296,14 @@
                         </h5>
                     </div>
                 </div>
-                <div class="spacer"/>
+                <div class="spacer"></div>
                 <div class="row">
                     <div class="col-md-9">
                         <div class="chart-title">
                             <b>Population</b> distribution by region.
                         </div>
                         <ods-dataset-context context="geoflarcommunes2015"
-                                             geoflarcommunes2015-domain="public"
+                                             geoflarcommunes2015-domain="discovery"
                                              geoflarcommunes2015-dataset="geoflar-communes-2015"
                                              geoflarcommunes2015-parameters="{'geofilter.polygon':'(37.50972584293751,-16.171875),(55.32914440840507,-16.171875),(55.32914440840507,22.148437499999996),(37.50972584293751,22.148437499999996),(37.50972584293751,-16.171875)'}">
                             <ods-chart>
@@ -311,7 +311,7 @@
                                                  label-x="Population"
                                                  maxpoints="20" sort="serie1-1">
                                     <ods-chart-serie expression-y="population" chart-type="pie" function-y="SUM"
-                                                     label-y="Population" color="range-custom"
+                                                     label-y="Population" color="range-Paired"
                                                      scientific-display="true">
                                     </ods-chart-serie>
                                 </ods-chart-query>
@@ -338,7 +338,7 @@
                             <b>Population</b> distribution by region + average surface area of cities in this region
                         </div>
                         <ods-dataset-context context="geoflarcommunes2015"
-                                             geoflarcommunes2015-domain="public"
+                                             geoflarcommunes2015-domain="discovery"
                                              geoflarcommunes2015-dataset="geoflar-communes-2015"
                                              geoflarcommunes2015-parameters="{'geofilter.polygon':'(37.50972584293751,-16.171875),(55.32914440840507,-16.171875),(55.32914440840507,22.148437499999996),(37.50972584293751,22.148437499999996),(37.50972584293751,-16.171875)'}">
                             <ods-chart>
@@ -367,14 +367,14 @@
                         </h5>
                     </div>
                 </div>
-                <div class="spacer"/>
+                <div class="spacer"></div>
                 <div class="row">
                     <div class="col-md-9">
                         <div class="chart-title">
                             <b>Population</b>, <b>surface area</b> and <b>average high (Z axis)</b> by region.
                         </div>
                         <ods-dataset-context context="geoflarcommunes2015"
-                                             geoflarcommunes2015-domain="public"
+                                             geoflarcommunes2015-domain="discovery"
                                              geoflarcommunes2015-dataset="geoflar-communes-2015">
                             <ods-chart style="height:550px" scientific-display="true">
                                 <ods-chart-query context="geoflarcommunes2015" field-x="nom_reg">

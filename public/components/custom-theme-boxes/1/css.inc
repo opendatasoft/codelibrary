@@ -29,7 +29,7 @@
 	border-radius: 4px;
 	margin-bottom: 20px;
 	height: 100%;
-	text-decoration: none;
+	text-decoration: none; 
 	transition: all .2s;
 }
 .color-card:hover,
@@ -43,8 +43,8 @@
 	margin-bottom: 13px;
 }
 .color-card-picto {
-	width: auto;
-	height: 56px;
+	width: 56px;
+	height: auto;
 	margin-bottom: 13px;
 	max-width: 100%;
 }

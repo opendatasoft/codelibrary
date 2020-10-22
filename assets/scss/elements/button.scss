@@ -6,3 +6,53 @@
     border-radius: $radius-large;
     height: auto;
 }
+
+/* ODS Design pattern */
+.button.is-secondary {
+    background-color: transparent;
+    border-color: $primary;
+    color: $primary;
+
+    &.edit-on-codepen {
+        border-radius: 100000px;
+        padding: 0;
+        width: 50px;
+        height: 50px;
+    }
+
+    &.button-copy {
+        position: absolute;
+        top: 0;
+        right: 0;
+        padding: 0;
+        width: 50px;
+        height: 50px;
+
+        &.copied {
+            width: inherit;
+            padding: 0 9px;
+            opacity: 1 !important;
+        }
+    }
+
+    &:not(.is-active):hover {
+        border-color: rgba($primary, 0.65);
+        color: rgba($primary, 0.65);
+    }
+    &.is-active {
+        pointer-events: none;
+    }
+}
+
+.color {
+    .button.button-copy {
+        position: inherit;
+        height: 27px;
+        width: 27px;
+        padding: 0px;
+
+        img {
+            height: 15px;
+        }
+    }
+}

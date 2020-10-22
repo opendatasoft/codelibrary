@@ -8,7 +8,7 @@
             <ods-dataset-context context="shangairankinguniversitysince2003" shangairankinguniversitysince2003-domain="discovery" shangairankinguniversitysince2003-dataset="shangai-ranking-university-since-2003">
                 <ods-chart align-month="true">
                     <ods-chart-query context="shangairankinguniversitysince2003" field-x="country" maxpoints="10" sort="serie1-1">
-                        <ods-chart-serie chart-type="treemap" function-y="COUNT" color="range-custom" scientific-display="true">
+                        <ods-chart-serie chart-type="treemap" function-y="COUNT" color="range-Paired" scientific-display="true">
                         </ods-chart-serie>
                     </ods-chart-query>
                 </ods-chart>

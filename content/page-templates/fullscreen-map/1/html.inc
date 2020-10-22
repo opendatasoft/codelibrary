@@ -92,7 +92,7 @@
                     <ods-chart-query context="ctx" field-x="measurements_parameter" maxpoints="5" sort="serie1-1"
                                      category-colors="{'NO2':'#F4F2ED','O3':'#6a83ab','PM10':'#CF4626','SO2':'#45423E','PM2.5':'#CF4626','CO':'#6B83AB','BC':'#45423E'}">
                         <ods-chart-serie expression-y="measurements_value" chart-type="pie" function-y="COUNT" label-y="Most measured pollutant"
-                                         color="range-custom" display-values="false" display-stack-values="false" logarithmic="false" scientific-display="true">
+                                         color="range-Paired" display-values="false" display-stack-values="false" logarithmic="false" scientific-display="true">
                         </ods-chart-serie>
                     </ods-chart-query>
                 </ods-chart>
