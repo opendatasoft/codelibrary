@@ -49,7 +49,7 @@
                 <div class="chart-inner-block">
                     <ods-chart>
                         <ods-chart-query context="recordstores" field-x="city" maxpoints="10" sort="serie1-1">
-                            <ods-chart-serie chart-type="pie" function-y="COUNT" color="range-custom" scientific-display="true">
+                            <ods-chart-serie chart-type="pie" function-y="COUNT" color="range-Paired" scientific-display="true">
                             </ods-chart-serie>
                         </ods-chart-query>
                     </ods-chart>

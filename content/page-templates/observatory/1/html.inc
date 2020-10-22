@@ -111,7 +111,7 @@
                                     </h3>
                                     <ods-chart>
                                         <ods-chart-query context="ctx1" field-x="csp" series-breakdown="tranche_dage">
-                                            <ods-chart-serie expression-y="value" chart-type="column" function-y="SUM" color="range-custom" scientific-display="true">
+                                            <ods-chart-serie expression-y="value" chart-type="column" function-y="SUM" color="range-Paired" scientific-display="true">
                                             </ods-chart-serie>
                                         </ods-chart-query>
                                     </ods-chart>
@@ -129,7 +129,7 @@
                                     </h3>
                                     <ods-chart>
                                         <ods-chart-query context="ctx2" field-x="operateur" maxpoints="50" series-breakdown="reseau">
-                                            <ods-chart-serie expression-y="couverture" chart-type="column" function-y="AVG" color="range-custom" scientific-display="true">
+                                            <ods-chart-serie expression-y="couverture" chart-type="column" function-y="AVG" color="range-Paired" scientific-display="true">
                                             </ods-chart-serie>
                                         </ods-chart-query>
                                     </ods-chart>
@@ -526,7 +526,7 @@
                                     </h2>
                                     <ods-chart>
                                         <ods-chart-query context="sirenepublic" field-x="libapen" maxpoints="50" sort="serie1-1">
-                                            <ods-chart-serie chart-type="pie" function-y="COUNT" color="range-custom" scientific-display="true">
+                                            <ods-chart-serie chart-type="pie" function-y="COUNT" color="range-Paired" scientific-display="true">
                                             </ods-chart-serie>
                                         </ods-chart-query>
                                     </ods-chart>
