@@ -1,6 +1,7 @@
 .ods-pop-in__container {
     z-index: 102;
 }
+
 .ods-pop-in__backdrop {
     position: absolute;
     top: 0;
@@ -11,6 +12,7 @@
     z-index: 101;
     cursor: auto;
 }
+
 .iframe-container {
     width: 100%;
     padding: 10px;
@@ -18,6 +20,7 @@
     margin-left: 120px;
     margin-right: 120px;
 }
+
 .iframe-container iframe {
     border: none;
 }

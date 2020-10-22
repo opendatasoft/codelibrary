@@ -1,12 +1,12 @@
 {{ define "main" }}
 <div class="content">
     <section class="content-header container is-max-desktop mb-5">
-        <h1 class="title">
+        <h2 class="title">
             {{ if eq "tags" .Type }}Tag: {{ end}}{{ .Title | humanize }}
-        </h1>
-        <h2 class="subtitle is-3">
-            {{ index .Site.Data.sections .Page.Section | safeHTML }}
         </h2>
+        <h3 class="subtitle is-3">
+            {{ index .Site.Data.sections .Page.Section | safeHTML }}
+        </h3>
     </section>
     <section class="list-results">
         {{ range (.Paginator (.Site.Params.listPaginate | default 20)).Pages }}
