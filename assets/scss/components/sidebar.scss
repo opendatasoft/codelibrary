@@ -2,11 +2,43 @@
    ========================================================================== */
 
 .sidebar {
-  width: 280px;
-  flex-basis: 280px;
-  padding: 0 1.75rem;
-  border-right: 1px solid #dee5ef;
-  min-height: 100%;
+  position: fixed;
+  top: $navbar-height;
+  z-index: 10;
+  background-color: $white;
+  display: none;
+  border-bottom: 1px solid #dee5ef;
+  height: 100%;
+}
+
+.sidebar.is-active {
+  display: block;
+}
+
+@media screen and (min-width: $desktop) {
+  .sidebar {
+    display: block;
+    position: static;
+    top: $navbar-height;;
+    left: 0;
+    width: 280px;
+    flex-basis: 280px;
+    border-right: 1px solid #dee5ef;
+    border-bottom: none;
+    min-height: 100%;
+  }
+}
+
+.sidebar-content {
+  padding: 0 1.75rem ($navbar-height + 1.75rem) 1.75rem;
+  height: 100%;
+  overflow: auto;
+}
+
+@media screen and (min-width: $desktop) {
+  .sidebar-content {
+    height: auto;
+  }
 }
 
 .sidebar-logo-link {
@@ -26,6 +58,7 @@
 }
 
 .menu {
+  padding-top: $spacing-200;
   font-size: $size-6;
 }
 

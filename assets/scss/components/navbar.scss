@@ -12,7 +12,20 @@
 }
 
 .navbar-brand .navbar-item {
-  margin-right: $spacing-400;
+  margin-right: 0;
+}
+
+@media screen and (min-width: $desktop) {
+  .navbar-brand .navbar-item {
+    margin-right: $spacing-400;
+  }
+}
+
+
+@media screen and (max-width: $desktop) {
+  .navbar-brand {
+    justify-content: space-between;
+  }
 }
 
 .navbar-burger {
@@ -24,9 +37,11 @@
   border-radius: 4px;
   font-size: .833rem;
   line-height: 1.4;
+  margin-left: 0;
 }
 
-.navbar-burger:hover {
+.navbar-burger:hover,
+.navbar-burger.is-active {
   color: $white;
   background-color: $primary;
 }
