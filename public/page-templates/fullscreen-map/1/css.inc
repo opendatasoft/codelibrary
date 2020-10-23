@@ -1,11 +1,10 @@
+
 body, h1, h2, h3 {
     color: #45423E;
 }
-body {
-    padding: 0;
-}
-main {
+main, body {
     margin: 0;
+    padding: 0;
 }
 .main--page {
     margin-top: 0px;

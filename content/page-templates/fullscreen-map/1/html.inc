@@ -148,13 +148,13 @@
              ods-tooltip="<span style='font-size:1.4em; font-weight: 200;'>PM10 Heatmap</strong>"
              ng-click="activemaplayer = 'PM10';
                        ctx.parameters['refine.measurements_parameter'] = 'PM10';">
-            <ods-picto url="'/static/pictos/img/set-v3/pictos/fire.svg'" color="'#f4f2ec'"></ods-picto>
+            <ods-picto url="'https://public.opendatasoft.com/static/pictos/img/set-v3/pictos/fire.svg'" color="'#f4f2ec'"></ods-picto>
         </div>
         <div class="input-holder blue"
              ods-tooltip="<span style='font-size:1.4em; font-weight: 200;'>Ozone Heatmap</strong>"
              ng-click="activemaplayer = 'O3';
                        ctx.parameters['refine.measurements_parameter'] = 'O3';">
-            <ods-picto url="'/static/pictos/img/set-v3/pictos/fire.svg'" color="'#f4f2ec'"></ods-picto>
+            <ods-picto url="'https://public.opendatasoft.com/static/pictos/img/set-v3/pictos/fire.svg'" color="'#f4f2ec'"></ods-picto>
         </div>
     </div>
     <div class="kpi-module"
