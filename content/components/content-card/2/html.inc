@@ -2,12 +2,14 @@
     <div class="row">
         <div class="col-sm-6">
             <!-- Replace this widget with your own visualisation -->
-            <ods-dataset-context context="contoursgeographiquessimplifiesdesnouvellesregionsmetropole2" contoursgeographiquessimplifiesdesnouvellesregionsmetropole2-domain="discovery" contoursgeographiquessimplifiesdesnouvellesregionsmetropole2-dataset="contours-geographiques-simplifies-des-nouvelles-regions-metropole2">
-                <ods-map no-refit="true" scroll-wheel-zoom="false" display-legend="false" display-control="false" search-box="false" toolbar-fullscreen="false" toolbar-geolocation="false" location="6,48.4292,2.21924">
-                    <ods-map-layer-group>
-                        <ods-map-layer context="contoursgeographiquessimplifiesdesnouvellesregionsmetropole2" color="#142E7B" picto="ods-circle" show-marker="true" display="auto" function="COUNT" shape-opacity="0.5" point-opacity="1" border-color="#FFFFFF" border-opacity="1" border-size="2" border-pattern="solid" caption="true" title="contours-geographiques-simplifies-des-nouvelles-regions-metropole2" size="4" size-min="3" size-max="5" size-function="linear"></ods-map-layer>
-                    </ods-map-layer-group>
-                </ods-map>
+            <ods-dataset-context context="countoursgeographiques"
+                                 countoursgeographiques-dataset="contours-geographiques-simplifies-des-nouvelles-regions-metropole"
+                                 countoursgeographiques-domain="public"
+                                 countoursgeographiques-parameters="{}">
+                <ods-map context="countoursgeographiques"
+                         scroll-wheel-zoom="false"
+                         location="6,47.13742,3.69141"
+                         basemap="jawg.streets"></ods-map>
             </ods-dataset-context>
         </div>
         <div class="col-sm-6">
