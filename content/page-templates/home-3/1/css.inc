@@ -75,10 +75,11 @@
 	margin-bottom: 13px;
 }
 .color-card-picto {
-	width: auto;
-	height: 56px;
-	margin-bottom: 13px;
+	width: 56px;
 	max-width: 100%;
+	height: auto;
+	max-height: 56px;
+	margin-bottom: 13px;
 }
 .color-card-title {
 	color: inherit;
