@@ -41,6 +41,8 @@
         </div>
     </div>
 </div>
+
+
 <div class="row row-equal-height">
     <div class="col-xs-12">
         <h2>
