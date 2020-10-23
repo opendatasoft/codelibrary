@@ -1,5 +1,6 @@
 ---
 title: "Sticky header 2"
+height: 400
 ---
 
 
