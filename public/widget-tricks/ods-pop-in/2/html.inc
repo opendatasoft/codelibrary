@@ -6,35 +6,35 @@
          ng-click="pop.state = true">
         Pop it!
     </button>
+
     <button class="ods-button"
          ng-click="pop.iframe = true">
-        Pop it with iframe inside
+        Pop in with iframe inside
     </button>
 
-    {{ pop }}
-    <my-custom-pop-in class="ods-pop-in" 
+    <div class="ods-pop-in"
                    ng-if="pop.state">
         <div class="ods-pop-in__container">
-            <h2>
+            <h2 class="title">
                 Pop!
             </h2>
-            <button class="ods-button" 
+            <button class="ods-button"
                     ng-click="pop.state = false">
                 Close
             </button>
         </div>
         <div class="ods-pop-in__backdrop" ng-click="pop.state = false"></div>
-    </my-custom-pop-in>
+    </div>
 
-    <my-custom-pop-in class="ods-pop-in" 
+    <div class="ods-pop-in"
                       ng-if="pop.iframe">
         <div class="ods-pop-in__container iframe-container">
-            <iframe src="/" 
-                    width="100%" 
-                    height="80vh" />
+            <iframe src="/"
+                    width="100%"
+                    height="300"></iframe>
         </div>
-        <div class="ods-pop-in__backdrop" 
+        <div class="ods-pop-in__backdrop"
              ng-click="pop.iframe = false"></div>
-    </my-custom-pop-in>
+    </div>
 </div>
-      
+

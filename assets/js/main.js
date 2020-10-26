@@ -1,5 +1,7 @@
 import { initCopyToCB } from './copy.js'
 window.addEventListener("DOMContentLoaded", initCopyToCB, {once: true});
+import { initCopyColorToCB } from './copy_colors.js'
+window.addEventListener("DOMContentLoaded", initCopyColorToCB, {once: true});
 
 import { initSearch } from './algolia.js'
 initSearch();

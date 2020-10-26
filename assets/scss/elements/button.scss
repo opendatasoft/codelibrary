@@ -13,26 +13,19 @@
     border-color: $primary;
     color: $primary;
 
-    &.edit-on-codepen {
+    &.edit-on-codepen,
+    &.button-copy {
         border-radius: 100000px;
         padding: 0;
-        width: 50px;
-        height: 50px;
-    }
-
-    &.button-copy {
-        position: absolute;
-        top: 0;
-        right: 0;
-        padding: 0;
-        width: 50px;
-        height: 50px;
-
-        &.copied {
-            width: inherit;
-            padding: 0 9px;
-            opacity: 1 !important;
+        width: 36px;
+        height: 36px;
+        > svg {
+            width: 16px;
+            height: 16px;
         }
+    }
+    &.button-copy {
+        margin-left: 6px;
     }
 
     &:not(.is-active):hover {
@@ -56,4 +49,13 @@
             width: 15px;
         }
     }
+}
+
+/* Bulma tooltips */
+[data-tooltip]::before {
+    font-weight: 600;
+    font-size: 0.9em !important;
+}
+.copied[data-tooltip]:before {
+    background-color: rgba(0,128,0,0.9);
 }
