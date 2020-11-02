@@ -11,6 +11,7 @@ body, .main--page {
 }
 
 ods-dataset-context {
+	display: block;
     position: relative;
 }
 
@@ -23,18 +24,84 @@ ods-dataset-context {
    ========================================================================== */
 
 .modal {
-    display: flex;
+    display: none;
     flex-direction: column;
     background-color: #FFFFFF;
     box-shadow: 0 1px 5px rgba(0,0,0,0.65);
-    width: 400px;
-    height: calc(100vh - 55px);
+    width: 100vw;
+    height: 100vh;
     position: absolute;
-    top: 10px;
-    left: 47px;
-    border-radius: 6px;
-    z-index: 3;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    z-index: 30;
     overflow: hidden; /* Disable horizontal scroll */
+}
+
+@media screen and (min-width: 768px) {
+	.modal {
+		display: flex;
+		width: 400px;
+		height: calc(100vh - 55px);
+		top: 10px;
+		left: 47px;
+		border-radius: 6px;
+	}
+}
+
+.modal.is-visible {
+	display: flex;
+}
+
+.modal-open-mobile {
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	width: 100vw;
+	background-color: #FFFFFF;
+	padding: 13px;
+	z-index: 20;
+	border-radius: 6px 6px 0 0;
+	box-shadow: 0 0 5px rgba(0,0,0,0.65);
+	transition: all .2s;
+}
+
+.modal-open-mobile:hover {
+	background-color: #f2f2f2;
+}
+
+@media screen and (min-width: 768px) {
+	.modal-open-mobile {
+		display: none;
+	}
+}
+
+.modal-open-mobile-title {
+	margin: 0;
+	font-weight: bold;
+}
+
+.modal-close-mobile {
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	background-color: transparent;
+	border-radius: 10000px;
+	border: none;
+	font-size: 2.5rem;
+	opacity: .6;
+	transition: all .2s;
+}
+
+.modal-close-mobile:hover {
+	background-color: #f2f2f2;
+	opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+	.modal-close-mobile {
+		display: none;
+	}
 }
 
 .modal-header {

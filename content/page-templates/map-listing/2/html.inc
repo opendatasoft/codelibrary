@@ -10,10 +10,12 @@
               resultTitle = 'uo_lib';
 
               title = 'Établissements près de chez vous';
+              mobile_results_button = 'Voir la liste';
 
               DO_NOT_MODIFY_BELOW;
 
-              ctxfields = {}
+              ctxfields = {};
+              isVisible = false
               ">
     <ods-dataset-context context="ctx"
                          ctx-domain="{{ domain }}"
@@ -23,8 +25,14 @@
             {{ ctxfields[field.name] = field.label; '' }}
         </span>
 
-        <aside class="modal">
+        <aside class="modal"
+               ng-class="{ 'is-visible' : isVisible}">
             <div class="modal-header">
+                <button class="modal-close-mobile"
+                        title="Close modal"
+                        ng-click="isVisible = false">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                </button>
                 <h1 class="modal-title">
                     {{ title }}
                 </h1>
@@ -61,7 +69,7 @@
                                         class="dropdown-button"
                                         aria-haspopup="true"
                                         aria-expanded="{{ dropdown.open == filter }}">
-                                        {{ (!select[filter] ? ctxfields[filter] : select[filter] | capitalize) }}
+                                    {{ (!select[filter] ? ctxfields[filter] : select[filter] | capitalize) }}
                                 </button>
                                 <div class="dropdown-menu"a
                                      ng-class="{'dropdown-visible' : dropdown.open == filter }"
@@ -160,5 +168,13 @@
                                size-function="linear"></ods-map-layer>
             </ods-map-layer-group>
         </ods-map>
+
+        <div class="modal-open-mobile"
+             ng-click="isVisible = true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg>
+            <h3 class="modal-open-mobile-title">
+                {{ mobile_results_button }}
+            </h3>
+        </div>
     </ods-dataset-context>
 </div>
