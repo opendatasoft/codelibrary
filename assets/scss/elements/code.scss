@@ -3,6 +3,9 @@
 
 /* Everything related to code/iframe/codepen etc... */
 /* ods-content */
+.highlight {
+  position: relative;
+}
 
 pre {
   max-height: 600px;
@@ -28,7 +31,13 @@ pre {
 .highlight pre {
   background-color: transparent;
   border-radius: $radius;
-  max-width: calc(100vw - 400px) !important;
+  max-width: 100%;
+}
+
+@media screen and (min-width: $desktop) {
+  .highlight pre {
+    max-width: calc(100vw - 400px) !important;
+  }
 }
 
 /* ods-theme */

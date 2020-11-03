@@ -3,7 +3,7 @@
 {{- $section := $.Site.GetPage "section" .Section }}
 {{- $validVars := $.Param "algolia.vars" | default slice -}}
 {{- $validParams := $.Param "algolia.params" | default slice -}}
-{{- range $i, $hit := where (where .Site.Pages "Type" "in" (slice "widget-tricks" "components" "templates")) "IsPage" true -}}
+{{- range $i, $hit := where (where .Site.Pages "Type" "in" (slice "widget-tricks" "components" "page-templates" "portal-themes")) "IsPage" true -}}
 {{- $dot := . -}}
 {{- if (and ($hit.IsDescendant $section) (and (not $hit.Draft) (not $hit.Params.private))) -}}
   {{/* Set the hit's objectID */}}

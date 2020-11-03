@@ -10,22 +10,18 @@ export const initCopyToCB = (event) => {
     const copiedText = "Copied!";
 
     function addCopyButtons(clipboard) {
-        const divs = document.querySelectorAll('.ods-content > .box-code');
+        const highlights = document.querySelectorAll('.ods-content .box-code .highlight');
+        highlights.forEach((highlight) => {
+            const pres = highlight.querySelectorAll('pre[data-lang="html"], pre[data-lang="css"]');
+            pres.forEach((pre) => {
+                var codeBlock = pre.querySelector('code');
 
-        divs.forEach((containerParent) => {
-            var buttonsParent = containerParent.querySelectorAll('.level-right')[0];
-            var containerEl = containerParent.querySelectorAll('.highlight > pre')[0];
-
-            if (buttonsParent && containerEl) {
                 const button = document.createElement('button');
-                button.className = 'button button-copy is-rounded is-secondary has-tooltip-top';
+                button.className = 'button button-copy is-rounded is-secondary has-tooltip-left';
                 button.dataset['tooltip'] = copyText;
                 button.type = 'button';
                 button.innerHTML = copyIcon;
-
-                var codeBlock = containerEl.querySelector('code');
-
-                button.addEventListener('click', () => {
+                button.addEventListener('click', (event) => {
                     clipboard.writeText(codeBlock.innerText).then(() => {
                         /* Chrome doesn't seem to blur automatically,
                         leaving the button in a focused state. */
@@ -47,9 +43,8 @@ export const initCopyToCB = (event) => {
                     });
                 });
 
-                //containerEl.appendChild(button);
-                buttonsParent.appendChild(button);
-            }
+                highlight.appendChild(button);
+            });
         });
     }
 
