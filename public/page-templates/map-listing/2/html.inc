@@ -6,16 +6,20 @@
               fieldsList = ['adresse_uai', 'dep_nom', 'numero_telephone_uai'];
               fieldLink = 'url';
               fieldLinkLabel = 'Visiter le site web';
+              mapLinkLabel = 'Voir sur la carte';
 
               resultTitle = 'uo_lib';
 
               title = 'Établissements près de chez vous';
-              mobile_results_button = 'Voir la liste';
+              
+              viewListButtonText = 'Voir la liste';
+              viewDetailsButtonText = 'Voir les détails';
+              backToResultsButtonText = 'Retour aux résultats';
 
               DO_NOT_MODIFY_BELOW;
 
               ctxfields = {};
-              isVisible = false
+              modal.isVisible = false
               ">
     <ods-dataset-context context="ctx"
                          ctx-domain="{{ domain }}"
@@ -26,11 +30,11 @@
         </span>
 
         <aside class="modal"
-               ng-class="{ 'is-visible' : isVisible}">
+               ng-class="{ 'is-visible' : modal.isVisible}">
             <div class="modal-header">
                 <button class="modal-close-mobile"
                         title="Close modal"
-                        ng-click="isVisible = false">
+                        ng-click="modal.isVisible = false">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
                 </button>
                 <h1 class="modal-title">
@@ -65,15 +69,15 @@
                                 <button ng-click="dropdown.open = (dropdown.open == filter ? '' : filter);"
                                         ng-class="{'dropdown-button-active': select[filter],
                                                   'dropdown-button-open': dropdown.open == filter}"
-                                        id="dropdown-button"
+                                        id="dropdown-button-{{ filter }}"
                                         class="dropdown-button"
                                         aria-haspopup="true"
                                         aria-expanded="{{ dropdown.open == filter }}">
                                     {{ (!select[filter] ? ctxfields[filter] : select[filter] | capitalize) }}
                                 </button>
-                                <div class="dropdown-menu"a
+                                <div class="dropdown-menu"
                                      ng-class="{'dropdown-visible' : dropdown.open == filter }"
-                                     aria-labelledby="dropdown-button">
+                                     aria-labelledby="dropdown-button-{{ filter }}">
                                     <div class="dropdown-title">
                                         {{ ctxfields[filter] }}
                                     </div>
@@ -83,7 +87,8 @@
                                                 <input ng-model="select[filter]"
                                                        ng-value="Tous"
                                                        type="radio"
-                                                       class="dropdown-input" />
+                                                       class="dropdown-input" 
+                                                       translate />
                                                 Tous
                                             </label>
                                         </li>
@@ -116,8 +121,7 @@
                         ng-repeat="item in items"
                         ods-results="items"
                         ods-results-context="ctx"
-                        ods-results-max="1000"
-                        ng-click="ctx.parameters['refine.' + resultTitle] = (ctx.parameters['refine.' + resultTitle]?undefined:item.fields[resultTitle])">
+                        ods-results-max="1000">
 
                         <h2 class="result-title">
                             {{ item.fields[resultTitle] }}
@@ -128,13 +132,24 @@
                             </dt>
                             <dd ng-repeat-end>{{ item.fields[field] }}</dd>
                         </dl>
-                        <div ng-if="fieldLink">
+                        <div class="result-footer">
                             <a href="{{ item.fields[fieldLink] }}"
-                               target="_blank"
-                               class="content-card-button"
-                               ng-if="item.fields[fieldLink]">
+                               ng-if="fieldLink && item.fields[fieldLink]"
+                               target="_blank">
                                 {{ fieldLinkLabel }}
                             </a>
+                            <button class="result-button"
+                                    ng-if="!ctx.parameters['refine.' + resultTitle]"
+                                    ng-click="modal.isVisible = false; 
+                                              ctx.parameters['refine.' + resultTitle] = item.fields[resultTitle];">
+                                {{ mapLinkLabel }}
+                            </button>
+                            <button class="result-button"
+                                    ng-if="ctx.parameters['refine.' + resultTitle]"
+                                    ng-click="ctx.parameters['refine.' + resultTitle] = undefined">
+                                {{ backToResultsButtonText }}
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                            </button>
                         </div>
                     </li>
                 </ul>
@@ -146,7 +161,8 @@
                  scroll-wheel-zoom="true"
                  display-control="false"
                  display-control-single-layer="false"
-                 toolbar-fullscreen="false">
+                 toolbar-fullscreen="false"
+                 toolbar-drawing="false">
             <ods-map-layer-group>
                 <ods-map-layer context="ctx"
                                refine-on-click-context="ctx"
@@ -170,10 +186,24 @@
         </ods-map>
 
         <div class="modal-open-mobile"
-             ng-click="isVisible = true">
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg>
-            <h3 class="modal-open-mobile-title">
-                {{ mobile_results_button }}
+             ng-click="modal.isVisible = true">
+            <svg xmlns="http://www.w3.org/2000/svg" 
+                 width="24" 
+                 height="24" 
+                 viewBox="0 0 24 24" 
+                 fill="none" 
+                 stroke="currentColor" 
+                 stroke-width="2" 
+                 stroke-linecap="round" 
+                 stroke-linejoin="round" 
+                 class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg>
+            <h3 class="modal-open-mobile-title"
+                ng-if="!ctx.parameters['refine.' + resultTitle]">
+                {{ viewListButtonText }}
+            </h3>
+            <h3 class="modal-open-mobile-title"
+                ng-if="ctx.parameters['refine.' + resultTitle]">
+                {{ viewDetailsButtonText }}
             </h3>
         </div>
     </ods-dataset-context>
