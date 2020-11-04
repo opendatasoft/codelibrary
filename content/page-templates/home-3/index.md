@@ -1,5 +1,6 @@
 ---
 title: "Home 3"
+description: "An home page for your Opendatasoft portal, alternative 3"
 tags: ["display", "navigation"]
 resources:
 - src: '*/'

@@ -1,7 +1,4 @@
 <div class="container">
-    <h2>
-        Browse, Search, Filter then Share or Print !
-    </h2>
     <ods-dataset-context context="ctx"
                          ctx-dataset="record-stores"
                          ctx-domain="userclub"
@@ -14,7 +11,7 @@
                 Filter and have a look to your browser URL ! It's synced !
             </h3>
             <h4>
-                <a href="?{{ ctx.getQueryStringURL() }}"
+                <a href="https://userclub.opendatasoft.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}"
                    target="_blank">https://userclub.opendatasoft.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}</a>
             </h4>
             <h3>
@@ -73,7 +70,7 @@
                                 </p>
                             </div>
                             <a style="color: #1e0c33; font-weight: 600; font-size: 1.1em;"
-                               href="/pages/widgettrick-shareandprint-card?q=city:%22{{ record.fields.city }}%22 AND name:%22{{ record.fields.name }}%22"
+                               href="https://userclub.opendatasoft.com/pages/widgettrick-shareandprint-card?q=city:%22{{ record.fields.city }}%22 AND name:%22{{ record.fields.name }}%22"
                                target="_blank">Go to the store card</a>
                         </div>
                     </ods-map-layer>

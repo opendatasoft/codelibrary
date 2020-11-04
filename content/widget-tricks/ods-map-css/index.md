@@ -1,6 +1,6 @@
 ---
 title: "ods-map: CSS Hacks"
-description: ""
+description: "ods-map with legends from the map builder with additional CSS to provide some alternative to default display"
 tags: ["display", "ods-maps", "geo"]
 resources:
 - src: '*/'

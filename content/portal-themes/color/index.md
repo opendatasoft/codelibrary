@@ -1,6 +1,6 @@
 ---
 title: "Colored theme"
-description: ""
+description: "An Opendatasoft theme, when your business identity contains dominant colors"
 tags: []
 resources:
 - src: '*/'
