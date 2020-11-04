@@ -1,6 +1,5 @@
 ---
-title: "Component 1"
-height: 800
+title: "Share and print"
 ---
 
 ## Browse, Search, Filter then Share or Print !

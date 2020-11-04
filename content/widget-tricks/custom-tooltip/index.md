@@ -1,6 +1,6 @@
 ---
 title: "Custom tooltip"
-description: ""
+description: "Custom tooltips on your maps"
 tags: ["display", "map"]
 resources:
 - src: '*/'

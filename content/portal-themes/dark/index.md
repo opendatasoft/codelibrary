@@ -1,6 +1,6 @@
 ---
 title: "Dark theme"
-description: ""
+description: "An Opendatasoft theme, with dark header to keep it sober"
 tags: []
 resources:
 - src: '*/'
