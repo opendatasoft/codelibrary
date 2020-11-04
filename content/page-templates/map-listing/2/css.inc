@@ -31,9 +31,9 @@ ods-dataset-context {
     width: 100vw;
     height: 100vh;
     position: absolute;
-    top: 0;
+    top: 35%;
     left: 0;
-    border-radius: 0;
+    border-radius: 6px 6px 0 0;
     z-index: 30;
     overflow: hidden; /* Disable horizontal scroll */
 }
@@ -352,4 +352,36 @@ ods-dataset-context {
 .result-info dd {
     margin-left: 0;
     margin-bottom: 5px;
+}
+
+.result-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.result-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid var(--links);
+    color: var(--links);
+    line-height: 1.5;
+    border-radius: 20px;
+    padding: .1rem .8rem;
+    margin-right: 4px;
+    margin-bottom: 2px;
+    transition: all .2s;
+}
+
+.result-button .feather-x {
+    height: 15px;
+    width: 15px;
+    margin-left: 4px;
+}
+
+.result-button:hover {
+    opacity: .65;
+    text-decoration: none;
 }
