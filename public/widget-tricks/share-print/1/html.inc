@@ -1,7 +1,10 @@
 <div class="container">
+    <h2>
+        Browse, Search, Filter then Share or Print !
+    </h2>
     <ods-dataset-context context="ctx"
-                         ctx-dataset="record-stores0"
-                         ctx-domain="public"
+                         ctx-dataset="record-stores"
+                         ctx-domain="userclub"
                          ctx-urlsync="true">
         <div class="row ods-box">
             <h3>
@@ -12,33 +15,33 @@
             </h3>
             <h4>
                 <a href="?{{ ctx.getQueryStringURL() }}"
-                   target="_blank">https://discovery.opendatasoft.com/pages/demo-urlsync/?{{ ctx.getQueryStringURL() }}</a>
+                   target="_blank">https://userclub.opendatasoft.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}</a>
             </h4>
             <h3>
                 Share through social network or by email:
             </h3>
             <div class="boutons" style="font-size: 1.6rem;">
-                <a href="https://twitter.com/intent/tweet?text=Opendatasoft Page Test;url=https%3A%2F%2Fdiscovery.opendatasoft.com%2Fpages%2Fdemo-urlsync%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}"
+                <a href="https://twitter.com/intent/tweet?text=Opendatasoft Page Test;url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}"
                    class="ods-dataset-visualization__social-button ods-dataset-visualization__social-button--twitter"
                    target="_blank">
                     <i class="fa fa-twitter ods-dataset-visualization__social-button-icon" aria-hidden="true"></i>
                 </a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdiscovery.opendatasoft.com%2Fpages%2Fdemo-urlsync%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}"
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}"
                    class="ods-dataset-visualization__social-button ods-dataset-visualization__social-button--facebook"
                    target="_blank">
                     <i class="fa fa-facebook ods-dataset-visualization__social-button-icon" aria-hidden="true"></i>
                 </a>
-                <a href="https://plus.google.com/share?url=https%3A%2F%2Fdiscovery.opendatasoft.com%2Fpages%2Fdemo-urlsync%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}"
+                <a href="https://plus.google.com/share?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}"
                    class="ods-dataset-visualization__social-button ods-dataset-visualization__social-button--google-plus"
                    target="_blank">
                     <i class="fa fa-google-plus ods-dataset-visualization__social-button-icon" aria-hidden="true"></i>
                 </a>
-                <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fdiscovery.opendatasoft.com%2Fpages%2Fdemo-urlsync%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&amp;mini=true&amp;title=Opendatasoft Page Test;source=Opendatasoft"
+                <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&amp;mini=true&amp;title=Opendatasoft Page Test;source=Opendatasoft"
                    class="ods-dataset-visualization__social-button ods-dataset-visualization__social-button--linkedin"
                    target="_blank">
                     <i class="fa fa-linkedin ods-dataset-visualization__social-button-icon" aria-hidden="true"></i>
                 </a>
-                <a href="mailto:?subject=Opendatasoft Page Test&amp;body=https%3A%2F%2Fdiscovery.opendatasoft.com%2Fpages%2Fdemo-urlsync%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}"
+                <a href="mailto:?subject=Opendatasoft Page Test&amp;body=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}"
                    class="ods-dataset-visualization__social-button ods-dataset-visualization__social-button--mail"
                    target="_blank">
                     <i class="fa fa-envelope ods-dataset-visualization__social-button-icon" aria-hidden="true"></i>
@@ -68,15 +71,9 @@
                                 <p>
                                     <span style="font-style:italic;">Has closed </span><b style="font-size:1.2em">{{ record.fields.hasclosed }}</b>
                                 </p>
-                                <p>
-                                    <span style="font-style:italic;">Active </span><b style="font-size:1.2em">{{ record.fields.active }}</b>
-                                </p>
-                                <p>
-                                    <span style="font-style:italic;">Reviewers </span><b style="font-size:1.2em">{{ record.fields.ratecnt }}</b>
-                                </p>
                             </div>
-                            <a style="position: absolute; right: 0px; bottom: 0px; color: #1e0c33; font-weight: 600; font-size: 1.1em;"
-                               href="/pages/demo-urlsync-card?q=city:%22{{ record.fields.city }}%22 AND name:%22{{ record.fields.name }}%22"
+                            <a style="color: #1e0c33; font-weight: 600; font-size: 1.1em;"
+                               href="/pages/widgettrick-shareandprint-card?q=city:%22{{ record.fields.city }}%22 AND name:%22{{ record.fields.name }}%22"
                                target="_blank">Go to the store card</a>
                         </div>
                     </ods-map-layer>
