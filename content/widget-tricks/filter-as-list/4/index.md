@@ -1,5 +1,5 @@
 ---
-title: "4 - Months over several years range selector"
+title: "Filters as an HTML Select - 4"
 height: 500
 ---
 

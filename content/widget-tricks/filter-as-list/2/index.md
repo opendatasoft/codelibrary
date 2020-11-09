@@ -1,5 +1,5 @@
 ---
-title: "2 - Simple case, with default selection"
+title: "Filters as an HTML Select - 2"
 height: 500
 ---
 

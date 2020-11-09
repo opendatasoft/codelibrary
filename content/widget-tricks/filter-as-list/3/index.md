@@ -1,5 +1,5 @@
 ---
-title: "3 - Year selector with previous and next buttons"
+title: "Filters as an HTML Select - 3"
 height: 500
 ---
 
