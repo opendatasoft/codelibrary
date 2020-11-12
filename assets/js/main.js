@@ -1,18 +1,20 @@
-import { initCopyToCB } from './copy.js'
-window.addEventListener("DOMContentLoaded", initCopyToCB, {once: true});
-import { initCopyColorToCB } from './copy_colors.js'
-window.addEventListener("DOMContentLoaded", initCopyColorToCB, {once: true});
-
-import { initSearch } from './algolia.js'
-initSearch();
-
+import Turbolinks from 'turbolinks'
 import Prism from 'prismjs'
-Prism.highlightAll();
-
+import { initCopyToCB } from './copy.js'
+import { initCopyColorToCB } from './copy_colors.js'
+import { initSearch } from './algolia.js'
 //import 'van11y-accessible-tab-panel-aria'
 import './van11y'
-
+import { responsiveNavbar } from './navbar.js'
 //import '@fortawesome/fontawesome-free/js/all'
 
-import { responsiveNavbar } from './navbar.js';
+Turbolinks.start()
+
+window.addEventListener("DOMContentLoaded", initCopyToCB, {once: true})
+window.addEventListener("DOMContentLoaded", initCopyColorToCB, {once: true})
+
+initSearch();
+
+Prism.highlightAll();
+
 responsiveNavbar()
