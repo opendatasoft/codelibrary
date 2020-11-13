@@ -75,3 +75,49 @@
     overflow: auto;
     padding-bottom: 2rem;
 }
+
+/**** Filter summary ****/
+
+.odswidget.odswidget-filter-summary {
+    padding-bottom: 10px;
+    position: relative;
+}
+
+@media (min-width: 420px) {
+    .odswidget.odswidget-filter-summary {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+
+.odswidget-filter-summary__active-filter,
+.odswidget-filter-summary__clear-all {
+    border-radius: 3px;
+    margin-right: 4px;
+    padding: 0;
+}
+
+.odswidget-filter-summary__active-filter {
+    background-color: #f3f3f3;
+}
+
+.odswidget-filter-summary__active-filter-link,
+.odswidget-clear-all-filters {
+    border-left: none;
+    margin: 0;
+    padding: 2px 4px 2px 2px;
+    display: flex;
+    align-items: center;
+}
+
+.odswidget-filter-summary__active-filter-link::after {
+    content: '\f057';
+    font-family: 'FontAwesome';
+    line-height: 1;
+    margin-left: 8px;
+}
+
+.odswidget-clear-all-filters i {
+    margin-right: 3px;
+}
