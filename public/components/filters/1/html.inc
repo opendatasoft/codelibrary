@@ -1,52 +1,77 @@
-<ods-dataset-context context="ctx"
+<ods-dataset-context context="ctx" 
                      ctx-dataset="us-hospitals"
                      ctx-domain="userclub">
-    <div class="fullpage-app"
-         ng-init="modalswitchstatus">
+    <div class="container">
 
-        <!-- THE RIGHT MODAL -->
-        <div class="rightmodal">
-            <div class="backdrop"
-                 ng-click="modalswitchstatus = !modalswitchstatus"
-                 ng-class="{'backdrop-active':modalswitchstatus}">
-            </div>
-            <div class="modal"
-                 ng-class="{'modal-active':modalswitchstatus}">
-                <div class="modal__rightside">
-                    <div class="modal__header"
-                         ng-click="modalswitchstatus = !modalswitchstatus">
-                        <a href="#"
-                           class="closebtn">
-                            Close <i class="fa fa-times-circle" aria-hidden="true"></i>
-                        </a>
-                    </div>
-                    <div class="modal__content">
-                        <ods-facets context="ctx"></ods-facets>
-                    </div>
-                    <div class="modal__footer">
-                        <div class="">
-                            Footer
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <section class="accordion"
+                 ng-init="is_open = false">
+            <button class="accordion-button"
+                    ng-click="is_open = !is_open">
+                <span class="accordion-button-text">
+                    Filter
+                </span>
+                <i class="fa fa-filter" 
+                   aria-hidden="true"></i>
+            </button>
 
-        <!-- THE CONTENT -->
-        <div class="content container">
-            <div class="level">
-                <h2>
-                    Page content
-                </h2>
-                <button ng-click="modalswitchstatus = !modalswitchstatus">
-                    Filtrer data
-                </button>
-            </div>
             <ods-filter-summary context="ctx">
                 {{ refinements }}
             </ods-filter-summary>
-            <ods-table context="ctx"></ods-table>
-        </div>
+
+            <ods-facets context="ctx">
+                <div class="accordion-content"
+                    ng-class="{ 'is-open': is_open }">
+                    
+                    <div class="accordion-filter">
+                        <h2 class="accordion-filter-title">
+                            State
+                        </h2>
+                        <div class="accordion-filter-results">
+                            <ods-facet name="state"
+                                       value-search="true"
+                                       disjunctive="true"
+                                       visible-items="50"></ods-facet>
+                        </div>
+                    </div>
+
+                    <div class="accordion-filter">
+                        <h2 class="accordion-filter-title">
+                            City
+                        </h2>
+                        <div class="accordion-filter-results">
+                            <ods-facet name="city"
+                                       value-search="true"
+                                       disjunctive="true"
+                                       visible-items="100"></ods-facet>
+                        </div>
+                    </div>
+
+                    <div class="accordion-filter">
+                        <h2 class="accordion-filter-title">
+                           Status
+                        </h2>
+                        <div class="accordion-filter-results">
+                            <ods-facet name="status"
+                                       disjunctive="true"
+                                       visible-items="100"></ods-facet>
+                        </div>
+                    </div>
+
+                    <div class="accordion-filter">
+                        <h2 class="accordion-filter-title">
+                            Type
+                        </h2>
+                        <div class="accordion-filter-results">
+                            <ods-facet name="type"
+                                       disjunctive="true"
+                                       visible-items="100"></ods-facet>
+                        </div>
+                    </div>
+                </div>
+            </ods-facets>
+        </section>
+
+        <ods-table context="ctx"></ods-table>
 
     </div>
 </ods-dataset-context>

@@ -1,6 +1,6 @@
 ---
 title: "Filters"
-description: "A drawer for interactive dashboards with filters. Hidden by default and available on demand on the side to offer more visibility."
+description: "An horizontal or vertical drawer/accordion for interactive dashboards with filters. Hidden by default and available on demand to offer more visibility."
 tags: ["filter"]
 resources:
 - src: '*/'
