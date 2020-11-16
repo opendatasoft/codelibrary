@@ -3,6 +3,8 @@
 
 .accordion {
     margin-bottom: 20px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
 }
 
 .accordion-button {
@@ -66,6 +68,7 @@
     font-size: 1rem;
     margin-top: 13px;
     margin-bottom: 13px;
+    padding-top: 8px;
     padding-bottom: 13px;
     border-bottom: 1px solid rgba(0,0,0,.1);
 }
@@ -79,7 +82,6 @@
 /**** Filter summary ****/
 
 .odswidget.odswidget-filter-summary {
-    padding-bottom: 10px;
     position: relative;
 }
 
@@ -95,6 +97,7 @@
 .odswidget-filter-summary__clear-all {
     border-radius: 3px;
     margin-right: 4px;
+    margin-bottom: 2px;
     padding: 0;
 }
 
@@ -116,8 +119,13 @@
     font-family: 'FontAwesome';
     line-height: 1;
     margin-left: 8px;
+    opacity: .65;
+}
+
+.odswidget-clear-all-filters {
+    color: var(--links);
 }
 
 .odswidget-clear-all-filters i {
-    margin-right: 3px;
+    display: none;
 }
