@@ -298,15 +298,15 @@ Filters &ndash; Codelibrary
     <div class="container">
         <div class="box box-example">
           <div class="content">
-            <h2 class="title" id="accordion-filter">
-  Accordion Filter
+            <h2 class="title" id="filters-in-a-drawer">
+  Filters in a drawer
   
-    <a class="is-link" href="#accordion-filter">
+    <a class="is-link" href="#filters-in-a-drawer">
       <img src="/img/fas-link.svg" />
     </a>
   
 </h2>
-<p>Make your page have a cleaner look by putting the filters hidden in an accordion which can be opened and closed with a button click. The layout will adapt automatically depending on the amount of filters added.</p>
+<p>This drawer is useful for interactive dashboards with filters that need to be hidden in a drawer on a side to offer more visibility/space for the data-visualization and content. The drawer contains a header (with a close button in the example), a content (with ods-facets), and a footer (empty here).</p>
 
           </div>
           
@@ -327,660 +327,6 @@ Filters &ndash; Codelibrary
                "title": "New Pen!",
                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
                "editors": 110,
-               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;ctx\&#34; \n                     ctx-dataset=\&#34;us-hospitals\&#34;\n                     ctx-domain=\&#34;userclub\&#34;\u003e\n    \u003cdiv class=\&#34;container\&#34;\u003e\n\n        \u003csection class=\&#34;accordion\&#34;\n                 ng-init=\&#34;is_open = false\&#34;\u003e\n            \u003cbutton class=\&#34;accordion-button\&#34;\n                    ng-click=\&#34;is_open = !is_open\&#34;\u003e\n                \u003cspan class=\&#34;accordion-button-text\&#34;\u003e\n                    Filter\n                \u003c/span\u003e\n                \u003ci class=\&#34;fa fa-filter\&#34; \n                   aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n            \u003c/button\u003e\n\n            \u003cods-filter-summary context=\&#34;ctx\&#34;\u003e\n                {{ refinements }}\n            \u003c/ods-filter-summary\u003e\n\n            \u003cods-facets context=\&#34;ctx\&#34;\u003e\n                \u003cdiv class=\&#34;accordion-content\&#34;\n                    ng-class=\&#34;{ &#39;is-open&#39;: is_open }\&#34;\u003e\n                    \n                    \u003cdiv class=\&#34;accordion-filter\&#34;\u003e\n                        \u003ch2 class=\&#34;accordion-filter-title\&#34;\u003e\n                            State\n                        \u003c/h2\u003e\n                        \u003cdiv class=\&#34;accordion-filter-results\&#34;\u003e\n                            \u003cods-facet name=\&#34;state\&#34;\n                                       value-search=\&#34;true\&#34;\n                                       disjunctive=\&#34;true\&#34;\n                                       visible-items=\&#34;50\&#34;\u003e\u003c/ods-facet\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n\n                    \u003cdiv class=\&#34;accordion-filter\&#34;\u003e\n                        \u003ch2 class=\&#34;accordion-filter-title\&#34;\u003e\n                            City\n                        \u003c/h2\u003e\n                        \u003cdiv class=\&#34;accordion-filter-results\&#34;\u003e\n                            \u003cods-facet name=\&#34;city\&#34;\n                                       value-search=\&#34;true\&#34;\n                                       disjunctive=\&#34;true\&#34;\n                                       visible-items=\&#34;100\&#34;\u003e\u003c/ods-facet\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n\n                    \u003cdiv class=\&#34;accordion-filter\&#34;\u003e\n                        \u003ch2 class=\&#34;accordion-filter-title\&#34;\u003e\n                           Status\n                        \u003c/h2\u003e\n                        \u003cdiv class=\&#34;accordion-filter-results\&#34;\u003e\n                            \u003cods-facet name=\&#34;status\&#34;\n                                       disjunctive=\&#34;true\&#34;\n                                       visible-items=\&#34;100\&#34;\u003e\u003c/ods-facet\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n\n                    \u003cdiv class=\&#34;accordion-filter\&#34;\u003e\n                        \u003ch2 class=\&#34;accordion-filter-title\&#34;\u003e\n                            Type\n                        \u003c/h2\u003e\n                        \u003cdiv class=\&#34;accordion-filter-results\&#34;\u003e\n                            \u003cods-facet name=\&#34;type\&#34;\n                                       disjunctive=\&#34;true\&#34;\n                                       visible-items=\&#34;100\&#34;\u003e\u003c/ods-facet\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/ods-facets\u003e\n        \u003c/section\u003e\n\n        \u003cods-table context=\&#34;ctx\&#34;\u003e\u003c/ods-table\u003e\n\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\u003c/div\u003e&#34;,
-               "css": &#34;/* Accordion filters\n   ========================================================================== */\n\n.accordion {\n    margin-bottom: 20px;\n}\n\n.accordion-button {\n    color: #FFFFFF;\n    background-color: var(--highlight);\n    border: 1px solid var(--highlight);\n    font-size: 1rem;\n    font-weight: normal;\n    margin-bottom: 13px;\n    border-radius: 100px; \n    padding: .5rem 1.5rem;\n    transition: opacity .2s;\n}\n\n.accordion-button:hover {\n    opacity: .65;\n}\n\n.accordion-button-text {\n    margin-right: 5px;\n}\n\n.accordion-content {\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));\n    height: 400px;\n    max-height: 0;\n    overflow: hidden;\n    transition: all .25s;\n}\n\n@media screen and (min-width: 768px) {\n    .accordion-content {\n        display: flex;\n        margin-top: -.75rem;\n        margin-left: -.75rem;\n        margin-right: -.75rem;        \n    }\n}\n\n.accordion-content.is-open {\n    max-height: 800px;\n}\n\n.accordion-filter {\n    max-height: 100%;\n    overflow: auto;\n    padding: .75rem;\n}\n\n@media screen and (min-width: 768px) {\n    .accordion-filter {\n        max-height: none;\n        overflow: visible;\n        flex: 1 1 0;\n    }\n}\n\n.accordion-filter-title {\n    font-weight: bold;\n    font-size: 1rem;\n    margin-top: 13px;\n    margin-bottom: 13px;\n    padding-bottom: 13px;\n    border-bottom: 1px solid rgba(0,0,0,.1);\n}\n\n.accordion-filter-results {\n    max-height: 100%;\n    overflow: auto;\n    padding-bottom: 2rem;\n}\n\n/**** Filter summary ****/\n\n.odswidget.odswidget-filter-summary {\n    padding-bottom: 10px;\n    position: relative;\n}\n\n@media (min-width: 420px) {\n    .odswidget.odswidget-filter-summary {\n        display: flex;\n        flex-wrap: wrap;\n        align-items: center;\n    }\n}\n\n.odswidget-filter-summary__active-filter,\n.odswidget-filter-summary__clear-all {\n    border-radius: 3px;\n    margin-right: 4px;\n    padding: 0;\n}\n\n.odswidget-filter-summary__active-filter {\n    background-color: #f3f3f3;\n}\n\n.odswidget-filter-summary__active-filter-link,\n.odswidget-clear-all-filters {\n    border-left: none;\n    margin: 0;\n    padding: 2px 4px 2px 2px;\n    display: flex;\n    align-items: center;\n}\n\n.odswidget-filter-summary__active-filter-link::after {\n    content: &#39;\\f057&#39;;\n    font-family: &#39;FontAwesome&#39;;\n    line-height: 1;\n    margin-left: 8px;\n}\n\n.odswidget-clear-all-filters i {\n    margin-right: 3px;\n}\n&#34; }'>
-    </form>
-</div>
-
-<div class="ods-content">
-    <section class="box box-live-example">
-      <iframe id="iframe-filters-1"
-              width="100%" height="100%"
-              src="about:blank"
-              srcdoc="
-        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
-
-&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;&gt;
-
-&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
-
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;&gt;&lt;/script&gt;
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
-
-&lt;script type=&#34;text/javascript&#34;&gt;
-    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {
-        ODSWidgetsConfigProvider.setConfig({
-            &#34;defaultDomain&#34;: &#34;https://userclub.opendatasoft.com/&#34;,
-            &#34;basemaps&#34;: [
-                {
-                    &#34;provider&#34;: &#34;jawg.light&#34;,
-                    &#34;label&#34;: &#34;Jawg Light&#34;,
-                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
-                }
-            ],
-            &#34;themes&#34;: {
-                &#39;default&#39;: {
-                    &#39;url&#39;: &#39;/img/ods.svg&#39;
-                },
-                &#39;Santé&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Culture, Patrimoine&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Environment&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Transports, Déplacements&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Justice, Sécurité, Police, Crime&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Sport, Loisirs&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Hébergement, Restauration&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Services, Social&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Checklist&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Usages&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                }
-            },
-            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
-        });
-    });
-&lt;/script&gt;
-
-&lt;script type=&#34;text/javascript&#34;&gt;
-    document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
-        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
-            el.addEventListener(&#39;click&#39;, (event) =&gt; {
-                event.preventDefault();
-            });
-        })
-    });
-&lt;/script&gt;
-
-        </head>
-        <body>
-        <div ng-app='ods-widgets'>
-            &lt;ods-dataset-context context=&#34;ctx&#34; 
-                     ctx-dataset=&#34;us-hospitals&#34;
-                     ctx-domain=&#34;userclub&#34;&gt;
-    &lt;div class=&#34;container&#34;&gt;
-
-        &lt;section class=&#34;accordion&#34;
-                 ng-init=&#34;is_open = false&#34;&gt;
-            &lt;button class=&#34;accordion-button&#34;
-                    ng-click=&#34;is_open = !is_open&#34;&gt;
-                &lt;span class=&#34;accordion-button-text&#34;&gt;
-                    Filter
-                &lt;/span&gt;
-                &lt;i class=&#34;fa fa-filter&#34; 
-                   aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
-            &lt;/button&gt;
-
-            &lt;ods-filter-summary context=&#34;ctx&#34;&gt;
-                {{ refinements }}
-            &lt;/ods-filter-summary&gt;
-
-            &lt;ods-facets context=&#34;ctx&#34;&gt;
-                &lt;div class=&#34;accordion-content&#34;
-                    ng-class=&#34;{ &#39;is-open&#39;: is_open }&#34;&gt;
-                    
-                    &lt;div class=&#34;accordion-filter&#34;&gt;
-                        &lt;h2 class=&#34;accordion-filter-title&#34;&gt;
-                            State
-                        &lt;/h2&gt;
-                        &lt;div class=&#34;accordion-filter-results&#34;&gt;
-                            &lt;ods-facet name=&#34;state&#34;
-                                       value-search=&#34;true&#34;
-                                       disjunctive=&#34;true&#34;
-                                       visible-items=&#34;50&#34;&gt;&lt;/ods-facet&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-
-                    &lt;div class=&#34;accordion-filter&#34;&gt;
-                        &lt;h2 class=&#34;accordion-filter-title&#34;&gt;
-                            City
-                        &lt;/h2&gt;
-                        &lt;div class=&#34;accordion-filter-results&#34;&gt;
-                            &lt;ods-facet name=&#34;city&#34;
-                                       value-search=&#34;true&#34;
-                                       disjunctive=&#34;true&#34;
-                                       visible-items=&#34;100&#34;&gt;&lt;/ods-facet&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-
-                    &lt;div class=&#34;accordion-filter&#34;&gt;
-                        &lt;h2 class=&#34;accordion-filter-title&#34;&gt;
-                           Status
-                        &lt;/h2&gt;
-                        &lt;div class=&#34;accordion-filter-results&#34;&gt;
-                            &lt;ods-facet name=&#34;status&#34;
-                                       disjunctive=&#34;true&#34;
-                                       visible-items=&#34;100&#34;&gt;&lt;/ods-facet&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-
-                    &lt;div class=&#34;accordion-filter&#34;&gt;
-                        &lt;h2 class=&#34;accordion-filter-title&#34;&gt;
-                            Type
-                        &lt;/h2&gt;
-                        &lt;div class=&#34;accordion-filter-results&#34;&gt;
-                            &lt;ods-facet name=&#34;type&#34;
-                                       disjunctive=&#34;true&#34;
-                                       visible-items=&#34;100&#34;&gt;&lt;/ods-facet&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/ods-facets&gt;
-        &lt;/section&gt;
-
-        &lt;ods-table context=&#34;ctx&#34;&gt;&lt;/ods-table&gt;
-
-    &lt;/div&gt;
-&lt;/ods-dataset-context&gt;
-        </div>
-        <style type='text/css'>
-            /* Accordion filters
-   ========================================================================== */
-
-.accordion {
-    margin-bottom: 20px;
-}
-
-.accordion-button {
-    color: #FFFFFF;
-    background-color: var(--highlight);
-    border: 1px solid var(--highlight);
-    font-size: 1rem;
-    font-weight: normal;
-    margin-bottom: 13px;
-    border-radius: 100px; 
-    padding: .5rem 1.5rem;
-    transition: opacity .2s;
-}
-
-.accordion-button:hover {
-    opacity: .65;
-}
-
-.accordion-button-text {
-    margin-right: 5px;
-}
-
-.accordion-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    height: 400px;
-    max-height: 0;
-    overflow: hidden;
-    transition: all .25s;
-}
-
-@media screen and (min-width: 768px) {
-    .accordion-content {
-        display: flex;
-        margin-top: -.75rem;
-        margin-left: -.75rem;
-        margin-right: -.75rem;        
-    }
-}
-
-.accordion-content.is-open {
-    max-height: 800px;
-}
-
-.accordion-filter {
-    max-height: 100%;
-    overflow: auto;
-    padding: .75rem;
-}
-
-@media screen and (min-width: 768px) {
-    .accordion-filter {
-        max-height: none;
-        overflow: visible;
-        flex: 1 1 0;
-    }
-}
-
-.accordion-filter-title {
-    font-weight: bold;
-    font-size: 1rem;
-    margin-top: 13px;
-    margin-bottom: 13px;
-    padding-bottom: 13px;
-    border-bottom: 1px solid rgba(0,0,0,.1);
-}
-
-.accordion-filter-results {
-    max-height: 100%;
-    overflow: auto;
-    padding-bottom: 2rem;
-}
-
-/**** Filter summary ****/
-
-.odswidget.odswidget-filter-summary {
-    padding-bottom: 10px;
-    position: relative;
-}
-
-@media (min-width: 420px) {
-    .odswidget.odswidget-filter-summary {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-}
-
-.odswidget-filter-summary__active-filter,
-.odswidget-filter-summary__clear-all {
-    border-radius: 3px;
-    margin-right: 4px;
-    padding: 0;
-}
-
-.odswidget-filter-summary__active-filter {
-    background-color: #f3f3f3;
-}
-
-.odswidget-filter-summary__active-filter-link,
-.odswidget-clear-all-filters {
-    border-left: none;
-    margin: 0;
-    padding: 2px 4px 2px 2px;
-    display: flex;
-    align-items: center;
-}
-
-.odswidget-filter-summary__active-filter-link::after {
-    content: &#39;\f057&#39;;
-    font-family: &#39;FontAwesome&#39;;
-    line-height: 1;
-    margin-left: 8px;
-}
-
-.odswidget-clear-all-filters i {
-    margin-right: 3px;
-}
-
-        </style>
-        </body>
-        ">
-      </iframe>
-    </section>
-
-    <section class="box box-code js-tabs">
-        <nav class="level is-flex">
-            <div class="level-left">
-                <div class="level-item">
-                    <ul class="buttons has-addons js-tablist">
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-filters-1-html-content">
-                                HTML
-                            </a>
-                        </li>
-                        
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-filters-1-css-content">
-                                CSS
-                            </a>
-                        </li>
-                        
-                    </ul>
-                </div>
-            </div>
-            <div class="level-right mt-0">
-                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
-                   data-tooltip="Edit on CodePen"
-                   target="_blank"
-                   aria-role="link"
-                   rel="noopener"
-                   title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-filters-1').submit()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="feather feather-edit">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-                    </svg>
-                </a>
-            </div>
-        </nav>
-
-
-        <div class="tab-content">
-            <div class="js-tabcontent"
-                 id="code-filters-1-html-content">
-                <div class="highlight">
-                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;ctx&#34; 
-                     ctx-dataset=&#34;us-hospitals&#34;
-                     ctx-domain=&#34;userclub&#34;&gt;
-    &lt;div class=&#34;container&#34;&gt;
-
-        &lt;section class=&#34;accordion&#34;
-                 ng-init=&#34;is_open = false&#34;&gt;
-            &lt;button class=&#34;accordion-button&#34;
-                    ng-click=&#34;is_open = !is_open&#34;&gt;
-                &lt;span class=&#34;accordion-button-text&#34;&gt;
-                    Filter
-                &lt;/span&gt;
-                &lt;i class=&#34;fa fa-filter&#34; 
-                   aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
-            &lt;/button&gt;
-
-            &lt;ods-filter-summary context=&#34;ctx&#34;&gt;
-                {{ refinements }}
-            &lt;/ods-filter-summary&gt;
-
-            &lt;ods-facets context=&#34;ctx&#34;&gt;
-                &lt;div class=&#34;accordion-content&#34;
-                    ng-class=&#34;{ &#39;is-open&#39;: is_open }&#34;&gt;
-                    
-                    &lt;div class=&#34;accordion-filter&#34;&gt;
-                        &lt;h2 class=&#34;accordion-filter-title&#34;&gt;
-                            State
-                        &lt;/h2&gt;
-                        &lt;div class=&#34;accordion-filter-results&#34;&gt;
-                            &lt;ods-facet name=&#34;state&#34;
-                                       value-search=&#34;true&#34;
-                                       disjunctive=&#34;true&#34;
-                                       visible-items=&#34;50&#34;&gt;&lt;/ods-facet&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-
-                    &lt;div class=&#34;accordion-filter&#34;&gt;
-                        &lt;h2 class=&#34;accordion-filter-title&#34;&gt;
-                            City
-                        &lt;/h2&gt;
-                        &lt;div class=&#34;accordion-filter-results&#34;&gt;
-                            &lt;ods-facet name=&#34;city&#34;
-                                       value-search=&#34;true&#34;
-                                       disjunctive=&#34;true&#34;
-                                       visible-items=&#34;100&#34;&gt;&lt;/ods-facet&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-
-                    &lt;div class=&#34;accordion-filter&#34;&gt;
-                        &lt;h2 class=&#34;accordion-filter-title&#34;&gt;
-                           Status
-                        &lt;/h2&gt;
-                        &lt;div class=&#34;accordion-filter-results&#34;&gt;
-                            &lt;ods-facet name=&#34;status&#34;
-                                       disjunctive=&#34;true&#34;
-                                       visible-items=&#34;100&#34;&gt;&lt;/ods-facet&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-
-                    &lt;div class=&#34;accordion-filter&#34;&gt;
-                        &lt;h2 class=&#34;accordion-filter-title&#34;&gt;
-                            Type
-                        &lt;/h2&gt;
-                        &lt;div class=&#34;accordion-filter-results&#34;&gt;
-                            &lt;ods-facet name=&#34;type&#34;
-                                       disjunctive=&#34;true&#34;
-                                       visible-items=&#34;100&#34;&gt;&lt;/ods-facet&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/ods-facets&gt;
-        &lt;/section&gt;
-
-        &lt;ods-table context=&#34;ctx&#34;&gt;&lt;/ods-table&gt;
-
-    &lt;/div&gt;
-&lt;/ods-dataset-context&gt;</code></pre>
-                </div>
-            </div>
-            
-            <div class="js-tabcontent"
-                 id="code-filters-1-css-content">
-                <div class="highlight">
-                    <pre class="language-css" data-lang="css"><code>/* Accordion filters
-   ========================================================================== */
-
-.accordion {
-    margin-bottom: 20px;
-}
-
-.accordion-button {
-    color: #FFFFFF;
-    background-color: var(--highlight);
-    border: 1px solid var(--highlight);
-    font-size: 1rem;
-    font-weight: normal;
-    margin-bottom: 13px;
-    border-radius: 100px; 
-    padding: .5rem 1.5rem;
-    transition: opacity .2s;
-}
-
-.accordion-button:hover {
-    opacity: .65;
-}
-
-.accordion-button-text {
-    margin-right: 5px;
-}
-
-.accordion-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    height: 400px;
-    max-height: 0;
-    overflow: hidden;
-    transition: all .25s;
-}
-
-@media screen and (min-width: 768px) {
-    .accordion-content {
-        display: flex;
-        margin-top: -.75rem;
-        margin-left: -.75rem;
-        margin-right: -.75rem;        
-    }
-}
-
-.accordion-content.is-open {
-    max-height: 800px;
-}
-
-.accordion-filter {
-    max-height: 100%;
-    overflow: auto;
-    padding: .75rem;
-}
-
-@media screen and (min-width: 768px) {
-    .accordion-filter {
-        max-height: none;
-        overflow: visible;
-        flex: 1 1 0;
-    }
-}
-
-.accordion-filter-title {
-    font-weight: bold;
-    font-size: 1rem;
-    margin-top: 13px;
-    margin-bottom: 13px;
-    padding-bottom: 13px;
-    border-bottom: 1px solid rgba(0,0,0,.1);
-}
-
-.accordion-filter-results {
-    max-height: 100%;
-    overflow: auto;
-    padding-bottom: 2rem;
-}
-
-/**** Filter summary ****/
-
-.odswidget.odswidget-filter-summary {
-    padding-bottom: 10px;
-    position: relative;
-}
-
-@media (min-width: 420px) {
-    .odswidget.odswidget-filter-summary {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-}
-
-.odswidget-filter-summary__active-filter,
-.odswidget-filter-summary__clear-all {
-    border-radius: 3px;
-    margin-right: 4px;
-    padding: 0;
-}
-
-.odswidget-filter-summary__active-filter {
-    background-color: #f3f3f3;
-}
-
-.odswidget-filter-summary__active-filter-link,
-.odswidget-clear-all-filters {
-    border-left: none;
-    margin: 0;
-    padding: 2px 4px 2px 2px;
-    display: flex;
-    align-items: center;
-}
-
-.odswidget-filter-summary__active-filter-link::after {
-    content: &#39;\f057&#39;;
-    font-family: &#39;FontAwesome&#39;;
-    line-height: 1;
-    margin-left: 8px;
-}
-
-.odswidget-clear-all-filters i {
-    margin-right: 3px;
-}
-</code></pre>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-</div>
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-filters-1";
-            iframe = document.getElementById(iframeId);
-             
-            size =  null 
-             
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-                if (iframe.height == size) {
-                    clearInterval(loopId);
-                } else {
-                    iframe.height = size > 1 ? size : scrollHeight;
-                }
-            }
-        }, 1000);
-    });
-</script>
-
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "IFRAME ID HERE";
-            iframe = document.getElementById(iframeId);
-
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-            }
-        }, 1000);
-    });
-</script>
-        </div>
-    </div>
-    
-    <div class="container">
-        <div class="box box-example">
-          <div class="content">
-            <h2 class="title" id="filters-in-a-drawer">
-  Filters in a drawer
-  
-    <a class="is-link" href="#filters-in-a-drawer">
-      <img src="/img/fas-link.svg" />
-    </a>
-  
-</h2>
-<p>This drawer is useful for interactive dashboards with filters that need to be hidden in a drawer on a side to offer more visibility/space for the data-visualization and content. The drawer contains a header (with a close button in the example), a content (with ods-facets), and a footer (empty here).</p>
-
-          </div>
-          
-
-
-<div class="codepen">
-    
-    
-    
-
-    <form id="form-filters-2"
-          action="https://codepen.io/pen/define"
-          method="POST"
-          target="_blank">
-        <input type="hidden"
-               name="data"
-               value='{
-               "title": "New Pen!",
-               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
-               "editors": 110,
                "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;ctx\&#34;\n                     ctx-dataset=\&#34;us-hospitals\&#34;\n                     ctx-domain=\&#34;userclub\&#34;\u003e\n    \u003cdiv class=\&#34;fullpage-app\&#34;\n         ng-init=\&#34;modalswitchstatus\&#34;\u003e\n\n        \u003c!-- THE RIGHT MODAL --\u003e\n        \u003cdiv class=\&#34;rightmodal\&#34;\u003e\n            \u003cdiv class=\&#34;backdrop\&#34;\n                 ng-click=\&#34;modalswitchstatus = !modalswitchstatus\&#34;\n                 ng-class=\&#34;{&#39;backdrop-active&#39;:modalswitchstatus}\&#34;\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;modal\&#34;\n                 ng-class=\&#34;{&#39;modal-active&#39;:modalswitchstatus}\&#34;\u003e\n                \u003cdiv class=\&#34;modal__rightside\&#34;\u003e\n                    \u003cdiv class=\&#34;modal__header\&#34;\n                         ng-click=\&#34;modalswitchstatus = !modalswitchstatus\&#34;\u003e\n                        \u003ca href=\&#34;#\&#34;\n                           class=\&#34;closebtn\&#34;\u003e\n                            Close \u003ci class=\&#34;fa fa-times-circle\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                        \u003c/a\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;modal__content\&#34;\u003e\n                        \u003cods-facets context=\&#34;ctx\&#34;\u003e\u003c/ods-facets\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;modal__footer\&#34;\u003e\n                        \u003cdiv class=\&#34;\&#34;\u003e\n                            Footer\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n\n        \u003c!-- THE CONTENT --\u003e\n        \u003cdiv class=\&#34;content container\&#34;\u003e\n            \u003cdiv class=\&#34;level\&#34;\u003e\n                \u003ch2\u003e\n                    Page content\n                \u003c/h2\u003e\n                \u003cbutton ng-click=\&#34;modalswitchstatus = !modalswitchstatus\&#34;\u003e\n                    Filtrer data\n                \u003c/button\u003e\n            \u003c/div\u003e\n            \u003cods-filter-summary context=\&#34;ctx\&#34;\u003e\n                {{ refinements }}\n            \u003c/ods-filter-summary\u003e\n            \u003cods-table context=\&#34;ctx\&#34;\u003e\u003c/ods-table\u003e\n        \u003c/div\u003e\n\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\u003c/div\u003e&#34;,
                "css": &#34;:root {\n    /* change values by the size of the header \u0026 the footer to make the modal fit your page properly */\n    --header-size: 20px;\n    --footer-size: 20px;\n    --modal-margin: calc(var(--header-size) &#43; var(--footer-size));\n}\n\n/* ALL PAGE CONTAINER */\n.fullpage-app {\n    /* prerequisite for full height modal bar */\n    position: relative;\n    width: 100%;\n    /* prevent the page to be shrinked if the content is less than the browser height, force a minimal height */\n    min-height: calc(100vh - var(--modal-margin));\n}\n\n.level {\n    display:flex;\n    justify-content: space-between;\n}\n\n/** FILTER SUMMARY */\nul.odswidget.odswidget-filter-summary {\n    margin: 15px 0;\n    position: relative;\n}\n@media (min-width: 420px) {\n    ul.odswidget.odswidget-filter-summary {\n        display: flex;\n        flex-wrap: wrap;\n        align-items: center;\n    }\n}\nli.odswidget-filter-summary__active-filter:first-child {\n    margin-left: 100px;\n}\nli.odswidget-filter-summary__active-filter:first-child:before {\n    content: &#39;Active filters: &#39;;\n    font-weight: 600;\n    line-height: 1.8em;\n    position: absolute;\n    left: 0;\n}\nli.odswidget-filter-summary__active-filter,\nli.odswidget-filter-summary__clear-all {\n    border-radius: 3px;\n    margin: 2px 4px;\n    padding: 0;\n}\nli.odswidget-filter-summary__active-filter {\n    background-color: #f3f3f3;\n}\n\na.odswidget-filter-summary__active-filter-link,\na.odswidget-clear-all-filters {\n    border-left: none;\n    margin: 0;\n    padding: 2px 4px 2px 2px;\n    display: flex;\n}\na.odswidget-clear-all-filters {\n    align-items: center;\n}\na.odswidget-clear-all-filters i {\n    margin-right: 3px;\n}\n\n\n\n/* BACKDROP (black screen when modal active) */\n.backdrop {\n    visibility: hidden;\n    opacity: 0;\n    position: absolute;\n    height: 100%;\n    width: 100%;\n    z-index: 900;\n    background-color: #000;\n    cursor: default;\n    -webkit-transition: visibility .5s,opacity .5s;\n    transition: visibility .5s,opacity .5s;\n}\n.backdrop-active {\n    visibility: visible;\n    opacity: .6; /* make a more or less darker backdrop, 1:totally dark, 0:totally transparent (invisibile) */\n}\n/* MODAL */\n/* The modal is composed of 2 parts:\nthe leftside, that is the banner that is always visible, and contains an icon on top to click and actiavte the modal\nthe right side, that contains filters, searchbar, charts etc... that is not visible, activated on demand\nthe modal default size (width) is 57px, it correspond to the leftside width */\n.modal {\n    display: flex;\n    position: absolute;\n    top: 0;\n    right: 0;\n    bottom: 0;\n    width: 0;\n    background-color: white;\n    z-index: 1000;\n    overflow: hidden; /* Disable horizontal scroll */\n    transition: ease-in 0.3s;\n}\n.modal-active {\n    width: 400px; /* size of the modal when active */\n}\n/* specific because charts are loaded inside */\n.modal__content {\n    width: 400px;\n}\n@media (max-width: 420px) {\n    .modal-active {\n        width: 100%;\n    }\n    .modal__content {\n        width: 100%;\n    }\n}\n\n/* SHOW/HIDE SIDE */\n.modal__rightside {\n    display: flex;\n    flex-direction: column;\n    border-left: solid 1px lightgrey;\n}\n.modal__header,\n.modal__footer {\n    min-height: 35px;\n    background-color: white;\n    padding: 0 10px;\n    display: flex;\n    align-items: center;\n    justify-content: start;\n    opacity: 0;\n    transition: opacity 0s;\n}\n.modal-active .modal__header, .modal-active .modal__footer {\n    opacity: 1;\n    transition-delay: 0.3s;\n}\n/* CONTENT OF THE MODAL */\n/* HEADER / UPPER PART */\n.modal__header {\n    border-bottom: 1px solid lightgrey;\n}\n/* FOOTER / LOWER PART (optionnal) */\n.modal__footer {\n    border-top: 1px solid lightgrey;\n}\n/* THEN THE MIDDLE / CONTENT */\n.modal__content {\n    height: 100%;\n    overflow-y: auto;\n    padding: 25px;\n    opacity: 0;\n    transition: opacity 0s;\n}\n/* WARNING ! This part is very important : it renders the content only after the end of the openning of the modal\nie. when the modal is resized, nothing is visible, after 0.3s of resizing, it&#39;s displays the content\nthis trick is very important to avoid the browser the resize all the content during the modal opening */\n.modal-active .modal__content {\n    opacity: 1;\n    transition-delay: 0.3s;\n}\n\n.content {\n    padding-top: 20px;\n}&#34; }'>
     </form>
@@ -988,7 +334,7 @@ Filters &ndash; Codelibrary
 
 <div class="ods-content">
     <section class="box box-live-example">
-      <iframe id="iframe-filters-2"
+      <iframe id="iframe-filters-1"
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
@@ -1334,14 +680,14 @@ this trick is very important to avoid the browser the resize all the content dur
                     <ul class="buttons has-addons js-tablist">
                         <li class="button is-secondary is-outlined js-tablist__item">
                             <a class="js-tablist__link"
-                               href="#code-filters-2-html-content">
+                               href="#code-filters-1-html-content">
                                 HTML
                             </a>
                         </li>
                         
                         <li class="button is-secondary is-outlined js-tablist__item">
                             <a class="js-tablist__link"
-                               href="#code-filters-2-css-content">
+                               href="#code-filters-1-css-content">
                                 CSS
                             </a>
                         </li>
@@ -1356,7 +702,7 @@ this trick is very important to avoid the browser the resize all the content dur
                    aria-role="link"
                    rel="noopener"
                    title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-filters-2').submit()">
+                   onclick="document.getElementById('form-filters-1').submit()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                          class="feather feather-edit">
@@ -1370,7 +716,7 @@ this trick is very important to avoid the browser the resize all the content dur
 
         <div class="tab-content">
             <div class="js-tabcontent"
-                 id="code-filters-2-html-content">
+                 id="code-filters-1-html-content">
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;ctx&#34;
                      ctx-dataset=&#34;us-hospitals&#34;
@@ -1428,7 +774,7 @@ this trick is very important to avoid the browser the resize all the content dur
             </div>
             
             <div class="js-tabcontent"
-                 id="code-filters-2-css-content">
+                 id="code-filters-1-css-content">
                 <div class="highlight">
                     <pre class="language-css" data-lang="css"><code>:root {
     /* change values by the size of the header &amp; the footer to make the modal fit your page properly */
@@ -1598,6 +944,694 @@ this trick is very important to avoid the browser the resize all the content dur
 .content {
     padding-top: 20px;
 }</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-filters-1";
+            iframe = document.getElementById(iframeId);
+             
+            size =  null 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "IFRAME ID HERE";
+            iframe = document.getElementById(iframeId);
+
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+            }
+        }, 1000);
+    });
+</script>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <h2 class="title" id="accordion-filter">
+  Accordion Filter
+  
+    <a class="is-link" href="#accordion-filter">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+<p>Make your page have a cleaner look by putting the filters hidden in an accordion which can be opened and closed with a button click. The layout will adapt automatically depending on the amount of filters added.</p>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-filters-2"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;ctx\&#34; \n                     ctx-dataset=\&#34;us-hospitals\&#34;\n                     ctx-domain=\&#34;userclub\&#34;\u003e\n    \u003cdiv class=\&#34;container\&#34;\u003e\n\n        \u003csection class=\&#34;accordion\&#34;\n                 ng-init=\&#34;is_open = false\&#34;\u003e\n            \u003cbutton class=\&#34;accordion-button\&#34;\n                    ng-class=\&#34;{ &#39;is-active&#39;: is_open }\&#34;\n                    ng-click=\&#34;is_open = !is_open\&#34;\u003e\n                \u003ci class=\&#34;fa fa-filter\&#34; \n                   aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003cspan class=\&#34;accordion-button-text\&#34;\u003e\n                    Filter\n                \u003c/span\u003e\n                \u003ci class=\&#34;fa\&#34; \n                   ng-class=\&#34;{ &#39;fa-angle-up&#39;: is_open, &#39;fa-angle-down&#39;: !is_open }\&#34;\n                   aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n            \u003c/button\u003e\n\n            \u003cods-filter-summary context=\&#34;ctx\&#34;\u003e\n                {{ refinements }}\n            \u003c/ods-filter-summary\u003e\n\n            \u003cods-facets context=\&#34;ctx\&#34;\u003e\n                \u003cdiv class=\&#34;accordion-content\&#34;\n                    ng-class=\&#34;{ &#39;is-open&#39;: is_open }\&#34;\u003e\n                    \n                    \u003cdiv class=\&#34;accordion-filter\&#34;\u003e\n                        \u003ch2 class=\&#34;accordion-filter-title\&#34;\u003e\n                            State\n                        \u003c/h2\u003e\n                        \u003cdiv class=\&#34;accordion-filter-results\&#34;\u003e\n                            \u003cods-facet name=\&#34;state\&#34;\n                                       value-search=\&#34;true\&#34;\n                                       disjunctive=\&#34;true\&#34;\n                                       visible-items=\&#34;50\&#34;\u003e\u003c/ods-facet\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n\n                    \u003cdiv class=\&#34;accordion-filter\&#34;\u003e\n                        \u003ch2 class=\&#34;accordion-filter-title\&#34;\u003e\n                            City\n                        \u003c/h2\u003e\n                        \u003cdiv class=\&#34;accordion-filter-results\&#34;\u003e\n                            \u003cods-facet name=\&#34;city\&#34;\n                                       value-search=\&#34;true\&#34;\n                                       disjunctive=\&#34;true\&#34;\n                                       visible-items=\&#34;100\&#34;\u003e\u003c/ods-facet\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n\n                    \u003cdiv class=\&#34;accordion-filter\&#34;\u003e\n                        \u003ch2 class=\&#34;accordion-filter-title\&#34;\u003e\n                           Status\n                        \u003c/h2\u003e\n                        \u003cdiv class=\&#34;accordion-filter-results\&#34;\u003e\n                            \u003cods-facet name=\&#34;status\&#34;\n                                       disjunctive=\&#34;true\&#34;\n                                       visible-items=\&#34;100\&#34;\u003e\u003c/ods-facet\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n\n                    \u003cdiv class=\&#34;accordion-filter\&#34;\u003e\n                        \u003ch2 class=\&#34;accordion-filter-title\&#34;\u003e\n                            Type\n                        \u003c/h2\u003e\n                        \u003cdiv class=\&#34;accordion-filter-results\&#34;\u003e\n                            \u003cods-facet name=\&#34;type\&#34;\n                                       disjunctive=\&#34;true\&#34;\n                                       visible-items=\&#34;100\&#34;\u003e\u003c/ods-facet\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/ods-facets\u003e\n        \u003c/section\u003e\n\n        \u003cods-table context=\&#34;ctx\&#34;\u003e\u003c/ods-table\u003e\n\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\u003c/div\u003e&#34;,
+               "css": &#34;/* Accordion filters\n   ========================================================================== */\n\n.accordion {\n    margin-bottom: 20px;\n    padding-bottom: 13px;\n    border-bottom: 1px solid rgba(0,0,0,.1);\n}\n\n.accordion-button {\n    color: #FFFFFF;\n    background-color: var(--highlight);\n    border: 1px solid var(--highlight);\n    font-size: 1rem;\n    font-weight: normal;\n    margin-bottom: 13px;\n    border-radius: 100px; \n    padding: .5rem 1.2rem;\n    transition: all .2s;\n}\n\n.accordion-button:hover {\n    opacity: .65;\n}\n\n.accordion-button.is-active {\n    box-shadow: 0 0 0 3px rgba(115, 115, 115,.2);\n}\n\n.accordion-button-text {\n    margin-right: 10px;\n    margin-left: 3px;\n}\n\n.accordion-content {\n    display: grid;\n    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));\n    height: 400px;\n    max-height: 0;\n    overflow: hidden;\n    transition: all .25s;\n}\n\n@media screen and (min-width: 768px) {\n    .accordion-content {\n        display: flex;\n        margin-top: -.75rem;\n        margin-left: -.75rem;\n        margin-right: -.75rem;        \n    }\n}\n\n.accordion-content.is-open {\n    max-height: 800px;\n}\n\n.accordion-filter {\n    max-height: 100%;\n    overflow: auto;\n    padding: .75rem;\n}\n\n@media screen and (min-width: 768px) {\n    .accordion-filter {\n        max-height: none;\n        overflow: visible;\n        flex: 1 1 0;\n    }\n}\n\n.accordion-filter-title {\n    font-weight: bold;\n    font-size: 1rem;\n    margin-top: 13px;\n    margin-bottom: 13px;\n    padding-top: 8px;\n    padding-bottom: 13px;\n    border-bottom: 1px solid rgba(0,0,0,.1);\n}\n\n.accordion-filter-results {\n    max-height: 100%;\n    overflow: auto;\n    padding-bottom: 2rem;\n}\n\n/**** Filter summary ****/\n\n.odswidget.odswidget-filter-summary {\n    position: relative;\n}\n\n@media (min-width: 420px) {\n    .odswidget.odswidget-filter-summary {\n        display: flex;\n        flex-wrap: wrap;\n        align-items: center;\n    }\n}\n\n.odswidget-filter-summary__active-filter,\n.odswidget-filter-summary__clear-all {\n    border-radius: 3px;\n    margin-right: 4px;\n    margin-bottom: 2px;\n    padding: 0;\n}\n\n.odswidget-filter-summary__active-filter {\n    background-color: #f3f3f3;\n}\n\n.odswidget-filter-summary__active-filter-link,\n.odswidget-clear-all-filters {\n    border-left: none;\n    margin: 0;\n    padding: 2px 4px 2px 2px;\n    display: flex;\n    align-items: center;\n}\n\n.odswidget-filter-summary__active-filter-link::after {\n    content: &#39;\\f057&#39;;\n    font-family: &#39;FontAwesome&#39;;\n    line-height: 1;\n    margin-left: 8px;\n    opacity: .65;\n}\n\n.odswidget-clear-all-filters {\n    color: var(--links);\n}\n\n.odswidget-clear-all-filters i {\n    display: none;\n}\n&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-filters-2"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/i18n/angular-locale_fr-fr.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;defaultDomain&#34;: &#34;https://userclub.opendatasoft.com/&#34;,
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;themes&#34;: {
+                &#39;default&#39;: {
+                    &#39;url&#39;: &#39;/img/ods.svg&#39;
+                },
+                &#39;Santé&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Culture, Patrimoine&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Environment&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Transports, Déplacements&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Justice, Sécurité, Police, Crime&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Sport, Loisirs&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Hébergement, Restauration&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Services, Social&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Checklist&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Usages&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                }
+            },
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+        </head>
+        <body>
+        <div ng-app='ods-widgets'>
+            &lt;ods-dataset-context context=&#34;ctx&#34; 
+                     ctx-dataset=&#34;us-hospitals&#34;
+                     ctx-domain=&#34;userclub&#34;&gt;
+    &lt;div class=&#34;container&#34;&gt;
+
+        &lt;section class=&#34;accordion&#34;
+                 ng-init=&#34;is_open = false&#34;&gt;
+            &lt;button class=&#34;accordion-button&#34;
+                    ng-class=&#34;{ &#39;is-active&#39;: is_open }&#34;
+                    ng-click=&#34;is_open = !is_open&#34;&gt;
+                &lt;i class=&#34;fa fa-filter&#34; 
+                   aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;span class=&#34;accordion-button-text&#34;&gt;
+                    Filter
+                &lt;/span&gt;
+                &lt;i class=&#34;fa&#34; 
+                   ng-class=&#34;{ &#39;fa-angle-up&#39;: is_open, &#39;fa-angle-down&#39;: !is_open }&#34;
+                   aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;/button&gt;
+
+            &lt;ods-filter-summary context=&#34;ctx&#34;&gt;
+                {{ refinements }}
+            &lt;/ods-filter-summary&gt;
+
+            &lt;ods-facets context=&#34;ctx&#34;&gt;
+                &lt;div class=&#34;accordion-content&#34;
+                    ng-class=&#34;{ &#39;is-open&#39;: is_open }&#34;&gt;
+                    
+                    &lt;div class=&#34;accordion-filter&#34;&gt;
+                        &lt;h2 class=&#34;accordion-filter-title&#34;&gt;
+                            State
+                        &lt;/h2&gt;
+                        &lt;div class=&#34;accordion-filter-results&#34;&gt;
+                            &lt;ods-facet name=&#34;state&#34;
+                                       value-search=&#34;true&#34;
+                                       disjunctive=&#34;true&#34;
+                                       visible-items=&#34;50&#34;&gt;&lt;/ods-facet&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&#34;accordion-filter&#34;&gt;
+                        &lt;h2 class=&#34;accordion-filter-title&#34;&gt;
+                            City
+                        &lt;/h2&gt;
+                        &lt;div class=&#34;accordion-filter-results&#34;&gt;
+                            &lt;ods-facet name=&#34;city&#34;
+                                       value-search=&#34;true&#34;
+                                       disjunctive=&#34;true&#34;
+                                       visible-items=&#34;100&#34;&gt;&lt;/ods-facet&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&#34;accordion-filter&#34;&gt;
+                        &lt;h2 class=&#34;accordion-filter-title&#34;&gt;
+                           Status
+                        &lt;/h2&gt;
+                        &lt;div class=&#34;accordion-filter-results&#34;&gt;
+                            &lt;ods-facet name=&#34;status&#34;
+                                       disjunctive=&#34;true&#34;
+                                       visible-items=&#34;100&#34;&gt;&lt;/ods-facet&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&#34;accordion-filter&#34;&gt;
+                        &lt;h2 class=&#34;accordion-filter-title&#34;&gt;
+                            Type
+                        &lt;/h2&gt;
+                        &lt;div class=&#34;accordion-filter-results&#34;&gt;
+                            &lt;ods-facet name=&#34;type&#34;
+                                       disjunctive=&#34;true&#34;
+                                       visible-items=&#34;100&#34;&gt;&lt;/ods-facet&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/ods-facets&gt;
+        &lt;/section&gt;
+
+        &lt;ods-table context=&#34;ctx&#34;&gt;&lt;/ods-table&gt;
+
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+        </div>
+        <style type='text/css'>
+            /* Accordion filters
+   ========================================================================== */
+
+.accordion {
+    margin-bottom: 20px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.accordion-button {
+    color: #FFFFFF;
+    background-color: var(--highlight);
+    border: 1px solid var(--highlight);
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 13px;
+    border-radius: 100px; 
+    padding: .5rem 1.2rem;
+    transition: all .2s;
+}
+
+.accordion-button:hover {
+    opacity: .65;
+}
+
+.accordion-button.is-active {
+    box-shadow: 0 0 0 3px rgba(115, 115, 115,.2);
+}
+
+.accordion-button-text {
+    margin-right: 10px;
+    margin-left: 3px;
+}
+
+.accordion-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    height: 400px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .25s;
+}
+
+@media screen and (min-width: 768px) {
+    .accordion-content {
+        display: flex;
+        margin-top: -.75rem;
+        margin-left: -.75rem;
+        margin-right: -.75rem;        
+    }
+}
+
+.accordion-content.is-open {
+    max-height: 800px;
+}
+
+.accordion-filter {
+    max-height: 100%;
+    overflow: auto;
+    padding: .75rem;
+}
+
+@media screen and (min-width: 768px) {
+    .accordion-filter {
+        max-height: none;
+        overflow: visible;
+        flex: 1 1 0;
+    }
+}
+
+.accordion-filter-title {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    padding-top: 8px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.accordion-filter-results {
+    max-height: 100%;
+    overflow: auto;
+    padding-bottom: 2rem;
+}
+
+/**** Filter summary ****/
+
+.odswidget.odswidget-filter-summary {
+    position: relative;
+}
+
+@media (min-width: 420px) {
+    .odswidget.odswidget-filter-summary {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+
+.odswidget-filter-summary__active-filter,
+.odswidget-filter-summary__clear-all {
+    border-radius: 3px;
+    margin-right: 4px;
+    margin-bottom: 2px;
+    padding: 0;
+}
+
+.odswidget-filter-summary__active-filter {
+    background-color: #f3f3f3;
+}
+
+.odswidget-filter-summary__active-filter-link,
+.odswidget-clear-all-filters {
+    border-left: none;
+    margin: 0;
+    padding: 2px 4px 2px 2px;
+    display: flex;
+    align-items: center;
+}
+
+.odswidget-filter-summary__active-filter-link::after {
+    content: &#39;\f057&#39;;
+    font-family: &#39;FontAwesome&#39;;
+    line-height: 1;
+    margin-left: 8px;
+    opacity: .65;
+}
+
+.odswidget-clear-all-filters {
+    color: var(--links);
+}
+
+.odswidget-clear-all-filters i {
+    display: none;
+}
+
+        </style>
+        </body>
+        ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level is-flex">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-secondary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-filters-2-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        
+                        <li class="button is-secondary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-filters-2-css-content">
+                                CSS
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right mt-0">
+                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
+                   data-tooltip="Edit on CodePen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-filters-2').submit()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-edit">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-filters-2-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;ctx&#34; 
+                     ctx-dataset=&#34;us-hospitals&#34;
+                     ctx-domain=&#34;userclub&#34;&gt;
+    &lt;div class=&#34;container&#34;&gt;
+
+        &lt;section class=&#34;accordion&#34;
+                 ng-init=&#34;is_open = false&#34;&gt;
+            &lt;button class=&#34;accordion-button&#34;
+                    ng-class=&#34;{ &#39;is-active&#39;: is_open }&#34;
+                    ng-click=&#34;is_open = !is_open&#34;&gt;
+                &lt;i class=&#34;fa fa-filter&#34; 
+                   aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;span class=&#34;accordion-button-text&#34;&gt;
+                    Filter
+                &lt;/span&gt;
+                &lt;i class=&#34;fa&#34; 
+                   ng-class=&#34;{ &#39;fa-angle-up&#39;: is_open, &#39;fa-angle-down&#39;: !is_open }&#34;
+                   aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;/button&gt;
+
+            &lt;ods-filter-summary context=&#34;ctx&#34;&gt;
+                {{ refinements }}
+            &lt;/ods-filter-summary&gt;
+
+            &lt;ods-facets context=&#34;ctx&#34;&gt;
+                &lt;div class=&#34;accordion-content&#34;
+                    ng-class=&#34;{ &#39;is-open&#39;: is_open }&#34;&gt;
+                    
+                    &lt;div class=&#34;accordion-filter&#34;&gt;
+                        &lt;h2 class=&#34;accordion-filter-title&#34;&gt;
+                            State
+                        &lt;/h2&gt;
+                        &lt;div class=&#34;accordion-filter-results&#34;&gt;
+                            &lt;ods-facet name=&#34;state&#34;
+                                       value-search=&#34;true&#34;
+                                       disjunctive=&#34;true&#34;
+                                       visible-items=&#34;50&#34;&gt;&lt;/ods-facet&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&#34;accordion-filter&#34;&gt;
+                        &lt;h2 class=&#34;accordion-filter-title&#34;&gt;
+                            City
+                        &lt;/h2&gt;
+                        &lt;div class=&#34;accordion-filter-results&#34;&gt;
+                            &lt;ods-facet name=&#34;city&#34;
+                                       value-search=&#34;true&#34;
+                                       disjunctive=&#34;true&#34;
+                                       visible-items=&#34;100&#34;&gt;&lt;/ods-facet&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&#34;accordion-filter&#34;&gt;
+                        &lt;h2 class=&#34;accordion-filter-title&#34;&gt;
+                           Status
+                        &lt;/h2&gt;
+                        &lt;div class=&#34;accordion-filter-results&#34;&gt;
+                            &lt;ods-facet name=&#34;status&#34;
+                                       disjunctive=&#34;true&#34;
+                                       visible-items=&#34;100&#34;&gt;&lt;/ods-facet&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&#34;accordion-filter&#34;&gt;
+                        &lt;h2 class=&#34;accordion-filter-title&#34;&gt;
+                            Type
+                        &lt;/h2&gt;
+                        &lt;div class=&#34;accordion-filter-results&#34;&gt;
+                            &lt;ods-facet name=&#34;type&#34;
+                                       disjunctive=&#34;true&#34;
+                                       visible-items=&#34;100&#34;&gt;&lt;/ods-facet&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/ods-facets&gt;
+        &lt;/section&gt;
+
+        &lt;ods-table context=&#34;ctx&#34;&gt;&lt;/ods-table&gt;
+
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;</code></pre>
+                </div>
+            </div>
+            
+            <div class="js-tabcontent"
+                 id="code-filters-2-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>/* Accordion filters
+   ========================================================================== */
+
+.accordion {
+    margin-bottom: 20px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.accordion-button {
+    color: #FFFFFF;
+    background-color: var(--highlight);
+    border: 1px solid var(--highlight);
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 13px;
+    border-radius: 100px; 
+    padding: .5rem 1.2rem;
+    transition: all .2s;
+}
+
+.accordion-button:hover {
+    opacity: .65;
+}
+
+.accordion-button.is-active {
+    box-shadow: 0 0 0 3px rgba(115, 115, 115,.2);
+}
+
+.accordion-button-text {
+    margin-right: 10px;
+    margin-left: 3px;
+}
+
+.accordion-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    height: 400px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all .25s;
+}
+
+@media screen and (min-width: 768px) {
+    .accordion-content {
+        display: flex;
+        margin-top: -.75rem;
+        margin-left: -.75rem;
+        margin-right: -.75rem;        
+    }
+}
+
+.accordion-content.is-open {
+    max-height: 800px;
+}
+
+.accordion-filter {
+    max-height: 100%;
+    overflow: auto;
+    padding: .75rem;
+}
+
+@media screen and (min-width: 768px) {
+    .accordion-filter {
+        max-height: none;
+        overflow: visible;
+        flex: 1 1 0;
+    }
+}
+
+.accordion-filter-title {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 13px;
+    margin-bottom: 13px;
+    padding-top: 8px;
+    padding-bottom: 13px;
+    border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.accordion-filter-results {
+    max-height: 100%;
+    overflow: auto;
+    padding-bottom: 2rem;
+}
+
+/**** Filter summary ****/
+
+.odswidget.odswidget-filter-summary {
+    position: relative;
+}
+
+@media (min-width: 420px) {
+    .odswidget.odswidget-filter-summary {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+
+.odswidget-filter-summary__active-filter,
+.odswidget-filter-summary__clear-all {
+    border-radius: 3px;
+    margin-right: 4px;
+    margin-bottom: 2px;
+    padding: 0;
+}
+
+.odswidget-filter-summary__active-filter {
+    background-color: #f3f3f3;
+}
+
+.odswidget-filter-summary__active-filter-link,
+.odswidget-clear-all-filters {
+    border-left: none;
+    margin: 0;
+    padding: 2px 4px 2px 2px;
+    display: flex;
+    align-items: center;
+}
+
+.odswidget-filter-summary__active-filter-link::after {
+    content: &#39;\f057&#39;;
+    font-family: &#39;FontAwesome&#39;;
+    line-height: 1;
+    margin-left: 8px;
+    opacity: .65;
+}
+
+.odswidget-clear-all-filters {
+    color: var(--links);
+}
+
+.odswidget-clear-all-filters i {
+    display: none;
+}
+</code></pre>
                 </div>
             </div>
             
