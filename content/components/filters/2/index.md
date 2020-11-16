@@ -2,7 +2,6 @@
 title: "filters 2"
 ---
 
-## Filters in a drawer
+## Accordion Filter
 
-This drawer is useful for interactive dashboards with filters that need to be hidden in a drawer on a side to offer more visibility/space for the data-visualization and content. The drawer contains a header (with a close button in the example), a content (with ods-facets), and a footer (empty here).
-
+Make your page have a cleaner look by putting the filters hidden in an accordion which can be opened and closed with a button click. The layout will adapt automatically depending on the amount of filters added.
