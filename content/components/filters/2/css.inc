@@ -15,16 +15,21 @@
     font-weight: normal;
     margin-bottom: 13px;
     border-radius: 100px; 
-    padding: .5rem 1.5rem;
-    transition: opacity .2s;
+    padding: .5rem 1.2rem;
+    transition: all .2s;
 }
 
 .accordion-button:hover {
     opacity: .65;
 }
 
+.accordion-button.is-active {
+    box-shadow: 0 0 0 3px rgba(115, 115, 115,.2);
+}
+
 .accordion-button-text {
-    margin-right: 5px;
+    margin-right: 10px;
+    margin-left: 3px;
 }
 
 .accordion-content {

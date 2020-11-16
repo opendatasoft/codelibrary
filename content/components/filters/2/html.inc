@@ -6,11 +6,15 @@
         <section class="accordion"
                  ng-init="is_open = false">
             <button class="accordion-button"
+                    ng-class="{ 'is-active': is_open }"
                     ng-click="is_open = !is_open">
+                <i class="fa fa-filter" 
+                   aria-hidden="true"></i>
                 <span class="accordion-button-text">
                     Filter
                 </span>
-                <i class="fa fa-filter" 
+                <i class="fa" 
+                   ng-class="{ 'fa-angle-up': is_open, 'fa-angle-down': !is_open }"
                    aria-hidden="true"></i>
             </button>
 
