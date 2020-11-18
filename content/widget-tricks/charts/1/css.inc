@@ -60,4 +60,4 @@ tspan.highcharts-text-outline {
 #green-gauge .odswidget-gauge__value {
     color: green;
 }
-      
+
