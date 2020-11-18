@@ -1,19 +1,47 @@
 :root {
     --links: #0088CC;
-    --page-background: #fff;
+    --page-background: #f6f8fb;
     --header-links: #FFFFFF;
     --titles: #1E0C33;
     --section-titles: #1E0C33;
     --highlight: #EC643C;
     --footer-links: #0088CC;
     --boxes-border: #E5E5E5;
-    --boxes-background: #FFFFFF;
+    --boxes-background: #f6f8fb;
     --header-background: #1E0C33;
     --footer-background: #FFFFFF;
     --text: #333333;
     --section-titles-background: #FFFFFF;
 }
 
-/*body {*/
-/*    background-color: var(--page-background);*/
-/*}*/
+body {
+    background-color: white; /*var(--page-background);*/
+    padding: 20px 10px;
+}
+
+
+/* used in ods-analysis resource, to minimize code blocks */
+pre {
+    max-height: 400px;
+    overflow: auto;
+}
+
+
+/* widget tricks catalog cards pre-req. */
+.catalog-grid .odswidget-result-enumerator__results {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+}
+@media screen and (min-width: 768px) {
+    .catalog-grid .odswidget-result-enumerator__results {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+ods-catalog-card {
+    height: 100%;
+}
+
+.ods-catalog-card {
+    margin-bottom: 0;
+}
