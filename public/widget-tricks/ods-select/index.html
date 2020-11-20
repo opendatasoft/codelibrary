@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+    <title>
+        
+ods-select &ndash; Codelibrary
+
+    </title>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41201218-21"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-41201218-21');
+    </script>
+
+    
+    
+
+    
+    
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css"
+          integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8="
+          crossorigin="anonymous">
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href="/scss/main.css" />
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png">
+    <link rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png">
+    <link rel="shortcut icon"
+          href="/favicon.ico">
+</head>
+
+<body>
+
+<nav class="navbar is-fixed-top"
+     role="navigation"
+     aria-label="Main navigation">
+    <div class="navbar-brand">
+        <button class="navbar-burger burger"
+                type="button"
+                data-target="sidebarNavbar"
+                aria-controls="sidebarNavbar"
+                aria-expanded="false"
+                aria-label="Main menu">
+            Menu
+        </button>
+        <a class="navbar-item"
+           href="/"
+           title="Back to the homepage">
+            <img src="/img/ods-logo-helphub.svg"
+                 alt="Helphub Logo"/>
+        </a>
+        <button class="navbar-burger burger"
+                type="button"
+                data-target="helphubNavbar"
+                aria-controls="helphubNavbar"
+                aria-expanded="false"
+                aria-label="Help Hub Menu">
+            Help Hub
+        </button>
+    </div>
+    <div class="navbar-menu"
+         id="helphubNavbar">
+        <div class="navbar-start">
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/">
+                Help Hub
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/platform/en/">
+                User guide
+            </a>
+            <a class="navbar-item is-active"
+               href="https://codelibrary.opendatasoft.com">
+                Code Library
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/faq-glossary/en/">
+                FAQ
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/widgets/">
+                Widgets
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/en/apis/">
+                APIs
+            </a>
+            <a class="navbar-item"
+               href="https://academy.opendatasoft.com/page/homepage">
+                Academy
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="columns is-desktop codelibrary">
+    <div class="column is-narrow">
+    <aside class="sidebar menu"
+       id="sidebarNavbar">
+    <div class="sidebar-content">
+
+        
+        
+        
+        
+        
+        
+        
+
+        <div id="algolia-box"></div>
+        <div id="algolia-results"></div>
+
+        
+        <ul class="menu-list">
+            <li>
+                <a class="sidebar-subtitle"
+                   href="https://codelibrary.opendatasoft.com">
+                    Home
+                </a>
+            </li>
+            
+            
+            <li>
+                <a href="/components/"
+                   class="sidebar-subtitle">
+                    Components
+                </a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/page-templates/"
+                   class="sidebar-subtitle">
+                    Page templates
+                </a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/portal-themes/"
+                   class="sidebar-subtitle">
+                    Portal themes
+                </a>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sidebar-subtitle " href="/widget-tricks/">
+                Widget tricks
+                </a>
+                <ul>
+                    
+                    <li>
+                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/svg-maps/">SVG Maps</a>
+                    </li>
+                    
+                    <li>
+                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/catalog-cards/">Catalog cards</a>
+                    </li>
+                    
+                    <li>
+                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/charts/">Chart samples</a>
+                    </li>
+                    
+                    <li>
+                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/custom-tooltip/">Custom tooltip</a>
+                    </li>
+                    
+                    <li>
+                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/dates/">Dates</a>
+                    </li>
+                    
+                    <li>
+                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/drill-down/">Drill-down chart</a>
+                    </li>
+                    
+                    <li>
+                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/filter-as-list/">Filters as an HTML Select</a>
+                    </li>
+                    
+                    <li>
+                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-aggregation/">ods-aggregation</a>
+                    </li>
+                    
+                    <li>
+                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-analysis/">ods-analysis</a>
+                    </li>
+                    
+                    <li>
+                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-color-gradient/">ods-color-gradient &amp; ods-legend</a>
+                    </li>
+                    
+                    <li>
+                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-map-tricks/">ods-map: Refine &amp; Zoom</a>
+                    </li>
+                    
+                    <li>
+                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-map-css/">ods-map: CSS Hacks</a>
+                    </li>
+                    
+                    <li>
+                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-pop-in/">ods-pop-in</a>
+                    </li>
+                    
+                    <li>
+                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-date-range-slider/">ods-range-slider</a>
+                    </li>
+                    
+                    <li>
+                        <a class="is-active" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-select/">ods-select</a>
+                    </li>
+                    
+                    <li>
+                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-simple-tabs/">ods-simple-tabs</a>
+                    </li>
+                    
+                    <li>
+                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/share-print/">Share and print</a>
+                    </li>
+                    
+                    <li>
+                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/timeline/">Timeline Custom View</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            
+            
+        </ul>
+        <p class="menu-label">
+            Tags
+        </p>
+        <div class="tags">
+            
+            <a class="tag" href="https://codelibrary.opendatasoft.com/tags/aggregation/">
+                aggregation
+            </a>
+            
+            <a class="tag" href="https://codelibrary.opendatasoft.com/tags/chart/">
+                chart
+            </a>
+            
+            <a class="tag" href="https://codelibrary.opendatasoft.com/tags/date/">
+                date
+            </a>
+            
+            <a class="tag" href="https://codelibrary.opendatasoft.com/tags/display/">
+                display
+            </a>
+            
+            <a class="tag" href="https://codelibrary.opendatasoft.com/tags/filter/">
+                filter
+            </a>
+            
+            <a class="tag" href="https://codelibrary.opendatasoft.com/tags/geo/">
+                geo
+            </a>
+            
+            <a class="tag" href="https://codelibrary.opendatasoft.com/tags/list/">
+                list
+            </a>
+            
+            <a class="tag" href="https://codelibrary.opendatasoft.com/tags/map/">
+                map
+            </a>
+            
+            <a class="tag" href="https://codelibrary.opendatasoft.com/tags/navigation/">
+                navigation
+            </a>
+            
+            <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-aggregation/">
+                ods-aggregation
+            </a>
+            
+            <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-analysis/">
+                ods-analysis
+            </a>
+            
+            <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-maps/">
+                ods-maps
+            </a>
+            
+        </div>
+    </div>
+</aside>
+
+    </div>
+    <div class="column codelibrary-content">
+    
+
+<section>
+    <div class="content-header container is-max-desktop mb-5">
+        <div class="content">
+            <h1 class="title" id="ods-select">
+  ods-select
+  
+</h1>
+<p>ods-select allows the selection of one or more items from a list of options. This resource present different combination with ods-facet-results or ods-analysis to feed the selection list.</p>
+<p><a href="https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsSelect">ods-select widget documentation</a></p>
+
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <h2 class="title" id="fed-by-a-static-manually-declared-list">
+  Fed by a static, manually declared list
+  
+    <a class="is-link" href="#fed-by-a-static-manually-declared-list">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+<p><code>ods-select</code> accept any kind of source as long as it&rsquo;s a <code>json array</code>. It can be an array of strings, but also an array of object and ods-select <code>label-modifier</code> and <code>value-modifier</code> can be used to specify which key in the array item to use for, respectively the label and the field value.</p>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-ods-select-1"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;row\&#34;\u003e\n    \u003cdiv class=\&#34;col-md-4 col-md-offset-2 col-sm-6 mb\&#34; ng-if=\&#34;true\&#34;\n         ng-init=\&#34;names = [&#39;John&#39;,&#39;George&#39;,&#39;Harry&#39;,&#39;Meredith&#39;]; selection\&#34;\u003e\n        \u003ch3\u003e\n            Simplest mode, with a string array\n        \u003c/h3\u003e\n        \u003cods-select options=\&#34;names\&#34;\n                    selected-values=\&#34;selection\&#34;\n                    placeholder=\&#34;Pick a name\&#34;\u003e\u003c/ods-select\u003e\n        \u003ch4\u003eInput:\u003c/h4\u003e\n        \u003cpre ng-bind=\&#34;names|json\&#34;\u003e\u003c/pre\u003e\n        \u003ch4\u003eSelection:\u003c/h4\u003e\n        \u003cpre ng-bind=\&#34;selection|json\&#34;\u003e\u003c/pre\u003e\n    \u003c/div\u003e\n    \u003cdiv class=\&#34;col-md-4 col-sm-6 mb\&#34; ng-if=\&#34;true\&#34;\n         ng-init=\&#34;\n            names = [\n                {name:&#39;Mister John&#39;,id:&#39;john&#39;},\n                {name:&#39;King George&#39;,id:&#39;george&#39;},\n                {name:&#39;Prince Harry&#39;,id:&#39;harry&#39;},\n                {name:&#39;Lady Meredith&#39;,id:&#39;meredith&#39;}\n            ];\n            selection\&#34;\u003e\n        \u003ch3\u003e\n            Modifiers options with json object array\n        \u003c/h3\u003e\n        \u003cods-select options=\&#34;names\&#34;\n                    selected-values=\&#34;selection\&#34;\n                    label-modifier=\&#34;name\&#34;\n                    value-modifier=\&#34;id\&#34;\n                    placeholder=\&#34;Pick a name\&#34;\u003e\u003c/ods-select\u003e\n        \u003ch4\u003eInput:\u003c/h4\u003e\n        \u003cpre ng-bind=\&#34;names|json\&#34;\u003e\u003c/pre\u003e\n        \u003ch4\u003eSelection:\u003c/h4\u003e\n        \u003cpre ng-bind=\&#34;selection|json\&#34;\u003e\u003c/pre\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
+               "css": &#34;/** DO NOT COPY **/\n/* the CSS is only for a better reading of the demo */\n.mb {\n    margin-bottom: 30px;\n}\nh3 {\n    height: 60px;\n}\n.odswidget-select {\n    margin-bottom: 25px;\n}&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-ods-select-1"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;defaultDomain&#34;: &#34;https://userclub.opendatasoft.com/&#34;,
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;themes&#34;: {
+                &#39;default&#39;: {
+                    &#39;url&#39;: &#39;/img/ods.svg&#39;
+                },
+                &#39;Santé&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Culture, Patrimoine&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Environment&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Transports, Déplacements&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Justice, Sécurité, Police, Crime&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Sport, Loisirs&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Hébergement, Restauration&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Services, Social&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Checklist&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Usages&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                }
+            },
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+        </head>
+        <body>
+        <div ng-app='ods-widgets'>
+            &lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-md-4 col-md-offset-2 col-sm-6 mb&#34; ng-if=&#34;true&#34;
+         ng-init=&#34;names = [&#39;John&#39;,&#39;George&#39;,&#39;Harry&#39;,&#39;Meredith&#39;]; selection&#34;&gt;
+        &lt;h3&gt;
+            Simplest mode, with a string array
+        &lt;/h3&gt;
+        &lt;ods-select options=&#34;names&#34;
+                    selected-values=&#34;selection&#34;
+                    placeholder=&#34;Pick a name&#34;&gt;&lt;/ods-select&gt;
+        &lt;h4&gt;Input:&lt;/h4&gt;
+        &lt;pre ng-bind=&#34;names|json&#34;&gt;&lt;/pre&gt;
+        &lt;h4&gt;Selection:&lt;/h4&gt;
+        &lt;pre ng-bind=&#34;selection|json&#34;&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-4 col-sm-6 mb&#34; ng-if=&#34;true&#34;
+         ng-init=&#34;
+            names = [
+                {name:&#39;Mister John&#39;,id:&#39;john&#39;},
+                {name:&#39;King George&#39;,id:&#39;george&#39;},
+                {name:&#39;Prince Harry&#39;,id:&#39;harry&#39;},
+                {name:&#39;Lady Meredith&#39;,id:&#39;meredith&#39;}
+            ];
+            selection&#34;&gt;
+        &lt;h3&gt;
+            Modifiers options with json object array
+        &lt;/h3&gt;
+        &lt;ods-select options=&#34;names&#34;
+                    selected-values=&#34;selection&#34;
+                    label-modifier=&#34;name&#34;
+                    value-modifier=&#34;id&#34;
+                    placeholder=&#34;Pick a name&#34;&gt;&lt;/ods-select&gt;
+        &lt;h4&gt;Input:&lt;/h4&gt;
+        &lt;pre ng-bind=&#34;names|json&#34;&gt;&lt;/pre&gt;
+        &lt;h4&gt;Selection:&lt;/h4&gt;
+        &lt;pre ng-bind=&#34;selection|json&#34;&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+        </div>
+        <style type='text/css'>
+            /** DO NOT COPY **/
+/* the CSS is only for a better reading of the demo */
+.mb {
+    margin-bottom: 30px;
+}
+h3 {
+    height: 60px;
+}
+.odswidget-select {
+    margin-bottom: 25px;
+}
+        </style>
+        </body>
+        ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level is-flex">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-secondary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-ods-select-1-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        
+                        <li class="button is-secondary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-ods-select-1-css-content">
+                                CSS
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right mt-0">
+                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
+                   data-tooltip="Edit on CodePen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-ods-select-1').submit()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-edit">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-ods-select-1-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-md-4 col-md-offset-2 col-sm-6 mb&#34; ng-if=&#34;true&#34;
+         ng-init=&#34;names = [&#39;John&#39;,&#39;George&#39;,&#39;Harry&#39;,&#39;Meredith&#39;]; selection&#34;&gt;
+        &lt;h3&gt;
+            Simplest mode, with a string array
+        &lt;/h3&gt;
+        &lt;ods-select options=&#34;names&#34;
+                    selected-values=&#34;selection&#34;
+                    placeholder=&#34;Pick a name&#34;&gt;&lt;/ods-select&gt;
+        &lt;h4&gt;Input:&lt;/h4&gt;
+        &lt;pre ng-bind=&#34;names|json&#34;&gt;&lt;/pre&gt;
+        &lt;h4&gt;Selection:&lt;/h4&gt;
+        &lt;pre ng-bind=&#34;selection|json&#34;&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-4 col-sm-6 mb&#34; ng-if=&#34;true&#34;
+         ng-init=&#34;
+            names = [
+                {name:&#39;Mister John&#39;,id:&#39;john&#39;},
+                {name:&#39;King George&#39;,id:&#39;george&#39;},
+                {name:&#39;Prince Harry&#39;,id:&#39;harry&#39;},
+                {name:&#39;Lady Meredith&#39;,id:&#39;meredith&#39;}
+            ];
+            selection&#34;&gt;
+        &lt;h3&gt;
+            Modifiers options with json object array
+        &lt;/h3&gt;
+        &lt;ods-select options=&#34;names&#34;
+                    selected-values=&#34;selection&#34;
+                    label-modifier=&#34;name&#34;
+                    value-modifier=&#34;id&#34;
+                    placeholder=&#34;Pick a name&#34;&gt;&lt;/ods-select&gt;
+        &lt;h4&gt;Input:&lt;/h4&gt;
+        &lt;pre ng-bind=&#34;names|json&#34;&gt;&lt;/pre&gt;
+        &lt;h4&gt;Selection:&lt;/h4&gt;
+        &lt;pre ng-bind=&#34;selection|json&#34;&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+            
+            <div class="js-tabcontent"
+                 id="code-ods-select-1-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>/** DO NOT COPY **/
+/* the CSS is only for a better reading of the demo */
+.mb {
+    margin-bottom: 30px;
+}
+h3 {
+    height: 60px;
+}
+.odswidget-select {
+    margin-bottom: 25px;
+}</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-ods-select-1";
+            iframe = document.getElementById(iframeId);
+             
+            size =  null 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "IFRAME ID HERE";
+            iframe = document.getElementById(iframeId);
+
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+            }
+        }, 1000);
+    });
+</script>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <h2 class="title" id="fed-by-a-facet-via-ods-facet-results-widget">
+  Fed by a facet (via ods-facet-results widget)
+  
+    <a class="is-link" href="#fed-by-a-facet-via-ods-facet-results-widget">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+<p><code>ods-facet-results</code> enumerates the values (&ldquo;categories&rdquo;) of a facet, and exposes it in a variable. this variable can then be the option source of <code>ods-select</code>.</p>
+<p><a href="https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsFacetResults">ods-facet-results widget documentation</a></p>
+<blockquote>
+<p>Note that facets are limited to the first 100 results, it&rsquo;s then suitable for categories, types, properties that have a small set of distinct values</p>
+</blockquote>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-ods-select-2"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv\u003e\n    \u003cods-dataset-context context=\&#34;evenementspublicsopenagenda,secondarycontext\&#34;\n                         evenementspublicsopenagenda-dataset=\&#34;evenements-publics-openagenda\&#34;\n                         evenementspublicsopenagenda-parameters=\&#34;{&#39;disjunctive.city&#39;:true}\&#34;\n                         evenementspublicsopenagenda-domain=\&#34;userclub\&#34;\n                         secondarycontext-dataset=\&#34;evenements-publics-openagenda\&#34;\n                         secondarycontext-parameters=\&#34;{&#39;disjunctive.city&#39;:true}\&#34;\n                         secondarycontext-domain=\&#34;userclub\&#34;\u003e\n        \u003cdiv class=\&#34;row\&#34;\n             ods-facet-results=\&#34;cities\&#34;\n             ods-facet-results-facet-name=\&#34;city\&#34;\n             ods-facet-results-context=\&#34;evenementspublicsopenagenda\&#34;\u003e\n            \u003cdiv class=\&#34;col-md-3 col-sm-6 mb\&#34; ng-if=\&#34;true\&#34; ng-init=\&#34;selection\&#34;\u003e\n                \u003ch3\u003e\n                    Simplest mode, with label and value modifier on the name\n                \u003c/h3\u003e\n                \u003cods-select options=\&#34;cities\&#34;\n                            selected-values=\&#34;selection\&#34;\n                            label-modifier=\&#34;name\&#34;\n                            value-modifier=\&#34;name\&#34;\n                            placeholder=\&#34;Pick a city\&#34;\u003e\u003c/ods-select\u003e\n                \u003ch4\u003eInput:\u003c/h4\u003e\n                \u003cpre ng-bind=\&#34;cities|json\&#34;\u003e\u003c/pre\u003e\n                \u003ch4\u003eSelection:\u003c/h4\u003e\n                \u003cpre ng-bind=\&#34;selection|json\&#34;\u003e\u003c/pre\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;col-md-3 col-sm-6 mb\&#34; ng-if=\&#34;true\&#34; ng-init=\&#34;selection\&#34;\u003e\n                \u003ch3\u003e\n                    Expression in the label-modifier\n                \u003c/h3\u003e\n                \u003cods-select options=\&#34;cities\&#34;\n                            selected-values=\&#34;selection\&#34;\n                            label-modifier=\&#34;name &#43; &#39; - &#39; &#43; (count | number) &#43; &#39; events&#39;\&#34;\n                            value-modifier=\&#34;name\&#34;\n                            placeholder=\&#34;Pick a city\&#34;\u003e\u003c/ods-select\u003e\n                \u003ch4\u003eInput:\u003c/h4\u003e\n                \u003cpre ng-bind=\&#34;cities|json\&#34;\u003e\u003c/pre\u003e\n                \u003ch4\u003eSelection:\u003c/h4\u003e\n                \u003cpre ng-bind=\&#34;selection|json\&#34;\u003e\u003c/pre\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;col-md-3 col-sm-6 mb\&#34; ng-if=\&#34;true\&#34;\u003e\n                \u003ch3\u003e\n                    Use the selection to refine the dataset through selected-values parameter\n                \u003c/h3\u003e\n                \u003cods-select options=\&#34;cities\&#34;\n                            selected-values=\&#34;evenementspublicsopenagenda.parameters[&#39;refine.city&#39;]\&#34;\n                            label-modifier=\&#34;name &#43; &#39; - &#39; &#43; (count | number) &#43; &#39; events&#39;\&#34;\n                            value-modifier=\&#34;name\&#34;\n                            placeholder=\&#34;Pick a city\&#34;\u003e\u003c/ods-select\u003e\n                \u003cods-table context=\&#34;evenementspublicsopenagenda\&#34; displayed-fields=\&#34;address\&#34;\u003e\u003c/ods-table\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;col-md-3 col-sm-6 mb\&#34; ng-if=\&#34;true\&#34; ng-init=\&#34;selection\&#34;\u003e\n                \u003ch3\u003e\n                    More advanced: refine the dataset with an AngularJs expression\n                \u003c/h3\u003e\n                \u003cods-select options=\&#34;cities\&#34;\n                            selected-values=\&#34;selection\&#34;\n                            label-modifier=\&#34;name &#43; &#39; - &#39; &#43; (count | number) &#43; &#39; events&#39;\&#34;\n                            value-modifier=\&#34;name\&#34;\n                            placeholder=\&#34;Pick a city\&#34;\u003e\u003c/ods-select\u003e\n                {{ secondarycontext.parameters[&#39;refine.city&#39;] = selection; &#39;&#39; }}\n                \u003cods-table context=\&#34;secondarycontext\&#34; displayed-fields=\&#34;address\&#34;\u003e\u003c/ods-table\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
+               "css": &#34;/** DO NOT COPY **/\n/* the CSS is only for a better reading of the demo */\n.mb {\n    margin-bottom: 30px;\n}\nh3 {\n    height: 60px;\n}\n.odswidget-select {\n    margin-bottom: 25px;\n}&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-ods-select-2"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;defaultDomain&#34;: &#34;https://userclub.opendatasoft.com/&#34;,
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;themes&#34;: {
+                &#39;default&#39;: {
+                    &#39;url&#39;: &#39;/img/ods.svg&#39;
+                },
+                &#39;Santé&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Culture, Patrimoine&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Environment&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Transports, Déplacements&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Justice, Sécurité, Police, Crime&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Sport, Loisirs&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Hébergement, Restauration&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Services, Social&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Checklist&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Usages&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                }
+            },
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+        </head>
+        <body>
+        <div ng-app='ods-widgets'>
+            &lt;div&gt;
+    &lt;ods-dataset-context context=&#34;evenementspublicsopenagenda,secondarycontext&#34;
+                         evenementspublicsopenagenda-dataset=&#34;evenements-publics-openagenda&#34;
+                         evenementspublicsopenagenda-parameters=&#34;{&#39;disjunctive.city&#39;:true}&#34;
+                         evenementspublicsopenagenda-domain=&#34;userclub&#34;
+                         secondarycontext-dataset=&#34;evenements-publics-openagenda&#34;
+                         secondarycontext-parameters=&#34;{&#39;disjunctive.city&#39;:true}&#34;
+                         secondarycontext-domain=&#34;userclub&#34;&gt;
+        &lt;div class=&#34;row&#34;
+             ods-facet-results=&#34;cities&#34;
+             ods-facet-results-facet-name=&#34;city&#34;
+             ods-facet-results-context=&#34;evenementspublicsopenagenda&#34;&gt;
+            &lt;div class=&#34;col-md-3 col-sm-6 mb&#34; ng-if=&#34;true&#34; ng-init=&#34;selection&#34;&gt;
+                &lt;h3&gt;
+                    Simplest mode, with label and value modifier on the name
+                &lt;/h3&gt;
+                &lt;ods-select options=&#34;cities&#34;
+                            selected-values=&#34;selection&#34;
+                            label-modifier=&#34;name&#34;
+                            value-modifier=&#34;name&#34;
+                            placeholder=&#34;Pick a city&#34;&gt;&lt;/ods-select&gt;
+                &lt;h4&gt;Input:&lt;/h4&gt;
+                &lt;pre ng-bind=&#34;cities|json&#34;&gt;&lt;/pre&gt;
+                &lt;h4&gt;Selection:&lt;/h4&gt;
+                &lt;pre ng-bind=&#34;selection|json&#34;&gt;&lt;/pre&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-3 col-sm-6 mb&#34; ng-if=&#34;true&#34; ng-init=&#34;selection&#34;&gt;
+                &lt;h3&gt;
+                    Expression in the label-modifier
+                &lt;/h3&gt;
+                &lt;ods-select options=&#34;cities&#34;
+                            selected-values=&#34;selection&#34;
+                            label-modifier=&#34;name &#43; &#39; - &#39; &#43; (count | number) &#43; &#39; events&#39;&#34;
+                            value-modifier=&#34;name&#34;
+                            placeholder=&#34;Pick a city&#34;&gt;&lt;/ods-select&gt;
+                &lt;h4&gt;Input:&lt;/h4&gt;
+                &lt;pre ng-bind=&#34;cities|json&#34;&gt;&lt;/pre&gt;
+                &lt;h4&gt;Selection:&lt;/h4&gt;
+                &lt;pre ng-bind=&#34;selection|json&#34;&gt;&lt;/pre&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-3 col-sm-6 mb&#34; ng-if=&#34;true&#34;&gt;
+                &lt;h3&gt;
+                    Use the selection to refine the dataset through selected-values parameter
+                &lt;/h3&gt;
+                &lt;ods-select options=&#34;cities&#34;
+                            selected-values=&#34;evenementspublicsopenagenda.parameters[&#39;refine.city&#39;]&#34;
+                            label-modifier=&#34;name &#43; &#39; - &#39; &#43; (count | number) &#43; &#39; events&#39;&#34;
+                            value-modifier=&#34;name&#34;
+                            placeholder=&#34;Pick a city&#34;&gt;&lt;/ods-select&gt;
+                &lt;ods-table context=&#34;evenementspublicsopenagenda&#34; displayed-fields=&#34;address&#34;&gt;&lt;/ods-table&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-3 col-sm-6 mb&#34; ng-if=&#34;true&#34; ng-init=&#34;selection&#34;&gt;
+                &lt;h3&gt;
+                    More advanced: refine the dataset with an AngularJs expression
+                &lt;/h3&gt;
+                &lt;ods-select options=&#34;cities&#34;
+                            selected-values=&#34;selection&#34;
+                            label-modifier=&#34;name &#43; &#39; - &#39; &#43; (count | number) &#43; &#39; events&#39;&#34;
+                            value-modifier=&#34;name&#34;
+                            placeholder=&#34;Pick a city&#34;&gt;&lt;/ods-select&gt;
+                {{ secondarycontext.parameters[&#39;refine.city&#39;] = selection; &#39;&#39; }}
+                &lt;ods-table context=&#34;secondarycontext&#34; displayed-fields=&#34;address&#34;&gt;&lt;/ods-table&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/ods-dataset-context&gt;
+&lt;/div&gt;
+        </div>
+        <style type='text/css'>
+            /** DO NOT COPY **/
+/* the CSS is only for a better reading of the demo */
+.mb {
+    margin-bottom: 30px;
+}
+h3 {
+    height: 60px;
+}
+.odswidget-select {
+    margin-bottom: 25px;
+}
+        </style>
+        </body>
+        ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level is-flex">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-secondary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-ods-select-2-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        
+                        <li class="button is-secondary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-ods-select-2-css-content">
+                                CSS
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right mt-0">
+                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
+                   data-tooltip="Edit on CodePen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-ods-select-2').submit()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-edit">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-ods-select-2-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;div&gt;
+    &lt;ods-dataset-context context=&#34;evenementspublicsopenagenda,secondarycontext&#34;
+                         evenementspublicsopenagenda-dataset=&#34;evenements-publics-openagenda&#34;
+                         evenementspublicsopenagenda-parameters=&#34;{&#39;disjunctive.city&#39;:true}&#34;
+                         evenementspublicsopenagenda-domain=&#34;userclub&#34;
+                         secondarycontext-dataset=&#34;evenements-publics-openagenda&#34;
+                         secondarycontext-parameters=&#34;{&#39;disjunctive.city&#39;:true}&#34;
+                         secondarycontext-domain=&#34;userclub&#34;&gt;
+        &lt;div class=&#34;row&#34;
+             ods-facet-results=&#34;cities&#34;
+             ods-facet-results-facet-name=&#34;city&#34;
+             ods-facet-results-context=&#34;evenementspublicsopenagenda&#34;&gt;
+            &lt;div class=&#34;col-md-3 col-sm-6 mb&#34; ng-if=&#34;true&#34; ng-init=&#34;selection&#34;&gt;
+                &lt;h3&gt;
+                    Simplest mode, with label and value modifier on the name
+                &lt;/h3&gt;
+                &lt;ods-select options=&#34;cities&#34;
+                            selected-values=&#34;selection&#34;
+                            label-modifier=&#34;name&#34;
+                            value-modifier=&#34;name&#34;
+                            placeholder=&#34;Pick a city&#34;&gt;&lt;/ods-select&gt;
+                &lt;h4&gt;Input:&lt;/h4&gt;
+                &lt;pre ng-bind=&#34;cities|json&#34;&gt;&lt;/pre&gt;
+                &lt;h4&gt;Selection:&lt;/h4&gt;
+                &lt;pre ng-bind=&#34;selection|json&#34;&gt;&lt;/pre&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-3 col-sm-6 mb&#34; ng-if=&#34;true&#34; ng-init=&#34;selection&#34;&gt;
+                &lt;h3&gt;
+                    Expression in the label-modifier
+                &lt;/h3&gt;
+                &lt;ods-select options=&#34;cities&#34;
+                            selected-values=&#34;selection&#34;
+                            label-modifier=&#34;name &#43; &#39; - &#39; &#43; (count | number) &#43; &#39; events&#39;&#34;
+                            value-modifier=&#34;name&#34;
+                            placeholder=&#34;Pick a city&#34;&gt;&lt;/ods-select&gt;
+                &lt;h4&gt;Input:&lt;/h4&gt;
+                &lt;pre ng-bind=&#34;cities|json&#34;&gt;&lt;/pre&gt;
+                &lt;h4&gt;Selection:&lt;/h4&gt;
+                &lt;pre ng-bind=&#34;selection|json&#34;&gt;&lt;/pre&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-3 col-sm-6 mb&#34; ng-if=&#34;true&#34;&gt;
+                &lt;h3&gt;
+                    Use the selection to refine the dataset through selected-values parameter
+                &lt;/h3&gt;
+                &lt;ods-select options=&#34;cities&#34;
+                            selected-values=&#34;evenementspublicsopenagenda.parameters[&#39;refine.city&#39;]&#34;
+                            label-modifier=&#34;name &#43; &#39; - &#39; &#43; (count | number) &#43; &#39; events&#39;&#34;
+                            value-modifier=&#34;name&#34;
+                            placeholder=&#34;Pick a city&#34;&gt;&lt;/ods-select&gt;
+                &lt;ods-table context=&#34;evenementspublicsopenagenda&#34; displayed-fields=&#34;address&#34;&gt;&lt;/ods-table&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-3 col-sm-6 mb&#34; ng-if=&#34;true&#34; ng-init=&#34;selection&#34;&gt;
+                &lt;h3&gt;
+                    More advanced: refine the dataset with an AngularJs expression
+                &lt;/h3&gt;
+                &lt;ods-select options=&#34;cities&#34;
+                            selected-values=&#34;selection&#34;
+                            label-modifier=&#34;name &#43; &#39; - &#39; &#43; (count | number) &#43; &#39; events&#39;&#34;
+                            value-modifier=&#34;name&#34;
+                            placeholder=&#34;Pick a city&#34;&gt;&lt;/ods-select&gt;
+                {{ secondarycontext.parameters[&#39;refine.city&#39;] = selection; &#39;&#39; }}
+                &lt;ods-table context=&#34;secondarycontext&#34; displayed-fields=&#34;address&#34;&gt;&lt;/ods-table&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/ods-dataset-context&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+            
+            <div class="js-tabcontent"
+                 id="code-ods-select-2-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>/** DO NOT COPY **/
+/* the CSS is only for a better reading of the demo */
+.mb {
+    margin-bottom: 30px;
+}
+h3 {
+    height: 60px;
+}
+.odswidget-select {
+    margin-bottom: 25px;
+}</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-ods-select-2";
+            iframe = document.getElementById(iframeId);
+             
+            size =  null 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "IFRAME ID HERE";
+            iframe = document.getElementById(iframeId);
+
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+            }
+        }, 1000);
+    });
+</script>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
+            <h2 class="title" id="fed-by-an-analysis-via-ods-analysis-widget">
+  Fed by an analysis (via ods-analysis widget)
+  
+    <a class="is-link" href="#fed-by-an-analysis-via-ods-analysis-widget">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+<p><code>ods-analysis</code> <a href="https://codelibrary.opendatasoft.com/widget-tricks/ods-analysis/">Code Library resource</a> and <a href="https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsAnalysis">it&rsquo;s documentation</a>.</p>
+<blockquote>
+<p>Note that performing an analysis on a field containing huge quantity of distinct values can alter performances of the page (the browser needs to download the long list of possible values, then it displays and manipulates the list int the widget)</p>
+</blockquote>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-ods-select-3"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv\u003e\n    \u003cods-dataset-context context=\&#34;evenementspublicsopenagenda,secondarycontext\&#34;\n                         evenementspublicsopenagenda-dataset=\&#34;evenements-publics-openagenda\&#34;\n                         evenementspublicsopenagenda-parameters=\&#34;{&#39;disjunctive.region&#39;:true}\&#34;\n                         evenementspublicsopenagenda-domain=\&#34;userclub\&#34;\n                         secondarycontext-dataset=\&#34;evenements-publics-openagenda\&#34;\n                         secondarycontext-parameters=\&#34;{&#39;disjunctive.region&#39;:true}\&#34;\n                         secondarycontext-domain=\&#34;userclub\&#34;\u003e\n        \u003cdiv class=\&#34;row\&#34;\n             ods-analysis=\&#34;regions\&#34;\n             ods-analysis-context=\&#34;evenementspublicsopenagenda\&#34;\n             ods-analysis-x=\&#34;region\&#34;\n             ods-analysis-serie-count=\&#34;COUNT()\&#34;\n             ods-analysis-sort=\&#34;count\&#34;\n             ods-analysis-max=\&#34;200\&#34;\u003e\n            \u003cdiv class=\&#34;col-md-3 col-sm-6 mb\&#34; ng-if=\&#34;true\&#34; ng-init=\&#34;selection\&#34;\u003e\n                \u003ch3\u003e\n                    Simplest mode, with label and value modifier on the X axis\n                \u003c/h3\u003e\n                \u003cods-select options=\&#34;regions.results\&#34;\n                            selected-values=\&#34;selection\&#34;\n                            label-modifier=\&#34;x\&#34;\n                            value-modifier=\&#34;x\&#34;\n                            placeholder=\&#34;Pick a region\&#34;\u003e\u003c/ods-select\u003e\n                \u003ch4\u003eInput:\u003c/h4\u003e\n                \u003cpre ng-bind=\&#34;regions|json\&#34;\u003e\u003c/pre\u003e\n                \u003ch4\u003eSelection:\u003c/h4\u003e\n                \u003cpre ng-bind=\&#34;selection|json\&#34;\u003e\u003c/pre\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;col-md-3 col-sm-6 mb\&#34; ng-if=\&#34;true\&#34; ng-init=\&#34;selection\&#34;\u003e\n                \u003ch3\u003e\n                    Expression in the label-modifier\n                \u003c/h3\u003e\n                \u003cods-select options=\&#34;regions.results\&#34;\n                            selected-values=\&#34;selection\&#34;\n                            label-modifier=\&#34;x &#43; &#39; - &#39; &#43; (count | number) &#43; &#39; events&#39;\&#34;\n                            value-modifier=\&#34;x\&#34;\n                            placeholder=\&#34;Pick a region\&#34;\u003e\u003c/ods-select\u003e\n                \u003ch4\u003eInput:\u003c/h4\u003e\n                \u003cpre ng-bind=\&#34;regions|json\&#34;\u003e\u003c/pre\u003e\n                \u003ch4\u003eSelection:\u003c/h4\u003e\n                \u003cpre ng-bind=\&#34;selection|json\&#34;\u003e\u003c/pre\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;col-md-3 col-sm-6 mb\&#34; ng-if=\&#34;true\&#34;\u003e\n                \u003ch3\u003e\n                    Use the selection to refine the dataset through selected-values parameter\n                \u003c/h3\u003e\n                \u003cods-select options=\&#34;regions.results\&#34;\n                            selected-values=\&#34;evenementspublicsopenagenda.parameters[&#39;refine.region&#39;]\&#34;\n                            label-modifier=\&#34;x &#43; &#39; - &#39; &#43; (count | number) &#43; &#39; events&#39;\&#34;\n                            value-modifier=\&#34;x\&#34;\n                            placeholder=\&#34;Pick a region\&#34;\u003e\u003c/ods-select\u003e\n                \u003cods-table context=\&#34;evenementspublicsopenagenda\&#34; displayed-fields=\&#34;department\&#34;\u003e\u003c/ods-table\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;col-md-3 col-sm-6 mb\&#34; ng-if=\&#34;true\&#34; ng-init=\&#34;selection\&#34;\u003e\n                \u003ch3\u003e\n                    More advanced: refine the dataset with an AngularJs expression\n                \u003c/h3\u003e\n                \u003cods-select options=\&#34;regions.results\&#34;\n                            selected-values=\&#34;selection\&#34;\n                            label-modifier=\&#34;x &#43; &#39; - &#39; &#43; (count | number) &#43; &#39; events&#39;\&#34;\n                            value-modifier=\&#34;x\&#34;\n                            placeholder=\&#34;Pick a region\&#34;\u003e\u003c/ods-select\u003e\n                {{ secondarycontext.parameters[&#39;refine.region&#39;] = selection; &#39;&#39; }}\n                \u003cods-table context=\&#34;secondarycontext\&#34; displayed-fields=\&#34;department\&#34;\u003e\u003c/ods-table\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
+               "css": &#34;/** DO NOT COPY **/\n/* the CSS is only for a better reading of the demo */\n.mb {\n    margin-bottom: 30px;\n}\nh3 {\n    height: 60px;\n}\n.odswidget-select {\n    margin-bottom: 25px;\n}&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-ods-select-3"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;defaultDomain&#34;: &#34;https://userclub.opendatasoft.com/&#34;,
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                }
+            ],
+            &#34;themes&#34;: {
+                &#39;default&#39;: {
+                    &#39;url&#39;: &#39;/img/ods.svg&#39;
+                },
+                &#39;Santé&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Culture, Patrimoine&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Environment&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Transports, Déplacements&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Justice, Sécurité, Police, Crime&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Sport, Loisirs&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Hébergement, Restauration&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Services, Social&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Checklist&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Usages&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                }
+            },
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+        </head>
+        <body>
+        <div ng-app='ods-widgets'>
+            &lt;div&gt;
+    &lt;ods-dataset-context context=&#34;evenementspublicsopenagenda,secondarycontext&#34;
+                         evenementspublicsopenagenda-dataset=&#34;evenements-publics-openagenda&#34;
+                         evenementspublicsopenagenda-parameters=&#34;{&#39;disjunctive.region&#39;:true}&#34;
+                         evenementspublicsopenagenda-domain=&#34;userclub&#34;
+                         secondarycontext-dataset=&#34;evenements-publics-openagenda&#34;
+                         secondarycontext-parameters=&#34;{&#39;disjunctive.region&#39;:true}&#34;
+                         secondarycontext-domain=&#34;userclub&#34;&gt;
+        &lt;div class=&#34;row&#34;
+             ods-analysis=&#34;regions&#34;
+             ods-analysis-context=&#34;evenementspublicsopenagenda&#34;
+             ods-analysis-x=&#34;region&#34;
+             ods-analysis-serie-count=&#34;COUNT()&#34;
+             ods-analysis-sort=&#34;count&#34;
+             ods-analysis-max=&#34;200&#34;&gt;
+            &lt;div class=&#34;col-md-3 col-sm-6 mb&#34; ng-if=&#34;true&#34; ng-init=&#34;selection&#34;&gt;
+                &lt;h3&gt;
+                    Simplest mode, with label and value modifier on the X axis
+                &lt;/h3&gt;
+                &lt;ods-select options=&#34;regions.results&#34;
+                            selected-values=&#34;selection&#34;
+                            label-modifier=&#34;x&#34;
+                            value-modifier=&#34;x&#34;
+                            placeholder=&#34;Pick a region&#34;&gt;&lt;/ods-select&gt;
+                &lt;h4&gt;Input:&lt;/h4&gt;
+                &lt;pre ng-bind=&#34;regions|json&#34;&gt;&lt;/pre&gt;
+                &lt;h4&gt;Selection:&lt;/h4&gt;
+                &lt;pre ng-bind=&#34;selection|json&#34;&gt;&lt;/pre&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-3 col-sm-6 mb&#34; ng-if=&#34;true&#34; ng-init=&#34;selection&#34;&gt;
+                &lt;h3&gt;
+                    Expression in the label-modifier
+                &lt;/h3&gt;
+                &lt;ods-select options=&#34;regions.results&#34;
+                            selected-values=&#34;selection&#34;
+                            label-modifier=&#34;x &#43; &#39; - &#39; &#43; (count | number) &#43; &#39; events&#39;&#34;
+                            value-modifier=&#34;x&#34;
+                            placeholder=&#34;Pick a region&#34;&gt;&lt;/ods-select&gt;
+                &lt;h4&gt;Input:&lt;/h4&gt;
+                &lt;pre ng-bind=&#34;regions|json&#34;&gt;&lt;/pre&gt;
+                &lt;h4&gt;Selection:&lt;/h4&gt;
+                &lt;pre ng-bind=&#34;selection|json&#34;&gt;&lt;/pre&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-3 col-sm-6 mb&#34; ng-if=&#34;true&#34;&gt;
+                &lt;h3&gt;
+                    Use the selection to refine the dataset through selected-values parameter
+                &lt;/h3&gt;
+                &lt;ods-select options=&#34;regions.results&#34;
+                            selected-values=&#34;evenementspublicsopenagenda.parameters[&#39;refine.region&#39;]&#34;
+                            label-modifier=&#34;x &#43; &#39; - &#39; &#43; (count | number) &#43; &#39; events&#39;&#34;
+                            value-modifier=&#34;x&#34;
+                            placeholder=&#34;Pick a region&#34;&gt;&lt;/ods-select&gt;
+                &lt;ods-table context=&#34;evenementspublicsopenagenda&#34; displayed-fields=&#34;department&#34;&gt;&lt;/ods-table&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-3 col-sm-6 mb&#34; ng-if=&#34;true&#34; ng-init=&#34;selection&#34;&gt;
+                &lt;h3&gt;
+                    More advanced: refine the dataset with an AngularJs expression
+                &lt;/h3&gt;
+                &lt;ods-select options=&#34;regions.results&#34;
+                            selected-values=&#34;selection&#34;
+                            label-modifier=&#34;x &#43; &#39; - &#39; &#43; (count | number) &#43; &#39; events&#39;&#34;
+                            value-modifier=&#34;x&#34;
+                            placeholder=&#34;Pick a region&#34;&gt;&lt;/ods-select&gt;
+                {{ secondarycontext.parameters[&#39;refine.region&#39;] = selection; &#39;&#39; }}
+                &lt;ods-table context=&#34;secondarycontext&#34; displayed-fields=&#34;department&#34;&gt;&lt;/ods-table&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/ods-dataset-context&gt;
+&lt;/div&gt;
+        </div>
+        <style type='text/css'>
+            /** DO NOT COPY **/
+/* the CSS is only for a better reading of the demo */
+.mb {
+    margin-bottom: 30px;
+}
+h3 {
+    height: 60px;
+}
+.odswidget-select {
+    margin-bottom: 25px;
+}
+        </style>
+        </body>
+        ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level is-flex">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-secondary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-ods-select-3-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        
+                        <li class="button is-secondary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-ods-select-3-css-content">
+                                CSS
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right mt-0">
+                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
+                   data-tooltip="Edit on CodePen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-ods-select-3').submit()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-edit">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-ods-select-3-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;div&gt;
+    &lt;ods-dataset-context context=&#34;evenementspublicsopenagenda,secondarycontext&#34;
+                         evenementspublicsopenagenda-dataset=&#34;evenements-publics-openagenda&#34;
+                         evenementspublicsopenagenda-parameters=&#34;{&#39;disjunctive.region&#39;:true}&#34;
+                         evenementspublicsopenagenda-domain=&#34;userclub&#34;
+                         secondarycontext-dataset=&#34;evenements-publics-openagenda&#34;
+                         secondarycontext-parameters=&#34;{&#39;disjunctive.region&#39;:true}&#34;
+                         secondarycontext-domain=&#34;userclub&#34;&gt;
+        &lt;div class=&#34;row&#34;
+             ods-analysis=&#34;regions&#34;
+             ods-analysis-context=&#34;evenementspublicsopenagenda&#34;
+             ods-analysis-x=&#34;region&#34;
+             ods-analysis-serie-count=&#34;COUNT()&#34;
+             ods-analysis-sort=&#34;count&#34;
+             ods-analysis-max=&#34;200&#34;&gt;
+            &lt;div class=&#34;col-md-3 col-sm-6 mb&#34; ng-if=&#34;true&#34; ng-init=&#34;selection&#34;&gt;
+                &lt;h3&gt;
+                    Simplest mode, with label and value modifier on the X axis
+                &lt;/h3&gt;
+                &lt;ods-select options=&#34;regions.results&#34;
+                            selected-values=&#34;selection&#34;
+                            label-modifier=&#34;x&#34;
+                            value-modifier=&#34;x&#34;
+                            placeholder=&#34;Pick a region&#34;&gt;&lt;/ods-select&gt;
+                &lt;h4&gt;Input:&lt;/h4&gt;
+                &lt;pre ng-bind=&#34;regions|json&#34;&gt;&lt;/pre&gt;
+                &lt;h4&gt;Selection:&lt;/h4&gt;
+                &lt;pre ng-bind=&#34;selection|json&#34;&gt;&lt;/pre&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-3 col-sm-6 mb&#34; ng-if=&#34;true&#34; ng-init=&#34;selection&#34;&gt;
+                &lt;h3&gt;
+                    Expression in the label-modifier
+                &lt;/h3&gt;
+                &lt;ods-select options=&#34;regions.results&#34;
+                            selected-values=&#34;selection&#34;
+                            label-modifier=&#34;x &#43; &#39; - &#39; &#43; (count | number) &#43; &#39; events&#39;&#34;
+                            value-modifier=&#34;x&#34;
+                            placeholder=&#34;Pick a region&#34;&gt;&lt;/ods-select&gt;
+                &lt;h4&gt;Input:&lt;/h4&gt;
+                &lt;pre ng-bind=&#34;regions|json&#34;&gt;&lt;/pre&gt;
+                &lt;h4&gt;Selection:&lt;/h4&gt;
+                &lt;pre ng-bind=&#34;selection|json&#34;&gt;&lt;/pre&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-3 col-sm-6 mb&#34; ng-if=&#34;true&#34;&gt;
+                &lt;h3&gt;
+                    Use the selection to refine the dataset through selected-values parameter
+                &lt;/h3&gt;
+                &lt;ods-select options=&#34;regions.results&#34;
+                            selected-values=&#34;evenementspublicsopenagenda.parameters[&#39;refine.region&#39;]&#34;
+                            label-modifier=&#34;x &#43; &#39; - &#39; &#43; (count | number) &#43; &#39; events&#39;&#34;
+                            value-modifier=&#34;x&#34;
+                            placeholder=&#34;Pick a region&#34;&gt;&lt;/ods-select&gt;
+                &lt;ods-table context=&#34;evenementspublicsopenagenda&#34; displayed-fields=&#34;department&#34;&gt;&lt;/ods-table&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-3 col-sm-6 mb&#34; ng-if=&#34;true&#34; ng-init=&#34;selection&#34;&gt;
+                &lt;h3&gt;
+                    More advanced: refine the dataset with an AngularJs expression
+                &lt;/h3&gt;
+                &lt;ods-select options=&#34;regions.results&#34;
+                            selected-values=&#34;selection&#34;
+                            label-modifier=&#34;x &#43; &#39; - &#39; &#43; (count | number) &#43; &#39; events&#39;&#34;
+                            value-modifier=&#34;x&#34;
+                            placeholder=&#34;Pick a region&#34;&gt;&lt;/ods-select&gt;
+                {{ secondarycontext.parameters[&#39;refine.region&#39;] = selection; &#39;&#39; }}
+                &lt;ods-table context=&#34;secondarycontext&#34; displayed-fields=&#34;department&#34;&gt;&lt;/ods-table&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+    &lt;/ods-dataset-context&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+            
+            <div class="js-tabcontent"
+                 id="code-ods-select-3-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>/** DO NOT COPY **/
+/* the CSS is only for a better reading of the demo */
+.mb {
+    margin-bottom: 30px;
+}
+h3 {
+    height: 60px;
+}
+.odswidget-select {
+    margin-bottom: 25px;
+}</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-ods-select-3";
+            iframe = document.getElementById(iframeId);
+             
+            size =  null 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "IFRAME ID HERE";
+            iframe = document.getElementById(iframeId);
+
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+            }
+        }, 1000);
+    });
+</script>
+        </div>
+    </div>
+    
+</section>
+
+
+    </div>
+</div>
+
+<footer class="footer">
+    <a href="https://www.opendatasoft.com"
+       class="footer-link"
+       title="Opendatasoft website">
+        <img src="/img/ods-logo.svg"
+             class="footer-logo"
+             alt="Opendatasoft logo"
+        />
+    </a>
+    <span class="footer-copyright">
+        &copy; Copyright 2020
+    </span>
+</footer>
+
+
+
+
+
+
+
+<script>var process = { "env": { "NODE_ENV": "production" } }</script>
+<script type="text/javascript"
+        src="/index.min.4c4e90b33e22814ed2f29ed851542d05481299bde3cb5e86e25342883c06ea26.js"
+        defer></script>
+
+</body>
+</html>
