@@ -12,10 +12,15 @@
     height: 25px;
     position: relative;
     cursor: pointer;
-    user-select: none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
     background: #FFFFFF;
     border-radius: 100px;
     border: 2px solid #e6e6e6;
+    -webkit-transition: all .4s ease;
+    -o-transition: all .4s ease;
     transition: all .4s ease;
 }
 
@@ -27,10 +32,17 @@
     height: 21px;
     border-radius: 50%;
     background-color: #FFFFFF;
+    -webkit-transition: tranform .4s cubic-bezier(0.175, 0.885, 0.320, 1.275), 
+                padding .3s ease, margin .3s ease;
+    -o-transition: tranform .4s cubic-bezier(0.175, 0.885, 0.320, 1.275), 
+                padding .3s ease, margin .3s ease;
     transition: tranform .4s cubic-bezier(0.175, 0.885, 0.320, 1.275), 
                 padding .3s ease, margin .3s ease;
-    transform: translateX(0);
-    box-shadow: 0 1px 3px rgba(0,0,0,.4);
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.4);
+            box-shadow: 0 1px 3px rgba(0,0,0,.4);
 }
 
 .switch-button:hover::after {
@@ -49,7 +61,9 @@
 }
 
 .switch-input:checked + .switch-button::after {
-    transform: translateX(18px);
+    -webkit-transform: translateX(18px);
+        -ms-transform: translateX(18px);
+            transform: translateX(18px);
 }
 
 .switch-input:checked + .switch-button:active::after {
@@ -61,7 +75,8 @@
 .switch-input[type="checkbox"]:disabled + .switch-button {
     opacity: .6;
     cursor: not-allowed;
-    box-shadow: 0 0 0 transparent;
+    -webkit-box-shadow: 0 0 0 transparent;
+            box-shadow: 0 0 0 transparent;
 }
 
 .switch-input[type="checkbox"]:checked:disabled + .switch-button {
