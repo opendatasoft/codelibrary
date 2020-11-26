@@ -1,13 +1,21 @@
 /* Switch toggle
    ========================================================================== */
 
+.switch {
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
 .switch-button {
+    /* background color when "off" */
+    background: #FFFFFF;
+
+    /* size of switch */
     width: 43px;
     height: 25px;
-    display: block;
-    background: #FFFFFF;
     border: 2px solid #E6E6E6;
     border-radius: 100px;
+    display: block;
 
     cursor: pointer;
     -webkit-user-select: none;
@@ -22,13 +30,14 @@
 
 /* Style of the "bubble" that toggles */
 .switch-button::after {
-    position: relative;
-    display: block;
-    content: "";
+    /* size of bubble */
     width: 21px;
     height: 21px;
     border-radius: 50%;
     background-color: #FFFFFF;
+    position: relative;
+    display: block;
+    content: "";
     -webkit-transition: tranform .4s cubic-bezier(0.175, 0.885, 0.320, 1.275), 
                 padding .3s ease, margin .3s ease;
     -o-transition: tranform .4s cubic-bezier(0.175, 0.885, 0.320, 1.275), 
@@ -55,7 +64,7 @@
 }
 
 /* "On" state
-   ==================== */
+   ========================== */
 
 .switch-input:checked + .switch-button {
     /* border and background color when the button is "on" */
@@ -64,6 +73,7 @@
 }
 
 .switch-input:checked + .switch-button::after {
+    /* bubble position when "on" */
     -webkit-transform: translateX(18px);
         -ms-transform: translateX(18px);
             transform: translateX(18px);
@@ -74,7 +84,7 @@
 }
 
 /* Checkbox in disabled state
-   ==================== */
+   ========================== */
 
 .switch-input[type="checkbox"]:disabled + .switch-button {
     opacity: .6;
