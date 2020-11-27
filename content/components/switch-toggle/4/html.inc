@@ -20,9 +20,10 @@
                             ng-checked="view == 'map'"
                             class="switch-input"
                             type="checkbox">
-                    <span class="switch-button"
-                            data-toggle-on="MAP"
-                            data-toggle-off="TABLE"></span>
+                    <div class="switch-button">
+                        <span class="switch-button-left">TABLE</span> 
+                        <span class="switch-button-right">MAP</span>
+                    </div>
                 </label>
             </div>
         </div>
