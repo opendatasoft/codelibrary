@@ -1,70 +1,56 @@
-<div>
-    <ods-dataset-context context="evenementspublicsopenagenda,secondarycontext"
-                         evenementspublicsopenagenda-dataset="evenements-publics-openagenda"
-                         evenementspublicsopenagenda-parameters="{'disjunctive.region':true}"
-                         evenementspublicsopenagenda-domain="userclub"
-                         secondarycontext-dataset="evenements-publics-openagenda"
-                         secondarycontext-parameters="{'disjunctive.region':true}"
-                         secondarycontext-domain="userclub">
-        <div class="row"
-             ods-analysis="regions"
-             ods-analysis-context="evenementspublicsopenagenda"
-             ods-analysis-x="region"
-             ods-analysis-serie-count="COUNT()"
-             ods-analysis-sort="count"
-             ods-analysis-max="200">
-            <div class="col-md-3 col-sm-6 mb" ng-if="true" ng-init="selection">
-                <h3>
-                    Simplest mode, with label and value modifier on the X axis
-                </h3>
-                <ods-select options="regions.results"
-                            selected-values="selection"
-                            label-modifier="x"
-                            value-modifier="x"
-                            placeholder="Pick a region"></ods-select>
-                <h4>Input:</h4>
-                <pre ng-bind="regions|json"></pre>
-                <h4>Selection:</h4>
-                <pre ng-bind="selection|json"></pre>
-            </div>
-            <div class="col-md-3 col-sm-6 mb" ng-if="true" ng-init="selection">
-                <h3>
-                    Expression in the label-modifier
-                </h3>
-                <ods-select options="regions.results"
-                            selected-values="selection"
-                            label-modifier="x + ' - ' + (count | number) + ' events'"
-                            value-modifier="x"
-                            placeholder="Pick a region"></ods-select>
-                <h4>Input:</h4>
-                <pre ng-bind="regions|json"></pre>
-                <h4>Selection:</h4>
-                <pre ng-bind="selection|json"></pre>
-            </div>
-            <div class="col-md-3 col-sm-6 mb" ng-if="true">
-                <h3>
-                    Use the selection to refine the dataset through selected-values parameter
-                </h3>
-                <ods-select options="regions.results"
-                            selected-values="evenementspublicsopenagenda.parameters['refine.region']"
-                            label-modifier="x + ' - ' + (count | number) + ' events'"
-                            value-modifier="x"
-                            placeholder="Pick a region"></ods-select>
-                <ods-table context="evenementspublicsopenagenda" displayed-fields="department"></ods-table>
-            </div>
-            <div class="col-md-3 col-sm-6 mb" ng-if="true" ng-init="selection">
-                <h3>
-                    More advanced: refine the dataset with an AngularJs expression
-                </h3>
-                <ods-select options="regions.results"
-                            selected-values="selection"
-                            label-modifier="x + ' - ' + (count | number) + ' events'"
-                            value-modifier="x"
-                            placeholder="Pick a region"></ods-select>
-                {{ secondarycontext.parameters['refine.region'] = selection; '' }}
-                <ods-table context="secondarycontext" displayed-fields="department"></ods-table>
-            </div>
-        </div>
+<div class="container">
+    <ods-dataset-context context="ctxanalysis,ctxrefine"
+                         ctxanalysis-dataset="shanghai-world-university-ranking"
+                         ctxanalysis-parameters="{'sort':'world_rank'}"
+                         ctxrefine-dataset="shanghai-world-university-ranking"
+                         ctxrefine-parameters="{'sort':'world_rank'}">
+        <div ods-analysis="rankings"
+             ods-analysis-context="ctxanalysis"
+             ods-analysis-x="university_name"
+             ods-analysis-serie-maxscore="MAX(world_rank_int)"
+             ods-analysis-sort="-maxscore"
+             ods-analysis-max="100">
+            <h3>
+                Select an university in this TOP 100 list (sorted by it's best ranking overall)
+            </h3>
+            <ods-select options="rankings.results"
+                        selected-values="ctxrefine.parameters['refine.university_name']"
+                        label-modifier="x + ', Best ranking: ' + maxscore"
+                        value-modifier="x"
+                        placeholder="Select an university"></ods-select>
 
+            <div ng-if="!ctxrefine.parameters['refine.university_name'][0]">
+                <h4>Select an university to see it's ranking details over years</h4>
+            </div>
+
+            <div ng-if="ctxrefine.parameters['refine.university_name'][0]">
+                <h4>{{ shanghaiworlduniversityranking.parameters['refine.university_name'][0] }} rankings details, over years</h4>
+                <ods-chart single-y-axis="true" align-month="true">
+                    <ods-chart-query context="ctxrefine" field-x="year" maxpoints="100"
+                                     timescale="year">
+                        <ods-chart-serie expression-y="pcp" chart-type="column" label-y="PCP score" function-y="AVG" color="#263891"
+                                         scientific-display="true">
+                        </ods-chart-serie>
+                        <ods-chart-serie expression-y="alumni" label-y="Alumni score" chart-type="column" function-y="AVG" color="#19630A"
+                                         scientific-display="true">
+                        </ods-chart-serie>
+                        <ods-chart-serie expression-y="award" label-y="Award score" chart-type="column" function-y="AVG" color="#F7B133"
+                                         scientific-display="true">
+                        </ods-chart-serie>
+                        <ods-chart-serie expression-y="pub" label-y="Pub score" chart-type="column" function-y="AVG" color="#BA0129"
+                                         scientific-display="true">
+                        </ods-chart-serie>
+                        <ods-chart-serie expression-y="ns" label-y="NS score" chart-type="column" function-y="AVG" color="#C0C5CC"
+                                         scientific-display="true">
+                        </ods-chart-serie>
+                        <ods-chart-serie expression-y="hici" label-y="HICI score" chart-type="column" function-y="AVG" color="#000000"
+                                         scientific-display="true">
+                        </ods-chart-serie>
+                    </ods-chart-query>
+                </ods-chart>
+
+            </div>
+
+        </div>
     </ods-dataset-context>
 </div>
