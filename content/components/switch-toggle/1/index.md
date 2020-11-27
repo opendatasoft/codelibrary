@@ -1,5 +1,6 @@
 ---
 title: "Switch toggle 1"
+height: 60
 ---
 
 
