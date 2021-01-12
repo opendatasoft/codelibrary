@@ -1,12 +1,12 @@
 /* Dropdown menu with pill styling
    ========================================================================== */
-.dropdown {
+.cl-dropdown {
     display: inline-block;
     margin: 13px 0 26px 0;
     position: relative;
 }
 /* Button */
-.dropdown-button {
+.cl-dropdown-button {
     font-size: 1rem;
     color: var(--text);
     border: 1px solid #cbd2db;
@@ -16,22 +16,22 @@
     margin-right: 6px;
     transition: all .2s;
 }
-.dropdown-button:hover,
-.dropdown-button:focus {
+.cl-dropdown-button:hover,
+.cl-dropdown-button:focus {
     color: var(--links);
     border-color: var(--links);
 }
-.dropdown-button-open {
+.cl-dropdown-button-open {
     border-color: var(--links);
     box-shadow: 0 0 0 3px rgba(20, 46, 123, .2);
 }
-.dropdown-button-active {
+.cl-dropdown-button-active {
     color: var(--links);
     border-color: var(--links);
     background-color: rgba(20, 46, 123, 0.1);
 }
 /* Dropdown styling */
-.dropdown-menu {
+.cl-dropdown-menu {
     background-color: #FFFFFF;
     border: 1px solid #dee5ef;
     border-radius: 4px;
@@ -46,16 +46,16 @@
     white-space: nowrap;
     transition: visibility 0s, opacity 0.1s ease, top 0.1s ease;
 }
-.dropdown-visible {
+.cl-dropdown-visible {
     opacity: 1;
     visibility: visible;
     top: 38px;
 }
 /* Dropdown items */
-.dropdown-menu {
+.cl-dropdown-menu {
     padding: 26px 0;
 }
-.dropdown-title {
+.cl-dropdown-title {
     font-size: 1.3rem;
     color: var(--text);
     font-weight: normal;
@@ -63,7 +63,7 @@
     margin-bottom: 0;
     padding: 0 26px;
 }
-.dropdown-items {
+.cl-dropdown-items {
     list-style: none;
     padding: 0 26px;
     margin: 0;
@@ -72,18 +72,18 @@
     max-height: 180px;
     overflow-y: auto;
 }
-.dropdown-item {
+.cl-dropdown-item {
     font-size: 1rem;
     display: block;
     margin-top: 13px;
 }
-.dropdown-item:hover {
+.cl-dropdown-item:hover {
     text-decoration: none;
 }
-.dropdown-input {
+.cl-dropdown-input {
     margin-right: 4px;
 }
-.dropdown-label {
+.cl-dropdown-label {
     display: block;
     margin-bottom: 0;
     cursor: pointer;
@@ -93,7 +93,7 @@
     padding-left: 2px;
 }
 /* Backdrop */
-.dropdown-backdrop {
+.cl-dropdown-backdrop {
     position: fixed;
     top: 0;
     bottom: 0;

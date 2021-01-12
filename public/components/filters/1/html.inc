@@ -10,20 +10,20 @@
                  ng-click="modalswitchstatus = !modalswitchstatus"
                  ng-class="{'backdrop-active':modalswitchstatus}">
             </div>
-            <div class="modal"
-                 ng-class="{'modal-active':modalswitchstatus}">
-                <div class="modal__rightside">
-                    <div class="modal__header"
+            <div class="cl-modal"
+                 ng-class="{'cl-modal-active':modalswitchstatus}">
+                <div class="cl-modal__rightside">
+                    <div class="cl-modal__header"
                          ng-click="modalswitchstatus = !modalswitchstatus">
                         <a href="#"
                            class="closebtn">
                             Close <i class="fa fa-times-circle" aria-hidden="true"></i>
                         </a>
                     </div>
-                    <div class="modal__content">
+                    <div class="cl-modal__content">
                         <ods-facets context="ctx"></ods-facets>
                     </div>
-                    <div class="modal__footer">
+                    <div class="cl-modal__footer">
                         <div class="">
                             Footer
                         </div>

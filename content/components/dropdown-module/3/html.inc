@@ -14,41 +14,41 @@
                     Select a country to view universities
                 </h3>
                 <!-- Dropdown starts here -->
-                <div class="dropdown"
+                <div class="cl-dropdown"
                      ng-init="dropdown.open = ''">
                     <button ng-click="dropdown.open = (dropdown.open == 'country' ? '' : 'country');"
-                            ng-class="{'dropdown-button-active': universities.parameters['refine.country'],
-                                      'dropdown-button-open': dropdown.open == 'country'}"
+                            ng-class="{'cl-dropdown-button-active': universities.parameters['refine.country'],
+                                      'cl-dropdown-button-open': dropdown.open == 'country'}"
                             id="dropdown-button"
-                            class="dropdown-button"
+                            class="cl-dropdown-button"
                             aria-haspopup="true"
                             aria-expanded="{{ dropdown.open == 'country' }}">
                         {{ (!universities.parameters['refine.country'] ? 'Country' : universities.parameters['refine.country'] | capitalize) }}
                     </button>
-                    <div class="dropdown-menu"
-                         ng-class="{'dropdown-visible' : dropdown.open == 'country' }"
+                    <div class="cl-dropdown-menu"
+                         ng-class="{'cl-dropdown-visible' : dropdown.open == 'country' }"
                          aria-labelledby="dropdown-button">
-                        <div class="dropdown-title">
+                        <div class="cl-dropdown-title">
                             Country
                         </div>
-                        <ul class="dropdown-items">
-                            <li class="dropdown-item">
-                                <label class="dropdown-label">
+                        <ul class="cl-dropdown-items">
+                            <li class="cl-dropdown-item">
+                                <label class="cl-dropdown-label">
                                     <input ng-model="universities.parameters['refine.country']"
                                            ng-value="All"
                                            name="country"
                                            type="radio"
-                                           class="dropdown-input" />
+                                           class="cl-dropdown-input" />
                                     All countries
                                 </label>
                             </li>
                             <li ng-repeat="country in countries"
-                                class="dropdown-item">
-                                <label class="dropdown-label">
+                                class="cl-dropdown-item">
+                                <label class="cl-dropdown-label">
                                     <input ng-model="universities.parameters['refine.country']"
                                            ng-value="country.path"
                                            name="country"
-                                           class="dropdown-input"
+                                           class="cl-dropdown-input"
                                            type="radio" />
                                     {{ country.path | capitalize }}
                                 </label>
@@ -56,7 +56,7 @@
                         </ul>
                         {{universities.parameters['refine.country'] = (universities.parameters['refine.country'] == 'All' ? undefined : universities.parameters['refine.country']); ''}}
                     </div>
-                    <div class="dropdown-backdrop"
+                    <div class="cl-dropdown-backdrop"
                          ng-click="dropdown.open = ''"
                          ng-show="dropdown.open != ''"></div>
                 </div>

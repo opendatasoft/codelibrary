@@ -1,31 +1,46 @@
+<!-- V1.1 :
+    - Add ods-select and multiple choice option for filters
+    - Add clear all filter button when one filter is applied
+    - responsive display for filters and date button
+    - KPI default value to 0 when no data/results to display
+  -->
+
 <div class="container"
      ng-init="domain = 'mesr.opendatasoft.com';
-              datasetid = 'fr-esr-principaux-etablissements-enseignement-superieur';
+                datasetid = 'fr-esr-principaux-etablissements-enseignement-superieur';
 
-              filters = ['type_d_etablissement', 'secteur_d_etablissement', 'dep_nom'];
+                filters = [
+                {'id':'type_d_etablissement','multiple':true},
+                {'id':'secteur_d_etablissement','multiple':false},
+                {'id':'dep_nom','multiple':true}
+                ];
+                resetFiltersButton = true;
+                resetFiltersButtonLabel = 'Supprimer tous les filtres';
 
-              fieldsList = ['adresse_uai', 'dep_nom', 'numero_telephone_uai'];
-              fieldLink = 'url';
-              fieldLinkLabel = 'Visiter le site web';
+                fieldsList = ['adresse_uai', 'dep_nom', 'numero_telephone_uai'];
+                fieldLink = 'url';
+                fieldLinkLabel = 'Visiter le site web';
 
-              resultTitle = 'uo_lib';
-              itemsPerRow = '2';
+                resultTitle = 'uo_lib';
+                itemsPerRow = '2';
 
-              kpis = [
-              {
-              'title': 'Nombre d\'établissements',
-              'function': 'COUNT',
-              'faicon': 'graduation-cap'
-              }
-              ];
+                kpis = [
+                {
+                'title': 'Nombre d\'établissements',
+                'function': 'COUNT',
+                'faicon': 'graduation-cap'
+                }
+                ];
 
-              headerBackgroundImage = 'https://images.unsplash.com/photo-1541890289-b86df5bafd81?ixlib=rb-1.2.1&auto=format&fit=crop&w=2828&q=80';
-              subtitle = 'Établissements près de chez vous';
+                headerBackgroundImage = 'https://images.unsplash.com/photo-1541890289-b86df5bafd81?ixlib=rb-1.2.1&auto=format&fit=crop&w=2828&q=80';
+                subtitle = 'Établissements près de chez vous';
 
-              DO_NOT_MODIFY_BELOW;
+                DO_NOT_MODIFY_BELOW;
 
-              ctxfields = {}
-              ">
+                ctxfields = {};
+                values = {};
+                activeFilters = {};
+                ">
 
   <!-- ### GENERAL SETTINGS ### -->
   <!-- domain : (Domain URL) : Must contain the ID of the domain where the dataset is published.
@@ -35,14 +50,22 @@ ex: 'discovery.opendatasoft.com'
 ex: 'oeuvres-de-johannes-vermeer'
 -->
   <!-- headerBackgroundImage : Use an URL to show a background image in the header.
-  -->
+-->
 
   <!-- ### FILTERS SETTINGS ### -->
-  <!-- filters (Filters) : List of field IDs to generate the filters pannel.
-NB: the field must be a facet in the dataset
-NB: alphanumerical sort is applied in the filter view
-ex: ['technique','collection','genre']
--->
+  <!-- filters (Filters) : List of object that contains the IDs to generate the filters pannel.
+  and multiple true or false to allow the user to select multiple values in the filter.
+  NB: the field must be a facet in the dataset
+  NB: alphanumerical sort is applied in the filter view
+   ex: [
+            {'id':'filterid','multiple':true},
+            {'id':'filterid2','multiple':false}
+       ]
+  -->
+  <!-- resetFiltersButton (boolean) : add a reset filters button after filters block -->
+  <!-- resetFiltersButtonLabel (Label of the button) : test to display when a filter is selected
+      ex: 'Clear all filters'
+  -->
 
 
   <!-- ### LIST VIEW SETTINGS ### -->
@@ -61,16 +84,16 @@ ex: 'Read more here'
   <!-- Specific to the 'cards' view mode, set a title and a background image if any -->
   <!-- resultTitle (Title of the result) : Field id of the reulst title
 ex: 'title'
- -->
+-->
   <!-- fieldPhoto (Field id of the image field if any)
 ex: 'image'
- -->
+-->
   <!-- imagePosition (Image position) : Image position in the card, can be 'top' or 'left'
 ex: 'left'
- -->
+-->
   <!-- itemsPerRow (Number of columns) : Modify the columns layout. The division by 12 must be a whole number, ie it can be 1, 2, 3, 4, 6 or 12. But 6 and 12 will generaly be two norrow
 ex: '3'
- -->
+-->
 
   <!-- ### KPIS SETTINGS ### -->
   <!-- KPIS settings is a list of object that describes each KPI
@@ -95,16 +118,16 @@ https://fontawesome.com/v4.7.0/icons/
 ex:
 kpis = [
 {
- 'title': 'Taille moyenne',
- 'function': 'AVG',
- 'expression': 'surface',
- 'precision': 2,
- 'unit': 'm2',
- 'faicon': 'square-o'
+'title': 'Taille moyenne',
+'function': 'AVG',
+'expression': 'surface',
+'precision': 2,
+'unit': 'm2',
+'faicon': 'square-o'
 },
 {
- 'title': 'Nombre d\'oeuvre référencées',
- 'function': 'COUNT'
+'title': 'Nombre d\'oeuvre référencées',
+'function': 'COUNT'
 }
 ];
 -->
@@ -141,8 +164,12 @@ ctx-apikey="XXX"
     <h2 class="page-subtitle" ng-bind-html="ctx.dataset.metas.description | shortSummary"></h2>
 
     <span ng-repeat="field in ctx.dataset.fields">
-      {{ ctxfields[field.name] = field.label; '' }}
-    </span>
+        {{ ctxfields[field.name] = field.label; '' }}
+      </span>
+
+    <span ng-repeat="filter in filters">
+        {{ ctx.parameters['refine.' + filter.id] = activeFilters[filter.id] ; '' }}
+      </span>
 
     <!-- KPIs -->
     <section class="kpis-container row row-equal-height">
@@ -156,7 +183,7 @@ ctx-apikey="XXX"
              ods-aggregation-expression="{{ kpi.expression }}">
           <i class="kpi-icon fa fa-{{ kpi.faicon || 'gitlab' }}" aria-hidden="true"></i>
           <h2 class="kpi-title">
-            {{ agg | number : (kpi.precision || 0) }}
+            {{ (agg || 0) | number : (kpi.precision || 0) }}
             <span ng-if="kpi.unit" class="kpi-unit">{{ kpi.unit }}</span>
           </h2>
           <p class="kpi-description">
@@ -198,58 +225,30 @@ ctx-apikey="XXX"
         <!-- FILTERS -->
         <div class="filter-list"
              ng-init="dropdown.open = '';
-                      select = {}">
+                        select = {}">
           <div ng-repeat="filter in filters">
-            {{ ctx.parameters['disjunctive.' + filter] = true; '' }}
+            {{ ctx.parameters['disjunctive.' + filter.id] = true; '' }}
             <div ods-facet-results="categories"
-                 ods-facet-results-facet-name="{{ filter }}"
+                 ods-facet-results-facet-name="{{ filter.id }}"
                  ods-facet-results-context="ctx"
                  ods-facet-results-sort="alphanum">
-              <div class="dropdown"
-                   ng-if="categories">
-                <button ng-click="dropdown.open = (dropdown.open == filter ? '' : filter);"
-                        ng-class="{'dropdown-button-active': select[filter],
-                                  'dropdown-button-open': dropdown.open == filter}"
-                        id="dropdown-button"
-                        class="dropdown-button"
-                        aria-haspopup="true"
-                        aria-expanded="{{ dropdown.open == filter }}">
-                  {{ (!select[filter] ? ctxfields[filter] : select[filter] | capitalize) }}
-                </button>
-                <div class="dropdown-menu"a
-                     ng-class="{'dropdown-visible' : dropdown.open == filter }"
-                     aria-labelledby="dropdown-button">
-                  <div class="dropdown-title">
-                    {{ ctxfields[filter] }}
-                  </div>
-                  <ul class="dropdown-items">
-                    <li class="dropdown-item">
-                      <label class="dropdown-label">
-                        <input ng-model="select[filter]"
-                               ng-value="Tous"
-                               type="radio"
-                               class="dropdown-input" />
-                        Tous
-                      </label>
-                    </li>
-                    <li ng-repeat="category in categories"
-                        class="dropdown-item">
-                      <label class="dropdown-label"
-                             title="{{ category.path | capitalize }}">
-                        <input ng-model="select[filter]"
-                               ng-value="category.path"
-                               class="dropdown-input"
-                               type="radio" />
-                        {{ category.path | capitalize }}
-                      </label>
-                    </li>
-                  </ul>
-                  {{ ctx.parameters['refine.' + filter] = (select[filter]=='Tous'?undefined:select[filter]); ''}}
-                </div>
-                <div class="dropdown-backdrop"
-                     ng-click="dropdown.open = ''"
-                     ng-show="dropdown.open != ''"></div>
-              </div>
+              <ods-select ng-if="ctxfields[filter.id]"
+                          selected-values="activeFilters[filter.id]"
+                          multiple="filter.multiple"
+                          options="categories"
+                          label-modifier="name"
+                          value-modifier="name"
+                          placeholder="{{ ctxfields[filter.id] }}"></ods-select>
+            </div>
+          </div>
+
+          <div class="clear-filters"
+               ng-show="(activeFilters | values).join('')">
+            <div class="clear-filters-button"
+                 role="button"
+                 ng-click="activeFilters = {}">
+              {{ resetFiltersButtonLabel }}
+              <i class="fa fa-times-circle" aria-hidden="true"></i>
             </div>
           </div>
         </div>
@@ -275,17 +274,17 @@ ctx-apikey="XXX"
                 </dl>
                 <div ng-if="fieldLink">
                   <!-- fieldLink is used here
-       For more advanced scenario, you can send the user to :
+     For more advanced scenario, you can send the user to :
 
-       - the dataset table filtered with the fieldLink value, through a text query
-       href="/explore/dataset/{{ datasetid }}/table?q={{ item.fields[fieldLink] }}"
+     - the dataset table filtered with the fieldLink value, through a text query
+     href="/explore/dataset/{{ datasetid }}/table?q={{ item.fields[fieldLink] }}"
 
-       - the dataset table filtered with the fieldLink value, through a refine on the field
-       href="/explore/dataset/{{ datasetid }}/table?refine.{{ fieldLink }}={{ item.fields[fieldLink] }}"
+     - the dataset table filtered with the fieldLink value, through a refine on the field
+     href="/explore/dataset/{{ datasetid }}/table?refine.{{ fieldLink }}={{ item.fields[fieldLink] }}"
 
-       - a page using url-sync=true setting :
-       href="/pages/yourpage/?refine.{{ fieldLink }}={{ item.fields[fieldLink] }}"
-       -->
+     - a page using url-sync=true setting :
+     href="/pages/yourpage/?refine.{{ fieldLink }}={{ item.fields[fieldLink] }}"
+     -->
                   <a href="{{ item.fields[fieldLink] }}"
                      target="_blank"
                      class="content-card-button"
@@ -324,4 +323,5 @@ ctx-apikey="XXX"
       <a href="{{ ctx.domainUrl }}/explore/dataset/{{ datasetid }}" target="_blank">Accéder aux données source</a>
     </section>
   </ods-dataset-context>
+</div>
 </div>

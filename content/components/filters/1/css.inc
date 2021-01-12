@@ -89,7 +89,7 @@ a.odswidget-clear-all-filters i {
 the leftside, that is the banner that is always visible, and contains an icon on top to click and actiavte the modal
 the right side, that contains filters, searchbar, charts etc... that is not visible, activated on demand
 the modal default size (width) is 57px, it correspond to the leftside width */
-.modal {
+.cl-modal {
     display: flex;
     position: absolute;
     top: 0;
@@ -101,30 +101,30 @@ the modal default size (width) is 57px, it correspond to the leftside width */
     overflow: hidden; /* Disable horizontal scroll */
     transition: ease-in 0.3s;
 }
-.modal-active {
+.cl-modal-active {
     width: 400px; /* size of the modal when active */
 }
 /* specific because charts are loaded inside */
-.modal__content {
+.cl-modal__content {
     width: 400px;
 }
 @media (max-width: 420px) {
-    .modal-active {
+    .cl-modal-active {
         width: 100%;
     }
-    .modal__content {
+    .cl-modal__content {
         width: 100%;
     }
 }
 
 /* SHOW/HIDE SIDE */
-.modal__rightside {
+.cl-modal__rightside {
     display: flex;
     flex-direction: column;
     border-left: solid 1px lightgrey;
 }
-.modal__header,
-.modal__footer {
+.cl-modal__header,
+.cl-modal__footer {
     min-height: 35px;
     background-color: white;
     padding: 0 10px;
@@ -134,21 +134,21 @@ the modal default size (width) is 57px, it correspond to the leftside width */
     opacity: 0;
     transition: opacity 0s;
 }
-.modal-active .modal__header, .modal-active .modal__footer {
+.cl-modal-active .cl-modal__header, .cl-modal-active .cl-modal__footer {
     opacity: 1;
     transition-delay: 0.3s;
 }
 /* CONTENT OF THE MODAL */
 /* HEADER / UPPER PART */
-.modal__header {
+.cl-modal__header {
     border-bottom: 1px solid lightgrey;
 }
 /* FOOTER / LOWER PART (optionnal) */
-.modal__footer {
+.cl-modal__footer {
     border-top: 1px solid lightgrey;
 }
 /* THEN THE MIDDLE / CONTENT */
-.modal__content {
+.cl-modal__content {
     height: 100%;
     overflow-y: auto;
     padding: 25px;
@@ -158,7 +158,7 @@ the modal default size (width) is 57px, it correspond to the leftside width */
 /* WARNING ! This part is very important : it renders the content only after the end of the openning of the modal
 ie. when the modal is resized, nothing is visible, after 0.3s of resizing, it's displays the content
 this trick is very important to avoid the browser the resize all the content during the modal opening */
-.modal-active .modal__content {
+.cl-modal-active .cl-modal__content {
     opacity: 1;
     transition-delay: 0.3s;
 }

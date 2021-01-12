@@ -1,43 +1,132 @@
+<!-- V2.1 :
+    - Add ods-select and multiple choice option for filters
+    - Add clear all filter button when one filter is applied
+    - Add documentation
+  -->
+
 <div ng-init="domain = 'mesr.opendatasoft.com';
-              datasetid = 'fr-esr-principaux-etablissements-enseignement-superieur';
+                datasetid = 'fr-esr-principaux-etablissements-enseignement-superieur';
 
-              filters = ['type_d_etablissement', 'secteur_d_etablissement', 'dep_nom'];
+                title = 'Établissements près de chez vous';
 
-              fieldsList = ['adresse_uai', 'dep_nom', 'numero_telephone_uai'];
-              fieldLink = 'url';
-              fieldLinkLabel = 'Visiter le site web';
-              mapLinkLabel = 'Voir sur la carte';
+                filters = [
+                {'id':'type_d_etablissement','multiple':true},
+                {'id':'secteur_d_etablissement','multiple':true},
+                {'id':'dep_nom','multiple':true}
+                ];
+                resetFiltersButton = true;
+                resetFiltersButtonLabel = 'Supprimer tous les filtres';
 
-              resultTitle = 'uo_lib';
+                resultTitle = 'uo_lib';
+                fieldsList = ['adresse_uai', 'dep_nom', 'numero_telephone_uai'];
+                fieldLink = 'url';
+                fieldLinkLabel = 'Visiter le site web';
+                mapLinkLabel = 'Voir sur la carte';
 
-              title = 'Établissements près de chez vous';
-              
-              viewListButtonText = 'Voir la liste';
-              viewDetailsButtonText = 'Voir les détails';
-              backToResultsButtonText = 'Retour aux résultats';
+                viewListButtonText = 'Voir la liste';
+                viewDetailsButtonText = 'Voir les détails';
+                backToResultsButtonText = 'Retour aux résultats';
 
-              DO_NOT_MODIFY_BELOW;
+                DO_NOT_MODIFY_BELOW;
 
-              ctxfields = {};
-              modal.isVisible = false
-              ">
+                ctxfields = {};
+                isVisible = false;
+                activeFilters = {};
+                ">
+
+    <!-- ### GENERAL SETTINGS ### -->
+    <!-- domain : (Domain URL) : Must contain the ID of the domain where the dataset is published.
+      ex: 'discovery.opendatasoft.com'
+    -->
+    <!-- datasetid (Dataset ID) : Must contain the ID of the dataset
+      ex: 'oeuvres-de-johannes-vermeer'
+    -->
+
+    <!-- title (Title of the page) :
+    ex: 'List of interest around you'
+    -->
+
+    <!-- ### FILTERS SETTINGS ### -->
+    <!-- filters (Filters) : List of object that contains the IDs to generate the filters pannel.
+    and multiple true or false to allow the user to select multiple values in the filter.
+    NB: the field must be a facet in the dataset
+    NB: alphanumerical sort is applied in the filter view
+     ex: [
+              {'id':'filterid','multiple':true},
+              {'id':'filterid2','multiple':false}
+         ]
+    -->
+    <!-- resetFiltersButton (boolean) : add a reset filters button after filters block -->
+    <!-- resetFiltersButtonLabel (Label of the button) : test to display when a filter is selected
+        ex: 'Clear all filters'
+    -->
+
+    <!-- ### LIST VIEW SETTINGS ### -->
+    <!-- resultTitle (Title of the item) : Set the item title from a field ID
+      ex: 'title';
+    -->
+    <!-- fieldsList (List configuration) : Set the list of field IDs
+      ex: ['category','genre','date']
+    -->
+    <!-- fieldLink (Link to an external resource) : If available, the field ID of some external resource as a web URL
+      ex: 'link'
+    -->
+    <!-- fieldLinkLabel (The label of that link) : Label of the link button
+      ex: 'Read more here'
+    -->
+    <!-- mapLinkLabel (The label of the item button) : used to select the item and see it on the map
+      ex: 'See on the map'
+    -->
+
+    <!-- ### MOBILE VIEW SETTINGS ### -->
+    <!-- viewListButtonText : when displaying the map, the bottom button to open the list view
+      ex: 'See the list'
+    -->
+    <!-- viewDetailsButtonText : when an item is selected on the map, the bottom button to open the list view with the selected item
+      ex: 'See the item details'
+    -->
+    <!-- backToResultsButtonText : when the list view is opened, to close button to go back to the map
+      ex: "Back to the list'
+    -->
+
+
+
+    <!-- MUST READ
+
+  A common error is forget to protect commas with a leading backslash, as commas are used to declare values of variable it will break the settings
+  wrongVariable = 'I'll be freed from commas'
+  correctVariable = 'I\'ll be freed from commas'
+  -->
+
+    <!-- DO NOT MODIFY -->
+    <!-- Technical fields, do not modify please -->
+
     <ods-dataset-context context="ctx"
                          ctx-domain="{{ domain }}"
                          ctx-dataset="{{ datasetid }}">
 
-        <span ng-repeat="field in ctx.dataset.fields">
-            {{ ctxfields[field.name] = field.label; '' }}
-        </span>
+      <span ng-repeat="field in ctx.dataset.fields">
+        {{ ctxfields[field.name] = field.label; '' }}
+      </span>
 
-        <aside class="modal"
+        <span ng-repeat="filter in filters">
+        {{ ctx.parameters['refine.' + filter.id] = activeFilters[filter.id] ; '' }}
+      </span>
+
+        <aside class="cl-modal"
                ng-class="{ 'is-visible' : modal.isVisible}">
-            <div class="modal-header">
-                <button class="modal-close-mobile"
+            <div class="cl-modal-header">
+                <button class="cl-modal-close-mobile"
                         title="Close modal"
                         ng-click="modal.isVisible = false">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-x">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
                 </button>
-                <h1 class="modal-title">
+                <h1 class="cl-modal-title">
                     {{ title }}
                 </h1>
                 <div class="search-module">
@@ -57,65 +146,36 @@
                 <!-- FILTERS -->
                 <div class="filter-list"
                      ng-init="dropdown.open = '';
-                              select = {}">
+                        select = {}">
                     <div ng-repeat="filter in filters">
-                        {{ ctx.parameters['disjunctive.' + filter] = true; '' }}
+                        {{ ctx.parameters['disjunctive.' + filter.id] = true; '' }}
                         <div ods-facet-results="categories"
-                             ods-facet-results-facet-name="{{ filter }}"
+                             ods-facet-results-facet-name="{{ filter.id }}"
                              ods-facet-results-context="ctx"
                              ods-facet-results-sort="alphanum">
-                            <div class="dropdown"
-                                 ng-if="categories">
-                                <button ng-click="dropdown.open = (dropdown.open == filter ? '' : filter);"
-                                        ng-class="{'dropdown-button-active': select[filter],
-                                                  'dropdown-button-open': dropdown.open == filter}"
-                                        id="dropdown-button-{{ filter }}"
-                                        class="dropdown-button"
-                                        aria-haspopup="true"
-                                        aria-expanded="{{ dropdown.open == filter }}">
-                                    {{ (!select[filter] ? ctxfields[filter] : select[filter] | capitalize) }}
-                                </button>
-                                <div class="dropdown-menu"
-                                     ng-class="{'dropdown-visible' : dropdown.open == filter }"
-                                     aria-labelledby="dropdown-button-{{ filter }}">
-                                    <div class="dropdown-title">
-                                        {{ ctxfields[filter] }}
-                                    </div>
-                                    <ul class="dropdown-items">
-                                        <li class="dropdown-item">
-                                            <label class="dropdown-label">
-                                                <input ng-model="select[filter]"
-                                                       ng-value="Tous"
-                                                       type="radio"
-                                                       class="dropdown-input" 
-                                                       translate />
-                                                Tous
-                                            </label>
-                                        </li>
-                                        <li ng-repeat="category in categories"
-                                            class="dropdown-item">
-                                            <label class="dropdown-label"
-                                                   title="{{ category.path | capitalize }}">
-                                                <input ng-model="select[filter]"
-                                                       ng-value="category.path"
-                                                       class="dropdown-input"
-                                                       type="radio" />
-                                                {{ category.path | capitalize }}
-                                            </label>
-                                        </li>
-                                    </ul>
-                                    {{ ctx.parameters['refine.' + filter] = (select[filter]=='Tous'?undefined:select[filter]); ''}}
-                                </div>
-                                <div class="dropdown-backdrop"
-                                     ng-click="dropdown.open = ''"
-                                     ng-show="dropdown.open != ''"></div>
-                            </div>
+                            <ods-select ng-if="ctxfields[filter.id]"
+                                        selected-values="activeFilters[filter.id]"
+                                        multiple="filter.multiple"
+                                        options="categories"
+                                        label-modifier="name"
+                                        value-modifier="name"
+                                        placeholder="{{ ctxfields[filter.id] }}"></ods-select>
+                        </div>
+                    </div>
+
+                    <div class="clear-filters"
+                         ng-show="(activeFilters | values).join('')">
+                        <div class="clear-filters-button"
+                             role="button"
+                             ng-click="activeFilters = {}">
+                            {{ resetFiltersButtonLabel }}
+                            <i class="fa fa-times-circle" aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="modal-content">
+            <div class="cl-modal-content">
                 <ul class="result-list">
                     <li class="result"
                         ng-repeat="item in items"
@@ -140,15 +200,20 @@
                             </a>
                             <button class="result-button"
                                     ng-if="!ctx.parameters['refine.' + resultTitle]"
-                                    ng-click="modal.isVisible = false; 
-                                              ctx.parameters['refine.' + resultTitle] = item.fields[resultTitle];">
+                                    ng-click="modal.isVisible = false;
+                                  ctx.parameters['refine.' + resultTitle] = item.fields[resultTitle];">
                                 {{ mapLinkLabel }}
                             </button>
                             <button class="result-button"
                                     ng-if="ctx.parameters['refine.' + resultTitle]"
                                     ng-click="ctx.parameters['refine.' + resultTitle] = undefined">
                                 {{ backToResultsButtonText }}
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                     stroke-linejoin="round" class="feather feather-x">
+                                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                                </svg>
                             </button>
                         </div>
                     </li>
@@ -185,23 +250,25 @@
             </ods-map-layer-group>
         </ods-map>
 
-        <div class="modal-open-mobile"
+        <div class="cl-modal-open-mobile"
              ng-click="modal.isVisible = true">
-            <svg xmlns="http://www.w3.org/2000/svg" 
-                 width="24" 
-                 height="24" 
-                 viewBox="0 0 24 24" 
-                 fill="none" 
-                 stroke="currentColor" 
-                 stroke-width="2" 
-                 stroke-linecap="round" 
-                 stroke-linejoin="round" 
-                 class="feather feather-chevron-up"><polyline points="18 15 12 9 6 15"></polyline></svg>
-            <h3 class="modal-open-mobile-title"
+            <svg xmlns="http://www.w3.org/2000/svg"
+                 width="24"
+                 height="24"
+                 viewBox="0 0 24 24"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 stroke-linecap="round"
+                 stroke-linejoin="round"
+                 class="feather feather-chevron-up">
+                <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+            <h3 class="cl-modal-open-mobile-title"
                 ng-if="!ctx.parameters['refine.' + resultTitle]">
                 {{ viewListButtonText }}
             </h3>
-            <h3 class="modal-open-mobile-title"
+            <h3 class="cl-modal-open-mobile-title"
                 ng-if="ctx.parameters['refine.' + resultTitle]">
                 {{ viewDetailsButtonText }}
             </h3>

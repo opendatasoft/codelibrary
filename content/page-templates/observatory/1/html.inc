@@ -36,17 +36,17 @@
 
             <!-- THE RIGHT MODAL -->
             <div class="rightmodal">
-                <div class="modal"
-                     ng-class="{'modal-active':values.modalswitchstatus}">
-                    <div class="modal__rightside">
-                        <div class="modal__header"
+                <div class="cl-modal"
+                     ng-class="{'cl-modal-active':values.modalswitchstatus}">
+                    <div class="cl-modal__rightside">
+                        <div class="cl-modal__header"
                              ng-click="values.modalswitchstatus = !values.modalswitchstatus">
                             <a href="#"
                                class="closebtn">
                                 Fermer <i class="fa fa-times-circle" aria-hidden="true"></i>
                             </a>
                         </div>
-                        <div class="modal__content">
+                        <div class="cl-modal__content">
                             <ods-facets context="ctx1">
                                 <h3>
                                     Région
@@ -66,7 +66,7 @@
                                 <ods-facet name="epci_name" refine-also="[ctx2,ctx3]"></ods-facet>
                             </ods-facets>
                         </div>
-                        <div class="modal__footer">
+                        <div class="cl-modal__footer">
                             <div>
                             </div>
                         </div>

@@ -72,7 +72,7 @@ span.filtered {
     font-weight: 600;
 }
 /* MODAL */
-.modal {
+.cl-modal {
     display: flex;
     flex-direction: column;
     height: -webkit-calc(100vh - 195px);
@@ -89,11 +89,11 @@ span.filtered {
     overflow: hidden; /* Disable horizontal scroll */
     transition: ease-in 0.3s;
 }
-.modal-active {
+.cl-modal-active {
     width: 350px;
 }
-.modal__header,
-.modal__footer {
+.cl-modal__header,
+.cl-modal__footer {
     height: 65px;
     background-color: #F4F2ED;
     display: flex;
@@ -102,24 +102,24 @@ span.filtered {
     opacity: 0;
     transition: opacity 0s;
 }
-.modal-active .modal__header, .modal-active .modal__footer {
+.cl-modal-active .cl-modal__header, .cl-modal-active .cl-modal__footer {
     opacity: 1;
     transition-delay: 0.3s;
 }
-.modal__header {
+.cl-modal__header {
     border-bottom: 1px solid #bbbbbb;
 }
-.modal__footer {
+.cl-modal__footer {
     border-top: 1px solid #bbbbbb;
 }
-.modal__content {
+.cl-modal__content {
     height: 100%;
     overflow-y: auto;
     padding: 25px;
     opacity: 0;
     transition: opacity 0s;
 }
-.modal-active .modal__content {
+.cl-modal-active .cl-modal__content {
     opacity: 1;
     transition-delay: 0.3s;
 }
@@ -150,7 +150,7 @@ span.filtered {
     top: -moz-calc(100vh - 180px);
     top: calc(100vh - 180px);
 }
-.right .modal {
+.right .cl-modal {
     right: 60px;
     left: initial;
     border-left: none;
@@ -164,11 +164,11 @@ span.filtered {
     left: initial;
     right: 430px;
 }
-.right .modal-active {
+.right .cl-modal-active {
     width: 450px;
 }
 /* specific because charts are loaded inside */
-.right .modal__content {
+.right .cl-modal__content {
     width: 450px;
 }
 /* SEARCH MODULE */
@@ -280,4 +280,4 @@ span.filtered {
     font-size: 2em;
     text-align: center;
 }
-      
+

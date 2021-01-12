@@ -21,15 +21,15 @@
                 ({{ nb_active_filters }})
             </span>
         </div>
-        <div class="modal" ng-class="{'modal-active':leftmodal}">
-            <div class="modal__header">
+        <div class="cl-modal" ng-class="{'cl-modal-active':leftmodal}">
+            <div class="cl-modal__header">
                 <div href="#"
                      class="closebtn"
                      ng-click="leftmodal = false">
                     <span>&lt;</span> Close
                 </div>
             </div>
-            <div class="modal__content">
+            <div class="cl-modal__content">
                 <div class="ods-filters-placeholder" ods-sticky-scrollable="">
                     <div class="">
                         <h1 class="ods-filters__count">
@@ -67,15 +67,15 @@
                 ({{ nb_active_filters }})
             </span-->
         </div>
-        <div class="modal" ng-class="{'modal-active':rightmodal}">
-            <div class="modal__header">
+        <div class="cl-modal" ng-class="{'cl-modal-active':rightmodal}">
+            <div class="cl-modal__header">
                 <div href="#"
                      class="closebtn"
                      ng-click="rightmodal = false">
                     Close <span>&gt;</span>
                 </div>
             </div>
-            <div class="modal__content">
+            <div class="cl-modal__content">
                 <h3>
                     Average {{ activemaplayer }} evolution over months
                 </h3>
@@ -115,7 +115,7 @@
                     </ods-chart-query>
                 </ods-chart>
             </div>
-            <!--div class="modal__footer">
+            <!--div class="cl-modal__footer">
             Recherchez, cliquez pour sélectionner et filtrer, puis revenez pour voir votre rapport mis à jour
         </div-->
         </div>
