@@ -3,6 +3,6 @@ title: "Switch toggle 4"
 ---
 
 
-## Simple example
+## Button group style
 
-A simple usecase to show how this component can be used in your pages.
+Show both options at once and switch from one to the other on click.
