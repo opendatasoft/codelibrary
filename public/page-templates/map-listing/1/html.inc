@@ -69,8 +69,6 @@ ex: 'oeuvres-de-johannes-vermeer'
 
 
   <!-- ### LIST VIEW SETTINGS ### -->
-  <!-- view (List view type) : Type of the view to list results, can be 'table' or 'cards'
--->
   <!-- fieldsList (List configuration) : Set the list of field IDs
 ex: ['title','category','genre','date']
 -->
@@ -81,19 +79,6 @@ ex: 'link'
 ex: 'Read more here'
 -->
 
-  <!-- Specific to the 'cards' view mode, set a title and a background image if any -->
-  <!-- resultTitle (Title of the result) : Field id of the reulst title
-ex: 'title'
--->
-  <!-- fieldPhoto (Field id of the image field if any)
-ex: 'image'
--->
-  <!-- imagePosition (Image position) : Image position in the card, can be 'top' or 'left'
-ex: 'left'
--->
-  <!-- itemsPerRow (Number of columns) : Modify the columns layout. The division by 12 must be a whole number, ie it can be 1, 2, 3, 4, 6 or 12. But 6 and 12 will generaly be two norrow
-ex: '3'
--->
 
   <!-- ### KPIS SETTINGS ### -->
   <!-- KPIS settings is a list of object that describes each KPI
