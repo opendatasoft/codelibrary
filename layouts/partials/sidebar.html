@@ -31,6 +31,20 @@
                     {{ range .Page.Pages }}
                     <li>
                         <a class="{{ if eq $currentPage . }}is-active{{ end }}" href="{{ .Permalink }}">{{ .Title }}</a>
+                        {{ if eq $currentPage . }}
+                        <ul>
+                            {{ range .Page.Resources.ByType "page" }}
+                            <li>
+                                <a class="sidebar-resource" href="#{{ .Title | safeURL }}">
+                                    {{ .Title }}
+                                    {{ if .Params.new }}
+                                    <span class="sidebar-resource--new">NEW</span>
+                                    {{ end }}
+                                </a>
+                            </li>
+                            {{ end }}
+                        </ul>
+                        {{ end }}
                     </li>
                     {{ end }}
                 </ul>

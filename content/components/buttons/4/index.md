@@ -1,5 +1,5 @@
 ---
-title: "Component 4"
+title: "See more button"
 height: 120
 ---
 

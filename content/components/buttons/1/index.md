@@ -1,6 +1,7 @@
 ---
-title: "Component 1"
+title: "Basic Button"
 height: 70
+new: true
 ---
 
 

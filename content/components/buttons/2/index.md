@@ -1,5 +1,5 @@
 ---
-title: "Component 2"
+title: "Go Back Button"
 height: 75
 ---
 
