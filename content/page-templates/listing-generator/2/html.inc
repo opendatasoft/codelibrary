@@ -164,8 +164,8 @@
             -->
 
         <span ng-if="fieldDefaultRangeStartsNow">
-        {{ctxdate.parameters={'q.date': fieldDate + '&gt;#now()'};''}}
-      </span>
+            {{ctxdate.parameters={'q.date': fieldDate + '&gt;#now()'};''}}
+        </span>
 
         <h1 class="page-title">
             {{ ctx.dataset.metas.title }}
@@ -174,12 +174,12 @@
         <p class="page-subtitle" ng-bind-html="ctx.dataset.metas.description | shortSummary"></p>
 
         <span ng-repeat="field in ctx.dataset.fields">
-        {{ ctxfields[field.name] = field.label; '' }}
-      </span>
+            {{ ctxfields[field.name] = field.label; '' }}
+        </span>
 
         <span ng-repeat="filter in filters">
-        {{ ctx.parameters['refine.' + filter.id] = activeFilters[filter.id] ; '' }}
-      </span>
+            {{ ctx.parameters['refine.' + filter.id] = activeFilters[filter.id] ; '' }}
+        </span>
 
         <div class="content-card search-module-container">
             <!-- SEARCH -->
@@ -278,125 +278,124 @@
                 </div>
 
             </div>
+        </div>
 
-            <!-- KPIs -->
-            <section class="kpis-container row row-equal-height">
-                <div class="{{ 'col-md-' + (12/itemsPerRow) }} margin-bottom-20"
-                     ng-repeat="kpi in kpis">
-                    <!-- KPI box component -->
-                    <div class="kpi-card"
-                         ods-aggregation="agg"
-                         ods-aggregation-context="ctx"
-                         ods-aggregation-function="{{ kpi.function }}"
-                         ods-aggregation-expression="{{ kpi.expression }}">
-                        <i class="kpi-icon fa fa-{{ kpi.faicon || 'gitlab' }}" aria-hidden="true"></i>
-                        <h2 class="kpi-title">
-                            {{ (agg || 0) | number : (kpi.precision || 0) }}
-                            <span ng-if="kpi.unit" class="kpi-unit">{{ kpi.unit }}</span>
-                        </h2>
-                        <p class="kpi-description">
-                            {{ kpi.title }}
-                        </p>
-                    </div>
+        <!-- KPIs -->
+        <section class="kpis-container row row-equal-height">
+            <div class="{{ 'col-md-' + (12/itemsPerRow) }} margin-bottom-20"
+                 ng-repeat="kpi in kpis">
+                <!-- KPI box component -->
+                <div class="kpi-card"
+                     ods-aggregation="agg"
+                     ods-aggregation-context="ctx"
+                     ods-aggregation-function="{{ kpi.function }}"
+                     ods-aggregation-expression="{{ kpi.expression }}">
+                    <i class="kpi-icon fa fa-{{ kpi.faicon || 'gitlab' }}" aria-hidden="true"></i>
+                    <h2 class="kpi-title">
+                        {{ (agg || 0) | number : (kpi.precision || 0) }}
+                        <span ng-if="kpi.unit" class="kpi-unit">{{ kpi.unit }}</span>
+                    </h2>
+                    <p class="kpi-description">
+                        {{ kpi.title }}
+                    </p>
                 </div>
-            </section>
+            </div>
+        </section>
 
+        <!-- TABLE -->
+        <section ng-if="view == 'table'"
+                 class="content-card">
+            <div class="table-module">
+                <table class="table-basic"
+                       ods-results="items"
+                       ods-results-context="ctx"
+                       ods-results-max="20">
+                    <thead>
+                    <tr>
+                        <th ng-repeat="field in fieldsList">{{ ctxfields[field] }}</th>
+                        <th ng-if="fieldLink"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr ng-repeat="item in items">
+                        <td ng-repeat="field in fieldsList"
+                            style="max-width: calc(100vh / {{ fieldsList.length }});"
+                            title="{{ item.fields[field] }}">
+                            {{ item.fields[field] }}
+                        </td>
+                        <td ng-if="fieldLink">
+                            <a href="{{ item.fields[fieldLink] }}"
+                               tilte="{{ fieldLinkLabel }}"
+                               target="_blank"
+                               class="table-dropdown-button">
+                                <i class="fa fa-external-link"></i>
+                            </a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
 
-            <!-- TABLE -->
-            <section ng-if="view == 'table'"
-                     class="content-card">
-                <div class="table-module">
-                    <table class="table-basic"
-                           ods-results="items"
-                           ods-results-context="ctx"
-                           ods-results-max="20">
-                        <thead>
-                        <tr>
-                            <th ng-repeat="field in fieldsList">{{ ctxfields[field] }}</th>
-                            <th ng-if="fieldLink"></th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr ng-repeat="item in items">
-                            <td ng-repeat="field in fieldsList"
-                                style="max-width: calc(100vh / {{ fieldsList.length }});"
-                                title="{{ item.fields[field] }}">
-                                {{ item.fields[field] }}
-                            </td>
-                            <td ng-if="fieldLink">
-                                <a href="{{ item.fields[fieldLink] }}"
-                                   tilte="{{ fieldLinkLabel }}"
-                                   target="_blank"
-                                   class="table-dropdown-button">
-                                    <i class="fa fa-external-link"></i>
-                                </a>
-                            </td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-
-
-            <!-- CARDS -->
-            <section ng-if="view == 'cards'">
-                <div class="row row-equal-height"
-                     ods-results="items"
-                     ods-results-context="ctx"
-                     ods-results-max="{{ 8 * itemsPerRow }}">
-                    <div ng-repeat="item in items"
-                         class="{{ 'col-md-' + (12/itemsPerRow) }} margin-bottom-20">
-                        <div class="content-card"
-                             ng-class="{'content-card-horizontal': imagePosition === 'left' }">
-                            <div class="content-card-img"
-                                 ng-if="item.fields[fieldPhoto]"
-                                 style="{{ 'background-image: url(https://' + domain + '/explore/dataset/' + datasetid + '/files/' + item.fields[fieldPhoto].id + '/300/);' }}">
+        <!-- CARDS -->
+        <section ng-if="view == 'cards'">
+            <div class="row row-equal-height"
+                 ods-results="items"
+                 ods-results-context="ctx"
+                 ods-results-max="{{ 8 * itemsPerRow }}">
+                <div ng-repeat="item in items"
+                     class="{{ 'col-md-' + (12/itemsPerRow) }} margin-bottom-20">
+                    <div class="content-card"
+                         ng-class="{'content-card-horizontal': imagePosition === 'left' }">
+                        <div class="content-card-img"
+                             ng-if="item.fields[fieldPhoto]"
+                             style="{{ 'background-image: url(https://' + domain + '/explore/dataset/' + datasetid + '/files/' + item.fields[fieldPhoto].id + '/300/);' }}">
+                        </div>
+                        <div class="content-card-body">
+                            <h2 class="content-card-title text-center">
+                                {{ item.fields[cardTitle] }}
+                            </h2>
+                            <div class="content-card-fields">
+                                <dl>
+                                    <dt ng-repeat-start="field in fieldsList">{{ ctxfields[field] }}</dt>
+                                    <dd ng-repeat-end>{{ item.fields[field] }}</dd>
+                                </dl>
                             </div>
-                            <div class="content-card-body">
-                                <h2 class="content-card-title text-center">
-                                    {{ item.fields[cardTitle] }}
-                                </h2>
-                                <div class="content-card-fields">
-                                    <dl>
-                                        <dt ng-repeat-start="field in fieldsList">{{ ctxfields[field] }}</dt>
-                                        <dd ng-repeat-end>{{ item.fields[field] }}</dd>
-                                    </dl>
-                                </div>
-                                <div ng-if="fieldLink" class="text-center">
-                                    <!-- if fieldLink is a json and contains the 'id' key, it means that the link points to a file hosted on ODS platform and can be downloaded. If it's an external link, the other link tag is used -->
-                                    <a ng-if="item.fields[fieldLink].id"
-                                       href="https://{{ domain }}/explore/dataset/{{ datasetid }}/files/{{ item.fields[fieldLink].id }}/download/"
-                                       target="_blank"
-                                       class="content-card-button">
-                                        {{ fieldLinkLabel }}
-                                    </a>
+                            <div ng-if="fieldLink" class="text-center">
+                                <!-- if fieldLink is a json and contains the 'id' key, it means that the link points to a file hosted on ODS platform and can be downloaded. If it's an external link, the other link tag is used -->
+                                <a ng-if="item.fields[fieldLink].id"
+                                   href="https://{{ domain }}/explore/dataset/{{ datasetid }}/files/{{ item.fields[fieldLink].id }}/download/"
+                                   target="_blank"
+                                   class="content-card-button">
+                                    {{ fieldLinkLabel }}
+                                </a>
 
-                                    <!-- fieldLink is used here
-                                                For more advanced scenario, you can send the user to :
+                                <!-- fieldLink is used here
+                                            For more advanced scenario, you can send the user to :
 
-                                                - the dataset table filtered with the fieldLink value, through a text query
-                                                href="/explore/dataset/{{ datasetid }}/table?q={{ item.fields[fieldLink] }}"
+                                            - the dataset table filtered with the fieldLink value, through a text query
+                                            href="/explore/dataset/{{ datasetid }}/table?q={{ item.fields[fieldLink] }}"
 
-                                                - the dataset table filtered with the fieldLink value, through a refine on the field
-                                                href="/explore/dataset/{{ datasetid }}/table?refine.{{ fieldLink }}={{ item.fields[fieldLink] }}"
+                                            - the dataset table filtered with the fieldLink value, through a refine on the field
+                                            href="/explore/dataset/{{ datasetid }}/table?refine.{{ fieldLink }}={{ item.fields[fieldLink] }}"
 
-                                                - a page using url-sync=true setting :
-                                                href="/pages/yourpage/?refine.{{ fieldLink }}={{ item.fields[fieldLink] }}"
-                                                -->
-                                    <a ng-if="!item.fields[fieldLink].id" href="{{ item.fields[fieldLink] }}"
-                                       target="_blank"
-                                       class="content-card-button">
-                                        {{ fieldLinkLabel }}
-                                    </a>
-                                </div>
+                                            - a page using url-sync=true setting :
+                                            href="/pages/yourpage/?refine.{{ fieldLink }}={{ item.fields[fieldLink] }}"
+                                            -->
+                                <a ng-if="!item.fields[fieldLink].id" href="{{ item.fields[fieldLink] }}"
+                                   target="_blank"
+                                   class="content-card-button">
+                                    {{ fieldLinkLabel }}
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <a href="https://{{ domain }}/explore/dataset/{{ datasetid }}/"
-               target="_blank"
-               class="margin-bottom-20">Accéder aux données source</a>
+        <a href="https://{{ domain }}/explore/dataset/{{ datasetid }}/"
+           target="_blank"
+           class="margin-bottom-20">Accéder aux données source</a>
     </ods-dataset-context>
 </div>
