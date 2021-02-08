@@ -1,8 +1,3 @@
 ---
-title: "ods-simple-tabs 1"
+title: "Default Look"
 ---
-
-
-## Default Look
-
-

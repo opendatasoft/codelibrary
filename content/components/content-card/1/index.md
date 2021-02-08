@@ -1,8 +1,3 @@
 ---
-title: "Content card 1"
+title: "Content card with title, description and button with link"
 ---
-
-
-## Content card with title, description and button with link
-
-

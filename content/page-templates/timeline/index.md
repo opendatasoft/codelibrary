@@ -6,5 +6,3 @@ resources:
 - src: '*/'
   title: 'Section #:counter'
 ---
-
-# Timeline view

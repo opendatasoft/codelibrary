@@ -1,9 +1,7 @@
 ---
-title: "Listing generator 1"
+title: "Automated listing visualization"
 height: 750
 ---
-
-## Automated listing visualization
 
 Edit only a few settings to generate a modern looking visulization that uses ODS components and widgets.
 [See a live editing demo of this template on Youtube](https://www.youtube.com/watch?v=huK1bNGjpkE)

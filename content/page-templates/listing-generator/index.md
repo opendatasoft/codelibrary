@@ -6,6 +6,3 @@ resources:
 - src: '*/'
   title: 'Section #:counter'
 ---
-
-# Listing generator
-

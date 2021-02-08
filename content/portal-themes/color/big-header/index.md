@@ -1,5 +1,5 @@
 ---
-title: "Theme color - big header"
+title: "Big header"
 description: ""
 tags: []
 iframe: "https://color-big-header-theme-discovery.opendatasoft.com/"
@@ -24,11 +24,3 @@ resources:
 - src: 'stylesheet.css'
   title: 'Stylesheet'
 ---
-
-
-## Big header
-
-
-
-
-

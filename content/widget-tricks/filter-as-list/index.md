@@ -6,5 +6,3 @@ resources:
 - src: '*/'
   title: 'Section #:counter'
 ---
-
-# Filters as an HTML Selects

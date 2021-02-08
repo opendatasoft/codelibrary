@@ -1,5 +1,5 @@
 ---
-title: "Switch toggle"
+title: "Switch Module"
 description: "A switch is a visual toggle between two mutually exclusive states — on and off."
 tags: ["display"]
 resources:
@@ -7,9 +7,6 @@ resources:
   title: 'Section #:counter'
 ---
 
+A switch is a visual toggle between two mutually exclusive states — on and off.
 
-# Switch Module
-
-A switch is a visual toggle between two mutually exclusive states — on and off. 
-
-Check the example on the bottom of the page to see how to add Angular attributes to the component and use it in your pages! 
+Check the example on the bottom of the page to see how to add Angular attributes to the component and use it in your pages!

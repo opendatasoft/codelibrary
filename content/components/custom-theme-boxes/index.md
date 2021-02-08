@@ -7,7 +7,4 @@ resources:
   title: 'Section #:counter'
 ---
 
-
-# Custom theme boxes
-
 Replicate the `ods-theme-boxes` widget funtionality to create custom theme boxes which are easier to style and layout.

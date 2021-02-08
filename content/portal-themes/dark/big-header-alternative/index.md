@@ -1,5 +1,5 @@
 ---
-title: "Theme dark - big header alt"
+title: "Big header alternative"
 description: ""
 tags: []
 iframe: "https://dark-big-header-alternative-theme-discovery.opendatasoft.com/"
@@ -24,11 +24,3 @@ resources:
 - src: 'stylesheet.css'
   title: 'Stylesheet'
 ---
-
-
-## Big header alternative
-
-
-
-
-

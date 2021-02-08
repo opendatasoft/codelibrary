@@ -1,10 +1,5 @@
 ---
-title: "Component 3"
+title: "Action card"
 ---
 
-
-## Action card
-
 Colored card that acts as a link to another page or section.
-
-

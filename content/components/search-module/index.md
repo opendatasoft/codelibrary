@@ -6,7 +6,3 @@ resources:
 - src: '*/'
   title: 'Section #:counter'
 ---
-
-
-# Components library - Search module
-

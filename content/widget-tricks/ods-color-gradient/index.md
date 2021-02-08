@@ -1,14 +1,11 @@
 ---
-title: "ods-color-gradient & ods-legend"
+title: "ods-color-gradient + ods-map : a choropleth alternative"
 description: "This widget computes a gradient of colors based on a numerical aggregation. It's mainly used to color the shapes of a map for analytics purposes."
 tags: ["display", "aggregation", "geo"]
 resources:
 - src: '*/'
   title: 'Section #:counter'
 ---
-
-
-# ods-color-gradient + ods-map : a choropleth alternative
 
 This **map rendering technique** allows to display on a map colored shaped based on the aggregation of **a different dataset**.
 
@@ -22,4 +19,3 @@ For example: inhabitant dataset of a country can be rendered by region, departem
 
 
 **How it works:** the technique is to aggregate the data with the ods-color-gradient to obtain the color gradient as a color object. Then feed an ods-map with this color object.
-

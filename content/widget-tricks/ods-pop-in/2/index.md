@@ -1,9 +1,6 @@
 ---
-title: "ods-pop-in 2"
+title: "Custom made"
 height: 400
 ---
-
-
-## Custom made
 
 Display a custom pop in window by clicking on a button.
