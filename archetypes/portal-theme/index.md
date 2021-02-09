@@ -1,5 +1,6 @@
 ---
-title: "Theme"
+title: "{{ replace .Name "-" " " | title }}"
+date: {{ .Date }}
 description: ""
 tags: []
 iframe: "https://discovery.opendatasoft.com/"
@@ -26,7 +27,3 @@ resources:
 ---
 
 ## Theme
-
-
-
-

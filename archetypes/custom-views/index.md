@@ -1,11 +1,9 @@
 ---
 title: "{{ replace .Name "-" " " | title }}"
-description: ""
 date: {{ .Date }}
-tags: ["display", "navigation", "list"]
+description: ""
+tags: [""]
 resources:
 - src: '*/'
   title: 'Section #:counter'
 ---
-
-# Components library -
