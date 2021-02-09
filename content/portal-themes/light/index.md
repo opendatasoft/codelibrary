@@ -4,5 +4,5 @@ description: "An Opendatasoft theme,  with white header to keep it classic and l
 tags: []
 resources:
 - src: '*/'
-  title: 'Section #:counter'
+  name: folder-:counter
 ---

@@ -4,7 +4,7 @@ description: "This widget computes a gradient of colors based on a numerical agg
 tags: ["display", "aggregation", "geo"]
 resources:
 - src: '*/'
-  title: 'Section #:counter'
+  name: folder-:counter
 ---
 
 This **map rendering technique** allows to display on a map colored shaped based on the aggregation of **a different dataset**.

@@ -4,7 +4,7 @@ description: "ods-select allows the selection of one or more items from a list o
 tags: ["display", "navigation", "list"]
 resources:
 - src: '*/'
-  title: 'Section #:counter'
+  name: folder-:counter
 ---
 
 ods-select allows the selection of one or more items from a list of options. This resource present different combination with ods-facet-results or ods-analysis to feed the selection list.

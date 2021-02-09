@@ -4,5 +4,5 @@ description: "A card with an image background, useful for home page navigation a
 tags: ["display", "navigation", "list"]
 resources:
 - src: '*/'
-  title: 'Section #:counter'
+  name: folder-:counter
 ---

@@ -4,5 +4,5 @@ description: "From and to selectors to easily catch a range of date for your das
 tags: ["list", "filter"]
 resources:
 - src: '*/'
-  title: 'Section #:counter'
+  name: folder-:counter
 ---

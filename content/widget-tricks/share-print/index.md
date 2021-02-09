@@ -4,5 +4,5 @@ description: ""
 tags: ["display"]
 resources:
 - src: '*/'
-  title: 'Section #:counter'
+  name: folder-:counter
 ---

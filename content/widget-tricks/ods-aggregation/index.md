@@ -4,7 +4,7 @@ description: "Various examples to showcase ods-aggregation. This widget exposes 
 tags: ["aggregation", "ods-aggregation"]
 resources:
 - src: '*/'
-  title: 'Section #:counter'
+  name: folder-:counter
 ---
 
 **The technical documentation says :**

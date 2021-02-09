@@ -4,5 +4,5 @@ description: "A good starting point to narrate a story with your data, or simply
 tags: ["display", "aggregation"]
 resources:
 - src: '*/'
-  title: 'Section #:counter'
+  name: folder-:counter
 ---

@@ -4,7 +4,7 @@ description: "Override default catalog cards to highlight key metadata for your 
 tags: ["list", "display", "navigation"]
 resources:
 - src: '*/'
-  title: 'Section #:counter'
+  name: folder-:counter
 ---
 
 The catalog card represents the published datasets of that portal. (see [Exploring a dataset from the catalog](https://help.opendatasoft.com/platform/en/exploring_catalog_and_datasets/01_navigating_the_catalog/catalog.html#exploring-dataset)).

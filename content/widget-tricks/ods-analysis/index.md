@@ -4,7 +4,7 @@ description: "Various examples to showcase ods-analysis. This widget exposes the
 tags: ["ods-analysis", "aggregation", "chart", "display"]
 resources:
 - src: '*/'
-  title: 'Section #:counter'
+  name: folder-:counter
 ---
 
 **The technical documentation says :**

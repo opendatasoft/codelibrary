@@ -4,7 +4,7 @@ description: "Style and layout suggestions for the ods-simple-tabs widget."
 tags: ["display", "navigation"]
 resources:
 - src: '*/'
-  title: 'Section #:counter'
+  name: folder-:counter
 ---
 
 The `ods-simple-tabs` widget can be used to have a tabbed interface that allows you to switch between different views. It has a simplified CSS making it easy to modify the style or layout.

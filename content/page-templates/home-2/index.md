@@ -4,5 +4,5 @@ description: "An home page for your Opendatasoft portal, alternative 2"
 tags: ["display", "navigation"]
 resources:
 - src: '*/'
-  title: 'Section #:counter'
+  name: folder-:counter
 ---

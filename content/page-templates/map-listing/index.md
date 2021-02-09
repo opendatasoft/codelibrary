@@ -4,7 +4,7 @@ description: "Ideal for listing geographical information! Edit only a few settin
 tags: ["display", "list", "geo"]
 resources:
 - src: '*/'
-  title: 'Section #:counter'
+  name: folder-:counter
 ---
 
 Edit only a few settings to generate a modern looking visualization that uses ODS components and widgets.

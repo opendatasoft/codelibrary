@@ -4,7 +4,7 @@ description: "A switch is a visual toggle between two mutually exclusive states 
 tags: ["display"]
 resources:
 - src: '*/'
-  title: 'Section #:counter'
+  name: folder-:counter
 ---
 
 A switch is a visual toggle between two mutually exclusive states — on and off.

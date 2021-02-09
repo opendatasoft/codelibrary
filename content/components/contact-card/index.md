@@ -4,5 +4,5 @@ description: "A simple contact card for your organization, with a simple pop in 
 tags: ["display", "navigation", "list"]
 resources:
 - src: '*/'
-  title: 'Section #:counter'
+  name: folder-:counter
 ---

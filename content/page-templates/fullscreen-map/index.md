@@ -4,5 +4,5 @@ description: "When the key visualization is the map: this resource contains filt
 tags: ["display", "ods-maps", "geo"]
 resources:
 - src: '*/'
-  title: 'Section #:counter'
+  name: folder-:counter
 ---

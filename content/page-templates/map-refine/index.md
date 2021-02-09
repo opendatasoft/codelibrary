@@ -4,5 +4,5 @@ description: "Use the map as a selector then display additional information on t
 tags: ["ods-maps", "filter"]
 resources:
 - src: '*/'
-  title: 'Section #:counter'
+  name: folder-:counter
 ---

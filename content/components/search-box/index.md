@@ -4,7 +4,7 @@ description: "A stylized search box that allows searching for datasets in the ca
 tags: ["navigation"]
 resources:
 - src: '*/'
-  title: 'Section #:counter'
+  name: folder-:counter
 ---
 
 

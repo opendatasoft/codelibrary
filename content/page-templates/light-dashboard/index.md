@@ -4,5 +4,5 @@ description: "A light and efficient dashboard to highlight trends, metrics, or a
 tags: ["display", "ods-maps", "geo"]
 resources:
 - src: '*/'
-  title: 'Section #:counter'
+  name: folder-:counter
 ---
