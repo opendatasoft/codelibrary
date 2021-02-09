@@ -1,8 +1,5 @@
 ---
-title: "Data Story 2"
+title: "Blog Article Style"
 ---
-
-
-## Blog Article Style
 
 A blog-like template to narrate a story and insert charts or maps to enhance the storytelling experience.

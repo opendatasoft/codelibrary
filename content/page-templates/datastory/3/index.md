@@ -1,6 +1,3 @@
 ---
-title: "Data Story 3"
+title: "Data Story with sections"
 ---
-
-
-## Data Story with sections

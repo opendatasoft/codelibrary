@@ -1,8 +1,3 @@
 ---
-title: "Search box 2"
+title: "Search Box inside card"
 ---
-
-
-## Search Box inside card
-
-

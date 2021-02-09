@@ -1,9 +1,4 @@
 ---
-title: "Sticky header 1"
+title: "Sticky content example"
 height: 600
 ---
-
-
-## Sticky content example
-
-

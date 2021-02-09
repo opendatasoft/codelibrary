@@ -1,5 +1,5 @@
 ---
-title: "Theme light - basic"
+title: "Basic"
 description: ""
 tags: []
 iframe: "https://light-basic-theme-discovery.opendatasoft.com/"
@@ -24,11 +24,3 @@ resources:
 - src: 'stylesheet.css'
   title: 'Stylesheet'
 ---
-
-
-## Basic
-
-
-
-
-

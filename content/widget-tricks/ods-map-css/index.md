@@ -4,7 +4,5 @@ description: "ods-map with legends from the map builder with additional CSS to p
 tags: ["display", "ods-maps", "geo"]
 resources:
 - src: '*/'
-  title: 'Section #:counter'
+  name: folder-:counter
 ---
-
-# ods-map: CSS Hacks

@@ -1,8 +1,6 @@
 ---
-title: "ods-map refine zoom 4"
+title: "Dynamic map by zoom level"
 ---
-
-## Dynamic map by zoom level
 
 In this example, the French administrative regions, departments and cities are displayed in a specific zoom range.
 Regions from the minimum to 6, Departments from 7 to 8, Cities from 9 to the maximum

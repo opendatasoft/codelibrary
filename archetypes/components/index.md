@@ -5,7 +5,5 @@ date: {{ .Date }}
 tags: ["display", "navigation", "list"]
 resources:
 - src: '*/'
-  title: 'Section #:counter'
+  name: folder-:counter
 ---
-
-# Components library -

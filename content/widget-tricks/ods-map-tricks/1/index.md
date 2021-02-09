@@ -1,8 +1,7 @@
 ---
-title: "ods-map refine zoom 1"
+title: "Map as a selector"
 ---
 
-## Map as a selector
 
 In this example, the french administrative regions are displayed first and the user click refines on the departments dataset. On the right section you can observe the applied filter on departments context and the list of departments returned. The 'regions' context is not affected and is not filtered. Note that it would also be possible to apply the filter on regions context, to do so, please have a look to the next resource of this page.
 

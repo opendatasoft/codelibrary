@@ -1,10 +1,8 @@
 ---
-title: "ods-select - 2"
+title: "Filter by type, fed by a facet (via ods-facet-results widget)"
 ---
 
-## Filter by type, fed by a facet (via ods-facet-results widget)
-
-`ods-facet-results` enumerates the values ("categories") of a facet, and exposes it in a variable. this variable can then be the option source of `ods-select`. 
+`ods-facet-results` enumerates the values ("categories") of a facet, and exposes it in a variable. this variable can then be the option source of `ods-select`.
 
 [ods-facet-results widget documentation](https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsFacetResults)
 

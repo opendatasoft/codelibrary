@@ -1,8 +1,3 @@
 ---
-title: "Content card 2"
+title: "Content card displaying a visualisation and description"
 ---
-
-
-## Content card displaying a visualisation and description
-
-
