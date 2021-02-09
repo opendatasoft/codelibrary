@@ -1,5 +1,5 @@
 ---
-title: "oods-aggregation"
+title: "ods-aggregation"
 description: "Various examples to showcase ods-aggregation. This widget exposes the results of an aggregation (sum, average, minimum, maximum etc...) function."
 tags: ["aggregation", "ods-aggregation"]
 resources:
