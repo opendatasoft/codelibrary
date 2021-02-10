@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+<head>
+    <meta charset="utf-8">
+    <title>
+         Gtfs Custom View &ndash; Codelibrary 
+    </title>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-41201218-21"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-41201218-21');
+    </script>
+
+    
+    
+
+    
+    
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css"
+          integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8="
+          crossorigin="anonymous">
+
+    
+    <link rel="stylesheet"
+          type="text/css"
+          href="/scss/main.css" />
+    <link rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png">
+    <link rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png">
+    <link rel="shortcut icon"
+          href="/favicon.ico">
+</head>
+
+<body>
+
+<nav class="navbar is-fixed-top"
+     role="navigation"
+     aria-label="Main navigation">
+    <div class="navbar-brand">
+        <button class="navbar-burger burger"
+                type="button"
+                data-target="sidebarNavbar"
+                aria-controls="sidebarNavbar"
+                aria-expanded="false"
+                aria-label="Main menu">
+            Menu
+        </button>
+        <a class="navbar-item"
+           href="/"
+           title="Back to the homepage">
+            <img src="/img/ods-logo-helphub.svg"
+                 alt="Helphub Logo"/>
+        </a>
+        <button class="navbar-burger burger"
+                type="button"
+                data-target="helphubNavbar"
+                aria-controls="helphubNavbar"
+                aria-expanded="false"
+                aria-label="Help Hub Menu">
+            Help Hub
+        </button>
+    </div>
+    <div class="navbar-menu"
+         id="helphubNavbar">
+        <div class="navbar-start">
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/">
+                Help Hub
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/platform/en/">
+                User guide
+            </a>
+            <a class="navbar-item is-active"
+               href="https://codelibrary.opendatasoft.com">
+                Code Library
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/faq-glossary/en/">
+                FAQ
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/widgets/">
+                Widgets
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/en/apis/">
+                APIs
+            </a>
+            <a class="navbar-item"
+               href="https://academy.opendatasoft.com/page/homepage">
+                Academy
+            </a>
+        </div>
+    </div>
+</nav>
+
+<div class="columns is-desktop codelibrary">
+    <div class="column is-narrow">
+    <aside class="sidebar menu"
+       id="sidebarNavbar">
+    <div class="sidebar-content">
+
+        
+        
+        
+        
+        
+        
+        
+
+        <div id="algolia-box"></div>
+        <div id="algolia-results"></div>
+
+        
+        <ul class="menu-list">
+            <li>
+                <a class="sidebar-subtitle"
+                   href="https://codelibrary.opendatasoft.com">
+                    Home
+                </a>
+            </li>
+            
+            
+            <li>
+                <a href="/components/"
+                   class="sidebar-subtitle">
+                    Components
+                </a>
+            </li>
+            
+            
+            
+            <li>
+                <a class="sidebar-subtitle " href="/custom-views/">
+                Custom views
+                </a>
+                <ul>
+                    
+                    <li>
+                        <a class="is-active" href="https://codelibrary.opendatasoft.com/custom-views/gtfs-custom-view/">Gtfs Custom View</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/page-templates/"
+                   class="sidebar-subtitle">
+                    Page templates
+                </a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/portal-themes/"
+                   class="sidebar-subtitle">
+                    Portal themes
+                </a>
+            </li>
+            
+            
+            
+            <li>
+                <a href="/widget-tricks/"
+                   class="sidebar-subtitle">
+                    Widget tricks
+                </a>
+            </li>
+            
+            
+        </ul>
+        <p class="menu-label">
+            Tags
+        </p>
+        <div class="tags">
+            
+            <a class="tag" href="https://codelibrary.opendatasoft.com/tags/aggregation/">
+                aggregation
+            </a>
+            
+            <a class="tag" href="https://codelibrary.opendatasoft.com/tags/chart/">
+                chart
+            </a>
+            
+            <a class="tag" href="https://codelibrary.opendatasoft.com/tags/date/">
+                date
+            </a>
+            
+            <a class="tag" href="https://codelibrary.opendatasoft.com/tags/display/">
+                display
+            </a>
+            
+            <a class="tag" href="https://codelibrary.opendatasoft.com/tags/filter/">
+                filter
+            </a>
+            
+            <a class="tag" href="https://codelibrary.opendatasoft.com/tags/geo/">
+                geo
+            </a>
+            
+            <a class="tag" href="https://codelibrary.opendatasoft.com/tags/gtfs/">
+                gtfs
+            </a>
+            
+            <a class="tag" href="https://codelibrary.opendatasoft.com/tags/list/">
+                list
+            </a>
+            
+            <a class="tag" href="https://codelibrary.opendatasoft.com/tags/map/">
+                map
+            </a>
+            
+            <a class="tag" href="https://codelibrary.opendatasoft.com/tags/navigation/">
+                navigation
+            </a>
+            
+            <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-aggregation/">
+                ods-aggregation
+            </a>
+            
+            <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-analysis/">
+                ods-analysis
+            </a>
+            
+            <a class="tag" href="https://codelibrary.opendatasoft.com/tags/ods-maps/">
+                ods-maps
+            </a>
+            
+        </div>
+    </div>
+</aside>
+
+    </div>
+    <div class="column codelibrary-content">
+    
+  <section>
+    <div class="content-header container is-max-desktop mb-5">
+      <div class="content">
+        <h1>Custom Views - Gtfs Custom View</h1>
+        <p><em>This resources is intended to be used as custom view inside your catalog. Read the <a href="https://help.opendatasoft.com/platform/en/publishing_data/07_configuring_visualizations/06_configuring_custom_view/custom.html#configuring-the-custom-view">user&rsquo;s guide section</a> about custom views for details</em>.
+This custom view will let you display routes and stops inside your catalog, as a view of your dataset.</p>
+
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="box box-example">
+        <div class="content">
+          <h2>
+            GTFS Routes and stops
+            <a class="is-link" href="#gtfs-routes-and-stops">
+              <span class="icon">
+                <img src="/img/fas-link.svg" />
+              </span>
+            </a>
+          </h2>
+          
+          <p class="subtitle">
+            <a href="https://userclub.opendatasoft.com/explore/dataset/transit-bus-routes-gtfs-static/custom/?disjunctive.route_short_name">See it live!</a>
+          </p>
+          
+          <p>The dataset name <code>ctx</code> (the <em>lines</em> in this exemple) will be filtered accordingly to the catalog filters. The <em>stops</em> dataset however, will not be synced with the active catalog filters.</p>
+
+        </div>
+        
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-gtfs-routes-and-stops"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003c!-- This first context simulates the \&#34;ctx\&#34; the custom view will inherit from the catalog page--\u003e\n\u003cods-dataset-context context=\&#34;ctx\&#34; ctx-dataset=\&#34;transit-bus-routes-gtfs-static\&#34;\u003e\n\u003c!-- The component for the custom view starts here 👇 --\u003e\n\u003cods-dataset-context context=\&#34;stops\&#34; stops-dataset=\&#34;transit-bus-stops-gtfs-static\&#34;\u003e\n\n    \u003cdiv class=\&#34;row\&#34;\u003e\n        \u003cdiv class=\&#34;col-md-8 dashboard\&#34;\u003e\n\n            \u003cods-map no-refit=\&#34;true\&#34; display-control=\&#34;false\&#34; search-box=\&#34;false\&#34; toolbar-fullscreen=\&#34;true\&#34; toolbar-geolocation=\&#34;true\&#34; basemap=\&#34;jawg.streets\&#34; location=\&#34;12,44.229,-76.480\&#34; scroll-wheel-zoom=\&#34;false\&#34;\u003e\n                \u003cods-map-layer-group\u003e\n                    \u003cods-map-layer context=\&#34;stops\&#34; color=\&#34;#6A79B0\&#34; picto=\&#34;ods-bus\&#34; show-marker=\&#34;true\&#34; display=\&#34;auto\&#34; shape-opacity=\&#34;0.5\&#34; point-opacity=\&#34;1\&#34; border-color=\&#34;#FFFFFF\&#34; border-opacity=\&#34;1\&#34; border-size=\&#34;1\&#34; border-pattern=\&#34;solid\&#34; caption=\&#34;false\&#34; title=\&#34;Stations du réseau urbain\&#34; size=\&#34;2\&#34; size-min=\&#34;3\&#34; size-max=\&#34;5\&#34; size-function=\&#34;linear\&#34; show-if=\&#34;stations\&#34;\u003e\u003c/ods-map-layer\u003e\n                \u003c/ods-map-layer-group\u003e\n                \u003cods-map-layer-group\u003e\n                    \u003cods-map-layer context=\&#34;lines\&#34; color-by-field=\&#34;route_color\&#34; picto=\&#34;ods-circle\&#34; show-marker=\&#34;true\&#34; display=\&#34;categories\&#34; shape-opacity=\&#34;0.5\&#34; point-opacity=\&#34;1\&#34; border-color=\&#34;#FFFFFF\&#34; border-opacity=\&#34;1\&#34; border-size=\&#34;1\&#34; border-pattern=\&#34;solid\&#34; caption=\&#34;false\&#34; title=\&#34;Lignes du réseau urbain\&#34; size=\&#34;1\&#34;\u003e\u003c/ods-map-layer\u003e\n                \u003c/ods-map-layer-group\u003e\n            \u003c/ods-map\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;col-md-4 dashboard filters\&#34;\u003e\n            \u003clabel class=\&#34;switch\&#34;\u003e\n                \u003cinput type=\&#34;checkbox\&#34; ng-click=\&#34;stations=!stations\&#34;\u003e\n                \u003cspan class=\&#34;slider round\&#34;\u003e\u003c/span\u003e\n            \u003c/label\u003e\n            \u003ch2\u003e Turn on Stops\u003c/h2\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c!-- Component for custom view ends here 👆 --\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+               "css": &#34;.dashboard p {\n    text-align: right;\n    margin-bottom: 0;\n}\n\n#filterline {\n    margin-top: 0;\n}\n\n.dashboard {\n    height: calc(100vh - 210px);\n}\n\n.filters {\n    overflow-y: scroll;\n}\n\n.odswidget-map, .odswidget-map__map {\n    height: 100%;\n}\n\n.odswidget-map-display-control__groups {\n    min-height: 0px;\n}\n\n/* The switch - the box around the slider */\n.switch {\n  position: relative;\n  display: inline-block;\n  width: 60px;\n  height: 34px;\n}\n\n/* Hide default HTML checkbox */\n.switch input {display:none;}\n\n/* The slider */\n.slider {\n  position: absolute;\n  cursor: pointer;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  background-color: #ccc;\n  -webkit-transition: .4s;\n  transition: .4s;\n}\n\n.slider:before {\n  position: absolute;\n  content: \&#34;\&#34;;\n  height: 26px;\n  width: 26px;\n  left: 4px;\n  bottom: 4px;\n  background-color: white;\n  -webkit-transition: .4s;\n  transition: .4s;\n}\n\ninput:checked &#43; .slider {\n  background-color: #2196F3;\n}\n\ninput:focus &#43; .slider {\n  box-shadow: 0 0 1px #2196F3;\n}\n\ninput:checked &#43; .slider:before {\n  -webkit-transform: translateX(26px);\n  -ms-transform: translateX(26px);\n  transform: translateX(26px);\n}\n\n/* Rounded sliders */\n.slider.round {\n  border-radius: 34px;\n}\n\n.slider.round:before {\n  border-radius: 50%;\n}\n&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-gtfs-routes-and-stops"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;defaultDomain&#34;: &#34;https://userclub.opendatasoft.com/&#34;,
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                },
+                {
+                    &#34;provider&#34;: &#34;jawg.streets&#34;,
+                    &#34;label&#34;: &#34;Jawg Streets&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;,
+                    &#34;id&#34;: &#34;streets&#34;
+                }
+            ],
+            &#34;themes&#34;: {
+                &#39;default&#39;: {
+                    &#39;url&#39;: &#39;/img/ods.svg&#39;
+                },
+                &#39;Santé&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Culture, Patrimoine&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Environment&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Transports, Déplacements&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Justice, Sécurité, Police, Crime&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Sport, Loisirs&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Hébergement, Restauration&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Services, Social&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Checklist&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Usages&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                }
+            },
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+        </head>
+        <body>
+        <div ng-app='ods-widgets'>
+            &lt;!-- This first context simulates the &#34;ctx&#34; the custom view will inherit from the catalog page--&gt;
+&lt;ods-dataset-context context=&#34;ctx&#34; ctx-dataset=&#34;transit-bus-routes-gtfs-static&#34;&gt;
+&lt;!-- The component for the custom view starts here 👇 --&gt;
+&lt;ods-dataset-context context=&#34;stops&#34; stops-dataset=&#34;transit-bus-stops-gtfs-static&#34;&gt;
+
+    &lt;div class=&#34;row&#34;&gt;
+        &lt;div class=&#34;col-md-8 dashboard&#34;&gt;
+
+            &lt;ods-map no-refit=&#34;true&#34; display-control=&#34;false&#34; search-box=&#34;false&#34; toolbar-fullscreen=&#34;true&#34; toolbar-geolocation=&#34;true&#34; basemap=&#34;jawg.streets&#34; location=&#34;12,44.229,-76.480&#34; scroll-wheel-zoom=&#34;false&#34;&gt;
+                &lt;ods-map-layer-group&gt;
+                    &lt;ods-map-layer context=&#34;stops&#34; color=&#34;#6A79B0&#34; picto=&#34;ods-bus&#34; show-marker=&#34;true&#34; display=&#34;auto&#34; shape-opacity=&#34;0.5&#34; point-opacity=&#34;1&#34; border-color=&#34;#FFFFFF&#34; border-opacity=&#34;1&#34; border-size=&#34;1&#34; border-pattern=&#34;solid&#34; caption=&#34;false&#34; title=&#34;Stations du réseau urbain&#34; size=&#34;2&#34; size-min=&#34;3&#34; size-max=&#34;5&#34; size-function=&#34;linear&#34; show-if=&#34;stations&#34;&gt;&lt;/ods-map-layer&gt;
+                &lt;/ods-map-layer-group&gt;
+                &lt;ods-map-layer-group&gt;
+                    &lt;ods-map-layer context=&#34;lines&#34; color-by-field=&#34;route_color&#34; picto=&#34;ods-circle&#34; show-marker=&#34;true&#34; display=&#34;categories&#34; shape-opacity=&#34;0.5&#34; point-opacity=&#34;1&#34; border-color=&#34;#FFFFFF&#34; border-opacity=&#34;1&#34; border-size=&#34;1&#34; border-pattern=&#34;solid&#34; caption=&#34;false&#34; title=&#34;Lignes du réseau urbain&#34; size=&#34;1&#34;&gt;&lt;/ods-map-layer&gt;
+                &lt;/ods-map-layer-group&gt;
+            &lt;/ods-map&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-md-4 dashboard filters&#34;&gt;
+            &lt;label class=&#34;switch&#34;&gt;
+                &lt;input type=&#34;checkbox&#34; ng-click=&#34;stations=!stations&#34;&gt;
+                &lt;span class=&#34;slider round&#34;&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;h2&gt; Turn on Stops&lt;/h2&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+&lt;!-- Component for custom view ends here 👆 --&gt;
+&lt;/ods-dataset-context&gt;
+
+        </div>
+        <style type='text/css'>
+            .dashboard p {
+    text-align: right;
+    margin-bottom: 0;
+}
+
+#filterline {
+    margin-top: 0;
+}
+
+.dashboard {
+    height: calc(100vh - 210px);
+}
+
+.filters {
+    overflow-y: scroll;
+}
+
+.odswidget-map, .odswidget-map__map {
+    height: 100%;
+}
+
+.odswidget-map-display-control__groups {
+    min-height: 0px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: &#34;&#34;;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked &#43; .slider {
+  background-color: #2196F3;
+}
+
+input:focus &#43; .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked &#43; .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+        </style>
+        </body>
+        ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level is-flex">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-secondary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-gtfs-routes-and-stops-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        
+                        <li class="button is-secondary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-gtfs-routes-and-stops-css-content">
+                                CSS
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right mt-0">
+                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
+                   data-tooltip="Edit on CodePen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-gtfs-routes-and-stops').submit()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-edit">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-gtfs-routes-and-stops-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;!-- This first context simulates the &#34;ctx&#34; the custom view will inherit from the catalog page--&gt;
+&lt;ods-dataset-context context=&#34;ctx&#34; ctx-dataset=&#34;transit-bus-routes-gtfs-static&#34;&gt;
+&lt;!-- The component for the custom view starts here 👇 --&gt;
+&lt;ods-dataset-context context=&#34;stops&#34; stops-dataset=&#34;transit-bus-stops-gtfs-static&#34;&gt;
+
+    &lt;div class=&#34;row&#34;&gt;
+        &lt;div class=&#34;col-md-8 dashboard&#34;&gt;
+
+            &lt;ods-map no-refit=&#34;true&#34; display-control=&#34;false&#34; search-box=&#34;false&#34; toolbar-fullscreen=&#34;true&#34; toolbar-geolocation=&#34;true&#34; basemap=&#34;jawg.streets&#34; location=&#34;12,44.229,-76.480&#34; scroll-wheel-zoom=&#34;false&#34;&gt;
+                &lt;ods-map-layer-group&gt;
+                    &lt;ods-map-layer context=&#34;stops&#34; color=&#34;#6A79B0&#34; picto=&#34;ods-bus&#34; show-marker=&#34;true&#34; display=&#34;auto&#34; shape-opacity=&#34;0.5&#34; point-opacity=&#34;1&#34; border-color=&#34;#FFFFFF&#34; border-opacity=&#34;1&#34; border-size=&#34;1&#34; border-pattern=&#34;solid&#34; caption=&#34;false&#34; title=&#34;Stations du réseau urbain&#34; size=&#34;2&#34; size-min=&#34;3&#34; size-max=&#34;5&#34; size-function=&#34;linear&#34; show-if=&#34;stations&#34;&gt;&lt;/ods-map-layer&gt;
+                &lt;/ods-map-layer-group&gt;
+                &lt;ods-map-layer-group&gt;
+                    &lt;ods-map-layer context=&#34;lines&#34; color-by-field=&#34;route_color&#34; picto=&#34;ods-circle&#34; show-marker=&#34;true&#34; display=&#34;categories&#34; shape-opacity=&#34;0.5&#34; point-opacity=&#34;1&#34; border-color=&#34;#FFFFFF&#34; border-opacity=&#34;1&#34; border-size=&#34;1&#34; border-pattern=&#34;solid&#34; caption=&#34;false&#34; title=&#34;Lignes du réseau urbain&#34; size=&#34;1&#34;&gt;&lt;/ods-map-layer&gt;
+                &lt;/ods-map-layer-group&gt;
+            &lt;/ods-map&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-md-4 dashboard filters&#34;&gt;
+            &lt;label class=&#34;switch&#34;&gt;
+                &lt;input type=&#34;checkbox&#34; ng-click=&#34;stations=!stations&#34;&gt;
+                &lt;span class=&#34;slider round&#34;&gt;&lt;/span&gt;
+            &lt;/label&gt;
+            &lt;h2&gt; Turn on Stops&lt;/h2&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+&lt;!-- Component for custom view ends here 👆 --&gt;
+&lt;/ods-dataset-context&gt;
+</code></pre>
+                </div>
+            </div>
+            
+            <div class="js-tabcontent"
+                 id="code-gtfs-routes-and-stops-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>.dashboard p {
+    text-align: right;
+    margin-bottom: 0;
+}
+
+#filterline {
+    margin-top: 0;
+}
+
+.dashboard {
+    height: calc(100vh - 210px);
+}
+
+.filters {
+    overflow-y: scroll;
+}
+
+.odswidget-map, .odswidget-map__map {
+    height: 100%;
+}
+
+.odswidget-map-display-control__groups {
+    min-height: 0px;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {display:none;}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: &#34;&#34;;
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked &#43; .slider {
+  background-color: #2196F3;
+}
+
+input:focus &#43; .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked &#43; .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-gtfs-routes-and-stops";
+            iframe = document.getElementById(iframeId);
+             
+            size =  600 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "IFRAME ID HERE";
+            iframe = document.getElementById(iframeId);
+
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+            }
+        }, 1000);
+    });
+</script>
+      </div>
+    </div>
+    
+  </section>
+
+    </div>
+</div>
+
+<footer class="footer">
+    <a href="https://www.opendatasoft.com"
+       class="footer-link"
+       title="Opendatasoft website">
+        <img src="/img/ods-logo.svg"
+             class="footer-logo"
+             alt="Opendatasoft logo"
+        />
+    </a>
+    <span class="footer-copyright">
+        &copy; Copyright 2020
+    </span>
+</footer>
+
+
+
+
+
+
+
+<script>var process = { "env": { "NODE_ENV": "production" } }</script>
+<script type="text/javascript"
+        src="/index.min.b7cad67c0c94df43727d9fcaaa739bf3e2764d456cd1d59cb941701fc99b267f.js"
+        defer></script>
+
+</body>
+</html>
