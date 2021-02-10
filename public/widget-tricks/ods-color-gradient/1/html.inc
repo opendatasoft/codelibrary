@@ -1,6 +1,4 @@
 <ods-dataset-context context="reg,dep,carpool"
-                     reg-dataset="regions-et-collectivites-doutre-mer-france"
-                     reg-domain="userclub"
                      dep-dataset="departements-et-collectivites-doutre-mer-france"
                      dep-domain="userclub"
                      carpool-dataset="base-nationale-des-lieux-de-covoiturage-en-france"

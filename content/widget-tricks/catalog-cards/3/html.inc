@@ -12,35 +12,30 @@
                     <div class="catalog-card-info">
                         <div class="catalog-card-metrics">
                             <div class="catalog-card-metric">
-                        <span class="catalog-card-metric-value">
-                            <i class="fa fa-cube" aria-hidden="true"></i>&nbsp;&nbsp;{{ dataset.metas.records_count | siPrefixFormat }}
-                        </span>
-                                <span><translate>enregistrements</translate>
-                        </span>
+                                <span class="catalog-card-metric-value">
+                                    <i class="fa fa-cube" aria-hidden="true"></i>&nbsp;{{ dataset.metas.records_count | siPrefixFormat }}
+                                </span>
+                                <span> records</span>
                             </div>
                             <div class="catalog-card-metric" ng-if="dataset.extra_metas.explore.popularity_score">
-                        <span class="catalog-card-metric-value">
-                            <i class="fa fa-heartbeat" aria-hidden="true"></i>&nbsp;&nbsp;{{ dataset.extra_metas.explore.popularity_score * 10| number }}
-                        </span>
-                                <span>
-                            <translate> (score de popularité)</translate>
-                        </span>
+                                <span class="catalog-card-metric-value">
+                                    <i class="fa fa-heartbeat" aria-hidden="true"></i>&nbsp;{{ dataset.extra_metas.explore.popularity_score * 10| number }}
+                                </span>
+                                <span> (popularity score)</span>
                             </div>
                             <div class="catalog-card-metric">
-                        <span class="catalog-card-metric-value">
-                            <i class="fa fa-clock-o" aria-hidden="true"></i> &nbsp;&nbsp;{{ dataset.metas.modified | date:format:"DD/MM/YYYY" }}
-                        </span>
-                                <span>{{ dataset.metas.modified | date:"'à' HH:mm" }}</span>
+                                <span class="catalog-card-metric-value">
+                                    <i class="fa fa-clock-o" aria-hidden="true"></i>&nbsp;{{ dataset.metas.modified | date:"short" }}</span>
                             </div>
                             <div class="catalog-card-metric">
-                        <span class="catalog-card-metric-value">
-                            <i class="fa fa-shield" aria-hidden="true"></i> &nbsp;&nbsp;{{ dataset.metas.license }}
-                        </span>
+                                <span class="catalog-card-metric-value">
+                                    <i class="fa fa-shield" aria-hidden="true"></i>&nbsp;{{ dataset.metas.license }}
+                                </span>
                             </div>
                             <div class="catalog-card-metric">
-                        <span class="catalog-card-metric-value">
-                            <i class="fa fa-user-circle" aria-hidden="true"></i> &nbsp;{{ dataset.metas.publisher }}
-                        </span>
+                                <span class="catalog-card-metric-value">
+                                    <i class="fa fa-user-circle" aria-hidden="true"></i>&nbsp;{{ dataset.metas.publisher }}
+                                </span>
                             </div>
                         </div>
                     </div>
