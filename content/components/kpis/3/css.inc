@@ -131,6 +131,8 @@
           transform: rotateY(180deg);
 }
 
-.hint {
+p.hint {
   color: darkgrey;
+  align-self: flex-end;
+  margin: 16px -27px -27px 0;
 }
