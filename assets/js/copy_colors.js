@@ -11,12 +11,12 @@ export const initCopyColorToCB = (event) => {
     const divs = document.querySelectorAll('.ods-content .theme-colors .color');
 
     divs.forEach((containerParent) => {
-      var containerEl = containerParent.querySelectorAll('.highlight > pre')[0];
+      const containerEl = containerParent.querySelectorAll('.highlight > pre')[0];
       containerParent.setAttribute("role", "button");
       containerParent.dataset['tooltip'] = copyText;
       containerParent.classList.add('has-tooltip-top');
 
-      var codeBlock = containerEl.querySelector('code');
+      const codeBlock = containerEl.querySelector('code');
 
       containerParent.addEventListener('click', () => {
         clipboard.writeText(codeBlock.innerText).then(() => {

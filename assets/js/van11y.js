@@ -6,7 +6,7 @@
  * Modified to work with BULMA CSS Framework.
  * ie. add is-active class on active tabs and panels
  */
-(doc => {
+export default () => {
 
     'use strict';
 
@@ -53,7 +53,7 @@
     //const IS_OPENED_CLASS = 'is-opened';
 
 
-    const findById = id => doc.getElementById(id);
+    const findById = id => document.getElementById(id);
 
     const addClass = (el, className) => {
         if (el.classList) {
@@ -115,6 +115,7 @@
     }
 
     const selectLink = (el) => {
+
         let destination = findById(el.getAttribute(ATTR_CONTROLS));
         setAttributes(el, {
             [ATTR_SELECTED]: 'true',
@@ -180,7 +181,7 @@
      * @param  {Node} node Default document
      * @return {Array}
      */
-    const $listTabs = (node = doc) => [].slice.call(node.querySelectorAll('.' + TABS_JS));
+    const $listTabs = (node = document) => [].slice.call(node.querySelectorAll('.' + TABS_JS));
 
 
     /**
@@ -188,7 +189,6 @@
      * @param  {Node} node
      */
     const attach = (node) => {
-
         $listTabs(node)
             .forEach((tabs_node) => {
 
@@ -350,7 +350,7 @@
         .forEach(eventName => {
             //let isCtrl = false;
 
-            doc.body
+            document.body
                 .addEventListener(eventName, e => {
 
                     // click on a tab link or on something IN a tab link
@@ -512,6 +512,4 @@
     document.addEventListener('DOMContentLoaded', onLoad);
 
     window.van11yAccessibleTabPanelAria = attach;
-
-
-})(document);
+}

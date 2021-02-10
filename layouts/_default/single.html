@@ -4,22 +4,36 @@
 
 {{ define "main" }}
 
-<section>
-    <div class="content-header container is-max-desktop mb-5">
-        <div class="content">
-            {{ .Content }}
-        </div>
-    </div>
-    {{ range .Page.Resources.Match "*/index.md" }}
-    <div class="container">
-        <div class="box box-example">
+<section class="section">
+  <div class="columns">
+    <div class="column is-9">
+      <div class="content-header is-max-desktop mb-5">
           <div class="content">
-            {{ .Content }}
+              {{ .Content }}
           </div>
-          {{ partial "ods-content.html" .}}
+      </div>
+      {{ range .Page.Resources.Match "*/index.md" }}
+        <div class="content">
+          {{ .Content }}
         </div>
+        {{ partial "ods-content.html" .}}
+      {{ end }}
     </div>
-    {{ end }}
+    <div class="column is-3 is-hidden-mobile">
+      <div class="toc">
+        <h6 class="is-6">On this page</h6>
+        <ul>
+          {{ range .Page.Resources.Match "*/index.md" }}
+          <li>
+            <a href="#{{ .Title | anchorize }}">
+              {{ .Title }}
+            </a>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
 
 {{ end }}
