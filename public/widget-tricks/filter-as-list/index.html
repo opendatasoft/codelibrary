@@ -3,9 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>
-        
-Filters as an HTML Select &ndash; Codelibrary
-
+         Filters as an HTML Select &ndash; Codelibrary 
     </title>
 
     
@@ -171,15 +169,15 @@ Filters as an HTML Select &ndash; Codelibrary
                 <ul>
                     
                     <li>
-                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/svg-maps/">SVG Maps</a>
-                    </li>
-                    
-                    <li>
-                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/catalog-cards/">Catalog cards</a>
+                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/svg-maps/">Static maps, a quick introduction</a>
                     </li>
                     
                     <li>
                         <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/charts/">Chart samples</a>
+                    </li>
+                    
+                    <li>
+                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/catalog-cards/">Custom catalog card</a>
                     </li>
                     
                     <li>
@@ -191,7 +189,7 @@ Filters as an HTML Select &ndash; Codelibrary
                     </li>
                     
                     <li>
-                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/drill-down/">Drill-down chart</a>
+                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/drill-down/">Drill-down refine in charts</a>
                     </li>
                     
                     <li>
@@ -199,15 +197,11 @@ Filters as an HTML Select &ndash; Codelibrary
                     </li>
                     
                     <li>
-                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-aggregation/">ods-aggregation</a>
+                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-analysis/">ods-analysis, quick intro</a>
                     </li>
                     
                     <li>
-                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-analysis/">ods-analysis</a>
-                    </li>
-                    
-                    <li>
-                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-color-gradient/">ods-color-gradient &amp; ods-legend</a>
+                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-color-gradient/">ods-color-gradient &#43; ods-map : a choropleth alternative</a>
                     </li>
                     
                     <li>
@@ -219,11 +213,7 @@ Filters as an HTML Select &ndash; Codelibrary
                     </li>
                     
                     <li>
-                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-pop-in/">ods-pop-in</a>
-                    </li>
-                    
-                    <li>
-                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-date-range-slider/">ods-range-slider</a>
+                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-pop-in/">ods-pop-in variants</a>
                     </li>
                     
                     <li>
@@ -235,11 +225,15 @@ Filters as an HTML Select &ndash; Codelibrary
                     </li>
                     
                     <li>
+                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-aggregation/">oods-aggregation</a>
+                    </li>
+                    
+                    <li>
                         <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/share-print/">Share and print</a>
                     </li>
                     
                     <li>
-                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/timeline/">Timeline Custom View</a>
+                        <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/ods-date-range-slider/">Timeline custom view</a>
                     </li>
                     
                 </ul>
@@ -307,33 +301,30 @@ Filters as an HTML Select &ndash; Codelibrary
     </div>
     <div class="column codelibrary-content">
     
-
-<section>
+  <section>
     <div class="content-header container is-max-desktop mb-5">
+      <div class="content">
+        <h1>Widget Tricks - Filters as an HTML Select</h1>
+        
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="box box-example">
         <div class="content">
-            <h1 class="title" id="filters-as-an-html-selects">
-  Filters as an HTML Selects
-  
-</h1>
+          <h2>
+            Months over several years range selector
+            <a class="is-link" href="#months-over-several-years-range-selector">
+              <span class="icon">
+                <img src="/img/fas-link.svg" />
+              </span>
+            </a>
+          </h2>
+          
+          <p>Most complex scenario as the selector will keep an iterator to see witch value is selected, and compute the date each time another selection is made. It&rsquo;s based on this iterator by starting from the starting date and increasing the number of months by this iterator to get back to the selection. It manipulates facets, dates, and advanced angularJs expression.</p>
 
         </div>
-    </div>
-    
-    <div class="container">
-        <div class="box box-example">
-          <div class="content">
-            <h2 class="title" id="simple-case">
-  Simple case
-  
-    <a class="is-link" href="#simple-case">
-      <img src="/img/fas-link.svg" />
-    </a>
-  
-</h2>
-<p>Powered by ods-facet-results, the simpler case, a list of choice, you pick one, it refines !</p>
-
-          </div>
-          
+        
 
 
 <div class="codepen">
@@ -341,1157 +332,7 @@ Filters as an HTML Select &ndash; Codelibrary
     
     
 
-    <form id="form-filters-as-an-html-select-1"
-          action="https://codepen.io/pen/define"
-          method="POST"
-          target="_blank">
-        <input type="hidden"
-               name="data"
-               value='{
-               "title": "New Pen!",
-               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
-               "editors": 110,
-               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003c!-- Important here: the disjunctive (multi filter) mode for the facet to still display other values even if one is selected --\u003e\n\u003cods-dataset-context context=\&#34;swr\&#34;\n                     swr-dataset=\&#34;shanghai-world-university-ranking\&#34;\n                     swr-domain=\&#34;public\&#34;\n                     swr-parameters=\&#34;{&#39;disjunctive.country&#39;:true}\&#34;\u003e\n    \u003cdiv class=\&#34;row\&#34;\u003e\n        \u003cdiv class=\&#34;col-sm-4\&#34;\n             ods-facet-results=\&#34;items\&#34;\n             ods-facet-results-context=\&#34;swr\&#34;\n             ods-facet-results-facet-name=\&#34;country\&#34;\n             ods-facet-results-sort=\&#34;alphanum\&#34;\u003e\n            \u003ch3\u003e\n                Select a country\n            \u003c/h3\u003e\n            \u003ch5\u003e\n                \&#34;ranks\&#34;: number of ranking score over years in the dataset\n            \u003c/h5\u003e\n            \u003cselect ng-model=\&#34;swr.parameters[&#39;refine.country&#39;]\&#34;\n                    ng-options=\&#34;item.path as (item.name&#43;&#39; (&#39;&#43;item.count&#43;&#39; rank&#39;&#43;(item.count\u003e1?&#39;s&#39;:&#39;&#39;)&#43;&#39;)&#39;) for item in items\&#34;\n                    ng-selected=\&#34;swr.parameters[&#39;refine.country&#39;] == item.path\&#34;\u003e\n                \u003coption value=\&#34;\&#34;\u003e-- All countries --\u003c/option\u003e\n            \u003c/select\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;col-sm-8\&#34;\u003e\n            \u003cods-chart single-y-axis=\&#34;true\&#34; min=\&#34;0\&#34; max=\&#34;100\&#34; step=\&#34;10\&#34; labels-x-length=\&#34;30\&#34; align-month=\&#34;true\&#34;\u003e\n                \u003cods-chart-query context=\&#34;swr\&#34; field-x=\&#34;university_name\&#34; maxpoints=\&#34;10\&#34; sort=\&#34;serie1-1\&#34;\u003e\n                    \u003cods-chart-serie expression-y=\&#34;pub\&#34; chart-type=\&#34;bar\&#34; function-y=\&#34;AVG\&#34; label-y=\&#34;Average score (research paper publication)\&#34; color=\&#34;#1B6698\&#34; display-units=\&#34;false\&#34; display-values=\&#34;true\&#34; scientific-display=\&#34;false\&#34;\u003e\n                    \u003c/ods-chart-serie\u003e\n                \u003c/ods-chart-query\u003e\n            \u003c/ods-chart\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
-               "css": &#34;&#34; }'>
-    </form>
-</div>
-
-<div class="ods-content">
-    <section class="box box-live-example">
-      <iframe id="iframe-filters-as-an-html-select-1"
-              width="100%" height="100%"
-              src="about:blank"
-              srcdoc="
-        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;&gt;
-
-&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;&gt;
-
-&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js&#34;&gt;&lt;/script&gt;
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;&gt;&lt;/script&gt;
-
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;&gt;&lt;/script&gt;
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
-
-&lt;script type=&#34;text/javascript&#34;&gt;
-    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {
-        ODSWidgetsConfigProvider.setConfig({
-            &#34;defaultDomain&#34;: &#34;https://userclub.opendatasoft.com/&#34;,
-            &#34;basemaps&#34;: [
-                {
-                    &#34;provider&#34;: &#34;jawg.light&#34;,
-                    &#34;label&#34;: &#34;Jawg Light&#34;,
-                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
-                },
-                {
-                    &#34;provider&#34;: &#34;jawg.streets&#34;,
-                    &#34;label&#34;: &#34;Jawg Streets&#34;,
-                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;,
-                    &#34;id&#34;: &#34;streets&#34;
-                }
-            ],
-            &#34;themes&#34;: {
-                &#39;default&#39;: {
-                    &#39;url&#39;: &#39;/img/ods.svg&#39;
-                },
-                &#39;Santé&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Culture, Patrimoine&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Environment&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Transports, Déplacements&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Justice, Sécurité, Police, Crime&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Sport, Loisirs&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Hébergement, Restauration&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Services, Social&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Checklist&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Usages&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                }
-            },
-            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
-        });
-    });
-&lt;/script&gt;
-
-&lt;script type=&#34;text/javascript&#34;&gt;
-    document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
-        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
-            el.addEventListener(&#39;click&#39;, (event) =&gt; {
-                event.preventDefault();
-            });
-        })
-    });
-&lt;/script&gt;
-
-        </head>
-        <body>
-        <div ng-app='ods-widgets'>
-            &lt;!-- Important here: the disjunctive (multi filter) mode for the facet to still display other values even if one is selected --&gt;
-&lt;ods-dataset-context context=&#34;swr&#34;
-                     swr-dataset=&#34;shanghai-world-university-ranking&#34;
-                     swr-domain=&#34;public&#34;
-                     swr-parameters=&#34;{&#39;disjunctive.country&#39;:true}&#34;&gt;
-    &lt;div class=&#34;row&#34;&gt;
-        &lt;div class=&#34;col-sm-4&#34;
-             ods-facet-results=&#34;items&#34;
-             ods-facet-results-context=&#34;swr&#34;
-             ods-facet-results-facet-name=&#34;country&#34;
-             ods-facet-results-sort=&#34;alphanum&#34;&gt;
-            &lt;h3&gt;
-                Select a country
-            &lt;/h3&gt;
-            &lt;h5&gt;
-                &#34;ranks&#34;: number of ranking score over years in the dataset
-            &lt;/h5&gt;
-            &lt;select ng-model=&#34;swr.parameters[&#39;refine.country&#39;]&#34;
-                    ng-options=&#34;item.path as (item.name&#43;&#39; (&#39;&#43;item.count&#43;&#39; rank&#39;&#43;(item.count&gt;1?&#39;s&#39;:&#39;&#39;)&#43;&#39;)&#39;) for item in items&#34;
-                    ng-selected=&#34;swr.parameters[&#39;refine.country&#39;] == item.path&#34;&gt;
-                &lt;option value=&#34;&#34;&gt;-- All countries --&lt;/option&gt;
-            &lt;/select&gt;
-        &lt;/div&gt;
-        &lt;div class=&#34;col-sm-8&#34;&gt;
-            &lt;ods-chart single-y-axis=&#34;true&#34; min=&#34;0&#34; max=&#34;100&#34; step=&#34;10&#34; labels-x-length=&#34;30&#34; align-month=&#34;true&#34;&gt;
-                &lt;ods-chart-query context=&#34;swr&#34; field-x=&#34;university_name&#34; maxpoints=&#34;10&#34; sort=&#34;serie1-1&#34;&gt;
-                    &lt;ods-chart-serie expression-y=&#34;pub&#34; chart-type=&#34;bar&#34; function-y=&#34;AVG&#34; label-y=&#34;Average score (research paper publication)&#34; color=&#34;#1B6698&#34; display-units=&#34;false&#34; display-values=&#34;true&#34; scientific-display=&#34;false&#34;&gt;
-                    &lt;/ods-chart-serie&gt;
-                &lt;/ods-chart-query&gt;
-            &lt;/ods-chart&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/ods-dataset-context&gt;
-
-        </div>
-        <style type='text/css'>
-            
-        </style>
-        </body>
-        ">
-      </iframe>
-    </section>
-
-    <section class="box box-code js-tabs">
-        <nav class="level is-flex">
-            <div class="level-left">
-                <div class="level-item">
-                    <ul class="buttons has-addons js-tablist">
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-filters-as-an-html-select-1-html-content">
-                                HTML
-                            </a>
-                        </li>
-                        
-                    </ul>
-                </div>
-            </div>
-            <div class="level-right mt-0">
-                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
-                   data-tooltip="Edit on CodePen"
-                   target="_blank"
-                   aria-role="link"
-                   rel="noopener"
-                   title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-filters-as-an-html-select-1').submit()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="feather feather-edit">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-                    </svg>
-                </a>
-            </div>
-        </nav>
-
-
-        <div class="tab-content">
-            <div class="js-tabcontent"
-                 id="code-filters-as-an-html-select-1-html-content">
-                <div class="highlight">
-                    <pre class="language-html" data-lang="html"><code>&lt;!-- Important here: the disjunctive (multi filter) mode for the facet to still display other values even if one is selected --&gt;
-&lt;ods-dataset-context context=&#34;swr&#34;
-                     swr-dataset=&#34;shanghai-world-university-ranking&#34;
-                     swr-domain=&#34;public&#34;
-                     swr-parameters=&#34;{&#39;disjunctive.country&#39;:true}&#34;&gt;
-    &lt;div class=&#34;row&#34;&gt;
-        &lt;div class=&#34;col-sm-4&#34;
-             ods-facet-results=&#34;items&#34;
-             ods-facet-results-context=&#34;swr&#34;
-             ods-facet-results-facet-name=&#34;country&#34;
-             ods-facet-results-sort=&#34;alphanum&#34;&gt;
-            &lt;h3&gt;
-                Select a country
-            &lt;/h3&gt;
-            &lt;h5&gt;
-                &#34;ranks&#34;: number of ranking score over years in the dataset
-            &lt;/h5&gt;
-            &lt;select ng-model=&#34;swr.parameters[&#39;refine.country&#39;]&#34;
-                    ng-options=&#34;item.path as (item.name&#43;&#39; (&#39;&#43;item.count&#43;&#39; rank&#39;&#43;(item.count&gt;1?&#39;s&#39;:&#39;&#39;)&#43;&#39;)&#39;) for item in items&#34;
-                    ng-selected=&#34;swr.parameters[&#39;refine.country&#39;] == item.path&#34;&gt;
-                &lt;option value=&#34;&#34;&gt;-- All countries --&lt;/option&gt;
-            &lt;/select&gt;
-        &lt;/div&gt;
-        &lt;div class=&#34;col-sm-8&#34;&gt;
-            &lt;ods-chart single-y-axis=&#34;true&#34; min=&#34;0&#34; max=&#34;100&#34; step=&#34;10&#34; labels-x-length=&#34;30&#34; align-month=&#34;true&#34;&gt;
-                &lt;ods-chart-query context=&#34;swr&#34; field-x=&#34;university_name&#34; maxpoints=&#34;10&#34; sort=&#34;serie1-1&#34;&gt;
-                    &lt;ods-chart-serie expression-y=&#34;pub&#34; chart-type=&#34;bar&#34; function-y=&#34;AVG&#34; label-y=&#34;Average score (research paper publication)&#34; color=&#34;#1B6698&#34; display-units=&#34;false&#34; display-values=&#34;true&#34; scientific-display=&#34;false&#34;&gt;
-                    &lt;/ods-chart-serie&gt;
-                &lt;/ods-chart-query&gt;
-            &lt;/ods-chart&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/ods-dataset-context&gt;
-</code></pre>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-</div>
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-filters-as-an-html-select-1";
-            iframe = document.getElementById(iframeId);
-             
-            size =  500 
-             
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-                if (iframe.height == size) {
-                    clearInterval(loopId);
-                } else {
-                    iframe.height = size > 1 ? size : scrollHeight;
-                }
-            }
-        }, 1000);
-    });
-</script>
-
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "IFRAME ID HERE";
-            iframe = document.getElementById(iframeId);
-
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-            }
-        }, 1000);
-    });
-</script>
-        </div>
-    </div>
-    
-    <div class="container">
-        <div class="box box-example">
-          <div class="content">
-            <h2 class="title" id="simple-case-with-default-selection">
-  Simple case, with default selection
-  
-    <a class="is-link" href="#simple-case-with-default-selection">
-      <img src="/img/fas-link.svg" />
-    </a>
-  
-</h2>
-<p>A more complex case where an ods-results enumerator get a value to set a default selection</p>
-
-          </div>
-          
-
-
-<div class="codepen">
-    
-    
-    
-
-    <form id="form-filters-as-an-html-select-2"
-          action="https://codepen.io/pen/define"
-          method="POST"
-          target="_blank">
-        <input type="hidden"
-               name="data"
-               value='{
-               "title": "New Pen!",
-               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
-               "editors": 110,
-               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003c!-- Important here: in addition of the important disjunctive param, you need to think about the sort param to get the expected 1st record with ods-results --\u003e\n\u003cods-dataset-context context=\&#34;swr\&#34;\n                      swr-dataset=\&#34;shanghai-world-university-ranking\&#34;\n                      swr-domain=\&#34;public\&#34;\n                     swr-parameters=\&#34;{&#39;disjunctive.country&#39;:true,\n                                     &#39;sort&#39;:&#39;total_score&#39;}\&#34;\n                     ng-init=\&#34;default = {&#39;selection&#39;:undefined}\&#34;\u003e\n    \u003c!-- Important here: store the result in a global variable to use it later --\u003e\n    \u003cspan ng-repeat=\&#34;item in items\&#34; ods-results=\&#34;items\&#34; ods-results-context=\&#34;swr\&#34; ods-results-max=\&#34;1\&#34;\u003e\n        {{ default.selection = item.fields.country ; \&#34;\&#34; }}\n    \u003c/span\u003e\n    \u003cdiv class=\&#34;row\&#34;\u003e\n        \u003cdiv class=\&#34;col-sm-4\&#34;\u003e\n            \u003ch3\u003e\n                Select a country\n            \u003c/h3\u003e\n            \u003ch5\u003e\n                Default selection: country having the university with the best score.\n            \u003c/h5\u003e\n            \u003c!-- Important here: ng-init is executed only once, it&#39;s perfect to set the first refine at start-up --\u003e\n            \u003c!-- Important here: only display the select once default.selection exists --\u003e\n            \u003cselect ng-if=\&#34;default.selection\&#34;\n                    ng-model=\&#34;swr.parameters[&#39;refine.country&#39;]\&#34;\n                    ng-init=\&#34;swr.parameters[&#39;refine.country&#39;] = default.selection\&#34;\u003e\n                \u003coption ods-facet-results=\&#34;items\&#34;\n                        ods-facet-results-context=\&#34;swr\&#34;\n                        ods-facet-results-facet-name=\&#34;country\&#34;\n                        ods-facet-results-sort=\&#34;alphanum\&#34;\n                        ng-repeat=\&#34;item in items\&#34;\n                        value=\&#34;{{item.name}}\&#34;\n                        ng-selected=\&#34;item.name == default.selection\&#34;\u003e\n                    {{item.name}} ({{item.count}} rank{{item.count\u003e1?&#39;s&#39;:&#39;&#39;}})\n                \u003c/option\u003e\n            \u003c/select\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;col-sm-8\&#34;\u003e\n            \u003cods-chart single-y-axis=\&#34;true\&#34; min=\&#34;0\&#34; max=\&#34;100\&#34; step=\&#34;10\&#34; labels-x-length=\&#34;30\&#34; align-month=\&#34;true\&#34;\u003e\n                \u003cods-chart-query context=\&#34;swr\&#34; field-x=\&#34;university_name\&#34; maxpoints=\&#34;10\&#34; sort=\&#34;serie1-1\&#34;\u003e\n                    \u003cods-chart-serie expression-y=\&#34;pub\&#34; chart-type=\&#34;bar\&#34; function-y=\&#34;AVG\&#34; label-y=\&#34;Average score (research paper publication)\&#34; color=\&#34;#1B6698\&#34; display-units=\&#34;false\&#34; display-values=\&#34;true\&#34; scientific-display=\&#34;false\&#34;\u003e\n                    \u003c/ods-chart-serie\u003e\n                \u003c/ods-chart-query\u003e\n            \u003c/ods-chart\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
-               "css": &#34;&#34; }'>
-    </form>
-</div>
-
-<div class="ods-content">
-    <section class="box box-live-example">
-      <iframe id="iframe-filters-as-an-html-select-2"
-              width="100%" height="100%"
-              src="about:blank"
-              srcdoc="
-        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;&gt;
-
-&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;&gt;
-
-&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js&#34;&gt;&lt;/script&gt;
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;&gt;&lt;/script&gt;
-
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;&gt;&lt;/script&gt;
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
-
-&lt;script type=&#34;text/javascript&#34;&gt;
-    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {
-        ODSWidgetsConfigProvider.setConfig({
-            &#34;defaultDomain&#34;: &#34;https://userclub.opendatasoft.com/&#34;,
-            &#34;basemaps&#34;: [
-                {
-                    &#34;provider&#34;: &#34;jawg.light&#34;,
-                    &#34;label&#34;: &#34;Jawg Light&#34;,
-                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
-                },
-                {
-                    &#34;provider&#34;: &#34;jawg.streets&#34;,
-                    &#34;label&#34;: &#34;Jawg Streets&#34;,
-                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;,
-                    &#34;id&#34;: &#34;streets&#34;
-                }
-            ],
-            &#34;themes&#34;: {
-                &#39;default&#39;: {
-                    &#39;url&#39;: &#39;/img/ods.svg&#39;
-                },
-                &#39;Santé&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Culture, Patrimoine&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Environment&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Transports, Déplacements&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Justice, Sécurité, Police, Crime&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Sport, Loisirs&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Hébergement, Restauration&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Services, Social&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Checklist&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Usages&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                }
-            },
-            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
-        });
-    });
-&lt;/script&gt;
-
-&lt;script type=&#34;text/javascript&#34;&gt;
-    document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
-        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
-            el.addEventListener(&#39;click&#39;, (event) =&gt; {
-                event.preventDefault();
-            });
-        })
-    });
-&lt;/script&gt;
-
-        </head>
-        <body>
-        <div ng-app='ods-widgets'>
-            &lt;!-- Important here: in addition of the important disjunctive param, you need to think about the sort param to get the expected 1st record with ods-results --&gt;
-&lt;ods-dataset-context context=&#34;swr&#34;
-                      swr-dataset=&#34;shanghai-world-university-ranking&#34;
-                      swr-domain=&#34;public&#34;
-                     swr-parameters=&#34;{&#39;disjunctive.country&#39;:true,
-                                     &#39;sort&#39;:&#39;total_score&#39;}&#34;
-                     ng-init=&#34;default = {&#39;selection&#39;:undefined}&#34;&gt;
-    &lt;!-- Important here: store the result in a global variable to use it later --&gt;
-    &lt;span ng-repeat=&#34;item in items&#34; ods-results=&#34;items&#34; ods-results-context=&#34;swr&#34; ods-results-max=&#34;1&#34;&gt;
-        {{ default.selection = item.fields.country ; &#34;&#34; }}
-    &lt;/span&gt;
-    &lt;div class=&#34;row&#34;&gt;
-        &lt;div class=&#34;col-sm-4&#34;&gt;
-            &lt;h3&gt;
-                Select a country
-            &lt;/h3&gt;
-            &lt;h5&gt;
-                Default selection: country having the university with the best score.
-            &lt;/h5&gt;
-            &lt;!-- Important here: ng-init is executed only once, it&#39;s perfect to set the first refine at start-up --&gt;
-            &lt;!-- Important here: only display the select once default.selection exists --&gt;
-            &lt;select ng-if=&#34;default.selection&#34;
-                    ng-model=&#34;swr.parameters[&#39;refine.country&#39;]&#34;
-                    ng-init=&#34;swr.parameters[&#39;refine.country&#39;] = default.selection&#34;&gt;
-                &lt;option ods-facet-results=&#34;items&#34;
-                        ods-facet-results-context=&#34;swr&#34;
-                        ods-facet-results-facet-name=&#34;country&#34;
-                        ods-facet-results-sort=&#34;alphanum&#34;
-                        ng-repeat=&#34;item in items&#34;
-                        value=&#34;{{item.name}}&#34;
-                        ng-selected=&#34;item.name == default.selection&#34;&gt;
-                    {{item.name}} ({{item.count}} rank{{item.count&gt;1?&#39;s&#39;:&#39;&#39;}})
-                &lt;/option&gt;
-            &lt;/select&gt;
-        &lt;/div&gt;
-        &lt;div class=&#34;col-sm-8&#34;&gt;
-            &lt;ods-chart single-y-axis=&#34;true&#34; min=&#34;0&#34; max=&#34;100&#34; step=&#34;10&#34; labels-x-length=&#34;30&#34; align-month=&#34;true&#34;&gt;
-                &lt;ods-chart-query context=&#34;swr&#34; field-x=&#34;university_name&#34; maxpoints=&#34;10&#34; sort=&#34;serie1-1&#34;&gt;
-                    &lt;ods-chart-serie expression-y=&#34;pub&#34; chart-type=&#34;bar&#34; function-y=&#34;AVG&#34; label-y=&#34;Average score (research paper publication)&#34; color=&#34;#1B6698&#34; display-units=&#34;false&#34; display-values=&#34;true&#34; scientific-display=&#34;false&#34;&gt;
-                    &lt;/ods-chart-serie&gt;
-                &lt;/ods-chart-query&gt;
-            &lt;/ods-chart&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/ods-dataset-context&gt;
-
-        </div>
-        <style type='text/css'>
-            
-        </style>
-        </body>
-        ">
-      </iframe>
-    </section>
-
-    <section class="box box-code js-tabs">
-        <nav class="level is-flex">
-            <div class="level-left">
-                <div class="level-item">
-                    <ul class="buttons has-addons js-tablist">
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-filters-as-an-html-select-2-html-content">
-                                HTML
-                            </a>
-                        </li>
-                        
-                    </ul>
-                </div>
-            </div>
-            <div class="level-right mt-0">
-                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
-                   data-tooltip="Edit on CodePen"
-                   target="_blank"
-                   aria-role="link"
-                   rel="noopener"
-                   title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-filters-as-an-html-select-2').submit()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="feather feather-edit">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-                    </svg>
-                </a>
-            </div>
-        </nav>
-
-
-        <div class="tab-content">
-            <div class="js-tabcontent"
-                 id="code-filters-as-an-html-select-2-html-content">
-                <div class="highlight">
-                    <pre class="language-html" data-lang="html"><code>&lt;!-- Important here: in addition of the important disjunctive param, you need to think about the sort param to get the expected 1st record with ods-results --&gt;
-&lt;ods-dataset-context context=&#34;swr&#34;
-                      swr-dataset=&#34;shanghai-world-university-ranking&#34;
-                      swr-domain=&#34;public&#34;
-                     swr-parameters=&#34;{&#39;disjunctive.country&#39;:true,
-                                     &#39;sort&#39;:&#39;total_score&#39;}&#34;
-                     ng-init=&#34;default = {&#39;selection&#39;:undefined}&#34;&gt;
-    &lt;!-- Important here: store the result in a global variable to use it later --&gt;
-    &lt;span ng-repeat=&#34;item in items&#34; ods-results=&#34;items&#34; ods-results-context=&#34;swr&#34; ods-results-max=&#34;1&#34;&gt;
-        {{ default.selection = item.fields.country ; &#34;&#34; }}
-    &lt;/span&gt;
-    &lt;div class=&#34;row&#34;&gt;
-        &lt;div class=&#34;col-sm-4&#34;&gt;
-            &lt;h3&gt;
-                Select a country
-            &lt;/h3&gt;
-            &lt;h5&gt;
-                Default selection: country having the university with the best score.
-            &lt;/h5&gt;
-            &lt;!-- Important here: ng-init is executed only once, it&#39;s perfect to set the first refine at start-up --&gt;
-            &lt;!-- Important here: only display the select once default.selection exists --&gt;
-            &lt;select ng-if=&#34;default.selection&#34;
-                    ng-model=&#34;swr.parameters[&#39;refine.country&#39;]&#34;
-                    ng-init=&#34;swr.parameters[&#39;refine.country&#39;] = default.selection&#34;&gt;
-                &lt;option ods-facet-results=&#34;items&#34;
-                        ods-facet-results-context=&#34;swr&#34;
-                        ods-facet-results-facet-name=&#34;country&#34;
-                        ods-facet-results-sort=&#34;alphanum&#34;
-                        ng-repeat=&#34;item in items&#34;
-                        value=&#34;{{item.name}}&#34;
-                        ng-selected=&#34;item.name == default.selection&#34;&gt;
-                    {{item.name}} ({{item.count}} rank{{item.count&gt;1?&#39;s&#39;:&#39;&#39;}})
-                &lt;/option&gt;
-            &lt;/select&gt;
-        &lt;/div&gt;
-        &lt;div class=&#34;col-sm-8&#34;&gt;
-            &lt;ods-chart single-y-axis=&#34;true&#34; min=&#34;0&#34; max=&#34;100&#34; step=&#34;10&#34; labels-x-length=&#34;30&#34; align-month=&#34;true&#34;&gt;
-                &lt;ods-chart-query context=&#34;swr&#34; field-x=&#34;university_name&#34; maxpoints=&#34;10&#34; sort=&#34;serie1-1&#34;&gt;
-                    &lt;ods-chart-serie expression-y=&#34;pub&#34; chart-type=&#34;bar&#34; function-y=&#34;AVG&#34; label-y=&#34;Average score (research paper publication)&#34; color=&#34;#1B6698&#34; display-units=&#34;false&#34; display-values=&#34;true&#34; scientific-display=&#34;false&#34;&gt;
-                    &lt;/ods-chart-serie&gt;
-                &lt;/ods-chart-query&gt;
-            &lt;/ods-chart&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/ods-dataset-context&gt;
-</code></pre>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-</div>
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-filters-as-an-html-select-2";
-            iframe = document.getElementById(iframeId);
-             
-            size =  500 
-             
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-                if (iframe.height == size) {
-                    clearInterval(loopId);
-                } else {
-                    iframe.height = size > 1 ? size : scrollHeight;
-                }
-            }
-        }, 1000);
-    });
-</script>
-
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "IFRAME ID HERE";
-            iframe = document.getElementById(iframeId);
-
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-            }
-        }, 1000);
-    });
-</script>
-        </div>
-    </div>
-    
-    <div class="container">
-        <div class="box box-example">
-          <div class="content">
-            <h2 class="title" id="year-selector-with-previous-and-next-buttons">
-  Year selector with previous and next buttons
-  
-    <a class="is-link" href="#year-selector-with-previous-and-next-buttons">
-      <img src="/img/fas-link.svg" />
-    </a>
-  
-</h2>
-<p>Still powered by ods-facet-results, a date scenario where the year is the value selection, and arrows can increase or descrease the selected year, impacting also the HTML select selection.</p>
-
-          </div>
-          
-
-
-<div class="codepen">
-    
-    
-    
-
-    <form id="form-filters-as-an-html-select-3"
-          action="https://codepen.io/pen/define"
-          method="POST"
-          target="_blank">
-        <input type="hidden"
-               name="data"
-               value='{
-               "title": "New Pen!",
-               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
-               "editors": 110,
-               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;sirenepublic,sirenepublicfacetlistingonly\&#34;\n                      sirenepublic-dataset=\&#34;sirene\&#34;\n                      sirenepublic-domain=\&#34;public\&#34;\n                      sirenepublic-parameters=\&#34;{&#39;q&#39;:&#39;ddebact:[2010 TO 2019]&#39;,\n                                              &#39;disjunctive.ddebact&#39;:true}\&#34;\n                      sirenepublicfacetlistingonly-dataset=\&#34;sirene\&#34;\n                      sirenepublicfacetlistingonly-domain=\&#34;public\&#34;\n                      sirenepublicfacetlistingonly-parameters=\&#34;{&#39;q&#39;:&#39;ddebact:[2010 TO 2019]&#39;,\n                                                              &#39;disjunctive.ddebact&#39;:true}\&#34;\u003e\n    \u003cdiv class=\&#34;row\&#34;\u003e\n        \u003cdiv class=\&#34;col-sm-4\&#34;\n             ng-init=\&#34;years = {&#39;values&#39;:undefined}\&#34;\u003e\n            \u003cspan ods-facet-results=\&#34;results\&#34;\n                  ods-facet-results-context=\&#34;sirenepublicfacetlistingonly\&#34;\n                  ods-facet-results-facet-name=\&#34;ddebact\&#34;\n                  ods-facet-results-sort=\&#34;-alphanum\&#34;\u003e\n                {{ years.values = results; \&#34;\&#34; }}\n                \u003cdiv class=\&#34;filtres-facet-titre\&#34;\u003e\n                    Pick a year :\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;controler\&#34;\n                     ng-if=\&#34;years.values\&#34;\n                     ng-init=\&#34;selection = years.values[0].path\&#34;\u003e\n                    {{ sirenepublic.parameters[&#39;refine.ddebact&#39;] = selection ; &#39;&#39; }}\n                    \u003cdiv class=\&#34;input-range-with-button\&#34;\u003e\n                        \u003cdiv class=\&#34;controler-button\&#34;\n                             ng-class=\&#34;{&#39;disabled&#39;: selection == years.values[years.values.length-1].path}\&#34;\n                             ng-click=\&#34;selection = (selection == years.values[years.values.length-1].path? selection : 1*selection-1)\&#34;\u003e\n                            \u003ci class=\&#34;fa fa-angle-left\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                        \u003c/div\u003e\n                        \u003cdiv class=\&#34;controler-button controler-selection\&#34;\u003e\n                            \u003cselect ng-model=\&#34;selection\&#34;\u003e\n                                \u003coption ng-repeat=\&#34;year in years.values\&#34;\n                                        ng-selected=\&#34;selection == year.path\&#34;\n                                        value=\&#34;{{ year.path }}\&#34;\u003e\n                                    {{ year.name }} ({{ year.count | number }} companies)\n                                \u003c/option\u003e\n                            \u003c/select\u003e\n                        \u003c/div\u003e\n                        \u003cdiv class=\&#34;controler-button\&#34;\n                             ng-class=\&#34;{&#39;disabled&#39;: selection == years.values[0].path }\&#34;\n                             ng-click=\&#34;selection = (selection == years.values[0].path ? selection : 1*selection&#43;1)\&#34;\u003e\n                            \u003ci class=\&#34;fa fa-angle-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/span\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;col-sm-8\&#34;\u003e\n            \u003cods-chart ng-if=\&#34;sirenepublic.parameters[&#39;refine.ddebact&#39;]\&#34;\n                       align-month=\&#34;true\&#34;\u003e\n                \u003cods-chart-query context=\&#34;sirenepublic\&#34; field-x=\&#34;ddebact\&#34; maxpoints=\&#34;0\&#34; timescale=\&#34;month\&#34;\u003e\n                    \u003cods-chart-serie chart-type=\&#34;column\&#34; function-y=\&#34;COUNT\&#34; color=\&#34;#1B6698\&#34; scientific-display=\&#34;true\&#34;\u003e\n                    \u003c/ods-chart-serie\u003e\n                \u003c/ods-chart-query\u003e\n            \u003c/ods-chart\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
-               "css": &#34;/* DATE SELECTOR */\n.input-range-with-button {\n    display: flex;\n}\n.controler-button {\n    border: 1px solid;\n    background-color: #e5e5e5;\n    border-color: #ccc;\n    font-weight: 500;\n    min-width: 42px;\n    height: 42px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n.controler-button:nth-child(1) {\n    border-radius: 0.5em 0 0 0.5em;\n}\n.controler-button:nth-child(3) {\n    border-radius: 0 0.5em 0.5em 0;\n}\n.controler-button:hover {\n    background-color: #ccc;\n}\n.controler-button.controler-selection select {\n    box-sizing: border-box;\n    -webkit-box-sizing: border-box;\n    -moz-box-sizing: border-box;\n    -webkit-appearance: none;\n    -moz-appearance: none;\n    appearance: none;\n    border: none;\n    border-radius: 0px;\n    width: 100%;\n    height: 100%;\n    padding-left: 10px;\n    padding-right: 25px;\n}\n.controler-button.controler-selection::after {\n    position:absolute;\n    right:.5rem;\n    content:&#39;\\2193&#39;;\n    pointer-events: none;\n}\n.controler-selection {\n    width: auto;\n    position: relative;\n}\n.controler-selection:hover {\n    background-color: #e5e5e5;\n}\n.controler-button.disabled {\n    color: #adadad;\n}\n.controler-button.disabled:hover {\n    cursor: inherit;\n    background-color: #e5e5e5;\n}\n      \n&#34; }'>
-    </form>
-</div>
-
-<div class="ods-content">
-    <section class="box box-live-example">
-      <iframe id="iframe-filters-as-an-html-select-3"
-              width="100%" height="100%"
-              src="about:blank"
-              srcdoc="
-        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;&gt;
-
-&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;&gt;
-
-&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js&#34;&gt;&lt;/script&gt;
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;&gt;&lt;/script&gt;
-
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;&gt;&lt;/script&gt;
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
-
-&lt;script type=&#34;text/javascript&#34;&gt;
-    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {
-        ODSWidgetsConfigProvider.setConfig({
-            &#34;defaultDomain&#34;: &#34;https://userclub.opendatasoft.com/&#34;,
-            &#34;basemaps&#34;: [
-                {
-                    &#34;provider&#34;: &#34;jawg.light&#34;,
-                    &#34;label&#34;: &#34;Jawg Light&#34;,
-                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
-                },
-                {
-                    &#34;provider&#34;: &#34;jawg.streets&#34;,
-                    &#34;label&#34;: &#34;Jawg Streets&#34;,
-                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;,
-                    &#34;id&#34;: &#34;streets&#34;
-                }
-            ],
-            &#34;themes&#34;: {
-                &#39;default&#39;: {
-                    &#39;url&#39;: &#39;/img/ods.svg&#39;
-                },
-                &#39;Santé&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Culture, Patrimoine&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Environment&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Transports, Déplacements&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Justice, Sécurité, Police, Crime&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Sport, Loisirs&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Hébergement, Restauration&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Services, Social&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Checklist&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Usages&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                }
-            },
-            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
-        });
-    });
-&lt;/script&gt;
-
-&lt;script type=&#34;text/javascript&#34;&gt;
-    document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
-        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
-            el.addEventListener(&#39;click&#39;, (event) =&gt; {
-                event.preventDefault();
-            });
-        })
-    });
-&lt;/script&gt;
-
-        </head>
-        <body>
-        <div ng-app='ods-widgets'>
-            &lt;ods-dataset-context context=&#34;sirenepublic,sirenepublicfacetlistingonly&#34;
-                      sirenepublic-dataset=&#34;sirene&#34;
-                      sirenepublic-domain=&#34;public&#34;
-                      sirenepublic-parameters=&#34;{&#39;q&#39;:&#39;ddebact:[2010 TO 2019]&#39;,
-                                              &#39;disjunctive.ddebact&#39;:true}&#34;
-                      sirenepublicfacetlistingonly-dataset=&#34;sirene&#34;
-                      sirenepublicfacetlistingonly-domain=&#34;public&#34;
-                      sirenepublicfacetlistingonly-parameters=&#34;{&#39;q&#39;:&#39;ddebact:[2010 TO 2019]&#39;,
-                                                              &#39;disjunctive.ddebact&#39;:true}&#34;&gt;
-    &lt;div class=&#34;row&#34;&gt;
-        &lt;div class=&#34;col-sm-4&#34;
-             ng-init=&#34;years = {&#39;values&#39;:undefined}&#34;&gt;
-            &lt;span ods-facet-results=&#34;results&#34;
-                  ods-facet-results-context=&#34;sirenepublicfacetlistingonly&#34;
-                  ods-facet-results-facet-name=&#34;ddebact&#34;
-                  ods-facet-results-sort=&#34;-alphanum&#34;&gt;
-                {{ years.values = results; &#34;&#34; }}
-                &lt;div class=&#34;filtres-facet-titre&#34;&gt;
-                    Pick a year :
-                &lt;/div&gt;
-                &lt;div class=&#34;controler&#34;
-                     ng-if=&#34;years.values&#34;
-                     ng-init=&#34;selection = years.values[0].path&#34;&gt;
-                    {{ sirenepublic.parameters[&#39;refine.ddebact&#39;] = selection ; &#39;&#39; }}
-                    &lt;div class=&#34;input-range-with-button&#34;&gt;
-                        &lt;div class=&#34;controler-button&#34;
-                             ng-class=&#34;{&#39;disabled&#39;: selection == years.values[years.values.length-1].path}&#34;
-                             ng-click=&#34;selection = (selection == years.values[years.values.length-1].path? selection : 1*selection-1)&#34;&gt;
-                            &lt;i class=&#34;fa fa-angle-left&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
-                        &lt;/div&gt;
-                        &lt;div class=&#34;controler-button controler-selection&#34;&gt;
-                            &lt;select ng-model=&#34;selection&#34;&gt;
-                                &lt;option ng-repeat=&#34;year in years.values&#34;
-                                        ng-selected=&#34;selection == year.path&#34;
-                                        value=&#34;{{ year.path }}&#34;&gt;
-                                    {{ year.name }} ({{ year.count | number }} companies)
-                                &lt;/option&gt;
-                            &lt;/select&gt;
-                        &lt;/div&gt;
-                        &lt;div class=&#34;controler-button&#34;
-                             ng-class=&#34;{&#39;disabled&#39;: selection == years.values[0].path }&#34;
-                             ng-click=&#34;selection = (selection == years.values[0].path ? selection : 1*selection&#43;1)&#34;&gt;
-                            &lt;i class=&#34;fa fa-angle-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class=&#34;col-sm-8&#34;&gt;
-            &lt;ods-chart ng-if=&#34;sirenepublic.parameters[&#39;refine.ddebact&#39;]&#34;
-                       align-month=&#34;true&#34;&gt;
-                &lt;ods-chart-query context=&#34;sirenepublic&#34; field-x=&#34;ddebact&#34; maxpoints=&#34;0&#34; timescale=&#34;month&#34;&gt;
-                    &lt;ods-chart-serie chart-type=&#34;column&#34; function-y=&#34;COUNT&#34; color=&#34;#1B6698&#34; scientific-display=&#34;true&#34;&gt;
-                    &lt;/ods-chart-serie&gt;
-                &lt;/ods-chart-query&gt;
-            &lt;/ods-chart&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/ods-dataset-context&gt;
-
-        </div>
-        <style type='text/css'>
-            /* DATE SELECTOR */
-.input-range-with-button {
-    display: flex;
-}
-.controler-button {
-    border: 1px solid;
-    background-color: #e5e5e5;
-    border-color: #ccc;
-    font-weight: 500;
-    min-width: 42px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.controler-button:nth-child(1) {
-    border-radius: 0.5em 0 0 0.5em;
-}
-.controler-button:nth-child(3) {
-    border-radius: 0 0.5em 0.5em 0;
-}
-.controler-button:hover {
-    background-color: #ccc;
-}
-.controler-button.controler-selection select {
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: none;
-    border-radius: 0px;
-    width: 100%;
-    height: 100%;
-    padding-left: 10px;
-    padding-right: 25px;
-}
-.controler-button.controler-selection::after {
-    position:absolute;
-    right:.5rem;
-    content:&#39;\2193&#39;;
-    pointer-events: none;
-}
-.controler-selection {
-    width: auto;
-    position: relative;
-}
-.controler-selection:hover {
-    background-color: #e5e5e5;
-}
-.controler-button.disabled {
-    color: #adadad;
-}
-.controler-button.disabled:hover {
-    cursor: inherit;
-    background-color: #e5e5e5;
-}
-      
-
-        </style>
-        </body>
-        ">
-      </iframe>
-    </section>
-
-    <section class="box box-code js-tabs">
-        <nav class="level is-flex">
-            <div class="level-left">
-                <div class="level-item">
-                    <ul class="buttons has-addons js-tablist">
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-filters-as-an-html-select-3-html-content">
-                                HTML
-                            </a>
-                        </li>
-                        
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-filters-as-an-html-select-3-css-content">
-                                CSS
-                            </a>
-                        </li>
-                        
-                    </ul>
-                </div>
-            </div>
-            <div class="level-right mt-0">
-                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
-                   data-tooltip="Edit on CodePen"
-                   target="_blank"
-                   aria-role="link"
-                   rel="noopener"
-                   title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-filters-as-an-html-select-3').submit()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="feather feather-edit">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-                    </svg>
-                </a>
-            </div>
-        </nav>
-
-
-        <div class="tab-content">
-            <div class="js-tabcontent"
-                 id="code-filters-as-an-html-select-3-html-content">
-                <div class="highlight">
-                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;sirenepublic,sirenepublicfacetlistingonly&#34;
-                      sirenepublic-dataset=&#34;sirene&#34;
-                      sirenepublic-domain=&#34;public&#34;
-                      sirenepublic-parameters=&#34;{&#39;q&#39;:&#39;ddebact:[2010 TO 2019]&#39;,
-                                              &#39;disjunctive.ddebact&#39;:true}&#34;
-                      sirenepublicfacetlistingonly-dataset=&#34;sirene&#34;
-                      sirenepublicfacetlistingonly-domain=&#34;public&#34;
-                      sirenepublicfacetlistingonly-parameters=&#34;{&#39;q&#39;:&#39;ddebact:[2010 TO 2019]&#39;,
-                                                              &#39;disjunctive.ddebact&#39;:true}&#34;&gt;
-    &lt;div class=&#34;row&#34;&gt;
-        &lt;div class=&#34;col-sm-4&#34;
-             ng-init=&#34;years = {&#39;values&#39;:undefined}&#34;&gt;
-            &lt;span ods-facet-results=&#34;results&#34;
-                  ods-facet-results-context=&#34;sirenepublicfacetlistingonly&#34;
-                  ods-facet-results-facet-name=&#34;ddebact&#34;
-                  ods-facet-results-sort=&#34;-alphanum&#34;&gt;
-                {{ years.values = results; &#34;&#34; }}
-                &lt;div class=&#34;filtres-facet-titre&#34;&gt;
-                    Pick a year :
-                &lt;/div&gt;
-                &lt;div class=&#34;controler&#34;
-                     ng-if=&#34;years.values&#34;
-                     ng-init=&#34;selection = years.values[0].path&#34;&gt;
-                    {{ sirenepublic.parameters[&#39;refine.ddebact&#39;] = selection ; &#39;&#39; }}
-                    &lt;div class=&#34;input-range-with-button&#34;&gt;
-                        &lt;div class=&#34;controler-button&#34;
-                             ng-class=&#34;{&#39;disabled&#39;: selection == years.values[years.values.length-1].path}&#34;
-                             ng-click=&#34;selection = (selection == years.values[years.values.length-1].path? selection : 1*selection-1)&#34;&gt;
-                            &lt;i class=&#34;fa fa-angle-left&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
-                        &lt;/div&gt;
-                        &lt;div class=&#34;controler-button controler-selection&#34;&gt;
-                            &lt;select ng-model=&#34;selection&#34;&gt;
-                                &lt;option ng-repeat=&#34;year in years.values&#34;
-                                        ng-selected=&#34;selection == year.path&#34;
-                                        value=&#34;{{ year.path }}&#34;&gt;
-                                    {{ year.name }} ({{ year.count | number }} companies)
-                                &lt;/option&gt;
-                            &lt;/select&gt;
-                        &lt;/div&gt;
-                        &lt;div class=&#34;controler-button&#34;
-                             ng-class=&#34;{&#39;disabled&#39;: selection == years.values[0].path }&#34;
-                             ng-click=&#34;selection = (selection == years.values[0].path ? selection : 1*selection&#43;1)&#34;&gt;
-                            &lt;i class=&#34;fa fa-angle-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/span&gt;
-        &lt;/div&gt;
-        &lt;div class=&#34;col-sm-8&#34;&gt;
-            &lt;ods-chart ng-if=&#34;sirenepublic.parameters[&#39;refine.ddebact&#39;]&#34;
-                       align-month=&#34;true&#34;&gt;
-                &lt;ods-chart-query context=&#34;sirenepublic&#34; field-x=&#34;ddebact&#34; maxpoints=&#34;0&#34; timescale=&#34;month&#34;&gt;
-                    &lt;ods-chart-serie chart-type=&#34;column&#34; function-y=&#34;COUNT&#34; color=&#34;#1B6698&#34; scientific-display=&#34;true&#34;&gt;
-                    &lt;/ods-chart-serie&gt;
-                &lt;/ods-chart-query&gt;
-            &lt;/ods-chart&gt;
-        &lt;/div&gt;
-    &lt;/div&gt;
-&lt;/ods-dataset-context&gt;
-</code></pre>
-                </div>
-            </div>
-            
-            <div class="js-tabcontent"
-                 id="code-filters-as-an-html-select-3-css-content">
-                <div class="highlight">
-                    <pre class="language-css" data-lang="css"><code>/* DATE SELECTOR */
-.input-range-with-button {
-    display: flex;
-}
-.controler-button {
-    border: 1px solid;
-    background-color: #e5e5e5;
-    border-color: #ccc;
-    font-weight: 500;
-    min-width: 42px;
-    height: 42px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.controler-button:nth-child(1) {
-    border-radius: 0.5em 0 0 0.5em;
-}
-.controler-button:nth-child(3) {
-    border-radius: 0 0.5em 0.5em 0;
-}
-.controler-button:hover {
-    background-color: #ccc;
-}
-.controler-button.controler-selection select {
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    border: none;
-    border-radius: 0px;
-    width: 100%;
-    height: 100%;
-    padding-left: 10px;
-    padding-right: 25px;
-}
-.controler-button.controler-selection::after {
-    position:absolute;
-    right:.5rem;
-    content:&#39;\2193&#39;;
-    pointer-events: none;
-}
-.controler-selection {
-    width: auto;
-    position: relative;
-}
-.controler-selection:hover {
-    background-color: #e5e5e5;
-}
-.controler-button.disabled {
-    color: #adadad;
-}
-.controler-button.disabled:hover {
-    cursor: inherit;
-    background-color: #e5e5e5;
-}
-      
-</code></pre>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-</div>
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-filters-as-an-html-select-3";
-            iframe = document.getElementById(iframeId);
-             
-            size =  500 
-             
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-                if (iframe.height == size) {
-                    clearInterval(loopId);
-                } else {
-                    iframe.height = size > 1 ? size : scrollHeight;
-                }
-            }
-        }, 1000);
-    });
-</script>
-
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "IFRAME ID HERE";
-            iframe = document.getElementById(iframeId);
-
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-            }
-        }, 1000);
-    });
-</script>
-        </div>
-    </div>
-    
-    <div class="container">
-        <div class="box box-example">
-          <div class="content">
-            <h2 class="title" id="months-over-several-years-range-selector">
-  Months over several years range selector
-  
-    <a class="is-link" href="#months-over-several-years-range-selector">
-      <img src="/img/fas-link.svg" />
-    </a>
-  
-</h2>
-<p>Most complex scenario as the selector will keep an iterator to see witch value is selected, and compute the date each time another selection is made. It&rsquo;s based on this iterator by starting from the starting date and increasing the number of months by this iterator to get back to the selection. It manipulates facets, dates, and advanced angularJs expression.</p>
-
-          </div>
-          
-
-
-<div class="codepen">
-    
-    
-    
-
-    <form id="form-filters-as-an-html-select-4"
+    <form id="form-months-over-several-years-range-selector"
           action="https://codepen.io/pen/define"
           method="POST"
           target="_blank">
@@ -1508,7 +349,7 @@ Filters as an HTML Select &ndash; Codelibrary
 
 <div class="ods-content">
     <section class="box box-live-example">
-      <iframe id="iframe-filters-as-an-html-select-4"
+      <iframe id="iframe-months-over-several-years-range-selector"
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
@@ -1803,14 +644,14 @@ Filters as an HTML Select &ndash; Codelibrary
                     <ul class="buttons has-addons js-tablist">
                         <li class="button is-secondary is-outlined js-tablist__item">
                             <a class="js-tablist__link"
-                               href="#code-filters-as-an-html-select-4-html-content">
+                               href="#code-months-over-several-years-range-selector-html-content">
                                 HTML
                             </a>
                         </li>
                         
                         <li class="button is-secondary is-outlined js-tablist__item">
                             <a class="js-tablist__link"
-                               href="#code-filters-as-an-html-select-4-css-content">
+                               href="#code-months-over-several-years-range-selector-css-content">
                                 CSS
                             </a>
                         </li>
@@ -1825,7 +666,7 @@ Filters as an HTML Select &ndash; Codelibrary
                    aria-role="link"
                    rel="noopener"
                    title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-filters-as-an-html-select-4').submit()">
+                   onclick="document.getElementById('form-months-over-several-years-range-selector').submit()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                          class="feather feather-edit">
@@ -1839,7 +680,7 @@ Filters as an HTML Select &ndash; Codelibrary
 
         <div class="tab-content">
             <div class="js-tabcontent"
-                 id="code-filters-as-an-html-select-4-html-content">
+                 id="code-months-over-several-years-range-selector-html-content">
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;!-- Important here: 2 contexts, one to display, one to get the date range and execute the ods-analysis. This secondary contexts MUST NOT be refined --&gt;
 &lt;ods-dataset-context context=&#34;sirenepublic,sirenepublicfordaterange&#34;
@@ -1949,7 +790,7 @@ Filters as an HTML Select &ndash; Codelibrary
             </div>
             
             <div class="js-tabcontent"
-                 id="code-filters-as-an-html-select-4-css-content">
+                 id="code-months-over-several-years-range-selector-css-content">
                 <div class="highlight">
                     <pre class="language-css" data-lang="css"><code>/* DATE SELECTOR */
 .input-range-with-button {
@@ -2020,7 +861,7 @@ Filters as an HTML Select &ndash; Codelibrary
 <script type="text/javascript">
     window.addEventListener("DOMContentLoaded", () => {
         var loopId = setInterval(() => {
-            iframeId = "iframe-filters-as-an-html-select-4";
+            iframeId = "iframe-months-over-several-years-range-selector";
             iframe = document.getElementById(iframeId);
              
             size =  500 
@@ -2050,11 +891,1163 @@ Filters as an HTML Select &ndash; Codelibrary
         }, 1000);
     });
 </script>
-        </div>
+      </div>
     </div>
     
-</section>
+    <div class="container">
+      <div class="box box-example">
+        <div class="content">
+          <h2>
+            Simple case
+            <a class="is-link" href="#simple-case">
+              <span class="icon">
+                <img src="/img/fas-link.svg" />
+              </span>
+            </a>
+          </h2>
+          
+          <p>Powered by ods-facet-results, the simpler case, a list of choice, you pick one, it refines !</p>
 
+        </div>
+        
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-simple-case"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003c!-- Important here: the disjunctive (multi filter) mode for the facet to still display other values even if one is selected --\u003e\n\u003cods-dataset-context context=\&#34;swr\&#34;\n                     swr-dataset=\&#34;shanghai-world-university-ranking\&#34;\n                     swr-domain=\&#34;public\&#34;\n                     swr-parameters=\&#34;{&#39;disjunctive.country&#39;:true}\&#34;\u003e\n    \u003cdiv class=\&#34;row\&#34;\u003e\n        \u003cdiv class=\&#34;col-sm-4\&#34;\n             ods-facet-results=\&#34;items\&#34;\n             ods-facet-results-context=\&#34;swr\&#34;\n             ods-facet-results-facet-name=\&#34;country\&#34;\n             ods-facet-results-sort=\&#34;alphanum\&#34;\u003e\n            \u003ch3\u003e\n                Select a country\n            \u003c/h3\u003e\n            \u003ch5\u003e\n                \&#34;ranks\&#34;: number of ranking score over years in the dataset\n            \u003c/h5\u003e\n            \u003cselect ng-model=\&#34;swr.parameters[&#39;refine.country&#39;]\&#34;\n                    ng-options=\&#34;item.path as (item.name&#43;&#39; (&#39;&#43;item.count&#43;&#39; rank&#39;&#43;(item.count\u003e1?&#39;s&#39;:&#39;&#39;)&#43;&#39;)&#39;) for item in items\&#34;\n                    ng-selected=\&#34;swr.parameters[&#39;refine.country&#39;] == item.path\&#34;\u003e\n                \u003coption value=\&#34;\&#34;\u003e-- All countries --\u003c/option\u003e\n            \u003c/select\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;col-sm-8\&#34;\u003e\n            \u003cods-chart single-y-axis=\&#34;true\&#34; min=\&#34;0\&#34; max=\&#34;100\&#34; step=\&#34;10\&#34; labels-x-length=\&#34;30\&#34; align-month=\&#34;true\&#34;\u003e\n                \u003cods-chart-query context=\&#34;swr\&#34; field-x=\&#34;university_name\&#34; maxpoints=\&#34;10\&#34; sort=\&#34;serie1-1\&#34;\u003e\n                    \u003cods-chart-serie expression-y=\&#34;pub\&#34; chart-type=\&#34;bar\&#34; function-y=\&#34;AVG\&#34; label-y=\&#34;Average score (research paper publication)\&#34; color=\&#34;#1B6698\&#34; display-units=\&#34;false\&#34; display-values=\&#34;true\&#34; scientific-display=\&#34;false\&#34;\u003e\n                    \u003c/ods-chart-serie\u003e\n                \u003c/ods-chart-query\u003e\n            \u003c/ods-chart\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+               "css": &#34;&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-simple-case"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;defaultDomain&#34;: &#34;https://userclub.opendatasoft.com/&#34;,
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                },
+                {
+                    &#34;provider&#34;: &#34;jawg.streets&#34;,
+                    &#34;label&#34;: &#34;Jawg Streets&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;,
+                    &#34;id&#34;: &#34;streets&#34;
+                }
+            ],
+            &#34;themes&#34;: {
+                &#39;default&#39;: {
+                    &#39;url&#39;: &#39;/img/ods.svg&#39;
+                },
+                &#39;Santé&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Culture, Patrimoine&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Environment&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Transports, Déplacements&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Justice, Sécurité, Police, Crime&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Sport, Loisirs&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Hébergement, Restauration&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Services, Social&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Checklist&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Usages&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                }
+            },
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+        </head>
+        <body>
+        <div ng-app='ods-widgets'>
+            &lt;!-- Important here: the disjunctive (multi filter) mode for the facet to still display other values even if one is selected --&gt;
+&lt;ods-dataset-context context=&#34;swr&#34;
+                     swr-dataset=&#34;shanghai-world-university-ranking&#34;
+                     swr-domain=&#34;public&#34;
+                     swr-parameters=&#34;{&#39;disjunctive.country&#39;:true}&#34;&gt;
+    &lt;div class=&#34;row&#34;&gt;
+        &lt;div class=&#34;col-sm-4&#34;
+             ods-facet-results=&#34;items&#34;
+             ods-facet-results-context=&#34;swr&#34;
+             ods-facet-results-facet-name=&#34;country&#34;
+             ods-facet-results-sort=&#34;alphanum&#34;&gt;
+            &lt;h3&gt;
+                Select a country
+            &lt;/h3&gt;
+            &lt;h5&gt;
+                &#34;ranks&#34;: number of ranking score over years in the dataset
+            &lt;/h5&gt;
+            &lt;select ng-model=&#34;swr.parameters[&#39;refine.country&#39;]&#34;
+                    ng-options=&#34;item.path as (item.name&#43;&#39; (&#39;&#43;item.count&#43;&#39; rank&#39;&#43;(item.count&gt;1?&#39;s&#39;:&#39;&#39;)&#43;&#39;)&#39;) for item in items&#34;
+                    ng-selected=&#34;swr.parameters[&#39;refine.country&#39;] == item.path&#34;&gt;
+                &lt;option value=&#34;&#34;&gt;-- All countries --&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-sm-8&#34;&gt;
+            &lt;ods-chart single-y-axis=&#34;true&#34; min=&#34;0&#34; max=&#34;100&#34; step=&#34;10&#34; labels-x-length=&#34;30&#34; align-month=&#34;true&#34;&gt;
+                &lt;ods-chart-query context=&#34;swr&#34; field-x=&#34;university_name&#34; maxpoints=&#34;10&#34; sort=&#34;serie1-1&#34;&gt;
+                    &lt;ods-chart-serie expression-y=&#34;pub&#34; chart-type=&#34;bar&#34; function-y=&#34;AVG&#34; label-y=&#34;Average score (research paper publication)&#34; color=&#34;#1B6698&#34; display-units=&#34;false&#34; display-values=&#34;true&#34; scientific-display=&#34;false&#34;&gt;
+                    &lt;/ods-chart-serie&gt;
+                &lt;/ods-chart-query&gt;
+            &lt;/ods-chart&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+
+        </div>
+        <style type='text/css'>
+            
+        </style>
+        </body>
+        ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level is-flex">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-secondary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-simple-case-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right mt-0">
+                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
+                   data-tooltip="Edit on CodePen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-simple-case').submit()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-edit">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-simple-case-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;!-- Important here: the disjunctive (multi filter) mode for the facet to still display other values even if one is selected --&gt;
+&lt;ods-dataset-context context=&#34;swr&#34;
+                     swr-dataset=&#34;shanghai-world-university-ranking&#34;
+                     swr-domain=&#34;public&#34;
+                     swr-parameters=&#34;{&#39;disjunctive.country&#39;:true}&#34;&gt;
+    &lt;div class=&#34;row&#34;&gt;
+        &lt;div class=&#34;col-sm-4&#34;
+             ods-facet-results=&#34;items&#34;
+             ods-facet-results-context=&#34;swr&#34;
+             ods-facet-results-facet-name=&#34;country&#34;
+             ods-facet-results-sort=&#34;alphanum&#34;&gt;
+            &lt;h3&gt;
+                Select a country
+            &lt;/h3&gt;
+            &lt;h5&gt;
+                &#34;ranks&#34;: number of ranking score over years in the dataset
+            &lt;/h5&gt;
+            &lt;select ng-model=&#34;swr.parameters[&#39;refine.country&#39;]&#34;
+                    ng-options=&#34;item.path as (item.name&#43;&#39; (&#39;&#43;item.count&#43;&#39; rank&#39;&#43;(item.count&gt;1?&#39;s&#39;:&#39;&#39;)&#43;&#39;)&#39;) for item in items&#34;
+                    ng-selected=&#34;swr.parameters[&#39;refine.country&#39;] == item.path&#34;&gt;
+                &lt;option value=&#34;&#34;&gt;-- All countries --&lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-sm-8&#34;&gt;
+            &lt;ods-chart single-y-axis=&#34;true&#34; min=&#34;0&#34; max=&#34;100&#34; step=&#34;10&#34; labels-x-length=&#34;30&#34; align-month=&#34;true&#34;&gt;
+                &lt;ods-chart-query context=&#34;swr&#34; field-x=&#34;university_name&#34; maxpoints=&#34;10&#34; sort=&#34;serie1-1&#34;&gt;
+                    &lt;ods-chart-serie expression-y=&#34;pub&#34; chart-type=&#34;bar&#34; function-y=&#34;AVG&#34; label-y=&#34;Average score (research paper publication)&#34; color=&#34;#1B6698&#34; display-units=&#34;false&#34; display-values=&#34;true&#34; scientific-display=&#34;false&#34;&gt;
+                    &lt;/ods-chart-serie&gt;
+                &lt;/ods-chart-query&gt;
+            &lt;/ods-chart&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-simple-case";
+            iframe = document.getElementById(iframeId);
+             
+            size =  500 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "IFRAME ID HERE";
+            iframe = document.getElementById(iframeId);
+
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+            }
+        }, 1000);
+    });
+</script>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="box box-example">
+        <div class="content">
+          <h2>
+            Simple case, with default selection
+            <a class="is-link" href="#simple-case-with-default-selection">
+              <span class="icon">
+                <img src="/img/fas-link.svg" />
+              </span>
+            </a>
+          </h2>
+          
+          <p>A more complex case where an ods-results enumerator get a value to set a default selection</p>
+
+        </div>
+        
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-simple-case-with-default-selection"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003c!-- Important here: in addition of the important disjunctive param, you need to think about the sort param to get the expected 1st record with ods-results --\u003e\n\u003cods-dataset-context context=\&#34;swr\&#34;\n                      swr-dataset=\&#34;shanghai-world-university-ranking\&#34;\n                      swr-domain=\&#34;public\&#34;\n                     swr-parameters=\&#34;{&#39;disjunctive.country&#39;:true,\n                                     &#39;sort&#39;:&#39;total_score&#39;}\&#34;\n                     ng-init=\&#34;default = {&#39;selection&#39;:undefined}\&#34;\u003e\n    \u003c!-- Important here: store the result in a global variable to use it later --\u003e\n    \u003cspan ng-repeat=\&#34;item in items\&#34; ods-results=\&#34;items\&#34; ods-results-context=\&#34;swr\&#34; ods-results-max=\&#34;1\&#34;\u003e\n        {{ default.selection = item.fields.country ; \&#34;\&#34; }}\n    \u003c/span\u003e\n    \u003cdiv class=\&#34;row\&#34;\u003e\n        \u003cdiv class=\&#34;col-sm-4\&#34;\u003e\n            \u003ch3\u003e\n                Select a country\n            \u003c/h3\u003e\n            \u003ch5\u003e\n                Default selection: country having the university with the best score.\n            \u003c/h5\u003e\n            \u003c!-- Important here: ng-init is executed only once, it&#39;s perfect to set the first refine at start-up --\u003e\n            \u003c!-- Important here: only display the select once default.selection exists --\u003e\n            \u003cselect ng-if=\&#34;default.selection\&#34;\n                    ng-model=\&#34;swr.parameters[&#39;refine.country&#39;]\&#34;\n                    ng-init=\&#34;swr.parameters[&#39;refine.country&#39;] = default.selection\&#34;\u003e\n                \u003coption ods-facet-results=\&#34;items\&#34;\n                        ods-facet-results-context=\&#34;swr\&#34;\n                        ods-facet-results-facet-name=\&#34;country\&#34;\n                        ods-facet-results-sort=\&#34;alphanum\&#34;\n                        ng-repeat=\&#34;item in items\&#34;\n                        value=\&#34;{{item.name}}\&#34;\n                        ng-selected=\&#34;item.name == default.selection\&#34;\u003e\n                    {{item.name}} ({{item.count}} rank{{item.count\u003e1?&#39;s&#39;:&#39;&#39;}})\n                \u003c/option\u003e\n            \u003c/select\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;col-sm-8\&#34;\u003e\n            \u003cods-chart single-y-axis=\&#34;true\&#34; min=\&#34;0\&#34; max=\&#34;100\&#34; step=\&#34;10\&#34; labels-x-length=\&#34;30\&#34; align-month=\&#34;true\&#34;\u003e\n                \u003cods-chart-query context=\&#34;swr\&#34; field-x=\&#34;university_name\&#34; maxpoints=\&#34;10\&#34; sort=\&#34;serie1-1\&#34;\u003e\n                    \u003cods-chart-serie expression-y=\&#34;pub\&#34; chart-type=\&#34;bar\&#34; function-y=\&#34;AVG\&#34; label-y=\&#34;Average score (research paper publication)\&#34; color=\&#34;#1B6698\&#34; display-units=\&#34;false\&#34; display-values=\&#34;true\&#34; scientific-display=\&#34;false\&#34;\u003e\n                    \u003c/ods-chart-serie\u003e\n                \u003c/ods-chart-query\u003e\n            \u003c/ods-chart\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+               "css": &#34;&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-simple-case-with-default-selection"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;defaultDomain&#34;: &#34;https://userclub.opendatasoft.com/&#34;,
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                },
+                {
+                    &#34;provider&#34;: &#34;jawg.streets&#34;,
+                    &#34;label&#34;: &#34;Jawg Streets&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;,
+                    &#34;id&#34;: &#34;streets&#34;
+                }
+            ],
+            &#34;themes&#34;: {
+                &#39;default&#39;: {
+                    &#39;url&#39;: &#39;/img/ods.svg&#39;
+                },
+                &#39;Santé&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Culture, Patrimoine&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Environment&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Transports, Déplacements&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Justice, Sécurité, Police, Crime&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Sport, Loisirs&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Hébergement, Restauration&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Services, Social&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Checklist&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Usages&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                }
+            },
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+        </head>
+        <body>
+        <div ng-app='ods-widgets'>
+            &lt;!-- Important here: in addition of the important disjunctive param, you need to think about the sort param to get the expected 1st record with ods-results --&gt;
+&lt;ods-dataset-context context=&#34;swr&#34;
+                      swr-dataset=&#34;shanghai-world-university-ranking&#34;
+                      swr-domain=&#34;public&#34;
+                     swr-parameters=&#34;{&#39;disjunctive.country&#39;:true,
+                                     &#39;sort&#39;:&#39;total_score&#39;}&#34;
+                     ng-init=&#34;default = {&#39;selection&#39;:undefined}&#34;&gt;
+    &lt;!-- Important here: store the result in a global variable to use it later --&gt;
+    &lt;span ng-repeat=&#34;item in items&#34; ods-results=&#34;items&#34; ods-results-context=&#34;swr&#34; ods-results-max=&#34;1&#34;&gt;
+        {{ default.selection = item.fields.country ; &#34;&#34; }}
+    &lt;/span&gt;
+    &lt;div class=&#34;row&#34;&gt;
+        &lt;div class=&#34;col-sm-4&#34;&gt;
+            &lt;h3&gt;
+                Select a country
+            &lt;/h3&gt;
+            &lt;h5&gt;
+                Default selection: country having the university with the best score.
+            &lt;/h5&gt;
+            &lt;!-- Important here: ng-init is executed only once, it&#39;s perfect to set the first refine at start-up --&gt;
+            &lt;!-- Important here: only display the select once default.selection exists --&gt;
+            &lt;select ng-if=&#34;default.selection&#34;
+                    ng-model=&#34;swr.parameters[&#39;refine.country&#39;]&#34;
+                    ng-init=&#34;swr.parameters[&#39;refine.country&#39;] = default.selection&#34;&gt;
+                &lt;option ods-facet-results=&#34;items&#34;
+                        ods-facet-results-context=&#34;swr&#34;
+                        ods-facet-results-facet-name=&#34;country&#34;
+                        ods-facet-results-sort=&#34;alphanum&#34;
+                        ng-repeat=&#34;item in items&#34;
+                        value=&#34;{{item.name}}&#34;
+                        ng-selected=&#34;item.name == default.selection&#34;&gt;
+                    {{item.name}} ({{item.count}} rank{{item.count&gt;1?&#39;s&#39;:&#39;&#39;}})
+                &lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-sm-8&#34;&gt;
+            &lt;ods-chart single-y-axis=&#34;true&#34; min=&#34;0&#34; max=&#34;100&#34; step=&#34;10&#34; labels-x-length=&#34;30&#34; align-month=&#34;true&#34;&gt;
+                &lt;ods-chart-query context=&#34;swr&#34; field-x=&#34;university_name&#34; maxpoints=&#34;10&#34; sort=&#34;serie1-1&#34;&gt;
+                    &lt;ods-chart-serie expression-y=&#34;pub&#34; chart-type=&#34;bar&#34; function-y=&#34;AVG&#34; label-y=&#34;Average score (research paper publication)&#34; color=&#34;#1B6698&#34; display-units=&#34;false&#34; display-values=&#34;true&#34; scientific-display=&#34;false&#34;&gt;
+                    &lt;/ods-chart-serie&gt;
+                &lt;/ods-chart-query&gt;
+            &lt;/ods-chart&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+
+        </div>
+        <style type='text/css'>
+            
+        </style>
+        </body>
+        ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level is-flex">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-secondary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-simple-case-with-default-selection-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right mt-0">
+                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
+                   data-tooltip="Edit on CodePen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-simple-case-with-default-selection').submit()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-edit">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-simple-case-with-default-selection-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;!-- Important here: in addition of the important disjunctive param, you need to think about the sort param to get the expected 1st record with ods-results --&gt;
+&lt;ods-dataset-context context=&#34;swr&#34;
+                      swr-dataset=&#34;shanghai-world-university-ranking&#34;
+                      swr-domain=&#34;public&#34;
+                     swr-parameters=&#34;{&#39;disjunctive.country&#39;:true,
+                                     &#39;sort&#39;:&#39;total_score&#39;}&#34;
+                     ng-init=&#34;default = {&#39;selection&#39;:undefined}&#34;&gt;
+    &lt;!-- Important here: store the result in a global variable to use it later --&gt;
+    &lt;span ng-repeat=&#34;item in items&#34; ods-results=&#34;items&#34; ods-results-context=&#34;swr&#34; ods-results-max=&#34;1&#34;&gt;
+        {{ default.selection = item.fields.country ; &#34;&#34; }}
+    &lt;/span&gt;
+    &lt;div class=&#34;row&#34;&gt;
+        &lt;div class=&#34;col-sm-4&#34;&gt;
+            &lt;h3&gt;
+                Select a country
+            &lt;/h3&gt;
+            &lt;h5&gt;
+                Default selection: country having the university with the best score.
+            &lt;/h5&gt;
+            &lt;!-- Important here: ng-init is executed only once, it&#39;s perfect to set the first refine at start-up --&gt;
+            &lt;!-- Important here: only display the select once default.selection exists --&gt;
+            &lt;select ng-if=&#34;default.selection&#34;
+                    ng-model=&#34;swr.parameters[&#39;refine.country&#39;]&#34;
+                    ng-init=&#34;swr.parameters[&#39;refine.country&#39;] = default.selection&#34;&gt;
+                &lt;option ods-facet-results=&#34;items&#34;
+                        ods-facet-results-context=&#34;swr&#34;
+                        ods-facet-results-facet-name=&#34;country&#34;
+                        ods-facet-results-sort=&#34;alphanum&#34;
+                        ng-repeat=&#34;item in items&#34;
+                        value=&#34;{{item.name}}&#34;
+                        ng-selected=&#34;item.name == default.selection&#34;&gt;
+                    {{item.name}} ({{item.count}} rank{{item.count&gt;1?&#39;s&#39;:&#39;&#39;}})
+                &lt;/option&gt;
+            &lt;/select&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-sm-8&#34;&gt;
+            &lt;ods-chart single-y-axis=&#34;true&#34; min=&#34;0&#34; max=&#34;100&#34; step=&#34;10&#34; labels-x-length=&#34;30&#34; align-month=&#34;true&#34;&gt;
+                &lt;ods-chart-query context=&#34;swr&#34; field-x=&#34;university_name&#34; maxpoints=&#34;10&#34; sort=&#34;serie1-1&#34;&gt;
+                    &lt;ods-chart-serie expression-y=&#34;pub&#34; chart-type=&#34;bar&#34; function-y=&#34;AVG&#34; label-y=&#34;Average score (research paper publication)&#34; color=&#34;#1B6698&#34; display-units=&#34;false&#34; display-values=&#34;true&#34; scientific-display=&#34;false&#34;&gt;
+                    &lt;/ods-chart-serie&gt;
+                &lt;/ods-chart-query&gt;
+            &lt;/ods-chart&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-simple-case-with-default-selection";
+            iframe = document.getElementById(iframeId);
+             
+            size =  500 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "IFRAME ID HERE";
+            iframe = document.getElementById(iframeId);
+
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+            }
+        }, 1000);
+    });
+</script>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="box box-example">
+        <div class="content">
+          <h2>
+            Year selector with previous and next buttons
+            <a class="is-link" href="#year-selector-with-previous-and-next-buttons">
+              <span class="icon">
+                <img src="/img/fas-link.svg" />
+              </span>
+            </a>
+          </h2>
+          
+          <p>Still powered by ods-facet-results, a date scenario where the year is the value selection, and arrows can increase or descrease the selected year, impacting also the HTML select selection.</p>
+
+        </div>
+        
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-year-selector-with-previous-and-next-buttons"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;sirenepublic,sirenepublicfacetlistingonly\&#34;\n                      sirenepublic-dataset=\&#34;sirene\&#34;\n                      sirenepublic-domain=\&#34;public\&#34;\n                      sirenepublic-parameters=\&#34;{&#39;q&#39;:&#39;ddebact:[2010 TO 2019]&#39;,\n                                              &#39;disjunctive.ddebact&#39;:true}\&#34;\n                      sirenepublicfacetlistingonly-dataset=\&#34;sirene\&#34;\n                      sirenepublicfacetlistingonly-domain=\&#34;public\&#34;\n                      sirenepublicfacetlistingonly-parameters=\&#34;{&#39;q&#39;:&#39;ddebact:[2010 TO 2019]&#39;,\n                                                              &#39;disjunctive.ddebact&#39;:true}\&#34;\u003e\n    \u003cdiv class=\&#34;row\&#34;\u003e\n        \u003cdiv class=\&#34;col-sm-4\&#34;\n             ng-init=\&#34;years = {&#39;values&#39;:undefined}\&#34;\u003e\n            \u003cspan ods-facet-results=\&#34;results\&#34;\n                  ods-facet-results-context=\&#34;sirenepublicfacetlistingonly\&#34;\n                  ods-facet-results-facet-name=\&#34;ddebact\&#34;\n                  ods-facet-results-sort=\&#34;-alphanum\&#34;\u003e\n                {{ years.values = results; \&#34;\&#34; }}\n                \u003cdiv class=\&#34;filtres-facet-titre\&#34;\u003e\n                    Pick a year :\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;controler\&#34;\n                     ng-if=\&#34;years.values\&#34;\n                     ng-init=\&#34;selection = years.values[0].path\&#34;\u003e\n                    {{ sirenepublic.parameters[&#39;refine.ddebact&#39;] = selection ; &#39;&#39; }}\n                    \u003cdiv class=\&#34;input-range-with-button\&#34;\u003e\n                        \u003cdiv class=\&#34;controler-button\&#34;\n                             ng-class=\&#34;{&#39;disabled&#39;: selection == years.values[years.values.length-1].path}\&#34;\n                             ng-click=\&#34;selection = (selection == years.values[years.values.length-1].path? selection : 1*selection-1)\&#34;\u003e\n                            \u003ci class=\&#34;fa fa-angle-left\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                        \u003c/div\u003e\n                        \u003cdiv class=\&#34;controler-button controler-selection\&#34;\u003e\n                            \u003cselect ng-model=\&#34;selection\&#34;\u003e\n                                \u003coption ng-repeat=\&#34;year in years.values\&#34;\n                                        ng-selected=\&#34;selection == year.path\&#34;\n                                        value=\&#34;{{ year.path }}\&#34;\u003e\n                                    {{ year.name }} ({{ year.count | number }} companies)\n                                \u003c/option\u003e\n                            \u003c/select\u003e\n                        \u003c/div\u003e\n                        \u003cdiv class=\&#34;controler-button\&#34;\n                             ng-class=\&#34;{&#39;disabled&#39;: selection == years.values[0].path }\&#34;\n                             ng-click=\&#34;selection = (selection == years.values[0].path ? selection : 1*selection&#43;1)\&#34;\u003e\n                            \u003ci class=\&#34;fa fa-angle-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/span\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;col-sm-8\&#34;\u003e\n            \u003cods-chart ng-if=\&#34;sirenepublic.parameters[&#39;refine.ddebact&#39;]\&#34;\n                       align-month=\&#34;true\&#34;\u003e\n                \u003cods-chart-query context=\&#34;sirenepublic\&#34; field-x=\&#34;ddebact\&#34; maxpoints=\&#34;0\&#34; timescale=\&#34;month\&#34;\u003e\n                    \u003cods-chart-serie chart-type=\&#34;column\&#34; function-y=\&#34;COUNT\&#34; color=\&#34;#1B6698\&#34; scientific-display=\&#34;true\&#34;\u003e\n                    \u003c/ods-chart-serie\u003e\n                \u003c/ods-chart-query\u003e\n            \u003c/ods-chart\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+               "css": &#34;/* DATE SELECTOR */\n.input-range-with-button {\n    display: flex;\n}\n.controler-button {\n    border: 1px solid;\n    background-color: #e5e5e5;\n    border-color: #ccc;\n    font-weight: 500;\n    min-width: 42px;\n    height: 42px;\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n.controler-button:nth-child(1) {\n    border-radius: 0.5em 0 0 0.5em;\n}\n.controler-button:nth-child(3) {\n    border-radius: 0 0.5em 0.5em 0;\n}\n.controler-button:hover {\n    background-color: #ccc;\n}\n.controler-button.controler-selection select {\n    box-sizing: border-box;\n    -webkit-box-sizing: border-box;\n    -moz-box-sizing: border-box;\n    -webkit-appearance: none;\n    -moz-appearance: none;\n    appearance: none;\n    border: none;\n    border-radius: 0px;\n    width: 100%;\n    height: 100%;\n    padding-left: 10px;\n    padding-right: 25px;\n}\n.controler-button.controler-selection::after {\n    position:absolute;\n    right:.5rem;\n    content:&#39;\\2193&#39;;\n    pointer-events: none;\n}\n.controler-selection {\n    width: auto;\n    position: relative;\n}\n.controler-selection:hover {\n    background-color: #e5e5e5;\n}\n.controler-button.disabled {\n    color: #adadad;\n}\n.controler-button.disabled:hover {\n    cursor: inherit;\n    background-color: #e5e5e5;\n}\n      \n&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-year-selector-with-previous-and-next-buttons"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;defaultDomain&#34;: &#34;https://userclub.opendatasoft.com/&#34;,
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                },
+                {
+                    &#34;provider&#34;: &#34;jawg.streets&#34;,
+                    &#34;label&#34;: &#34;Jawg Streets&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;,
+                    &#34;id&#34;: &#34;streets&#34;
+                }
+            ],
+            &#34;themes&#34;: {
+                &#39;default&#39;: {
+                    &#39;url&#39;: &#39;/img/ods.svg&#39;
+                },
+                &#39;Santé&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Culture, Patrimoine&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Environment&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Transports, Déplacements&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Justice, Sécurité, Police, Crime&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Sport, Loisirs&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Hébergement, Restauration&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Services, Social&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Checklist&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Usages&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                }
+            },
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+        </head>
+        <body>
+        <div ng-app='ods-widgets'>
+            &lt;ods-dataset-context context=&#34;sirenepublic,sirenepublicfacetlistingonly&#34;
+                      sirenepublic-dataset=&#34;sirene&#34;
+                      sirenepublic-domain=&#34;public&#34;
+                      sirenepublic-parameters=&#34;{&#39;q&#39;:&#39;ddebact:[2010 TO 2019]&#39;,
+                                              &#39;disjunctive.ddebact&#39;:true}&#34;
+                      sirenepublicfacetlistingonly-dataset=&#34;sirene&#34;
+                      sirenepublicfacetlistingonly-domain=&#34;public&#34;
+                      sirenepublicfacetlistingonly-parameters=&#34;{&#39;q&#39;:&#39;ddebact:[2010 TO 2019]&#39;,
+                                                              &#39;disjunctive.ddebact&#39;:true}&#34;&gt;
+    &lt;div class=&#34;row&#34;&gt;
+        &lt;div class=&#34;col-sm-4&#34;
+             ng-init=&#34;years = {&#39;values&#39;:undefined}&#34;&gt;
+            &lt;span ods-facet-results=&#34;results&#34;
+                  ods-facet-results-context=&#34;sirenepublicfacetlistingonly&#34;
+                  ods-facet-results-facet-name=&#34;ddebact&#34;
+                  ods-facet-results-sort=&#34;-alphanum&#34;&gt;
+                {{ years.values = results; &#34;&#34; }}
+                &lt;div class=&#34;filtres-facet-titre&#34;&gt;
+                    Pick a year :
+                &lt;/div&gt;
+                &lt;div class=&#34;controler&#34;
+                     ng-if=&#34;years.values&#34;
+                     ng-init=&#34;selection = years.values[0].path&#34;&gt;
+                    {{ sirenepublic.parameters[&#39;refine.ddebact&#39;] = selection ; &#39;&#39; }}
+                    &lt;div class=&#34;input-range-with-button&#34;&gt;
+                        &lt;div class=&#34;controler-button&#34;
+                             ng-class=&#34;{&#39;disabled&#39;: selection == years.values[years.values.length-1].path}&#34;
+                             ng-click=&#34;selection = (selection == years.values[years.values.length-1].path? selection : 1*selection-1)&#34;&gt;
+                            &lt;i class=&#34;fa fa-angle-left&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;controler-button controler-selection&#34;&gt;
+                            &lt;select ng-model=&#34;selection&#34;&gt;
+                                &lt;option ng-repeat=&#34;year in years.values&#34;
+                                        ng-selected=&#34;selection == year.path&#34;
+                                        value=&#34;{{ year.path }}&#34;&gt;
+                                    {{ year.name }} ({{ year.count | number }} companies)
+                                &lt;/option&gt;
+                            &lt;/select&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;controler-button&#34;
+                             ng-class=&#34;{&#39;disabled&#39;: selection == years.values[0].path }&#34;
+                             ng-click=&#34;selection = (selection == years.values[0].path ? selection : 1*selection&#43;1)&#34;&gt;
+                            &lt;i class=&#34;fa fa-angle-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-sm-8&#34;&gt;
+            &lt;ods-chart ng-if=&#34;sirenepublic.parameters[&#39;refine.ddebact&#39;]&#34;
+                       align-month=&#34;true&#34;&gt;
+                &lt;ods-chart-query context=&#34;sirenepublic&#34; field-x=&#34;ddebact&#34; maxpoints=&#34;0&#34; timescale=&#34;month&#34;&gt;
+                    &lt;ods-chart-serie chart-type=&#34;column&#34; function-y=&#34;COUNT&#34; color=&#34;#1B6698&#34; scientific-display=&#34;true&#34;&gt;
+                    &lt;/ods-chart-serie&gt;
+                &lt;/ods-chart-query&gt;
+            &lt;/ods-chart&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+
+        </div>
+        <style type='text/css'>
+            /* DATE SELECTOR */
+.input-range-with-button {
+    display: flex;
+}
+.controler-button {
+    border: 1px solid;
+    background-color: #e5e5e5;
+    border-color: #ccc;
+    font-weight: 500;
+    min-width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.controler-button:nth-child(1) {
+    border-radius: 0.5em 0 0 0.5em;
+}
+.controler-button:nth-child(3) {
+    border-radius: 0 0.5em 0.5em 0;
+}
+.controler-button:hover {
+    background-color: #ccc;
+}
+.controler-button.controler-selection select {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 25px;
+}
+.controler-button.controler-selection::after {
+    position:absolute;
+    right:.5rem;
+    content:&#39;\2193&#39;;
+    pointer-events: none;
+}
+.controler-selection {
+    width: auto;
+    position: relative;
+}
+.controler-selection:hover {
+    background-color: #e5e5e5;
+}
+.controler-button.disabled {
+    color: #adadad;
+}
+.controler-button.disabled:hover {
+    cursor: inherit;
+    background-color: #e5e5e5;
+}
+      
+
+        </style>
+        </body>
+        ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level is-flex">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-secondary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-year-selector-with-previous-and-next-buttons-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        
+                        <li class="button is-secondary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-year-selector-with-previous-and-next-buttons-css-content">
+                                CSS
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right mt-0">
+                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
+                   data-tooltip="Edit on CodePen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-year-selector-with-previous-and-next-buttons').submit()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-edit">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-year-selector-with-previous-and-next-buttons-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;sirenepublic,sirenepublicfacetlistingonly&#34;
+                      sirenepublic-dataset=&#34;sirene&#34;
+                      sirenepublic-domain=&#34;public&#34;
+                      sirenepublic-parameters=&#34;{&#39;q&#39;:&#39;ddebact:[2010 TO 2019]&#39;,
+                                              &#39;disjunctive.ddebact&#39;:true}&#34;
+                      sirenepublicfacetlistingonly-dataset=&#34;sirene&#34;
+                      sirenepublicfacetlistingonly-domain=&#34;public&#34;
+                      sirenepublicfacetlistingonly-parameters=&#34;{&#39;q&#39;:&#39;ddebact:[2010 TO 2019]&#39;,
+                                                              &#39;disjunctive.ddebact&#39;:true}&#34;&gt;
+    &lt;div class=&#34;row&#34;&gt;
+        &lt;div class=&#34;col-sm-4&#34;
+             ng-init=&#34;years = {&#39;values&#39;:undefined}&#34;&gt;
+            &lt;span ods-facet-results=&#34;results&#34;
+                  ods-facet-results-context=&#34;sirenepublicfacetlistingonly&#34;
+                  ods-facet-results-facet-name=&#34;ddebact&#34;
+                  ods-facet-results-sort=&#34;-alphanum&#34;&gt;
+                {{ years.values = results; &#34;&#34; }}
+                &lt;div class=&#34;filtres-facet-titre&#34;&gt;
+                    Pick a year :
+                &lt;/div&gt;
+                &lt;div class=&#34;controler&#34;
+                     ng-if=&#34;years.values&#34;
+                     ng-init=&#34;selection = years.values[0].path&#34;&gt;
+                    {{ sirenepublic.parameters[&#39;refine.ddebact&#39;] = selection ; &#39;&#39; }}
+                    &lt;div class=&#34;input-range-with-button&#34;&gt;
+                        &lt;div class=&#34;controler-button&#34;
+                             ng-class=&#34;{&#39;disabled&#39;: selection == years.values[years.values.length-1].path}&#34;
+                             ng-click=&#34;selection = (selection == years.values[years.values.length-1].path? selection : 1*selection-1)&#34;&gt;
+                            &lt;i class=&#34;fa fa-angle-left&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;controler-button controler-selection&#34;&gt;
+                            &lt;select ng-model=&#34;selection&#34;&gt;
+                                &lt;option ng-repeat=&#34;year in years.values&#34;
+                                        ng-selected=&#34;selection == year.path&#34;
+                                        value=&#34;{{ year.path }}&#34;&gt;
+                                    {{ year.name }} ({{ year.count | number }} companies)
+                                &lt;/option&gt;
+                            &lt;/select&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;controler-button&#34;
+                             ng-class=&#34;{&#39;disabled&#39;: selection == years.values[0].path }&#34;
+                             ng-click=&#34;selection = (selection == years.values[0].path ? selection : 1*selection&#43;1)&#34;&gt;
+                            &lt;i class=&#34;fa fa-angle-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-sm-8&#34;&gt;
+            &lt;ods-chart ng-if=&#34;sirenepublic.parameters[&#39;refine.ddebact&#39;]&#34;
+                       align-month=&#34;true&#34;&gt;
+                &lt;ods-chart-query context=&#34;sirenepublic&#34; field-x=&#34;ddebact&#34; maxpoints=&#34;0&#34; timescale=&#34;month&#34;&gt;
+                    &lt;ods-chart-serie chart-type=&#34;column&#34; function-y=&#34;COUNT&#34; color=&#34;#1B6698&#34; scientific-display=&#34;true&#34;&gt;
+                    &lt;/ods-chart-serie&gt;
+                &lt;/ods-chart-query&gt;
+            &lt;/ods-chart&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+</code></pre>
+                </div>
+            </div>
+            
+            <div class="js-tabcontent"
+                 id="code-year-selector-with-previous-and-next-buttons-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>/* DATE SELECTOR */
+.input-range-with-button {
+    display: flex;
+}
+.controler-button {
+    border: 1px solid;
+    background-color: #e5e5e5;
+    border-color: #ccc;
+    font-weight: 500;
+    min-width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.controler-button:nth-child(1) {
+    border-radius: 0.5em 0 0 0.5em;
+}
+.controler-button:nth-child(3) {
+    border-radius: 0 0.5em 0.5em 0;
+}
+.controler-button:hover {
+    background-color: #ccc;
+}
+.controler-button.controler-selection select {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    border-radius: 0px;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    padding-right: 25px;
+}
+.controler-button.controler-selection::after {
+    position:absolute;
+    right:.5rem;
+    content:&#39;\2193&#39;;
+    pointer-events: none;
+}
+.controler-selection {
+    width: auto;
+    position: relative;
+}
+.controler-selection:hover {
+    background-color: #e5e5e5;
+}
+.controler-button.disabled {
+    color: #adadad;
+}
+.controler-button.disabled:hover {
+    cursor: inherit;
+    background-color: #e5e5e5;
+}
+      
+</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-year-selector-with-previous-and-next-buttons";
+            iframe = document.getElementById(iframeId);
+             
+            size =  500 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "IFRAME ID HERE";
+            iframe = document.getElementById(iframeId);
+
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+            }
+        }, 1000);
+    });
+</script>
+      </div>
+    </div>
+    
+  </section>
 
     </div>
 </div>
@@ -2081,7 +2074,7 @@ Filters as an HTML Select &ndash; Codelibrary
 
 <script>var process = { "env": { "NODE_ENV": "production" } }</script>
 <script type="text/javascript"
-        src="/index.min.d819882aed453326e186b5e58276479ab9f56632de0bd53f36f17281b9e51172.js"
+        src="/index.min.4c4e90b33e22814ed2f29ed851542d05481299bde3cb5e86e25342883c06ea26.js"
         defer></script>
 
 </body>

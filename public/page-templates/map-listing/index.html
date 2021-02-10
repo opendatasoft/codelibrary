@@ -3,9 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>
-        
-Map Listing &ndash; Codelibrary
-
+         Map Listing Generator &ndash; Codelibrary 
     </title>
 
     
@@ -153,7 +151,7 @@ Map Listing &ndash; Codelibrary
                 <ul>
                     
                     <li>
-                        <a class="" href="https://codelibrary.opendatasoft.com/page-templates/dashboard/">Dashboard</a>
+                        <a class="" href="https://codelibrary.opendatasoft.com/page-templates/dashboard/">Dashboard template</a>
                     </li>
                     
                     <li>
@@ -165,15 +163,15 @@ Map Listing &ndash; Codelibrary
                     </li>
                     
                     <li>
-                        <a class="" href="https://codelibrary.opendatasoft.com/page-templates/home-1/">Home 1</a>
+                        <a class="" href="https://codelibrary.opendatasoft.com/page-templates/home-1/">Home page 1</a>
                     </li>
                     
                     <li>
-                        <a class="" href="https://codelibrary.opendatasoft.com/page-templates/home-2/">Home 2</a>
+                        <a class="" href="https://codelibrary.opendatasoft.com/page-templates/home-2/">Home page 2</a>
                     </li>
                     
                     <li>
-                        <a class="" href="https://codelibrary.opendatasoft.com/page-templates/home-3/">Home 3</a>
+                        <a class="" href="https://codelibrary.opendatasoft.com/page-templates/home-3/">Home page 3</a>
                     </li>
                     
                     <li>
@@ -185,11 +183,11 @@ Map Listing &ndash; Codelibrary
                     </li>
                     
                     <li>
-                        <a class="is-active" href="https://codelibrary.opendatasoft.com/page-templates/map-listing/">Map Listing</a>
+                        <a class="" href="https://codelibrary.opendatasoft.com/page-templates/map-refine/">Map &amp; Refine</a>
                     </li>
                     
                     <li>
-                        <a class="" href="https://codelibrary.opendatasoft.com/page-templates/map-refine/">Map Refine</a>
+                        <a class="is-active" href="https://codelibrary.opendatasoft.com/page-templates/map-listing/">Map Listing Generator</a>
                     </li>
                     
                     <li>
@@ -197,7 +195,11 @@ Map Listing &ndash; Codelibrary
                     </li>
                     
                     <li>
-                        <a class="" href="https://codelibrary.opendatasoft.com/page-templates/regional-covid/">Regional COVID-19</a>
+                        <a class="" href="https://codelibrary.opendatasoft.com/page-templates/regional-covid/">Regional COVID-19 Dashboard</a>
+                    </li>
+                    
+                    <li>
+                        <a class="" href="https://codelibrary.opendatasoft.com/page-templates/timeline/">Timeline Custom View</a>
                     </li>
                     
                 </ul>
@@ -283,34 +285,31 @@ Map Listing &ndash; Codelibrary
     </div>
     <div class="column codelibrary-content">
     
-
-<section>
+  <section>
     <div class="content-header container is-max-desktop mb-5">
-        <div class="content">
-            <h1 class="title" id="map-listing-generator">
-  Map listing generator
-  
-</h1>
-<p>Edit only a few settings to generate a modern looking visualization that uses ODS components and widgets.</p>
+      <div class="content">
+        <h1>Page Templates - Map Listing Generator</h1>
+        <p>Edit only a few settings to generate a modern looking visualization that uses ODS components and widgets.</p>
 
-        </div>
+      </div>
     </div>
     
     <div class="container">
-        <div class="box box-example">
-          <div class="content">
-            <h2 class="title" id="listing-with-map-view">
-  Listing with map view
-  
-    <a class="is-link" href="#listing-with-map-view">
-      <img src="/img/fas-link.svg" />
-    </a>
-  
-</h2>
-<p>Page that shows some KPIs and a list of results alongside a map.</p>
-
-          </div>
+      <div class="box box-example">
+        <div class="content">
+          <h2>
+            Fullscreen Map
+            <a class="is-link" href="#fullscreen-map">
+              <span class="icon">
+                <img src="/img/fas-link.svg" />
+              </span>
+            </a>
+          </h2>
           
+          <p>View a fullscreen map with a side panel where the listing results can be filtered, searched and clicked on.</p>
+
+        </div>
+        
 
 
 <div class="codepen">
@@ -318,7 +317,1372 @@ Map Listing &ndash; Codelibrary
     
     
 
-    <form id="form-map-listing-1"
+    <form id="form-fullscreen-map"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003c!-- V2.1 :\n    - Add ods-select and multiple choice option for filters\n    - Add clear all filter button when one filter is applied\n    - Add documentation\n  --\u003e\n\n\u003cdiv ng-init=\&#34;domain = &#39;mesr.opendatasoft.com&#39;;\n                datasetid = &#39;fr-esr-principaux-etablissements-enseignement-superieur&#39;;\n\n                title = &#39;Établissements près de chez vous&#39;;\n\n                filters = [\n                {&#39;id&#39;:&#39;type_d_etablissement&#39;,&#39;multiple&#39;:true},\n                {&#39;id&#39;:&#39;secteur_d_etablissement&#39;,&#39;multiple&#39;:true},\n                {&#39;id&#39;:&#39;dep_nom&#39;,&#39;multiple&#39;:true}\n                ];\n                resetFiltersButton = true;\n                resetFiltersButtonLabel = &#39;Supprimer tous les filtres&#39;;\n\n                resultTitle = &#39;uo_lib&#39;;\n                fieldsList = [&#39;adresse_uai&#39;, &#39;dep_nom&#39;, &#39;numero_telephone_uai&#39;];\n                fieldLink = &#39;url&#39;;\n                fieldLinkLabel = &#39;Visiter le site web&#39;;\n                mapLinkLabel = &#39;Voir sur la carte&#39;;\n\n                viewListButtonText = &#39;Voir la liste&#39;;\n                viewDetailsButtonText = &#39;Voir les détails&#39;;\n                backToResultsButtonText = &#39;Retour aux résultats&#39;;\n\n                DO_NOT_MODIFY_BELOW;\n\n                ctxfields = {};\n                isVisible = false;\n                activeFilters = {};\n                \&#34;\u003e\n\n    \u003c!-- ### GENERAL SETTINGS ### --\u003e\n    \u003c!-- domain : (Domain URL) : Must contain the ID of the domain where the dataset is published.\n      ex: &#39;discovery.opendatasoft.com&#39;\n    --\u003e\n    \u003c!-- datasetid (Dataset ID) : Must contain the ID of the dataset\n      ex: &#39;oeuvres-de-johannes-vermeer&#39;\n    --\u003e\n\n    \u003c!-- title (Title of the page) :\n    ex: &#39;List of interest around you&#39;\n    --\u003e\n\n    \u003c!-- ### FILTERS SETTINGS ### --\u003e\n    \u003c!-- filters (Filters) : List of object that contains the IDs to generate the filters pannel.\n    and multiple true or false to allow the user to select multiple values in the filter.\n    NB: the field must be a facet in the dataset\n    NB: alphanumerical sort is applied in the filter view\n     ex: [\n              {&#39;id&#39;:&#39;filterid&#39;,&#39;multiple&#39;:true},\n              {&#39;id&#39;:&#39;filterid2&#39;,&#39;multiple&#39;:false}\n         ]\n    --\u003e\n    \u003c!-- resetFiltersButton (boolean) : add a reset filters button after filters block --\u003e\n    \u003c!-- resetFiltersButtonLabel (Label of the button) : test to display when a filter is selected\n        ex: &#39;Clear all filters&#39;\n    --\u003e\n\n    \u003c!-- ### LIST VIEW SETTINGS ### --\u003e\n    \u003c!-- resultTitle (Title of the item) : Set the item title from a field ID\n      ex: &#39;title&#39;;\n    --\u003e\n    \u003c!-- fieldsList (List configuration) : Set the list of field IDs\n      ex: [&#39;category&#39;,&#39;genre&#39;,&#39;date&#39;]\n    --\u003e\n    \u003c!-- fieldLink (Link to an external resource) : If available, the field ID of some external resource as a web URL\n      ex: &#39;link&#39;\n    --\u003e\n    \u003c!-- fieldLinkLabel (The label of that link) : Label of the link button\n      ex: &#39;Read more here&#39;\n    --\u003e\n    \u003c!-- mapLinkLabel (The label of the item button) : used to select the item and see it on the map\n      ex: &#39;See on the map&#39;\n    --\u003e\n\n    \u003c!-- ### MOBILE VIEW SETTINGS ### --\u003e\n    \u003c!-- viewListButtonText : when displaying the map, the bottom button to open the list view\n      ex: &#39;See the list&#39;\n    --\u003e\n    \u003c!-- viewDetailsButtonText : when an item is selected on the map, the bottom button to open the list view with the selected item\n      ex: &#39;See the item details&#39;\n    --\u003e\n    \u003c!-- backToResultsButtonText : when the list view is opened, to close button to go back to the map\n      ex: \&#34;Back to the list&#39;\n    --\u003e\n\n\n\n    \u003c!-- MUST READ\n\n  A common error is forget to protect commas with a leading backslash, as commas are used to declare values of variable it will break the settings\n  wrongVariable = &#39;I&#39;ll be freed from commas&#39;\n  correctVariable = &#39;I\\&#39;ll be freed from commas&#39;\n  --\u003e\n\n    \u003c!-- DO NOT MODIFY --\u003e\n    \u003c!-- Technical fields, do not modify please --\u003e\n\n    \u003cods-dataset-context context=\&#34;ctx\&#34;\n                         ctx-domain=\&#34;{{ domain }}\&#34;\n                         ctx-dataset=\&#34;{{ datasetid }}\&#34;\u003e\n\n      \u003cspan ng-repeat=\&#34;field in ctx.dataset.fields\&#34;\u003e\n        {{ ctxfields[field.name] = field.label; &#39;&#39; }}\n      \u003c/span\u003e\n\n        \u003cspan ng-repeat=\&#34;filter in filters\&#34;\u003e\n        {{ ctx.parameters[&#39;refine.&#39; &#43; filter.id] = activeFilters[filter.id] ; &#39;&#39; }}\n      \u003c/span\u003e\n\n        \u003caside class=\&#34;cl-modal\&#34;\n               ng-class=\&#34;{ &#39;is-visible&#39; : modal.isVisible}\&#34;\u003e\n            \u003cdiv class=\&#34;cl-modal-header\&#34;\u003e\n                \u003cbutton class=\&#34;cl-modal-close-mobile\&#34;\n                        title=\&#34;Close modal\&#34;\n                        ng-click=\&#34;modal.isVisible = false\&#34;\u003e\n                    \u003csvg xmlns=\&#34;http://www.w3.org/2000/svg\&#34; width=\&#34;24\&#34; height=\&#34;24\&#34; viewBox=\&#34;0 0 24 24\&#34; fill=\&#34;none\&#34;\n                         stroke=\&#34;currentColor\&#34; stroke-width=\&#34;2\&#34; stroke-linecap=\&#34;round\&#34; stroke-linejoin=\&#34;round\&#34;\n                         class=\&#34;feather feather-x\&#34;\u003e\n                        \u003cline x1=\&#34;18\&#34; y1=\&#34;6\&#34; x2=\&#34;6\&#34; y2=\&#34;18\&#34;\u003e\u003c/line\u003e\n                        \u003cline x1=\&#34;6\&#34; y1=\&#34;6\&#34; x2=\&#34;18\&#34; y2=\&#34;18\&#34;\u003e\u003c/line\u003e\n                    \u003c/svg\u003e\n                \u003c/button\u003e\n                \u003ch1 class=\&#34;cl-modal-title\&#34;\u003e\n                    {{ title }}\n                \u003c/h1\u003e\n                \u003cdiv class=\&#34;search-module\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-search search-module-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                    \u003cinput placeholder=\&#34;Search\&#34;\n                           ng-model=\&#34;ctx.parameters[&#39;q&#39;]\&#34;\n                           ng-model-options=\&#34;{ updateOn: &#39;keyup&#39;, debounce: { &#39;default&#39;: 300, &#39;blur&#39;: 0 }}\&#34;\n                           class=\&#34;search-module-input\&#34;\n                           type=\&#34;text\&#34;/\u003e\n                    \u003cbutton class=\&#34;search-module-clear\&#34;\n                            ng-if=\&#34;ctx.parameters[&#39;q&#39;]\&#34;\n                            ng-click=\&#34;ctx.parameters[&#39;q&#39;] = undefined\&#34;\u003e\n                        \u003ci class=\&#34;fa fa-times-circle\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                    \u003c/button\u003e\n                \u003c/div\u003e\n\n                \u003c!-- FILTERS --\u003e\n                \u003cdiv class=\&#34;filter-list\&#34;\n                     ng-init=\&#34;dropdown.open = &#39;&#39;;\n                        select = {}\&#34;\u003e\n                    \u003cdiv ng-repeat=\&#34;filter in filters\&#34;\u003e\n                        {{ ctx.parameters[&#39;disjunctive.&#39; &#43; filter.id] = true; &#39;&#39; }}\n                        \u003cdiv ods-facet-results=\&#34;categories\&#34;\n                             ods-facet-results-facet-name=\&#34;{{ filter.id }}\&#34;\n                             ods-facet-results-context=\&#34;ctx\&#34;\n                             ods-facet-results-sort=\&#34;alphanum\&#34;\u003e\n                            \u003cods-select ng-if=\&#34;ctxfields[filter.id]\&#34;\n                                        selected-values=\&#34;activeFilters[filter.id]\&#34;\n                                        multiple=\&#34;filter.multiple\&#34;\n                                        options=\&#34;categories\&#34;\n                                        label-modifier=\&#34;name\&#34;\n                                        value-modifier=\&#34;name\&#34;\n                                        placeholder=\&#34;{{ ctxfields[filter.id] }}\&#34;\u003e\u003c/ods-select\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n\n                    \u003cdiv class=\&#34;clear-filters\&#34;\n                         ng-show=\&#34;(activeFilters | values).join(&#39;&#39;)\&#34;\u003e\n                        \u003cdiv class=\&#34;clear-filters-button\&#34;\n                             role=\&#34;button\&#34;\n                             ng-click=\&#34;activeFilters = {}\&#34;\u003e\n                            {{ resetFiltersButtonLabel }}\n                            \u003ci class=\&#34;fa fa-times-circle\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n\n            \u003cdiv class=\&#34;cl-modal-content\&#34;\u003e\n                \u003cul class=\&#34;result-list\&#34;\u003e\n                    \u003cli class=\&#34;result\&#34;\n                        ng-repeat=\&#34;item in items\&#34;\n                        ods-results=\&#34;items\&#34;\n                        ods-results-context=\&#34;ctx\&#34;\n                        ods-results-max=\&#34;1000\&#34;\u003e\n\n                        \u003ch2 class=\&#34;result-title\&#34;\u003e\n                            {{ item.fields[resultTitle] }}\n                        \u003c/h2\u003e\n                        \u003cdl class=\&#34;result-info\&#34;\u003e\n                            \u003cdt ng-repeat-start=\&#34;field in fieldsList\&#34;\u003e\n                                {{ ctxfields[field] }}\n                            \u003c/dt\u003e\n                            \u003cdd ng-repeat-end\u003e{{ item.fields[field] }}\u003c/dd\u003e\n                        \u003c/dl\u003e\n                        \u003cdiv class=\&#34;result-footer\&#34;\u003e\n                            \u003ca href=\&#34;{{ item.fields[fieldLink] }}\&#34;\n                               ng-if=\&#34;fieldLink \u0026\u0026 item.fields[fieldLink]\&#34;\n                               target=\&#34;_blank\&#34;\u003e\n                                {{ fieldLinkLabel }}\n                            \u003c/a\u003e\n                            \u003cbutton class=\&#34;result-button\&#34;\n                                    ng-if=\&#34;!ctx.parameters[&#39;refine.&#39; &#43; resultTitle]\&#34;\n                                    ng-click=\&#34;modal.isVisible = false;\n                                  ctx.parameters[&#39;refine.&#39; &#43; resultTitle] = item.fields[resultTitle];\&#34;\u003e\n                                {{ mapLinkLabel }}\n                            \u003c/button\u003e\n                            \u003cbutton class=\&#34;result-button\&#34;\n                                    ng-if=\&#34;ctx.parameters[&#39;refine.&#39; &#43; resultTitle]\&#34;\n                                    ng-click=\&#34;ctx.parameters[&#39;refine.&#39; &#43; resultTitle] = undefined\&#34;\u003e\n                                {{ backToResultsButtonText }}\n                                \u003csvg xmlns=\&#34;http://www.w3.org/2000/svg\&#34; width=\&#34;24\&#34; height=\&#34;24\&#34; viewBox=\&#34;0 0 24 24\&#34;\n                                     fill=\&#34;none\&#34; stroke=\&#34;currentColor\&#34; stroke-width=\&#34;2\&#34; stroke-linecap=\&#34;round\&#34;\n                                     stroke-linejoin=\&#34;round\&#34; class=\&#34;feather feather-x\&#34;\u003e\n                                    \u003cline x1=\&#34;18\&#34; y1=\&#34;6\&#34; x2=\&#34;6\&#34; y2=\&#34;18\&#34;\u003e\u003c/line\u003e\n                                    \u003cline x1=\&#34;6\&#34; y1=\&#34;6\&#34; x2=\&#34;18\&#34; y2=\&#34;18\&#34;\u003e\u003c/line\u003e\n                                \u003c/svg\u003e\n                            \u003c/button\u003e\n                        \u003c/div\u003e\n                    \u003c/li\u003e\n                \u003c/ul\u003e\n            \u003c/div\u003e\n        \u003c/aside\u003e\n\n\n        \u003cods-map no-refit=\&#34;true\&#34;\n                 scroll-wheel-zoom=\&#34;true\&#34;\n                 display-control=\&#34;false\&#34;\n                 display-control-single-layer=\&#34;false\&#34;\n                 toolbar-fullscreen=\&#34;false\&#34;\n                 toolbar-drawing=\&#34;false\&#34;\u003e\n            \u003cods-map-layer-group\u003e\n                \u003cods-map-layer context=\&#34;ctx\&#34;\n                               refine-on-click-context=\&#34;ctx\&#34;\n                               refine-on-click-map-field=\&#34;{{ resultTitle }}\&#34;\n                               refine-on-click-context-field=\&#34;{{ resultTitle }}\&#34;\n                               color=\&#34;#0098c3\&#34;\n                               picto=\&#34;college\&#34;\n                               show-marker=\&#34;true\&#34;\n                               display=\&#34;auto\&#34;\n                               shape-opacity=\&#34;0.5\&#34;\n                               point-opacity=\&#34;1\&#34;\n                               border-color=\&#34;#FFFFFF\&#34;\n                               border-opacity=\&#34;1\&#34;\n                               border-size=\&#34;1\&#34;\n                               border-pattern=\&#34;solid\&#34;\n                               size=\&#34;4\&#34;\n                               size-min=\&#34;3\&#34;\n                               size-max=\&#34;5\&#34;\n                               size-function=\&#34;linear\&#34;\u003e\u003c/ods-map-layer\u003e\n            \u003c/ods-map-layer-group\u003e\n        \u003c/ods-map\u003e\n\n        \u003cdiv class=\&#34;cl-modal-open-mobile\&#34;\n             ng-click=\&#34;modal.isVisible = true\&#34;\u003e\n            \u003csvg xmlns=\&#34;http://www.w3.org/2000/svg\&#34;\n                 width=\&#34;24\&#34;\n                 height=\&#34;24\&#34;\n                 viewBox=\&#34;0 0 24 24\&#34;\n                 fill=\&#34;none\&#34;\n                 stroke=\&#34;currentColor\&#34;\n                 stroke-width=\&#34;2\&#34;\n                 stroke-linecap=\&#34;round\&#34;\n                 stroke-linejoin=\&#34;round\&#34;\n                 class=\&#34;feather feather-chevron-up\&#34;\u003e\n                \u003cpolyline points=\&#34;18 15 12 9 6 15\&#34;\u003e\u003c/polyline\u003e\n            \u003c/svg\u003e\n            \u003ch3 class=\&#34;cl-modal-open-mobile-title\&#34;\n                ng-if=\&#34;!ctx.parameters[&#39;refine.&#39; &#43; resultTitle]\&#34;\u003e\n                {{ viewListButtonText }}\n            \u003c/h3\u003e\n            \u003ch3 class=\&#34;cl-modal-open-mobile-title\&#34;\n                ng-if=\&#34;ctx.parameters[&#39;refine.&#39; &#43; resultTitle]\&#34;\u003e\n                {{ viewDetailsButtonText }}\n            \u003c/h3\u003e\n        \u003c/div\u003e\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\n\u003c/div\u003e&#34;,
+               "css": &#34;/* General Layout\n========================================================================== */\n\nbody, .main--page {\n    padding: 0;\n    margin: 0;\n}\n\n.ods-front-header, .ods-front-footer, .ods-content:after, footer {\n    display: none;\n}\n\nods-dataset-context {\n    display: block;\n    position: relative;\n}\n\n.odswidget.odswidget-map {\n    width: 100%;\n    height: 100vh;\n}\n\n/* Modal\n   ========================================================================== */\n\n.cl-modal {\n    display: none;\n    flex-direction: column;\n    background-color: #FFFFFF;\n    box-shadow: 0 1px 5px rgba(0,0,0,0.65);\n    width: 100vw;\n    height: 100vh;\n    position: absolute;\n    top: 35%;\n    left: 0;\n    border-radius: 6px 6px 0 0;\n    z-index: 30;\n    overflow: hidden; /* Disable horizontal scroll */\n}\n\n@media screen and (min-width: 768px) {\n    .cl-modal {\n        display: flex;\n        width: 400px;\n        height: calc(100vh - 55px);\n        top: 10px;\n        left: 47px;\n        border-radius: 6px;\n    }\n}\n\n.cl-modal.is-visible {\n    display: flex;\n}\n\n.cl-modal-open-mobile {\n    position: absolute;\n    bottom: 0;\n    text-align: center;\n    width: 100vw;\n    background-color: #FFFFFF;\n    padding: 13px;\n    z-index: 20;\n    border-radius: 6px 6px 0 0;\n    box-shadow: 0 0 5px rgba(0,0,0,0.65);\n    transition: all .2s;\n}\n\n.cl-modal-open-mobile:hover {\n    background-color: #f2f2f2;\n}\n\n@media screen and (min-width: 768px) {\n    .cl-modal-open-mobile {\n        display: none;\n    }\n}\n\n.cl-modal-open-mobile-title {\n    margin: 0;\n    font-weight: bold;\n}\n\n.cl-modal-close-mobile {\n    position: absolute;\n    top: 5px;\n    right: 5px;\n    background-color: transparent;\n    border-radius: 10000px;\n    border: none;\n    font-size: 2.5rem;\n    opacity: .6;\n    transition: all .2s;\n}\n\n.cl-modal-close-mobile:hover {\n    background-color: #f2f2f2;\n    opacity: 1;\n}\n\n@media screen and (min-width: 768px) {\n    .cl-modal-close-mobile {\n        display: none;\n    }\n}\n\n.cl-modal-header {\n    padding: 26px 26px 0 26px;\n    box-shadow: 0 1px 2px rgba(0,0,0,.13);\n}\n\n.cl-modal-title {\n    margin-top: 0;\n    margin-bottom: 13px;\n    text-align: center;\n    font-weight: 400;\n    font-size: 1.5rem;\n}\n\n.cl-modal-content {\n    height: 100%;\n    overflow-y: auto;\n}\n\n\n/* Search Module\n   ========================================================================== */\n\n.search-module {\n    display: flex;\n    align-items: stretch;\n    border-bottom: 1px solid #dee5ef;\n    transition: all .2s;\n}\n.search-module:hover,\n.search-module:focus-within {\n    border-bottom-color: var(--links);\n}\n.search-module-icon {\n    color: #898d92;\n    margin-right: 8px;\n    align-self: center;\n}\n.search-module-input {\n    background-color: transparent;\n    width: 100%;\n    outline: none;\n    border: none;\n    padding: 12px 0;\n    transition: all .2s;\n    color: var(--text);\n}\n.search-module-input::placeholder {\n    transition: all .2s;\n}\n.search-module-clear {\n    color: #898d92;\n    font-size: 1rem;\n    background: transparent;\n    border: none;\n    margin: 0;\n    outline: none;\n    padding: 0 0 0 12px;\n    transition: all .2s;\n}\n.search-module-clear:hover {\n    opacity: .65;\n}\n.search-module:hover .search-module-icon,\n.search-module:focus-within .search-module-icon,\n.search-module:hover .search-module-input::placeholder,\n.search-module:focus-within .search-module-input::placeholder {\n    color: var(--links)\n}\n\n/* Dropdown menu with pill styling\n========================================================================== */\n\n.filter-list {\n    display: flex;\n    flex-wrap: wrap;\n    margin-bottom: 20px;\n}\n\n.filter-list \u003e div {\n    width: 100%;\n    margin-top: 13px;\n}\n\n.clear-filters {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n.clear-filters-button:hover {\n    opacity: 0.65;\n}\n\n/* Results\n   ========================================================================== */\n\n.result-list {\n    list-style: none;\n    padding-left: 0;\n    margin-top: 0;\n    overflow-y: auto;\n}\n\n.result {\n    padding: 1rem 26px;\n    border-top: 1px solid #DEE5EF;\n}\n\n.result:hover {\n    background-color: #f5f7fa;\n}\n\n.result-title {\n    color: var(--titles);\n    font-size: 1rem;\n    font-weight: bold;\n    margin-top: 0;\n    margin-bottom: 5px;\n}\n\n.result-info {\n    list-style: none;\n    padding-left: 0;\n    margin-top: 0;\n    margin-bottom: 10px;\n    overflow-wrap: break-word;\n}\n\n.result-info dt {\n    font-size: .9rem;\n    opacity: .9;\n}\n\n.result-info dd {\n    margin-left: 0;\n    margin-bottom: 5px;\n}\n\n.result-footer {\n    display: flex;\n    flex-wrap: wrap;\n    align-items: center;\n    justify-content: space-between;\n}\n\n.result-button {\n    display: inline-flex;\n    align-items: center;\n    background-color: transparent;\n    border: 1px solid var(--links);\n    color: var(--links);\n    line-height: 1.5;\n    border-radius: 20px;\n    padding: .1rem .8rem;\n    margin-right: 4px;\n    margin-bottom: 2px;\n    transition: all .2s;\n}\n\n.result-button .feather-x {\n    height: 15px;\n    width: 15px;\n    margin-left: 4px;\n}\n\n.result-button:hover {\n    opacity: .65;\n    text-decoration: none;\n}\n&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-fullscreen-map"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;defaultDomain&#34;: &#34;https://userclub.opendatasoft.com/&#34;,
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                },
+                {
+                    &#34;provider&#34;: &#34;jawg.streets&#34;,
+                    &#34;label&#34;: &#34;Jawg Streets&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;,
+                    &#34;id&#34;: &#34;streets&#34;
+                }
+            ],
+            &#34;themes&#34;: {
+                &#39;default&#39;: {
+                    &#39;url&#39;: &#39;/img/ods.svg&#39;
+                },
+                &#39;Santé&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Culture, Patrimoine&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Environment&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Transports, Déplacements&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Justice, Sécurité, Police, Crime&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Sport, Loisirs&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Hébergement, Restauration&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Services, Social&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Checklist&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Usages&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                }
+            },
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+        </head>
+        <body>
+        <div ng-app='ods-widgets'>
+            &lt;!-- V2.1 :
+    - Add ods-select and multiple choice option for filters
+    - Add clear all filter button when one filter is applied
+    - Add documentation
+  --&gt;
+
+&lt;div ng-init=&#34;domain = &#39;mesr.opendatasoft.com&#39;;
+                datasetid = &#39;fr-esr-principaux-etablissements-enseignement-superieur&#39;;
+
+                title = &#39;Établissements près de chez vous&#39;;
+
+                filters = [
+                {&#39;id&#39;:&#39;type_d_etablissement&#39;,&#39;multiple&#39;:true},
+                {&#39;id&#39;:&#39;secteur_d_etablissement&#39;,&#39;multiple&#39;:true},
+                {&#39;id&#39;:&#39;dep_nom&#39;,&#39;multiple&#39;:true}
+                ];
+                resetFiltersButton = true;
+                resetFiltersButtonLabel = &#39;Supprimer tous les filtres&#39;;
+
+                resultTitle = &#39;uo_lib&#39;;
+                fieldsList = [&#39;adresse_uai&#39;, &#39;dep_nom&#39;, &#39;numero_telephone_uai&#39;];
+                fieldLink = &#39;url&#39;;
+                fieldLinkLabel = &#39;Visiter le site web&#39;;
+                mapLinkLabel = &#39;Voir sur la carte&#39;;
+
+                viewListButtonText = &#39;Voir la liste&#39;;
+                viewDetailsButtonText = &#39;Voir les détails&#39;;
+                backToResultsButtonText = &#39;Retour aux résultats&#39;;
+
+                DO_NOT_MODIFY_BELOW;
+
+                ctxfields = {};
+                isVisible = false;
+                activeFilters = {};
+                &#34;&gt;
+
+    &lt;!-- ### GENERAL SETTINGS ### --&gt;
+    &lt;!-- domain : (Domain URL) : Must contain the ID of the domain where the dataset is published.
+      ex: &#39;discovery.opendatasoft.com&#39;
+    --&gt;
+    &lt;!-- datasetid (Dataset ID) : Must contain the ID of the dataset
+      ex: &#39;oeuvres-de-johannes-vermeer&#39;
+    --&gt;
+
+    &lt;!-- title (Title of the page) :
+    ex: &#39;List of interest around you&#39;
+    --&gt;
+
+    &lt;!-- ### FILTERS SETTINGS ### --&gt;
+    &lt;!-- filters (Filters) : List of object that contains the IDs to generate the filters pannel.
+    and multiple true or false to allow the user to select multiple values in the filter.
+    NB: the field must be a facet in the dataset
+    NB: alphanumerical sort is applied in the filter view
+     ex: [
+              {&#39;id&#39;:&#39;filterid&#39;,&#39;multiple&#39;:true},
+              {&#39;id&#39;:&#39;filterid2&#39;,&#39;multiple&#39;:false}
+         ]
+    --&gt;
+    &lt;!-- resetFiltersButton (boolean) : add a reset filters button after filters block --&gt;
+    &lt;!-- resetFiltersButtonLabel (Label of the button) : test to display when a filter is selected
+        ex: &#39;Clear all filters&#39;
+    --&gt;
+
+    &lt;!-- ### LIST VIEW SETTINGS ### --&gt;
+    &lt;!-- resultTitle (Title of the item) : Set the item title from a field ID
+      ex: &#39;title&#39;;
+    --&gt;
+    &lt;!-- fieldsList (List configuration) : Set the list of field IDs
+      ex: [&#39;category&#39;,&#39;genre&#39;,&#39;date&#39;]
+    --&gt;
+    &lt;!-- fieldLink (Link to an external resource) : If available, the field ID of some external resource as a web URL
+      ex: &#39;link&#39;
+    --&gt;
+    &lt;!-- fieldLinkLabel (The label of that link) : Label of the link button
+      ex: &#39;Read more here&#39;
+    --&gt;
+    &lt;!-- mapLinkLabel (The label of the item button) : used to select the item and see it on the map
+      ex: &#39;See on the map&#39;
+    --&gt;
+
+    &lt;!-- ### MOBILE VIEW SETTINGS ### --&gt;
+    &lt;!-- viewListButtonText : when displaying the map, the bottom button to open the list view
+      ex: &#39;See the list&#39;
+    --&gt;
+    &lt;!-- viewDetailsButtonText : when an item is selected on the map, the bottom button to open the list view with the selected item
+      ex: &#39;See the item details&#39;
+    --&gt;
+    &lt;!-- backToResultsButtonText : when the list view is opened, to close button to go back to the map
+      ex: &#34;Back to the list&#39;
+    --&gt;
+
+
+
+    &lt;!-- MUST READ
+
+  A common error is forget to protect commas with a leading backslash, as commas are used to declare values of variable it will break the settings
+  wrongVariable = &#39;I&#39;ll be freed from commas&#39;
+  correctVariable = &#39;I\&#39;ll be freed from commas&#39;
+  --&gt;
+
+    &lt;!-- DO NOT MODIFY --&gt;
+    &lt;!-- Technical fields, do not modify please --&gt;
+
+    &lt;ods-dataset-context context=&#34;ctx&#34;
+                         ctx-domain=&#34;{{ domain }}&#34;
+                         ctx-dataset=&#34;{{ datasetid }}&#34;&gt;
+
+      &lt;span ng-repeat=&#34;field in ctx.dataset.fields&#34;&gt;
+        {{ ctxfields[field.name] = field.label; &#39;&#39; }}
+      &lt;/span&gt;
+
+        &lt;span ng-repeat=&#34;filter in filters&#34;&gt;
+        {{ ctx.parameters[&#39;refine.&#39; &#43; filter.id] = activeFilters[filter.id] ; &#39;&#39; }}
+      &lt;/span&gt;
+
+        &lt;aside class=&#34;cl-modal&#34;
+               ng-class=&#34;{ &#39;is-visible&#39; : modal.isVisible}&#34;&gt;
+            &lt;div class=&#34;cl-modal-header&#34;&gt;
+                &lt;button class=&#34;cl-modal-close-mobile&#34;
+                        title=&#34;Close modal&#34;
+                        ng-click=&#34;modal.isVisible = false&#34;&gt;
+                    &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+                         stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;
+                         class=&#34;feather feather-x&#34;&gt;
+                        &lt;line x1=&#34;18&#34; y1=&#34;6&#34; x2=&#34;6&#34; y2=&#34;18&#34;&gt;&lt;/line&gt;
+                        &lt;line x1=&#34;6&#34; y1=&#34;6&#34; x2=&#34;18&#34; y2=&#34;18&#34;&gt;&lt;/line&gt;
+                    &lt;/svg&gt;
+                &lt;/button&gt;
+                &lt;h1 class=&#34;cl-modal-title&#34;&gt;
+                    {{ title }}
+                &lt;/h1&gt;
+                &lt;div class=&#34;search-module&#34;&gt;
+                    &lt;i class=&#34;fa fa-search search-module-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;input placeholder=&#34;Search&#34;
+                           ng-model=&#34;ctx.parameters[&#39;q&#39;]&#34;
+                           ng-model-options=&#34;{ updateOn: &#39;keyup&#39;, debounce: { &#39;default&#39;: 300, &#39;blur&#39;: 0 }}&#34;
+                           class=&#34;search-module-input&#34;
+                           type=&#34;text&#34;/&gt;
+                    &lt;button class=&#34;search-module-clear&#34;
+                            ng-if=&#34;ctx.parameters[&#39;q&#39;]&#34;
+                            ng-click=&#34;ctx.parameters[&#39;q&#39;] = undefined&#34;&gt;
+                        &lt;i class=&#34;fa fa-times-circle&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+
+                &lt;!-- FILTERS --&gt;
+                &lt;div class=&#34;filter-list&#34;
+                     ng-init=&#34;dropdown.open = &#39;&#39;;
+                        select = {}&#34;&gt;
+                    &lt;div ng-repeat=&#34;filter in filters&#34;&gt;
+                        {{ ctx.parameters[&#39;disjunctive.&#39; &#43; filter.id] = true; &#39;&#39; }}
+                        &lt;div ods-facet-results=&#34;categories&#34;
+                             ods-facet-results-facet-name=&#34;{{ filter.id }}&#34;
+                             ods-facet-results-context=&#34;ctx&#34;
+                             ods-facet-results-sort=&#34;alphanum&#34;&gt;
+                            &lt;ods-select ng-if=&#34;ctxfields[filter.id]&#34;
+                                        selected-values=&#34;activeFilters[filter.id]&#34;
+                                        multiple=&#34;filter.multiple&#34;
+                                        options=&#34;categories&#34;
+                                        label-modifier=&#34;name&#34;
+                                        value-modifier=&#34;name&#34;
+                                        placeholder=&#34;{{ ctxfields[filter.id] }}&#34;&gt;&lt;/ods-select&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&#34;clear-filters&#34;
+                         ng-show=&#34;(activeFilters | values).join(&#39;&#39;)&#34;&gt;
+                        &lt;div class=&#34;clear-filters-button&#34;
+                             role=&#34;button&#34;
+                             ng-click=&#34;activeFilters = {}&#34;&gt;
+                            {{ resetFiltersButtonLabel }}
+                            &lt;i class=&#34;fa fa-times-circle&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&#34;cl-modal-content&#34;&gt;
+                &lt;ul class=&#34;result-list&#34;&gt;
+                    &lt;li class=&#34;result&#34;
+                        ng-repeat=&#34;item in items&#34;
+                        ods-results=&#34;items&#34;
+                        ods-results-context=&#34;ctx&#34;
+                        ods-results-max=&#34;1000&#34;&gt;
+
+                        &lt;h2 class=&#34;result-title&#34;&gt;
+                            {{ item.fields[resultTitle] }}
+                        &lt;/h2&gt;
+                        &lt;dl class=&#34;result-info&#34;&gt;
+                            &lt;dt ng-repeat-start=&#34;field in fieldsList&#34;&gt;
+                                {{ ctxfields[field] }}
+                            &lt;/dt&gt;
+                            &lt;dd ng-repeat-end&gt;{{ item.fields[field] }}&lt;/dd&gt;
+                        &lt;/dl&gt;
+                        &lt;div class=&#34;result-footer&#34;&gt;
+                            &lt;a href=&#34;{{ item.fields[fieldLink] }}&#34;
+                               ng-if=&#34;fieldLink &amp;&amp; item.fields[fieldLink]&#34;
+                               target=&#34;_blank&#34;&gt;
+                                {{ fieldLinkLabel }}
+                            &lt;/a&gt;
+                            &lt;button class=&#34;result-button&#34;
+                                    ng-if=&#34;!ctx.parameters[&#39;refine.&#39; &#43; resultTitle]&#34;
+                                    ng-click=&#34;modal.isVisible = false;
+                                  ctx.parameters[&#39;refine.&#39; &#43; resultTitle] = item.fields[resultTitle];&#34;&gt;
+                                {{ mapLinkLabel }}
+                            &lt;/button&gt;
+                            &lt;button class=&#34;result-button&#34;
+                                    ng-if=&#34;ctx.parameters[&#39;refine.&#39; &#43; resultTitle]&#34;
+                                    ng-click=&#34;ctx.parameters[&#39;refine.&#39; &#43; resultTitle] = undefined&#34;&gt;
+                                {{ backToResultsButtonText }}
+                                &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34;
+                                     fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+                                     stroke-linejoin=&#34;round&#34; class=&#34;feather feather-x&#34;&gt;
+                                    &lt;line x1=&#34;18&#34; y1=&#34;6&#34; x2=&#34;6&#34; y2=&#34;18&#34;&gt;&lt;/line&gt;
+                                    &lt;line x1=&#34;6&#34; y1=&#34;6&#34; x2=&#34;18&#34; y2=&#34;18&#34;&gt;&lt;/line&gt;
+                                &lt;/svg&gt;
+                            &lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/aside&gt;
+
+
+        &lt;ods-map no-refit=&#34;true&#34;
+                 scroll-wheel-zoom=&#34;true&#34;
+                 display-control=&#34;false&#34;
+                 display-control-single-layer=&#34;false&#34;
+                 toolbar-fullscreen=&#34;false&#34;
+                 toolbar-drawing=&#34;false&#34;&gt;
+            &lt;ods-map-layer-group&gt;
+                &lt;ods-map-layer context=&#34;ctx&#34;
+                               refine-on-click-context=&#34;ctx&#34;
+                               refine-on-click-map-field=&#34;{{ resultTitle }}&#34;
+                               refine-on-click-context-field=&#34;{{ resultTitle }}&#34;
+                               color=&#34;#0098c3&#34;
+                               picto=&#34;college&#34;
+                               show-marker=&#34;true&#34;
+                               display=&#34;auto&#34;
+                               shape-opacity=&#34;0.5&#34;
+                               point-opacity=&#34;1&#34;
+                               border-color=&#34;#FFFFFF&#34;
+                               border-opacity=&#34;1&#34;
+                               border-size=&#34;1&#34;
+                               border-pattern=&#34;solid&#34;
+                               size=&#34;4&#34;
+                               size-min=&#34;3&#34;
+                               size-max=&#34;5&#34;
+                               size-function=&#34;linear&#34;&gt;&lt;/ods-map-layer&gt;
+            &lt;/ods-map-layer-group&gt;
+        &lt;/ods-map&gt;
+
+        &lt;div class=&#34;cl-modal-open-mobile&#34;
+             ng-click=&#34;modal.isVisible = true&#34;&gt;
+            &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34;
+                 width=&#34;24&#34;
+                 height=&#34;24&#34;
+                 viewBox=&#34;0 0 24 24&#34;
+                 fill=&#34;none&#34;
+                 stroke=&#34;currentColor&#34;
+                 stroke-width=&#34;2&#34;
+                 stroke-linecap=&#34;round&#34;
+                 stroke-linejoin=&#34;round&#34;
+                 class=&#34;feather feather-chevron-up&#34;&gt;
+                &lt;polyline points=&#34;18 15 12 9 6 15&#34;&gt;&lt;/polyline&gt;
+            &lt;/svg&gt;
+            &lt;h3 class=&#34;cl-modal-open-mobile-title&#34;
+                ng-if=&#34;!ctx.parameters[&#39;refine.&#39; &#43; resultTitle]&#34;&gt;
+                {{ viewListButtonText }}
+            &lt;/h3&gt;
+            &lt;h3 class=&#34;cl-modal-open-mobile-title&#34;
+                ng-if=&#34;ctx.parameters[&#39;refine.&#39; &#43; resultTitle]&#34;&gt;
+                {{ viewDetailsButtonText }}
+            &lt;/h3&gt;
+        &lt;/div&gt;
+    &lt;/ods-dataset-context&gt;
+&lt;/div&gt;
+
+        </div>
+        <style type='text/css'>
+            /* General Layout
+========================================================================== */
+
+body, .main--page {
+    padding: 0;
+    margin: 0;
+}
+
+.ods-front-header, .ods-front-footer, .ods-content:after, footer {
+    display: none;
+}
+
+ods-dataset-context {
+    display: block;
+    position: relative;
+}
+
+.odswidget.odswidget-map {
+    width: 100%;
+    height: 100vh;
+}
+
+/* Modal
+   ========================================================================== */
+
+.cl-modal {
+    display: none;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 35%;
+    left: 0;
+    border-radius: 6px 6px 0 0;
+    z-index: 30;
+    overflow: hidden; /* Disable horizontal scroll */
+}
+
+@media screen and (min-width: 768px) {
+    .cl-modal {
+        display: flex;
+        width: 400px;
+        height: calc(100vh - 55px);
+        top: 10px;
+        left: 47px;
+        border-radius: 6px;
+    }
+}
+
+.cl-modal.is-visible {
+    display: flex;
+}
+
+.cl-modal-open-mobile {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100vw;
+    background-color: #FFFFFF;
+    padding: 13px;
+    z-index: 20;
+    border-radius: 6px 6px 0 0;
+    box-shadow: 0 0 5px rgba(0,0,0,0.65);
+    transition: all .2s;
+}
+
+.cl-modal-open-mobile:hover {
+    background-color: #f2f2f2;
+}
+
+@media screen and (min-width: 768px) {
+    .cl-modal-open-mobile {
+        display: none;
+    }
+}
+
+.cl-modal-open-mobile-title {
+    margin: 0;
+    font-weight: bold;
+}
+
+.cl-modal-close-mobile {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border-radius: 10000px;
+    border: none;
+    font-size: 2.5rem;
+    opacity: .6;
+    transition: all .2s;
+}
+
+.cl-modal-close-mobile:hover {
+    background-color: #f2f2f2;
+    opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+    .cl-modal-close-mobile {
+        display: none;
+    }
+}
+
+.cl-modal-header {
+    padding: 26px 26px 0 26px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.13);
+}
+
+.cl-modal-title {
+    margin-top: 0;
+    margin-bottom: 13px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.cl-modal-content {
+    height: 100%;
+    overflow-y: auto;
+}
+
+
+/* Search Module
+   ========================================================================== */
+
+.search-module {
+    display: flex;
+    align-items: stretch;
+    border-bottom: 1px solid #dee5ef;
+    transition: all .2s;
+}
+.search-module:hover,
+.search-module:focus-within {
+    border-bottom-color: var(--links);
+}
+.search-module-icon {
+    color: #898d92;
+    margin-right: 8px;
+    align-self: center;
+}
+.search-module-input {
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 12px 0;
+    transition: all .2s;
+    color: var(--text);
+}
+.search-module-input::placeholder {
+    transition: all .2s;
+}
+.search-module-clear {
+    color: #898d92;
+    font-size: 1rem;
+    background: transparent;
+    border: none;
+    margin: 0;
+    outline: none;
+    padding: 0 0 0 12px;
+    transition: all .2s;
+}
+.search-module-clear:hover {
+    opacity: .65;
+}
+.search-module:hover .search-module-icon,
+.search-module:focus-within .search-module-icon,
+.search-module:hover .search-module-input::placeholder,
+.search-module:focus-within .search-module-input::placeholder {
+    color: var(--links)
+}
+
+/* Dropdown menu with pill styling
+========================================================================== */
+
+.filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.filter-list &gt; div {
+    width: 100%;
+    margin-top: 13px;
+}
+
+.clear-filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.clear-filters-button:hover {
+    opacity: 0.65;
+}
+
+/* Results
+   ========================================================================== */
+
+.result-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    overflow-y: auto;
+}
+
+.result {
+    padding: 1rem 26px;
+    border-top: 1px solid #DEE5EF;
+}
+
+.result:hover {
+    background-color: #f5f7fa;
+}
+
+.result-title {
+    color: var(--titles);
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.result-info {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 10px;
+    overflow-wrap: break-word;
+}
+
+.result-info dt {
+    font-size: .9rem;
+    opacity: .9;
+}
+
+.result-info dd {
+    margin-left: 0;
+    margin-bottom: 5px;
+}
+
+.result-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.result-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid var(--links);
+    color: var(--links);
+    line-height: 1.5;
+    border-radius: 20px;
+    padding: .1rem .8rem;
+    margin-right: 4px;
+    margin-bottom: 2px;
+    transition: all .2s;
+}
+
+.result-button .feather-x {
+    height: 15px;
+    width: 15px;
+    margin-left: 4px;
+}
+
+.result-button:hover {
+    opacity: .65;
+    text-decoration: none;
+}
+
+        </style>
+        </body>
+        ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level is-flex">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-secondary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-fullscreen-map-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        
+                        <li class="button is-secondary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-fullscreen-map-css-content">
+                                CSS
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right mt-0">
+                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
+                   data-tooltip="Edit on CodePen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-fullscreen-map').submit()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-edit">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-fullscreen-map-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;!-- V2.1 :
+    - Add ods-select and multiple choice option for filters
+    - Add clear all filter button when one filter is applied
+    - Add documentation
+  --&gt;
+
+&lt;div ng-init=&#34;domain = &#39;mesr.opendatasoft.com&#39;;
+                datasetid = &#39;fr-esr-principaux-etablissements-enseignement-superieur&#39;;
+
+                title = &#39;Établissements près de chez vous&#39;;
+
+                filters = [
+                {&#39;id&#39;:&#39;type_d_etablissement&#39;,&#39;multiple&#39;:true},
+                {&#39;id&#39;:&#39;secteur_d_etablissement&#39;,&#39;multiple&#39;:true},
+                {&#39;id&#39;:&#39;dep_nom&#39;,&#39;multiple&#39;:true}
+                ];
+                resetFiltersButton = true;
+                resetFiltersButtonLabel = &#39;Supprimer tous les filtres&#39;;
+
+                resultTitle = &#39;uo_lib&#39;;
+                fieldsList = [&#39;adresse_uai&#39;, &#39;dep_nom&#39;, &#39;numero_telephone_uai&#39;];
+                fieldLink = &#39;url&#39;;
+                fieldLinkLabel = &#39;Visiter le site web&#39;;
+                mapLinkLabel = &#39;Voir sur la carte&#39;;
+
+                viewListButtonText = &#39;Voir la liste&#39;;
+                viewDetailsButtonText = &#39;Voir les détails&#39;;
+                backToResultsButtonText = &#39;Retour aux résultats&#39;;
+
+                DO_NOT_MODIFY_BELOW;
+
+                ctxfields = {};
+                isVisible = false;
+                activeFilters = {};
+                &#34;&gt;
+
+    &lt;!-- ### GENERAL SETTINGS ### --&gt;
+    &lt;!-- domain : (Domain URL) : Must contain the ID of the domain where the dataset is published.
+      ex: &#39;discovery.opendatasoft.com&#39;
+    --&gt;
+    &lt;!-- datasetid (Dataset ID) : Must contain the ID of the dataset
+      ex: &#39;oeuvres-de-johannes-vermeer&#39;
+    --&gt;
+
+    &lt;!-- title (Title of the page) :
+    ex: &#39;List of interest around you&#39;
+    --&gt;
+
+    &lt;!-- ### FILTERS SETTINGS ### --&gt;
+    &lt;!-- filters (Filters) : List of object that contains the IDs to generate the filters pannel.
+    and multiple true or false to allow the user to select multiple values in the filter.
+    NB: the field must be a facet in the dataset
+    NB: alphanumerical sort is applied in the filter view
+     ex: [
+              {&#39;id&#39;:&#39;filterid&#39;,&#39;multiple&#39;:true},
+              {&#39;id&#39;:&#39;filterid2&#39;,&#39;multiple&#39;:false}
+         ]
+    --&gt;
+    &lt;!-- resetFiltersButton (boolean) : add a reset filters button after filters block --&gt;
+    &lt;!-- resetFiltersButtonLabel (Label of the button) : test to display when a filter is selected
+        ex: &#39;Clear all filters&#39;
+    --&gt;
+
+    &lt;!-- ### LIST VIEW SETTINGS ### --&gt;
+    &lt;!-- resultTitle (Title of the item) : Set the item title from a field ID
+      ex: &#39;title&#39;;
+    --&gt;
+    &lt;!-- fieldsList (List configuration) : Set the list of field IDs
+      ex: [&#39;category&#39;,&#39;genre&#39;,&#39;date&#39;]
+    --&gt;
+    &lt;!-- fieldLink (Link to an external resource) : If available, the field ID of some external resource as a web URL
+      ex: &#39;link&#39;
+    --&gt;
+    &lt;!-- fieldLinkLabel (The label of that link) : Label of the link button
+      ex: &#39;Read more here&#39;
+    --&gt;
+    &lt;!-- mapLinkLabel (The label of the item button) : used to select the item and see it on the map
+      ex: &#39;See on the map&#39;
+    --&gt;
+
+    &lt;!-- ### MOBILE VIEW SETTINGS ### --&gt;
+    &lt;!-- viewListButtonText : when displaying the map, the bottom button to open the list view
+      ex: &#39;See the list&#39;
+    --&gt;
+    &lt;!-- viewDetailsButtonText : when an item is selected on the map, the bottom button to open the list view with the selected item
+      ex: &#39;See the item details&#39;
+    --&gt;
+    &lt;!-- backToResultsButtonText : when the list view is opened, to close button to go back to the map
+      ex: &#34;Back to the list&#39;
+    --&gt;
+
+
+
+    &lt;!-- MUST READ
+
+  A common error is forget to protect commas with a leading backslash, as commas are used to declare values of variable it will break the settings
+  wrongVariable = &#39;I&#39;ll be freed from commas&#39;
+  correctVariable = &#39;I\&#39;ll be freed from commas&#39;
+  --&gt;
+
+    &lt;!-- DO NOT MODIFY --&gt;
+    &lt;!-- Technical fields, do not modify please --&gt;
+
+    &lt;ods-dataset-context context=&#34;ctx&#34;
+                         ctx-domain=&#34;{{ domain }}&#34;
+                         ctx-dataset=&#34;{{ datasetid }}&#34;&gt;
+
+      &lt;span ng-repeat=&#34;field in ctx.dataset.fields&#34;&gt;
+        {{ ctxfields[field.name] = field.label; &#39;&#39; }}
+      &lt;/span&gt;
+
+        &lt;span ng-repeat=&#34;filter in filters&#34;&gt;
+        {{ ctx.parameters[&#39;refine.&#39; &#43; filter.id] = activeFilters[filter.id] ; &#39;&#39; }}
+      &lt;/span&gt;
+
+        &lt;aside class=&#34;cl-modal&#34;
+               ng-class=&#34;{ &#39;is-visible&#39; : modal.isVisible}&#34;&gt;
+            &lt;div class=&#34;cl-modal-header&#34;&gt;
+                &lt;button class=&#34;cl-modal-close-mobile&#34;
+                        title=&#34;Close modal&#34;
+                        ng-click=&#34;modal.isVisible = false&#34;&gt;
+                    &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
+                         stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;
+                         class=&#34;feather feather-x&#34;&gt;
+                        &lt;line x1=&#34;18&#34; y1=&#34;6&#34; x2=&#34;6&#34; y2=&#34;18&#34;&gt;&lt;/line&gt;
+                        &lt;line x1=&#34;6&#34; y1=&#34;6&#34; x2=&#34;18&#34; y2=&#34;18&#34;&gt;&lt;/line&gt;
+                    &lt;/svg&gt;
+                &lt;/button&gt;
+                &lt;h1 class=&#34;cl-modal-title&#34;&gt;
+                    {{ title }}
+                &lt;/h1&gt;
+                &lt;div class=&#34;search-module&#34;&gt;
+                    &lt;i class=&#34;fa fa-search search-module-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;input placeholder=&#34;Search&#34;
+                           ng-model=&#34;ctx.parameters[&#39;q&#39;]&#34;
+                           ng-model-options=&#34;{ updateOn: &#39;keyup&#39;, debounce: { &#39;default&#39;: 300, &#39;blur&#39;: 0 }}&#34;
+                           class=&#34;search-module-input&#34;
+                           type=&#34;text&#34;/&gt;
+                    &lt;button class=&#34;search-module-clear&#34;
+                            ng-if=&#34;ctx.parameters[&#39;q&#39;]&#34;
+                            ng-click=&#34;ctx.parameters[&#39;q&#39;] = undefined&#34;&gt;
+                        &lt;i class=&#34;fa fa-times-circle&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                &lt;/div&gt;
+
+                &lt;!-- FILTERS --&gt;
+                &lt;div class=&#34;filter-list&#34;
+                     ng-init=&#34;dropdown.open = &#39;&#39;;
+                        select = {}&#34;&gt;
+                    &lt;div ng-repeat=&#34;filter in filters&#34;&gt;
+                        {{ ctx.parameters[&#39;disjunctive.&#39; &#43; filter.id] = true; &#39;&#39; }}
+                        &lt;div ods-facet-results=&#34;categories&#34;
+                             ods-facet-results-facet-name=&#34;{{ filter.id }}&#34;
+                             ods-facet-results-context=&#34;ctx&#34;
+                             ods-facet-results-sort=&#34;alphanum&#34;&gt;
+                            &lt;ods-select ng-if=&#34;ctxfields[filter.id]&#34;
+                                        selected-values=&#34;activeFilters[filter.id]&#34;
+                                        multiple=&#34;filter.multiple&#34;
+                                        options=&#34;categories&#34;
+                                        label-modifier=&#34;name&#34;
+                                        value-modifier=&#34;name&#34;
+                                        placeholder=&#34;{{ ctxfields[filter.id] }}&#34;&gt;&lt;/ods-select&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&#34;clear-filters&#34;
+                         ng-show=&#34;(activeFilters | values).join(&#39;&#39;)&#34;&gt;
+                        &lt;div class=&#34;clear-filters-button&#34;
+                             role=&#34;button&#34;
+                             ng-click=&#34;activeFilters = {}&#34;&gt;
+                            {{ resetFiltersButtonLabel }}
+                            &lt;i class=&#34;fa fa-times-circle&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class=&#34;cl-modal-content&#34;&gt;
+                &lt;ul class=&#34;result-list&#34;&gt;
+                    &lt;li class=&#34;result&#34;
+                        ng-repeat=&#34;item in items&#34;
+                        ods-results=&#34;items&#34;
+                        ods-results-context=&#34;ctx&#34;
+                        ods-results-max=&#34;1000&#34;&gt;
+
+                        &lt;h2 class=&#34;result-title&#34;&gt;
+                            {{ item.fields[resultTitle] }}
+                        &lt;/h2&gt;
+                        &lt;dl class=&#34;result-info&#34;&gt;
+                            &lt;dt ng-repeat-start=&#34;field in fieldsList&#34;&gt;
+                                {{ ctxfields[field] }}
+                            &lt;/dt&gt;
+                            &lt;dd ng-repeat-end&gt;{{ item.fields[field] }}&lt;/dd&gt;
+                        &lt;/dl&gt;
+                        &lt;div class=&#34;result-footer&#34;&gt;
+                            &lt;a href=&#34;{{ item.fields[fieldLink] }}&#34;
+                               ng-if=&#34;fieldLink &amp;&amp; item.fields[fieldLink]&#34;
+                               target=&#34;_blank&#34;&gt;
+                                {{ fieldLinkLabel }}
+                            &lt;/a&gt;
+                            &lt;button class=&#34;result-button&#34;
+                                    ng-if=&#34;!ctx.parameters[&#39;refine.&#39; &#43; resultTitle]&#34;
+                                    ng-click=&#34;modal.isVisible = false;
+                                  ctx.parameters[&#39;refine.&#39; &#43; resultTitle] = item.fields[resultTitle];&#34;&gt;
+                                {{ mapLinkLabel }}
+                            &lt;/button&gt;
+                            &lt;button class=&#34;result-button&#34;
+                                    ng-if=&#34;ctx.parameters[&#39;refine.&#39; &#43; resultTitle]&#34;
+                                    ng-click=&#34;ctx.parameters[&#39;refine.&#39; &#43; resultTitle] = undefined&#34;&gt;
+                                {{ backToResultsButtonText }}
+                                &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34;
+                                     fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
+                                     stroke-linejoin=&#34;round&#34; class=&#34;feather feather-x&#34;&gt;
+                                    &lt;line x1=&#34;18&#34; y1=&#34;6&#34; x2=&#34;6&#34; y2=&#34;18&#34;&gt;&lt;/line&gt;
+                                    &lt;line x1=&#34;6&#34; y1=&#34;6&#34; x2=&#34;18&#34; y2=&#34;18&#34;&gt;&lt;/line&gt;
+                                &lt;/svg&gt;
+                            &lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/aside&gt;
+
+
+        &lt;ods-map no-refit=&#34;true&#34;
+                 scroll-wheel-zoom=&#34;true&#34;
+                 display-control=&#34;false&#34;
+                 display-control-single-layer=&#34;false&#34;
+                 toolbar-fullscreen=&#34;false&#34;
+                 toolbar-drawing=&#34;false&#34;&gt;
+            &lt;ods-map-layer-group&gt;
+                &lt;ods-map-layer context=&#34;ctx&#34;
+                               refine-on-click-context=&#34;ctx&#34;
+                               refine-on-click-map-field=&#34;{{ resultTitle }}&#34;
+                               refine-on-click-context-field=&#34;{{ resultTitle }}&#34;
+                               color=&#34;#0098c3&#34;
+                               picto=&#34;college&#34;
+                               show-marker=&#34;true&#34;
+                               display=&#34;auto&#34;
+                               shape-opacity=&#34;0.5&#34;
+                               point-opacity=&#34;1&#34;
+                               border-color=&#34;#FFFFFF&#34;
+                               border-opacity=&#34;1&#34;
+                               border-size=&#34;1&#34;
+                               border-pattern=&#34;solid&#34;
+                               size=&#34;4&#34;
+                               size-min=&#34;3&#34;
+                               size-max=&#34;5&#34;
+                               size-function=&#34;linear&#34;&gt;&lt;/ods-map-layer&gt;
+            &lt;/ods-map-layer-group&gt;
+        &lt;/ods-map&gt;
+
+        &lt;div class=&#34;cl-modal-open-mobile&#34;
+             ng-click=&#34;modal.isVisible = true&#34;&gt;
+            &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34;
+                 width=&#34;24&#34;
+                 height=&#34;24&#34;
+                 viewBox=&#34;0 0 24 24&#34;
+                 fill=&#34;none&#34;
+                 stroke=&#34;currentColor&#34;
+                 stroke-width=&#34;2&#34;
+                 stroke-linecap=&#34;round&#34;
+                 stroke-linejoin=&#34;round&#34;
+                 class=&#34;feather feather-chevron-up&#34;&gt;
+                &lt;polyline points=&#34;18 15 12 9 6 15&#34;&gt;&lt;/polyline&gt;
+            &lt;/svg&gt;
+            &lt;h3 class=&#34;cl-modal-open-mobile-title&#34;
+                ng-if=&#34;!ctx.parameters[&#39;refine.&#39; &#43; resultTitle]&#34;&gt;
+                {{ viewListButtonText }}
+            &lt;/h3&gt;
+            &lt;h3 class=&#34;cl-modal-open-mobile-title&#34;
+                ng-if=&#34;ctx.parameters[&#39;refine.&#39; &#43; resultTitle]&#34;&gt;
+                {{ viewDetailsButtonText }}
+            &lt;/h3&gt;
+        &lt;/div&gt;
+    &lt;/ods-dataset-context&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+            
+            <div class="js-tabcontent"
+                 id="code-fullscreen-map-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>/* General Layout
+========================================================================== */
+
+body, .main--page {
+    padding: 0;
+    margin: 0;
+}
+
+.ods-front-header, .ods-front-footer, .ods-content:after, footer {
+    display: none;
+}
+
+ods-dataset-context {
+    display: block;
+    position: relative;
+}
+
+.odswidget.odswidget-map {
+    width: 100%;
+    height: 100vh;
+}
+
+/* Modal
+   ========================================================================== */
+
+.cl-modal {
+    display: none;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 35%;
+    left: 0;
+    border-radius: 6px 6px 0 0;
+    z-index: 30;
+    overflow: hidden; /* Disable horizontal scroll */
+}
+
+@media screen and (min-width: 768px) {
+    .cl-modal {
+        display: flex;
+        width: 400px;
+        height: calc(100vh - 55px);
+        top: 10px;
+        left: 47px;
+        border-radius: 6px;
+    }
+}
+
+.cl-modal.is-visible {
+    display: flex;
+}
+
+.cl-modal-open-mobile {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100vw;
+    background-color: #FFFFFF;
+    padding: 13px;
+    z-index: 20;
+    border-radius: 6px 6px 0 0;
+    box-shadow: 0 0 5px rgba(0,0,0,0.65);
+    transition: all .2s;
+}
+
+.cl-modal-open-mobile:hover {
+    background-color: #f2f2f2;
+}
+
+@media screen and (min-width: 768px) {
+    .cl-modal-open-mobile {
+        display: none;
+    }
+}
+
+.cl-modal-open-mobile-title {
+    margin: 0;
+    font-weight: bold;
+}
+
+.cl-modal-close-mobile {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: transparent;
+    border-radius: 10000px;
+    border: none;
+    font-size: 2.5rem;
+    opacity: .6;
+    transition: all .2s;
+}
+
+.cl-modal-close-mobile:hover {
+    background-color: #f2f2f2;
+    opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+    .cl-modal-close-mobile {
+        display: none;
+    }
+}
+
+.cl-modal-header {
+    padding: 26px 26px 0 26px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.13);
+}
+
+.cl-modal-title {
+    margin-top: 0;
+    margin-bottom: 13px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.cl-modal-content {
+    height: 100%;
+    overflow-y: auto;
+}
+
+
+/* Search Module
+   ========================================================================== */
+
+.search-module {
+    display: flex;
+    align-items: stretch;
+    border-bottom: 1px solid #dee5ef;
+    transition: all .2s;
+}
+.search-module:hover,
+.search-module:focus-within {
+    border-bottom-color: var(--links);
+}
+.search-module-icon {
+    color: #898d92;
+    margin-right: 8px;
+    align-self: center;
+}
+.search-module-input {
+    background-color: transparent;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding: 12px 0;
+    transition: all .2s;
+    color: var(--text);
+}
+.search-module-input::placeholder {
+    transition: all .2s;
+}
+.search-module-clear {
+    color: #898d92;
+    font-size: 1rem;
+    background: transparent;
+    border: none;
+    margin: 0;
+    outline: none;
+    padding: 0 0 0 12px;
+    transition: all .2s;
+}
+.search-module-clear:hover {
+    opacity: .65;
+}
+.search-module:hover .search-module-icon,
+.search-module:focus-within .search-module-icon,
+.search-module:hover .search-module-input::placeholder,
+.search-module:focus-within .search-module-input::placeholder {
+    color: var(--links)
+}
+
+/* Dropdown menu with pill styling
+========================================================================== */
+
+.filter-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.filter-list &gt; div {
+    width: 100%;
+    margin-top: 13px;
+}
+
+.clear-filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.clear-filters-button:hover {
+    opacity: 0.65;
+}
+
+/* Results
+   ========================================================================== */
+
+.result-list {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    overflow-y: auto;
+}
+
+.result {
+    padding: 1rem 26px;
+    border-top: 1px solid #DEE5EF;
+}
+
+.result:hover {
+    background-color: #f5f7fa;
+}
+
+.result-title {
+    color: var(--titles);
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.result-info {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 10px;
+    overflow-wrap: break-word;
+}
+
+.result-info dt {
+    font-size: .9rem;
+    opacity: .9;
+}
+
+.result-info dd {
+    margin-left: 0;
+    margin-bottom: 5px;
+}
+
+.result-footer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.result-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: transparent;
+    border: 1px solid var(--links);
+    color: var(--links);
+    line-height: 1.5;
+    border-radius: 20px;
+    padding: .1rem .8rem;
+    margin-right: 4px;
+    margin-bottom: 2px;
+    transition: all .2s;
+}
+
+.result-button .feather-x {
+    height: 15px;
+    width: 15px;
+    margin-left: 4px;
+}
+
+.result-button:hover {
+    opacity: .65;
+    text-decoration: none;
+}
+</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-fullscreen-map";
+            iframe = document.getElementById(iframeId);
+             
+            size =  700 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "IFRAME ID HERE";
+            iframe = document.getElementById(iframeId);
+
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+            }
+        }, 1000);
+    });
+</script>
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="box box-example">
+        <div class="content">
+          <h2>
+            Listing with map view
+            <a class="is-link" href="#listing-with-map-view">
+              <span class="icon">
+                <img src="/img/fas-link.svg" />
+              </span>
+            </a>
+          </h2>
+          
+          <p>Page that shows some KPIs and a list of results alongside a map.</p>
+
+        </div>
+        
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-listing-with-map-view"
           action="https://codepen.io/pen/define"
           method="POST"
           target="_blank">
@@ -335,7 +1699,7 @@ Map Listing &ndash; Codelibrary
 
 <div class="ods-content">
     <section class="box box-live-example">
-      <iframe id="iframe-map-listing-1"
+      <iframe id="iframe-listing-with-map-view"
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
@@ -1200,14 +2564,14 @@ ul {
                     <ul class="buttons has-addons js-tablist">
                         <li class="button is-secondary is-outlined js-tablist__item">
                             <a class="js-tablist__link"
-                               href="#code-map-listing-1-html-content">
+                               href="#code-listing-with-map-view-html-content">
                                 HTML
                             </a>
                         </li>
                         
                         <li class="button is-secondary is-outlined js-tablist__item">
                             <a class="js-tablist__link"
-                               href="#code-map-listing-1-css-content">
+                               href="#code-listing-with-map-view-css-content">
                                 CSS
                             </a>
                         </li>
@@ -1222,7 +2586,7 @@ ul {
                    aria-role="link"
                    rel="noopener"
                    title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-map-listing-1').submit()">
+                   onclick="document.getElementById('form-listing-with-map-view').submit()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                          class="feather feather-edit">
@@ -1236,7 +2600,7 @@ ul {
 
         <div class="tab-content">
             <div class="js-tabcontent"
-                 id="code-map-listing-1-html-content">
+                 id="code-listing-with-map-view-html-content">
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;!-- V1.1 :
     - Add ods-select and multiple choice option for filters
@@ -1555,7 +2919,7 @@ ctx-apikey=&#34;XXX&#34;
             </div>
             
             <div class="js-tabcontent"
-                 id="code-map-listing-1-css-content">
+                 id="code-listing-with-map-view-css-content">
                 <div class="highlight">
                     <pre class="language-css" data-lang="css"><code>/* General Layout
 ========================================================================== */
@@ -1987,7 +3351,7 @@ ul {
 <script type="text/javascript">
     window.addEventListener("DOMContentLoaded", () => {
         var loopId = setInterval(() => {
-            iframeId = "iframe-map-listing-1";
+            iframeId = "iframe-listing-with-map-view";
             iframe = document.getElementById(iframeId);
              
             size =  null 
@@ -2017,1375 +3381,10 @@ ul {
         }, 1000);
     });
 </script>
-        </div>
+      </div>
     </div>
     
-    <div class="container">
-        <div class="box box-example">
-          <div class="content">
-            <h2 class="title" id="fullscreen-map">
-  Fullscreen Map
-  
-    <a class="is-link" href="#fullscreen-map">
-      <img src="/img/fas-link.svg" />
-    </a>
-  
-</h2>
-<p>View a fullscreen map with a side panel where the listing results can be filtered, searched and clicked on.</p>
-
-          </div>
-          
-
-
-<div class="codepen">
-    
-    
-    
-
-    <form id="form-map-listing-2"
-          action="https://codepen.io/pen/define"
-          method="POST"
-          target="_blank">
-        <input type="hidden"
-               name="data"
-               value='{
-               "title": "New Pen!",
-               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
-               "editors": 110,
-               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003c!-- V2.1 :\n    - Add ods-select and multiple choice option for filters\n    - Add clear all filter button when one filter is applied\n    - Add documentation\n  --\u003e\n\n\u003cdiv ng-init=\&#34;domain = &#39;mesr.opendatasoft.com&#39;;\n                datasetid = &#39;fr-esr-principaux-etablissements-enseignement-superieur&#39;;\n\n                title = &#39;Établissements près de chez vous&#39;;\n\n                filters = [\n                {&#39;id&#39;:&#39;type_d_etablissement&#39;,&#39;multiple&#39;:true},\n                {&#39;id&#39;:&#39;secteur_d_etablissement&#39;,&#39;multiple&#39;:true},\n                {&#39;id&#39;:&#39;dep_nom&#39;,&#39;multiple&#39;:true}\n                ];\n                resetFiltersButton = true;\n                resetFiltersButtonLabel = &#39;Supprimer tous les filtres&#39;;\n\n                resultTitle = &#39;uo_lib&#39;;\n                fieldsList = [&#39;adresse_uai&#39;, &#39;dep_nom&#39;, &#39;numero_telephone_uai&#39;];\n                fieldLink = &#39;url&#39;;\n                fieldLinkLabel = &#39;Visiter le site web&#39;;\n                mapLinkLabel = &#39;Voir sur la carte&#39;;\n\n                viewListButtonText = &#39;Voir la liste&#39;;\n                viewDetailsButtonText = &#39;Voir les détails&#39;;\n                backToResultsButtonText = &#39;Retour aux résultats&#39;;\n\n                DO_NOT_MODIFY_BELOW;\n\n                ctxfields = {};\n                isVisible = false;\n                activeFilters = {};\n                \&#34;\u003e\n\n    \u003c!-- ### GENERAL SETTINGS ### --\u003e\n    \u003c!-- domain : (Domain URL) : Must contain the ID of the domain where the dataset is published.\n      ex: &#39;discovery.opendatasoft.com&#39;\n    --\u003e\n    \u003c!-- datasetid (Dataset ID) : Must contain the ID of the dataset\n      ex: &#39;oeuvres-de-johannes-vermeer&#39;\n    --\u003e\n\n    \u003c!-- title (Title of the page) :\n    ex: &#39;List of interest around you&#39;\n    --\u003e\n\n    \u003c!-- ### FILTERS SETTINGS ### --\u003e\n    \u003c!-- filters (Filters) : List of object that contains the IDs to generate the filters pannel.\n    and multiple true or false to allow the user to select multiple values in the filter.\n    NB: the field must be a facet in the dataset\n    NB: alphanumerical sort is applied in the filter view\n     ex: [\n              {&#39;id&#39;:&#39;filterid&#39;,&#39;multiple&#39;:true},\n              {&#39;id&#39;:&#39;filterid2&#39;,&#39;multiple&#39;:false}\n         ]\n    --\u003e\n    \u003c!-- resetFiltersButton (boolean) : add a reset filters button after filters block --\u003e\n    \u003c!-- resetFiltersButtonLabel (Label of the button) : test to display when a filter is selected\n        ex: &#39;Clear all filters&#39;\n    --\u003e\n\n    \u003c!-- ### LIST VIEW SETTINGS ### --\u003e\n    \u003c!-- resultTitle (Title of the item) : Set the item title from a field ID\n      ex: &#39;title&#39;;\n    --\u003e\n    \u003c!-- fieldsList (List configuration) : Set the list of field IDs\n      ex: [&#39;category&#39;,&#39;genre&#39;,&#39;date&#39;]\n    --\u003e\n    \u003c!-- fieldLink (Link to an external resource) : If available, the field ID of some external resource as a web URL\n      ex: &#39;link&#39;\n    --\u003e\n    \u003c!-- fieldLinkLabel (The label of that link) : Label of the link button\n      ex: &#39;Read more here&#39;\n    --\u003e\n    \u003c!-- mapLinkLabel (The label of the item button) : used to select the item and see it on the map\n      ex: &#39;See on the map&#39;\n    --\u003e\n\n    \u003c!-- ### MOBILE VIEW SETTINGS ### --\u003e\n    \u003c!-- viewListButtonText : when displaying the map, the bottom button to open the list view\n      ex: &#39;See the list&#39;\n    --\u003e\n    \u003c!-- viewDetailsButtonText : when an item is selected on the map, the bottom button to open the list view with the selected item\n      ex: &#39;See the item details&#39;\n    --\u003e\n    \u003c!-- backToResultsButtonText : when the list view is opened, to close button to go back to the map\n      ex: \&#34;Back to the list&#39;\n    --\u003e\n\n\n\n    \u003c!-- MUST READ\n\n  A common error is forget to protect commas with a leading backslash, as commas are used to declare values of variable it will break the settings\n  wrongVariable = &#39;I&#39;ll be freed from commas&#39;\n  correctVariable = &#39;I\\&#39;ll be freed from commas&#39;\n  --\u003e\n\n    \u003c!-- DO NOT MODIFY --\u003e\n    \u003c!-- Technical fields, do not modify please --\u003e\n\n    \u003cods-dataset-context context=\&#34;ctx\&#34;\n                         ctx-domain=\&#34;{{ domain }}\&#34;\n                         ctx-dataset=\&#34;{{ datasetid }}\&#34;\u003e\n\n      \u003cspan ng-repeat=\&#34;field in ctx.dataset.fields\&#34;\u003e\n        {{ ctxfields[field.name] = field.label; &#39;&#39; }}\n      \u003c/span\u003e\n\n        \u003cspan ng-repeat=\&#34;filter in filters\&#34;\u003e\n        {{ ctx.parameters[&#39;refine.&#39; &#43; filter.id] = activeFilters[filter.id] ; &#39;&#39; }}\n      \u003c/span\u003e\n\n        \u003caside class=\&#34;cl-modal\&#34;\n               ng-class=\&#34;{ &#39;is-visible&#39; : modal.isVisible}\&#34;\u003e\n            \u003cdiv class=\&#34;cl-modal-header\&#34;\u003e\n                \u003cbutton class=\&#34;cl-modal-close-mobile\&#34;\n                        title=\&#34;Close modal\&#34;\n                        ng-click=\&#34;modal.isVisible = false\&#34;\u003e\n                    \u003csvg xmlns=\&#34;http://www.w3.org/2000/svg\&#34; width=\&#34;24\&#34; height=\&#34;24\&#34; viewBox=\&#34;0 0 24 24\&#34; fill=\&#34;none\&#34;\n                         stroke=\&#34;currentColor\&#34; stroke-width=\&#34;2\&#34; stroke-linecap=\&#34;round\&#34; stroke-linejoin=\&#34;round\&#34;\n                         class=\&#34;feather feather-x\&#34;\u003e\n                        \u003cline x1=\&#34;18\&#34; y1=\&#34;6\&#34; x2=\&#34;6\&#34; y2=\&#34;18\&#34;\u003e\u003c/line\u003e\n                        \u003cline x1=\&#34;6\&#34; y1=\&#34;6\&#34; x2=\&#34;18\&#34; y2=\&#34;18\&#34;\u003e\u003c/line\u003e\n                    \u003c/svg\u003e\n                \u003c/button\u003e\n                \u003ch1 class=\&#34;cl-modal-title\&#34;\u003e\n                    {{ title }}\n                \u003c/h1\u003e\n                \u003cdiv class=\&#34;search-module\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-search search-module-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                    \u003cinput placeholder=\&#34;Search\&#34;\n                           ng-model=\&#34;ctx.parameters[&#39;q&#39;]\&#34;\n                           ng-model-options=\&#34;{ updateOn: &#39;keyup&#39;, debounce: { &#39;default&#39;: 300, &#39;blur&#39;: 0 }}\&#34;\n                           class=\&#34;search-module-input\&#34;\n                           type=\&#34;text\&#34;/\u003e\n                    \u003cbutton class=\&#34;search-module-clear\&#34;\n                            ng-if=\&#34;ctx.parameters[&#39;q&#39;]\&#34;\n                            ng-click=\&#34;ctx.parameters[&#39;q&#39;] = undefined\&#34;\u003e\n                        \u003ci class=\&#34;fa fa-times-circle\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                    \u003c/button\u003e\n                \u003c/div\u003e\n\n                \u003c!-- FILTERS --\u003e\n                \u003cdiv class=\&#34;filter-list\&#34;\n                     ng-init=\&#34;dropdown.open = &#39;&#39;;\n                        select = {}\&#34;\u003e\n                    \u003cdiv ng-repeat=\&#34;filter in filters\&#34;\u003e\n                        {{ ctx.parameters[&#39;disjunctive.&#39; &#43; filter.id] = true; &#39;&#39; }}\n                        \u003cdiv ods-facet-results=\&#34;categories\&#34;\n                             ods-facet-results-facet-name=\&#34;{{ filter.id }}\&#34;\n                             ods-facet-results-context=\&#34;ctx\&#34;\n                             ods-facet-results-sort=\&#34;alphanum\&#34;\u003e\n                            \u003cods-select ng-if=\&#34;ctxfields[filter.id]\&#34;\n                                        selected-values=\&#34;activeFilters[filter.id]\&#34;\n                                        multiple=\&#34;filter.multiple\&#34;\n                                        options=\&#34;categories\&#34;\n                                        label-modifier=\&#34;name\&#34;\n                                        value-modifier=\&#34;name\&#34;\n                                        placeholder=\&#34;{{ ctxfields[filter.id] }}\&#34;\u003e\u003c/ods-select\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n\n                    \u003cdiv class=\&#34;clear-filters\&#34;\n                         ng-show=\&#34;(activeFilters | values).join(&#39;&#39;)\&#34;\u003e\n                        \u003cdiv class=\&#34;clear-filters-button\&#34;\n                             role=\&#34;button\&#34;\n                             ng-click=\&#34;activeFilters = {}\&#34;\u003e\n                            {{ resetFiltersButtonLabel }}\n                            \u003ci class=\&#34;fa fa-times-circle\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n\n            \u003cdiv class=\&#34;cl-modal-content\&#34;\u003e\n                \u003cul class=\&#34;result-list\&#34;\u003e\n                    \u003cli class=\&#34;result\&#34;\n                        ng-repeat=\&#34;item in items\&#34;\n                        ods-results=\&#34;items\&#34;\n                        ods-results-context=\&#34;ctx\&#34;\n                        ods-results-max=\&#34;1000\&#34;\u003e\n\n                        \u003ch2 class=\&#34;result-title\&#34;\u003e\n                            {{ item.fields[resultTitle] }}\n                        \u003c/h2\u003e\n                        \u003cdl class=\&#34;result-info\&#34;\u003e\n                            \u003cdt ng-repeat-start=\&#34;field in fieldsList\&#34;\u003e\n                                {{ ctxfields[field] }}\n                            \u003c/dt\u003e\n                            \u003cdd ng-repeat-end\u003e{{ item.fields[field] }}\u003c/dd\u003e\n                        \u003c/dl\u003e\n                        \u003cdiv class=\&#34;result-footer\&#34;\u003e\n                            \u003ca href=\&#34;{{ item.fields[fieldLink] }}\&#34;\n                               ng-if=\&#34;fieldLink \u0026\u0026 item.fields[fieldLink]\&#34;\n                               target=\&#34;_blank\&#34;\u003e\n                                {{ fieldLinkLabel }}\n                            \u003c/a\u003e\n                            \u003cbutton class=\&#34;result-button\&#34;\n                                    ng-if=\&#34;!ctx.parameters[&#39;refine.&#39; &#43; resultTitle]\&#34;\n                                    ng-click=\&#34;modal.isVisible = false;\n                                  ctx.parameters[&#39;refine.&#39; &#43; resultTitle] = item.fields[resultTitle];\&#34;\u003e\n                                {{ mapLinkLabel }}\n                            \u003c/button\u003e\n                            \u003cbutton class=\&#34;result-button\&#34;\n                                    ng-if=\&#34;ctx.parameters[&#39;refine.&#39; &#43; resultTitle]\&#34;\n                                    ng-click=\&#34;ctx.parameters[&#39;refine.&#39; &#43; resultTitle] = undefined\&#34;\u003e\n                                {{ backToResultsButtonText }}\n                                \u003csvg xmlns=\&#34;http://www.w3.org/2000/svg\&#34; width=\&#34;24\&#34; height=\&#34;24\&#34; viewBox=\&#34;0 0 24 24\&#34;\n                                     fill=\&#34;none\&#34; stroke=\&#34;currentColor\&#34; stroke-width=\&#34;2\&#34; stroke-linecap=\&#34;round\&#34;\n                                     stroke-linejoin=\&#34;round\&#34; class=\&#34;feather feather-x\&#34;\u003e\n                                    \u003cline x1=\&#34;18\&#34; y1=\&#34;6\&#34; x2=\&#34;6\&#34; y2=\&#34;18\&#34;\u003e\u003c/line\u003e\n                                    \u003cline x1=\&#34;6\&#34; y1=\&#34;6\&#34; x2=\&#34;18\&#34; y2=\&#34;18\&#34;\u003e\u003c/line\u003e\n                                \u003c/svg\u003e\n                            \u003c/button\u003e\n                        \u003c/div\u003e\n                    \u003c/li\u003e\n                \u003c/ul\u003e\n            \u003c/div\u003e\n        \u003c/aside\u003e\n\n\n        \u003cods-map no-refit=\&#34;true\&#34;\n                 scroll-wheel-zoom=\&#34;true\&#34;\n                 display-control=\&#34;false\&#34;\n                 display-control-single-layer=\&#34;false\&#34;\n                 toolbar-fullscreen=\&#34;false\&#34;\n                 toolbar-drawing=\&#34;false\&#34;\u003e\n            \u003cods-map-layer-group\u003e\n                \u003cods-map-layer context=\&#34;ctx\&#34;\n                               refine-on-click-context=\&#34;ctx\&#34;\n                               refine-on-click-map-field=\&#34;{{ resultTitle }}\&#34;\n                               refine-on-click-context-field=\&#34;{{ resultTitle }}\&#34;\n                               color=\&#34;#0098c3\&#34;\n                               picto=\&#34;college\&#34;\n                               show-marker=\&#34;true\&#34;\n                               display=\&#34;auto\&#34;\n                               shape-opacity=\&#34;0.5\&#34;\n                               point-opacity=\&#34;1\&#34;\n                               border-color=\&#34;#FFFFFF\&#34;\n                               border-opacity=\&#34;1\&#34;\n                               border-size=\&#34;1\&#34;\n                               border-pattern=\&#34;solid\&#34;\n                               size=\&#34;4\&#34;\n                               size-min=\&#34;3\&#34;\n                               size-max=\&#34;5\&#34;\n                               size-function=\&#34;linear\&#34;\u003e\u003c/ods-map-layer\u003e\n            \u003c/ods-map-layer-group\u003e\n        \u003c/ods-map\u003e\n\n        \u003cdiv class=\&#34;cl-modal-open-mobile\&#34;\n             ng-click=\&#34;modal.isVisible = true\&#34;\u003e\n            \u003csvg xmlns=\&#34;http://www.w3.org/2000/svg\&#34;\n                 width=\&#34;24\&#34;\n                 height=\&#34;24\&#34;\n                 viewBox=\&#34;0 0 24 24\&#34;\n                 fill=\&#34;none\&#34;\n                 stroke=\&#34;currentColor\&#34;\n                 stroke-width=\&#34;2\&#34;\n                 stroke-linecap=\&#34;round\&#34;\n                 stroke-linejoin=\&#34;round\&#34;\n                 class=\&#34;feather feather-chevron-up\&#34;\u003e\n                \u003cpolyline points=\&#34;18 15 12 9 6 15\&#34;\u003e\u003c/polyline\u003e\n            \u003c/svg\u003e\n            \u003ch3 class=\&#34;cl-modal-open-mobile-title\&#34;\n                ng-if=\&#34;!ctx.parameters[&#39;refine.&#39; &#43; resultTitle]\&#34;\u003e\n                {{ viewListButtonText }}\n            \u003c/h3\u003e\n            \u003ch3 class=\&#34;cl-modal-open-mobile-title\&#34;\n                ng-if=\&#34;ctx.parameters[&#39;refine.&#39; &#43; resultTitle]\&#34;\u003e\n                {{ viewDetailsButtonText }}\n            \u003c/h3\u003e\n        \u003c/div\u003e\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\n\u003c/div\u003e&#34;,
-               "css": &#34;/* General Layout\n========================================================================== */\n\nbody, .main--page {\n    padding: 0;\n    margin: 0;\n}\n\n.ods-front-header, .ods-front-footer, .ods-content:after, footer {\n    display: none;\n}\n\nods-dataset-context {\n    display: block;\n    position: relative;\n}\n\n.odswidget.odswidget-map {\n    width: 100%;\n    height: 100vh;\n}\n\n/* Modal\n   ========================================================================== */\n\n.cl-modal {\n    display: none;\n    flex-direction: column;\n    background-color: #FFFFFF;\n    box-shadow: 0 1px 5px rgba(0,0,0,0.65);\n    width: 100vw;\n    height: 100vh;\n    position: absolute;\n    top: 35%;\n    left: 0;\n    border-radius: 6px 6px 0 0;\n    z-index: 30;\n    overflow: hidden; /* Disable horizontal scroll */\n}\n\n@media screen and (min-width: 768px) {\n    .cl-modal {\n        display: flex;\n        width: 400px;\n        height: calc(100vh - 55px);\n        top: 10px;\n        left: 47px;\n        border-radius: 6px;\n    }\n}\n\n.cl-modal.is-visible {\n    display: flex;\n}\n\n.cl-modal-open-mobile {\n    position: absolute;\n    bottom: 0;\n    text-align: center;\n    width: 100vw;\n    background-color: #FFFFFF;\n    padding: 13px;\n    z-index: 20;\n    border-radius: 6px 6px 0 0;\n    box-shadow: 0 0 5px rgba(0,0,0,0.65);\n    transition: all .2s;\n}\n\n.cl-modal-open-mobile:hover {\n    background-color: #f2f2f2;\n}\n\n@media screen and (min-width: 768px) {\n    .cl-modal-open-mobile {\n        display: none;\n    }\n}\n\n.cl-modal-open-mobile-title {\n    margin: 0;\n    font-weight: bold;\n}\n\n.cl-modal-close-mobile {\n    position: absolute;\n    top: 5px;\n    right: 5px;\n    background-color: transparent;\n    border-radius: 10000px;\n    border: none;\n    font-size: 2.5rem;\n    opacity: .6;\n    transition: all .2s;\n}\n\n.cl-modal-close-mobile:hover {\n    background-color: #f2f2f2;\n    opacity: 1;\n}\n\n@media screen and (min-width: 768px) {\n    .cl-modal-close-mobile {\n        display: none;\n    }\n}\n\n.cl-modal-header {\n    padding: 26px 26px 0 26px;\n    box-shadow: 0 1px 2px rgba(0,0,0,.13);\n}\n\n.cl-modal-title {\n    margin-top: 0;\n    margin-bottom: 13px;\n    text-align: center;\n    font-weight: 400;\n    font-size: 1.5rem;\n}\n\n.cl-modal-content {\n    height: 100%;\n    overflow-y: auto;\n}\n\n\n/* Search Module\n   ========================================================================== */\n\n.search-module {\n    display: flex;\n    align-items: stretch;\n    border-bottom: 1px solid #dee5ef;\n    transition: all .2s;\n}\n.search-module:hover,\n.search-module:focus-within {\n    border-bottom-color: var(--links);\n}\n.search-module-icon {\n    color: #898d92;\n    margin-right: 8px;\n    align-self: center;\n}\n.search-module-input {\n    background-color: transparent;\n    width: 100%;\n    outline: none;\n    border: none;\n    padding: 12px 0;\n    transition: all .2s;\n    color: var(--text);\n}\n.search-module-input::placeholder {\n    transition: all .2s;\n}\n.search-module-clear {\n    color: #898d92;\n    font-size: 1rem;\n    background: transparent;\n    border: none;\n    margin: 0;\n    outline: none;\n    padding: 0 0 0 12px;\n    transition: all .2s;\n}\n.search-module-clear:hover {\n    opacity: .65;\n}\n.search-module:hover .search-module-icon,\n.search-module:focus-within .search-module-icon,\n.search-module:hover .search-module-input::placeholder,\n.search-module:focus-within .search-module-input::placeholder {\n    color: var(--links)\n}\n\n/* Dropdown menu with pill styling\n========================================================================== */\n\n.filter-list {\n    display: flex;\n    flex-wrap: wrap;\n    margin-bottom: 20px;\n}\n\n.filter-list \u003e div {\n    width: 100%;\n    margin-top: 13px;\n}\n\n.clear-filters {\n    display: flex;\n    align-items: center;\n    justify-content: center;\n}\n.clear-filters-button:hover {\n    opacity: 0.65;\n}\n\n/* Results\n   ========================================================================== */\n\n.result-list {\n    list-style: none;\n    padding-left: 0;\n    margin-top: 0;\n    overflow-y: auto;\n}\n\n.result {\n    padding: 1rem 26px;\n    border-top: 1px solid #DEE5EF;\n}\n\n.result:hover {\n    background-color: #f5f7fa;\n}\n\n.result-title {\n    color: var(--titles);\n    font-size: 1rem;\n    font-weight: bold;\n    margin-top: 0;\n    margin-bottom: 5px;\n}\n\n.result-info {\n    list-style: none;\n    padding-left: 0;\n    margin-top: 0;\n    margin-bottom: 10px;\n    overflow-wrap: break-word;\n}\n\n.result-info dt {\n    font-size: .9rem;\n    opacity: .9;\n}\n\n.result-info dd {\n    margin-left: 0;\n    margin-bottom: 5px;\n}\n\n.result-footer {\n    display: flex;\n    flex-wrap: wrap;\n    align-items: center;\n    justify-content: space-between;\n}\n\n.result-button {\n    display: inline-flex;\n    align-items: center;\n    background-color: transparent;\n    border: 1px solid var(--links);\n    color: var(--links);\n    line-height: 1.5;\n    border-radius: 20px;\n    padding: .1rem .8rem;\n    margin-right: 4px;\n    margin-bottom: 2px;\n    transition: all .2s;\n}\n\n.result-button .feather-x {\n    height: 15px;\n    width: 15px;\n    margin-left: 4px;\n}\n\n.result-button:hover {\n    opacity: .65;\n    text-decoration: none;\n}\n&#34; }'>
-    </form>
-</div>
-
-<div class="ods-content">
-    <section class="box box-live-example">
-      <iframe id="iframe-map-listing-2"
-              width="100%" height="100%"
-              src="about:blank"
-              srcdoc="
-        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;&gt;
-
-&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
-&lt;link rel=&#34;stylesheet&#34; href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;&gt;
-
-&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
-&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js&#34;&gt;&lt;/script&gt;
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;&gt;&lt;/script&gt;
-
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;&gt;&lt;/script&gt;
-&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
-
-&lt;script type=&#34;text/javascript&#34;&gt;
-    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {
-        ODSWidgetsConfigProvider.setConfig({
-            &#34;defaultDomain&#34;: &#34;https://userclub.opendatasoft.com/&#34;,
-            &#34;basemaps&#34;: [
-                {
-                    &#34;provider&#34;: &#34;jawg.light&#34;,
-                    &#34;label&#34;: &#34;Jawg Light&#34;,
-                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
-                },
-                {
-                    &#34;provider&#34;: &#34;jawg.streets&#34;,
-                    &#34;label&#34;: &#34;Jawg Streets&#34;,
-                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;,
-                    &#34;id&#34;: &#34;streets&#34;
-                }
-            ],
-            &#34;themes&#34;: {
-                &#39;default&#39;: {
-                    &#39;url&#39;: &#39;/img/ods.svg&#39;
-                },
-                &#39;Santé&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Culture, Patrimoine&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Environment&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Transports, Déplacements&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Justice, Sécurité, Police, Crime&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Sport, Loisirs&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Hébergement, Restauration&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Services, Social&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Checklist&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                },
-                &#39;Usages&#39;: {
-                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,
-                    &#39;color&#39;: &#39;#1446A0&#39;
-                }
-            },
-            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
-        });
-    });
-&lt;/script&gt;
-
-&lt;script type=&#34;text/javascript&#34;&gt;
-    document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
-        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
-            el.addEventListener(&#39;click&#39;, (event) =&gt; {
-                event.preventDefault();
-            });
-        })
-    });
-&lt;/script&gt;
-
-        </head>
-        <body>
-        <div ng-app='ods-widgets'>
-            &lt;!-- V2.1 :
-    - Add ods-select and multiple choice option for filters
-    - Add clear all filter button when one filter is applied
-    - Add documentation
-  --&gt;
-
-&lt;div ng-init=&#34;domain = &#39;mesr.opendatasoft.com&#39;;
-                datasetid = &#39;fr-esr-principaux-etablissements-enseignement-superieur&#39;;
-
-                title = &#39;Établissements près de chez vous&#39;;
-
-                filters = [
-                {&#39;id&#39;:&#39;type_d_etablissement&#39;,&#39;multiple&#39;:true},
-                {&#39;id&#39;:&#39;secteur_d_etablissement&#39;,&#39;multiple&#39;:true},
-                {&#39;id&#39;:&#39;dep_nom&#39;,&#39;multiple&#39;:true}
-                ];
-                resetFiltersButton = true;
-                resetFiltersButtonLabel = &#39;Supprimer tous les filtres&#39;;
-
-                resultTitle = &#39;uo_lib&#39;;
-                fieldsList = [&#39;adresse_uai&#39;, &#39;dep_nom&#39;, &#39;numero_telephone_uai&#39;];
-                fieldLink = &#39;url&#39;;
-                fieldLinkLabel = &#39;Visiter le site web&#39;;
-                mapLinkLabel = &#39;Voir sur la carte&#39;;
-
-                viewListButtonText = &#39;Voir la liste&#39;;
-                viewDetailsButtonText = &#39;Voir les détails&#39;;
-                backToResultsButtonText = &#39;Retour aux résultats&#39;;
-
-                DO_NOT_MODIFY_BELOW;
-
-                ctxfields = {};
-                isVisible = false;
-                activeFilters = {};
-                &#34;&gt;
-
-    &lt;!-- ### GENERAL SETTINGS ### --&gt;
-    &lt;!-- domain : (Domain URL) : Must contain the ID of the domain where the dataset is published.
-      ex: &#39;discovery.opendatasoft.com&#39;
-    --&gt;
-    &lt;!-- datasetid (Dataset ID) : Must contain the ID of the dataset
-      ex: &#39;oeuvres-de-johannes-vermeer&#39;
-    --&gt;
-
-    &lt;!-- title (Title of the page) :
-    ex: &#39;List of interest around you&#39;
-    --&gt;
-
-    &lt;!-- ### FILTERS SETTINGS ### --&gt;
-    &lt;!-- filters (Filters) : List of object that contains the IDs to generate the filters pannel.
-    and multiple true or false to allow the user to select multiple values in the filter.
-    NB: the field must be a facet in the dataset
-    NB: alphanumerical sort is applied in the filter view
-     ex: [
-              {&#39;id&#39;:&#39;filterid&#39;,&#39;multiple&#39;:true},
-              {&#39;id&#39;:&#39;filterid2&#39;,&#39;multiple&#39;:false}
-         ]
-    --&gt;
-    &lt;!-- resetFiltersButton (boolean) : add a reset filters button after filters block --&gt;
-    &lt;!-- resetFiltersButtonLabel (Label of the button) : test to display when a filter is selected
-        ex: &#39;Clear all filters&#39;
-    --&gt;
-
-    &lt;!-- ### LIST VIEW SETTINGS ### --&gt;
-    &lt;!-- resultTitle (Title of the item) : Set the item title from a field ID
-      ex: &#39;title&#39;;
-    --&gt;
-    &lt;!-- fieldsList (List configuration) : Set the list of field IDs
-      ex: [&#39;category&#39;,&#39;genre&#39;,&#39;date&#39;]
-    --&gt;
-    &lt;!-- fieldLink (Link to an external resource) : If available, the field ID of some external resource as a web URL
-      ex: &#39;link&#39;
-    --&gt;
-    &lt;!-- fieldLinkLabel (The label of that link) : Label of the link button
-      ex: &#39;Read more here&#39;
-    --&gt;
-    &lt;!-- mapLinkLabel (The label of the item button) : used to select the item and see it on the map
-      ex: &#39;See on the map&#39;
-    --&gt;
-
-    &lt;!-- ### MOBILE VIEW SETTINGS ### --&gt;
-    &lt;!-- viewListButtonText : when displaying the map, the bottom button to open the list view
-      ex: &#39;See the list&#39;
-    --&gt;
-    &lt;!-- viewDetailsButtonText : when an item is selected on the map, the bottom button to open the list view with the selected item
-      ex: &#39;See the item details&#39;
-    --&gt;
-    &lt;!-- backToResultsButtonText : when the list view is opened, to close button to go back to the map
-      ex: &#34;Back to the list&#39;
-    --&gt;
-
-
-
-    &lt;!-- MUST READ
-
-  A common error is forget to protect commas with a leading backslash, as commas are used to declare values of variable it will break the settings
-  wrongVariable = &#39;I&#39;ll be freed from commas&#39;
-  correctVariable = &#39;I\&#39;ll be freed from commas&#39;
-  --&gt;
-
-    &lt;!-- DO NOT MODIFY --&gt;
-    &lt;!-- Technical fields, do not modify please --&gt;
-
-    &lt;ods-dataset-context context=&#34;ctx&#34;
-                         ctx-domain=&#34;{{ domain }}&#34;
-                         ctx-dataset=&#34;{{ datasetid }}&#34;&gt;
-
-      &lt;span ng-repeat=&#34;field in ctx.dataset.fields&#34;&gt;
-        {{ ctxfields[field.name] = field.label; &#39;&#39; }}
-      &lt;/span&gt;
-
-        &lt;span ng-repeat=&#34;filter in filters&#34;&gt;
-        {{ ctx.parameters[&#39;refine.&#39; &#43; filter.id] = activeFilters[filter.id] ; &#39;&#39; }}
-      &lt;/span&gt;
-
-        &lt;aside class=&#34;cl-modal&#34;
-               ng-class=&#34;{ &#39;is-visible&#39; : modal.isVisible}&#34;&gt;
-            &lt;div class=&#34;cl-modal-header&#34;&gt;
-                &lt;button class=&#34;cl-modal-close-mobile&#34;
-                        title=&#34;Close modal&#34;
-                        ng-click=&#34;modal.isVisible = false&#34;&gt;
-                    &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-                         stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;
-                         class=&#34;feather feather-x&#34;&gt;
-                        &lt;line x1=&#34;18&#34; y1=&#34;6&#34; x2=&#34;6&#34; y2=&#34;18&#34;&gt;&lt;/line&gt;
-                        &lt;line x1=&#34;6&#34; y1=&#34;6&#34; x2=&#34;18&#34; y2=&#34;18&#34;&gt;&lt;/line&gt;
-                    &lt;/svg&gt;
-                &lt;/button&gt;
-                &lt;h1 class=&#34;cl-modal-title&#34;&gt;
-                    {{ title }}
-                &lt;/h1&gt;
-                &lt;div class=&#34;search-module&#34;&gt;
-                    &lt;i class=&#34;fa fa-search search-module-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
-                    &lt;input placeholder=&#34;Search&#34;
-                           ng-model=&#34;ctx.parameters[&#39;q&#39;]&#34;
-                           ng-model-options=&#34;{ updateOn: &#39;keyup&#39;, debounce: { &#39;default&#39;: 300, &#39;blur&#39;: 0 }}&#34;
-                           class=&#34;search-module-input&#34;
-                           type=&#34;text&#34;/&gt;
-                    &lt;button class=&#34;search-module-clear&#34;
-                            ng-if=&#34;ctx.parameters[&#39;q&#39;]&#34;
-                            ng-click=&#34;ctx.parameters[&#39;q&#39;] = undefined&#34;&gt;
-                        &lt;i class=&#34;fa fa-times-circle&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
-                    &lt;/button&gt;
-                &lt;/div&gt;
-
-                &lt;!-- FILTERS --&gt;
-                &lt;div class=&#34;filter-list&#34;
-                     ng-init=&#34;dropdown.open = &#39;&#39;;
-                        select = {}&#34;&gt;
-                    &lt;div ng-repeat=&#34;filter in filters&#34;&gt;
-                        {{ ctx.parameters[&#39;disjunctive.&#39; &#43; filter.id] = true; &#39;&#39; }}
-                        &lt;div ods-facet-results=&#34;categories&#34;
-                             ods-facet-results-facet-name=&#34;{{ filter.id }}&#34;
-                             ods-facet-results-context=&#34;ctx&#34;
-                             ods-facet-results-sort=&#34;alphanum&#34;&gt;
-                            &lt;ods-select ng-if=&#34;ctxfields[filter.id]&#34;
-                                        selected-values=&#34;activeFilters[filter.id]&#34;
-                                        multiple=&#34;filter.multiple&#34;
-                                        options=&#34;categories&#34;
-                                        label-modifier=&#34;name&#34;
-                                        value-modifier=&#34;name&#34;
-                                        placeholder=&#34;{{ ctxfields[filter.id] }}&#34;&gt;&lt;/ods-select&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-
-                    &lt;div class=&#34;clear-filters&#34;
-                         ng-show=&#34;(activeFilters | values).join(&#39;&#39;)&#34;&gt;
-                        &lt;div class=&#34;clear-filters-button&#34;
-                             role=&#34;button&#34;
-                             ng-click=&#34;activeFilters = {}&#34;&gt;
-                            {{ resetFiltersButtonLabel }}
-                            &lt;i class=&#34;fa fa-times-circle&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-
-            &lt;div class=&#34;cl-modal-content&#34;&gt;
-                &lt;ul class=&#34;result-list&#34;&gt;
-                    &lt;li class=&#34;result&#34;
-                        ng-repeat=&#34;item in items&#34;
-                        ods-results=&#34;items&#34;
-                        ods-results-context=&#34;ctx&#34;
-                        ods-results-max=&#34;1000&#34;&gt;
-
-                        &lt;h2 class=&#34;result-title&#34;&gt;
-                            {{ item.fields[resultTitle] }}
-                        &lt;/h2&gt;
-                        &lt;dl class=&#34;result-info&#34;&gt;
-                            &lt;dt ng-repeat-start=&#34;field in fieldsList&#34;&gt;
-                                {{ ctxfields[field] }}
-                            &lt;/dt&gt;
-                            &lt;dd ng-repeat-end&gt;{{ item.fields[field] }}&lt;/dd&gt;
-                        &lt;/dl&gt;
-                        &lt;div class=&#34;result-footer&#34;&gt;
-                            &lt;a href=&#34;{{ item.fields[fieldLink] }}&#34;
-                               ng-if=&#34;fieldLink &amp;&amp; item.fields[fieldLink]&#34;
-                               target=&#34;_blank&#34;&gt;
-                                {{ fieldLinkLabel }}
-                            &lt;/a&gt;
-                            &lt;button class=&#34;result-button&#34;
-                                    ng-if=&#34;!ctx.parameters[&#39;refine.&#39; &#43; resultTitle]&#34;
-                                    ng-click=&#34;modal.isVisible = false;
-                                  ctx.parameters[&#39;refine.&#39; &#43; resultTitle] = item.fields[resultTitle];&#34;&gt;
-                                {{ mapLinkLabel }}
-                            &lt;/button&gt;
-                            &lt;button class=&#34;result-button&#34;
-                                    ng-if=&#34;ctx.parameters[&#39;refine.&#39; &#43; resultTitle]&#34;
-                                    ng-click=&#34;ctx.parameters[&#39;refine.&#39; &#43; resultTitle] = undefined&#34;&gt;
-                                {{ backToResultsButtonText }}
-                                &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34;
-                                     fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-                                     stroke-linejoin=&#34;round&#34; class=&#34;feather feather-x&#34;&gt;
-                                    &lt;line x1=&#34;18&#34; y1=&#34;6&#34; x2=&#34;6&#34; y2=&#34;18&#34;&gt;&lt;/line&gt;
-                                    &lt;line x1=&#34;6&#34; y1=&#34;6&#34; x2=&#34;18&#34; y2=&#34;18&#34;&gt;&lt;/line&gt;
-                                &lt;/svg&gt;
-                            &lt;/button&gt;
-                        &lt;/div&gt;
-                    &lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-        &lt;/aside&gt;
-
-
-        &lt;ods-map no-refit=&#34;true&#34;
-                 scroll-wheel-zoom=&#34;true&#34;
-                 display-control=&#34;false&#34;
-                 display-control-single-layer=&#34;false&#34;
-                 toolbar-fullscreen=&#34;false&#34;
-                 toolbar-drawing=&#34;false&#34;&gt;
-            &lt;ods-map-layer-group&gt;
-                &lt;ods-map-layer context=&#34;ctx&#34;
-                               refine-on-click-context=&#34;ctx&#34;
-                               refine-on-click-map-field=&#34;{{ resultTitle }}&#34;
-                               refine-on-click-context-field=&#34;{{ resultTitle }}&#34;
-                               color=&#34;#0098c3&#34;
-                               picto=&#34;college&#34;
-                               show-marker=&#34;true&#34;
-                               display=&#34;auto&#34;
-                               shape-opacity=&#34;0.5&#34;
-                               point-opacity=&#34;1&#34;
-                               border-color=&#34;#FFFFFF&#34;
-                               border-opacity=&#34;1&#34;
-                               border-size=&#34;1&#34;
-                               border-pattern=&#34;solid&#34;
-                               size=&#34;4&#34;
-                               size-min=&#34;3&#34;
-                               size-max=&#34;5&#34;
-                               size-function=&#34;linear&#34;&gt;&lt;/ods-map-layer&gt;
-            &lt;/ods-map-layer-group&gt;
-        &lt;/ods-map&gt;
-
-        &lt;div class=&#34;cl-modal-open-mobile&#34;
-             ng-click=&#34;modal.isVisible = true&#34;&gt;
-            &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34;
-                 width=&#34;24&#34;
-                 height=&#34;24&#34;
-                 viewBox=&#34;0 0 24 24&#34;
-                 fill=&#34;none&#34;
-                 stroke=&#34;currentColor&#34;
-                 stroke-width=&#34;2&#34;
-                 stroke-linecap=&#34;round&#34;
-                 stroke-linejoin=&#34;round&#34;
-                 class=&#34;feather feather-chevron-up&#34;&gt;
-                &lt;polyline points=&#34;18 15 12 9 6 15&#34;&gt;&lt;/polyline&gt;
-            &lt;/svg&gt;
-            &lt;h3 class=&#34;cl-modal-open-mobile-title&#34;
-                ng-if=&#34;!ctx.parameters[&#39;refine.&#39; &#43; resultTitle]&#34;&gt;
-                {{ viewListButtonText }}
-            &lt;/h3&gt;
-            &lt;h3 class=&#34;cl-modal-open-mobile-title&#34;
-                ng-if=&#34;ctx.parameters[&#39;refine.&#39; &#43; resultTitle]&#34;&gt;
-                {{ viewDetailsButtonText }}
-            &lt;/h3&gt;
-        &lt;/div&gt;
-    &lt;/ods-dataset-context&gt;
-&lt;/div&gt;
-
-        </div>
-        <style type='text/css'>
-            /* General Layout
-========================================================================== */
-
-body, .main--page {
-    padding: 0;
-    margin: 0;
-}
-
-.ods-front-header, .ods-front-footer, .ods-content:after, footer {
-    display: none;
-}
-
-ods-dataset-context {
-    display: block;
-    position: relative;
-}
-
-.odswidget.odswidget-map {
-    width: 100%;
-    height: 100vh;
-}
-
-/* Modal
-   ========================================================================== */
-
-.cl-modal {
-    display: none;
-    flex-direction: column;
-    background-color: #FFFFFF;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.65);
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 35%;
-    left: 0;
-    border-radius: 6px 6px 0 0;
-    z-index: 30;
-    overflow: hidden; /* Disable horizontal scroll */
-}
-
-@media screen and (min-width: 768px) {
-    .cl-modal {
-        display: flex;
-        width: 400px;
-        height: calc(100vh - 55px);
-        top: 10px;
-        left: 47px;
-        border-radius: 6px;
-    }
-}
-
-.cl-modal.is-visible {
-    display: flex;
-}
-
-.cl-modal-open-mobile {
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    width: 100vw;
-    background-color: #FFFFFF;
-    padding: 13px;
-    z-index: 20;
-    border-radius: 6px 6px 0 0;
-    box-shadow: 0 0 5px rgba(0,0,0,0.65);
-    transition: all .2s;
-}
-
-.cl-modal-open-mobile:hover {
-    background-color: #f2f2f2;
-}
-
-@media screen and (min-width: 768px) {
-    .cl-modal-open-mobile {
-        display: none;
-    }
-}
-
-.cl-modal-open-mobile-title {
-    margin: 0;
-    font-weight: bold;
-}
-
-.cl-modal-close-mobile {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background-color: transparent;
-    border-radius: 10000px;
-    border: none;
-    font-size: 2.5rem;
-    opacity: .6;
-    transition: all .2s;
-}
-
-.cl-modal-close-mobile:hover {
-    background-color: #f2f2f2;
-    opacity: 1;
-}
-
-@media screen and (min-width: 768px) {
-    .cl-modal-close-mobile {
-        display: none;
-    }
-}
-
-.cl-modal-header {
-    padding: 26px 26px 0 26px;
-    box-shadow: 0 1px 2px rgba(0,0,0,.13);
-}
-
-.cl-modal-title {
-    margin-top: 0;
-    margin-bottom: 13px;
-    text-align: center;
-    font-weight: 400;
-    font-size: 1.5rem;
-}
-
-.cl-modal-content {
-    height: 100%;
-    overflow-y: auto;
-}
-
-
-/* Search Module
-   ========================================================================== */
-
-.search-module {
-    display: flex;
-    align-items: stretch;
-    border-bottom: 1px solid #dee5ef;
-    transition: all .2s;
-}
-.search-module:hover,
-.search-module:focus-within {
-    border-bottom-color: var(--links);
-}
-.search-module-icon {
-    color: #898d92;
-    margin-right: 8px;
-    align-self: center;
-}
-.search-module-input {
-    background-color: transparent;
-    width: 100%;
-    outline: none;
-    border: none;
-    padding: 12px 0;
-    transition: all .2s;
-    color: var(--text);
-}
-.search-module-input::placeholder {
-    transition: all .2s;
-}
-.search-module-clear {
-    color: #898d92;
-    font-size: 1rem;
-    background: transparent;
-    border: none;
-    margin: 0;
-    outline: none;
-    padding: 0 0 0 12px;
-    transition: all .2s;
-}
-.search-module-clear:hover {
-    opacity: .65;
-}
-.search-module:hover .search-module-icon,
-.search-module:focus-within .search-module-icon,
-.search-module:hover .search-module-input::placeholder,
-.search-module:focus-within .search-module-input::placeholder {
-    color: var(--links)
-}
-
-/* Dropdown menu with pill styling
-========================================================================== */
-
-.filter-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
-
-.filter-list &gt; div {
-    width: 100%;
-    margin-top: 13px;
-}
-
-.clear-filters {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.clear-filters-button:hover {
-    opacity: 0.65;
-}
-
-/* Results
-   ========================================================================== */
-
-.result-list {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0;
-    overflow-y: auto;
-}
-
-.result {
-    padding: 1rem 26px;
-    border-top: 1px solid #DEE5EF;
-}
-
-.result:hover {
-    background-color: #f5f7fa;
-}
-
-.result-title {
-    color: var(--titles);
-    font-size: 1rem;
-    font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 5px;
-}
-
-.result-info {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0;
-    margin-bottom: 10px;
-    overflow-wrap: break-word;
-}
-
-.result-info dt {
-    font-size: .9rem;
-    opacity: .9;
-}
-
-.result-info dd {
-    margin-left: 0;
-    margin-bottom: 5px;
-}
-
-.result-footer {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.result-button {
-    display: inline-flex;
-    align-items: center;
-    background-color: transparent;
-    border: 1px solid var(--links);
-    color: var(--links);
-    line-height: 1.5;
-    border-radius: 20px;
-    padding: .1rem .8rem;
-    margin-right: 4px;
-    margin-bottom: 2px;
-    transition: all .2s;
-}
-
-.result-button .feather-x {
-    height: 15px;
-    width: 15px;
-    margin-left: 4px;
-}
-
-.result-button:hover {
-    opacity: .65;
-    text-decoration: none;
-}
-
-        </style>
-        </body>
-        ">
-      </iframe>
-    </section>
-
-    <section class="box box-code js-tabs">
-        <nav class="level is-flex">
-            <div class="level-left">
-                <div class="level-item">
-                    <ul class="buttons has-addons js-tablist">
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-map-listing-2-html-content">
-                                HTML
-                            </a>
-                        </li>
-                        
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-map-listing-2-css-content">
-                                CSS
-                            </a>
-                        </li>
-                        
-                    </ul>
-                </div>
-            </div>
-            <div class="level-right mt-0">
-                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
-                   data-tooltip="Edit on CodePen"
-                   target="_blank"
-                   aria-role="link"
-                   rel="noopener"
-                   title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-map-listing-2').submit()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="feather feather-edit">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
-                    </svg>
-                </a>
-            </div>
-        </nav>
-
-
-        <div class="tab-content">
-            <div class="js-tabcontent"
-                 id="code-map-listing-2-html-content">
-                <div class="highlight">
-                    <pre class="language-html" data-lang="html"><code>&lt;!-- V2.1 :
-    - Add ods-select and multiple choice option for filters
-    - Add clear all filter button when one filter is applied
-    - Add documentation
-  --&gt;
-
-&lt;div ng-init=&#34;domain = &#39;mesr.opendatasoft.com&#39;;
-                datasetid = &#39;fr-esr-principaux-etablissements-enseignement-superieur&#39;;
-
-                title = &#39;Établissements près de chez vous&#39;;
-
-                filters = [
-                {&#39;id&#39;:&#39;type_d_etablissement&#39;,&#39;multiple&#39;:true},
-                {&#39;id&#39;:&#39;secteur_d_etablissement&#39;,&#39;multiple&#39;:true},
-                {&#39;id&#39;:&#39;dep_nom&#39;,&#39;multiple&#39;:true}
-                ];
-                resetFiltersButton = true;
-                resetFiltersButtonLabel = &#39;Supprimer tous les filtres&#39;;
-
-                resultTitle = &#39;uo_lib&#39;;
-                fieldsList = [&#39;adresse_uai&#39;, &#39;dep_nom&#39;, &#39;numero_telephone_uai&#39;];
-                fieldLink = &#39;url&#39;;
-                fieldLinkLabel = &#39;Visiter le site web&#39;;
-                mapLinkLabel = &#39;Voir sur la carte&#39;;
-
-                viewListButtonText = &#39;Voir la liste&#39;;
-                viewDetailsButtonText = &#39;Voir les détails&#39;;
-                backToResultsButtonText = &#39;Retour aux résultats&#39;;
-
-                DO_NOT_MODIFY_BELOW;
-
-                ctxfields = {};
-                isVisible = false;
-                activeFilters = {};
-                &#34;&gt;
-
-    &lt;!-- ### GENERAL SETTINGS ### --&gt;
-    &lt;!-- domain : (Domain URL) : Must contain the ID of the domain where the dataset is published.
-      ex: &#39;discovery.opendatasoft.com&#39;
-    --&gt;
-    &lt;!-- datasetid (Dataset ID) : Must contain the ID of the dataset
-      ex: &#39;oeuvres-de-johannes-vermeer&#39;
-    --&gt;
-
-    &lt;!-- title (Title of the page) :
-    ex: &#39;List of interest around you&#39;
-    --&gt;
-
-    &lt;!-- ### FILTERS SETTINGS ### --&gt;
-    &lt;!-- filters (Filters) : List of object that contains the IDs to generate the filters pannel.
-    and multiple true or false to allow the user to select multiple values in the filter.
-    NB: the field must be a facet in the dataset
-    NB: alphanumerical sort is applied in the filter view
-     ex: [
-              {&#39;id&#39;:&#39;filterid&#39;,&#39;multiple&#39;:true},
-              {&#39;id&#39;:&#39;filterid2&#39;,&#39;multiple&#39;:false}
-         ]
-    --&gt;
-    &lt;!-- resetFiltersButton (boolean) : add a reset filters button after filters block --&gt;
-    &lt;!-- resetFiltersButtonLabel (Label of the button) : test to display when a filter is selected
-        ex: &#39;Clear all filters&#39;
-    --&gt;
-
-    &lt;!-- ### LIST VIEW SETTINGS ### --&gt;
-    &lt;!-- resultTitle (Title of the item) : Set the item title from a field ID
-      ex: &#39;title&#39;;
-    --&gt;
-    &lt;!-- fieldsList (List configuration) : Set the list of field IDs
-      ex: [&#39;category&#39;,&#39;genre&#39;,&#39;date&#39;]
-    --&gt;
-    &lt;!-- fieldLink (Link to an external resource) : If available, the field ID of some external resource as a web URL
-      ex: &#39;link&#39;
-    --&gt;
-    &lt;!-- fieldLinkLabel (The label of that link) : Label of the link button
-      ex: &#39;Read more here&#39;
-    --&gt;
-    &lt;!-- mapLinkLabel (The label of the item button) : used to select the item and see it on the map
-      ex: &#39;See on the map&#39;
-    --&gt;
-
-    &lt;!-- ### MOBILE VIEW SETTINGS ### --&gt;
-    &lt;!-- viewListButtonText : when displaying the map, the bottom button to open the list view
-      ex: &#39;See the list&#39;
-    --&gt;
-    &lt;!-- viewDetailsButtonText : when an item is selected on the map, the bottom button to open the list view with the selected item
-      ex: &#39;See the item details&#39;
-    --&gt;
-    &lt;!-- backToResultsButtonText : when the list view is opened, to close button to go back to the map
-      ex: &#34;Back to the list&#39;
-    --&gt;
-
-
-
-    &lt;!-- MUST READ
-
-  A common error is forget to protect commas with a leading backslash, as commas are used to declare values of variable it will break the settings
-  wrongVariable = &#39;I&#39;ll be freed from commas&#39;
-  correctVariable = &#39;I\&#39;ll be freed from commas&#39;
-  --&gt;
-
-    &lt;!-- DO NOT MODIFY --&gt;
-    &lt;!-- Technical fields, do not modify please --&gt;
-
-    &lt;ods-dataset-context context=&#34;ctx&#34;
-                         ctx-domain=&#34;{{ domain }}&#34;
-                         ctx-dataset=&#34;{{ datasetid }}&#34;&gt;
-
-      &lt;span ng-repeat=&#34;field in ctx.dataset.fields&#34;&gt;
-        {{ ctxfields[field.name] = field.label; &#39;&#39; }}
-      &lt;/span&gt;
-
-        &lt;span ng-repeat=&#34;filter in filters&#34;&gt;
-        {{ ctx.parameters[&#39;refine.&#39; &#43; filter.id] = activeFilters[filter.id] ; &#39;&#39; }}
-      &lt;/span&gt;
-
-        &lt;aside class=&#34;cl-modal&#34;
-               ng-class=&#34;{ &#39;is-visible&#39; : modal.isVisible}&#34;&gt;
-            &lt;div class=&#34;cl-modal-header&#34;&gt;
-                &lt;button class=&#34;cl-modal-close-mobile&#34;
-                        title=&#34;Close modal&#34;
-                        ng-click=&#34;modal.isVisible = false&#34;&gt;
-                    &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34; fill=&#34;none&#34;
-                         stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34;
-                         class=&#34;feather feather-x&#34;&gt;
-                        &lt;line x1=&#34;18&#34; y1=&#34;6&#34; x2=&#34;6&#34; y2=&#34;18&#34;&gt;&lt;/line&gt;
-                        &lt;line x1=&#34;6&#34; y1=&#34;6&#34; x2=&#34;18&#34; y2=&#34;18&#34;&gt;&lt;/line&gt;
-                    &lt;/svg&gt;
-                &lt;/button&gt;
-                &lt;h1 class=&#34;cl-modal-title&#34;&gt;
-                    {{ title }}
-                &lt;/h1&gt;
-                &lt;div class=&#34;search-module&#34;&gt;
-                    &lt;i class=&#34;fa fa-search search-module-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
-                    &lt;input placeholder=&#34;Search&#34;
-                           ng-model=&#34;ctx.parameters[&#39;q&#39;]&#34;
-                           ng-model-options=&#34;{ updateOn: &#39;keyup&#39;, debounce: { &#39;default&#39;: 300, &#39;blur&#39;: 0 }}&#34;
-                           class=&#34;search-module-input&#34;
-                           type=&#34;text&#34;/&gt;
-                    &lt;button class=&#34;search-module-clear&#34;
-                            ng-if=&#34;ctx.parameters[&#39;q&#39;]&#34;
-                            ng-click=&#34;ctx.parameters[&#39;q&#39;] = undefined&#34;&gt;
-                        &lt;i class=&#34;fa fa-times-circle&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
-                    &lt;/button&gt;
-                &lt;/div&gt;
-
-                &lt;!-- FILTERS --&gt;
-                &lt;div class=&#34;filter-list&#34;
-                     ng-init=&#34;dropdown.open = &#39;&#39;;
-                        select = {}&#34;&gt;
-                    &lt;div ng-repeat=&#34;filter in filters&#34;&gt;
-                        {{ ctx.parameters[&#39;disjunctive.&#39; &#43; filter.id] = true; &#39;&#39; }}
-                        &lt;div ods-facet-results=&#34;categories&#34;
-                             ods-facet-results-facet-name=&#34;{{ filter.id }}&#34;
-                             ods-facet-results-context=&#34;ctx&#34;
-                             ods-facet-results-sort=&#34;alphanum&#34;&gt;
-                            &lt;ods-select ng-if=&#34;ctxfields[filter.id]&#34;
-                                        selected-values=&#34;activeFilters[filter.id]&#34;
-                                        multiple=&#34;filter.multiple&#34;
-                                        options=&#34;categories&#34;
-                                        label-modifier=&#34;name&#34;
-                                        value-modifier=&#34;name&#34;
-                                        placeholder=&#34;{{ ctxfields[filter.id] }}&#34;&gt;&lt;/ods-select&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-
-                    &lt;div class=&#34;clear-filters&#34;
-                         ng-show=&#34;(activeFilters | values).join(&#39;&#39;)&#34;&gt;
-                        &lt;div class=&#34;clear-filters-button&#34;
-                             role=&#34;button&#34;
-                             ng-click=&#34;activeFilters = {}&#34;&gt;
-                            {{ resetFiltersButtonLabel }}
-                            &lt;i class=&#34;fa fa-times-circle&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
-                        &lt;/div&gt;
-                    &lt;/div&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-
-            &lt;div class=&#34;cl-modal-content&#34;&gt;
-                &lt;ul class=&#34;result-list&#34;&gt;
-                    &lt;li class=&#34;result&#34;
-                        ng-repeat=&#34;item in items&#34;
-                        ods-results=&#34;items&#34;
-                        ods-results-context=&#34;ctx&#34;
-                        ods-results-max=&#34;1000&#34;&gt;
-
-                        &lt;h2 class=&#34;result-title&#34;&gt;
-                            {{ item.fields[resultTitle] }}
-                        &lt;/h2&gt;
-                        &lt;dl class=&#34;result-info&#34;&gt;
-                            &lt;dt ng-repeat-start=&#34;field in fieldsList&#34;&gt;
-                                {{ ctxfields[field] }}
-                            &lt;/dt&gt;
-                            &lt;dd ng-repeat-end&gt;{{ item.fields[field] }}&lt;/dd&gt;
-                        &lt;/dl&gt;
-                        &lt;div class=&#34;result-footer&#34;&gt;
-                            &lt;a href=&#34;{{ item.fields[fieldLink] }}&#34;
-                               ng-if=&#34;fieldLink &amp;&amp; item.fields[fieldLink]&#34;
-                               target=&#34;_blank&#34;&gt;
-                                {{ fieldLinkLabel }}
-                            &lt;/a&gt;
-                            &lt;button class=&#34;result-button&#34;
-                                    ng-if=&#34;!ctx.parameters[&#39;refine.&#39; &#43; resultTitle]&#34;
-                                    ng-click=&#34;modal.isVisible = false;
-                                  ctx.parameters[&#39;refine.&#39; &#43; resultTitle] = item.fields[resultTitle];&#34;&gt;
-                                {{ mapLinkLabel }}
-                            &lt;/button&gt;
-                            &lt;button class=&#34;result-button&#34;
-                                    ng-if=&#34;ctx.parameters[&#39;refine.&#39; &#43; resultTitle]&#34;
-                                    ng-click=&#34;ctx.parameters[&#39;refine.&#39; &#43; resultTitle] = undefined&#34;&gt;
-                                {{ backToResultsButtonText }}
-                                &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34; width=&#34;24&#34; height=&#34;24&#34; viewBox=&#34;0 0 24 24&#34;
-                                     fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-width=&#34;2&#34; stroke-linecap=&#34;round&#34;
-                                     stroke-linejoin=&#34;round&#34; class=&#34;feather feather-x&#34;&gt;
-                                    &lt;line x1=&#34;18&#34; y1=&#34;6&#34; x2=&#34;6&#34; y2=&#34;18&#34;&gt;&lt;/line&gt;
-                                    &lt;line x1=&#34;6&#34; y1=&#34;6&#34; x2=&#34;18&#34; y2=&#34;18&#34;&gt;&lt;/line&gt;
-                                &lt;/svg&gt;
-                            &lt;/button&gt;
-                        &lt;/div&gt;
-                    &lt;/li&gt;
-                &lt;/ul&gt;
-            &lt;/div&gt;
-        &lt;/aside&gt;
-
-
-        &lt;ods-map no-refit=&#34;true&#34;
-                 scroll-wheel-zoom=&#34;true&#34;
-                 display-control=&#34;false&#34;
-                 display-control-single-layer=&#34;false&#34;
-                 toolbar-fullscreen=&#34;false&#34;
-                 toolbar-drawing=&#34;false&#34;&gt;
-            &lt;ods-map-layer-group&gt;
-                &lt;ods-map-layer context=&#34;ctx&#34;
-                               refine-on-click-context=&#34;ctx&#34;
-                               refine-on-click-map-field=&#34;{{ resultTitle }}&#34;
-                               refine-on-click-context-field=&#34;{{ resultTitle }}&#34;
-                               color=&#34;#0098c3&#34;
-                               picto=&#34;college&#34;
-                               show-marker=&#34;true&#34;
-                               display=&#34;auto&#34;
-                               shape-opacity=&#34;0.5&#34;
-                               point-opacity=&#34;1&#34;
-                               border-color=&#34;#FFFFFF&#34;
-                               border-opacity=&#34;1&#34;
-                               border-size=&#34;1&#34;
-                               border-pattern=&#34;solid&#34;
-                               size=&#34;4&#34;
-                               size-min=&#34;3&#34;
-                               size-max=&#34;5&#34;
-                               size-function=&#34;linear&#34;&gt;&lt;/ods-map-layer&gt;
-            &lt;/ods-map-layer-group&gt;
-        &lt;/ods-map&gt;
-
-        &lt;div class=&#34;cl-modal-open-mobile&#34;
-             ng-click=&#34;modal.isVisible = true&#34;&gt;
-            &lt;svg xmlns=&#34;http://www.w3.org/2000/svg&#34;
-                 width=&#34;24&#34;
-                 height=&#34;24&#34;
-                 viewBox=&#34;0 0 24 24&#34;
-                 fill=&#34;none&#34;
-                 stroke=&#34;currentColor&#34;
-                 stroke-width=&#34;2&#34;
-                 stroke-linecap=&#34;round&#34;
-                 stroke-linejoin=&#34;round&#34;
-                 class=&#34;feather feather-chevron-up&#34;&gt;
-                &lt;polyline points=&#34;18 15 12 9 6 15&#34;&gt;&lt;/polyline&gt;
-            &lt;/svg&gt;
-            &lt;h3 class=&#34;cl-modal-open-mobile-title&#34;
-                ng-if=&#34;!ctx.parameters[&#39;refine.&#39; &#43; resultTitle]&#34;&gt;
-                {{ viewListButtonText }}
-            &lt;/h3&gt;
-            &lt;h3 class=&#34;cl-modal-open-mobile-title&#34;
-                ng-if=&#34;ctx.parameters[&#39;refine.&#39; &#43; resultTitle]&#34;&gt;
-                {{ viewDetailsButtonText }}
-            &lt;/h3&gt;
-        &lt;/div&gt;
-    &lt;/ods-dataset-context&gt;
-&lt;/div&gt;
-</code></pre>
-                </div>
-            </div>
-            
-            <div class="js-tabcontent"
-                 id="code-map-listing-2-css-content">
-                <div class="highlight">
-                    <pre class="language-css" data-lang="css"><code>/* General Layout
-========================================================================== */
-
-body, .main--page {
-    padding: 0;
-    margin: 0;
-}
-
-.ods-front-header, .ods-front-footer, .ods-content:after, footer {
-    display: none;
-}
-
-ods-dataset-context {
-    display: block;
-    position: relative;
-}
-
-.odswidget.odswidget-map {
-    width: 100%;
-    height: 100vh;
-}
-
-/* Modal
-   ========================================================================== */
-
-.cl-modal {
-    display: none;
-    flex-direction: column;
-    background-color: #FFFFFF;
-    box-shadow: 0 1px 5px rgba(0,0,0,0.65);
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    top: 35%;
-    left: 0;
-    border-radius: 6px 6px 0 0;
-    z-index: 30;
-    overflow: hidden; /* Disable horizontal scroll */
-}
-
-@media screen and (min-width: 768px) {
-    .cl-modal {
-        display: flex;
-        width: 400px;
-        height: calc(100vh - 55px);
-        top: 10px;
-        left: 47px;
-        border-radius: 6px;
-    }
-}
-
-.cl-modal.is-visible {
-    display: flex;
-}
-
-.cl-modal-open-mobile {
-    position: absolute;
-    bottom: 0;
-    text-align: center;
-    width: 100vw;
-    background-color: #FFFFFF;
-    padding: 13px;
-    z-index: 20;
-    border-radius: 6px 6px 0 0;
-    box-shadow: 0 0 5px rgba(0,0,0,0.65);
-    transition: all .2s;
-}
-
-.cl-modal-open-mobile:hover {
-    background-color: #f2f2f2;
-}
-
-@media screen and (min-width: 768px) {
-    .cl-modal-open-mobile {
-        display: none;
-    }
-}
-
-.cl-modal-open-mobile-title {
-    margin: 0;
-    font-weight: bold;
-}
-
-.cl-modal-close-mobile {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background-color: transparent;
-    border-radius: 10000px;
-    border: none;
-    font-size: 2.5rem;
-    opacity: .6;
-    transition: all .2s;
-}
-
-.cl-modal-close-mobile:hover {
-    background-color: #f2f2f2;
-    opacity: 1;
-}
-
-@media screen and (min-width: 768px) {
-    .cl-modal-close-mobile {
-        display: none;
-    }
-}
-
-.cl-modal-header {
-    padding: 26px 26px 0 26px;
-    box-shadow: 0 1px 2px rgba(0,0,0,.13);
-}
-
-.cl-modal-title {
-    margin-top: 0;
-    margin-bottom: 13px;
-    text-align: center;
-    font-weight: 400;
-    font-size: 1.5rem;
-}
-
-.cl-modal-content {
-    height: 100%;
-    overflow-y: auto;
-}
-
-
-/* Search Module
-   ========================================================================== */
-
-.search-module {
-    display: flex;
-    align-items: stretch;
-    border-bottom: 1px solid #dee5ef;
-    transition: all .2s;
-}
-.search-module:hover,
-.search-module:focus-within {
-    border-bottom-color: var(--links);
-}
-.search-module-icon {
-    color: #898d92;
-    margin-right: 8px;
-    align-self: center;
-}
-.search-module-input {
-    background-color: transparent;
-    width: 100%;
-    outline: none;
-    border: none;
-    padding: 12px 0;
-    transition: all .2s;
-    color: var(--text);
-}
-.search-module-input::placeholder {
-    transition: all .2s;
-}
-.search-module-clear {
-    color: #898d92;
-    font-size: 1rem;
-    background: transparent;
-    border: none;
-    margin: 0;
-    outline: none;
-    padding: 0 0 0 12px;
-    transition: all .2s;
-}
-.search-module-clear:hover {
-    opacity: .65;
-}
-.search-module:hover .search-module-icon,
-.search-module:focus-within .search-module-icon,
-.search-module:hover .search-module-input::placeholder,
-.search-module:focus-within .search-module-input::placeholder {
-    color: var(--links)
-}
-
-/* Dropdown menu with pill styling
-========================================================================== */
-
-.filter-list {
-    display: flex;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
-
-.filter-list &gt; div {
-    width: 100%;
-    margin-top: 13px;
-}
-
-.clear-filters {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.clear-filters-button:hover {
-    opacity: 0.65;
-}
-
-/* Results
-   ========================================================================== */
-
-.result-list {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0;
-    overflow-y: auto;
-}
-
-.result {
-    padding: 1rem 26px;
-    border-top: 1px solid #DEE5EF;
-}
-
-.result:hover {
-    background-color: #f5f7fa;
-}
-
-.result-title {
-    color: var(--titles);
-    font-size: 1rem;
-    font-weight: bold;
-    margin-top: 0;
-    margin-bottom: 5px;
-}
-
-.result-info {
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0;
-    margin-bottom: 10px;
-    overflow-wrap: break-word;
-}
-
-.result-info dt {
-    font-size: .9rem;
-    opacity: .9;
-}
-
-.result-info dd {
-    margin-left: 0;
-    margin-bottom: 5px;
-}
-
-.result-footer {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.result-button {
-    display: inline-flex;
-    align-items: center;
-    background-color: transparent;
-    border: 1px solid var(--links);
-    color: var(--links);
-    line-height: 1.5;
-    border-radius: 20px;
-    padding: .1rem .8rem;
-    margin-right: 4px;
-    margin-bottom: 2px;
-    transition: all .2s;
-}
-
-.result-button .feather-x {
-    height: 15px;
-    width: 15px;
-    margin-left: 4px;
-}
-
-.result-button:hover {
-    opacity: .65;
-    text-decoration: none;
-}
-</code></pre>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-</div>
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-map-listing-2";
-            iframe = document.getElementById(iframeId);
-             
-            size =  700 
-             
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-                if (iframe.height == size) {
-                    clearInterval(loopId);
-                } else {
-                    iframe.height = size > 1 ? size : scrollHeight;
-                }
-            }
-        }, 1000);
-    });
-</script>
-
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "IFRAME ID HERE";
-            iframe = document.getElementById(iframeId);
-
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-            }
-        }, 1000);
-    });
-</script>
-        </div>
-    </div>
-    
-</section>
-
+  </section>
 
     </div>
 </div>
@@ -3412,7 +3411,7 @@ ods-dataset-context {
 
 <script>var process = { "env": { "NODE_ENV": "production" } }</script>
 <script type="text/javascript"
-        src="/index.min.d819882aed453326e186b5e58276479ab9f56632de0bd53f36f17281b9e51172.js"
+        src="/index.min.4c4e90b33e22814ed2f29ed851542d05481299bde3cb5e86e25342883c06ea26.js"
         defer></script>
 
 </body>

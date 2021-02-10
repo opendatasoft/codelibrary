@@ -10,13 +10,19 @@
                 <ods-map basemap="streets" style="height:500px" no-refit="true">
                     <ods-map-layer context="map"
                                    refine-on-click-context="ctxrefine"
-                                   refine-on-click-context-replace-refine="true"></ods-map-layer>
+                                   refine-on-click-ctxrefine-replace-refine="true"
+                                   refine-on-click-ctxrefine-map-field="id"
+                                   refine-on-click-ctxrefine-context-field="id"></ods-map-layer>
+                    <ods-map-layer context="ctxrefine"
+                                   show-if="ctxrefine.parameters['refine.id']"
+                                   color="green"
+                                   picto-size="6"></ods-map-layer>
                 </ods-map>
             </div>
             <div class="col-md-5">
                 <!-- WHEN NO POINT SELECTED, DISPLAY THIS -->
                 <div class="unrefined"
-                     ng-if="!ctxrefine.parameters['geofilter.distance']">
+                     ng-if="!ctxrefine.parameters['refine.id']">
                     <div class="header">
                         <h2 class="title">
                             HAWAII Hospitals
@@ -29,13 +35,13 @@
 
                 <!-- WHEN A POINT IS SELECTED, DISPLAY THIS -->
                 <div class="refined"
-                     ng-if="ctxrefine.parameters['geofilter.distance']"
+                     ng-if="ctxrefine.parameters['refine.id']"
                      ods-results="items"
                      ods-results-context="ctxrefine"
                      ods-results-max="1"
                      ng-repeat="item in items">
                     <button class="button-go-back"
-                            ng-click="ctxrefine.parameters['geofilter.distance'] = undefined"
+                            ng-click="ctxrefine.parameters['refine.id'] = undefined"
                             aria-label="Close detail side">
                         <i class="fa fa-long-arrow-left button-go-back-icon"
                            aria-hidden="true"></i>
