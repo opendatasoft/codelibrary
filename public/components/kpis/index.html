@@ -302,6 +302,624 @@ KPIs &ndash; Codelibrary
     <div class="container">
         <div class="box box-example">
           <div class="content">
+            <h2 class="title" id="flip-kpi">
+  Flip KPI
+  
+    <a class="is-link" href="#flip-kpi">
+      <img src="/img/fas-link.svg" />
+    </a>
+  
+</h2>
+<p>This card flip on user interaction to reveal more details about the dataset and how it is computed.</p>
+
+          </div>
+          
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-flip-kpi"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;row\&#34;\u003e\n    \u003cdiv class=\&#34;col-sm-offset-4 col-sm-4\&#34;\u003e\n        \u003cods-dataset-context context=\&#34;ushospitals\&#34;\n                             ushospitals-domain=\&#34;userclub\&#34;\n                             ushospitals-dataset=\&#34;us-hospitals\&#34;\u003e\n            \u003c!-- KPI box component --\u003e\n            \u003cdiv class=\&#34;card-flip\&#34;\n\n                 ng-init=\&#34;isFlipped = false\&#34;\n                 ng-click=\&#34;isFlipped = !isFlipped\&#34;\n                 ng-class=\&#34;{&#39;is-flipped&#39;: isFlipped}\&#34;\n\n                 ods-aggregation=\&#34;count\&#34;\n                 ods-aggregation-context=\&#34;ushospitals\&#34;\n                 ods-aggregation-function=\&#34;COUNT\&#34;\u003e\n                \u003cdiv class=\&#34;kpi-card card-face card-face-front\&#34;\u003e\n                    \u003cdiv class=\&#34;kpi-card-top\&#34;\u003e\u003c/div\u003e\n                    \u003cdiv class=\&#34;kpi-card-middle\&#34;\u003e\n                        \u003ci class=\&#34;kpi-icon fa fa-hospital-o\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                        \u003ch2 class=\&#34;kpi-title\&#34;\u003e\n                            {{ count | number }}\n                        \u003c/h2\u003e\n                        \u003cp class=\&#34;kpi-description\&#34;\u003e\n                            Number of hospitals\n                        \u003c/p\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;kpi-card-bottom\&#34;\u003e\n                        \u003cp class=\&#34;hint\&#34;\u003e\&#34;How is it computed? 👉\&#34;\u003c/p\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;kpi-card card-face card-face-back\&#34;\u003e\n                    \u003cp\u003e\n                        \u003cstrong\u003e{{ count | number }}\u003c/strong\u003e is the count of all records found in the dataset: \n                    \u003c/p\u003e\n                    \u003ca href=\&#34;{ushospitals.domainUrl}}/explore/dataset/{ushospitals.dataset.datasetid}}/information/\&#34;\u003e\n                        {{ ushospitals.dataset.metas.title }}\n                    \u003c/a\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/ods-dataset-context\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\n\u003c/div\u003e&#34;,
+               "css": &#34;/* Variables \u0026 Shared classes\n========================================================================== */\n:root {\n    --secondary-color: #142E7B;\n}\n\n/* KPI Card\n========================================================================== */\n.kpi-card {\n    background-color: var(--boxes-background);\n    height: 100%;\n    padding: 39px;\n    border-radius: 4px;\n    margin-bottom: 20px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -ms-flex-direction: column;\n    flex-direction: column;\n    -webkit-box-align: center;\n    -ms-flex-align: center;\n    align-items: center;\n    text-align: center;\n    -webkit-box-pack: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    text-align: center;\n}\n\n.kpi-icon {\n    color: var(--highlight);\n    color: var(--secondary-color);\n    font-size: 4rem;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n\n.kpi-title {\n    font-weight: normal;\n    color: var(--highlight);\n    font-size: 3.2rem;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n\n.kpi-description {\n    color: var(--text);\n    font-size: 1rem;\n    line-height: 1.5;\n    font-weight: normal;\n    margin-top: 0;\n    margin-bottom: 0;\n    max-width: 100%;\n}\n\n.kpi-description-detail {\n    opacity: 0.9;\n    font-style: italic;\n    font-size: 0.9em;\n    margin-top: 0.8em;\n}\n\n/* Flip component\n========================================================================== */\n.kpi-card.card-face-front {\n    justify-content: space-between;\n}\n\n.card-flip {\n    position: relative;\n    height: 100%;\n    width: 100%;\n    -webkit-transition: -webkit-transform 0.2s;\n    transition: -webkit-transform 0.2s;\n    -o-transition: transform 0.2s;\n    transition: transform 0.2s;\n    transition: transform 0.2s, -webkit-transform 0.2s;\n    -webkit-perspective: 1200px;\n    perspective: 1200px;\n    -webkit-transform-style: preserve-3d;\n    transform-style: preserve-3d;\n    border-radius: 4px;\n    margin-bottom: 20px;\n}\n\n.card-face {\n    -webkit-backface-visibility: hidden;\n    backface-visibility: hidden;\n    height: 100%;\n    width: 100%;\n    margin-bottom: 0; /* remove kpi-card margin bottom */\n}\n\n.card-face-back {\n    position: absolute;\n    top: 0;\n    left: 0;\n    -webkit-transform: rotateY(180deg);\n    transform: rotateY(180deg);\n    -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),\n    0 1px 10px 0 rgba(0, 0, 0, 0.12);\n    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),\n    0 1px 10px 0 rgba(0, 0, 0, 0.12);\n}\n\n.card-flip.is-flipped {\n    -webkit-transform: rotateY(180deg);\n    transform: rotateY(180deg);\n}\n\n.card-flip:hover {\n    -webkit-transform: rotateY(5deg);\n    transform: rotateY(5deg);\n    -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),\n    0 1px 10px 0 rgba(0, 0, 0, 0.12);\n    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),\n    0 1px 10px 0 rgba(0, 0, 0, 0.12);\n}\n\n.card-flip.is-flipped:hover {\n    -webkit-transform: rotateY(180deg);\n    transform: rotateY(180deg);\n}\n\n.kpi-card-bottom {\n    align-self: flex-end;\n    margin: 16px -27px -27px 0;\n}\n\np.hint {\n    color: darkgrey;\n}\n&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-flip-kpi"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;defaultDomain&#34;: &#34;https://userclub.opendatasoft.com/&#34;,
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                },
+                {
+                    &#34;provider&#34;: &#34;jawg.streets&#34;,
+                    &#34;label&#34;: &#34;Jawg Streets&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;,
+                    &#34;id&#34;: &#34;streets&#34;
+                }
+            ],
+            &#34;themes&#34;: {
+                &#39;default&#39;: {
+                    &#39;url&#39;: &#39;/img/ods.svg&#39;
+                },
+                &#39;Santé&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Culture, Patrimoine&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Environment&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Transports, Déplacements&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Justice, Sécurité, Police, Crime&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Sport, Loisirs&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Hébergement, Restauration&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Services, Social&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Checklist&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Usages&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                }
+            },
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+        </head>
+        <body>
+        <div ng-app='ods-widgets'>
+            &lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-sm-offset-4 col-sm-4&#34;&gt;
+        &lt;ods-dataset-context context=&#34;ushospitals&#34;
+                             ushospitals-domain=&#34;userclub&#34;
+                             ushospitals-dataset=&#34;us-hospitals&#34;&gt;
+            &lt;!-- KPI box component --&gt;
+            &lt;div class=&#34;card-flip&#34;
+
+                 ng-init=&#34;isFlipped = false&#34;
+                 ng-click=&#34;isFlipped = !isFlipped&#34;
+                 ng-class=&#34;{&#39;is-flipped&#39;: isFlipped}&#34;
+
+                 ods-aggregation=&#34;count&#34;
+                 ods-aggregation-context=&#34;ushospitals&#34;
+                 ods-aggregation-function=&#34;COUNT&#34;&gt;
+                &lt;div class=&#34;kpi-card card-face card-face-front&#34;&gt;
+                    &lt;div class=&#34;kpi-card-top&#34;&gt;&lt;/div&gt;
+                    &lt;div class=&#34;kpi-card-middle&#34;&gt;
+                        &lt;i class=&#34;kpi-icon fa fa-hospital-o&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                        &lt;h2 class=&#34;kpi-title&#34;&gt;
+                            {{ count | number }}
+                        &lt;/h2&gt;
+                        &lt;p class=&#34;kpi-description&#34;&gt;
+                            Number of hospitals
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;kpi-card-bottom&#34;&gt;
+                        &lt;p class=&#34;hint&#34;&gt;&#34;How is it computed? 👉&#34;&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;kpi-card card-face card-face-back&#34;&gt;
+                    &lt;p&gt;
+                        &lt;strong&gt;{{ count | number }}&lt;/strong&gt; is the count of all records found in the dataset: 
+                    &lt;/p&gt;
+                    &lt;a href=&#34;{ushospitals.domainUrl}}/explore/dataset/{ushospitals.dataset.datasetid}}/information/&#34;&gt;
+                        {{ ushospitals.dataset.metas.title }}
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/ods-dataset-context&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+        </div>
+        <style type='text/css'>
+            /* Variables &amp; Shared classes
+========================================================================== */
+:root {
+    --secondary-color: #142E7B;
+}
+
+/* KPI Card
+========================================================================== */
+.kpi-card {
+    background-color: var(--boxes-background);
+    height: 100%;
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.kpi-icon {
+    color: var(--highlight);
+    color: var(--secondary-color);
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.kpi-title {
+    font-weight: normal;
+    color: var(--highlight);
+    font-size: 3.2rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.kpi-description {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 100%;
+}
+
+.kpi-description-detail {
+    opacity: 0.9;
+    font-style: italic;
+    font-size: 0.9em;
+    margin-top: 0.8em;
+}
+
+/* Flip component
+========================================================================== */
+.kpi-card.card-face-front {
+    justify-content: space-between;
+}
+
+.card-flip {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    -o-transition: transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.card-face {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 0; /* remove kpi-card margin bottom */
+}
+
+.card-face-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card-flip.is-flipped {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.card-flip:hover {
+    -webkit-transform: rotateY(5deg);
+    transform: rotateY(5deg);
+    -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card-flip.is-flipped:hover {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.kpi-card-bottom {
+    align-self: flex-end;
+    margin: 16px -27px -27px 0;
+}
+
+p.hint {
+    color: darkgrey;
+}
+
+        </style>
+        </body>
+        ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level is-flex">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-secondary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-flip-kpi-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        
+                        <li class="button is-secondary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-flip-kpi-css-content">
+                                CSS
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right mt-0">
+                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
+                   data-tooltip="Edit on CodePen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-flip-kpi').submit()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-edit">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-flip-kpi-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-sm-offset-4 col-sm-4&#34;&gt;
+        &lt;ods-dataset-context context=&#34;ushospitals&#34;
+                             ushospitals-domain=&#34;userclub&#34;
+                             ushospitals-dataset=&#34;us-hospitals&#34;&gt;
+            &lt;!-- KPI box component --&gt;
+            &lt;div class=&#34;card-flip&#34;
+
+                 ng-init=&#34;isFlipped = false&#34;
+                 ng-click=&#34;isFlipped = !isFlipped&#34;
+                 ng-class=&#34;{&#39;is-flipped&#39;: isFlipped}&#34;
+
+                 ods-aggregation=&#34;count&#34;
+                 ods-aggregation-context=&#34;ushospitals&#34;
+                 ods-aggregation-function=&#34;COUNT&#34;&gt;
+                &lt;div class=&#34;kpi-card card-face card-face-front&#34;&gt;
+                    &lt;div class=&#34;kpi-card-top&#34;&gt;&lt;/div&gt;
+                    &lt;div class=&#34;kpi-card-middle&#34;&gt;
+                        &lt;i class=&#34;kpi-icon fa fa-hospital-o&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                        &lt;h2 class=&#34;kpi-title&#34;&gt;
+                            {{ count | number }}
+                        &lt;/h2&gt;
+                        &lt;p class=&#34;kpi-description&#34;&gt;
+                            Number of hospitals
+                        &lt;/p&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;kpi-card-bottom&#34;&gt;
+                        &lt;p class=&#34;hint&#34;&gt;&#34;How is it computed? 👉&#34;&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;kpi-card card-face card-face-back&#34;&gt;
+                    &lt;p&gt;
+                        &lt;strong&gt;{{ count | number }}&lt;/strong&gt; is the count of all records found in the dataset: 
+                    &lt;/p&gt;
+                    &lt;a href=&#34;{ushospitals.domainUrl}}/explore/dataset/{ushospitals.dataset.datasetid}}/information/&#34;&gt;
+                        {{ ushospitals.dataset.metas.title }}
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/ods-dataset-context&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+            
+            <div class="js-tabcontent"
+                 id="code-flip-kpi-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>/* Variables &amp; Shared classes
+========================================================================== */
+:root {
+    --secondary-color: #142E7B;
+}
+
+/* KPI Card
+========================================================================== */
+.kpi-card {
+    background-color: var(--boxes-background);
+    height: 100%;
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.kpi-icon {
+    color: var(--highlight);
+    color: var(--secondary-color);
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.kpi-title {
+    font-weight: normal;
+    color: var(--highlight);
+    font-size: 3.2rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.kpi-description {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 100%;
+}
+
+.kpi-description-detail {
+    opacity: 0.9;
+    font-style: italic;
+    font-size: 0.9em;
+    margin-top: 0.8em;
+}
+
+/* Flip component
+========================================================================== */
+.kpi-card.card-face-front {
+    justify-content: space-between;
+}
+
+.card-flip {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: -webkit-transform 0.2s;
+    -o-transition: transform 0.2s;
+    transition: transform 0.2s;
+    transition: transform 0.2s, -webkit-transform 0.2s;
+    -webkit-perspective: 1200px;
+    perspective: 1200px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.card-face {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    height: 100%;
+    width: 100%;
+    margin-bottom: 0; /* remove kpi-card margin bottom */
+}
+
+.card-face-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card-flip.is-flipped {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.card-flip:hover {
+    -webkit-transform: rotateY(5deg);
+    transform: rotateY(5deg);
+    -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+.card-flip.is-flipped:hover {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+}
+
+.kpi-card-bottom {
+    align-self: flex-end;
+    margin: 16px -27px -27px 0;
+}
+
+p.hint {
+    color: darkgrey;
+}
+</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-flip-kpi";
+            iframe = document.getElementById(iframeId);
+             
+            size =  null 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "IFRAME ID HERE";
+            iframe = document.getElementById(iframeId);
+
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+            }
+        }, 1000);
+    });
+</script>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="box box-example">
+          <div class="content">
             <h2 class="title" id="kpi-card">
   KPI Card
   
