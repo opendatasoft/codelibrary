@@ -11,19 +11,36 @@
         </h1>
     </section>
     <section class="home-results container">
-        {{ range $index, $elem := .Site.Sections }}
+        {{ range .Site.Sections }}
         <a class="card card-home"
-           href="{{ $elem.RelPermalink }}">
+           href="{{ .RelPermalink }}">
             <div class="card-content">
-                <h2 class="title is-size-3">
-                    {{ $elem.Title | humanize }}
-                </h2>
+                <h3 class="title is-3">
+                    {{ .Title | humanize }}
+                </h3>
                 <p class="subtitle">
-                    {{ index .Site.Data.sections ($elem.Title | lower) | safeHTML }}
+                    {{ index .Site.Data.sections (.Title | lower) | safeHTML }}
                 </p>
             </div>
         </a>
         {{ end }}
+    <section class="section">
+      <h3 class="title is-3">
+        Latest content:
+      </h3>
+      <ul>
+        {{ range .Site.RegularPages | first 10 }}
+          {{ range where .Page.Resources ".Date" "ge" (now.AddDate 0 -2 0) }}
+            <li>
+              {{ .Parent.Page.Title }}: 
+              <a href="{{ .Parent.RelPermalink }}#{{ .Title | anchorize }}">
+                {{ .Title }}
+              </a>
+            </li>
+          {{ end }}
+        {{ end }}
+      </ul>
+    </section>
     </section>
 </div>
 {{ end }}
