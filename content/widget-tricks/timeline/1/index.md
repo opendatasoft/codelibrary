@@ -1,5 +1,5 @@
 ---
-title: "Timeline custom view"
+title: "Timeline view"
 height: 800
 ---
 
