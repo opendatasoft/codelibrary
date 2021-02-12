@@ -1,6 +1,7 @@
 ---
 title: "Component 2"
 height: 75
+date: "2021-02-12"
 ---
 
 

@@ -14,6 +14,7 @@
         <div id="algolia-results"></div>
 
         {{ $currentPage := . }}
+        {{ $newContentCount := 0 }}
         <ul class="menu-list">
             <li>
                 <a class="sidebar-subtitle"
@@ -22,27 +23,34 @@
                 </a>
             </li>
             {{ range .Site.Menus.main }}
-            {{ if eq $currentPage.Section .Page.Section }}
-            <li>
-                <a class="sidebar-subtitle {{ if $currentPage.IsMenuCurrent "main" . }}is-active{{ end }}" href="{{ .URL }}">
-                {{ humanize .Name }}
-                </a>
-                <ul>
-                    {{ range .Page.Pages }}
-                    <li>
-                        <a class="{{ if eq $currentPage . }}is-active{{ end }}" href="{{ .Permalink }}">{{ .Title }}</a>
-                    </li>
-                    {{ end }}
-                </ul>
-            </li>
-            {{ else }}
-            <li>
-                <a href="{{ .URL }}"
-                   class="sidebar-subtitle">
-                    {{ humanize .Name }}
-                </a>
-            </li>
-            {{ end }}
+              {{ if eq $currentPage.Section .Page.Section }}
+              <li>
+                  <a class="sidebar-subtitle {{ if $currentPage.IsMenuCurrent "main" . }}is-active{{ end }}" href="{{ .URL }}">
+                  {{ humanize .Name }}
+                  </a>
+                  <ul>
+                      {{ range .Page.Pages }}
+                        {{ len (where .Page.Resources ".Date" "ge" (now.AddDate 0 -2 0))}}
+                        <li>
+                            <a class="{{ if eq $currentPage . }}is-active{{ end }}" href="{{ .Permalink }}">{{ .Title }}</a>
+                        </li>
+                      {{ end }}
+                  </ul>
+              </li>
+              {{ else }}
+                {{ $newContentCount := 0 }}
+                {{ range .Page.Pages }}
+                  {{ $pageNewContent := len (where .Resources ".Date" "ge" (now.AddDate 0 -2 0)) }}
+                  {{ $newContentCount = add $newContentCount $pageNewContent }}
+                {{ end }}
+                {{ $newContentCount }}
+              <li>
+                  <a href="{{ .URL }}"
+                     class="sidebar-subtitle">
+                      {{ humanize .Name }}
+                  </a>
+              </li>
+              {{ end }}
             {{ end }}
         </ul>
         <p class="menu-label">
