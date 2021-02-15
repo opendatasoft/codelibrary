@@ -25,8 +25,11 @@
         </a>
         {{ end }}
     <section class="section">
-      <h3 class="title is-3">
-        Latest content:
+      <h3 class="title is-3 is-flex is-align-items-baseline">
+        Latest content
+        <a href="/index.xml">
+          <figure class="image is-16x16 mx-1"><img src="/img/rss.svg" alt="rss"></figure>
+        </a>
       </h3>
         {{ range .Site.RegularPages | first 10 }}
           {{ range where .Page.Resources ".Date" "ge" (now.AddDate 0 -2 0) }}
