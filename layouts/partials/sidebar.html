@@ -23,13 +23,15 @@
                       {{ range .Page.Pages }}
                         <li>
                             <a class="{{ if eq $currentPage . }}is-active{{ end }}" href="{{ .Permalink }}">
-                              {{ .Title }}
-                              {{ $newContentCount := len (where .Page.Resources ".Date" "ge" (now.AddDate 0 -2 0)) }}
-                              {{ if ne $newContentCount 0 }}
+                              <div>
+                                {{ .Title }}
+                                {{ $newContentCount := len (where .Page.Resources ".Date" "ge" (now.AddDate 0 -2 0)) }}
+                                {{ if ne $newContentCount 0 }}
                                 <span class="tag pill is-size-7 is-rounded is-info">
                                   {{ $newContentCount }}
                                 </span>
-                              {{ end }}
+                                {{ end }}
+                              </div>
                             </a>
                         </li>
                       {{ end }}
