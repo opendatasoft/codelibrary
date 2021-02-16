@@ -1,8 +1,3 @@
 ---
-title: "Search box 1"
+title: "Search box"
 ---
-
-
-## Search Box
-
-

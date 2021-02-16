@@ -1,8 +1,6 @@
 ---
-title: "Custom tooltip 1"
+title: "Default tooltip"
 ---
 
-## Default tooltip
 
 Information is displayed with OpenDataSoft Map default style
-

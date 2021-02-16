@@ -1,11 +1,5 @@
 ---
-title: "Image card 1"
+title: "Image card"
 ---
 
-
-## Image card
-
 Card with text over an image background.
-
-
-

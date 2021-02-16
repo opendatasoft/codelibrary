@@ -1,9 +1,6 @@
 ---
-title: "Switch toggle 1"
+title: "Light style"
 height: 60
 ---
-
-
-## Light style
 
 A regular switch that switches to an "on" state on click.

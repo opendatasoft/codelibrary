@@ -1,9 +1,3 @@
 ---
-title: "Home 1"
+title: "Preview"
 ---
-
-
-## Preview
-
-
-

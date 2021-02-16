@@ -1,11 +1,9 @@
 ---
-title: "Component"
+title: "{{ replace .Name "-" " " | title }}"
+date: {{ .Date }}
 description: ""
 tags: ["display", "navigation", "list"]
 resources:
 - src: '*/'
-  title: 'Section #:counter'
+  name: folder-:counter
 ---
-
-# Components library - 
-

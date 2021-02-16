@@ -5,25 +5,53 @@
 {{ define "main" }}
 
 <div>
-    <section class="container is-max-desktop my-6">
+    <section class="container section is-max-desktop">
         <h1 class="title is-size-1 ">
             Welcome to the Code Library of Opendatasoft!
         </h1>
     </section>
     <section class="home-results container">
-        {{ range $index, $elem := .Site.Sections }}
+        {{ range .Site.Sections }}
         <a class="card card-home"
-           href="{{ $elem.RelPermalink }}">
+           href="{{ .RelPermalink }}">
             <div class="card-content">
                 <h2 class="title is-size-3">
-                    {{ $elem.Title | humanize }}
+                    {{ .Title }}
                 </h2>
                 <p class="subtitle">
-                    {{ index .Site.Data.sections ($elem.Title | lower) | safeHTML }}
+                    {{ .Description }}
                 </p>
             </div>
         </a>
         {{ end }}
+    <section class="section">
+      <h3 class="title is-3 is-flex is-align-items-baseline">
+        Latest content
+        <a href="/index.xml">
+          <figure class="image is-16x16 mx-1"><img src="/img/rss.svg" alt="rss"></figure>
+        </a>
+      </h3>
+        {{ range .Site.RegularPages }}
+          {{ range where .Page.Resources ".Date" "ge" (now.AddDate 0 -2 0) }}
+            <div class="block">
+              <h5 class="title is-5 is-flex breadcrumb">
+                <ul>
+                  <li class="is-active">
+                    <a href="{{ .Parent.RelPermalink }}">
+                      {{ .Parent.Page.Title }}
+                    </a>
+                  <li>
+                    <a href="{{ .Parent.RelPermalink }}#{{ .Title | anchorize }}">
+                      {{ .Title }}
+                    </a>
+                  </li>
+                </ul>
+              </h5>
+              {{ .Content | replaceRE "<p>" "<p class=\"subtitle\">" | safeHTML | truncate 100 }}
+            </div>
+          {{ end }}
+        {{ end }}
+      </ul>
     </section>
 </div>
 {{ end }}

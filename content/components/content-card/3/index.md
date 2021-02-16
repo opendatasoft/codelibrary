@@ -1,8 +1,3 @@
 ---
-title: "Content card 3"
+title: "Card usage with a grid"
 ---
-
-
-## Card usage with a grid
-
-

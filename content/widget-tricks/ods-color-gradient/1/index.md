@@ -1,8 +1,3 @@
 ---
-title: "Ods-color-gradient 1"
+title: "Color departments by number of carpool location"
 ---
-
-
-## Color departments by number of carpool location
-
-
