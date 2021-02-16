@@ -23,7 +23,7 @@
 
 <div class="ods-content">
     <section class="box box-live-example">
-      <iframe id="iframe-{{ .Title | anchorize}}"
+      <iframe id="iframe-{{ .Title | anchorize }}"
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
@@ -48,14 +48,14 @@
                     <ul class="buttons has-addons js-tablist">
                         <li class="button is-secondary is-outlined js-tablist__item">
                             <a class="js-tablist__link"
-                               href="#code-{{ .Title | anchorize}}-html-content">
+                               href="#code-{{ .Title | anchorize }}-html-content">
                                 HTML
                             </a>
                         </li>
                         {{ if gt (len $css) 0 }}
                         <li class="button is-secondary is-outlined js-tablist__item">
                             <a class="js-tablist__link"
-                               href="#code-{{ .Title | anchorize}}-css-content">
+                               href="#code-{{ .Title | anchorize }}-css-content">
                                 CSS
                             </a>
                         </li>
@@ -81,17 +81,17 @@
             </div>
         </nav>
 
-
         <div class="tab-content">
             <div class="js-tabcontent"
-                 id="code-{{ .Title | anchorize}}-html-content">
+                 id="code-{{ .Title | anchorize }}-html-content">
+                 <p>Hello I am some content</p>
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>{{ $html }}</code></pre>
                 </div>
             </div>
             {{ if gt (len $css) 0 }}
             <div class="js-tabcontent"
-                 id="code-{{ .Title | anchorize}}-css-content">
+                 id="code-{{ .Title | anchorize }}-css-content">
                 <div class="highlight">
                     <pre class="language-css" data-lang="css"><code>{{ $css }}</code></pre>
                 </div>
@@ -125,7 +125,7 @@
 <script type="text/javascript">
     window.addEventListener("DOMContentLoaded", () => {
         var loopId = setInterval(() => {
-            iframeId = "IFRAME ID HERE";
+            iframeId = "iframe-{{ .Title | anchorize}}";
             iframe = document.getElementById(iframeId);
 
             if (iframe != undefined && iframe.contentWindow.document.body != undefined){
