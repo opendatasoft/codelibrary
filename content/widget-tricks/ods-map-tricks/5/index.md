@@ -1,5 +1,6 @@
 ---
 title: "Replace map tooltip with a refine : on the side !"
+date: "2021-02-09"
 ---
 
 ## Replace map tooltip with a refine : on the side !

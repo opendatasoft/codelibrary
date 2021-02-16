@@ -1,5 +1,6 @@
 ---
 title: "Replace map tooltip with a refine : in a pop-in !"
+date: "2021-02-09"
 ---
 
 In this example, `refineOnClick` will be used to open a modal on top on the map. It's a good alternative to map tooltips, specially when their is a lot of content to display.
