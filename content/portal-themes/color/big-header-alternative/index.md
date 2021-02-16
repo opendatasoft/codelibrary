@@ -1,5 +1,5 @@
 ---
-title: "Theme color - big header alt"
+title: "Big header alternative"
 description: ""
 tags: []
 iframe: "https://color-big-header-alternative-theme-discovery.opendatasoft.com/"
@@ -24,6 +24,3 @@ resources:
 - src: 'stylesheet.css'
   title: 'Stylesheet'
 ---
-
-
-## Big header alternative

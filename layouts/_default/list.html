@@ -1,3 +1,5 @@
+{{ define "title" }} {{ .Title }} &ndash; {{ .Site.Title }} {{ end }}
+
 {{ define "main" }}
 <div>
     <section class="container is-max-desktop my-6">
@@ -5,7 +7,7 @@
             {{ if eq "tags" .Type }}Tag: {{ end}}{{ .Title | humanize }}
         </h1>
         <h2 class="subtitle is-size-3">
-            {{ index .Site.Data.sections .Page.Section | safeHTML }}
+            {{ .Description }}
         </h2>
     </section>
     <section class="list-results">

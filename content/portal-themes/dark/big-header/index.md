@@ -1,5 +1,5 @@
 ---
-title: "Theme dark - big header"
+title: "Big header"
 description: ""
 tags: []
 iframe: "https://dark-big-header-theme-discovery.opendatasoft.com/"
@@ -24,11 +24,3 @@ resources:
 - src: 'stylesheet.css'
   title: 'Stylesheet'
 ---
-
-
-## Big header
-
-
-
-
-

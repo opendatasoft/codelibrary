@@ -1,9 +1,7 @@
 ---
-title: "ods-select - 1bis"
+title: "Basic example, with a default selection"
 ---
-
-## Basic example, with a default selection
 
 Start with a selected value, and let the user select another one.
 
-You can also force the user to always have a selection. 
+You can also force the user to always have a selection.

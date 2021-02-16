@@ -1,5 +1,5 @@
 ---
-title: "Theme color - basic"
+title: "Basic"
 description: ""
 tags: []
 iframe: "https://color-basic-theme-discovery.opendatasoft.com/"
@@ -24,6 +24,3 @@ resources:
 - src: 'stylesheet.css'
   title: 'Stylesheet'
 ---
-
-
-## Basic

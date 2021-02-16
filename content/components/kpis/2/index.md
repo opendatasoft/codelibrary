@@ -1,8 +1,8 @@
 ---
-title: "KPIs 2"
+title: " An ods-aggregation example"
 ---
 
-## An ods-aggregation example
+##
 
 Count the number of record of a dataset, here : the number of US hospitals
 

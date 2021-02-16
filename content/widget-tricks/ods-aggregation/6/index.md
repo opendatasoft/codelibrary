@@ -1,8 +1,6 @@
 ---
-title: "ods-aggregation 6"
+title: "Progression bar / custom gauge"
 ---
-
-## Progression bar / custom gauge
 
 A different way to do it is to play with the background color only ! the element keeps it's full width or height, but a linear gradient style colors it until the pourcentage value.
 

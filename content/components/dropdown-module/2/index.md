@@ -1,8 +1,3 @@
 ---
-title: "Dropdown module 2"
+title: "Usage example"
 ---
-
-
-## Usage example
-
-

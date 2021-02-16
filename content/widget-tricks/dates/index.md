@@ -4,8 +4,5 @@ description: "Date tricks with ods-timerange and angular filters. Different ways
 tags: ["date", "filter"]
 resources:
 - src: '*/'
-  title: 'Section #:counter'
+  name: folder-:counter
 ---
-
-# Dates
-

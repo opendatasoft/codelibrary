@@ -4,8 +4,5 @@ description: "Ideal for listing! Edit only a few settings to generate a modern l
 tags: ["display", "navigation", "list"]
 resources:
 - src: '*/'
-  title: 'Section #:counter'
+  name: folder-:counter
 ---
-
-# Listing generator
-

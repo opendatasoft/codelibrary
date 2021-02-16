@@ -1,9 +1,5 @@
 ---
-title: "ods-simple-tabs 2"
+title: "Tab Pills"
 ---
 
-
-## Tab Pills
-
 A different style for the tab navigation.
-
