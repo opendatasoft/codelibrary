@@ -11,9 +11,11 @@
     {{ range sort (.Page.Resources.Match "*/index.md") "Name" }}
     <div class="container">
       <div class="box box-example">
-        <div class="content">
-          <h2>
+          <h2 class="title is-2">
             {{ .Title | markdownify }}
+            {{ if ge .Date (now.AddDate 0 -2 0) }}
+              <span class="tag is-rounded is-info">New</span>
+            {{ end }}
             <a class="is-link" href="#{{ .Title | anchorize | safeURL }}">
               <span class="icon">
                 <img src="/img/fas-link.svg" />
@@ -26,7 +28,6 @@
           </p>
           {{ end }}
           {{ .Content }}
-        </div>
         {{ partial "ods-content.html" .}}
       </div>
     </div>

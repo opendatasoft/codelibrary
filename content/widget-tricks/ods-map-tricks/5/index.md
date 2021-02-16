@@ -1,8 +1,7 @@
 ---
 title: "Replace map tooltip with a refine : on the side !"
+date: "2021-02-09"
 ---
-
-## Replace map tooltip with a refine : on the side !
 
 In this example, `refineOnClick` will be used to display record details on the side of the map. It's a good alternative to the pop-in version.
 

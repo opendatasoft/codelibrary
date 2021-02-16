@@ -10,7 +10,7 @@ Install
 brew install hugo
 ```
 
-Run 
+Run
 ```shell script
 hugo server -D
 ```
@@ -24,4 +24,19 @@ git subtree push --prefix public origin gh-pages
 Update Algolia index (see .env)
 ```shell script
 npm run algolia
+```
+
+### Add new Content
+Using content archetype to create pages will automatically add date and title.
+
+Add a new page
+```shell script
+// The resource will be named after the folder title
+hugo new --kind component components/my-component-title // for most resources
+hugo new --kind pages portal-themes/my-portal-theme-title // for port themes
+```
+
+Add new content to an existing page:
+```shell script
+hugo new --kind content section/page/5 // Contents are ordered by the number of their folder
 ```
