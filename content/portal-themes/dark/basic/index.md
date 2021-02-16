@@ -1,5 +1,5 @@
 ---
-title: "Theme dark - basic"
+title: "Basic"
 description: ""
 tags: []
 iframe: "https://dark-basic-theme-discovery.opendatasoft.com/"
@@ -24,11 +24,3 @@ resources:
 - src: 'stylesheet.css'
   title: 'Stylesheet'
 ---
-
-
-## Basic
-
-
-
-
-

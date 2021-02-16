@@ -1,8 +1,6 @@
 ---
-title: "map refine 1"
+title: "Use a map as a selector and display results on the side"
 ---
-
-## Use a map as a selector and display results on the side
 
 This template propose a 2 steps dynamic view. First you propose a map with clickable points or shapes.
 - Global information are displayed on the side.

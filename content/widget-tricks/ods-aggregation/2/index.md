@@ -1,8 +1,5 @@
 ---
-title: "ods-aggregation 2"
+title: "A simple ods-aggregation results"
 ---
 
-## A simple ods-aggregation results
-
 The same aggregation but this time on a **filtered** dataset
-

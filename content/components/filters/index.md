@@ -4,9 +4,5 @@ description: "An horizontal or vertical drawer/accordion for interactive dashboa
 tags: ["filter"]
 resources:
 - src: '*/'
-  title: 'Section #:counter'
+  name: folder-:counter
 ---
-
-# Filters
-
-

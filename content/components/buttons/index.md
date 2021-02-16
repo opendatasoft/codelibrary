@@ -4,8 +4,5 @@ description: "Examples of different buttons with hover styles. Lightly styled bu
 tags: ["display", "navigation", "list"]
 resources:
 - src: '*/'
-  title: 'Section #:counter'
+  name: folder-:counter
 ---
-
-
-# Components library - Buttons

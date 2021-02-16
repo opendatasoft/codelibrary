@@ -4,8 +4,5 @@ description: "An Opendatasoft theme, when your business identity contains domina
 tags: []
 resources:
 - src: '*/'
-  title: 'Section #:counter'
+  name: folder-:counter
 ---
-
-# Colored theme
-

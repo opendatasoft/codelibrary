@@ -1,10 +1,5 @@
 ---
-title: "Observatory 1"
+title: "The demographic observatory"
 ---
 
-
-## The demographic observatory
-
 Analytic view with KPIs and charts, map view with multiple data layers
-
-

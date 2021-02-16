@@ -1,25 +1,36 @@
-{{ define "title" }}
-{{ .Title }} &ndash; {{ .Site.Title }}
-{{ end }}
+{{ define "title" }} {{ .Title }} &ndash; {{ .Site.Title }} {{ end }}
 
-{{ define "main" }}
-
-<section>
+{{ define "main"}}
+  <section>
     <div class="content-header container is-max-desktop mb-5">
-        <div class="content">
-            {{ .Content }}
-        </div>
+      <div class="content">
+        <h1>{{ .CurrentSection.Title }} - {{ .Title }}</h1>
+        {{ .Content }}
+      </div>
     </div>
-    {{ range .Page.Resources.Match "*/index.md" }}
+    {{ range sort (.Page.Resources.Match "*/index.md") "Name" }}
     <div class="container">
-        <div class="box box-example">
-          <div class="content">
-            {{ .Content }}
-          </div>
-          {{ partial "ods-content.html" .}}
-        </div>
+      <div class="box box-example">
+          <h2 class="title is-2">
+            {{ .Title | markdownify }}
+            {{ if ge .Date (now.AddDate 0 -2 0) }}
+              <span class="tag is-rounded is-info">New</span>
+            {{ end }}
+            <a class="is-link" href="#{{ .Title | anchorize | safeURL }}">
+              <span class="icon">
+                <img src="/img/fas-link.svg" />
+              </span>
+            </a>
+          </h2>
+          {{ with .Param "external_url" }}
+          <p class="subtitle">
+            <a href="{{ . }}">See it live!</a>
+          </p>
+          {{ end }}
+          {{ .Content }}
+        {{ partial "ods-content.html" .}}
+      </div>
     </div>
     {{ end }}
-</section>
-
+  </section>
 {{ end }}

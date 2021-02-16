@@ -1,5 +1,5 @@
 ---
-title: "Simple Button"
+title: "Basic Button"
 height: 70
 date: "2021-02-12"
 ---
