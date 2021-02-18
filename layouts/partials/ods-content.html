@@ -6,7 +6,7 @@
     {{ $csscontent := $css }}
     {{ $head := "/layouts/partials/includes.html" | readFile | jsonify }}
 
-    <form id="form-{{ .Page.Title | urlize}}"
+    <form id="form-{{ .Title | anchorize}}"
           action="https://codepen.io/pen/define"
           method="POST"
           target="_blank">
@@ -23,7 +23,7 @@
 
 <div class="ods-content">
     <section class="box box-live-example">
-      <iframe id="iframe-{{ .Page.Title | urlize}}"
+      <iframe id="iframe-{{ .Title | anchorize }}"
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
@@ -48,14 +48,14 @@
                     <ul class="buttons has-addons js-tablist">
                         <li class="button is-secondary is-outlined js-tablist__item">
                             <a class="js-tablist__link"
-                               href="#code-{{ .Page.Title | urlize}}-html-content">
+                               href="#code-{{ .Title | anchorize }}-html-content">
                                 HTML
                             </a>
                         </li>
                         {{ if gt (len $css) 0 }}
                         <li class="button is-secondary is-outlined js-tablist__item">
                             <a class="js-tablist__link"
-                               href="#code-{{ .Page.Title | urlize}}-css-content">
+                               href="#code-{{ .Title | anchorize }}-css-content">
                                 CSS
                             </a>
                         </li>
@@ -70,7 +70,7 @@
                    aria-role="link"
                    rel="noopener"
                    title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-{{ .Page.Title | urlize}}').submit()">
+                   onclick="document.getElementById('form-{{ .Title | anchorize}}').submit()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                          class="feather feather-edit">
@@ -81,17 +81,16 @@
             </div>
         </nav>
 
-
         <div class="tab-content">
             <div class="js-tabcontent"
-                 id="code-{{ .Page.Title | urlize}}-html-content">
+                 id="code-{{ .Title | anchorize }}-html-content">
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>{{ $html }}</code></pre>
                 </div>
             </div>
             {{ if gt (len $css) 0 }}
             <div class="js-tabcontent"
-                 id="code-{{ .Page.Title | urlize}}-css-content">
+                 id="code-{{ .Title | anchorize }}-css-content">
                 <div class="highlight">
                     <pre class="language-css" data-lang="css"><code>{{ $css }}</code></pre>
                 </div>
@@ -104,7 +103,7 @@
 <script type="text/javascript">
     window.addEventListener("DOMContentLoaded", () => {
         var loopId = setInterval(() => {
-            iframeId = "iframe-{{ .Page.Title | urlize}}";
+            iframeId = "iframe-{{ .Title | anchorize}}";
             iframe = document.getElementById(iframeId);
             /*iframe.height = 1;*/
             size = {{ .Params.height }}
@@ -125,7 +124,7 @@
 <script type="text/javascript">
     window.addEventListener("DOMContentLoaded", () => {
         var loopId = setInterval(() => {
-            iframeId = "IFRAME ID HERE";
+            iframeId = "iframe-{{ .Title | anchorize}}";
             iframe = document.getElementById(iframeId);
 
             if (iframe != undefined && iframe.contentWindow.document.body != undefined){

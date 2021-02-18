@@ -11,23 +11,24 @@
     {{ range sort (.Page.Resources.Match "*/index.md") "Name" }}
     <div class="container">
       <div class="box box-example">
-        <div class="content">
-          <h2>
-            {{ .Title | markdownify }}
-            <a class="is-link" href="#{{ .Title | anchorize | safeURL }}">
-              <span class="icon">
-                <img src="/img/fas-link.svg" />
-              </span>
-            </a>
-          </h2>
-          {{ with .Param "external_url" }}
+        <h2 class="title is-2">
+          {{ .Title | markdownify }}
+          {{ if ge .Date (now.AddDate 0 -2 0) }}
+            <span class="tag is-rounded is-info">New</span>
+          {{ end }}
+          <a class="is-link" href="#{{ .Title | anchorize | safeURL }}">
+            <span class="icon">
+              <img src="/img/fas-link.svg" />
+            </span>
+          </a>
+        </h2>
+        {{ with .Param "external_url" }}
           <p class="subtitle">
             <a href="{{ . }}">See it live!</a>
           </p>
-          {{ end }}
-          {{ .Content }}
-        </div>
-        {{ partial "ods-content.html" .}}
+        {{ end }}
+        {{ .Content }}
+        {{ partial "ods-content.html" . }}
       </div>
     </div>
     {{ end }}
