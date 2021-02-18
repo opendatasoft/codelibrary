@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>
-         Share and print &ndash; Codelibrary 
+         Custom Tooltips &ndash; Codelibrary 
     </title>
 
     
@@ -259,7 +259,7 @@
                   <ul>
                       
                         <li>
-                            <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/custom-tooltips/">
+                            <a class="is-active" href="https://codelibrary.opendatasoft.com/widget-tricks/custom-tooltips/">
                               <div>
                                 Custom Tooltips
                                 
@@ -427,7 +427,7 @@
                         </li>
                       
                         <li>
-                            <a class="is-active" href="https://codelibrary.opendatasoft.com/widget-tricks/share-print/">
+                            <a class="" href="https://codelibrary.opendatasoft.com/widget-tricks/share-print/">
                               <div>
                                 Share and print
                                 
@@ -514,24 +514,27 @@
   <section>
     <div class="content-header container is-max-desktop mb-5">
       <div class="content">
-        <h1>Widget Tricks - Share and print</h1>
-        
+        <h1>Widget Tricks - Custom Tooltips</h1>
+        <p>These are resources to create custom tooltips for your maps. You can use them directly <a href="https://help.opendatasoft.com/platform/en/publishing_data/07_configuring_visualizations/02_configuring_map_view/tooltip.html#custom-html-tooltip">in the map editor</a> (in which case you will omit the context) or in your pages.</p>
+
       </div>
     </div>
     
     <div class="container">
       <div class="box box-example">
         <h2 class="title is-2">
-          Browse, Search, Filter then Share or Print!
+          Default Tooltip
           
-          <a class="is-link" href="#browse-search-filter-then-share-or-print">
+            <span class="tag is-rounded is-info">New</span>
+          
+          <a class="is-link" href="#default-tooltip">
             <span class="icon">
               <img src="/img/fas-link.svg" />
             </span>
           </a>
         </h2>
         
-        <p>This resource highlights the urlsync parameter that allows users to copy/share the URL with applied filters and query. It also proposes a scenario of a dedicated page to print a specific record&rsquo;s metadata.</p>
+        <p>The defalt tootip does not require any specific code.</p>
 
         
 
@@ -541,7 +544,7 @@
     
     
 
-    <form id="form-browse-search-filter-then-share-or-print"
+    <form id="form-default-tooltip"
           action="https://codepen.io/pen/define"
           method="POST"
           target="_blank">
@@ -551,14 +554,14 @@
                "title": "New Pen!",
                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
                "editors": 110,
-               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;container\&#34;\u003e\n    \u003cods-dataset-context context=\&#34;ctx\&#34;\n                         ctx-dataset=\&#34;record-stores\&#34;\n                         ctx-domain=\&#34;userclub\&#34;\n                         ctx-urlsync=\&#34;true\&#34;\u003e\n        \u003cdiv class=\&#34;row ods-box\&#34;\u003e\n            \u003ch3\u003e\n                Share by copying this link :\n            \u003c/h3\u003e\n            \u003ch3 class=\&#34;red-box\&#34;\u003e\n                Filter and have a look to your browser URL ! It&#39;s synced !\n            \u003c/h3\u003e\n            \u003ch4\u003e\n                \u003ca href=\&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}\&#34;\n                   target=\&#34;_blank\&#34;\u003ehttps://userclub.opendatasoft.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}\u003c/a\u003e\n            \u003c/h4\u003e\n            \u003ch3\u003e\n                Share through social network or by email:\n            \u003c/h3\u003e\n            \u003cdiv class=\&#34;boutons\&#34; style=\&#34;font-size: 1.6rem;\&#34;\u003e\n                \u003ca href=\&#34;https://twitter.com/intent/tweet?text=Opendatasoft Page Test;url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--twitter\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-twitter ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--facebook\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-facebook ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;https://plus.google.com/share?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--google-plus\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-google-plus ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\u0026amp;mini=true\u0026amp;title=Opendatasoft Page Test;source=Opendatasoft\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--linkedin\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-linkedin ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;mailto:?subject=Opendatasoft Page Test\u0026amp;body=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--mail\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-envelope ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;row ods-box\&#34;\u003e\n            \u003ch3\u003e\n                A dashboard : Music record store in the world\n            \u003c/h3\u003e\n            \u003cdiv class=\&#34;col-md-3 ods-box\&#34;\u003e\n                \u003cods-text-search context=\&#34;ctx\&#34; placeholder=\&#34;disc, records, music...\&#34;\u003e\u003c/ods-text-search\u003e\n                \u003cods-filter-summary context=\&#34;ctx\&#34;\u003e\u003c/ods-filter-summary\u003e\n                \u003cods-facets context=\&#34;ctx\&#34;\u003e\u003c/ods-facets\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;col-md-9 ods-box\&#34;\u003e\n                \u003cods-map\u003e\n                    \u003cods-map-layer context=\&#34;ctx\&#34;\u003e\n                        \u003cdiv\u003e\n                            \u003ch3\u003e\n                                {{ record.fields.name }}\n                            \u003c/h3\u003e\n                            \u003cp style=\&#34;font-style:italic; color:grey; font-weight:300\&#34;\u003e\n                                {{ record.fields.address }}\n                            \u003c/p\u003e\n                            \u003cdiv style=\&#34;line-height: 0px;\&#34;\u003e\n                                \u003cp\u003e\n                                    \u003cspan style=\&#34;font-style:italic;\&#34;\u003eHas closed \u003c/span\u003e\u003cb style=\&#34;font-size:1.2em\&#34;\u003e{{ record.fields.hasclosed }}\u003c/b\u003e\n                                \u003c/p\u003e\n                            \u003c/div\u003e\n                            \u003ca style=\&#34;color: #1e0c33; font-weight: 600; font-size: 1.1em;\&#34;\n                               href=\&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint-card?q=city:%22{{ record.fields.city }}%22 AND name:%22{{ record.fields.name }}%22\&#34;\n                               target=\&#34;_blank\&#34;\u003eGo to the store card\u003c/a\u003e\n                        \u003c/div\u003e\n                    \u003c/ods-map-layer\u003e\n                \u003c/ods-map\u003e\n                \u003cdiv class=\&#34;ods-box\&#34;\u003e\n                    \u003cods-table context=\&#34;ctx\&#34;\u003e\u003c/ods-table\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\n\u003c/div\u003e&#34;,
-               "css": &#34;.boutons {\n    margin-left: 30px;\n}\n.red-box {\n    float: right;\n    border: 2px solid darkred;\n    color: darkred;\n    padding: 20px;\n    background-color: #ffe8e8;\n}\n&#34; }'>
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\n\u003cods-dataset-context context=\&#34;ushospitals\&#34; ushospitals-dataset=\&#34;us-hospitals\&#34; ushospitals-domain=\&#34;userclub\&#34;\u003e\n  \u003cods-map style=\&#34;height:600px\&#34; location=\&#34;8,41.35826,-72.23511\&#34; scroll-wheel-zoom=\&#34;false\&#34;\u003e\n    \u003cods-map-layer color=\&#34;#2C3F56\&#34; context=\&#34;ushospitals\&#34;\u003e\u003c/ods-map-layer\u003e\n  \u003c/ods-map\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+               "css": &#34;&#34; }'>
     </form>
 </div>
 
 <div class="ods-content">
     <section class="box box-live-example">
-      <iframe id="iframe-browse-search-filter-then-share-or-print"
+      <iframe id="iframe-default-tooltip"
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
@@ -675,104 +678,16 @@
         </head>
         <body>
         <div ng-app='ods-widgets'>
-            &lt;div class=&#34;container&#34;&gt;
-    &lt;ods-dataset-context context=&#34;ctx&#34;
-                         ctx-dataset=&#34;record-stores&#34;
-                         ctx-domain=&#34;userclub&#34;
-                         ctx-urlsync=&#34;true&#34;&gt;
-        &lt;div class=&#34;row ods-box&#34;&gt;
-            &lt;h3&gt;
-                Share by copying this link :
-            &lt;/h3&gt;
-            &lt;h3 class=&#34;red-box&#34;&gt;
-                Filter and have a look to your browser URL ! It&#39;s synced !
-            &lt;/h3&gt;
-            &lt;h4&gt;
-                &lt;a href=&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}&#34;
-                   target=&#34;_blank&#34;&gt;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}&lt;/a&gt;
-            &lt;/h4&gt;
-            &lt;h3&gt;
-                Share through social network or by email:
-            &lt;/h3&gt;
-            &lt;div class=&#34;boutons&#34; style=&#34;font-size: 1.6rem;&#34;&gt;
-                &lt;a href=&#34;https://twitter.com/intent/tweet?text=Opendatasoft Page Test;url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
-                   class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--twitter&#34;
-                   target=&#34;_blank&#34;&gt;
-                    &lt;i class=&#34;fa fa-twitter ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
-                &lt;/a&gt;
-                &lt;a href=&#34;https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
-                   class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--facebook&#34;
-                   target=&#34;_blank&#34;&gt;
-                    &lt;i class=&#34;fa fa-facebook ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
-                &lt;/a&gt;
-                &lt;a href=&#34;https://plus.google.com/share?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
-                   class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--google-plus&#34;
-                   target=&#34;_blank&#34;&gt;
-                    &lt;i class=&#34;fa fa-google-plus ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
-                &lt;/a&gt;
-                &lt;a href=&#34;https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&amp;amp;mini=true&amp;amp;title=Opendatasoft Page Test;source=Opendatasoft&#34;
-                   class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--linkedin&#34;
-                   target=&#34;_blank&#34;&gt;
-                    &lt;i class=&#34;fa fa-linkedin ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
-                &lt;/a&gt;
-                &lt;a href=&#34;mailto:?subject=Opendatasoft Page Test&amp;amp;body=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
-                   class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--mail&#34;
-                   target=&#34;_blank&#34;&gt;
-                    &lt;i class=&#34;fa fa-envelope ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
-                &lt;/a&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&#34;row ods-box&#34;&gt;
-            &lt;h3&gt;
-                A dashboard : Music record store in the world
-            &lt;/h3&gt;
-            &lt;div class=&#34;col-md-3 ods-box&#34;&gt;
-                &lt;ods-text-search context=&#34;ctx&#34; placeholder=&#34;disc, records, music...&#34;&gt;&lt;/ods-text-search&gt;
-                &lt;ods-filter-summary context=&#34;ctx&#34;&gt;&lt;/ods-filter-summary&gt;
-                &lt;ods-facets context=&#34;ctx&#34;&gt;&lt;/ods-facets&gt;
-            &lt;/div&gt;
-            &lt;div class=&#34;col-md-9 ods-box&#34;&gt;
-                &lt;ods-map&gt;
-                    &lt;ods-map-layer context=&#34;ctx&#34;&gt;
-                        &lt;div&gt;
-                            &lt;h3&gt;
-                                {{ record.fields.name }}
-                            &lt;/h3&gt;
-                            &lt;p style=&#34;font-style:italic; color:grey; font-weight:300&#34;&gt;
-                                {{ record.fields.address }}
-                            &lt;/p&gt;
-                            &lt;div style=&#34;line-height: 0px;&#34;&gt;
-                                &lt;p&gt;
-                                    &lt;span style=&#34;font-style:italic;&#34;&gt;Has closed &lt;/span&gt;&lt;b style=&#34;font-size:1.2em&#34;&gt;{{ record.fields.hasclosed }}&lt;/b&gt;
-                                &lt;/p&gt;
-                            &lt;/div&gt;
-                            &lt;a style=&#34;color: #1e0c33; font-weight: 600; font-size: 1.1em;&#34;
-                               href=&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint-card?q=city:%22{{ record.fields.city }}%22 AND name:%22{{ record.fields.name }}%22&#34;
-                               target=&#34;_blank&#34;&gt;Go to the store card&lt;/a&gt;
-                        &lt;/div&gt;
-                    &lt;/ods-map-layer&gt;
-                &lt;/ods-map&gt;
-                &lt;div class=&#34;ods-box&#34;&gt;
-                    &lt;ods-table context=&#34;ctx&#34;&gt;&lt;/ods-table&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/ods-dataset-context&gt;
-&lt;/div&gt;
+            
+&lt;ods-dataset-context context=&#34;ushospitals&#34; ushospitals-dataset=&#34;us-hospitals&#34; ushospitals-domain=&#34;userclub&#34;&gt;
+  &lt;ods-map style=&#34;height:600px&#34; location=&#34;8,41.35826,-72.23511&#34; scroll-wheel-zoom=&#34;false&#34;&gt;
+    &lt;ods-map-layer color=&#34;#2C3F56&#34; context=&#34;ushospitals&#34;&gt;&lt;/ods-map-layer&gt;
+  &lt;/ods-map&gt;
+&lt;/ods-dataset-context&gt;
 
         </div>
         <style type='text/css'>
-            .boutons {
-    margin-left: 30px;
-}
-.red-box {
-    float: right;
-    border: 2px solid darkred;
-    color: darkred;
-    padding: 20px;
-    background-color: #ffe8e8;
-}
-
+            
         </style>
         </body>
         ">
@@ -786,15 +701,8 @@
                     <ul class="buttons has-addons js-tablist">
                         <li class="button is-secondary is-outlined js-tablist__item">
                             <a class="js-tablist__link"
-                               href="#code-browse-search-filter-then-share-or-print-html-content">
+                               href="#code-default-tooltip-html-content">
                                 HTML
-                            </a>
-                        </li>
-                        
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-browse-search-filter-then-share-or-print-css-content">
-                                CSS
                             </a>
                         </li>
                         
@@ -808,7 +716,7 @@
                    aria-role="link"
                    rel="noopener"
                    title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-browse-search-filter-then-share-or-print').submit()">
+                   onclick="document.getElementById('form-default-tooltip').submit()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                          class="feather feather-edit">
@@ -821,109 +729,14 @@
 
         <div class="tab-content">
             <div class="js-tabcontent"
-                 id="code-browse-search-filter-then-share-or-print-html-content">
+                 id="code-default-tooltip-html-content">
                 <div class="highlight">
-                    <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;container&#34;&gt;
-    &lt;ods-dataset-context context=&#34;ctx&#34;
-                         ctx-dataset=&#34;record-stores&#34;
-                         ctx-domain=&#34;userclub&#34;
-                         ctx-urlsync=&#34;true&#34;&gt;
-        &lt;div class=&#34;row ods-box&#34;&gt;
-            &lt;h3&gt;
-                Share by copying this link :
-            &lt;/h3&gt;
-            &lt;h3 class=&#34;red-box&#34;&gt;
-                Filter and have a look to your browser URL ! It&#39;s synced !
-            &lt;/h3&gt;
-            &lt;h4&gt;
-                &lt;a href=&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}&#34;
-                   target=&#34;_blank&#34;&gt;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}&lt;/a&gt;
-            &lt;/h4&gt;
-            &lt;h3&gt;
-                Share through social network or by email:
-            &lt;/h3&gt;
-            &lt;div class=&#34;boutons&#34; style=&#34;font-size: 1.6rem;&#34;&gt;
-                &lt;a href=&#34;https://twitter.com/intent/tweet?text=Opendatasoft Page Test;url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
-                   class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--twitter&#34;
-                   target=&#34;_blank&#34;&gt;
-                    &lt;i class=&#34;fa fa-twitter ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
-                &lt;/a&gt;
-                &lt;a href=&#34;https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
-                   class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--facebook&#34;
-                   target=&#34;_blank&#34;&gt;
-                    &lt;i class=&#34;fa fa-facebook ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
-                &lt;/a&gt;
-                &lt;a href=&#34;https://plus.google.com/share?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
-                   class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--google-plus&#34;
-                   target=&#34;_blank&#34;&gt;
-                    &lt;i class=&#34;fa fa-google-plus ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
-                &lt;/a&gt;
-                &lt;a href=&#34;https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&amp;amp;mini=true&amp;amp;title=Opendatasoft Page Test;source=Opendatasoft&#34;
-                   class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--linkedin&#34;
-                   target=&#34;_blank&#34;&gt;
-                    &lt;i class=&#34;fa fa-linkedin ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
-                &lt;/a&gt;
-                &lt;a href=&#34;mailto:?subject=Opendatasoft Page Test&amp;amp;body=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
-                   class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--mail&#34;
-                   target=&#34;_blank&#34;&gt;
-                    &lt;i class=&#34;fa fa-envelope ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
-                &lt;/a&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-        &lt;div class=&#34;row ods-box&#34;&gt;
-            &lt;h3&gt;
-                A dashboard : Music record store in the world
-            &lt;/h3&gt;
-            &lt;div class=&#34;col-md-3 ods-box&#34;&gt;
-                &lt;ods-text-search context=&#34;ctx&#34; placeholder=&#34;disc, records, music...&#34;&gt;&lt;/ods-text-search&gt;
-                &lt;ods-filter-summary context=&#34;ctx&#34;&gt;&lt;/ods-filter-summary&gt;
-                &lt;ods-facets context=&#34;ctx&#34;&gt;&lt;/ods-facets&gt;
-            &lt;/div&gt;
-            &lt;div class=&#34;col-md-9 ods-box&#34;&gt;
-                &lt;ods-map&gt;
-                    &lt;ods-map-layer context=&#34;ctx&#34;&gt;
-                        &lt;div&gt;
-                            &lt;h3&gt;
-                                {{ record.fields.name }}
-                            &lt;/h3&gt;
-                            &lt;p style=&#34;font-style:italic; color:grey; font-weight:300&#34;&gt;
-                                {{ record.fields.address }}
-                            &lt;/p&gt;
-                            &lt;div style=&#34;line-height: 0px;&#34;&gt;
-                                &lt;p&gt;
-                                    &lt;span style=&#34;font-style:italic;&#34;&gt;Has closed &lt;/span&gt;&lt;b style=&#34;font-size:1.2em&#34;&gt;{{ record.fields.hasclosed }}&lt;/b&gt;
-                                &lt;/p&gt;
-                            &lt;/div&gt;
-                            &lt;a style=&#34;color: #1e0c33; font-weight: 600; font-size: 1.1em;&#34;
-                               href=&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint-card?q=city:%22{{ record.fields.city }}%22 AND name:%22{{ record.fields.name }}%22&#34;
-                               target=&#34;_blank&#34;&gt;Go to the store card&lt;/a&gt;
-                        &lt;/div&gt;
-                    &lt;/ods-map-layer&gt;
-                &lt;/ods-map&gt;
-                &lt;div class=&#34;ods-box&#34;&gt;
-                    &lt;ods-table context=&#34;ctx&#34;&gt;&lt;/ods-table&gt;
-                &lt;/div&gt;
-            &lt;/div&gt;
-        &lt;/div&gt;
-    &lt;/ods-dataset-context&gt;
-&lt;/div&gt;
-</code></pre>
-                </div>
-            </div>
-            
-            <div class="js-tabcontent"
-                 id="code-browse-search-filter-then-share-or-print-css-content">
-                <div class="highlight">
-                    <pre class="language-css" data-lang="css"><code>.boutons {
-    margin-left: 30px;
-}
-.red-box {
-    float: right;
-    border: 2px solid darkred;
-    color: darkred;
-    padding: 20px;
-    background-color: #ffe8e8;
-}
+                    <pre class="language-html" data-lang="html"><code>
+&lt;ods-dataset-context context=&#34;ushospitals&#34; ushospitals-dataset=&#34;us-hospitals&#34; ushospitals-domain=&#34;userclub&#34;&gt;
+  &lt;ods-map style=&#34;height:600px&#34; location=&#34;8,41.35826,-72.23511&#34; scroll-wheel-zoom=&#34;false&#34;&gt;
+    &lt;ods-map-layer color=&#34;#2C3F56&#34; context=&#34;ushospitals&#34;&gt;&lt;/ods-map-layer&gt;
+  &lt;/ods-map&gt;
+&lt;/ods-dataset-context&gt;
 </code></pre>
                 </div>
             </div>
@@ -935,7 +748,7 @@
 <script type="text/javascript">
     window.addEventListener("DOMContentLoaded", () => {
         var loopId = setInterval(() => {
-            iframeId = "iframe-browse-search-filter-then-share-or-print";
+            iframeId = "iframe-default-tooltip";
             iframe = document.getElementById(iframeId);
              
             size =  null 
@@ -956,7 +769,7 @@
 <script type="text/javascript">
     window.addEventListener("DOMContentLoaded", () => {
         var loopId = setInterval(() => {
-            iframeId = "iframe-browse-search-filter-then-share-or-print";
+            iframeId = "iframe-default-tooltip";
             iframe = document.getElementById(iframeId);
 
             if (iframe != undefined && iframe.contentWindow.document.body != undefined){
@@ -972,16 +785,18 @@
     <div class="container">
       <div class="box box-example">
         <h2 class="title is-2">
-          Card with print style!
+          Custom style tooltip
           
-          <a class="is-link" href="#card-with-print-style">
+            <span class="tag is-rounded is-info">New</span>
+          
+          <a class="is-link" href="#custom-style-tooltip">
             <span class="icon">
               <img src="/img/fas-link.svg" />
             </span>
           </a>
         </h2>
         
-        <p>This card lists all fields of the record, and has print styling to remove all unnecessary elements of the page.</p>
+        <p>This tooltip has a customized text and color.</p>
 
         
 
@@ -991,7 +806,7 @@
     
     
 
-    <form id="form-card-with-print-style"
+    <form id="form-custom-style-tooltip"
           action="https://codepen.io/pen/define"
           method="POST"
           target="_blank">
@@ -1001,14 +816,14 @@
                "title": "New Pen!",
                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
                "editors": 110,
-               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;ods-box card\&#34;\u003e\n    \u003ch2\u003e\n        Record store card \u003cspan style=\&#34;font-size:0.7em; color:darkred; margin-left:40px\&#34;\u003ePrint it (Ctrl/Cmd&#43;P) or just share the link !\u003c/span\u003e\n    \u003c/h2\u003e\n    \u003cods-dataset-context context=\&#34;ctx\&#34;\n                         ctx-dataset=\&#34;record-stores\&#34;\n                         ctx-urlsync=\&#34;true\&#34;\u003e\n        \u003cdiv ng-repeat=\&#34;item in items\&#34; ods-results=\&#34;items\&#34; ods-results-context=\&#34;ctx\&#34; ods-results-max=\&#34;1\&#34;\u003e\n            \u003cul class=\&#34;field-list\&#34;\u003e\n                \u003cli class=\&#34;field\&#34; ng-repeat=\&#34;field in ctx.dataset.fields\&#34;\u003e\n                    \u003cp class=\&#34;label\&#34;\u003e\n                        {{ field.label }}\n                    \u003c/p\u003e\n                    \u003cp class=\&#34;value\&#34;\u003e\n                        {{ item.fields[field.name] }}\n                    \u003c/p\u003e\n                \u003c/li\u003e\n            \u003c/ul\u003e\n        \u003c/div\u003e\n        \u003cods-map context=\&#34;ctx\&#34;\u003e\u003c/ods-map\u003e\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\n\u003c/div\u003e&#34;,
-               "css": &#34;.card {\n    width: 700px;\n    margin-left: auto;\n    margin-right: auto;\n}\n.field-list {\n    list-style-type: none;\n    display: grid;\n}\n.field {\n    display: inline-flex;\n    line-height: 18px;\n    margin-bottom: 4px;\n}\n.label {\n    width: 175px;\n    color: black;\n    font-weight: 500;\n}\n.value {\n    width: 400px;\n    border: 1px solid black;\n    border-radius: 5px;\n    padding: 2px 0px 0px 5px;\n    line-height: 25px;\n    background-color: #f0f0f0;\n}\n@media print {\n    header, footer {\n        display: none;\n    }\n}\n      &#34; }'>
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;ushospitals\&#34; ushospitals-dataset=\&#34;us-hospitals\&#34; ushospitals-domain=\&#34;userclub\&#34;\u003e\n\u003c!-- Component starts here 👇 --\u003e\n  \u003cods-map style=\&#34;height:600px\&#34; location=\&#34;8,41.35826,-72.23511\&#34; scroll-wheel-zoom=\&#34;false\&#34;\u003e\n      \u003cods-map-layer picto=\&#34;hospital\&#34; color=\&#34;#2C3F56\&#34; context=\&#34;ushospitals\&#34;\u003e\n          \u003cul style=\&#34;display: block; list-style-type: none; color: #2c3f56; padding:0; margin:0;\&#34;\u003e\n              \u003cli\u003e\n                  \u003cstrong style=\&#34;font-size:17px;\&#34;\u003e{{ record.fields.name | limitTo:25 }}\u003c/strong\u003e\n              \u003c/li\u003e\n              \u003cli style=\&#34;color:#bbb;\&#34;\u003e{{ record.fields.address | limitTo:140 }}\u003c/li\u003e\n              \u003cli style=\&#34;font-style:italic;color:#bbb;\&#34;\u003e{{ record.fields.city | limitTo:140 }}\n                  \u003cbr/\u003e\n              \u003c/li\u003e\n              \u003cbr/\u003e\n              \u003cli style=\&#34;color:#ec643c; font-size:15px;\&#34;\u003e\n                  \u003ci class=\&#34;fa fa-hospital-o\&#34;\u003e\u003c/i\u003e{{record.fields.type}}\n              \u003c/li\u003e\n              \u003cli style=\&#34;font-size:15px;\&#34;\u003e\n                  \u003ci class=\&#34;fa fa-calendar-o\&#34;\u003e\u003c/i\u003e\n                  \u003cspan style=\&#34;font-size: 14px; color: #bcbcbc;\&#34;\u003eEstablished\u003c/span\u003e{{record.fields.date_creat | date}}\n              \u003c/li\u003e\n              \u003cli style=\&#34;font-size:15px;\&#34;\u003e\n                  \u003ci class=\&#34;fa fa-medkit\&#34;\u003e\u003c/i\u003e\n                  \u003cspan style=\&#34;font-size: 14px; color: #bcbcbc;\&#34;\u003eTrauma\u003c/span\u003e{{record.fields.trauma }}\n              \u003c/li\u003e\n              \u003cli style=\&#34;font-size:15px;\&#34;\u003e\n                  \u003ci class=\&#34;fa fa-dot-circle-o\&#34;\u003e\u003c/i\u003e\n                  \u003cspan style=\&#34;font-size: 14px; color: #bcbcbc;\&#34;\u003eHelipad\u003c/span\u003e{{record.fields.helipad}}\n              \u003c/li\u003e\n              \u003cli\u003e\n                  \u003cul style=\&#34;list-style-type: none; color: #2c3f56;padding:0 0 15px;margin-top:0px;\&#34;\u003e\n                      \u003cli\u003e\n                          \u003cstrong style=\&#34;font-size:15px;\&#34;\u003e\n                              \u003ci aria-hidden=\&#34;true\&#34; class=\&#34;fa fa-users\&#34;\u003e\u003c/i\u003e\n                              \u003cspan style=\&#34;color: #bcbcbc;\&#34;\u003ePopulation/Beds\u003c/span\u003e{{record.fields.population}}\n                          \u003c/strong\u003e\n                      \u003c/li\u003e\n                      \u003cli style=\&#34;float:right;\&#34;\u003e\n                          \u003cstrong style=\&#34;font-size:13px;\&#34;\u003e\n                              \u003ca ng-href=\&#34;{{record.fields.website}}\&#34; style=\&#34;color:#ec643c;\&#34; target=\&#34;_blank\&#34;\u003eSource\u003c/a\u003e\n                          \u003c/strong\u003e\n                          \u003ci class=\&#34;fa fa-external-link\&#34; style=\&#34;color:#ec643c;\&#34;\u003e\u003c/i\u003e\n                      \u003c/li\u003e\n                  \u003c/ul\u003e\n              \u003c/li\u003e\n          \u003c/ul\u003e\n      \u003c/ods-map-layer\u003e\n  \u003c/ods-map\u003e\n  \u003c!-- Component ends here 👆 --\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+               "css": &#34;&#34; }'>
     </form>
 </div>
 
 <div class="ods-content">
     <section class="box box-live-example">
-      <iframe id="iframe-card-with-print-style"
+      <iframe id="iframe-custom-style-tooltip"
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
@@ -1125,64 +940,447 @@
         </head>
         <body>
         <div ng-app='ods-widgets'>
-            &lt;div class=&#34;ods-box card&#34;&gt;
-    &lt;h2&gt;
-        Record store card &lt;span style=&#34;font-size:0.7em; color:darkred; margin-left:40px&#34;&gt;Print it (Ctrl/Cmd&#43;P) or just share the link !&lt;/span&gt;
-    &lt;/h2&gt;
-    &lt;ods-dataset-context context=&#34;ctx&#34;
-                         ctx-dataset=&#34;record-stores&#34;
-                         ctx-urlsync=&#34;true&#34;&gt;
-        &lt;div ng-repeat=&#34;item in items&#34; ods-results=&#34;items&#34; ods-results-context=&#34;ctx&#34; ods-results-max=&#34;1&#34;&gt;
-            &lt;ul class=&#34;field-list&#34;&gt;
-                &lt;li class=&#34;field&#34; ng-repeat=&#34;field in ctx.dataset.fields&#34;&gt;
-                    &lt;p class=&#34;label&#34;&gt;
-                        {{ field.label }}
-                    &lt;/p&gt;
-                    &lt;p class=&#34;value&#34;&gt;
-                        {{ item.fields[field.name] }}
-                    &lt;/p&gt;
-                &lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-        &lt;ods-map context=&#34;ctx&#34;&gt;&lt;/ods-map&gt;
-    &lt;/ods-dataset-context&gt;
-&lt;/div&gt;
+            &lt;ods-dataset-context context=&#34;ushospitals&#34; ushospitals-dataset=&#34;us-hospitals&#34; ushospitals-domain=&#34;userclub&#34;&gt;
+&lt;!-- Component starts here 👇 --&gt;
+  &lt;ods-map style=&#34;height:600px&#34; location=&#34;8,41.35826,-72.23511&#34; scroll-wheel-zoom=&#34;false&#34;&gt;
+      &lt;ods-map-layer picto=&#34;hospital&#34; color=&#34;#2C3F56&#34; context=&#34;ushospitals&#34;&gt;
+          &lt;ul style=&#34;display: block; list-style-type: none; color: #2c3f56; padding:0; margin:0;&#34;&gt;
+              &lt;li&gt;
+                  &lt;strong style=&#34;font-size:17px;&#34;&gt;{{ record.fields.name | limitTo:25 }}&lt;/strong&gt;
+              &lt;/li&gt;
+              &lt;li style=&#34;color:#bbb;&#34;&gt;{{ record.fields.address | limitTo:140 }}&lt;/li&gt;
+              &lt;li style=&#34;font-style:italic;color:#bbb;&#34;&gt;{{ record.fields.city | limitTo:140 }}
+                  &lt;br/&gt;
+              &lt;/li&gt;
+              &lt;br/&gt;
+              &lt;li style=&#34;color:#ec643c; font-size:15px;&#34;&gt;
+                  &lt;i class=&#34;fa fa-hospital-o&#34;&gt;&lt;/i&gt;{{record.fields.type}}
+              &lt;/li&gt;
+              &lt;li style=&#34;font-size:15px;&#34;&gt;
+                  &lt;i class=&#34;fa fa-calendar-o&#34;&gt;&lt;/i&gt;
+                  &lt;span style=&#34;font-size: 14px; color: #bcbcbc;&#34;&gt;Established&lt;/span&gt;{{record.fields.date_creat | date}}
+              &lt;/li&gt;
+              &lt;li style=&#34;font-size:15px;&#34;&gt;
+                  &lt;i class=&#34;fa fa-medkit&#34;&gt;&lt;/i&gt;
+                  &lt;span style=&#34;font-size: 14px; color: #bcbcbc;&#34;&gt;Trauma&lt;/span&gt;{{record.fields.trauma }}
+              &lt;/li&gt;
+              &lt;li style=&#34;font-size:15px;&#34;&gt;
+                  &lt;i class=&#34;fa fa-dot-circle-o&#34;&gt;&lt;/i&gt;
+                  &lt;span style=&#34;font-size: 14px; color: #bcbcbc;&#34;&gt;Helipad&lt;/span&gt;{{record.fields.helipad}}
+              &lt;/li&gt;
+              &lt;li&gt;
+                  &lt;ul style=&#34;list-style-type: none; color: #2c3f56;padding:0 0 15px;margin-top:0px;&#34;&gt;
+                      &lt;li&gt;
+                          &lt;strong style=&#34;font-size:15px;&#34;&gt;
+                              &lt;i aria-hidden=&#34;true&#34; class=&#34;fa fa-users&#34;&gt;&lt;/i&gt;
+                              &lt;span style=&#34;color: #bcbcbc;&#34;&gt;Population/Beds&lt;/span&gt;{{record.fields.population}}
+                          &lt;/strong&gt;
+                      &lt;/li&gt;
+                      &lt;li style=&#34;float:right;&#34;&gt;
+                          &lt;strong style=&#34;font-size:13px;&#34;&gt;
+                              &lt;a ng-href=&#34;{{record.fields.website}}&#34; style=&#34;color:#ec643c;&#34; target=&#34;_blank&#34;&gt;Source&lt;/a&gt;
+                          &lt;/strong&gt;
+                          &lt;i class=&#34;fa fa-external-link&#34; style=&#34;color:#ec643c;&#34;&gt;&lt;/i&gt;
+                      &lt;/li&gt;
+                  &lt;/ul&gt;
+              &lt;/li&gt;
+          &lt;/ul&gt;
+      &lt;/ods-map-layer&gt;
+  &lt;/ods-map&gt;
+  &lt;!-- Component ends here 👆 --&gt;
+&lt;/ods-dataset-context&gt;
 
         </div>
         <style type='text/css'>
-            .card {
-    width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+            
+        </style>
+        </body>
+        ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level is-flex">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-secondary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-custom-style-tooltip-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right mt-0">
+                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
+                   data-tooltip="Edit on CodePen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-custom-style-tooltip').submit()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-edit">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-custom-style-tooltip-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;ushospitals&#34; ushospitals-dataset=&#34;us-hospitals&#34; ushospitals-domain=&#34;userclub&#34;&gt;
+&lt;!-- Component starts here 👇 --&gt;
+  &lt;ods-map style=&#34;height:600px&#34; location=&#34;8,41.35826,-72.23511&#34; scroll-wheel-zoom=&#34;false&#34;&gt;
+      &lt;ods-map-layer picto=&#34;hospital&#34; color=&#34;#2C3F56&#34; context=&#34;ushospitals&#34;&gt;
+          &lt;ul style=&#34;display: block; list-style-type: none; color: #2c3f56; padding:0; margin:0;&#34;&gt;
+              &lt;li&gt;
+                  &lt;strong style=&#34;font-size:17px;&#34;&gt;{{ record.fields.name | limitTo:25 }}&lt;/strong&gt;
+              &lt;/li&gt;
+              &lt;li style=&#34;color:#bbb;&#34;&gt;{{ record.fields.address | limitTo:140 }}&lt;/li&gt;
+              &lt;li style=&#34;font-style:italic;color:#bbb;&#34;&gt;{{ record.fields.city | limitTo:140 }}
+                  &lt;br/&gt;
+              &lt;/li&gt;
+              &lt;br/&gt;
+              &lt;li style=&#34;color:#ec643c; font-size:15px;&#34;&gt;
+                  &lt;i class=&#34;fa fa-hospital-o&#34;&gt;&lt;/i&gt;{{record.fields.type}}
+              &lt;/li&gt;
+              &lt;li style=&#34;font-size:15px;&#34;&gt;
+                  &lt;i class=&#34;fa fa-calendar-o&#34;&gt;&lt;/i&gt;
+                  &lt;span style=&#34;font-size: 14px; color: #bcbcbc;&#34;&gt;Established&lt;/span&gt;{{record.fields.date_creat | date}}
+              &lt;/li&gt;
+              &lt;li style=&#34;font-size:15px;&#34;&gt;
+                  &lt;i class=&#34;fa fa-medkit&#34;&gt;&lt;/i&gt;
+                  &lt;span style=&#34;font-size: 14px; color: #bcbcbc;&#34;&gt;Trauma&lt;/span&gt;{{record.fields.trauma }}
+              &lt;/li&gt;
+              &lt;li style=&#34;font-size:15px;&#34;&gt;
+                  &lt;i class=&#34;fa fa-dot-circle-o&#34;&gt;&lt;/i&gt;
+                  &lt;span style=&#34;font-size: 14px; color: #bcbcbc;&#34;&gt;Helipad&lt;/span&gt;{{record.fields.helipad}}
+              &lt;/li&gt;
+              &lt;li&gt;
+                  &lt;ul style=&#34;list-style-type: none; color: #2c3f56;padding:0 0 15px;margin-top:0px;&#34;&gt;
+                      &lt;li&gt;
+                          &lt;strong style=&#34;font-size:15px;&#34;&gt;
+                              &lt;i aria-hidden=&#34;true&#34; class=&#34;fa fa-users&#34;&gt;&lt;/i&gt;
+                              &lt;span style=&#34;color: #bcbcbc;&#34;&gt;Population/Beds&lt;/span&gt;{{record.fields.population}}
+                          &lt;/strong&gt;
+                      &lt;/li&gt;
+                      &lt;li style=&#34;float:right;&#34;&gt;
+                          &lt;strong style=&#34;font-size:13px;&#34;&gt;
+                              &lt;a ng-href=&#34;{{record.fields.website}}&#34; style=&#34;color:#ec643c;&#34; target=&#34;_blank&#34;&gt;Source&lt;/a&gt;
+                          &lt;/strong&gt;
+                          &lt;i class=&#34;fa fa-external-link&#34; style=&#34;color:#ec643c;&#34;&gt;&lt;/i&gt;
+                      &lt;/li&gt;
+                  &lt;/ul&gt;
+              &lt;/li&gt;
+          &lt;/ul&gt;
+      &lt;/ods-map-layer&gt;
+  &lt;/ods-map&gt;
+  &lt;!-- Component ends here 👆 --&gt;
+&lt;/ods-dataset-context&gt;
+</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-custom-style-tooltip";
+            iframe = document.getElementById(iframeId);
+             
+            size =  null 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-custom-style-tooltip";
+            iframe = document.getElementById(iframeId);
+
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+            }
+        }, 1000);
+    });
+</script>
+
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="box box-example">
+        <h2 class="title is-2">
+          Analytic tooltip
+          
+            <span class="tag is-rounded is-info">New</span>
+          
+          <a class="is-link" href="#analytic-tooltip">
+            <span class="icon">
+              <img src="/img/fas-link.svg" />
+            </span>
+          </a>
+        </h2>
+        
+        <p>You can embed widgets in the tooltips to display analytics.</p>
+
+        
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-analytic-tooltip"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;caption\&#34;\u003e\n    \u003cli style=\&#34;display: inline;\&#34; class=\&#34;green\&#34;\u003eHigher than average\u003c/li\u003e\n    \u003cli style=\&#34;display: inline;\&#34; class=\&#34;red\&#34;\u003eLower than average\u003c/li\u003e\n\u003c/div\u003e\n\n\u003cods-dataset-context context=\&#34;ushospitals\&#34; ushospitals-dataset=\&#34;us-hospitals\&#34; ushospitals-domain=\&#34;userclub\&#34;\u003e\n\u003c!-- Component starts here 👇 --\u003e\n\u003cods-map id=\&#34;analytics\&#34; style=\&#34;height:600px\&#34; location=\&#34;8,41.35826,-72.23511\&#34; scroll-wheel-zoom=\&#34;false\&#34;\u003e\n    \u003cods-map-layer color=\&#34;#2C3F56\&#34; picto=\&#34;hospital\&#34; context=\&#34;ushospitals\&#34;\u003e\n        \u003cul style=\&#34;display: block; list-style-type: none; color: #2c3f56; padding:0; margin:0;\&#34;\u003e\n            \u003cli\u003e\n                \u003cstrong style=\&#34;font-size:17px;\&#34;\u003e{{ record.fields.name | limitTo:25 }}\u003c/strong\u003e\n            \u003c/li\u003e\n            \u003cli style=\&#34;color:#bbb;\&#34;\u003e{{ record.fields.address | limitTo:140 }}\u003c/li\u003e\n            \u003cli style=\&#34;font-style:italic;color:#bbb;\&#34;\u003e{{ record.fields.city | limitTo:140 }}\n                \u003cbr/\u003e\n            \u003c/li\u003e\n            \u003cbr/\u003e\n            \u003cods-dataset-context context=\&#34;type,state\&#34; type-dataset=\&#34;us-hospitals\&#34; type-parameters=\&#34;{&#39;refine.type&#39;:&#39;&#39;&#43;record.fields.type}\&#34; state-dataset=\&#34;us-hospitals\&#34; state-parameters=\&#34;{&#39;refine.state&#39;:&#39;&#39;&#43;record.fields.state}\&#34;\u003e\n                \u003cdiv style=\&#34;\&#34; ods-aggregation=\&#34;aggtype\&#34; ods-aggregation-context=\&#34;type\&#34; ods-aggregation-function=\&#34;AVG\&#34; ods-aggregation-expression=\&#34;beds\&#34;\u003e\n                    \u003cli style=\&#34;color:#ec643c; font-size:15px; border-left: 3px solid #f19073;padding-left: 5px;\&#34;\u003e\n                        \u003ci class=\&#34;fa fa-bed\&#34;\u003e\u003c/i\u003eAvg # of beds for\n                    \u003c/li\u003e\n                    \u003cli style=\&#34;color: #ec643c;font-size: 15px;text-align: center;\&#34;\u003e\n                        \u003cstrong\u003e{{record.fields.type}}\u003c/strong\u003e\n                    \u003c/li\u003e\n                    \u003cli ng-if=\&#34;!aggtype\&#34; style=\&#34;text-align:center;font-size:20px\&#34;\u003e\n                        \u003cods-spinner\u003e\u003c/ods-spinner\u003e\n                    \u003c/li\u003e\n                    \u003cli ng-if=\&#34;aggtype\&#34; style=\&#34;text-align:center;\&#34; ng-class=\&#34;{&#39;red&#39;: record.fields.beds \u003c aggtype, &#39;green&#39; : record.fields.beds \u003eaggtype}\&#34;\u003e\n                        \u003cstrong style=\&#34;font-size:20px;\&#34;\u003e{{ aggtype | number : 1 }}\u003c/strong\u003e\n                    \u003c/li\u003e\n                \u003c/div\u003e\n                \u003cbr/\u003e\n                \u003cdiv style=\&#34;\&#34; ods-aggregation=\&#34;aggstate\&#34; ods-aggregation-context=\&#34;state\&#34; ods-aggregation-function=\&#34;AVG\&#34; ods-aggregation-expression=\&#34;beds\&#34;\u003e\n                    \u003cli style=\&#34;color: #ec643c;font-size: 15px;text-align: center;\&#34;\u003e\n                        \u003cstrong\u003e{{record.fields.state}}\u003c/strong\u003e\n                    \u003c/li\u003e\n                    \u003cli ng-if=\&#34;!aggstate\&#34; style=\&#34;text-align:center;font-size:20px\&#34;\u003e\n                        \u003cods-spinner\u003e\u003c/ods-spinner\u003e\n                    \u003c/li\u003e\n                    \u003cli ng-if=\&#34;aggstate\&#34; style=\&#34;text-align:center;\&#34; ng-class=\&#34;{&#39;red&#39;: record.fields.beds \u003c aggstate, &#39;green&#39; : record.fields.beds \u003eaggstate}\&#34;\u003e\n                        \u003cstrong style=\&#34;font-size:20px;\&#34;\u003e{{ aggstate | number : 1 }}\u003c/strong\u003e\n                    \u003c/li\u003e\n                \u003c/div\u003e\n            \u003c/ods-dataset-context\u003e\n            \u003cli style=\&#34;margin-top: 20px\&#34;\u003e\n                \u003cul style=\&#34;list-style-type: none; color: #2c3f56;padding:0 0 15px;margin-top:0px;\&#34;\u003e\n                    \u003cli style=\&#34;display: inline;float:left;\&#34;\u003e\n                        \u003cstrong style=\&#34;font-size:15px;\&#34;\u003e\n                            \u003ci aria-hidden=\&#34;true\&#34; class=\&#34;fa fa-users\&#34;\u003e\u003c/i\u003ePopulation/Beds : {{record.fields.beds}}\n                        \u003c/strong\u003e\n                    \u003c/li\u003e\n                    \u003cli style=\&#34;display: inline;float:right;\&#34;\u003e\n                        \u003cstrong style=\&#34;font-size:13px;\&#34;\u003e\n                            \u003ca ng-href=\&#34;{{record.fields.website}}\&#34; style=\&#34;color:#ec643c;\&#34; target=\&#34;_blank\&#34;\u003eSource\u003c/a\u003e\n                        \u003c/strong\u003e\n                        \u003ci class=\&#34;fa fa-external-link\&#34; style=\&#34;color:#ec643c;\&#34;\u003e\u003c/i\u003e\n                    \u003c/li\u003e\n                \u003c/ul\u003e\n            \u003c/li\u003e\n        \u003c/ul\u003e\n    \u003c/ods-map-layer\u003e\n\u003c/ods-map\u003e\n\u003c!-- Component ends here 👆 --\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+               "css": &#34;.leaflet-popup-content {\n    width: 350px !important;\n}\n.caption {\n    position: absolute;\n    right: 0px;\n    top: -25px;\n}\n.red {\n    color: #E23F32;\n}\n.red:before {\n    content: &#39;\\f0ab&#39;;\n    font-family: FontAwesome;\n}\n.green {\n    color: #3EA538;\n}\n.green:before {\n    content: &#39;\\f0aa&#39;;\n    font-family: FontAwesome;\n}\n      \n&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-analytic-tooltip"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;defaultDomain&#34;: &#34;https://userclub.opendatasoft.com/&#34;,
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                },
+                {
+                    &#34;provider&#34;: &#34;jawg.streets&#34;,
+                    &#34;label&#34;: &#34;Jawg Streets&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;,
+                    &#34;id&#34;: &#34;streets&#34;
+                }
+            ],
+            &#34;themes&#34;: {
+                &#39;default&#39;: {
+                    &#39;url&#39;: &#39;/img/ods.svg&#39;
+                },
+                &#39;Santé&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Culture, Patrimoine&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Environment&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Transports, Déplacements&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Justice, Sécurité, Police, Crime&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Sport, Loisirs&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Hébergement, Restauration&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Services, Social&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Checklist&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Usages&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                }
+            },
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+        </head>
+        <body>
+        <div ng-app='ods-widgets'>
+            &lt;div class=&#34;caption&#34;&gt;
+    &lt;li style=&#34;display: inline;&#34; class=&#34;green&#34;&gt;Higher than average&lt;/li&gt;
+    &lt;li style=&#34;display: inline;&#34; class=&#34;red&#34;&gt;Lower than average&lt;/li&gt;
+&lt;/div&gt;
+
+&lt;ods-dataset-context context=&#34;ushospitals&#34; ushospitals-dataset=&#34;us-hospitals&#34; ushospitals-domain=&#34;userclub&#34;&gt;
+&lt;!-- Component starts here 👇 --&gt;
+&lt;ods-map id=&#34;analytics&#34; style=&#34;height:600px&#34; location=&#34;8,41.35826,-72.23511&#34; scroll-wheel-zoom=&#34;false&#34;&gt;
+    &lt;ods-map-layer color=&#34;#2C3F56&#34; picto=&#34;hospital&#34; context=&#34;ushospitals&#34;&gt;
+        &lt;ul style=&#34;display: block; list-style-type: none; color: #2c3f56; padding:0; margin:0;&#34;&gt;
+            &lt;li&gt;
+                &lt;strong style=&#34;font-size:17px;&#34;&gt;{{ record.fields.name | limitTo:25 }}&lt;/strong&gt;
+            &lt;/li&gt;
+            &lt;li style=&#34;color:#bbb;&#34;&gt;{{ record.fields.address | limitTo:140 }}&lt;/li&gt;
+            &lt;li style=&#34;font-style:italic;color:#bbb;&#34;&gt;{{ record.fields.city | limitTo:140 }}
+                &lt;br/&gt;
+            &lt;/li&gt;
+            &lt;br/&gt;
+            &lt;ods-dataset-context context=&#34;type,state&#34; type-dataset=&#34;us-hospitals&#34; type-parameters=&#34;{&#39;refine.type&#39;:&#39;&#39;&#43;record.fields.type}&#34; state-dataset=&#34;us-hospitals&#34; state-parameters=&#34;{&#39;refine.state&#39;:&#39;&#39;&#43;record.fields.state}&#34;&gt;
+                &lt;div style=&#34;&#34; ods-aggregation=&#34;aggtype&#34; ods-aggregation-context=&#34;type&#34; ods-aggregation-function=&#34;AVG&#34; ods-aggregation-expression=&#34;beds&#34;&gt;
+                    &lt;li style=&#34;color:#ec643c; font-size:15px; border-left: 3px solid #f19073;padding-left: 5px;&#34;&gt;
+                        &lt;i class=&#34;fa fa-bed&#34;&gt;&lt;/i&gt;Avg # of beds for
+                    &lt;/li&gt;
+                    &lt;li style=&#34;color: #ec643c;font-size: 15px;text-align: center;&#34;&gt;
+                        &lt;strong&gt;{{record.fields.type}}&lt;/strong&gt;
+                    &lt;/li&gt;
+                    &lt;li ng-if=&#34;!aggtype&#34; style=&#34;text-align:center;font-size:20px&#34;&gt;
+                        &lt;ods-spinner&gt;&lt;/ods-spinner&gt;
+                    &lt;/li&gt;
+                    &lt;li ng-if=&#34;aggtype&#34; style=&#34;text-align:center;&#34; ng-class=&#34;{&#39;red&#39;: record.fields.beds &lt; aggtype, &#39;green&#39; : record.fields.beds &gt;aggtype}&#34;&gt;
+                        &lt;strong style=&#34;font-size:20px;&#34;&gt;{{ aggtype | number : 1 }}&lt;/strong&gt;
+                    &lt;/li&gt;
+                &lt;/div&gt;
+                &lt;br/&gt;
+                &lt;div style=&#34;&#34; ods-aggregation=&#34;aggstate&#34; ods-aggregation-context=&#34;state&#34; ods-aggregation-function=&#34;AVG&#34; ods-aggregation-expression=&#34;beds&#34;&gt;
+                    &lt;li style=&#34;color: #ec643c;font-size: 15px;text-align: center;&#34;&gt;
+                        &lt;strong&gt;{{record.fields.state}}&lt;/strong&gt;
+                    &lt;/li&gt;
+                    &lt;li ng-if=&#34;!aggstate&#34; style=&#34;text-align:center;font-size:20px&#34;&gt;
+                        &lt;ods-spinner&gt;&lt;/ods-spinner&gt;
+                    &lt;/li&gt;
+                    &lt;li ng-if=&#34;aggstate&#34; style=&#34;text-align:center;&#34; ng-class=&#34;{&#39;red&#39;: record.fields.beds &lt; aggstate, &#39;green&#39; : record.fields.beds &gt;aggstate}&#34;&gt;
+                        &lt;strong style=&#34;font-size:20px;&#34;&gt;{{ aggstate | number : 1 }}&lt;/strong&gt;
+                    &lt;/li&gt;
+                &lt;/div&gt;
+            &lt;/ods-dataset-context&gt;
+            &lt;li style=&#34;margin-top: 20px&#34;&gt;
+                &lt;ul style=&#34;list-style-type: none; color: #2c3f56;padding:0 0 15px;margin-top:0px;&#34;&gt;
+                    &lt;li style=&#34;display: inline;float:left;&#34;&gt;
+                        &lt;strong style=&#34;font-size:15px;&#34;&gt;
+                            &lt;i aria-hidden=&#34;true&#34; class=&#34;fa fa-users&#34;&gt;&lt;/i&gt;Population/Beds : {{record.fields.beds}}
+                        &lt;/strong&gt;
+                    &lt;/li&gt;
+                    &lt;li style=&#34;display: inline;float:right;&#34;&gt;
+                        &lt;strong style=&#34;font-size:13px;&#34;&gt;
+                            &lt;a ng-href=&#34;{{record.fields.website}}&#34; style=&#34;color:#ec643c;&#34; target=&#34;_blank&#34;&gt;Source&lt;/a&gt;
+                        &lt;/strong&gt;
+                        &lt;i class=&#34;fa fa-external-link&#34; style=&#34;color:#ec643c;&#34;&gt;&lt;/i&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/ods-map-layer&gt;
+&lt;/ods-map&gt;
+&lt;!-- Component ends here 👆 --&gt;
+&lt;/ods-dataset-context&gt;
+
+        </div>
+        <style type='text/css'>
+            .leaflet-popup-content {
+    width: 350px !important;
 }
-.field-list {
-    list-style-type: none;
-    display: grid;
+.caption {
+    position: absolute;
+    right: 0px;
+    top: -25px;
 }
-.field {
-    display: inline-flex;
-    line-height: 18px;
-    margin-bottom: 4px;
+.red {
+    color: #E23F32;
 }
-.label {
-    width: 175px;
-    color: black;
-    font-weight: 500;
+.red:before {
+    content: &#39;\f0ab&#39;;
+    font-family: FontAwesome;
 }
-.value {
-    width: 400px;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 2px 0px 0px 5px;
-    line-height: 25px;
-    background-color: #f0f0f0;
+.green {
+    color: #3EA538;
 }
-@media print {
-    header, footer {
-        display: none;
-    }
+.green:before {
+    content: &#39;\f0aa&#39;;
+    font-family: FontAwesome;
 }
       
+
         </style>
         </body>
         ">
@@ -1196,14 +1394,14 @@
                     <ul class="buttons has-addons js-tablist">
                         <li class="button is-secondary is-outlined js-tablist__item">
                             <a class="js-tablist__link"
-                               href="#code-card-with-print-style-html-content">
+                               href="#code-analytic-tooltip-html-content">
                                 HTML
                             </a>
                         </li>
                         
                         <li class="button is-secondary is-outlined js-tablist__item">
                             <a class="js-tablist__link"
-                               href="#code-card-with-print-style-css-content">
+                               href="#code-analytic-tooltip-css-content">
                                 CSS
                             </a>
                         </li>
@@ -1218,7 +1416,7 @@
                    aria-role="link"
                    rel="noopener"
                    title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-card-with-print-style').submit()">
+                   onclick="document.getElementById('form-analytic-tooltip').submit()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                          class="feather feather-edit">
@@ -1231,70 +1429,105 @@
 
         <div class="tab-content">
             <div class="js-tabcontent"
-                 id="code-card-with-print-style-html-content">
+                 id="code-analytic-tooltip-html-content">
                 <div class="highlight">
-                    <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;ods-box card&#34;&gt;
-    &lt;h2&gt;
-        Record store card &lt;span style=&#34;font-size:0.7em; color:darkred; margin-left:40px&#34;&gt;Print it (Ctrl/Cmd&#43;P) or just share the link !&lt;/span&gt;
-    &lt;/h2&gt;
-    &lt;ods-dataset-context context=&#34;ctx&#34;
-                         ctx-dataset=&#34;record-stores&#34;
-                         ctx-urlsync=&#34;true&#34;&gt;
-        &lt;div ng-repeat=&#34;item in items&#34; ods-results=&#34;items&#34; ods-results-context=&#34;ctx&#34; ods-results-max=&#34;1&#34;&gt;
-            &lt;ul class=&#34;field-list&#34;&gt;
-                &lt;li class=&#34;field&#34; ng-repeat=&#34;field in ctx.dataset.fields&#34;&gt;
-                    &lt;p class=&#34;label&#34;&gt;
-                        {{ field.label }}
-                    &lt;/p&gt;
-                    &lt;p class=&#34;value&#34;&gt;
-                        {{ item.fields[field.name] }}
-                    &lt;/p&gt;
-                &lt;/li&gt;
-            &lt;/ul&gt;
-        &lt;/div&gt;
-        &lt;ods-map context=&#34;ctx&#34;&gt;&lt;/ods-map&gt;
-    &lt;/ods-dataset-context&gt;
+                    <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;caption&#34;&gt;
+    &lt;li style=&#34;display: inline;&#34; class=&#34;green&#34;&gt;Higher than average&lt;/li&gt;
+    &lt;li style=&#34;display: inline;&#34; class=&#34;red&#34;&gt;Lower than average&lt;/li&gt;
 &lt;/div&gt;
+
+&lt;ods-dataset-context context=&#34;ushospitals&#34; ushospitals-dataset=&#34;us-hospitals&#34; ushospitals-domain=&#34;userclub&#34;&gt;
+&lt;!-- Component starts here 👇 --&gt;
+&lt;ods-map id=&#34;analytics&#34; style=&#34;height:600px&#34; location=&#34;8,41.35826,-72.23511&#34; scroll-wheel-zoom=&#34;false&#34;&gt;
+    &lt;ods-map-layer color=&#34;#2C3F56&#34; picto=&#34;hospital&#34; context=&#34;ushospitals&#34;&gt;
+        &lt;ul style=&#34;display: block; list-style-type: none; color: #2c3f56; padding:0; margin:0;&#34;&gt;
+            &lt;li&gt;
+                &lt;strong style=&#34;font-size:17px;&#34;&gt;{{ record.fields.name | limitTo:25 }}&lt;/strong&gt;
+            &lt;/li&gt;
+            &lt;li style=&#34;color:#bbb;&#34;&gt;{{ record.fields.address | limitTo:140 }}&lt;/li&gt;
+            &lt;li style=&#34;font-style:italic;color:#bbb;&#34;&gt;{{ record.fields.city | limitTo:140 }}
+                &lt;br/&gt;
+            &lt;/li&gt;
+            &lt;br/&gt;
+            &lt;ods-dataset-context context=&#34;type,state&#34; type-dataset=&#34;us-hospitals&#34; type-parameters=&#34;{&#39;refine.type&#39;:&#39;&#39;&#43;record.fields.type}&#34; state-dataset=&#34;us-hospitals&#34; state-parameters=&#34;{&#39;refine.state&#39;:&#39;&#39;&#43;record.fields.state}&#34;&gt;
+                &lt;div style=&#34;&#34; ods-aggregation=&#34;aggtype&#34; ods-aggregation-context=&#34;type&#34; ods-aggregation-function=&#34;AVG&#34; ods-aggregation-expression=&#34;beds&#34;&gt;
+                    &lt;li style=&#34;color:#ec643c; font-size:15px; border-left: 3px solid #f19073;padding-left: 5px;&#34;&gt;
+                        &lt;i class=&#34;fa fa-bed&#34;&gt;&lt;/i&gt;Avg # of beds for
+                    &lt;/li&gt;
+                    &lt;li style=&#34;color: #ec643c;font-size: 15px;text-align: center;&#34;&gt;
+                        &lt;strong&gt;{{record.fields.type}}&lt;/strong&gt;
+                    &lt;/li&gt;
+                    &lt;li ng-if=&#34;!aggtype&#34; style=&#34;text-align:center;font-size:20px&#34;&gt;
+                        &lt;ods-spinner&gt;&lt;/ods-spinner&gt;
+                    &lt;/li&gt;
+                    &lt;li ng-if=&#34;aggtype&#34; style=&#34;text-align:center;&#34; ng-class=&#34;{&#39;red&#39;: record.fields.beds &lt; aggtype, &#39;green&#39; : record.fields.beds &gt;aggtype}&#34;&gt;
+                        &lt;strong style=&#34;font-size:20px;&#34;&gt;{{ aggtype | number : 1 }}&lt;/strong&gt;
+                    &lt;/li&gt;
+                &lt;/div&gt;
+                &lt;br/&gt;
+                &lt;div style=&#34;&#34; ods-aggregation=&#34;aggstate&#34; ods-aggregation-context=&#34;state&#34; ods-aggregation-function=&#34;AVG&#34; ods-aggregation-expression=&#34;beds&#34;&gt;
+                    &lt;li style=&#34;color: #ec643c;font-size: 15px;text-align: center;&#34;&gt;
+                        &lt;strong&gt;{{record.fields.state}}&lt;/strong&gt;
+                    &lt;/li&gt;
+                    &lt;li ng-if=&#34;!aggstate&#34; style=&#34;text-align:center;font-size:20px&#34;&gt;
+                        &lt;ods-spinner&gt;&lt;/ods-spinner&gt;
+                    &lt;/li&gt;
+                    &lt;li ng-if=&#34;aggstate&#34; style=&#34;text-align:center;&#34; ng-class=&#34;{&#39;red&#39;: record.fields.beds &lt; aggstate, &#39;green&#39; : record.fields.beds &gt;aggstate}&#34;&gt;
+                        &lt;strong style=&#34;font-size:20px;&#34;&gt;{{ aggstate | number : 1 }}&lt;/strong&gt;
+                    &lt;/li&gt;
+                &lt;/div&gt;
+            &lt;/ods-dataset-context&gt;
+            &lt;li style=&#34;margin-top: 20px&#34;&gt;
+                &lt;ul style=&#34;list-style-type: none; color: #2c3f56;padding:0 0 15px;margin-top:0px;&#34;&gt;
+                    &lt;li style=&#34;display: inline;float:left;&#34;&gt;
+                        &lt;strong style=&#34;font-size:15px;&#34;&gt;
+                            &lt;i aria-hidden=&#34;true&#34; class=&#34;fa fa-users&#34;&gt;&lt;/i&gt;Population/Beds : {{record.fields.beds}}
+                        &lt;/strong&gt;
+                    &lt;/li&gt;
+                    &lt;li style=&#34;display: inline;float:right;&#34;&gt;
+                        &lt;strong style=&#34;font-size:13px;&#34;&gt;
+                            &lt;a ng-href=&#34;{{record.fields.website}}&#34; style=&#34;color:#ec643c;&#34; target=&#34;_blank&#34;&gt;Source&lt;/a&gt;
+                        &lt;/strong&gt;
+                        &lt;i class=&#34;fa fa-external-link&#34; style=&#34;color:#ec643c;&#34;&gt;&lt;/i&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/ods-map-layer&gt;
+&lt;/ods-map&gt;
+&lt;!-- Component ends here 👆 --&gt;
+&lt;/ods-dataset-context&gt;
 </code></pre>
                 </div>
             </div>
             
             <div class="js-tabcontent"
-                 id="code-card-with-print-style-css-content">
+                 id="code-analytic-tooltip-css-content">
                 <div class="highlight">
-                    <pre class="language-css" data-lang="css"><code>.card {
-    width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+                    <pre class="language-css" data-lang="css"><code>.leaflet-popup-content {
+    width: 350px !important;
 }
-.field-list {
-    list-style-type: none;
-    display: grid;
+.caption {
+    position: absolute;
+    right: 0px;
+    top: -25px;
 }
-.field {
-    display: inline-flex;
-    line-height: 18px;
-    margin-bottom: 4px;
+.red {
+    color: #E23F32;
 }
-.label {
-    width: 175px;
-    color: black;
-    font-weight: 500;
+.red:before {
+    content: &#39;\f0ab&#39;;
+    font-family: FontAwesome;
 }
-.value {
-    width: 400px;
-    border: 1px solid black;
-    border-radius: 5px;
-    padding: 2px 0px 0px 5px;
-    line-height: 25px;
-    background-color: #f0f0f0;
+.green {
+    color: #3EA538;
 }
-@media print {
-    header, footer {
-        display: none;
-    }
+.green:before {
+    content: &#39;\f0aa&#39;;
+    font-family: FontAwesome;
 }
-      </code></pre>
+      
+</code></pre>
                 </div>
             </div>
             
@@ -1305,7 +1538,7 @@
 <script type="text/javascript">
     window.addEventListener("DOMContentLoaded", () => {
         var loopId = setInterval(() => {
-            iframeId = "iframe-card-with-print-style";
+            iframeId = "iframe-analytic-tooltip";
             iframe = document.getElementById(iframeId);
              
             size =  null 
@@ -1326,7 +1559,7 @@
 <script type="text/javascript">
     window.addEventListener("DOMContentLoaded", () => {
         var loopId = setInterval(() => {
-            iframeId = "iframe-card-with-print-style";
+            iframeId = "iframe-analytic-tooltip";
             iframe = document.getElementById(iframeId);
 
             if (iframe != undefined && iframe.contentWindow.document.body != undefined){
