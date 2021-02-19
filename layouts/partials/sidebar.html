@@ -1,8 +1,19 @@
-<aside class="sidebar menu"
+<aside class="sidebar"
        id="sidebarNavbar">
-    <div class="sidebar-content">
-        <div id="algolia-box"></div>
-        <div id="algolia-results"></div>
+
+     <div class="sidebar-header">
+       <div class="block">
+         <div id="algolia-box"></div>
+         <div id="algolia-results"></div>
+       </div>
+       <div class="block">
+         <ul>
+           {{ range sort (.Page.Resources.Match "*/index.md") "Name" }}
+           <li>{{ .Title }}</li>
+           {{ end }}
+         </ul>
+       </div>
+     </div>
 
         {{ $currentPage := . }}
         {{ $newContentCount := 0 }}
@@ -65,5 +76,4 @@
             </a>
             {{ end }}
         </div>
-    </div>
 </aside>
