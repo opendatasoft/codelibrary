@@ -1,7 +1,7 @@
 ---
 title: "GTFS Routes and stops"
-external_url: "https://userclub.opendatasoft.com/explore/dataset/transit-bus-routes-gtfs-static/custom/?disjunctive.route_short_name"
+external_url: "https://userclub.opendatasoft.com/explore/dataset/gtfs-nyc/custom/"
 height: 600
 ---
 
-The dataset name `ctx` (the *lines* in this exemple) will be filtered accordingly to the catalog filters because it is named `ctx`. Other context like the *stops* dataset context, will not be synced with the active catalog filters.
+This component cannot harness the capability of custom views to inherit the `ctx` contex from catalog filters, since download links cannot be fitlered by routes or stops. It simply provides a nice way to display a gtfs and shows how to use other datasets in a custom view—not only the one you are currently exploring.

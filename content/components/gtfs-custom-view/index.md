@@ -8,5 +8,4 @@ resources:
   title: 'Section #:counter'
 ---
 
-*This resources is intended to be used as custom view inside your catalog. Read the [user's guide section](https://help.opendatasoft.com/platform/en/publishing_data/07_configuring_visualizations/06_configuring_custom_view/custom.html#configuring-the-custom-view) about custom views for details*.
-This custom view will let you display routes and stops inside your catalog, as a view of your dataset.
+This custom view will let you display routes and stops from a GTFS. It can be used either as a [custom view](https://help.opendatasoft.com/platform/en/publishing_data/07_configuring_visualizations/06_configuring_custom_view/custom.html#configuring-the-custom-view) inside your catalog or on a custom page.
