@@ -3,15 +3,16 @@
     {{ if .IsPage }}
      <div class="sidebar-header">
        <div class="block">
-         <ul>
+         <ul class="menu-list">
+           <p class="menu-label">On this page</p>
            <li>
-             <a href="#" class="sidebar-subtitle">
+             <a href="#">
                Top
              </a>
            </li>
            {{ range sort (.Page.Resources.Match "*/index.md") "Name" }}
            <li>
-             <a href="#{{ .Title | anchorize }}" class="sidebar-subtitle">
+             <a href="#{{ .Title | anchorize }}">
                {{ .Title }}
              </a>
            </li>
