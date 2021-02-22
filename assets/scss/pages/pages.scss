@@ -1,0 +1,30 @@
+.home-results {
+  display: grid;
+  row-gap: 20px;
+}
+
+@media (min-width: $tablet) {
+  .home-results {
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 20px;
+  }
+}
+
+.list-results {
+  display: grid;
+  row-gap: 20px;
+}
+
+@media (min-width: $tablet) {
+  .list-results {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+  }
+}
+
+:target::before {
+  content: "";
+  display: block;
+  height: 141px; /* fixed header height*/
+  margin: -141px 0 0; /* negative fixed header height */
+}

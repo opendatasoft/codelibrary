@@ -5,10 +5,12 @@
   position: fixed;
   top: $navbar-height;
   z-index: 10;
-  background-color: $white;
   display: none;
+  padding: 0 1.75rem;
   border-bottom: 1px solid #dee5ef;
   height: 100%;
+  background-color: $white;
+  font-size: $size-6;
 }
 
 .sidebar.is-active {
@@ -19,20 +21,12 @@
   .sidebar {
     display: block;
     position: static;
-    top: $navbar-height;;
-    left: 0;
     width: 280px;
     flex-basis: 280px;
     border-right: 1px solid #dee5ef;
     border-bottom: none;
     min-height: 100%;
   }
-}
-
-.sidebar-content {
-  padding: 0 1.75rem ($navbar-height + 1.75rem) 1.75rem;
-  height: 100%;
-  overflow: auto;
 }
 
 @media screen and (min-width: $desktop) {
@@ -57,27 +51,29 @@
   height: auto;
 }
 
-.menu {
-  padding-top: $spacing-200;
-  font-size: $size-6;
-}
-
-
 a.sidebar-subtitle {
   color: $black;
   padding-top: 8px;
   padding-bottom: 8px;
 }
 
+.sidebar-header {
+  position: sticky;
+  z-index: 1;
+  top: $navbar-height;
+  background: white;
+  border-bottom: 1px solid #dee5ef;
+  padding: $spacing-100 0;
+}
+
 .menu-list {
-  margin-top: $spacing-200;
+  margin-top: $spacing-100;
 }
 
 .menu-label {
   background-color: $light;
   border-radius: $radius;
   padding: 6px;
-  text-transform: capitalize;
 }
 
 .menu-list a.is-active {
@@ -99,10 +95,15 @@ a.sidebar-subtitle {
 /*********************************/
 /********* ALGOLIA SEARCH ********/
 /*********************************/
+#algolia-box {
+  position: relative;
+  z-index: 0;
+}
 
 .ais-SearchBox-form {
   margin-top: 3px; // gives 3px extra margin for the input glowing/shadow effect when focus
 }
+
 .ais-SearchBox-input {
   font-size: $size-6;
   border: 1px solid #c4c8d8;

@@ -22,7 +22,7 @@ export function initSearch() {
     search.addWidgets([
         searchBox({
             container: '#algolia-box',
-            autofocus: true,
+            autofocus: false,
             placeholder: 'Search for content'
         }),
     ]);
