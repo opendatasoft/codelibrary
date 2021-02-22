@@ -1,23 +1,33 @@
 <aside class="sidebar"
        id="sidebarNavbar">
-
+    {{ if .IsPage }}
      <div class="sidebar-header">
        <div class="block">
-         <div id="algolia-box"></div>
-         <div id="algolia-results"></div>
-       </div>
-       <div class="block">
          <ul>
+           <li>
+             <a href="#" class="sidebar-subtitle">
+               Top
+             </a>
+           </li>
            {{ range sort (.Page.Resources.Match "*/index.md") "Name" }}
-           <li>{{ .Title }}</li>
+           <li>
+             <a href="#{{ .Title | anchorize }}" class="sidebar-subtitle">
+               {{ .Title }}
+             </a>
+           </li>
            {{ end }}
          </ul>
        </div>
      </div>
+     {{ end }}
 
         {{ $currentPage := . }}
         {{ $newContentCount := 0 }}
         <ul class="menu-list">
+          <div class="block">
+            <div id="algolia-box"></div>
+            <div id="algolia-results"></div>
+          </div>
             <li>
                 <a class="sidebar-subtitle"
                    href="{{ .Site.BaseURL }}">
