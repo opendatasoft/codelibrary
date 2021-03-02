@@ -2,7 +2,7 @@
 title: "Gtfs Custom View"
 date: 2021-02-09T11:18:31+01:00
 description: ""
-tags: ["gtfs", "map"]
+tags: ["map"]
 resources:
 - src: '*/'
   title: 'Section #:counter'
