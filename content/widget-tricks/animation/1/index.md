@@ -1,5 +1,5 @@
 ---
-title: "Animated KPI and Gauge"
+title: "Animated KPI"
 date: 2021-03-02T17:03:00+01:00
 ---
 

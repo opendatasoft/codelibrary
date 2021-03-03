@@ -1,3 +1,4 @@
+
 .kpi-card {
     background-color: var(--boxes-background);
     height: 100%;

@@ -1,3 +1,4 @@
+
 .kpi-card {
     background-color: var(--boxes-background);
     height: 100%;
@@ -45,11 +46,8 @@
     font-size: 1rem;
     line-height: 1.5;
     font-weight: normal;
-    margin-top: 0;
+    margin-top: 13px;
     margin-bottom: 0;
     max-width: 100%;
-}
-
-.ods-button.ods-widget-timer-controller {
-    display: none;
+    text-align:center;
 }
