@@ -1,6 +1,5 @@
 ---
 title: "Custom Tooltips"
-date: 2021-02-18T10:09:39+01:00
 description: ""
 tags: ["map"]
 resources:

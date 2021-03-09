@@ -1,6 +1,4 @@
-<div ng-app="ods-widgets">
 <div class="row" ng-init="variables = {}">
-  {{ isFlipped }}
     <div class="col-sm-offset-2 col-sm-4">
         <ods-dataset-context context="ushospitals"
                              ushospitals-domain="userclub"
@@ -30,7 +28,6 @@
                     </div>
                 </div>
                 <div class="kpi-card card-face card-face-back">
-                  {{ $parent.isFlipped }}
                     <p>
                         <strong>{{ count | number }}</strong> is the count of all records found in the dataset:
                     </p>
@@ -42,7 +39,7 @@
         </ods-dataset-context>
     </div>
 
-  <div class="col-sm-4">
+    <div class="col-sm-4">
         <ods-dataset-context context="ushospitals"
                              ushospitals-domain="userclub"
                              ushospitals-dataset="us-hospitals">
@@ -81,6 +78,4 @@
             </div>
         </ods-dataset-context>
     </div>
-
-</div>
 </div>
