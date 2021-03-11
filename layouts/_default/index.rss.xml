@@ -10,6 +10,7 @@
 {{- if ge $limit 1 -}}
 {{- $pages = $pages | first $limit -}}
 {{- end -}}
+
 {{- printf "<?xml version=\"1.0\" encoding=\"utf-8\" standalone=\"yes\"?>" | safeHTML }}
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
@@ -25,11 +26,12 @@
     {{- with .OutputFormats.Get "RSS" -}}
     {{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
     {{- end -}}
-    {{ range $pages }}
-      {{ range .Resources.Match "**.md" }}
+    {{ range $pages.ByLastmod }}
+      {{ $permalink := .Permalink }}
+      {{ range where .Page.Resources ".Date" "ge" (now.AddDate 0 -2 0) }}
         <item>
           <title>{{ .Title }}</title>
-          <link>{{ .Permalink }}#{{ .Title | anchorize }}</link>
+          <link>{{ $permalink }}#{{ .Title | anchorize }}</link>
           {{ with .Date }}
             <pubDate>{{ .Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
           {{ end}}
