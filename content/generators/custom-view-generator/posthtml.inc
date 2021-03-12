@@ -1,67 +1,10 @@
-<!-- V2.1 :
-    - Add ods-select and multiple choice option for filters
-    - Add clear all filter button when one filter is applied
-    - responsive display for filters and date button
-    - KPI default value to 0 when no data/results to display
-  -->
-<!-- V2.0 :
-  - add a date field that display a date range slider
-  - download link knows support files hosted on ODS
-  - dynamic title / descriptiton / access source link from the context
--->
+              DO_NOT_MODIFY_BELOW;
 
-<div class="container"
-     ng-init="domain = 'discovery.opendatasoft.com';
-                datasetid = 'oeuvres-de-johannes-vermeer';
-
-                filters = [
-                {'id':'technique','multiple':true},
-                {'id':'collection','multiple':true},
-                {'id':'genre','multiple':true}
-                ];
-                fieldDate = '';
-                resetFiltersButton = true;
-                resetFiltersButtonLabel = 'Supprimer tous les filtres';
-                fieldDefaultRangeStartsNow = true;
-
-                view = 'cards';
-                fieldsList = ['titre','collection','genre','format','date'];
-                fieldLink = 'wikipedia';
-                fieldLinkLabel = 'Lire l\'article';
-
-                cardTitle = 'titre';
-                fieldPhoto = 'image';
-                imagePosition = 'left';
-                itemsPerRow = '2';
-
-                kpis = [
-                {
-                'title': 'Taille moyenne',
-                'function': 'AVG',
-                'expression': 'surface',
-                'precision': 2,
-                'unit': 'm2',
-                'faicon': 'square-o'
-                },
-                {
-                'title': 'Nombre d\'oeuvre référencées',
-                'function': 'COUNT'
-                }
-                ];
-
-                DO_NOT_MODIFY_BELOW;
-
-                ctxfields = {};
-                values = {};
-                activeFilters = {};
-                ">
+              ctxfields = {};
+              values = {};
+              activeFilters = {};
+              ">
     <!-- ### GENERAL SETTINGS ### -->
-    <!-- domain : (Domain URL) : Must contain the URL of the domain where the dataset is published.
-     ex: 'discovery.opendatasoft.com'
-    -->
-    <!-- datasetid (Dataset ID) : Must contain the ID of the dataset
-     ex: 'oeuvres-de-johannes-vermeer'
-    -->
 
     <!-- ### FILTERS SETTINGS ### -->
     <!-- filters (Filters) : List of object that contains the IDs to generate the filters pannel.
@@ -159,37 +102,25 @@
     <!-- Technical fields, do not modify please -->
 
 
-    <ods-dataset-context context="ctx,ctxdate"
-                         ctx-domain="{{ domain }}"
-                         ctx-dataset="{{ datasetid }}"
-                         ctxdate-domain="{{ domain }}"
-                         ctxdate-dataset="{{ datasetid }}"
-                         ctxdate-parameters=customParameters>
-        <!-- Private datasets can be accessed by adding an API Key.
-              Add this param to the <ods-dataset-context above,
-              where XXX is your apikey :
-                ctx-apikey="XXX"
-            -->
+    <ods-dataset-context context="ctxdate"
+                         ctxdate-dataset="{{ ctx.dataset.datasetid }}"
+                         ctxdate-parameters="ctx.parameters">
 
         <span ng-if="fieldDefaultRangeStartsNow">
             {{ctxdate.parameters={'q.date': fieldDate + '&gt;#now()'};''}}
         </span>
 
-        <h1 class="page-title">
-            {{ ctx.dataset.metas.title }}
-        </h1>
-
-        <p class="page-subtitle" ng-bind-html="ctx.dataset.metas.description | shortSummary"></p>
-
         <span ng-repeat="field in ctx.dataset.fields">
             {{ ctxfields[field.name] = field.label; '' }}
         </span>
 
-        <span ng-repeat="filter in filters">
-            {{ ctx.parameters['refine.' + filter.id] = activeFilters[filter.id] ; '' }}
-        </span>
+        <div ng-if="!$parent.$parent.$parent">
+            <span ng-repeat="filter in filters">
+                {{ ctx.parameters['refine.' + filter.id] = activeFilters[filter.id] ; '' }}
+            </span>
+        </div>
 
-        <div class="content-card search-module-container">
+        <div ng-if="!$parent.$parent.$parent" class="content-card search-module-container">
             <!-- SEARCH -->
             <div class="search-module">
                 <i class="fa fa-search search-module-icon" aria-hidden="true"></i>
@@ -208,9 +139,9 @@
             <!-- FILTERS Search & Select -->
             <div class="filter-list"
                  ng-init="dropdown.open = '';
-                      select = {}">
+                          select = {}">
                 <div ng-repeat="filter in filters">
-                    {{ ctx.parameters['disjunctive.' + filter.id] = true; '' }}
+                    {{ ctx.parameters['disjunctive.' + filter.id] = true; '' }}
                     <div ods-facet-results="categories"
                          ods-facet-results-facet-name="{{ filter.id }}"
                          ods-facet-results-context="ctx"
@@ -252,12 +183,12 @@
                       ods-analysis-x-day="{{ fieldDate }}.day"
                       ods-analysis-serie-c="COUNT()"
                       ods-analysis-sort="x.{{ fieldDate }}.year,x.{{ fieldDate }}.month,x.{{ fieldDate }}.day">
-            <span ng-if="dateminmax.results">
-              {{ values['periode']['min'] = dateminmax.results[0].x.year + '-' + (10 > dateminmax.results[0].x.month?'0':'') + dateminmax.results[0].x.month + '-' + (10 > dateminmax.results[0].x.day?'0':'') + dateminmax.results[0].x.day;
-              values['periode']['max'] = dateminmax.results[dateminmax.results.length-1].x.year + '-' + (10 > dateminmax.results[dateminmax.results.length-1].x.month?'0':'') + dateminmax.results[dateminmax.results.length-1].x.month + '-' + (10 > dateminmax.results[dateminmax.results.length-1].x.day?'0':'') + dateminmax.results[dateminmax.results.length-1].x.day;
-              ''}}
-            </span>
-          </span>
+                    <span ng-if="dateminmax.results">
+                        {{ values['periode']['min'] = dateminmax.results[0].x.year + '-' + (10 > dateminmax.results[0].x.month?'0':'') + dateminmax.results[0].x.month + '-' + (10 > dateminmax.results[0].x.day?'0':'') + dateminmax.results[0].x.day;
+                        values['periode']['max'] = dateminmax.results[dateminmax.results.length-1].x.year + '-' + (10 > dateminmax.results[dateminmax.results.length-1].x.month?'0':'') + dateminmax.results[dateminmax.results.length-1].x.month + '-' + (10 > dateminmax.results[dateminmax.results.length-1].x.day?'0':'') + dateminmax.results[dateminmax.results.length-1].x.day;
+                        ''}}
+                    </span>
+                </span>
 
                 <!-- Affichage du range slider: les dates récupérées dans l'analyse pour initialiser les bounds
                                      la sélection période par défaut avec le mois + 1
@@ -278,10 +209,10 @@
                 <!-- le click sur toute la période resette la période choisie sur la date min et max -->
                 <div ng-if="resetFiltersButton" class="filter-date-button"
                      ng-class="{'filter-date-button-disabled':
-                         values.periode.minselection == values.periode.min &&
-                         values.periode.maxselection == values.periode.max}"
+                               values.periode.minselection == values.periode.min &&
+                               values.periode.maxselection == values.periode.max}"
                      ng-click="values.periode.minselection = values.periode.min;
-                         values.periode.maxselection = values.periode.max">
+                               values.periode.maxselection = values.periode.max">
                     Toute la période <i class="fa fa-arrows-h" aria-hidden="true"></i>
                 </div>
 
@@ -319,27 +250,27 @@
                        ods-results-context="ctx"
                        ods-results-max="20">
                     <thead>
-                    <tr>
-                        <th ng-repeat="field in fieldsList">{{ ctxfields[field] }}</th>
-                        <th ng-if="fieldLink"></th>
-                    </tr>
+                        <tr>
+                            <th ng-repeat="field in fieldsList">{{ ctxfields[field] }}</th>
+                            <th ng-if="fieldLink"></th>
+                        </tr>
                     </thead>
                     <tbody>
-                    <tr ng-repeat="item in items">
-                        <td ng-repeat="field in fieldsList"
-                            style="max-width: calc(100vh / {{ fieldsList.length }});"
-                            title="{{ item.fields[field] }}">
-                            {{ item.fields[field] }}
-                        </td>
-                        <td ng-if="fieldLink">
-                            <a href="{{ item.fields[fieldLink] }}"
-                               tilte="{{ fieldLinkLabel }}"
-                               target="_blank"
-                               class="table-dropdown-button">
-                                <i class="fa fa-external-link"></i>
-                            </a>
-                        </td>
-                    </tr>
+                        <tr ng-repeat="item in items">
+                            <td ng-repeat="field in fieldsList"
+                                style="max-width: calc(100vh / {{ fieldsList.length }});"
+                                title="{{ item.fields[field] }}">
+                                {{ item.fields[field] }}
+                            </td>
+                            <td ng-if="fieldLink">
+                                <a href="{{ item.fields[fieldLink] }}"
+                                   tilte="{{ fieldLinkLabel }}"
+                                   target="_blank"
+                                   class="table-dropdown-button">
+                                    <i class="fa fa-external-link"></i>
+                                </a>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -350,14 +281,14 @@
             <div class="row row-equal-height"
                  ods-results="items"
                  ods-results-context="ctx"
-                 ods-results-max="{{ 8 * itemsPerRow }}">
+                 ods-results-max="{{ 8 * itemsPerRow }}">
                 <div ng-repeat="item in items"
                      class="{{ 'col-md-' + (12/itemsPerRow) }} margin-bottom-20">
                     <div class="content-card"
                          ng-class="{'content-card-horizontal': imagePosition === 'left' }">
                         <div class="content-card-img"
                              ng-if="item.fields[fieldPhoto]"
-                             style="{{ 'background-image: url(https://' + domain + '/explore/dataset/' + datasetid + '/files/' + item.fields[fieldPhoto].id + '/300/);' }}">
+                             style="{{ 'background-image: url(/explore/dataset/' + ctx.dataset.datasetid + '/files/' + item.fields[fieldPhoto].id + '/300/);' }}">
                         </div>
                         <div class="content-card-body">
                             <h2 class="content-card-title text-center">
@@ -372,7 +303,7 @@
                             <div ng-if="fieldLink" class="text-center">
                                 <!-- if fieldLink is a json and contains the 'id' key, it means that the link points to a file hosted on ODS platform and can be downloaded. If it's an external link, the other link tag is used -->
                                 <a ng-if="item.fields[fieldLink].id"
-                                   href="https://{{ domain }}/explore/dataset/{{ datasetid }}/files/{{ item.fields[fieldLink].id }}/download/"
+                                   href="/explore/dataset/{{ ctx.dataset.datasetid }}/files/{{ item.fields[fieldLink].id }}/download/"
                                    target="_blank"
                                    class="content-card-button">
                                     {{ fieldLinkLabel }}
@@ -382,15 +313,15 @@
                                             For more advanced scenario, you can send the user to :
 
                                             - the dataset table filtered with the fieldLink value, through a text query
-                                            href="/explore/dataset/{{ datasetid }}/table?q={{ item.fields[fieldLink] }}"
+                                            href="/explore/dataset/{{ datasetid }}/table?q={{ item.fields[fieldLink] }}"
 
                                             - the dataset table filtered with the fieldLink value, through a refine on the field
-                                            href="/explore/dataset/{{ datasetid }}/table?refine.{{ fieldLink }}={{ item.fields[fieldLink] }}"
+                                            href="/explore/dataset/{{ datasetid }}/table?refine.{{ fieldLink }}={{ item.fields[fieldLink] }}"
 
                                             - a page using url-sync=true setting :
-                                            href="/pages/yourpage/?refine.{{ fieldLink }}={{ item.fields[fieldLink] }}"
+                                            href="/pages/yourpage/?refine.{{ fieldLink }}={{ item.fields[fieldLink] }}"
                                             -->
-                                <a ng-if="!item.fields[fieldLink].id" href="{{ item.fields[fieldLink] }}"
+                                <a ng-if="!item.fields[fieldLink].id" href="{{ item.fields[fieldLink] }}"
                                    target="_blank"
                                    class="content-card-button">
                                     {{ fieldLinkLabel }}
@@ -401,9 +332,5 @@
                 </div>
             </div>
         </section>
-
-        <a href="https://{{ domain }}/explore/dataset/{{ datasetid }}/"
-           target="_blank"
-           class="margin-bottom-20">Accéder aux données source</a>
     </ods-dataset-context>
 </div>

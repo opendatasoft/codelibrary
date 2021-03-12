@@ -24,34 +24,38 @@
             </div>
         </a>
         {{ end }}
+    </section>
     <section class="section">
-      <h3 class="title is-3 is-flex is-align-items-baseline">
-        Latest content
-        <a href="/index.xml">
-          <figure class="image is-16x16 mx-1"><img src="/img/rss.svg" alt="rss"></figure>
-        </a>
-      </h3>
-        {{ range .Site.RegularPages }}
-          {{ range where .Page.Resources ".Date" "ge" (now.AddDate 0 -2 0) }}
-            <div class="block">
-              <h5 class="title is-5 is-flex breadcrumb">
-                <ul>
-                  <li class="is-active">
-                    <a href="{{ .Parent.RelPermalink }}">
-                      {{ .Parent.Page.Title }}
+        <div class="columns">
+            <div class="column is-offset-one-quarter is-half">
+                <h3 class="title is-3 is-flex is-align-items-baseline">
+                    Latest content
+                    <a href="/index.xml">
+                        <figure class="image is-16x16 mx-1"><img src="/img/rss.svg" alt="rss"></figure>
                     </a>
-                  <li>
-                    <a href="{{ .Parent.RelPermalink }}#{{ .Title | anchorize }}">
-                      {{ .Title }}
-                    </a>
-                  </li>
-                </ul>
-              </h5>
-              {{ .Content | replaceRE "<p>" "<p class=\"subtitle\">" | safeHTML | truncate 100 }}
+                </h3>
+                {{ range .Site.RegularPages }}
+                    {{ range where .Page.Resources ".Date" "ge" (now.AddDate 0 -2 0) }}
+                    <div class="block">
+                        <h5 class="title is-5 is-flex breadcrumb">
+                            <ul>
+                                <li class="is-active">
+                                    <a href="{{ .Parent.RelPermalink }}">
+                                        {{ .Parent.Page.Title }}
+                                    </a>
+                                <li>
+                                    <a href="{{ .Parent.RelPermalink }}#{{ .Title | anchorize }}">
+                                        {{ .Title }}
+                                    </a>
+                                </li>
+                            </ul>
+                        </h5>
+                        {{ .Content | replaceRE "<p>" "<p class=\"subtitle\">" | safeHTML | truncate 100 }}
+                    </div>
+                    {{ end }}
+                {{ end }}
             </div>
-          {{ end }}
-        {{ end }}
-      </ul>
+        </div>
     </section>
 </div>
 {{ end }}
