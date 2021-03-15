@@ -37,7 +37,7 @@
           {{ end}}
           {{ with .Site.Author.email }}<author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
           <guid>{{ .Parent.Permalink }}#{{ .Title | anchorize }}</guid>
-          <description>{{ .Summary | html }}</description>
+          <description>{{ .Content | html }}</description>
         </item>
       {{ end }}
     {{ end }}
