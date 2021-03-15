@@ -1,5 +1,5 @@
 ---
-title: "Timeline custom view"
+title: "ods-date-range-slider"
 description: "From and to selectors to easily catch a range of date for your dashboards."
 tags: ["list", "filter"]
 resources:

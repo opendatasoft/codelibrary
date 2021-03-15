@@ -437,3 +437,20 @@ main {
     border-color: var(--highlight);
     text-decoration: none;
 }
+
+/** Specific override for custom views **/
+@media screen and (min-width: 1408px) {
+    .ods-dataset-visualization .ods-tabs__pane .container:not(.is-max-desktop):not(.is-max-widescreen) {
+        max-width: 100%;
+    }
+}
+@media screen and (min-width: 1216px) {
+    .ods-dataset-visualization .ods-tabs__pane .container:not(.is-max-desktop) {
+        max-width: 100%;
+    }
+}
+@media screen and (min-width: 1024px) {
+    .ods-dataset-visualization .ods-tabs__pane .container {
+        max-width: 100%;
+    }
+}
