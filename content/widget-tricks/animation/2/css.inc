@@ -1,4 +1,5 @@
-
+/* KPI Card
+========================================================================== */
 .kpi-card {
     background-color: var(--boxes-background);
     height: 100%;
@@ -51,6 +52,8 @@
     max-width: 100%;
 }
 
+/* Hide the ods-timer button
+========================================================================== */
 .ods-button.ods-widget-timer-controller {
     display: none;
 }

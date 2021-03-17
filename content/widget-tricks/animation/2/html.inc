@@ -2,26 +2,34 @@
   context="uraniumproduction"
   uraniumproduction-dataset="uranium-production"
   uraniumproduction-domain="userclub">
-  <div ods-aggregation="sum"
-    ods-aggregation-sum-context="uraniumproduction"
-    ods-aggregation-sum-function="SUM"
-    ods-aggregation-sum-expression="tonnes_of_uranium">
+  <div
+    ods-aggregation="aggregation"
+    ods-aggregation-context="uraniumproduction"
+    ods-aggregation-function="SUM"
+    ods-aggregation-expression="tonnes_of_uranium">
     <div class="row">
       <div class="col-sm-offset-4 col-sm-4">
+        <!-- KPI box component -->
         <div
-          ng-init="values = {'from':0,'nbticks':40,'delay':100,'tick':0,'reload':100}"
+          ng-if="true"
+          ng-init="from = 0;
+                                  nbticks = 15; 
+                                  delay = 100;
+                                  tick = 0;
+                                  reloadeverynbtick = 100;"
           class="kpi-card">
+          {{ to = aggregation ; ''}}
           <i class="kpi-icon fa fa-superpowers" aria-hidden="true"></i>
           <ods-timer
             stop-condition=""
-            delay="values.delay"
+            delay="delay"
             auto-start="true"
-            exec="(values.from < sum ? values.from = (((values.from + ((sum || 0) / values.nbticks)) * 100) | math : 'round') / 100 : undefined);
-                            (values.tick = values.tick + 1); 
-                            (values.tick % values.reload == 0 ? values.from = 0 : undefined); ">
+            exec="(from < to ? from = (((from + ((to || 0) / nbticks)) * 100) | math : 'round') / 100 : undefined);
+                                         (tick = tick + 1); 
+                                         (tick % reloadeverynbtick == 0 ? from = 0 : undefined); ">
           </ods-timer>
-          <h2 class="kpi-title">{{ values.from | number : 0 }}</h2>
-          <p class="kpi-description">tonnes d'uranium produites depuis 2017</p>
+          <h2 class="kpi-title">{{ from | number : 0 }}</h2>
+          <p class="kpi-description">tons of uranium produced since 2017</p>
         </div>
       </div>
     </div>
