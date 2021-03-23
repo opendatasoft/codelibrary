@@ -9,6 +9,9 @@
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+}
+.row-equal-height > * {
+    flex-grow: 1; /* fill the space, take all the available width */
     margin-bottom: 20px;
 }
 /* Fix for early content wrapping in Safari*/

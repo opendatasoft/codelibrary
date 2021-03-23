@@ -84,12 +84,7 @@ kpis = [
   <!-- ### Subtitle ### -->
   <!-- subtitle : "Some texte" -->
 
-  <!-- MUST READ
 
-A common error is forget to protect commas with a leading backslash, as commas are used to declare values of variable it will break the settings
-wrongVariable = 'I'll be freed from commas'
-correctVariable = 'I\'ll be freed from commas'
--->
 
   <!-- DO NOT MODIFY -->
   <!-- Technical fields, do not modify please -->

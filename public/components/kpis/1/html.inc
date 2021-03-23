@@ -1,9 +1,9 @@
 <div class="row">
-    <div class="col-xs-12">
-        <h2>
-            Adaptive height
-        </h2>
-    </div>
+    <h2>
+        Adaptive height
+    </h2>
+</div>
+<div class="row">
     <div class="col-md-4">
         <!-- KPI box component -->
         <div class="kpi-card">
@@ -43,12 +43,12 @@
 </div>
 
 
+<div class="row">
+    <h2>
+        Same height
+    </h2>
+</div>
 <div class="row row-equal-height">
-    <div class="col-xs-12">
-        <h2>
-            Same height
-        </h2>
-    </div>
     <div class="col-md-4">
         <!-- KPI box component -->
         <div class="kpi-card">
