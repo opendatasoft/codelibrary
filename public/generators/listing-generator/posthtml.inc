@@ -270,14 +270,35 @@
                     <tbody>
                     <tr ng-repeat="item in items">
                         <td ng-repeat="field in fieldsList"
-                            style="max-width: calc(100vh / {{ fieldsList.length }});"
+                            style="max-width: calc(100vw / {{ fieldsList.length }});"
                             title="{{ item.fields[field] }}">
                             {{ item.fields[field] }}
                         </td>
                         <td ng-if="fieldLink">
-                            <a href="{{ item.fields[fieldLink] }}"
-                               tilte="{{ fieldLinkLabel }}"
-                               target="_blank"
+                            <!-- if fieldLink is a json and contains the 'id' key, it means that the link points to a file hosted on ODS platform and can be downloaded. If it's an external link, the other link tag is used -->
+                            <a ng-if="item.fields[fieldLink].id"
+                               href="https://{{ domain }}/explore/dataset/{{ datasetid }}/files/{{ item.fields[fieldLink].id }}/download/"
+                               title="{{ fieldLinkLabel }}"
+                               class="table-dropdown-button">
+                                <i class="fa fa-external-link"></i>
+                            </a>
+
+                            <!-- fieldLink is used here
+                                        For more advanced scenario, you can send the user to :
+
+                                        - the dataset table filtered with the fieldLink value, through a text query
+                                        href="/explore/dataset/{{ datasetid }}/table?q={{ item.fields[fieldLink] }}"
+
+                                        - the dataset table filtered with the fieldLink value, through a refine on the field
+                                        href="/explore/dataset/{{ datasetid }}/table?refine.{{ fieldLink }}={{ item.fields[fieldLink] }}"
+
+                                        - a page using url-sync=true setting :
+                                        href="/pages/yourpage/?refine.{{ fieldLink }}={{ item.fields[fieldLink] }}"
+                                        -->
+
+                            <a ng-if="!item.fields[fieldLink].id"
+                               href="{{ item.fields[fieldLink] }}"
+                               title="{{ fieldLinkLabel }}"
                                class="table-dropdown-button">
                                 <i class="fa fa-external-link"></i>
                             </a>
