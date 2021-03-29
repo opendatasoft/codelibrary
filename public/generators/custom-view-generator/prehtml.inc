@@ -17,6 +17,7 @@
     correctVariable = 'I\'ll be freed from commas'
 -->
 
+<!-- SETTINGS START HERE -->
 <div class="container custom-view-generator"
 
 

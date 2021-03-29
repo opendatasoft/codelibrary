@@ -1,3 +1,4 @@
+<!-- SETTINGS START HERE -->
 <div ng-init="domain = 'mesr.opendatasoft.com';
                 datasetid = 'fr-esr-principaux-etablissements-enseignement-superieur';
 

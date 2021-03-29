@@ -24,7 +24,7 @@
             </div>
 
             <div ng-if="ctxrefine.parameters['refine.university_name'][0]">
-                <h4>{{ shanghaiworlduniversityranking.parameters['refine.university_name'][0] }} rankings details, over years</h4>
+                <h4>{{ ctxrefine.parameters['refine.university_name'][0] }} rankings details, over years</h4>
                 <ods-chart single-y-axis="true" align-month="true">
                     <ods-chart-query context="ctxrefine" field-x="year" maxpoints="100"
                                      timescale="year">
