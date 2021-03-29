@@ -278,6 +278,7 @@
                             <!-- if fieldLink is a json and contains the 'id' key, it means that the link points to a file hosted on ODS platform and can be downloaded. If it's an external link, the other link tag is used -->
                             <a ng-if="item.fields[fieldLink].id"
                                href="https://{{ domain }}/explore/dataset/{{ datasetid }}/files/{{ item.fields[fieldLink].id }}/download/"
+                               target="_blank"
                                title="{{ fieldLinkLabel }}"
                                class="table-dropdown-button">
                                 <i class="fa fa-external-link"></i>
@@ -298,6 +299,7 @@
 
                             <a ng-if="!item.fields[fieldLink].id"
                                href="{{ item.fields[fieldLink] }}"
+                               target="_blank"
                                title="{{ fieldLinkLabel }}"
                                class="table-dropdown-button">
                                 <i class="fa fa-external-link"></i>
