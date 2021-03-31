@@ -61,6 +61,8 @@
       ex: "Back to the list'
     -->
 
+    <!-- ### MAP SETTINGS ### -->
+    <!-- mapNoRefit : true / false refit the map when filtering -->
 
 
     <!-- DO NOT MODIFY -->
@@ -187,7 +189,7 @@
         </aside>
 
 
-        <ods-map no-refit="true"
+        <ods-map no-refit="{{ mapNoRefit }}"
                  scroll-wheel-zoom="true"
                  display-control="false"
                  display-control-single-layer="false"

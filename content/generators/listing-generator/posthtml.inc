@@ -195,7 +195,7 @@
                       ods-analysis-x-day="{{ fieldDate }}.day"
                       ods-analysis-serie-c="COUNT()"
                       ods-analysis-sort="x.{{ fieldDate }}.year,x.{{ fieldDate }}.month,x.{{ fieldDate }}.day">
-            <span ng-if="dateminmax.results">
+            <span ng-if="dateminmax.results && dateminmax.results.length > 0">
               {{ values['periode']['min'] = dateminmax.results[0].x.year + '-' + (10 > dateminmax.results[0].x.month?'0':'') + dateminmax.results[0].x.month + '-' + (10 > dateminmax.results[0].x.day?'0':'') + dateminmax.results[0].x.day;
               values['periode']['max'] = dateminmax.results[dateminmax.results.length-1].x.year + '-' + (10 > dateminmax.results[dateminmax.results.length-1].x.month?'0':'') + dateminmax.results[dateminmax.results.length-1].x.month + '-' + (10 > dateminmax.results[dateminmax.results.length-1].x.day?'0':'') + dateminmax.results[dateminmax.results.length-1].x.day;
               ''}}
@@ -219,7 +219,7 @@
                 </ods-date-range-slider>
 
                 <!-- le click sur toute la période resette la période choisie sur la date min et max -->
-                <div ng-if="resetFiltersButton" class="filter-date-button"
+                <div ng-if="resetFiltersButton && values.periode.min && values.periode.max" class="filter-date-button"
                      ng-class="{'filter-date-button-disabled':
                          values.periode.minselection == values.periode.min &&
                          values.periode.maxselection == values.periode.max}"

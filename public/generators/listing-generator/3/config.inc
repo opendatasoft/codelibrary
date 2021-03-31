@@ -10,7 +10,7 @@
                 fieldDate = '';
                 resetFiltersButton = true;
                 resetFiltersButtonLabel = 'Supprimer tous les filtres';
-                fieldDefaultRangeStartsNow = true;
+                fieldDefaultRangeStartsNow = false;
 
                 view = 'table';
                 fieldsList = ['objet','matiere','vote','ndeg_deliberation'];

@@ -21,3 +21,5 @@
                 viewListButtonText = 'Voir la liste';
                 viewDetailsButtonText = 'Voir les détails';
                 backToResultsButtonText = 'Retour aux résultats';
+
+                mapNoRefit = false;

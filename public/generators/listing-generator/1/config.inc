@@ -9,7 +9,7 @@
                 fieldDate = '';
                 resetFiltersButton = true;
                 resetFiltersButtonLabel = 'Supprimer tous les filtres';
-                fieldDefaultRangeStartsNow = true;
+                fieldDefaultRangeStartsNow = false;
 
                 view = 'cards';
                 fieldsList = ['titre','collection','genre','format','date'];
