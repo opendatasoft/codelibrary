@@ -9,12 +9,12 @@
 
     In the following settings declaration :
 
-    A common error is forget to escape (protect) commas with a leading backslash
-    As commas are used to declare values of variable it will break the settings
+    A common error is forget to escape (protect) apostrophe with a leading backslash
+    As apostrophes are used to declare values of variable it will break the settings
 
     Ex:
-    wrongVariable = 'I'll be freed from commas'
-    correctVariable = 'I\'ll be freed from commas'
+    wrongVariable = 'I'll be freed from apostrophes'
+    correctVariable = 'I\'ll be freed from apostrophes'
 -->
 
 <!-- SETTINGS START HERE -->
