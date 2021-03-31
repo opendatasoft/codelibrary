@@ -1,4 +1,9 @@
-<!-- V1.1 :
+  <!-- V1.2 :
+    - Add fieldImage and imagePosition for image datasets
+    - Add mapPictoColor and mapPicto to set up map picto
+  -->
+
+  <!-- V1.1 :
     - Add ods-select and multiple choice option for filters
     - Add clear all filter button when one filter is applied
     - responsive display for filters and date button
