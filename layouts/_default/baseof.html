@@ -1,25 +1,28 @@
 <!DOCTYPE html>
 <html class="has-navbar-fixed-top">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>
-        {{ block "title" . }}
-        {{ .Site.Title }}
-        {{ end }}
+      {{ block "title" . }} {{ .Site.Title }} {{ end }}
     </title>
 
-    {{ with .OutputFormats.Get "rss" -}}
-        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-    {{ end -}}
+    {{ with .OutputFormats.Get "rss" -}} {{ printf `
+    <link rel="%s" type="%s" href="%s" title="%s" />
+    ` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }} {{ end -}}
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"></script>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"
+    ></script>
     <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-        gtag('config', '{{ .Site.GoogleAnalytics }}');
+      gtag("config", "{{ .Site.GoogleAnalytics }}");
     </script>
 
     <!-- JavaScript and dependencies -->
@@ -35,55 +38,49 @@
           href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
           integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I"
           crossorigin="anonymous">-->
-    <link rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"/>
-    <link rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css"
-          integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8="
-          crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css"
+      integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8="
+      crossorigin="anonymous"
+    />
 
-    {{ $style := resources.Get "scss/main.scss" | resources.ToCSS (dict "outputStyle" "compressed" "includePaths" (slice "node_modules")) }}
-    <link rel="stylesheet"
-          type="text/css"
-          href="{{ $style.RelPermalink }}" />
-    <link rel="icon"
-          type="image/png"
-          sizes="32x32"
-          href="/favicon-32x32.png">
-    <link rel="icon"
-          type="image/png"
-          sizes="16x16"
-          href="/favicon-16x16.png">
-    <link rel="shortcut icon"
-          href="/favicon.ico">
-</head>
+    {{ $style := resources.Get "scss/main.scss" | resources.ToCSS (dict
+    "outputStyle" "compressed" "includePaths" (slice "node_modules")) }}
+    <link rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+  </head>
 
-<body>
+  <body>
+    {{ partial "header" . }}
 
-{{ partial "header" . }}
-
-<div class="columns is-desktop codelibrary">
-    <div class="column is-narrow">
-    {{ partial "sidebar" . }}
+    <div class="columns is-desktop codelibrary">
+      <div class="column is-narrow">
+        {{ partial "sidebar" . }}
+      </div>
+      <div class="column codelibrary-content">
+        {{ block "main" . }} {{ end }}
+      </div>
     </div>
-    <div class="column codelibrary-content">
-    {{ block "main" . }}
-    {{ end }}
-    </div>
-</div>
 
-{{ partial "footer" . }}
+    {{ partial "footer" . }} {{ $defines := dict "process.env.NODE_ENV"
+    `"development"` }} {{ $opts := dict "targetPath" "index.js" "defines"
+    $defines }} {{ $built := resources.Get "js/main.js" | js.Build $opts |
+    minify | fingerprint }}
 
-
-{{ $defines := dict "process.env.NODE_ENV" `"development"` }}
-{{ $opts := dict "targetPath" "index.js" "defines" $defines }}
-
-{{ $built := resources.Get "js/main.js" | js.Build $opts | minify | fingerprint }}
-
-<script>var process = { "env": { "NODE_ENV": "production" } }</script>
-<script type="text/javascript"
-        src="{{ $built.RelPermalink }}"
-        defer></script>
-
-</body>
+    <script>
+      var process = { env: { NODE_ENV: "production" } };
+    </script>
+    <script
+      type="text/javascript"
+      src="{{ $built.RelPermalink }}"
+      defer
+    ></script>
+  </body>
 </html>
