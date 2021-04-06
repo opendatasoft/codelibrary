@@ -7,7 +7,7 @@ Animate your percentage KPI with `ods-gauge` and add an auto-reload feature.
 
 The percentage is computed with 2 `ods-aggregation` : one for value, and one for the max. For more information about how to compute metrics, see [ods-aggregation resource](/widget-tricks/ods-aggregation).
 
-These 2 variables are used in an AngularJS expression line 30 to set the value and the max of `ods-gauge` filled in by `ods-timer`.
+These 2 aggregations are used in an AngularJS expression line 28 to set the value and the max of `ods-gauge` filled in by `ods-timer`.
 
 **Animation**: You can change the speed of the animation by changing 2 variables:
 

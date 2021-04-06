@@ -8,6 +8,7 @@
     flex-wrap: wrap;
     margin-bottom: 20px;
 }
+
 /* Fix for early content wrapping in Safari*/
 .row-equal-height:before,
 .row-equal-height:after {
@@ -77,11 +78,11 @@
 ========================================================================== */
 .odswidget-gauge--circle .odswidget-gauge__svg {
     -webkit-transform: rotate(
--90deg
-);
+            -90deg
+    );
     transform: rotate(
--90deg
-);
+            -90deg
+    );
     height: 100%;
 }
 
