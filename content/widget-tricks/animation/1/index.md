@@ -1,11 +1,13 @@
 ---
 title: "Animated KPI"
-date: 2021-03-02T17:03:00+01:00
+date: 2021-04-06T20:57:00+02:00
 ---
 
 Animate your KPI with `ods-timer`. 
 
 The KPI is computed with `ods-aggregation`. For more information about how to compute metrics, see [ods-aggregation resource](/widget-tricks/ods-aggregation).
+
+ 
 
 **Animation**: You can change the speed of the animation by changing 2 variables:
 
