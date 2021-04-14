@@ -13,7 +13,7 @@ export function initSearch() {
         searchFunction(helper) {
             const container = document.querySelector('#algolia-results');
             container.style.display = helper.state.query === '' ? 'none' : 'block';
-
+            container.style.position = 'fixed';
             helper.search();
         },
         insightsClient: window.aa

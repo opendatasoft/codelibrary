@@ -1,7 +1,13 @@
 <aside class="sidebar"
        id="sidebarNavbar">
+   <div class="sidebar-header">
+     <div class="block search-wrapper">
+       <div id="algolia-box"></div>
+       <div class="search-results-wrapper">
+         <div id="algolia-results"></div>
+       </div>
+     </div>
     {{ if .IsPage }}
-     <div class="sidebar-header">
        <div class="block">
          <ul class="menu-list">
            <p class="menu-label">On this page</p>
@@ -25,10 +31,6 @@
         {{ $currentPage := . }}
         {{ $newContentCount := 0 }}
         <ul class="menu-list">
-          <div class="block">
-            <div id="algolia-box"></div>
-            <div id="algolia-results"></div>
-          </div>
             <li>
                 <a class="sidebar-subtitle"
                    href="{{ .Site.BaseURL }}">
