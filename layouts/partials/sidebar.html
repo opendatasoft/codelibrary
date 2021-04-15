@@ -46,7 +46,7 @@
                   <ul>
                       {{ range .Page.Pages }}
                         <li>
-                            <a class="{{ if eq $currentPage . }}is-active{{ end }}" href="{{ .Permalink }}">
+                            <a class="{{ if eq $currentPage . }}is-active{{ end }}" href="{{ .RelPermalink }}">
                               <div>
                                 {{ .Title }}
                                 {{ $newContentCount := len (where .Page.Resources ".Date" "ge" (now.AddDate 0 -1 0)) }}
@@ -84,7 +84,7 @@
         </p>
         <div class="tags">
             {{ range .Site.Taxonomies.tags }}
-            <a class="tag" href="{{ .Page.Permalink }}">
+            <a class="tag" href="{{ .Page.RelPermalink }}">
                 {{ .Page.Title }}
             </a>
             {{ end }}
