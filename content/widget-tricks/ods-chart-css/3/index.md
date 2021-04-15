@@ -50,7 +50,7 @@ Chart properties that can't be disabled by ods-chart parameters, can be hidden w
 
 Other specific properties :
 - `centered-tooltip` : to center the text in mouse hover tooltip
-- `transparent-background`, `remove-background`, `no-background`, `no-bg` : get rid of the default white background
+- `transparent-background`, `remove-background`, `no-background`, `no-bg` : get rid of the default white background.
 
  
 
