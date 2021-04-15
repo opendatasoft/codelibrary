@@ -215,5 +215,92 @@ Embed the view to see how this template activated it&amp;rsquo;s own filters and
         </item>
       
     
+      
+      
+        <item>
+          <title>Animated KPI</title>
+          <link>https://codelibrary.opendatasoft.com/widget-tricks/animation/#animated-kpi</link>
+          
+            <pubDate>Tue, 06 Apr 2021 20:57:00 +0200</pubDate>
+          
+          
+          <guid>https://codelibrary.opendatasoft.com/widget-tricks/animation/#animated-kpi</guid>
+          <description>&lt;p&gt;Animate your KPI with &lt;code&gt;ods-timer&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;The KPI is computed with &lt;code&gt;ods-aggregation&lt;/code&gt;. For more information about how to compute metrics, see &lt;a href=&#34;https://codelibrary.opendatasoft.com/widget-tricks/ods-aggregation&#34;&gt;ods-aggregation resource&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Animation&lt;/strong&gt;: You can change the speed of the animation by changing 2 variables:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;nbticks&lt;/code&gt;: number of steps to change the KPI. High value = many steps before reaching the final KPI.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;delay&lt;/code&gt;: delay between each tick. High delay = slow animation.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+      
+    
+      
+      
+        <item>
+          <title>ods-chart custom CSS library</title>
+          <link>https://codelibrary.opendatasoft.com/widget-tricks/ods-chart-css/#ods-chart-custom-css-library</link>
+          
+            <pubDate>Tue, 06 Apr 2021 21:00:10 +0200</pubDate>
+          
+          
+          <guid>https://codelibrary.opendatasoft.com/widget-tricks/ods-chart-css/#ods-chart-custom-css-library</guid>
+          <description>&lt;p&gt;This resource introduces a custom CSS library dedicated to ods-chart, it helps users to customize their charts easily by simply adding CSS classes to &lt;code&gt;ods-chart&lt;/code&gt; tag.
+&lt;strong&gt;To install it, simply copy the CSS code of this resource, and paste it into your page.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;CSS classes follows this pattern : &lt;code&gt;value-[axis]-chartproperty&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Chart properties can be :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;axisline&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;gridline&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;axisline-ticks&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;chart-series&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;chart-legend-dash&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;chart-legend-circle&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;values&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;legend&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Axis can be &lt;code&gt;x&lt;/code&gt; or &lt;code&gt;y&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;For paths, like axislines, gridlines, ticks, chart series, legend dashes and chart legend circles, &lt;code&gt;value&lt;/code&gt; can be :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;small&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;medium&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;large&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;extralarge&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For texts, like legends and values, &lt;code&gt;value&lt;/code&gt; can be :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;light&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;normal&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;bold&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;For paths and texts that can be colored, &lt;code&gt;value&lt;/code&gt; can be :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;lightgrey&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;darkgrey&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;black&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Chart properties that can&amp;rsquo;t be disabled by ods-chart parameters, can be hidden with &lt;code&gt;hide&lt;/code&gt; as the &lt;code&gt;value&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Other specific properties :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;centered-tooltip&lt;/code&gt; : to center the text in mouse hover tooltip&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;transparent-background&lt;/code&gt;, &lt;code&gt;remove-background&lt;/code&gt;, &lt;code&gt;no-background&lt;/code&gt;, &lt;code&gt;no-bg&lt;/code&gt; : get rid of the default white background.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Examples:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Hide Y values : &lt;code&gt;hide-y-values&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Hide X legend : &lt;code&gt;hide-x-legend&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Bold weight for Y values font : &lt;code&gt;bold-y-values&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Black color for Y legend font : &lt;code&gt;black-y-legend&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Larger stroke for chart series : &lt;code&gt;large-chart-series&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Extralarge dash in chart legend (for line/spline series) : &lt;code&gt;extralarge-chart-legend-dash&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;etc&amp;hellip;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+      
+    
   </channel>
 </rss>

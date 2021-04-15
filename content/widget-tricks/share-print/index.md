@@ -1,6 +1,6 @@
 ---
 title: "Share and print"
-description: ""
+description: It highlights "urlsync" parameter. It allows users to copy and share the URL with all applied filters and query.
 tags: ["display"]
 resources:
 - src: '*/'
