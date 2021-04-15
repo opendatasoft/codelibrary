@@ -35,7 +35,7 @@
                 <h4>
                     linear gradient left to center to right
                 </h4>
-                <ods-chart class="no-bg hide-x-legend hide-y-values large-data-values large-data-values large-y-legend hide-y-gridline small-y-gridline medium-x-values"
+                <ods-chart class="no-bg hide-x-legend hide-y-values large-data-values large-data-values large-y-legend hide-y-gridline small-y-gridline medium-x-values small-chart-series darkgrey-chart-series"
                            labels-x-length="20"
                            single-y-axis="true"
                            single-y-axis-label="Number of sites"

@@ -17,7 +17,7 @@
             <div class="card-content">
                 <h3 class="title">
                     {{ .Title }}
-                    {{ $newContentCount := len (where .Page.Resources ".Date" "ge" (now.AddDate 0 -2 0)) }}
+                    {{ $newContentCount := len (where .Page.Resources ".Date" "ge" (now.AddDate 0 -1 0)) }}
                     {{ if ne $newContentCount 0 }}
                       <span class="tag pill is-size-7 is-rounded is-info">
                         {{ $newContentCount }}
