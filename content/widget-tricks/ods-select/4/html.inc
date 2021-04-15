@@ -1,6 +1,7 @@
 <div class="container">
     <ods-dataset-context context="kreis,lander"
                          lander-dataset="georef-germany-land@public"
+                         lander-parameters="{'fields':'lan_name,lan_code'}"
                          kreis-dataset="georef-germany-kreis@public">
         <div ods-results="landerlist"
              ods-results-context="lander"

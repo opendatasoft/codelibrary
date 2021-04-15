@@ -163,6 +163,12 @@
              </a>
            </li>
            
+           <li>
+             <a href="#filters-as-a-sentence">
+               Filters as a sentence
+             </a>
+           </li>
+           
          </ul>
        </div>
      </div>
@@ -504,6 +510,10 @@
                               <div>
                                 ods-select
                                 
+                                
+                                <span class="tag pill is-size-7 is-rounded is-info">
+                                  1
+                                </span>
                                 
                               </div>
                             </a>
@@ -2026,6 +2036,9 @@ h3 {
 Specially for geographical division (City names, States etc&hellip;)</p>
 <p>This resource showcase <code>ods-results</code> as the source of ods-select but most of all <a href="https://data.opendatasoft.com/explore/?refine.publisher=Opendatasoft&amp;refine.theme=Geographical+referentials">Opendatasoft geo referentials</a> that always propose codes and labels for each division.</p>
 <p><code>ods-results</code> <a href="https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsResults">documentation</a>.</p>
+<blockquote>
+<p><strong>IMPORTANT:</strong> In the <code>lander</code> context, an optional parameter <code>fields</code> is set to limit the size of the results. It improves DRASTICALLY the performance to avoid manipulating big geo shapes in geo datasets. We STRONGLY advise to keep this parameter and list only the required fields (ie. the &ldquo;label field&rdquo; and the &ldquo;value field&rdquo; of your ods-select)</p>
+</blockquote>
 
         </div>
         
@@ -2046,7 +2059,7 @@ Specially for geographical division (City names, States etc&hellip;)</p>
                "title": "New Pen!",
                "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
                "editors": 110,
-               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;container\&#34;\u003e\n    \u003cods-dataset-context context=\&#34;kreis,lander\&#34;\n                         lander-dataset=\&#34;georef-germany-land@public\&#34;\n                         kreis-dataset=\&#34;georef-germany-kreis@public\&#34;\u003e\n        \u003cdiv ods-results=\&#34;landerlist\&#34;\n             ods-results-context=\&#34;lander\&#34;\n             ods-results-max=\&#34;500\&#34;\u003e\n            \u003ch3\u003e\n                Display the name, refine with the code\n            \u003c/h3\u003e\n            \u003cods-select options=\&#34;landerlist\&#34;\n                        selected-values=\&#34;kreis.parameters[&#39;refine.lan_code&#39;]\&#34;\n                        label-modifier=\&#34;fields.lan_name\&#34;\n                        value-modifier=\&#34;fields.lan_code\&#34;\n                        placeholder=\&#34;Select a Lander\&#34;\u003e\u003c/ods-select\u003e\n            \u003ch4\u003e\n                Selected Lander code (used to refine the map context) : {{ kreis.parameters[&#39;refine.lan_code&#39;] }}\n            \u003c/h4\u003e\n            \u003cods-map no-refit=\&#34;true\&#34; scroll-wheel-zoom=\&#34;false\&#34; basemap=\&#34;jawg.sunny\&#34; location=\&#34;6,51.32924,10.45403\&#34;\u003e\n                \u003cods-map-layer-group\u003e\n                    \u003cods-map-layer context=\&#34;kreis\&#34; color=\&#34;#0086D6\&#34; picto=\&#34;ods-circle\&#34;\n                                   show-marker=\&#34;true\&#34; display=\&#34;auto\&#34; shape-opacity=\&#34;0.8\&#34; point-opacity=\&#34;1\&#34;\n                                   border-color=\&#34;#FFFFFF\&#34; border-opacity=\&#34;1\&#34; border-size=\&#34;1.5\&#34;\n                                   border-pattern=\&#34;solid\&#34; size=\&#34;4\&#34; size-min=\&#34;3\&#34; size-max=\&#34;5\&#34;\n                                   size-function=\&#34;linear\&#34;\u003e\u003c/ods-map-layer\u003e\n                \u003c/ods-map-layer-group\u003e\n            \u003c/ods-map\u003e\n            \u003cul\u003e\n                \u003cli\u003e\n                    \u003ca href=\&#34;https://data.opendatasoft.com/explore/dataset/georef-germany-land%40public/\&#34;\n                       target=\&#34;_blank\&#34;\u003eGermany Lander dataset source\u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli\u003e\n                    \u003ca href=\&#34;https://data.opendatasoft.com/explore/dataset/georef-germany-kreis%40public/\&#34;\n                       target=\&#34;_blank\&#34;\u003eGermany Kreis dataset source\u003c/a\u003e\n                \u003c/li\u003e\n            \u003c/ul\u003e\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;container\&#34;\u003e\n    \u003cods-dataset-context context=\&#34;kreis,lander\&#34;\n                         lander-dataset=\&#34;georef-germany-land@public\&#34;\n                         lander-parameters=\&#34;{&#39;fields&#39;:&#39;lan_name,lan_code&#39;}\&#34;\n                         kreis-dataset=\&#34;georef-germany-kreis@public\&#34;\u003e\n        \u003cdiv ods-results=\&#34;landerlist\&#34;\n             ods-results-context=\&#34;lander\&#34;\n             ods-results-max=\&#34;500\&#34;\u003e\n            \u003ch3\u003e\n                Display the name, refine with the code\n            \u003c/h3\u003e\n            \u003cods-select options=\&#34;landerlist\&#34;\n                        selected-values=\&#34;kreis.parameters[&#39;refine.lan_code&#39;]\&#34;\n                        label-modifier=\&#34;fields.lan_name\&#34;\n                        value-modifier=\&#34;fields.lan_code\&#34;\n                        placeholder=\&#34;Select a Lander\&#34;\u003e\u003c/ods-select\u003e\n            \u003ch4\u003e\n                Selected Lander code (used to refine the map context) : {{ kreis.parameters[&#39;refine.lan_code&#39;] }}\n            \u003c/h4\u003e\n            \u003cods-map no-refit=\&#34;true\&#34; scroll-wheel-zoom=\&#34;false\&#34; basemap=\&#34;jawg.sunny\&#34; location=\&#34;6,51.32924,10.45403\&#34;\u003e\n                \u003cods-map-layer-group\u003e\n                    \u003cods-map-layer context=\&#34;kreis\&#34; color=\&#34;#0086D6\&#34; picto=\&#34;ods-circle\&#34;\n                                   show-marker=\&#34;true\&#34; display=\&#34;auto\&#34; shape-opacity=\&#34;0.8\&#34; point-opacity=\&#34;1\&#34;\n                                   border-color=\&#34;#FFFFFF\&#34; border-opacity=\&#34;1\&#34; border-size=\&#34;1.5\&#34;\n                                   border-pattern=\&#34;solid\&#34; size=\&#34;4\&#34; size-min=\&#34;3\&#34; size-max=\&#34;5\&#34;\n                                   size-function=\&#34;linear\&#34;\u003e\u003c/ods-map-layer\u003e\n                \u003c/ods-map-layer-group\u003e\n            \u003c/ods-map\u003e\n            \u003cul\u003e\n                \u003cli\u003e\n                    \u003ca href=\&#34;https://data.opendatasoft.com/explore/dataset/georef-germany-land%40public/\&#34;\n                       target=\&#34;_blank\&#34;\u003eGermany Lander dataset source\u003c/a\u003e\n                \u003c/li\u003e\n                \u003cli\u003e\n                    \u003ca href=\&#34;https://data.opendatasoft.com/explore/dataset/georef-germany-kreis%40public/\&#34;\n                       target=\&#34;_blank\&#34;\u003eGermany Kreis dataset source\u003c/a\u003e\n                \u003c/li\u003e\n            \u003c/ul\u003e\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
                "css": &#34;&#34; }'>
     </form>
 </div>
@@ -2173,6 +2186,7 @@ Specially for geographical division (City names, States etc&hellip;)</p>
             &lt;div class=&#34;container&#34;&gt;
     &lt;ods-dataset-context context=&#34;kreis,lander&#34;
                          lander-dataset=&#34;georef-germany-land@public&#34;
+                         lander-parameters=&#34;{&#39;fields&#39;:&#39;lan_name,lan_code&#39;}&#34;
                          kreis-dataset=&#34;georef-germany-kreis@public&#34;&gt;
         &lt;div ods-results=&#34;landerlist&#34;
              ods-results-context=&#34;lander&#34;
@@ -2258,6 +2272,7 @@ Specially for geographical division (City names, States etc&hellip;)</p>
                     <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;container&#34;&gt;
     &lt;ods-dataset-context context=&#34;kreis,lander&#34;
                          lander-dataset=&#34;georef-germany-land@public&#34;
+                         lander-parameters=&#34;{&#39;fields&#39;:&#39;lan_name,lan_code&#39;}&#34;
                          kreis-dataset=&#34;georef-germany-kreis@public&#34;&gt;
         &lt;div ods-results=&#34;landerlist&#34;
              ods-results-context=&#34;lander&#34;
@@ -2338,6 +2353,334 @@ Specially for geographical division (City names, States etc&hellip;)</p>
       </div>
     </div>
     
+    <div class="container">
+      <div class="box box-example">
+        <h2 class="title is-2" id="filters-as-a-sentence">
+          Filters as a sentence
+          
+            <span class="tag is-rounded is-info">New</span>
+          
+          <a class="is-link anchor" href="#filters-as-a-sentence">
+            <span class="icon">
+              <img src="/img/fas-link.svg" />
+            </span>
+          </a>
+        </h2>
+        
+        <div class="content">
+          <p>Read a sentence that describes the applied filters in your page by inlining several ods-select.</p>
+
+        </div>
+        
+
+
+<div class="codepen">
+    
+    
+    
+
+    <form id="form-filters-as-a-sentence"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+               "title": "New Pen!",
+               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+               "editors": 110,
+               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;ods-selects\&#34;\u003e\n    \u003cp\u003eShow\u003c/p\u003e\n    \u003cods-select selected-values=\&#34;choice\&#34;\n                options=\&#34;[&#39;objects&#39;,&#39;things&#39;,&#39;stuff&#39;]\&#34;\n                placeholder=\&#34;pick what you want\&#34;\u003e\u003c/ods-select\u003e\n    \u003cp\u003ein the\u003c/p\u003e\n    \u003cods-select selected-values=\&#34;place\&#34;\n                options=\&#34;[&#39;car&#39;,&#39;home&#39;]\&#34;\n                placeholder=\&#34;pick a place\&#34;\u003e\u003c/ods-select\u003e\n    \u003cp\u003esince\u003c/p\u003e\n    \u003cods-select selected-values=\&#34;month\&#34;\n                options=\&#34;[&#39;Jan&#39;,&#39;Feb&#39;,&#39;Mar&#39;,&#39;Apr&#39;,&#39;May&#39;,&#39;Jun&#39;,&#39;Jul&#39;,&#39;Aug&#39;,&#39;Sep&#39;,&#39;Oct&#39;,&#39;Nov&#39;,&#39;Dec&#39;]\&#34;\n                placeholder=\&#34;month\&#34;\u003e\u003c/ods-select\u003e\n    \u003cods-select selected-values=\&#34;year\&#34;\n                options=\&#34;[&#39;2018&#39;,&#39;2019&#39;,&#39;2020&#39;,&#39;2021&#39;]\&#34;\n                placeholder=\&#34;year\&#34;\u003e\u003c/ods-select\u003e\n    \u003cp\u003e.\u003c/p\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
+               "css": &#34;/***** Inlined SELECT *****/\n.ods-selects {\n    font-size: 1.1em;\n    display: flex;\n    flex-wrap: wrap;\n    align-items: center;\n}\n\n.ods-selects \u003e .odswidget-select {\n    margin: 0 6px;\n}\n.ods-selects \u003e :not(.odswidget-select) {\n    margin-top: 0;\n    margin-bottom: 0;\n}&#34; }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-filters-as-a-sentence"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;defaultDomain&#34;: &#34;https://userclub.opendatasoft.com/&#34;,
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                },
+                {
+                    &#34;provider&#34;: &#34;jawg.streets&#34;,
+                    &#34;label&#34;: &#34;Jawg Streets&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;,
+                    &#34;id&#34;: &#34;streets&#34;
+                }
+            ],
+            &#34;themes&#34;: {
+                &#39;default&#39;: {
+                    &#39;url&#39;: &#39;/img/ods.svg&#39;
+                },
+                &#39;Santé&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Culture, Patrimoine&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Environment&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Transports, Déplacements&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Justice, Sécurité, Police, Crime&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Sport, Loisirs&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Hébergement, Restauration&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Services, Social&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Checklist&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Usages&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                }
+            },
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+
+        </head>
+        <body>
+        <div ng-app='ods-widgets'>
+            &lt;div class=&#34;ods-selects&#34;&gt;
+    &lt;p&gt;Show&lt;/p&gt;
+    &lt;ods-select selected-values=&#34;choice&#34;
+                options=&#34;[&#39;objects&#39;,&#39;things&#39;,&#39;stuff&#39;]&#34;
+                placeholder=&#34;pick what you want&#34;&gt;&lt;/ods-select&gt;
+    &lt;p&gt;in the&lt;/p&gt;
+    &lt;ods-select selected-values=&#34;place&#34;
+                options=&#34;[&#39;car&#39;,&#39;home&#39;]&#34;
+                placeholder=&#34;pick a place&#34;&gt;&lt;/ods-select&gt;
+    &lt;p&gt;since&lt;/p&gt;
+    &lt;ods-select selected-values=&#34;month&#34;
+                options=&#34;[&#39;Jan&#39;,&#39;Feb&#39;,&#39;Mar&#39;,&#39;Apr&#39;,&#39;May&#39;,&#39;Jun&#39;,&#39;Jul&#39;,&#39;Aug&#39;,&#39;Sep&#39;,&#39;Oct&#39;,&#39;Nov&#39;,&#39;Dec&#39;]&#34;
+                placeholder=&#34;month&#34;&gt;&lt;/ods-select&gt;
+    &lt;ods-select selected-values=&#34;year&#34;
+                options=&#34;[&#39;2018&#39;,&#39;2019&#39;,&#39;2020&#39;,&#39;2021&#39;]&#34;
+                placeholder=&#34;year&#34;&gt;&lt;/ods-select&gt;
+    &lt;p&gt;.&lt;/p&gt;
+&lt;/div&gt;
+        </div>
+        <style type='text/css'>
+            /***** Inlined SELECT *****/
+.ods-selects {
+    font-size: 1.1em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.ods-selects &gt; .odswidget-select {
+    margin: 0 6px;
+}
+.ods-selects &gt; :not(.odswidget-select) {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+        </style>
+        </body>
+        ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level is-flex">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-secondary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-filters-as-a-sentence-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        
+                        <li class="button is-secondary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-filters-as-a-sentence-css-content">
+                                CSS
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right mt-0">
+                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
+                   data-tooltip="Edit on CodePen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-filters-as-a-sentence').submit()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-edit">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-filters-as-a-sentence-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;ods-selects&#34;&gt;
+    &lt;p&gt;Show&lt;/p&gt;
+    &lt;ods-select selected-values=&#34;choice&#34;
+                options=&#34;[&#39;objects&#39;,&#39;things&#39;,&#39;stuff&#39;]&#34;
+                placeholder=&#34;pick what you want&#34;&gt;&lt;/ods-select&gt;
+    &lt;p&gt;in the&lt;/p&gt;
+    &lt;ods-select selected-values=&#34;place&#34;
+                options=&#34;[&#39;car&#39;,&#39;home&#39;]&#34;
+                placeholder=&#34;pick a place&#34;&gt;&lt;/ods-select&gt;
+    &lt;p&gt;since&lt;/p&gt;
+    &lt;ods-select selected-values=&#34;month&#34;
+                options=&#34;[&#39;Jan&#39;,&#39;Feb&#39;,&#39;Mar&#39;,&#39;Apr&#39;,&#39;May&#39;,&#39;Jun&#39;,&#39;Jul&#39;,&#39;Aug&#39;,&#39;Sep&#39;,&#39;Oct&#39;,&#39;Nov&#39;,&#39;Dec&#39;]&#34;
+                placeholder=&#34;month&#34;&gt;&lt;/ods-select&gt;
+    &lt;ods-select selected-values=&#34;year&#34;
+                options=&#34;[&#39;2018&#39;,&#39;2019&#39;,&#39;2020&#39;,&#39;2021&#39;]&#34;
+                placeholder=&#34;year&#34;&gt;&lt;/ods-select&gt;
+    &lt;p&gt;.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+            
+            <div class="js-tabcontent"
+                 id="code-filters-as-a-sentence-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>/***** Inlined SELECT *****/
+.ods-selects {
+    font-size: 1.1em;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.ods-selects &gt; .odswidget-select {
+    margin: 0 6px;
+}
+.ods-selects &gt; :not(.odswidget-select) {
+    margin-top: 0;
+    margin-bottom: 0;
+}</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-filters-as-a-sentence";
+            iframe = document.getElementById(iframeId);
+             
+            size =  400 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-filters-as-a-sentence";
+            iframe = document.getElementById(iframeId);
+
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+            }
+        }, 1000);
+    });
+</script>
+
+      </div>
+    </div>
+    
   </section>
 
       </div>
@@ -2365,7 +2708,7 @@ Specially for geographical division (City names, States etc&hellip;)</p>
     </script>
     <script
       type="text/javascript"
-      src="/index.min.a2d29702bc1ba00e41c8a549ddfdb348c67804eb2b40382ce695033b1677ea43.js"
+      src="/index.min.34c5a309e21ed7ebf769ff8917c0119ba0efc33353503e847d335c378022b772.js"
       defer
     ></script>
   </body>
