@@ -2,7 +2,6 @@
 title: "Domain Datasets"
 date: 2021-04-19T14:57:49+02:00
 description: "Overview of all datasets of the domain"
-tags: ["dashboard"]
 resources:
 - src: '*/'
   title: 'Section #:counter'

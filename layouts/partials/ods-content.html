@@ -7,7 +7,7 @@
 {{ if (and .Params.domainid .Params.datasetid) }}
     {{ $openctx := printf "%s%s%s%s%s" "<ods-dataset-context context=\"ctx\"\n ctx-dataset=\"" .Params.datasetid "\"\n ctx-domain=\"" .Params.domainid "\">\n" }}
     {{ $closectx := "</ods-dataset-context>\n" }}
-    {{ $htmlcontent = printf "%s%s%s%s%s%s%s%s%s" "<div ng-app=\"ods-widgets\">\n" $openctx "\n" $html "\n" $closectx "</div>" }}
+    {{ $htmlcontent = printf "%s%s%s%s%s%s%s" "<div ng-app=\"ods-widgets\">\n" $openctx "\n" $html "\n" $closectx "</div>" }}
 {{ else }}
     {{ $htmlcontent = printf "%s%s%s" "<div ng-app=\"ods-widgets\">\n" $html "</div>" }}
 {{ end }}
@@ -38,9 +38,7 @@
               srcdoc="
                 <head>{{ $head }}</head>
                 <body>
-                <div ng-app='ods-widgets'>
-                    {{ $htmlcontent }}
-                </div>
+                <div ng-app='ods-widgets'>{{ $htmlcontent }}</div>
                 <style type='text/css'>
                     {{ $css }}
                 </style>
