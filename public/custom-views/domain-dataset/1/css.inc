@@ -1,7 +1,4 @@
 :root {
-  /* change values by the size of the header & the footer to make the modal fit your page properly */
-  --header-size: 20px;
-  --footer-size: 20px;
   --identity: #142e7b;
   --identity-light: #F2F3F8;
   --success: #00C7B1;
@@ -38,18 +35,6 @@
 .odswidget-tag-cloud {
   font-size: 0.8rem;
   color: var(--light-600);
-}
-
-/* Layout */
-.custom-view {
-  /* prerequisite for full height modal bar */
-  position: relative;
-  /* prevent the page to be shrinked if the content is less than the browser height, force a minimal height */
-  min-height: calc(100vh - var(--modal-margin));
-}
-
-section {
-  margin: 24px;
 }
 
 /* Elements */
