@@ -1,32 +1,34 @@
+">
 
-     ">
-
-    <!-- TABS -->
-    <ods-simple-tabs class="tab-pills"
+<!-- TABS -->
+<div ng-init="categories = ((kpis | toObject : 'category') | keys)">
+    <ods-simple-tabs ng-show="categories.length > 0 && categories[0] != 'undefined'"
+                     class="tab-pills"
                      sync-to-scope="activecategory">
-        <ods-simple-tab ng-repeat="category in (kpis | toObject : 'category') | keys"
+        <ods-simple-tab ng-repeat="category in categories"
+                        ng-if="category != 'undefined'"
                         label="{{ category }}"
                         keep-content="true">
         </ods-simple-tab>
     </ods-simple-tabs>
+</div>
 
+<!-- CARDS -->
+<section>
+    <div class="row row-equal-height">
+        <div ng-repeat="item in kpis"
+             ng-if="activecategory == (item.category | slugify) || !item.category"
+             class="{{ 'col-md-' + (12/itemsPerRowDesktop) }} {{ 'col-sm-' + (12/itemsPerRowTablet) }} col-xs-12 col-print-6 margin-bottom-20 {{ item.title | slugify }}">
 
-    <!-- CARDS -->
-    <section>
-        <div class="row row-equal-height">
-            <div ng-repeat="item in kpis"
-                 ng-if="activecategory == (item.category | slugify)"
-                 class="{{ 'col-md-' + (12/itemsPerRowDesktop) }} {{ 'col-sm-' + (12/itemsPerRowTablet) }} col-xs-12 col-print-6 margin-bottom-20 {{ item.title | slugify }}">
+            <ods-dataset-context context="kpictx"
+                                 kpictx-dataset="{{item.dataset_id}}">
 
-                <ods-dataset-context context="kpictx"
-                     kpictx-dataset="{{item.dataset_id}}">
+                <!-- Apply filters to kpi context -->
+                <!-- if no advanced parameters is defined, get the simple one -->
+                <span ng-if="!item.dataset_advanced_refine_parameters">{{ kpictx.parameters['refine.' + item.dataset_refine_key] = item.dataset_refine_value ; '' }}</span>
+                <span ng-if="item.dataset_advanced_refine_parameters">{{ kpictx.parameters = (item.dataset_advanced_refine_parameters.replaceAll('\'','"') | fromjson) ; '' }}</span>
 
-    <!-- Apply filters to kpi context -->
-    <!-- if no advanced parameters is defined, get the simple one -->
-    <span ng-if="!item.dataset_advanced_refine_parameters">{{ kpictx.parameters['refine.' + item.dataset_refine_key] = item.dataset_refine_value ; '' }}</span>
-    <span ng-if="item.dataset_advanced_refine_parameters">{{ kpictx.parameters = (item.dataset_advanced_refine_parameters.replaceAll('\'','"') | fromjson) ; '' }}</span>
-
-    <span ng-if="item.compare_mode == 'numeric'">
+                <span ng-if="item.compare_mode == 'numeric'">
 
                         <span ods-aggregation-context="kpictx"
                               ods-aggregation="result"
@@ -35,11 +37,11 @@
                             {{ item.result = result ; '' }}
                         </span>
 
-        <!-- KPI box component -->
+                    <!-- KPI box component -->
                         <div class="card-flip"
-     ng-init="isFlipped = false"
-     ng-click="isFlipped = (item.flip_additional_description?!isFlipped:isFlipped)"
-     ng-class="{'not-flippable': !item.flip_additional_description,
+                             ng-init="isFlipped = false"
+                             ng-click="isFlipped = (item.flip_additional_description?!isFlipped:isFlipped)"
+                             ng-class="{'not-flippable': !item.flip_additional_description,
                                    'is-flipped': isFlipped}">
 
     <div class="kpi-card card-face card-face-front">
@@ -56,7 +58,7 @@
                 {{ item.title }}
 
                 <span ng-if="item.strings.filtrenend">
-                    du {{ item.strings.filtrenstart }} au {{ item.strings.filtrenend }}
+                    {{ dateFormat.prefix + item.strings.filtrenstart + dateFormat.infix + item.strings.filtrenend + dateFormat.suffix }}
                 </span>
                 <span ng-if="!item.strings.filtrenend">
                     {{ item.strings.filtrenstart | capitalize }}
@@ -66,7 +68,7 @@
 
 
                 <div class="kpi-valref"
-     ng-if="item.compare_strategie">
+                     ng-if="item.compare_strategie">
     <ods-dataset-context context="kpivalrefctx"
                          kpivalrefctx-dataset="{{item.valref_dataset_id}}">
 
@@ -112,9 +114,11 @@
                     </span>
         {{ item.valref_suffix }}
         <span class="kpi-valref-date">{{
-                        (item.strings.filtrenmoinsunend?'du ':'') + item.strings.filtrenmoinsunstart + (item.strings.filtrenmoinsunend?' au ':'') + item.strings.filtrenmoinsunend
-                        }}
-                </span>
+            (item.strings.filtrenmoinsunend?dateFormat.prefix:'') +
+            item.strings.filtrenmoinsunstart +
+            (item.strings.filtrenmoinsunend?dateFormat.infix + item.strings.filtrenmoinsunend + dateFormat.suffix:'')
+            }}
+        </span>
     </div>
 </div>
 
@@ -127,10 +131,10 @@
     {{ item.valref_suffix }}
 </div>
 
-<!--
-<div ng-if="!(item.compare_strategie == 'diff' || item.compare_strategie == 'progression')">
-    Wrong setup : unknown compare_strategie (can be diff or progression)
-</div>-->
+            <!--
+            <div ng-if="!(item.compare_strategie == 'diff' || item.compare_strategie == 'progression')">
+                Wrong setup : unknown compare_strategie (can be diff or progression)
+            </div>-->
 
         </div>
     </ods-dataset-context>
@@ -159,16 +163,16 @@
 </div>
                     </span>
 
-    <span ng-if="item.compare_mode == 'date'"
-          ng-init="item.values = {'date':undefined};">
+                <span ng-if="item.compare_mode == 'date'"
+                      ng-init="item.values = {'date':undefined};">
                         <!-- Date selection strategy -->
-                        <div ng-switch="item.date_selection_strategie">
-    <div ng-switch-when="ods-datetime">
+                        <div ng-switch="item.get_date_from">
+    <div ng-switch-when="now">
         <div ods-datetime="today">
             {{ item.values.date = (today | moment : 'YYYY/MM/DD') ; '' }}
         </div>
     </div>
-    <div ng-switch-when="ods-results">
+    <div ng-switch-when="data">
         {{ kpictx.parameters['sort'] = item.date_field_id; '' }}
         <div ods-results="items"
              ods-results-context="kpictx"
@@ -198,21 +202,21 @@
                             {{
 item.strings.date = (item.values.date | moment | date : (item.date_format || 'd MMM yyyy'));
 item.values.debutdumois = (item.values.date | moment : 'YYYY/MM/01');
-item.strings.debutdumois = (item.values.debutdumois | moment | date : 'd MMM yyyy');
+item.strings.debutdumois = (item.values.debutdumois | moment | date : 'mediumDate');
 item.values.debutdumoisdelanneeprecedente = (item.values.date | moment : 'YYYY/MM/01' | momentadd : 'year' : -1 | moment : 'YYYY/MM/DD');
-item.strings.debutdumoisdelanneeprecedente = (item.values.date | moment : 'YYYY/MM/01' | momentadd : 'year' : -1 | date : 'd MMM yyyy');
+item.strings.debutdumoisdelanneeprecedente = (item.values.date | moment : 'YYYY/MM/01' | momentadd : 'year' : -1 | date : 'mediumDate');
 item.values.debutdelannee = (item.values.date | moment : 'YYYY/01/01');
-item.strings.debutdelannee = (item.values.debutdelannee | moment | date : 'd MMM yyyy');
+item.strings.debutdelannee = (item.values.debutdelannee | moment | date : 'mediumDate');
 item.values.nowdumoisprecedent = (item.values.date | momentadd : 'month' : -1 | moment : 'YYYY/MM/DD');
-item.strings.nowdumoisprecedent = (item.values.date | momentadd : 'month' : -1 | date : 'd MMM yyyy');
+item.strings.nowdumoisprecedent = (item.values.date | momentadd : 'month' : -1 | date : 'mediumDate');
 item.values.nowdumoisprecedentdelanneeprecedente = (item.values.date | momentadd : 'month' : -13 | moment : 'YYYY/MM/DD');
-item.strings.nowdumoisprecedentdelanneeprecedente = (item.values.date | momentadd : 'month' : -13 | date : 'd MMM yyyy');
+item.strings.nowdumoisprecedentdelanneeprecedente = (item.values.date | momentadd : 'month' : -13 | date : 'mediumDate');
 item.values.nowdumoisprecedentprecedent = (item.values.date | momentadd : 'month' : -2 | moment : 'YYYY/MM/DD');
-item.strings.nowdumoisprecedentprecedent = (item.values.date | momentadd : 'month' : -2 | date : 'd MMM yyyy');
+item.strings.nowdumoisprecedentprecedent = (item.values.date | momentadd : 'month' : -2 | date : 'mediumDate');
 item.values.nowdelanneeprecedente = (item.values.date | momentadd : 'year' : -1 | moment : 'YYYY/MM/DD');
-item.strings.nowdelanneeprecedente = (item.values.date | momentadd : 'year' : -1 | date : 'd MMM yyyy');
+item.strings.nowdelanneeprecedente = (item.values.date | momentadd : 'year' : -1 | date : 'mediumDate');
 item.values.nowdelanneeprecedenteprecedente = (item.values.date | momentadd : 'year' : -2 | moment : 'YYYY/MM/DD');
-item.strings.nowdelanneeprecedenteprecedente = (item.values.date | momentadd : 'year' : -2 | date : 'd MMM yyyy');
+item.strings.nowdelanneeprecedenteprecedente = (item.values.date | momentadd : 'year' : -2 | date : 'mediumDate');
 item.values.moisplein = (item.values.debutdumois | momentadd : 'month' : -1 | moment : 'YYYY/MM/DD');
 item.strings.moisplein = (item.values.debutdumois | momentadd : 'month' : -1 | date : 'MMM yyyy');
 item.values.moispleindelanneeprecedente = (item.values.debutdumois | momentadd : 'month' : -13 | moment : 'YYYY/MM/DD');
@@ -220,22 +224,22 @@ item.strings.moispleindelanneeprecedente = (item.values.debutdumois | momentadd 
 item.values.moispleinprecedent = (item.values.debutdumois | momentadd : 'month' : -2 | moment : 'YYYY/MM/DD');
 item.strings.moispleinprecedent = (item.values.debutdumois | momentadd : 'month' : -2 | date : 'MMM yyyy');
 item.values.debutdelanneepleine = (item.values.debutdelannee | momentadd : 'year' : -1 | moment : 'YYYY/MM/DD');
-item.strings.debutdelanneepleine = (item.values.debutdelannee | momentadd : 'year' : -1 | date : 'd MMM yyyy');
+item.strings.debutdelanneepleine = (item.values.debutdelannee | momentadd : 'year' : -1 | date : 'mediumDate');
 item.values.debutdelanneeprecedente = (item.values.debutdelannee | momentadd : 'year' : -2 | moment : 'YYYY/MM/DD');
-item.strings.debutdelanneeprecedente = (item.values.debutdelannee | momentadd : 'year' : -2 | date : 'd MMM yyyy');
+item.strings.debutdelanneeprecedente = (item.values.debutdelannee | momentadd : 'year' : -2 | date : 'mediumDate');
 
 "" }}
 
-<!-- Keep for later, possible upgrades of this templates with quarters and semesters -->
-<!--
-item.values.nowtrimestre = ((item.values.date | moment : 'MM') / 3 | math: 'ceil');
-item.values.nowtrimestredebut = (item.values.date | moment : 'YYYY') + '/' + (item.values.nowtrimestre * 3 - 2 > 9?'':'0') + (item.values.nowtrimestre * 3 - 2);
-item.values.nowtrimestrefin = (item.values.date | moment : 'YYYY') + '/' + (item.values.nowtrimestre * 3 > 9?'':'0') + (item.values.nowtrimestre * 3);
+                            <!-- Keep for later, possible upgrades of this templates with quarters and semesters -->
+                            <!--
+                            item.values.nowtrimestre = ((item.values.date | moment : 'MM') / 3 | math: 'ceil');
+                            item.values.nowtrimestredebut = (item.values.date | moment : 'YYYY') + '/' + (item.values.nowtrimestre * 3 - 2 > 9?'':'0') + (item.values.nowtrimestre * 3 - 2);
+                            item.values.nowtrimestrefin = (item.values.date | moment : 'YYYY') + '/' + (item.values.nowtrimestre * 3 > 9?'':'0') + (item.values.nowtrimestre * 3);
 
-item.values.nowsemestre = ((item.values.date | moment : 'MM') / 6 | math: 'ceil');
-item.values.nowsemestredebut = (item.values.date | moment : 'YYYY') + '/' + (item.values.nowsemestre * 6 - 5 > 9?'':'0') + (item.values.nowsemestre * 6 - 5);
-item.values.nowsemestrefin = (item.values.date | moment : 'YYYY') + '/' + (item.values.nowsemestre * 6 > 9?'':'0') + (item.values.nowsemestre * 6);
--->
+                            item.values.nowsemestre = ((item.values.date | moment : 'MM') / 6 | math: 'ceil');
+                            item.values.nowsemestredebut = (item.values.date | moment : 'YYYY') + '/' + (item.values.nowsemestre * 6 - 5 > 9?'':'0') + (item.values.nowsemestre * 6 - 5);
+                            item.values.nowsemestrefin = (item.values.date | moment : 'YYYY') + '/' + (item.values.nowsemestre * 6 > 9?'':'0') + (item.values.nowsemestre * 6);
+                            -->
 
 <div ng-switch="item.compare_date_strategie">
     <div ng-switch-when="RM/RM-1">
@@ -359,9 +363,9 @@ item.values.nowsemestrefin = (item.values.date | moment : 'YYYY') + '/' + (item.
 
                                     <!-- KPI box component with date compare -->
                                     <div class="card-flip"
-     ng-init="isFlipped = false"
-     ng-click="isFlipped = (item.flip_additional_description?!isFlipped:isFlipped)"
-     ng-class="{'not-flippable': !item.flip_additional_description,
+                                         ng-init="isFlipped = false"
+                                         ng-click="isFlipped = (item.flip_additional_description?!isFlipped:isFlipped)"
+                                         ng-class="{'not-flippable': !item.flip_additional_description,
                                    'is-flipped': isFlipped}">
 
     <div class="kpi-card card-face card-face-front">
@@ -378,7 +382,7 @@ item.values.nowsemestrefin = (item.values.date | moment : 'YYYY') + '/' + (item.
                 {{ item.title }}
 
                 <span ng-if="item.strings.filtrenend">
-                    du {{ item.strings.filtrenstart }} au {{ item.strings.filtrenend }}
+                    {{ dateFormat.prefix + item.strings.filtrenstart + dateFormat.infix + item.strings.filtrenend + dateFormat.suffix }}
                 </span>
                 <span ng-if="!item.strings.filtrenend">
                     {{ item.strings.filtrenstart | capitalize }}
@@ -387,7 +391,7 @@ item.values.nowsemestrefin = (item.values.date | moment : 'YYYY') + '/' + (item.
 
 
                 <div class="kpi-valref"
-     ng-if="item.compare_strategie">
+                     ng-if="item.compare_strategie">
     <!-- KPI box component -->
     <div ods-aggregation-context="kpidatectxnmoinsun"
          ods-aggregation="resultvalref"
@@ -425,9 +429,11 @@ item.values.nowsemestrefin = (item.values.date | moment : 'YYYY') + '/' + (item.
                     </span>
         {{ item.valref_suffix }}
         <span class="kpi-valref-date">{{
-                        (item.strings.filtrenmoinsunend?'du ':'') + item.strings.filtrenmoinsunstart + (item.strings.filtrenmoinsunend?' au ':'') + item.strings.filtrenmoinsunend
-                        }}
-                </span>
+            (item.strings.filtrenmoinsunend?dateFormat.prefix:'') +
+            item.strings.filtrenmoinsunstart +
+            (item.strings.filtrenmoinsunend?dateFormat.infix + item.strings.filtrenmoinsunend + dateFormat.suffix:'')
+            }}
+        </span>
     </div>
 </div>
 
@@ -440,10 +446,10 @@ item.values.nowsemestrefin = (item.values.date | moment : 'YYYY') + '/' + (item.
     {{ item.valref_suffix }}
 </div>
 
-<!--
-<div ng-if="!(item.compare_strategie == 'diff' || item.compare_strategie == 'progression')">
-    Wrong setup : unknown compare_strategie (can be diff or progression)
-</div>-->
+        <!--
+        <div ng-if="!(item.compare_strategie == 'diff' || item.compare_strategie == 'progression')">
+            Wrong setup : unknown compare_strategie (can be diff or progression)
+        </div>-->
 
     </div>
 </div>
@@ -474,20 +480,20 @@ item.values.nowsemestrefin = (item.values.date | moment : 'YYYY') + '/' + (item.
                             </span>
                         </span>
                     </span>
-</ods-dataset-context>            </div>
+            </ods-dataset-context>            </div>
 
-            <!-- Pop-ins of all KPIs -->
-            <div ng-repeat="item in kpis"
-                 class="ods-pop-in"
-                 ng-if="values.popin == (item.title | slugify)">
-                <div class="ods-pop-in__container iframe-container">
-                    <iframe ng-src="{{ item.link }}"
-                            width="100%"
-                            height="100%"></iframe>
-                </div>
-                <div class="ods-pop-in__backdrop"
-                     ng-click="values.popin = false"></div>
+        <!-- Pop-ins of all KPIs -->
+        <div ng-repeat="item in kpis"
+             class="ods-pop-in"
+             ng-if="values.popin == (item.title | slugify)">
+            <div class="ods-pop-in__container iframe-container">
+                <iframe ng-src="{{ item.link }}"
+                        width="100%"
+                        height="100%"></iframe>
             </div>
+            <div class="ods-pop-in__backdrop"
+                 ng-click="values.popin = false"></div>
         </div>
-    </section>
+    </div>
+</section>
 </div>
