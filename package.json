@@ -5,7 +5,8 @@
   "main": "hugo server -D",
   "scripts": {
     "start": "rm -rf public/ && hugo serve -D",
-    "algolia": "atomic-algolia"
+    "algolia": "atomic-algolia",
+    "submit": "hugo && git add . && git commit -m 'build site' && git push && gh pr create --title"
   },
   "repository": {
     "type": "git",
