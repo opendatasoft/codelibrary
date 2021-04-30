@@ -60,7 +60,7 @@
           href="/explore/dataset/domaindatasets/table/?q=publishing_properties:'federated'+or+publishing_properties:'scheduled'&sort=modified"
           target="_blank"
         >
-        {{ ctx.parameters['sort'] = 'modified' ; "" }}
+          {{ ctx.parameters['sort'] = 'modified' ; "" }}
           <ods-chart display-legend="false" align-month="true">
             <ods-chart-query
               context="ctx"
@@ -139,7 +139,7 @@
 
       <div class="col-md-6">
         <h2 class="title">
-          Dataset by producer
+          Dataset by publisher
         </h2>
         <ods-chart align-month="true" labels-x-length="20">
           <ods-chart-query
