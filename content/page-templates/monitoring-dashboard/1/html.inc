@@ -1,10 +1,15 @@
 <div class="ng-cloak" ng-app="ods-widgets">
     <div ods-datetime="now">
+      <!-- Replace the dataset context with this one 👇
+      <ods-dataset-context context="stats"
+                           stats-dataset="ods-api-monitoring"
+                           stats-source="monitoring"
+                           stats-parameters="{'disjunctive.dataset_id':true}"
+                           > -->
         <ods-dataset-context context="stats"
                              stats-dataset="monitoring-copy"
                              stats-parameters="{'disjunctive.dataset_id':true}"
                              >
-            <!-- TITLE -->
             <div class="container">
                 <section>
                     <h1 class="title">
@@ -15,7 +20,6 @@
                         These Analytics are based on usages made on <a href="/explore" target="_blank">Company's</a> data portal. Contact <a href=mailto:admin@mycompany.com class="link_color">Admin</a> for any additional questions.
                     </p>
                     <a href="/explore/dataset/ods-api-monitoring/?source=monitoring&disjunctive.dataset_id"> Access source data</a>
-
                     <a href="/explore"> Access Company's Data Hub</a>
                 </section>
                 <nav class="row row-sticky">
@@ -65,7 +69,6 @@
                                 Portal's activity.
                             </h2>
                             <p class="subtitle">Count of daily API calls from {{ startDate|date:longDate }} to {{ endDate|date:longDate }}.</p>
-
                             <ods-chart timescale="day" single-y-axis="true" align-month="true">
                                 <ods-chart-query context="stats" field-x="timestamp" maxpoints="20" timescale="day">
                                     <ods-chart-serie expression-y="size_res" chart-type="areaspline" function-y="COUNT" color="#26ADFF" label-y="Count API calls" scientific-display="true" display-values="true">
@@ -122,6 +125,12 @@
                 </section>
                 <section class="row">
                     <div class="col-md-6">
+                      <!-- Replace the dataset context with this one 👇
+                      <ods-dataset-context context="noresults"
+                                           noresults-dataset="ods-api-monitoring"
+                                           noresults-source="monitoring"
+                                           noresults-parameters="{'q':'nhits=0'}"
+                                           > -->
                         <ods-dataset-context context="noresults"
                                              noresults-dataset="monitoring-copy"
                                              noresults-parameters="{'q':'nhits=0'}"
@@ -158,6 +167,12 @@
                         </ods-dataset-context>
                     </div>
                     <div class="col-md-6">
+                      <!-- Replace the dataset context with this one 👇
+                      <ods-dataset-context context="queries"
+                                           queries-dataset="ods-api-monitoring"
+                                           queries-source="monitoring"
+                                           queries-parameters="{'q':'NOT #null(query_text)'}"
+                                           > -->
                         <ods-dataset-context context="queries"
                                              queries-dataset="monitoring-copy"
                                              queries-parameters="{'q':'NOT #null(query_text)'}"

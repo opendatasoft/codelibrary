@@ -3,6 +3,12 @@ body {
   background-color: #ffffff;
 }
 
+@media screen and (max-width: 968px) {
+  body {
+    padding: 0;
+  }
+}
+
 /* ODS Over-ride */
 .row > *:first-child {
   margin-left: 0;
@@ -20,6 +26,10 @@ body {
 @media screen and (max-width: 968px) {
   .row {
     flex-direction: column;
+  }
+
+  .row > *:not(:last-child) {
+    margin-bottom: 16px;
   }
 }
 
@@ -75,6 +85,7 @@ h5.subtitle {
 }
 
 /* Components */
+
 .menu {
   display: flex;
   justify-content: center;
@@ -83,6 +94,16 @@ h5.subtitle {
   border-radius: 999px;
   padding: 0 16px;
   margin-top: 16px;
+}
+
+@media screen and (max-width: 968px) {
+  .menu {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .filter {
@@ -146,6 +167,26 @@ h5.subtitle {
 
 .filter .odswidget-select-input-container {
   border: none;
+}
+
+@media screen and (max-width: 968px) {
+  .filter {
+    justify-content: center;
+  }
+
+  .filter .odswidget-timerange {
+    flex-direction: column;
+  }
+
+  .filter .odswidget-timerange__from {
+    margin-bottom: 2em;
+  }
+
+  .filter:not(:last-child) {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid lightgray;
+  }
 }
 
 .card {
