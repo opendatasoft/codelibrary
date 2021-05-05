@@ -1,10 +1,15 @@
 <div class="ng-cloak" ng-app="ods-widgets">
     <div ods-datetime="now">
+      <!-- Replace the dataset context with this one 👇
       <ods-dataset-context context="stats"
                            stats-dataset="ods-api-monitoring"
                            stats-source="monitoring"
                            stats-parameters="{'disjunctive.dataset_id':true}"
-      >
+                           > -->
+        <ods-dataset-context context="stats"
+                             stats-dataset="monitoring-copy"
+                             stats-parameters="{'disjunctive.dataset_id':true}"
+                             >
             <div class="container">
                 <section>
                     <h1 class="title">
@@ -24,14 +29,14 @@
                                  ods-facet-results-context="stats"
                                  ods-facet-results-facet-name="dataset_id"
                                  ods-facet-results-sort="alphanum"
-                            >
+                                 >
                                 <ods-select placeholder="Dataset"
                                             selected-values="stats.parameters['refine.dataset_id']"
                                             multiple="false"
                                             options="items"
                                             label-modifier="name"
                                             value-modifier="name"
-                                >
+                                            >
                                 </ods-select>
                                 {{download.parameters['refine.dataset_id']=stats.parameters['refine.dataset_id'];
                                 users.parameters['refine.dataset_id']=stats.parameters['refine.dataset_id'];
@@ -52,7 +57,7 @@
                                            users-time-field="timestamp"
                                            from="startDate"
                                            to="endDate"
-                            >
+                                           >
                             </ods-timerange>
                         </div>
                     </div>
@@ -100,7 +105,7 @@
                     <div class="col-md-6">
                         <ods-dataset-context context="download"
                                              download-dataset="monitoring-copy"
-                        >
+                                             >
                             {{ download.parameters['q.timerange'] = stats.parameters['q.timerange'] ; '' }}
                             {{ download.parameters['refine.dataset_id'] = stats.parameters['refine.dataset_id'] ; '' }}
                             <div class="card z-depth-1">
@@ -120,11 +125,16 @@
                 </section>
                 <section class="row">
                     <div class="col-md-6">
+                      <!-- Replace the dataset context with this one 👇
                       <ods-dataset-context context="noresults"
                                            noresults-dataset="ods-api-monitoring"
                                            noresults-source="monitoring"
                                            noresults-parameters="{'q':'nhits=0'}"
-                      >
+                                           > -->
+                        <ods-dataset-context context="noresults"
+                                             noresults-dataset="monitoring-copy"
+                                             noresults-parameters="{'q':'nhits=0'}"
+                                             >
                             {{ noresults.parameters['q.timerange'] = stats.parameters['q.timerange'] ; '' }}
                             {{ noresults.parameters['refine.dataset_id'] = stats.parameters['refine.dataset_id'] ; '' }}
                             <div class="card z-depth-1">
@@ -145,7 +155,7 @@
                                             ods-facet-results-facet-name="query_text"
                                             ng-repeat="(i,emptyquery) in emptyqueriesopen.slice(0,9)"
                                             ng-show="emptyquery.count>5"
-                                        >
+                                            >
 
                                             <td style="text-align:center;">{{ i+1 }}</td>
                                             <td style="width: 100%">{{ emptyquery.name }}</td>
@@ -157,12 +167,16 @@
                         </ods-dataset-context>
                     </div>
                     <div class="col-md-6">
-                      Replace the dataset context with this one 👇
+                      <!-- Replace the dataset context with this one 👇
                       <ods-dataset-context context="queries"
                                            queries-dataset="ods-api-monitoring"
                                            queries-source="monitoring"
                                            queries-parameters="{'q':'NOT #null(query_text)'}"
-                      >
+                                           > -->
+                        <ods-dataset-context context="queries"
+                                             queries-dataset="monitoring-copy"
+                                             queries-parameters="{'q':'NOT #null(query_text)'}"
+                                             >
                             {{ queries.parameters['q.timerange'] = stats.parameters['q.timerange'] ; '' }}
                             {{ queries.parameters['refine.dataset_id'] = stats.parameters['refine.dataset_id'] ; '' }}
                             <div class="card z-depth-1">
@@ -183,7 +197,8 @@
                                             ods-facet-results-facet-name="query_text"
                                             ng-repeat="(i,query) in frequentqueries.slice(0,10)"
                                             ng-show="query.count>5"
-                                        >
+                                            >
+
                                             <td style="text-align:center;">{{ i+1 }}</td>
                                             <td style="width: 100%">{{ query.name }}</td>
                                             <td>{{ query.count }}</td>
@@ -239,8 +254,7 @@
                                      toolbar-fullscreen="true"
                                      search-box="false"
                                      display-control="false"
-                                     display-control-single-layer="true"
-                            >
+                                     display-control-single-layer="true">
                                 <ods-map-layer-group>
                                     <ods-map-layer context="stats" color="#26ADFF" picto="ods-circle" show-marker="true" display="auto" shape-opacity="0.5" point-opacity="1" border-color="#FFFFFF" border-opacity="1" border-size="1" border-pattern="solid" caption="false" caption-picto-color="#f2cb46" title="Company Data Hub" size="4" size-min="3" size-max="5" size-function="linear"></ods-map-layer>
                                 </ods-map-layer-group>
