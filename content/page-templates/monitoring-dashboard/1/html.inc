@@ -1,13 +1,8 @@
 <div class="ng-cloak" ng-app="ods-widgets">
     <div ods-datetime="now">
-      <!-- Replace the dataset context with this one 👇
-      <ods-dataset-context context="stats"
-                           stats-dataset="ods-api-monitoring"
-                           stats-source="monitoring"
-                           stats-parameters="{'disjunctive.dataset_id':true}"
-                           > -->
         <ods-dataset-context context="stats"
-                             stats-dataset="monitoring-copy"
+                             stats-dataset="ods-api-monitoring"
+                             stats-source="monitoring"
                              stats-parameters="{'disjunctive.dataset_id':true}"
                              >
             <div class="container">
@@ -104,7 +99,8 @@
                     </div>
                     <div class="col-md-6">
                         <ods-dataset-context context="download"
-                                             download-dataset="monitoring-copy"
+                                             download-dataset="ods-api-monitoring"
+                                             download-source="monitoring"
                                              >
                             {{ download.parameters['q.timerange'] = stats.parameters['q.timerange'] ; '' }}
                             {{ download.parameters['refine.dataset_id'] = stats.parameters['refine.dataset_id'] ; '' }}
@@ -125,14 +121,9 @@
                 </section>
                 <section class="row">
                     <div class="col-md-6">
-                      <!-- Replace the dataset context with this one 👇
-                      <ods-dataset-context context="noresults"
-                                           noresults-dataset="ods-api-monitoring"
-                                           noresults-source="monitoring"
-                                           noresults-parameters="{'q':'nhits=0'}"
-                                           > -->
                         <ods-dataset-context context="noresults"
-                                             noresults-dataset="monitoring-copy"
+                                             noresults-source="monitoring"
+                                             noresults-dataset="ods-api-monitoring"
                                              noresults-parameters="{'q':'nhits=0'}"
                                              >
                             {{ noresults.parameters['q.timerange'] = stats.parameters['q.timerange'] ; '' }}
@@ -167,14 +158,9 @@
                         </ods-dataset-context>
                     </div>
                     <div class="col-md-6">
-                      <!-- Replace the dataset context with this one 👇
-                      <ods-dataset-context context="queries"
-                                           queries-dataset="ods-api-monitoring"
-                                           queries-source="monitoring"
-                                           queries-parameters="{'q':'NOT #null(query_text)'}"
-                                           > -->
                         <ods-dataset-context context="queries"
-                                             queries-dataset="monitoring-copy"
+                                             queries-source="monitoring"
+                                             queries-dataset="ods-api-monitoring"
                                              queries-parameters="{'q':'NOT #null(query_text)'}"
                                              >
                             {{ queries.parameters['q.timerange'] = stats.parameters['q.timerange'] ; '' }}

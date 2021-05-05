@@ -16,7 +16,18 @@
 <script type="text/javascript" src="https://codelibrary.opendatasoft.com/js/ods-catalog-card.js"></script>
 
 <script type="text/javascript">
-    angular.module('ods-widgets').config(function (ODSWidgetsConfigProvider) {
+    const sourceMonitoringInterceptor = ($q) => {
+        return {
+            request: (config) => {
+                console.log(config);
+                delete config.params['source'];
+                console.log(config);
+                return config;
+            }
+        }
+    }
+
+    angular.module('ods-widgets').config(function (ODSWidgetsConfigProvider, $httpProvider) {
         ODSWidgetsConfigProvider.setConfig({
             "defaultDomain": "https://userclub.opendatasoft.com/",
             "basemaps": [
@@ -95,6 +106,7 @@
             },
             "mapPrependAttribution": "Jawg apikey NOT suitable for production"
         });
+        $httpProvider.interceptors.push(sourceMonitoringInterceptor);
     });
 </script>
 
