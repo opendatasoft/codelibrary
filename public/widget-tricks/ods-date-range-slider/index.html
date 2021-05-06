@@ -151,6 +151,24 @@
              </a>
            </li>
            
+           <li>
+             <a href="#automatic-initial-bounds---based-on-the-data">
+               Automatic initial bounds - based on the data
+             </a>
+           </li>
+           
+           <li>
+             <a href="#automatic-initial-bounds---month-precision">
+               Automatic initial bounds - month precision
+             </a>
+           </li>
+           
+           <li>
+             <a href="#automatic-initial-bounds---year-precision">
+               Automatic initial bounds - year precision
+             </a>
+           </li>
+           
          </ul>
        </div>
      </div>
@@ -256,8 +274,6 @@
                   <a href="/generators/"
                      class="sidebar-subtitle">
                       Generators
-                      
-                        <span class="tag pill is-size-7 is-rounded is-info">1</span>
                       
                   </a>
               </li>
@@ -469,6 +485,10 @@
                               <div>
                                 ods-date-range-slider
                                 
+                                
+                                <span class="tag pill is-size-7 is-rounded is-info">
+                                  3
+                                </span>
                                 
                               </div>
                             </a>
@@ -1729,6 +1749,1395 @@
       </div>
     </div>
     
+    <div class="container">
+      <div class="box box-example">
+        <h2 class="title is-2" id="automatic-initial-bounds---based-on-the-data">
+          Automatic initial bounds - based on the data
+          
+            <span class="tag is-rounded is-info">New</span>
+          
+          <a class="is-link anchor" href="#automatic-initial-bounds---based-on-the-data">
+            <span class="icon">
+              <img src="/img/fas-link.svg" />
+            </span>
+          </a>
+        </h2>
+        
+        <div class="content">
+          <p>Get the date range of the data, and use it to automatically set initial bounds.</p>
+<p>It combines an <code>ods-analysis</code> to get the range, the <code>ods-date-range-slider</code>, and some AngularJs expression to activate a &ldquo;reset range button&rdquo;.</p>
+<p><strong>Note1:</strong> Two contexts are used, one for the page, and one specific to get the date range.</p>
+<p><strong>Note2:</strong> the date field id in this example is <code>date_start</code></p>
+<p><strong>Note3:</strong> Pay attention to the date field precision. This example only work with day precision date fields. See next resources for month and year precision fields.</p>
+
+        </div>
+        
+
+
+
+
+
+
+    
+
+
+<div class="codepen">
+
+    <form id="form-automatic-initial-bounds---based-on-the-data"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+                 "title": "New Pen!",
+                 "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+                 "editors": 110,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;container\&#34;\u003e\n\n    \u003cods-dataset-context context=\&#34;ctx,ctxdate\&#34;\n                         ctx-dataset=\&#34;evenements-publics-openagenda\&#34;\n                         ctx-parameters=\&#34;{&#39;sort&#39;:&#39;-date_start&#39;}\&#34;\n                         ctxdate-dataset=\&#34;evenements-publics-openagenda\&#34;\n                         ctxdate-parameters=\&#34;{&#39;q&#39;:&#39;date_start:[2007 TO #now(years=&#43;3)]&#39;}\&#34;\u003e\n\n        \u003cdiv class=\&#34;range-slider-ctn\&#34;\n             ng-init=\&#34;bounds = {&#39;min&#39;:undefined, &#39;max&#39;:undefined, &#39;minselection&#39;:undefined, &#39;maxselection&#39;:undefined}\&#34;\u003e\n            \u003c!--\n                Get the date range\n                If the day or month is on 1 digit (ie. \u003c 10), it is right justified with a 0 padding.\n                dateminmax[0] is the first date (oldest)\n                dateminmax[dateminmax.results.length-1] is the last date (newest / biggest)\n            --\u003e\n            \u003cspan ods-analysis=\&#34;dateminmax\&#34;\n                  ods-analysis-context=\&#34;ctxdate\&#34;\n                  ods-analysis-x-year=\&#34;date_start.year\&#34;\n                  ods-analysis-x-month=\&#34;date_start.month\&#34;\n                  ods-analysis-x-day=\&#34;date_start.day\&#34;\n                  ods-analysis-serie-c=\&#34;COUNT()\&#34;\n                  ods-analysis-sort=\&#34;x.date_start.year,x.date_start.month,x.date_start.day\&#34;\u003e\n              \u003cspan ng-if=\&#34;dateminmax.results \u0026\u0026 dateminmax.results.length \u003e 0\&#34;\u003e\n                {{ bounds[&#39;min&#39;] = dateminmax.results[0].x.year &#43; &#39;-&#39; &#43; (10 \u003e dateminmax.results[0].x.month?&#39;0&#39;:&#39;&#39;) &#43; dateminmax.results[0].x.month &#43; &#39;-&#39; &#43; (10 \u003e dateminmax.results[0].x.day?&#39;0&#39;:&#39;&#39;) &#43; dateminmax.results[0].x.day;\n                bounds[&#39;max&#39;] = dateminmax.results[dateminmax.results.length-1].x.year &#43; &#39;-&#39; &#43; (10 \u003e dateminmax.results[dateminmax.results.length-1].x.month?&#39;0&#39;:&#39;&#39;) &#43; dateminmax.results[dateminmax.results.length-1].x.month &#43; &#39;-&#39; &#43; (10 \u003e dateminmax.results[dateminmax.results.length-1].x.day?&#39;0&#39;:&#39;&#39;) &#43; dateminmax.results[dateminmax.results.length-1].x.day;\n                &#39;&#39;}}\n              \u003c/span\u003e\n            \u003c/span\u003e\n\n            \u003cods-date-range-slider ng-if=\&#34;bounds.min \u0026\u0026 bounds.max\&#34;\n                                   context=\&#34;ctx\&#34;\n                                   initial-from=\&#34;{{ bounds.min }}\&#34;\n                                   initial-to=\&#34;{{ bounds.max }}\&#34;\n                                   start-bound=\&#34;bounds.min\&#34;\n                                   end-bound=\&#34;bounds.max\&#34;\n                                   date-field=\&#34;date_start\&#34;\n                                   precision=\&#34;day\&#34;\n                                   from=\&#34;bounds.minselection\&#34;\n                                   to=\&#34;bounds.maxselection\&#34;\u003e\n            \u003c/ods-date-range-slider\u003e\n\n            \u003c!-- Resetting the range by setting widget \&#34;from\&#34; and \&#34;to\&#34; to the min/max bounds computed with ods-analysis --\u003e\n            \u003cdiv ng-if=\&#34;bounds.min \u0026\u0026 bounds.max\&#34;\n                 class=\&#34;range-slider-reset-button\&#34;\n                 ng-class=\&#34;{&#39;range-slider-reset-button-disabled&#39;:\n                   bounds.minselection == bounds.min \u0026\u0026\n                   bounds.maxselection == bounds.max}\&#34;\n                 ng-click=\&#34;bounds.minselection = bounds.min; bounds.maxselection = bounds.max\&#34;\u003e\n                The entire period \u003ci class=\&#34;fa fa-arrows-h\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n\n        \u003cods-table context=\&#34;ctx\&#34;\u003e\u003c/ods-table\u003e\n\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
+                 "css": &#34;.range-slider-ctn {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    margin: 13px 26px 32px 26px;\n}\n\n.odswidget-date-range-slider {\n    width: 100%;\n}\n\n.range-slider-reset-button {\n    margin-left: 0;\n    margin-top: 13px;\n    white-space: nowrap;\n    font-size: 12px;\n    padding: 3px 6px;\n    line-height: 0;\n    background-color: #e1e4e9;\n    border-radius: 4px;\n}\n\n.range-slider-reset-button:not(.range-slider-reset-button-disabled):hover {\n    opacity: 0.65;\n}\n\n.range-slider-reset-button-disabled {\n    opacity: 0.5;\n    pointer-event: none;\n    text-decoration: none;\n}\n\n@media screen and (min-width: 500px) {\n    .range-slider-ctn {\n        flex-direction: row;\n    }\n\n    .range-slider-reset-button {\n        margin-left: 50px;\n        margin-top: 0;\n    }\n}&#34;
+               }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-automatic-initial-bounds---based-on-the-data"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+                <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;defaultDomain&#34;: &#34;https://userclub.opendatasoft.com/&#34;,
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                },
+                {
+                    &#34;provider&#34;: &#34;jawg.streets&#34;,
+                    &#34;label&#34;: &#34;Jawg Streets&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;,
+                    &#34;id&#34;: &#34;streets&#34;
+                }
+            ],
+            &#34;themes&#34;: {
+                &#39;default&#39;: {
+                    &#39;url&#39;: &#39;/img/ods.svg&#39;
+                },
+                &#39;Santé&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Culture, Patrimoine&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Environment&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Transports, Déplacements&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Justice, Sécurité, Police, Crime&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Sport, Loisirs&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Hébergement, Restauration&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Services, Social&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Checklist&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Usages&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                }
+            },
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+</head>
+                <body>
+                <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
+&lt;div class=&#34;container&#34;&gt;
+
+    &lt;ods-dataset-context context=&#34;ctx,ctxdate&#34;
+                         ctx-dataset=&#34;evenements-publics-openagenda&#34;
+                         ctx-parameters=&#34;{&#39;sort&#39;:&#39;-date_start&#39;}&#34;
+                         ctxdate-dataset=&#34;evenements-publics-openagenda&#34;
+                         ctxdate-parameters=&#34;{&#39;q&#39;:&#39;date_start:[2007 TO #now(years=&#43;3)]&#39;}&#34;&gt;
+
+        &lt;div class=&#34;range-slider-ctn&#34;
+             ng-init=&#34;bounds = {&#39;min&#39;:undefined, &#39;max&#39;:undefined, &#39;minselection&#39;:undefined, &#39;maxselection&#39;:undefined}&#34;&gt;
+            &lt;!--
+                Get the date range
+                If the day or month is on 1 digit (ie. &lt; 10), it is right justified with a 0 padding.
+                dateminmax[0] is the first date (oldest)
+                dateminmax[dateminmax.results.length-1] is the last date (newest / biggest)
+            --&gt;
+            &lt;span ods-analysis=&#34;dateminmax&#34;
+                  ods-analysis-context=&#34;ctxdate&#34;
+                  ods-analysis-x-year=&#34;date_start.year&#34;
+                  ods-analysis-x-month=&#34;date_start.month&#34;
+                  ods-analysis-x-day=&#34;date_start.day&#34;
+                  ods-analysis-serie-c=&#34;COUNT()&#34;
+                  ods-analysis-sort=&#34;x.date_start.year,x.date_start.month,x.date_start.day&#34;&gt;
+              &lt;span ng-if=&#34;dateminmax.results &amp;&amp; dateminmax.results.length &gt; 0&#34;&gt;
+                {{ bounds[&#39;min&#39;] = dateminmax.results[0].x.year &#43; &#39;-&#39; &#43; (10 &gt; dateminmax.results[0].x.month?&#39;0&#39;:&#39;&#39;) &#43; dateminmax.results[0].x.month &#43; &#39;-&#39; &#43; (10 &gt; dateminmax.results[0].x.day?&#39;0&#39;:&#39;&#39;) &#43; dateminmax.results[0].x.day;
+                bounds[&#39;max&#39;] = dateminmax.results[dateminmax.results.length-1].x.year &#43; &#39;-&#39; &#43; (10 &gt; dateminmax.results[dateminmax.results.length-1].x.month?&#39;0&#39;:&#39;&#39;) &#43; dateminmax.results[dateminmax.results.length-1].x.month &#43; &#39;-&#39; &#43; (10 &gt; dateminmax.results[dateminmax.results.length-1].x.day?&#39;0&#39;:&#39;&#39;) &#43; dateminmax.results[dateminmax.results.length-1].x.day;
+                &#39;&#39;}}
+              &lt;/span&gt;
+            &lt;/span&gt;
+
+            &lt;ods-date-range-slider ng-if=&#34;bounds.min &amp;&amp; bounds.max&#34;
+                                   context=&#34;ctx&#34;
+                                   initial-from=&#34;{{ bounds.min }}&#34;
+                                   initial-to=&#34;{{ bounds.max }}&#34;
+                                   start-bound=&#34;bounds.min&#34;
+                                   end-bound=&#34;bounds.max&#34;
+                                   date-field=&#34;date_start&#34;
+                                   precision=&#34;day&#34;
+                                   from=&#34;bounds.minselection&#34;
+                                   to=&#34;bounds.maxselection&#34;&gt;
+            &lt;/ods-date-range-slider&gt;
+
+            &lt;!-- Resetting the range by setting widget &#34;from&#34; and &#34;to&#34; to the min/max bounds computed with ods-analysis --&gt;
+            &lt;div ng-if=&#34;bounds.min &amp;&amp; bounds.max&#34;
+                 class=&#34;range-slider-reset-button&#34;
+                 ng-class=&#34;{&#39;range-slider-reset-button-disabled&#39;:
+                   bounds.minselection == bounds.min &amp;&amp;
+                   bounds.maxselection == bounds.max}&#34;
+                 ng-click=&#34;bounds.minselection = bounds.min; bounds.maxselection = bounds.max&#34;&gt;
+                The entire period &lt;i class=&#34;fa fa-arrows-h&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;ods-table context=&#34;ctx&#34;&gt;&lt;/ods-table&gt;
+
+    &lt;/ods-dataset-context&gt;
+&lt;/div&gt;&lt;/div&gt;</div>
+                <style type='text/css'>
+                    .range-slider-ctn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 13px 26px 32px 26px;
+}
+
+.odswidget-date-range-slider {
+    width: 100%;
+}
+
+.range-slider-reset-button {
+    margin-left: 0;
+    margin-top: 13px;
+    white-space: nowrap;
+    font-size: 12px;
+    padding: 3px 6px;
+    line-height: 0;
+    background-color: #e1e4e9;
+    border-radius: 4px;
+}
+
+.range-slider-reset-button:not(.range-slider-reset-button-disabled):hover {
+    opacity: 0.65;
+}
+
+.range-slider-reset-button-disabled {
+    opacity: 0.5;
+    pointer-event: none;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 500px) {
+    .range-slider-ctn {
+        flex-direction: row;
+    }
+
+    .range-slider-reset-button {
+        margin-left: 50px;
+        margin-top: 0;
+    }
+}
+                </style>
+                </body>
+              ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level is-flex">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-secondary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-automatic-initial-bounds---based-on-the-data-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        
+                        <li class="button is-secondary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-automatic-initial-bounds---based-on-the-data-css-content">
+                                CSS
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right mt-0">
+                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
+                   data-tooltip="Edit on CodePen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-automatic-initial-bounds---based-on-the-data').submit()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-edit">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-automatic-initial-bounds---based-on-the-data-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;container&#34;&gt;
+
+    &lt;ods-dataset-context context=&#34;ctx,ctxdate&#34;
+                         ctx-dataset=&#34;evenements-publics-openagenda&#34;
+                         ctx-parameters=&#34;{&#39;sort&#39;:&#39;-date_start&#39;}&#34;
+                         ctxdate-dataset=&#34;evenements-publics-openagenda&#34;
+                         ctxdate-parameters=&#34;{&#39;q&#39;:&#39;date_start:[2007 TO #now(years=&#43;3)]&#39;}&#34;&gt;
+
+        &lt;div class=&#34;range-slider-ctn&#34;
+             ng-init=&#34;bounds = {&#39;min&#39;:undefined, &#39;max&#39;:undefined, &#39;minselection&#39;:undefined, &#39;maxselection&#39;:undefined}&#34;&gt;
+            &lt;!--
+                Get the date range
+                If the day or month is on 1 digit (ie. &lt; 10), it is right justified with a 0 padding.
+                dateminmax[0] is the first date (oldest)
+                dateminmax[dateminmax.results.length-1] is the last date (newest / biggest)
+            --&gt;
+            &lt;span ods-analysis=&#34;dateminmax&#34;
+                  ods-analysis-context=&#34;ctxdate&#34;
+                  ods-analysis-x-year=&#34;date_start.year&#34;
+                  ods-analysis-x-month=&#34;date_start.month&#34;
+                  ods-analysis-x-day=&#34;date_start.day&#34;
+                  ods-analysis-serie-c=&#34;COUNT()&#34;
+                  ods-analysis-sort=&#34;x.date_start.year,x.date_start.month,x.date_start.day&#34;&gt;
+              &lt;span ng-if=&#34;dateminmax.results &amp;&amp; dateminmax.results.length &gt; 0&#34;&gt;
+                {{ bounds[&#39;min&#39;] = dateminmax.results[0].x.year &#43; &#39;-&#39; &#43; (10 &gt; dateminmax.results[0].x.month?&#39;0&#39;:&#39;&#39;) &#43; dateminmax.results[0].x.month &#43; &#39;-&#39; &#43; (10 &gt; dateminmax.results[0].x.day?&#39;0&#39;:&#39;&#39;) &#43; dateminmax.results[0].x.day;
+                bounds[&#39;max&#39;] = dateminmax.results[dateminmax.results.length-1].x.year &#43; &#39;-&#39; &#43; (10 &gt; dateminmax.results[dateminmax.results.length-1].x.month?&#39;0&#39;:&#39;&#39;) &#43; dateminmax.results[dateminmax.results.length-1].x.month &#43; &#39;-&#39; &#43; (10 &gt; dateminmax.results[dateminmax.results.length-1].x.day?&#39;0&#39;:&#39;&#39;) &#43; dateminmax.results[dateminmax.results.length-1].x.day;
+                &#39;&#39;}}
+              &lt;/span&gt;
+            &lt;/span&gt;
+
+            &lt;ods-date-range-slider ng-if=&#34;bounds.min &amp;&amp; bounds.max&#34;
+                                   context=&#34;ctx&#34;
+                                   initial-from=&#34;{{ bounds.min }}&#34;
+                                   initial-to=&#34;{{ bounds.max }}&#34;
+                                   start-bound=&#34;bounds.min&#34;
+                                   end-bound=&#34;bounds.max&#34;
+                                   date-field=&#34;date_start&#34;
+                                   precision=&#34;day&#34;
+                                   from=&#34;bounds.minselection&#34;
+                                   to=&#34;bounds.maxselection&#34;&gt;
+            &lt;/ods-date-range-slider&gt;
+
+            &lt;!-- Resetting the range by setting widget &#34;from&#34; and &#34;to&#34; to the min/max bounds computed with ods-analysis --&gt;
+            &lt;div ng-if=&#34;bounds.min &amp;&amp; bounds.max&#34;
+                 class=&#34;range-slider-reset-button&#34;
+                 ng-class=&#34;{&#39;range-slider-reset-button-disabled&#39;:
+                   bounds.minselection == bounds.min &amp;&amp;
+                   bounds.maxselection == bounds.max}&#34;
+                 ng-click=&#34;bounds.minselection = bounds.min; bounds.maxselection = bounds.max&#34;&gt;
+                The entire period &lt;i class=&#34;fa fa-arrows-h&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;ods-table context=&#34;ctx&#34;&gt;&lt;/ods-table&gt;
+
+    &lt;/ods-dataset-context&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+            
+            <div class="js-tabcontent"
+                 id="code-automatic-initial-bounds---based-on-the-data-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>.range-slider-ctn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 13px 26px 32px 26px;
+}
+
+.odswidget-date-range-slider {
+    width: 100%;
+}
+
+.range-slider-reset-button {
+    margin-left: 0;
+    margin-top: 13px;
+    white-space: nowrap;
+    font-size: 12px;
+    padding: 3px 6px;
+    line-height: 0;
+    background-color: #e1e4e9;
+    border-radius: 4px;
+}
+
+.range-slider-reset-button:not(.range-slider-reset-button-disabled):hover {
+    opacity: 0.65;
+}
+
+.range-slider-reset-button-disabled {
+    opacity: 0.5;
+    pointer-event: none;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 500px) {
+    .range-slider-ctn {
+        flex-direction: row;
+    }
+
+    .range-slider-reset-button {
+        margin-left: 50px;
+        margin-top: 0;
+    }
+}</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-automatic-initial-bounds---based-on-the-data";
+            iframe = document.getElementById(iframeId);
+             
+            size =  null 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-automatic-initial-bounds---based-on-the-data";
+            iframe = document.getElementById(iframeId);
+
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+            }
+        }, 1000);
+    });
+</script>
+
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="box box-example">
+        <h2 class="title is-2" id="automatic-initial-bounds---month-precision">
+          Automatic initial bounds - month precision
+          
+            <span class="tag is-rounded is-info">New</span>
+          
+          <a class="is-link anchor" href="#automatic-initial-bounds---month-precision">
+            <span class="icon">
+              <img src="/img/fas-link.svg" />
+            </span>
+          </a>
+        </h2>
+        
+        <div class="content">
+          <p>Same as the previous example, but for month precision date field.</p>
+
+        </div>
+        
+
+
+
+
+
+
+    
+
+
+<div class="codepen">
+
+    <form id="form-automatic-initial-bounds---month-precision"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+                 "title": "New Pen!",
+                 "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+                 "editors": 110,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;container\&#34;\u003e\n\n    \u003cods-dataset-context context=\&#34;ctx,ctxdate\&#34;\n                         ctx-dataset=\&#34;evenements-publics-openagenda\&#34;\n                         ctx-parameters=\&#34;{&#39;sort&#39;:&#39;-date_start&#39;}\&#34;\n                         ctxdate-dataset=\&#34;evenements-publics-openagenda\&#34;\n                         ctxdate-parameters=\&#34;{&#39;q&#39;:&#39;date_start:[2007 TO #now(years=&#43;3)]&#39;}\&#34;\u003e\n\n        \u003cdiv class=\&#34;range-slider-ctn\&#34;\n             ng-init=\&#34;bounds = {&#39;min&#39;:undefined, &#39;max&#39;:undefined, &#39;minselection&#39;:undefined, &#39;maxselection&#39;:undefined}\&#34;\u003e\n            \u003c!--\n                Get the date range\n                If the day or month is on 1 digit (ie. \u003c 10), it is right justified with a 0 padding.\n                dateminmax[0] is the first date (oldest)\n                dateminmax[dateminmax.results.length-1] is the last date (newest / biggest)\n            --\u003e\n            \u003cspan ods-analysis=\&#34;dateminmax\&#34;\n                  ods-analysis-context=\&#34;ctxdate\&#34;\n                  ods-analysis-x-year=\&#34;date_start.year\&#34;\n                  ods-analysis-x-month=\&#34;date_start.month\&#34;\n                  ods-analysis-serie-c=\&#34;COUNT()\&#34;\n                  ods-analysis-sort=\&#34;x.date_start.year,x.date_start.month\&#34;\u003e\n              \u003cspan ng-if=\&#34;dateminmax.results \u0026\u0026 dateminmax.results.length \u003e 0\&#34;\u003e\n                {{ bounds[&#39;min&#39;] = dateminmax.results[0].x.year &#43; &#39;-&#39; &#43; (10 \u003e dateminmax.results[0].x.month?&#39;0&#39;:&#39;&#39;) &#43; dateminmax.results[0].x.month;\n                bounds[&#39;max&#39;] = dateminmax.results[dateminmax.results.length-1].x.year &#43; &#39;-&#39; &#43; (10 \u003e dateminmax.results[dateminmax.results.length-1].x.month?&#39;0&#39;:&#39;&#39;) &#43; dateminmax.results[dateminmax.results.length-1].x.month;\n                &#39;&#39;}}\n              \u003c/span\u003e\n            \u003c/span\u003e\n\n            \u003cods-date-range-slider ng-if=\&#34;bounds.min \u0026\u0026 bounds.max\&#34;\n                                   context=\&#34;ctx\&#34;\n                                   initial-from=\&#34;{{ bounds.min }}\&#34;\n                                   initial-to=\&#34;{{ bounds.max }}\&#34;\n                                   start-bound=\&#34;bounds.min\&#34;\n                                   end-bound=\&#34;bounds.max\&#34;\n                                   date-field=\&#34;date_start\&#34;\n                                   precision=\&#34;month\&#34;\n                                   from=\&#34;bounds.minselection\&#34;\n                                   to=\&#34;bounds.maxselection\&#34;\u003e\n            \u003c/ods-date-range-slider\u003e\n\n            \u003c!-- Resetting the range by setting widget \&#34;from\&#34; and \&#34;to\&#34; to the min/max bounds computed with ods-analysis --\u003e\n            \u003cdiv ng-if=\&#34;bounds.min \u0026\u0026 bounds.max\&#34;\n                 class=\&#34;range-slider-reset-button\&#34;\n                 ng-class=\&#34;{&#39;range-slider-reset-button-disabled&#39;:\n                   bounds.minselection == bounds.min \u0026\u0026\n                   bounds.maxselection == bounds.max}\&#34;\n                 ng-click=\&#34;bounds.minselection = bounds.min; bounds.maxselection = bounds.max\&#34;\u003e\n                The entire period \u003ci class=\&#34;fa fa-arrows-h\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n\n        \u003cods-table context=\&#34;ctx\&#34;\u003e\u003c/ods-table\u003e\n\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
+                 "css": &#34;.range-slider-ctn {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    margin: 13px 26px 32px 26px;\n}\n\n.odswidget-date-range-slider {\n    width: 100%;\n}\n\n.range-slider-reset-button {\n    margin-left: 0;\n    margin-top: 13px;\n    white-space: nowrap;\n    font-size: 12px;\n    padding: 3px 6px;\n    line-height: 0;\n    background-color: #e1e4e9;\n    border-radius: 4px;\n}\n\n.range-slider-reset-button:not(.range-slider-reset-button-disabled):hover {\n    opacity: 0.65;\n}\n\n.range-slider-reset-button-disabled {\n    opacity: 0.5;\n    pointer-event: none;\n    text-decoration: none;\n}\n\n@media screen and (min-width: 500px) {\n    .range-slider-ctn {\n        flex-direction: row;\n    }\n\n    .range-slider-reset-button {\n        margin-left: 50px;\n        margin-top: 0;\n    }\n}&#34;
+               }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-automatic-initial-bounds---month-precision"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+                <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;defaultDomain&#34;: &#34;https://userclub.opendatasoft.com/&#34;,
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                },
+                {
+                    &#34;provider&#34;: &#34;jawg.streets&#34;,
+                    &#34;label&#34;: &#34;Jawg Streets&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;,
+                    &#34;id&#34;: &#34;streets&#34;
+                }
+            ],
+            &#34;themes&#34;: {
+                &#39;default&#39;: {
+                    &#39;url&#39;: &#39;/img/ods.svg&#39;
+                },
+                &#39;Santé&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Culture, Patrimoine&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Environment&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Transports, Déplacements&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Justice, Sécurité, Police, Crime&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Sport, Loisirs&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Hébergement, Restauration&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Services, Social&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Checklist&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Usages&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                }
+            },
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+</head>
+                <body>
+                <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
+&lt;div class=&#34;container&#34;&gt;
+
+    &lt;ods-dataset-context context=&#34;ctx,ctxdate&#34;
+                         ctx-dataset=&#34;evenements-publics-openagenda&#34;
+                         ctx-parameters=&#34;{&#39;sort&#39;:&#39;-date_start&#39;}&#34;
+                         ctxdate-dataset=&#34;evenements-publics-openagenda&#34;
+                         ctxdate-parameters=&#34;{&#39;q&#39;:&#39;date_start:[2007 TO #now(years=&#43;3)]&#39;}&#34;&gt;
+
+        &lt;div class=&#34;range-slider-ctn&#34;
+             ng-init=&#34;bounds = {&#39;min&#39;:undefined, &#39;max&#39;:undefined, &#39;minselection&#39;:undefined, &#39;maxselection&#39;:undefined}&#34;&gt;
+            &lt;!--
+                Get the date range
+                If the day or month is on 1 digit (ie. &lt; 10), it is right justified with a 0 padding.
+                dateminmax[0] is the first date (oldest)
+                dateminmax[dateminmax.results.length-1] is the last date (newest / biggest)
+            --&gt;
+            &lt;span ods-analysis=&#34;dateminmax&#34;
+                  ods-analysis-context=&#34;ctxdate&#34;
+                  ods-analysis-x-year=&#34;date_start.year&#34;
+                  ods-analysis-x-month=&#34;date_start.month&#34;
+                  ods-analysis-serie-c=&#34;COUNT()&#34;
+                  ods-analysis-sort=&#34;x.date_start.year,x.date_start.month&#34;&gt;
+              &lt;span ng-if=&#34;dateminmax.results &amp;&amp; dateminmax.results.length &gt; 0&#34;&gt;
+                {{ bounds[&#39;min&#39;] = dateminmax.results[0].x.year &#43; &#39;-&#39; &#43; (10 &gt; dateminmax.results[0].x.month?&#39;0&#39;:&#39;&#39;) &#43; dateminmax.results[0].x.month;
+                bounds[&#39;max&#39;] = dateminmax.results[dateminmax.results.length-1].x.year &#43; &#39;-&#39; &#43; (10 &gt; dateminmax.results[dateminmax.results.length-1].x.month?&#39;0&#39;:&#39;&#39;) &#43; dateminmax.results[dateminmax.results.length-1].x.month;
+                &#39;&#39;}}
+              &lt;/span&gt;
+            &lt;/span&gt;
+
+            &lt;ods-date-range-slider ng-if=&#34;bounds.min &amp;&amp; bounds.max&#34;
+                                   context=&#34;ctx&#34;
+                                   initial-from=&#34;{{ bounds.min }}&#34;
+                                   initial-to=&#34;{{ bounds.max }}&#34;
+                                   start-bound=&#34;bounds.min&#34;
+                                   end-bound=&#34;bounds.max&#34;
+                                   date-field=&#34;date_start&#34;
+                                   precision=&#34;month&#34;
+                                   from=&#34;bounds.minselection&#34;
+                                   to=&#34;bounds.maxselection&#34;&gt;
+            &lt;/ods-date-range-slider&gt;
+
+            &lt;!-- Resetting the range by setting widget &#34;from&#34; and &#34;to&#34; to the min/max bounds computed with ods-analysis --&gt;
+            &lt;div ng-if=&#34;bounds.min &amp;&amp; bounds.max&#34;
+                 class=&#34;range-slider-reset-button&#34;
+                 ng-class=&#34;{&#39;range-slider-reset-button-disabled&#39;:
+                   bounds.minselection == bounds.min &amp;&amp;
+                   bounds.maxselection == bounds.max}&#34;
+                 ng-click=&#34;bounds.minselection = bounds.min; bounds.maxselection = bounds.max&#34;&gt;
+                The entire period &lt;i class=&#34;fa fa-arrows-h&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;ods-table context=&#34;ctx&#34;&gt;&lt;/ods-table&gt;
+
+    &lt;/ods-dataset-context&gt;
+&lt;/div&gt;&lt;/div&gt;</div>
+                <style type='text/css'>
+                    .range-slider-ctn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 13px 26px 32px 26px;
+}
+
+.odswidget-date-range-slider {
+    width: 100%;
+}
+
+.range-slider-reset-button {
+    margin-left: 0;
+    margin-top: 13px;
+    white-space: nowrap;
+    font-size: 12px;
+    padding: 3px 6px;
+    line-height: 0;
+    background-color: #e1e4e9;
+    border-radius: 4px;
+}
+
+.range-slider-reset-button:not(.range-slider-reset-button-disabled):hover {
+    opacity: 0.65;
+}
+
+.range-slider-reset-button-disabled {
+    opacity: 0.5;
+    pointer-event: none;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 500px) {
+    .range-slider-ctn {
+        flex-direction: row;
+    }
+
+    .range-slider-reset-button {
+        margin-left: 50px;
+        margin-top: 0;
+    }
+}
+                </style>
+                </body>
+              ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level is-flex">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-secondary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-automatic-initial-bounds---month-precision-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        
+                        <li class="button is-secondary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-automatic-initial-bounds---month-precision-css-content">
+                                CSS
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right mt-0">
+                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
+                   data-tooltip="Edit on CodePen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-automatic-initial-bounds---month-precision').submit()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-edit">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-automatic-initial-bounds---month-precision-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;container&#34;&gt;
+
+    &lt;ods-dataset-context context=&#34;ctx,ctxdate&#34;
+                         ctx-dataset=&#34;evenements-publics-openagenda&#34;
+                         ctx-parameters=&#34;{&#39;sort&#39;:&#39;-date_start&#39;}&#34;
+                         ctxdate-dataset=&#34;evenements-publics-openagenda&#34;
+                         ctxdate-parameters=&#34;{&#39;q&#39;:&#39;date_start:[2007 TO #now(years=&#43;3)]&#39;}&#34;&gt;
+
+        &lt;div class=&#34;range-slider-ctn&#34;
+             ng-init=&#34;bounds = {&#39;min&#39;:undefined, &#39;max&#39;:undefined, &#39;minselection&#39;:undefined, &#39;maxselection&#39;:undefined}&#34;&gt;
+            &lt;!--
+                Get the date range
+                If the day or month is on 1 digit (ie. &lt; 10), it is right justified with a 0 padding.
+                dateminmax[0] is the first date (oldest)
+                dateminmax[dateminmax.results.length-1] is the last date (newest / biggest)
+            --&gt;
+            &lt;span ods-analysis=&#34;dateminmax&#34;
+                  ods-analysis-context=&#34;ctxdate&#34;
+                  ods-analysis-x-year=&#34;date_start.year&#34;
+                  ods-analysis-x-month=&#34;date_start.month&#34;
+                  ods-analysis-serie-c=&#34;COUNT()&#34;
+                  ods-analysis-sort=&#34;x.date_start.year,x.date_start.month&#34;&gt;
+              &lt;span ng-if=&#34;dateminmax.results &amp;&amp; dateminmax.results.length &gt; 0&#34;&gt;
+                {{ bounds[&#39;min&#39;] = dateminmax.results[0].x.year &#43; &#39;-&#39; &#43; (10 &gt; dateminmax.results[0].x.month?&#39;0&#39;:&#39;&#39;) &#43; dateminmax.results[0].x.month;
+                bounds[&#39;max&#39;] = dateminmax.results[dateminmax.results.length-1].x.year &#43; &#39;-&#39; &#43; (10 &gt; dateminmax.results[dateminmax.results.length-1].x.month?&#39;0&#39;:&#39;&#39;) &#43; dateminmax.results[dateminmax.results.length-1].x.month;
+                &#39;&#39;}}
+              &lt;/span&gt;
+            &lt;/span&gt;
+
+            &lt;ods-date-range-slider ng-if=&#34;bounds.min &amp;&amp; bounds.max&#34;
+                                   context=&#34;ctx&#34;
+                                   initial-from=&#34;{{ bounds.min }}&#34;
+                                   initial-to=&#34;{{ bounds.max }}&#34;
+                                   start-bound=&#34;bounds.min&#34;
+                                   end-bound=&#34;bounds.max&#34;
+                                   date-field=&#34;date_start&#34;
+                                   precision=&#34;month&#34;
+                                   from=&#34;bounds.minselection&#34;
+                                   to=&#34;bounds.maxselection&#34;&gt;
+            &lt;/ods-date-range-slider&gt;
+
+            &lt;!-- Resetting the range by setting widget &#34;from&#34; and &#34;to&#34; to the min/max bounds computed with ods-analysis --&gt;
+            &lt;div ng-if=&#34;bounds.min &amp;&amp; bounds.max&#34;
+                 class=&#34;range-slider-reset-button&#34;
+                 ng-class=&#34;{&#39;range-slider-reset-button-disabled&#39;:
+                   bounds.minselection == bounds.min &amp;&amp;
+                   bounds.maxselection == bounds.max}&#34;
+                 ng-click=&#34;bounds.minselection = bounds.min; bounds.maxselection = bounds.max&#34;&gt;
+                The entire period &lt;i class=&#34;fa fa-arrows-h&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;ods-table context=&#34;ctx&#34;&gt;&lt;/ods-table&gt;
+
+    &lt;/ods-dataset-context&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+            
+            <div class="js-tabcontent"
+                 id="code-automatic-initial-bounds---month-precision-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>.range-slider-ctn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 13px 26px 32px 26px;
+}
+
+.odswidget-date-range-slider {
+    width: 100%;
+}
+
+.range-slider-reset-button {
+    margin-left: 0;
+    margin-top: 13px;
+    white-space: nowrap;
+    font-size: 12px;
+    padding: 3px 6px;
+    line-height: 0;
+    background-color: #e1e4e9;
+    border-radius: 4px;
+}
+
+.range-slider-reset-button:not(.range-slider-reset-button-disabled):hover {
+    opacity: 0.65;
+}
+
+.range-slider-reset-button-disabled {
+    opacity: 0.5;
+    pointer-event: none;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 500px) {
+    .range-slider-ctn {
+        flex-direction: row;
+    }
+
+    .range-slider-reset-button {
+        margin-left: 50px;
+        margin-top: 0;
+    }
+}</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-automatic-initial-bounds---month-precision";
+            iframe = document.getElementById(iframeId);
+             
+            size =  null 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-automatic-initial-bounds---month-precision";
+            iframe = document.getElementById(iframeId);
+
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+            }
+        }, 1000);
+    });
+</script>
+
+      </div>
+    </div>
+    
+    <div class="container">
+      <div class="box box-example">
+        <h2 class="title is-2" id="automatic-initial-bounds---year-precision">
+          Automatic initial bounds - year precision
+          
+            <span class="tag is-rounded is-info">New</span>
+          
+          <a class="is-link anchor" href="#automatic-initial-bounds---year-precision">
+            <span class="icon">
+              <img src="/img/fas-link.svg" />
+            </span>
+          </a>
+        </h2>
+        
+        <div class="content">
+          <p>Same as the previous example, but for year precision date field.</p>
+
+        </div>
+        
+
+
+
+
+
+
+    
+
+
+<div class="codepen">
+
+    <form id="form-automatic-initial-bounds---year-precision"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+                 "title": "New Pen!",
+                 "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+                 "editors": 110,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;container\&#34;\u003e\n\n    \u003cods-dataset-context context=\&#34;ctx,ctxdate\&#34;\n                         ctx-dataset=\&#34;evenements-publics-openagenda\&#34;\n                         ctx-parameters=\&#34;{&#39;sort&#39;:&#39;-date_start&#39;}\&#34;\n                         ctxdate-dataset=\&#34;evenements-publics-openagenda\&#34;\n                         ctxdate-parameters=\&#34;{&#39;q&#39;:&#39;date_start:[2007 TO #now(years=&#43;3)]&#39;}\&#34;\u003e\n\n        \u003cdiv class=\&#34;range-slider-ctn\&#34;\n             ng-init=\&#34;bounds = {&#39;min&#39;:undefined, &#39;max&#39;:undefined, &#39;minselection&#39;:undefined, &#39;maxselection&#39;:undefined}\&#34;\u003e\n            \u003c!--\n                Get the date range\n                If the day or month is on 1 digit (ie. \u003c 10), it is right justified with a 0 padding.\n                dateminmax[0] is the first date (oldest)\n                dateminmax[dateminmax.results.length-1] is the last date (newest / biggest)\n            --\u003e\n            \u003cspan ods-analysis=\&#34;dateminmax\&#34;\n                  ods-analysis-context=\&#34;ctxdate\&#34;\n                  ods-analysis-x=\&#34;date_start.year\&#34;\n                  ods-analysis-serie-c=\&#34;COUNT()\&#34;\n                  ods-analysis-sort=\&#34;x.date_start.year\&#34;\u003e\n              \u003cspan ng-if=\&#34;dateminmax.results \u0026\u0026 dateminmax.results.length \u003e 0\&#34;\u003e\n                  \u003c!-- &#39;\&#34;\&#34; &#43; &#39; in the expression force min and max to be in a string format, as expected by the widget --\u003e\n                {{ bounds[&#39;min&#39;] = \&#34;\&#34; &#43; dateminmax.results[0].x.year;\n                bounds[&#39;max&#39;] = \&#34;\&#34; &#43; dateminmax.results[dateminmax.results.length-1].x.year;\n                &#39;&#39;}}\n              \u003c/span\u003e\n            \u003c/span\u003e\n\n            \u003cods-date-range-slider ng-if=\&#34;bounds.min \u0026\u0026 bounds.max\&#34;\n                                   context=\&#34;ctx\&#34;\n                                   initial-from=\&#34;{{ bounds.min }}\&#34;\n                                   initial-to=\&#34;{{ bounds.max }}\&#34;\n                                   start-bound=\&#34;bounds.min\&#34;\n                                   end-bound=\&#34;bounds.max\&#34;\n                                   date-field=\&#34;date_start\&#34;\n                                   precision=\&#34;year\&#34;\n                                   from=\&#34;bounds.minselection\&#34;\n                                   to=\&#34;bounds.maxselection\&#34;\u003e\n            \u003c/ods-date-range-slider\u003e\n\n            \u003c!-- Resetting the range by setting widget \&#34;from\&#34; and \&#34;to\&#34; to the min/max bounds computed with ods-analysis --\u003e\n            \u003cdiv ng-if=\&#34;bounds.min \u0026\u0026 bounds.max\&#34;\n                 class=\&#34;range-slider-reset-button\&#34;\n                 ng-class=\&#34;{&#39;range-slider-reset-button-disabled&#39;:\n                   bounds.minselection == bounds.min \u0026\u0026\n                   bounds.maxselection == bounds.max}\&#34;\n                 ng-click=\&#34;bounds.minselection = bounds.min; bounds.maxselection = bounds.max\&#34;\u003e\n                The entire period \u003ci class=\&#34;fa fa-arrows-h\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n\n        \u003cods-table context=\&#34;ctx\&#34;\u003e\u003c/ods-table\u003e\n\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
+                 "css": &#34;.range-slider-ctn {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    margin: 13px 26px 32px 26px;\n}\n\n.odswidget-date-range-slider {\n    width: 100%;\n}\n\n.range-slider-reset-button {\n    margin-left: 0;\n    margin-top: 13px;\n    white-space: nowrap;\n    font-size: 12px;\n    padding: 3px 6px;\n    line-height: 0;\n    background-color: #e1e4e9;\n    border-radius: 4px;\n}\n\n.range-slider-reset-button:not(.range-slider-reset-button-disabled):hover {\n    opacity: 0.65;\n}\n\n.range-slider-reset-button-disabled {\n    opacity: 0.5;\n    pointer-event: none;\n    text-decoration: none;\n}\n\n@media screen and (min-width: 500px) {\n    .range-slider-ctn {\n        flex-direction: row;\n    }\n\n    .range-slider-reset-button {\n        margin-left: 50px;\n        margin-top: 0;\n    }\n}&#34;
+               }'>
+    </form>
+</div>
+
+<div class="ods-content">
+    <section class="box box-live-example">
+      <iframe id="iframe-automatic-initial-bounds---year-precision"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+                <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;defaultDomain&#34;: &#34;https://userclub.opendatasoft.com/&#34;,
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                },
+                {
+                    &#34;provider&#34;: &#34;jawg.streets&#34;,
+                    &#34;label&#34;: &#34;Jawg Streets&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;,
+                    &#34;id&#34;: &#34;streets&#34;
+                }
+            ],
+            &#34;themes&#34;: {
+                &#39;default&#39;: {
+                    &#39;url&#39;: &#39;/img/ods.svg&#39;
+                },
+                &#39;Santé&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Culture, Patrimoine&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Environment&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Transports, Déplacements&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Justice, Sécurité, Police, Crime&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Sport, Loisirs&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Hébergement, Restauration&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Services, Social&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Checklist&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Usages&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                }
+            },
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+</head>
+                <body>
+                <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
+&lt;div class=&#34;container&#34;&gt;
+
+    &lt;ods-dataset-context context=&#34;ctx,ctxdate&#34;
+                         ctx-dataset=&#34;evenements-publics-openagenda&#34;
+                         ctx-parameters=&#34;{&#39;sort&#39;:&#39;-date_start&#39;}&#34;
+                         ctxdate-dataset=&#34;evenements-publics-openagenda&#34;
+                         ctxdate-parameters=&#34;{&#39;q&#39;:&#39;date_start:[2007 TO #now(years=&#43;3)]&#39;}&#34;&gt;
+
+        &lt;div class=&#34;range-slider-ctn&#34;
+             ng-init=&#34;bounds = {&#39;min&#39;:undefined, &#39;max&#39;:undefined, &#39;minselection&#39;:undefined, &#39;maxselection&#39;:undefined}&#34;&gt;
+            &lt;!--
+                Get the date range
+                If the day or month is on 1 digit (ie. &lt; 10), it is right justified with a 0 padding.
+                dateminmax[0] is the first date (oldest)
+                dateminmax[dateminmax.results.length-1] is the last date (newest / biggest)
+            --&gt;
+            &lt;span ods-analysis=&#34;dateminmax&#34;
+                  ods-analysis-context=&#34;ctxdate&#34;
+                  ods-analysis-x=&#34;date_start.year&#34;
+                  ods-analysis-serie-c=&#34;COUNT()&#34;
+                  ods-analysis-sort=&#34;x.date_start.year&#34;&gt;
+              &lt;span ng-if=&#34;dateminmax.results &amp;&amp; dateminmax.results.length &gt; 0&#34;&gt;
+                  &lt;!-- &#39;&#34;&#34; &#43; &#39; in the expression force min and max to be in a string format, as expected by the widget --&gt;
+                {{ bounds[&#39;min&#39;] = &#34;&#34; &#43; dateminmax.results[0].x.year;
+                bounds[&#39;max&#39;] = &#34;&#34; &#43; dateminmax.results[dateminmax.results.length-1].x.year;
+                &#39;&#39;}}
+              &lt;/span&gt;
+            &lt;/span&gt;
+
+            &lt;ods-date-range-slider ng-if=&#34;bounds.min &amp;&amp; bounds.max&#34;
+                                   context=&#34;ctx&#34;
+                                   initial-from=&#34;{{ bounds.min }}&#34;
+                                   initial-to=&#34;{{ bounds.max }}&#34;
+                                   start-bound=&#34;bounds.min&#34;
+                                   end-bound=&#34;bounds.max&#34;
+                                   date-field=&#34;date_start&#34;
+                                   precision=&#34;year&#34;
+                                   from=&#34;bounds.minselection&#34;
+                                   to=&#34;bounds.maxselection&#34;&gt;
+            &lt;/ods-date-range-slider&gt;
+
+            &lt;!-- Resetting the range by setting widget &#34;from&#34; and &#34;to&#34; to the min/max bounds computed with ods-analysis --&gt;
+            &lt;div ng-if=&#34;bounds.min &amp;&amp; bounds.max&#34;
+                 class=&#34;range-slider-reset-button&#34;
+                 ng-class=&#34;{&#39;range-slider-reset-button-disabled&#39;:
+                   bounds.minselection == bounds.min &amp;&amp;
+                   bounds.maxselection == bounds.max}&#34;
+                 ng-click=&#34;bounds.minselection = bounds.min; bounds.maxselection = bounds.max&#34;&gt;
+                The entire period &lt;i class=&#34;fa fa-arrows-h&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;ods-table context=&#34;ctx&#34;&gt;&lt;/ods-table&gt;
+
+    &lt;/ods-dataset-context&gt;
+&lt;/div&gt;&lt;/div&gt;</div>
+                <style type='text/css'>
+                    .range-slider-ctn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 13px 26px 32px 26px;
+}
+
+.odswidget-date-range-slider {
+    width: 100%;
+}
+
+.range-slider-reset-button {
+    margin-left: 0;
+    margin-top: 13px;
+    white-space: nowrap;
+    font-size: 12px;
+    padding: 3px 6px;
+    line-height: 0;
+    background-color: #e1e4e9;
+    border-radius: 4px;
+}
+
+.range-slider-reset-button:not(.range-slider-reset-button-disabled):hover {
+    opacity: 0.65;
+}
+
+.range-slider-reset-button-disabled {
+    opacity: 0.5;
+    pointer-event: none;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 500px) {
+    .range-slider-ctn {
+        flex-direction: row;
+    }
+
+    .range-slider-reset-button {
+        margin-left: 50px;
+        margin-top: 0;
+    }
+}
+                </style>
+                </body>
+              ">
+      </iframe>
+    </section>
+
+    <section class="box box-code js-tabs">
+        <nav class="level is-flex">
+            <div class="level-left">
+                <div class="level-item">
+                    <ul class="buttons has-addons js-tablist">
+                        <li class="button is-secondary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-automatic-initial-bounds---year-precision-html-content">
+                                HTML
+                            </a>
+                        </li>
+                        
+                        <li class="button is-secondary is-outlined js-tablist__item">
+                            <a class="js-tablist__link"
+                               href="#code-automatic-initial-bounds---year-precision-css-content">
+                                CSS
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="level-right mt-0">
+                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
+                   data-tooltip="Edit on CodePen"
+                   target="_blank"
+                   aria-role="link"
+                   rel="noopener"
+                   title="Edit on CodePen, open a new tab"
+                   onclick="document.getElementById('form-automatic-initial-bounds---year-precision').submit()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                         class="feather feather-edit">
+                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
+                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-automatic-initial-bounds---year-precision-html-content">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;container&#34;&gt;
+
+    &lt;ods-dataset-context context=&#34;ctx,ctxdate&#34;
+                         ctx-dataset=&#34;evenements-publics-openagenda&#34;
+                         ctx-parameters=&#34;{&#39;sort&#39;:&#39;-date_start&#39;}&#34;
+                         ctxdate-dataset=&#34;evenements-publics-openagenda&#34;
+                         ctxdate-parameters=&#34;{&#39;q&#39;:&#39;date_start:[2007 TO #now(years=&#43;3)]&#39;}&#34;&gt;
+
+        &lt;div class=&#34;range-slider-ctn&#34;
+             ng-init=&#34;bounds = {&#39;min&#39;:undefined, &#39;max&#39;:undefined, &#39;minselection&#39;:undefined, &#39;maxselection&#39;:undefined}&#34;&gt;
+            &lt;!--
+                Get the date range
+                If the day or month is on 1 digit (ie. &lt; 10), it is right justified with a 0 padding.
+                dateminmax[0] is the first date (oldest)
+                dateminmax[dateminmax.results.length-1] is the last date (newest / biggest)
+            --&gt;
+            &lt;span ods-analysis=&#34;dateminmax&#34;
+                  ods-analysis-context=&#34;ctxdate&#34;
+                  ods-analysis-x=&#34;date_start.year&#34;
+                  ods-analysis-serie-c=&#34;COUNT()&#34;
+                  ods-analysis-sort=&#34;x.date_start.year&#34;&gt;
+              &lt;span ng-if=&#34;dateminmax.results &amp;&amp; dateminmax.results.length &gt; 0&#34;&gt;
+                  &lt;!-- &#39;&#34;&#34; &#43; &#39; in the expression force min and max to be in a string format, as expected by the widget --&gt;
+                {{ bounds[&#39;min&#39;] = &#34;&#34; &#43; dateminmax.results[0].x.year;
+                bounds[&#39;max&#39;] = &#34;&#34; &#43; dateminmax.results[dateminmax.results.length-1].x.year;
+                &#39;&#39;}}
+              &lt;/span&gt;
+            &lt;/span&gt;
+
+            &lt;ods-date-range-slider ng-if=&#34;bounds.min &amp;&amp; bounds.max&#34;
+                                   context=&#34;ctx&#34;
+                                   initial-from=&#34;{{ bounds.min }}&#34;
+                                   initial-to=&#34;{{ bounds.max }}&#34;
+                                   start-bound=&#34;bounds.min&#34;
+                                   end-bound=&#34;bounds.max&#34;
+                                   date-field=&#34;date_start&#34;
+                                   precision=&#34;year&#34;
+                                   from=&#34;bounds.minselection&#34;
+                                   to=&#34;bounds.maxselection&#34;&gt;
+            &lt;/ods-date-range-slider&gt;
+
+            &lt;!-- Resetting the range by setting widget &#34;from&#34; and &#34;to&#34; to the min/max bounds computed with ods-analysis --&gt;
+            &lt;div ng-if=&#34;bounds.min &amp;&amp; bounds.max&#34;
+                 class=&#34;range-slider-reset-button&#34;
+                 ng-class=&#34;{&#39;range-slider-reset-button-disabled&#39;:
+                   bounds.minselection == bounds.min &amp;&amp;
+                   bounds.maxselection == bounds.max}&#34;
+                 ng-click=&#34;bounds.minselection = bounds.min; bounds.maxselection = bounds.max&#34;&gt;
+                The entire period &lt;i class=&#34;fa fa-arrows-h&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+
+        &lt;ods-table context=&#34;ctx&#34;&gt;&lt;/ods-table&gt;
+
+    &lt;/ods-dataset-context&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+            
+            <div class="js-tabcontent"
+                 id="code-automatic-initial-bounds---year-precision-css-content">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>.range-slider-ctn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 13px 26px 32px 26px;
+}
+
+.odswidget-date-range-slider {
+    width: 100%;
+}
+
+.range-slider-reset-button {
+    margin-left: 0;
+    margin-top: 13px;
+    white-space: nowrap;
+    font-size: 12px;
+    padding: 3px 6px;
+    line-height: 0;
+    background-color: #e1e4e9;
+    border-radius: 4px;
+}
+
+.range-slider-reset-button:not(.range-slider-reset-button-disabled):hover {
+    opacity: 0.65;
+}
+
+.range-slider-reset-button-disabled {
+    opacity: 0.5;
+    pointer-event: none;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 500px) {
+    .range-slider-ctn {
+        flex-direction: row;
+    }
+
+    .range-slider-reset-button {
+        margin-left: 50px;
+        margin-top: 0;
+    }
+}</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+</div>
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-automatic-initial-bounds---year-precision";
+            iframe = document.getElementById(iframeId);
+             
+            size =  null 
+             
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+                if (iframe.height == size) {
+                    clearInterval(loopId);
+                } else {
+                    iframe.height = size > 1 ? size : scrollHeight;
+                }
+            }
+        }, 1000);
+    });
+</script>
+
+
+<script type="text/javascript">
+    window.addEventListener("DOMContentLoaded", () => {
+        var loopId = setInterval(() => {
+            iframeId = "iframe-automatic-initial-bounds---year-precision";
+            iframe = document.getElementById(iframeId);
+
+            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
+                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
+            }
+        }, 1000);
+    });
+</script>
+
+      </div>
+    </div>
+    
   </section>
 
       </div>
@@ -1756,7 +3165,7 @@
     </script>
     <script
       type="text/javascript"
-      src="/index.min.a2d29702bc1ba00e41c8a549ddfdb348c67804eb2b40382ce695033b1677ea43.js"
+      src="/index.min.34c5a309e21ed7ebf769ff8917c0119ba0efc33353503e847d335c378022b772.js"
       defer
     ></script>
   </body>
