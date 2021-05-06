@@ -3,7 +3,7 @@ body {
   background-color: #ffffff;
 }
 
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 768px) {
   body {
     padding: 0;
   }
@@ -23,7 +23,7 @@ body {
   justify-content: center;
 }
 
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 768px) {
   .row {
     flex-direction: column;
   }
@@ -96,7 +96,7 @@ h5.subtitle {
   margin-top: 16px;
 }
 
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 768px) {
   .menu {
     flex-direction: column;
     width: 100%;
@@ -169,7 +169,7 @@ h5.subtitle {
   border: none;
 }
 
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 768px) {
   .filter {
     justify-content: center;
   }

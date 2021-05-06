@@ -33,10 +33,6 @@
                                               value-modifier="name"
                                   >
                                   </ods-select>
-                                  {{download.parameters['refine.dataset_id']=stats.parameters['refine.dataset_id'];
-                                  users.parameters['refine.dataset_id']=stats.parameters['refine.dataset_id'];
-                                  searchnoresult.parameters['refine.dataset_id']=stats.parameters['refine.dataset_id'];
-                                  queryresult.parameters['refine.dataset_id']=stats.parameters['refine.dataset_id'];""}}
                               </div>
                           </div>
                           <div class="filter">
