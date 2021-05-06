@@ -13,7 +13,11 @@
     margin-left: 0;
     margin-top: 13px;
     white-space: nowrap;
-    text-decoration: underline;
+    font-size: 12px;
+    padding: 3px 6px;
+    line-height: 0;
+    background-color: #e1e4e9;
+    border-radius: 4px;
 }
 
 .range-slider-reset-button:not(.range-slider-reset-button-disabled):hover {
