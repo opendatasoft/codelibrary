@@ -7,16 +7,4 @@ resources:
     title: "Section #:counter"
 ---
 
-This custom view will help you create an overview of all the datasets on your domain. See the [user guide](https://help.opendatasoft.com/platform/fr/publishing_data/04_configuring_a_source/connectors/dataset_of_datasets.html#creation) to set up this special dataset.
-
-For this view to properly function, you need to set up the following fields as facets:
-
-- Dataset ID
-- Publishing Properties
-- Themes (multivalued)
-- Publisher
-- License
-- Visibility
-
-You also need to set up a _Replace text_ processor with the field _Publishing Properties_ and new value set to _"manual"_:
-![processor setup](processor.png)
+_This resource is intended to be used as custom view inside your catalog, where the dataset context is always named `ctx` and doesn't require any `ods-dataset-context` widget. Read the [user's guide section](https://help.opendatasoft.com/platform/en/publishing_data/07_configuring_visualizations/06_configuring_custom_view/custom.html#configuring-the-custom-view) about custom views for details_.

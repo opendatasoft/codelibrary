@@ -13,7 +13,6 @@
 {{ end }}
 
 <div class="codepen">
-
     <form id="form-{{ .Title | anchorize}}"
           action="https://codepen.io/pen/define"
           method="POST"
@@ -29,9 +28,8 @@
                }'>
     </form>
 </div>
-
 <div class="ods-content">
-    <section class="box box-live-example">
+    <section class="box-live-example">
       <iframe id="iframe-{{ .Title | anchorize }}"
               width="100%" height="100%"
               src="about:blank"
@@ -45,10 +43,12 @@
                 </body>
               ">
       </iframe>
+      <button class="button is-primary show-code">
+        show-code
+      </button>
     </section>
-
-    <section class="box box-code js-tabs">
-        <nav class="level is-flex">
+    <section class="box-code js-tabs is-hidden">
+        <nav class="level">
             <div class="level-left">
                 <div class="level-item">
                     <ul class="buttons has-addons js-tablist">
@@ -69,7 +69,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="level-right mt-0">
+            <div class="level-right">
                 <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
                    data-tooltip="Edit on CodePen"
                    target="_blank"
@@ -86,7 +86,6 @@
                 </a>
             </div>
         </nav>
-
         <div class="tab-content">
             <div class="js-tabcontent"
                  id="code-{{ .Title | anchorize }}-html-content">
@@ -106,7 +105,7 @@
     </section>
 </div>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
     window.addEventListener("DOMContentLoaded", () => {
         var loopId = setInterval(() => {
             iframeId = "iframe-{{ .Title | anchorize}}";
@@ -138,4 +137,4 @@
             }
         }, 1000);
     });
-</script>
+</script> -->
