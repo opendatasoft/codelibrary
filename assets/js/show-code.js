@@ -4,6 +4,8 @@ const addToggleButton = box => {
 
   button.addEventListener("click", () => {
     codeBox.classList.toggle("is-hidden");
+    button.classList.toggle("is-outlined");
+    button.classList.toggle("is-primary");
   });
 };
 

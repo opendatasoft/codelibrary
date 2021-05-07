@@ -32,6 +32,18 @@
   background-color: $white;
   position: relative;
   border-radius: $radius;
+  button {
+    border-radius: 0;
+    // border: 1px solid $grey-light;
+    border-bottom: none;
+    &:first-child {
+      border-top-left-radius: $radius;
+    }
+    &:last-child {
+      border-bottom-right-radius: $radius;
+      border-right: none;
+    }
+  }
 }
 
 .box-code {
@@ -41,11 +53,6 @@
   border-bottom-left-radius: $radius;
   border-bottom-right-radius: $radius;
   background: $light;
-
-  .level {
-    margin-bottom: $spacing-100;
-    display: flex;
-  }
 }
 
 .show-code {

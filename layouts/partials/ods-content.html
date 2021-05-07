@@ -43,12 +43,22 @@
                 </body>
               ">
       </iframe>
-      <button class="button is-primary show-code">
-        show-code
-      </button>
+      <div class="show-code buttons has-addons">
+          <button class="button is-outlined">
+            <span>Show code</span>
+          </button>
+          <button class="button is-outlined"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-{{ .Title | anchorize}}').submit()">
+              <span>Edit on Codepen</span>
+          </button>
+      </div>
     </section>
     <section class="box-code js-tabs is-hidden">
-        <nav class="level">
+        <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
                     <ul class="buttons has-addons js-tablist">
