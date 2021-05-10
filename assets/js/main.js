@@ -1,4 +1,4 @@
-import { initCopyToCB } from "./copy.js";
+import initCopyToCB from "./copy.js";
 import { initCopyColorToCB } from "./copy_colors.js";
 import { initSearch } from "./algolia.js";
 import Prism from "prismjs";

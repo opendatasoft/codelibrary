@@ -1,5 +1,5 @@
-{{ define "title" }} {{ .Title }} &ndash; {{ .Site.Title }} {{ end }} {{ define
-"main" }}
+{{ define "title" }} {{ .Title }} &ndash; {{ .Site.Title }} {{ end }}
+{{ define "main" }}
 <section class="container is-max-desktop my-6">
   <h1 class="title is-size-1">
     {{ if eq "tags" .Type }}Tag: {{ end}}{{ .Title | humanize }}
@@ -13,16 +13,17 @@
   <a href="{{ .RelPermalink }}" class="card card-list" title="{{ .Title }}">
     <div class="card-content">
       <h3 class="title">
-        {{ .Title }} {{ $newContentCount := len (where .Page.Resources ".Date"
-        "ge" (now.AddDate 0 -1 0)) }} {{ if ne $newContentCount 0 }}
+        {{ .Title }}
+        {{ $newContentCount := len (where .Page.Resources ".Date" "ge" (now.AddDate 0 -1 0)) }}
+        {{ if ne $newContentCount 0 }}
         <span class="tag pill is-size-7 is-rounded is-info">
           {{ $newContentCount }}
         </span>
         {{ end }}
       </h3>
       <p class="subtitle">
-        {{ if eq "" .Description}}{{ .Summary }}{{ else }}{{ .Description }}{{
-        end }}
+        {{ if eq "" .Description}}{{ .Summary }}{{ else }}{{ .Description }}
+        {{ end }}
       </p>
       <div class="tags">
         {{ range .Params.tags }}
