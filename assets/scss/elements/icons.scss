@@ -8,7 +8,24 @@
   width: 100%;
 }
 
-.button.is-rounded .icon:first-child:last-child {
-  margin-left: calc(-1em - 0.25em);
-  margin-right: calc(-1em - 0.25em)
+.button {
+
+  .icon,
+  .icon.is-small,
+  .icon.is-medium,
+  .icon.is-large {
+    height: 1em;
+    width: 1em;
+  }
+
+  &.is-rounded {
+    padding: calc(1em + 0.25em);
+    
+    &:first-child:last-child {
+      margin-left: calc(-1em - 0.25em + 1px);
+      margin-right: calc(-1em - 0.25em + 1px);
+    }
+  }
+
+
 }

@@ -54,6 +54,11 @@
              title="Edit on CodePen, open a new tab"
              onclick="document.getElementById('form-{{ .Title | anchorize}}').submit()">
               <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
           </button>
       </div>
     </section>
@@ -62,14 +67,14 @@
             <div class="level-left">
                 <div class="level-item">
                     <ul class="buttons has-addons js-tablist">
-                        <li class="button is-secondary is-outlined js-tablist__item">
+                        <li class="button is-primary is-outlined js-tablist__item">
                             <a class="js-tablist__link"
                                href="#code-{{ .Title | anchorize }}-html-content">
                                 HTML
                             </a>
                         </li>
                         {{ if gt (len $css) 0 }}
-                        <li class="button is-secondary is-outlined js-tablist__item">
+                        <li class="button is-primary is-outlined js-tablist__item">
                             <a class="js-tablist__link"
                                href="#code-{{ .Title | anchorize }}-css-content">
                                 CSS
@@ -85,24 +90,19 @@
                   aria-role="button"
                   title="Edit on CodePen, open a new tab"
                 >
-                  <!-- <figure class="icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
                       <use xlink:href="#copy"></use>
                     </svg>
-                  </figure> -->
-                  <figure class="icon image is-16x16">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy">
-                      <use xlink:href="#copy"></use>
-                    </svg>
-                  </figure>
+                  </span>
                 </button>
                 <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
                   data-tooltip="Copied"
                   aria-role="button"
                   title="Copied"
                 >
-                  <figure class="icon image is-16x16">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy">
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
                       <use xlink:href="#check"></use>
                     </svg>
                   </figure>
