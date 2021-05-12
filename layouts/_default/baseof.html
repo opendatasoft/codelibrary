@@ -58,7 +58,10 @@
   </head>
 
   <body>
-    {{ "static/icons.svg" | readFile | safeHTML }}
+    <div class="is-hidden">
+      {{ "static/icons.svg" | readFile | safeHTML }}
+    </div>
+
     {{ partial "header" . }}
 
     <div class="columns is-desktop codelibrary">
@@ -70,10 +73,10 @@
       </div>
     </div>
 
-    {{ partial "footer" . }} {{ $defines := dict "process.env.NODE_ENV"
-    `"development"` }} {{ $opts := dict "targetPath" "index.js" "defines"
-    $defines }} {{ $built := resources.Get "js/main.js" | js.Build $opts |
-    minify | fingerprint }}
+    {{ partial "footer" . }}
+    {{ $defines := dict "process.env.NODE_ENV" `"development"` }}
+    {{ $opts := dict "targetPath" "index.js" "defines" $defines }}
+    {{ $built := resources.Get "js/main.js" | js.Build $opts | minify | fingerprint }}
 
     <script>
       var process = { env: { NODE_ENV: "production" } };

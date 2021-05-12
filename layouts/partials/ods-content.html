@@ -29,7 +29,8 @@
     </form>
 </div>
 <div class="ods-content">
-    <section class="box-live-example">
+    <section class="box-live-example"
+      style="height: {{ or .Params.height .Parent.Params.height | default 800 }}px;">
       <iframe id="iframe-{{ .Title | anchorize }}"
               width="100%" height="100%"
               src="about:blank"
