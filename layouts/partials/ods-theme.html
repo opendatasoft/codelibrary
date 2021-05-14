@@ -3,55 +3,79 @@
 {{ $stylesheet := path.Join .File.Dir "stylesheet.css.inc" | readFile }}
 
 <div class="ods-content">
-    <section class="box box-live-example">
+    <section class="box-live-example">
         <iframe id="iframe-{{ .Page.Title | urlize}}" width="100%" height="600px"
                 src="{{ .Page.Params.iframe }}">
         </iframe>
     </section>
 
-    <section class="box box-code js-tabs">
-        <div class="level">
+    <section class="box-code js-tabs">
+        <div class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
-                    <ul class="buttons has-addons js-tablist">
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-{{ .Page.Title | urlize}}-colors-content">
-                                Colors
-                            </a>
-                        </li>
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-{{ .Page.Title | urlize}}-header-content">
-                                Header
-                            </a>
-                        </li>
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-{{ .Page.Title | urlize}}-footer-content">
-                                Footer
-                            </a>
-                        </li>
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-{{ .Page.Title | urlize}}-css-content">
-                                Stylesheet
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-{{ .Page.Title | urlize}}-colors-content"
+                        >
+                            Colors
+                        </a>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-{{ .Page.Title | urlize}}-header-content"
+                        >
+                            Header
+                        </a>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-{{ .Page.Title | urlize}}-footer-content"
+                        >
+                            Footer
+                        </a>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                         href="#code-{{ .Page.Title | urlize}}-css-content"
+                        >
+                            Stylesheet
+                        </a>
+                    </div>
                 </div>
+            </div>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
             </div>
         </div>
 
         <div class="tab-content">
-            <div class="js-tabcontent"
+            <div class="js-tabcontent theme-colors"
                  id="code-{{ .Page.Title | urlize}}-colors-content"
                  role="tabpanel">
                 <div class="columns">
                     <div class="column">
-                        <ul class="theme-colors">
+                        <ul>
                             <li>
-                                <div class="color">
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
                                     <span class="color-preview"
                                           style="background-color:{{ .Page.Params.text }}"></span>
                                     <div class="highlight">
@@ -61,7 +85,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="color">
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
                                     <span class="color-preview"
                                           style="background-color:{{ .Page.Params.links }}"></span>
                                     <div class="highlight">
@@ -71,7 +95,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="color">
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
                                     <span class="color-preview"
                                           style="background-color:{{ .Page.Params.titles }}"></span>
                                     <div class="highlight">
@@ -81,7 +105,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="color">
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
                                     <span class="color-preview"
                                           style="background-color:{{ .Page.Params.pagebackground }}"></span>
                                     <div class="highlight">
@@ -91,7 +115,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="color">
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
                                     <span class="color-preview"
                                           style="background-color:{{ .Page.Params.highlight }}"></span>
                                     <div class="highlight">
@@ -101,7 +125,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="color">
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
                                     <span class="color-preview"
                                           style="background-color:{{ .Page.Params.boxesbackground }}"></span>
                                     <div class="highlight">
@@ -111,7 +135,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="color">
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
                                     <span class="color-preview"
                                           style="background-color:{{ .Page.Params.boxesborder }}"></span>
                                     <div class="highlight">
@@ -123,9 +147,9 @@
                         </ul>
                     </div>
                     <div class="column">
-                        <ul class="theme-colors">
+                        <ul>
                             <li>
-                                <div class="color">
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
                                     <span class="color-preview"
                                           style="background-color:{{ .Page.Params.sectiontitles }}"></span>
                                     <div class="highlight">
@@ -135,7 +159,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="color">
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
                                     <span class="color-preview"
                                           style="background-color:{{ .Page.Params.sectiontitlesbackground }}"></span>
                                     <div class="highlight">
@@ -145,7 +169,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="color">
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
                                     <span class="color-preview"
                                           style="background-color:{{ .Page.Params.headerbackground }}"></span>
                                     <div class="highlight">
@@ -155,7 +179,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="color">
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
                                     <span class="color-preview"
                                           style="background-color:{{ .Page.Params.headerlinks }}"></span>
                                     <div class="highlight">
@@ -165,7 +189,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="color">
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
                                     <span class="color-preview"
                                           style="background-color:{{ .Page.Params.footerbackground }}"></span>
                                     <div class="highlight">
@@ -175,7 +199,7 @@
                                 </div>
                             </li>
                             <li>
-                                <div class="color">
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
                                     <span class="color-preview"
                                           style="background-color:{{ .Page.Params.footerlinks }}"></span>
                                     <div class="highlight">
@@ -188,23 +212,32 @@
                     </div>
                 </div>
             </div>
-            <div class="js-tabcontent"
-                 id="code-{{ .Page.Title | urlize}}-header-content">
-                <div class="highlight">
-                    <pre class="language-html" data-lang="html"><code>{{ $header }}</code></pre>
-                </div>
+            <div
+              class="js-tabcontent"
+              id="code-{{ .Page.Title | urlize}}-header-content"
+              data-clipboard="{{ $header }}"
+            >
+              <div class="highlight">
+                  <pre class="language-html" data-lang="html"><code>{{ $header }}</code></pre>
+              </div>
             </div>
-            <div class="js-tabcontent"
-                 id="code-{{ .Page.Title | urlize}}-footer-content">
-                <div class="highlight">
-                    <pre class="language-html" data-lang="html"><code>{{ $footer }}</code></pre>
-                </div>
+            <div
+              class="js-tabcontent"
+              id="code-{{ .Page.Title | urlize}}-footer-content"
+              data-clipboard="{{ $footer }}"
+            >
+              <div class="highlight">
+                  <pre class="language-html" data-lang="html"><code>{{ $footer }}</code></pre>
+              </div>
             </div>
-            <div class="js-tabcontent"
-                 id="code-{{ .Page.Title | urlize}}-css-content">
-                <div class="highlight">
-                    <pre class="language-css" data-lang="css"><code>{{ $stylesheet }}</code></pre>
-                </div>
+            <div
+              class="js-tabcontent"
+              id="code-{{ .Page.Title | urlize}}-css-content"
+              data-clipboard="{{ $stylesheet }}"
+            >
+              <div class="highlight">
+                  <pre class="language-css" data-lang="css"><code>{{ $stylesheet }}</code></pre>
+              </div>
             </div>
         </div>
     </section>

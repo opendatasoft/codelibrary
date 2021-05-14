@@ -6,9 +6,8 @@
       {{ block "title" . }} {{ .Site.Title }} {{ end }}
     </title>
 
-    {{ with .OutputFormats.Get "rss" -}} {{ printf `
-    <link rel="%s" type="%s" href="%s" title="%s" />
-    ` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }} {{ end -}}
+    {{ with .OutputFormats.Get "rss" -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }} {{ end -}}
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -49,8 +48,7 @@
       crossorigin="anonymous"
     />
 
-    {{ $style := resources.Get "scss/main.scss" | resources.ToCSS (dict
-    "outputStyle" "compressed" "includePaths" (slice "node_modules")) }}
+    {{ $style := resources.Get "scss/main.scss" | resources.ToCSS (dict "outputStyle" "compressed" "includePaths" (slice "node_modules")) }}
     <link rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
