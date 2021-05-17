@@ -39,6 +39,8 @@ const addCCToCode = (copyButton, copiedButton) => {
   })
 }
 
+
+
 const initCC = (codeBox) => {
   const copyButton = codeBox.querySelector('.copy-to-cc');
   const copiedButton = codeBox.querySelector('.copied-to-cc');
