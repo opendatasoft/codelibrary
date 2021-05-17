@@ -3,13 +3,13 @@
 {{ $stylesheet := path.Join .File.Dir "stylesheet.css.inc" | readFile }}
 
 <div class="ods-content">
-    <section class="box-live-example">
+    <div class="box-live-example">
         <iframe id="iframe-{{ .Page.Title | urlize}}" width="100%" height="600px"
                 src="{{ .Page.Params.iframe }}">
         </iframe>
-    </section>
+    </div>
 
-    <section class="box-code js-tabs">
+    <div class="box-code js-tabs">
         <div class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
@@ -240,5 +240,5 @@
               </div>
             </div>
         </div>
-    </section>
+    </div>
 </div>
