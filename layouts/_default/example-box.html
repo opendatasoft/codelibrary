@@ -1,0 +1,15 @@
+{{ $htmlcontent := path.Join .File.Dir "html.inc" | readFile }}
+{{ $css := path.Join .File.Dir "css.inc" | readFile }}
+{{ $head := "/layouts/partials/includes.html" | readFile }}
+
+{{ $html := "" }}
+
+{{ if (and .Params.domainid .Params.datasetid) }}
+    {{ $openctx := printf "%s%s%s%s%s" "<ods-dataset-context context=\"ctx\"\n ctx-dataset=\"" .Params.datasetid "\"\n ctx-domain=\"" .Params.domainid "\">\n" }}
+    {{ $closectx := "</ods-dataset-context>\n" }}
+    {{ $html = printf "%s%s%s%s%s%s%s" "<div ng-app=\"ods-widgets\">\n" $openctx "\n" $html "\n" $closectx "</div>" }}
+{{ else }}
+    {{ $html = printf "%s%s%s" "<div ng-app=\"ods-widgets\">\n" $htmlcontent "</div>" }}
+{{ end }}
+
+{{ partial "live-code" (dict "html" $html "css" $css "head" $head) }}
