@@ -19,7 +19,9 @@
     const sourceMonitoringInterceptor = ($q) => {
         return {
             request: (config) => {
-                delete config.params['source'];
+                if (config.params) {
+                    delete config.params['source'];
+                }
                 return config;
             }
         }
