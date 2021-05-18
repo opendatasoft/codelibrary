@@ -1,7 +1,7 @@
-<div class="ng-cloak" ng-app="ods-widgets">
       <div ods-datetime="now">
           <ods-dataset-context context="stats"
-                               stats-dataset="monitoring-copy"
+                               stats-dataset="ods-api-monitoring"
+                               stats-source="monitoring"
                                stats-parameters="{'disjunctive.dataset_id':true}"
            >
               <div class="container">
@@ -54,7 +54,7 @@
                       </div>
                   </nav>
                   <section class="row">
-                      <div class="col-md-12">
+                      <div class="col-lg-12">
                           <div class="card z-depth-1">
                               <h2 class="title">
                                   Portal's activity.
@@ -71,7 +71,7 @@
                       </div>
                   </section>
                   <section class="row">
-                      <div class="col-md-12">
+                      <div class="col-lg-12">
                           <div class="card z-depth-1">
                               <h2 class="title">
                                   Activity log
@@ -82,7 +82,7 @@
                       </div>
                   </section>
                   <section class="row">
-                      <div class="col-md-6">
+                      <div class="col-lg-6">
                           <div class="card z-depth-1">
                               <h2 class="title">
                                   Users ranked by API calls
@@ -96,7 +96,7 @@
                               </ods-chart>
                           </div>
                       </div>
-                      <div class="col-md-6">
+                      <div class="col-lg-6">
                           <ods-dataset-context context="download"
                                                download-dataset="monitoring-copy"
                           >
@@ -118,7 +118,7 @@
                       </div>
                   </section>
                   <section class="row">
-                      <div class="col-md-6">
+                      <div class="col-lg-6">
                           <ods-dataset-context context="noresults"
                                                noresults-dataset="monitoring-copy"
                                                noresults-parameters="{'q':'nhits=0'}"
@@ -154,7 +154,7 @@
                               </div>
                           </ods-dataset-context>
                       </div>
-                      <div class="col-md-6">
+                      <div class="col-lg-6">
                           <ods-dataset-context context="queries"
                                                queries-dataset="monitoring-copy"
                                                queries-parameters="{'q':'NOT #null(query_text)'}"
@@ -191,7 +191,7 @@
                       </div>
                   </section>
                   <section class="row">
-                      <div class="col-md-6">
+                      <div class="col-lg-6">
                           <div class="card z-depth-1">
                               <h2 class="title" >
                                   Most active pages
@@ -205,7 +205,7 @@
                               </ods-chart>
                           </div>
                       </div>
-                      <div class="col-md-6">
+                      <div class="col-lg-6">
                           <div class="card z-depth-1">
                               <h2 class="title">
                                   Popular actions
@@ -220,7 +220,7 @@
                       </div>
                   </section>
                   <section class="row">
-                      <div class="col-md-12">
+                      <div class="col-lg-12">
                           <div class="card z-depth-1">
                               <h2 class="title" >
                                   Origin of users on Company's Data Hub
