@@ -16,9 +16,9 @@
                     <div class="kpi-card-top"></div>
                     <div class="kpi-card-middle">
                         <i class="kpi-icon fa fa-hospital-o" aria-hidden="true"></i>
-                        <p class="kpi-title">
+                        <h2 class="kpi-title">
                             {{ count | number }}
-                        </p>
+                        </h2>
                         <p class="kpi-description">
                             Number of hospitals
                         </p>
@@ -56,9 +56,9 @@
                     <div class="kpi-card-top"></div>
                     <div class="kpi-card-middle">
                         <i class="kpi-icon fa fa-hospital-o" aria-hidden="true"></i>
-                        <p class="kpi-title">
+                        <h2 class="kpi-title">
                             {{ count | number }}
-                        </p>
+                        </h2>
                         <p class="kpi-description">
                             Number of hospitals
                         </p>
