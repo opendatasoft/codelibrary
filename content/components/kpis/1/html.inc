@@ -1,7 +1,7 @@
 <div class="row">
-    <p>
+    <h2>
         Adaptive height
-    </p>
+    </h2>
 </div>
 <div class="row">
     <div class="col-md-4">
@@ -44,9 +44,9 @@
 
 
 <div class="row">
-    <p>
+    <h2>
         Same height
-    </p>
+    </h2>
 </div>
 <div class="row row-equal-height">
     <div class="col-md-4">

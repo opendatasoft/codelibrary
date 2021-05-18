@@ -19,12 +19,10 @@
     const sourceMonitoringInterceptor = ($q) => {
         return {
             request: (config) => {
-              if (config.params['dataset'] = 'ods-api-monitoring') {
-                delete config.params['source'];
-                config.params['dataset'] = 'monitoring-copy'
-              }
+              config.params && (delete config.params['source']);
+              (config.params.dataset === 'ods-api-monitoring') && (config.params.dataset = 'monitoring-copy');
               return config;
-            }
+          }
         }
     }
 
@@ -107,7 +105,6 @@
             },
             "mapPrependAttribution": "Jawg apikey NOT suitable for production"
         });
-
         $httpProvider.interceptors.push(sourceMonitoringInterceptor);
     });
 </script>
