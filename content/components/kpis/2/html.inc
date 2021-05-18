@@ -6,12 +6,12 @@
             <!-- KPI box component -->
             <div class="kpi-card">
                 <i class="kpi-icon fa fa-hospital-o" aria-hidden="true"></i>
-                <p class="kpi-title"
+                <h2 class="kpi-title"
                     ods-aggregation="count"
                     ods-aggregation-context="ushospitals"
                     ods-aggregation-function="COUNT">
                     {{ count | number }}
-                </p>
+                </h2>
                 <p class="kpi-description">
                     Number of hospitals
                 </p>

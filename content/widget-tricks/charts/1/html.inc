@@ -303,7 +303,7 @@
                             <b>Population</b> distribution by region.
                         </div>
                         <ods-dataset-context context="geoflarcommunes2015"
-                                             geoflarcommunes2015-domain="public"
+                                             geoflarcommunes2015-domain="discovery"
                                              geoflarcommunes2015-dataset="geoflar-communes-2015"
                                              geoflarcommunes2015-parameters="{'geofilter.polygon':'(37.50972584293751,-16.171875),(55.32914440840507,-16.171875),(55.32914440840507,22.148437499999996),(37.50972584293751,22.148437499999996),(37.50972584293751,-16.171875)'}">
                             <ods-chart>
@@ -338,7 +338,7 @@
                             <b>Population</b> distribution by region + average surface area of cities in this region
                         </div>
                         <ods-dataset-context context="geoflarcommunes2015"
-                                             geoflarcommunes2015-domain="public"
+                                             geoflarcommunes2015-domain="discovery"
                                              geoflarcommunes2015-dataset="geoflar-communes-2015"
                                              geoflarcommunes2015-parameters="{'geofilter.polygon':'(37.50972584293751,-16.171875),(55.32914440840507,-16.171875),(55.32914440840507,22.148437499999996),(37.50972584293751,22.148437499999996),(37.50972584293751,-16.171875)'}">
                             <ods-chart>
@@ -374,7 +374,7 @@
                             <b>Population</b>, <b>surface area</b> and <b>average high (Z axis)</b> by region.
                         </div>
                         <ods-dataset-context context="geoflarcommunes2015"
-                                             geoflarcommunes2015-domain="public"
+                                             geoflarcommunes2015-domain="discovery"
                                              geoflarcommunes2015-dataset="geoflar-communes-2015">
                             <ods-chart style="height:550px" scientific-display="true">
                                 <ods-chart-query context="geoflarcommunes2015" field-x="nom_reg">

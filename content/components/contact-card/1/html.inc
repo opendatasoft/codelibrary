@@ -3,7 +3,7 @@
         <div class="contact-card">
             <div class="contact-card-header">
                 <img class="contact-card-photo"
-                     src="https://userclub.opendatasoft.com/assets/theme_image/contact-card-avatar-woman.svg">
+                     src="https://discovery.opendatasoft.com/assets/theme_image/contact-card-avatar-woman.svg">
                 <div class="contact-card-tag">
                     R&amp;D
                 </div>

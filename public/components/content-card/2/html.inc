@@ -3,7 +3,7 @@
         <div class="col-sm-6">
             <!-- Replace this widget with your own visualisation -->
             <ods-dataset-context context="countoursgeographiques"
-                                 countoursgeographiques-dataset="georef-france-region"
+                                 countoursgeographiques-dataset="contours-geographiques-simplifies-des-nouvelles-regions-metropole"
                                  countoursgeographiques-domain="public"
                                  countoursgeographiques-parameters="{}">
                 <ods-map context="countoursgeographiques"

@@ -7,7 +7,7 @@
             </a>
             <div class="contact-card-header">
                 <img class="contact-card-photo"
-                     src="https://userclub.opendatasoft.com/assets/theme_image/contact-card-avatar-man.png">
+                     src="https://discovery.opendatasoft.com/assets/theme_image/contact-card-avatar-man.png">
                 <div class="contact-card-tag">
                     WEB
                 </div>
@@ -41,7 +41,7 @@
             <div class="col-xs-4">
                 <div class="pop-in-photo-container">
                     <img class="pop-in-photo"
-                         src="https://discovery.opendatasoft.com/assets/theme_image/contact-card-avatar-man.png">
+                         src="https://nconstanzo.opendatasoft.com/assets/theme_image/user-profile-image.png">
                 </div>
             </div>
             <div class="col-xs-8">
