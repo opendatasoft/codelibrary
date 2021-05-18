@@ -1,5 +1,6 @@
 ---
 title: "HTML/CSS Home-made chart"
+height: 660
 ---
 
 For specific cases, **ods-analysis, combined with some advanced HTML and CSS** can be a complex but smart choice for data visualizations.

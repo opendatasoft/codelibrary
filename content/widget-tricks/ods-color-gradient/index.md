@@ -2,6 +2,7 @@
 title: "ods-color-gradient + ods-map : a choropleth alternative"
 description: "This widget computes a gradient of colors based on a numerical aggregation. It's mainly used to color the shapes of a map for analytics purposes."
 tags: ["display", "aggregation", "geo"]
+height: 500
 resources:
 - src: '*/'
   name: folder-:counter

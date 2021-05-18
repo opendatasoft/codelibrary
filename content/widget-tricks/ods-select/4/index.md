@@ -1,5 +1,6 @@
 ---
 title: "Last but not least, the good practice for geo filters ! (showcasing ods-results)"
+height: 650
 ---
 
 Each time it's available, filter with the ID! and avoid labels or names!

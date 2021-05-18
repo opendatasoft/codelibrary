@@ -1,6 +1,5 @@
 <ods-dataset-context context="worldheritagelistpublicus"
                      worldheritagelistpublicus-dataset="world-heritage-list"
-                     worldheritagelistpublicus-domain="public-us"
                      worldheritagelistpublicus-parameters="{'disjunctive.states':true,'sort':'date_inscribed'}">
     <div class="search-module">
         <i class="fa fa-search search-module-icon" aria-hidden="true"></i>

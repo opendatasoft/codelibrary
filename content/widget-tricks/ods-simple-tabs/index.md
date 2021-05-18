@@ -2,6 +2,7 @@
 title: "ods-simple-tabs"
 description: "Style and layout suggestions for the ods-simple-tabs widget."
 tags: ["display", "navigation"]
+height: 600
 resources:
 - src: '*/'
   name: folder-:counter
