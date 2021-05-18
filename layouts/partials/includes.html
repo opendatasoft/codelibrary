@@ -19,7 +19,7 @@
     const sourceMonitoringInterceptor = ($q) => {
         return {
             request: (config) => {
-                delete config.params['source'];
+                config.parmas && delete config.params['source'];
                 return config;
             }
         }
@@ -104,6 +104,7 @@
             },
             "mapPrependAttribution": "Jawg apikey NOT suitable for production"
         });
+
         $httpProvider.interceptors.push(sourceMonitoringInterceptor);
     });
 </script>
