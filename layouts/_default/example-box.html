@@ -7,7 +7,7 @@
 {{ if (and .Params.domainid .Params.datasetid) }}
     {{ $openctx := printf "%s%s%s%s%s" "<ods-dataset-context context=\"ctx\"\n ctx-dataset=\"" .Params.datasetid "\"\n ctx-domain=\"" .Params.domainid "\">\n" }}
     {{ $closectx := "</ods-dataset-context>\n" }}
-    {{ $html = printf "%s%s%s%s%s%s%s" "<div ng-app=\"ods-widgets\">\n" $openctx "\n" $html "\n" $closectx "</div>" }}
+    {{ $html = printf "%s%s%s%s%s%s%s" "<div ng-app=\"ods-widgets\">\n" $openctx "\n" $htmlcontent "\n" $closectx "</div>" }}
 {{ else }}
     {{ $html = printf "%s%s%s" "<div ng-app=\"ods-widgets\">\n" $htmlcontent "</div>" }}
 {{ end }}
