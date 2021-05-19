@@ -39,6 +39,16 @@ const addCCToCode = (copyButton, copiedButton) => {
   })
 }
 
+const hideCopyIfColors = (copyButton, colorsTab) => {
+  const observer = new MutationObserver((mutations) => {
+    colorsTab.classList.contains('is-active')
+      ? copyButton.classList.add('is-hidden')
+      : copyButton.classList.remove('is-hidden')
+  })
+
+  observer.observe(colorsTab, { attributeFilter: ['class'] })
+}
+
 
 
 const initCC = (codeBox) => {
@@ -47,6 +57,7 @@ const initCC = (codeBox) => {
   const colorsTab = codeBox.querySelector('.theme-colors');
 
   if (colorsTab) {
+    hideCopyIfColors(copyButton, colorsTab);
     const colorNodes =  colorsTab.querySelectorAll('.color')
     colorNodes.forEach(addCCtoColor);
   }
