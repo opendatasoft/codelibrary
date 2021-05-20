@@ -24,7 +24,7 @@
                                      (tick = tick + 1);
                                      (tick % reloadeverynbtick == 0 ? from = 0 : undefined); ">
                     </ods-timer>
-                    <h2 class="kpi-title">{{ from | number : 0 }}</h2>
+                    <p class="kpi-title">{{ from | number : 0 }}</p>
                     <p class="kpi-description">tons of uranium produced since 2017</p>
                 </div>
             </div>

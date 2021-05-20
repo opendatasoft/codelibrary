@@ -15,9 +15,9 @@
                  ods-aggregation-agg2016-context="cities2016"
                  ods-aggregation-agg2016-function="COUNT">
                 <i class="kpi-icon fa fa-line-chart" aria-hidden="true"></i>
-                <h2 class="kpi-title">
+                <p class="kpi-title">
                     {{ (agg2016 - agg2015) / agg2015 * 100 | number : 2 }} %
-                </h2>
+                </p>
                 <p class="kpi-description">
                     Administrative division evolution in term of # of cities between 2015 and 2016
                 </p>
@@ -28,4 +28,3 @@
         </ods-dataset-context>
     </div>
 </div>
-      

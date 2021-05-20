@@ -98,7 +98,8 @@
                       </div>
                       <div class="col-sm-6">
                           <ods-dataset-context context="download"
-                                               download-dataset="monitoring-copy"
+                                               download-dataset="ods-api-monitoring"
+                                               download-source="monitoring"
                           >
                               {{ download.parameters['q.timerange'] = stats.parameters['q.timerange'] ; '' }}
                               {{ download.parameters['refine.dataset_id'] = stats.parameters['refine.dataset_id'] ; '' }}
@@ -120,7 +121,8 @@
                   <section class="row">
                       <div class="col-sm-6">
                           <ods-dataset-context context="noresults"
-                                               noresults-dataset="monitoring-copy"
+                                               noresults-dataset="ods-api-monitoring"
+                                               noresults-source="monitoring"
                                                noresults-parameters="{'q':'nhits=0'}"
                           >
                               {{ noresults.parameters['q.timerange'] = stats.parameters['q.timerange'] ; '' }}
@@ -156,7 +158,8 @@
                       </div>
                       <div class="col-sm-6">
                           <ods-dataset-context context="queries"
-                                               queries-dataset="monitoring-copy"
+                                               queries-dataset="ods-api-monitoring"
+                                               queries-source="monitoring"
                                                queries-parameters="{'q':'NOT #null(query_text)'}"
                           >
                               {{ queries.parameters['q.timerange'] = stats.parameters['q.timerange'] ; '' }}
