@@ -9,14 +9,14 @@
             <!-- KPI box component -->
             <div class="kpi-card">
                 <i class="kpi-icon fa fa-h-square" aria-hidden="true"></i>
-                <h2 class="kpi-title"
+                <p class="kpi-title"
                     ods-aggregation="hospitals,hospitalshelipad"
                     ods-aggregation-hospitals-context="ushospitals"
                     ods-aggregation-hospitals-function="COUNT"
                     ods-aggregation-hospitalshelipad-context="ushospitalshelipad"
                     ods-aggregation-hospitalshelipad-function="COUNT">
                     {{ hospitalshelipad / hospitals * 100 | number : 0 }} %
-                </h2>
+                </p>
                 <p class="kpi-description">
                     of US hospitals are equipped with an helipad
                 </p>
