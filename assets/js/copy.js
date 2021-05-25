@@ -19,14 +19,11 @@ const addCCtoColor = (color) => {
   })
 }
 
-const toggleHidden = (nodeArray) => {
-  nodeArray.forEach((node) => node.classList.toggle('is-hidden'));
-}
-
-const addCCToCode = (copyButton, copiedButton) => {
+const addCCToCode = (codeBox, copyButton, copiedButton) => {
   copyButton.addEventListener('click', async (event) => {
-    const activeTab = document.querySelector('.js-tabcontent.is-active');
+    const activeTab = codeBox.querySelector('.js-tabcontent.is-active');
     const clipContent = activeTab.dataset.clipboard;
+    console.log(activeTab, clipContent)
     if (clipContent) {
       await clipboard.writeText(clipContent);
       copyButton.blur();
@@ -39,6 +36,10 @@ const addCCToCode = (copyButton, copiedButton) => {
   })
 }
 
+const toggleHidden = (nodeArray) => {
+  nodeArray.forEach((node) => node.classList.toggle('is-hidden'));
+}
+
 const hideCopyIfColors = (copyButton, colorsTab) => {
   const observer = new MutationObserver((mutations) => {
     colorsTab.classList.contains('is-active')
@@ -48,8 +49,6 @@ const hideCopyIfColors = (copyButton, colorsTab) => {
 
   observer.observe(colorsTab, { attributeFilter: ['class'] })
 }
-
-
 
 const initCC = (codeBox) => {
   const copyButton = codeBox.querySelector('.copy-to-cc');
@@ -62,7 +61,7 @@ const initCC = (codeBox) => {
     colorNodes.forEach(addCCtoColor);
   }
 
-  addCCToCode(copyButton, copiedButton)
+  addCCToCode(codeBox, copyButton, copiedButton)
 }
 
 export default () => {
