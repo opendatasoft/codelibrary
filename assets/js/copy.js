@@ -23,7 +23,6 @@ const addCCToCode = (codeBox, copyButton, copiedButton) => {
   copyButton.addEventListener('click', async (event) => {
     const activeTab = codeBox.querySelector('.js-tabcontent.is-active');
     const clipContent = activeTab.dataset.clipboard;
-    console.log(activeTab, clipContent)
     if (clipContent) {
       await clipboard.writeText(clipContent);
       copyButton.blur();

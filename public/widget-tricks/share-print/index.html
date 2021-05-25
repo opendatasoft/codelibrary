@@ -45,6 +45,34 @@
   </head>
 
   <body>
+    <div class="is-hidden">
+      <svg>
+  <defs>
+    <g id="link-2">
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+    </g>
+
+    <g id="check">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </g>
+
+    <g id="copy">
+      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+    </g>
+
+    <g id="external">
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+      <polyline points="15 3 21 3 21 9"></polyline>
+      <line x1="10" y1="14" x2="21" y2="3"></line>
+    </g>
+
+  </defs>
+</svg>
+
+    </div>
+
     <nav class="navbar is-fixed-top"
      role="navigation"
      aria-label="Main navigation">
@@ -112,513 +140,508 @@
 </nav>
 
 
-    <div class="columns is-desktop codelibrary">
-      <div class="column is-narrow">
-        <aside class="sidebar"
+    <div class="columns is-desktop codelibrary mb-0">
+      <div class="column is-narrow pb-0">
+        <div class="sidebar-search is-hidden-touch">
+  <div class="block search-wrapper">
+    <div id="algolia-box"></div>
+    <div class="search-results-wrapper">
+      <div id="algolia-results"></div>
+    </div>
+  </div>
+</div>
+<aside class="sidebar"
        id="sidebarNavbar">
-   <div class="sidebar-header">
-     <div class="block search-wrapper">
-       <div id="algolia-box"></div>
-       <div class="search-results-wrapper">
-         <div id="algolia-results"></div>
-       </div>
-     </div>
+  
+  <div class="sidebar-header">
+    <div class="block">
+      <ul class="menu-list">
+        <p class="menu-label">On this page</p>
+        <li>
+          <a href="#">
+            Top
+          </a>
+        </li>
+        
+        <li>
+          <a href="#browse-search-filter-then-share-or-print">
+            Browse, Search, Filter then Share or Print!
+          </a>
+        </li>
+        
+        <li>
+          <a href="#card-with-print-style">
+            Card with print style!
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+  
+  <div class="sidebar-body">
     
-       <div class="block">
-         <ul class="menu-list">
-           <p class="menu-label">On this page</p>
-           <li>
-             <a href="#">
-               Top
-             </a>
-           </li>
-           
-           <li>
-             <a href="#browse-search-filter-then-share-or-print">
-               Browse, Search, Filter then Share or Print!
-             </a>
-           </li>
-           
-           <li>
-             <a href="#card-with-print-style">
-               Card with print style!
-             </a>
-           </li>
-           
-         </ul>
-       </div>
-     </div>
-     
-
+    
+    <ul class="menu-list">
+      <li>
+        <a class="sidebar-subtitle"
+          href="https://codelibrary.opendatasoft.com">
+          Home
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/components/"
+        class="sidebar-subtitle">
+        Components
         
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/custom-views/"
+        class="sidebar-subtitle">
+        Custom views
         
-        <ul class="menu-list">
-            <li>
-                <a class="sidebar-subtitle"
-                   href="https://codelibrary.opendatasoft.com">
-                    Home
-                </a>
-            </li>
-            
-              
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/generators/"
+        class="sidebar-subtitle">
+        Generators
+        
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/page-templates/"
+        class="sidebar-subtitle">
+        Page templates
+        
+        <span class="tag pill is-size-7 is-rounded is-info">1</span>
+        
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/portal-themes/"
+        class="sidebar-subtitle">
+        Portal themes
+        
+      </a>
+    </li>
+    
+    
+      
+      <li>
+        <a class="sidebar-subtitle " href="/widget-tricks/">
+          Widget tricks
+        </a>
+        <ul>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-chart-css/">
+              <div>
+                ods-chart CSS Hacks
                 
                 
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-              <li>
-                  <a href="/components/"
-                     class="sidebar-subtitle">
-                      Components
-                      
-                  </a>
-              </li>
-              
-            
-              
-                
-                
-                  
-                  
-                
-                  
-                  
-                
-              <li>
-                  <a href="/custom-views/"
-                     class="sidebar-subtitle">
-                      Custom views
-                      
-                        <span class="tag pill is-size-7 is-rounded is-info">1</span>
-                      
-                  </a>
-              </li>
-              
-            
-              
-                
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-              <li>
-                  <a href="/generators/"
-                     class="sidebar-subtitle">
-                      Generators
-                      
-                  </a>
-              </li>
-              
-            
-              
-                
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-              <li>
-                  <a href="/page-templates/"
-                     class="sidebar-subtitle">
-                      Page templates
-                      
-                        <span class="tag pill is-size-7 is-rounded is-info">1</span>
-                      
-                  </a>
-              </li>
-              
-            
-              
-                
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-              <li>
-                  <a href="/portal-themes/"
-                     class="sidebar-subtitle">
-                      Portal themes
-                      
-                  </a>
-              </li>
-              
-            
-              
-              <li>
-                  <a class="sidebar-subtitle " href="/widget-tricks/">
-                  Widget tricks
-                  </a>
-                  <ul>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-chart-css/">
-                              <div>
-                                ods-chart CSS Hacks
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/animation/">
-                              <div>
-                                Animations
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/svg-maps/">
-                              <div>
-                                Static maps, a quick introduction
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/charts/">
-                              <div>
-                                Chart samples
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/catalog-cards/">
-                              <div>
-                                Custom catalog card
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/custom-tooltips/">
-                              <div>
-                                Custom Tooltips
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/dates/">
-                              <div>
-                                Dates
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/drill-down/">
-                              <div>
-                                Drill-down refine in charts
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/filter-as-list/">
-                              <div>
-                                Filters as an HTML Select
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-aggregation/">
-                              <div>
-                                ods-aggregation
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-analysis/">
-                              <div>
-                                ods-analysis, quick intro
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-color-gradient/">
-                              <div>
-                                ods-color-gradient &#43; ods-map : a choropleth alternative
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-date-range-slider/">
-                              <div>
-                                ods-date-range-slider
-                                
-                                
-                                <span class="tag pill is-size-7 is-rounded is-info">
-                                  3
-                                </span>
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-map-tricks/">
-                              <div>
-                                ods-map: Refine &amp; Zoom
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-map-css/">
-                              <div>
-                                ods-map: CSS Hacks
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-pop-in/">
-                              <div>
-                                ods-pop-in variants
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-select/">
-                              <div>
-                                ods-select
-                                
-                                
-                                <span class="tag pill is-size-7 is-rounded is-info">
-                                  2
-                                </span>
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-simple-tabs/">
-                              <div>
-                                ods-simple-tabs
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="is-active" href="/widget-tricks/share-print/">
-                              <div>
-                                Share and print
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                  </ul>
-              </li>
-              
-            
-        </ul>
-        <p class="menu-label">
-            Tags
-        </p>
-        <div class="tags">
-            
-            <a class="tag" href="/tags/aggregation/">
-                aggregation
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/chart/">
-                chart
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/animation/">
+              <div>
+                Animations
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/date/">
-                date
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/svg-maps/">
+              <div>
+                Static maps, a quick introduction
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/display/">
-                display
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/charts/">
+              <div>
+                Chart samples
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/filter/">
-                filter
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/catalog-cards/">
+              <div>
+                Custom catalog card
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/geo/">
-                geo
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/custom-tooltips/">
+              <div>
+                Custom Tooltips
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/list/">
-                list
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/dates/">
+              <div>
+                Dates
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/map/">
-                map
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/drill-down/">
+              <div>
+                Drill-down refine in charts
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/navigation/">
-                navigation
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/filter-as-list/">
+              <div>
+                Filters as an HTML Select
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/ods-aggregation/">
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-aggregation/">
+              <div>
                 ods-aggregation
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/ods-analysis/">
-                ods-analysis
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-analysis/">
+              <div>
+                ods-analysis, quick intro
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/ods-maps/">
-                ods-maps
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-color-gradient/">
+              <div>
+                ods-color-gradient &#43; ods-map : a choropleth alternative
+                
+                
+              </div>
             </a>
-            
-        </div>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-date-range-slider/">
+              <div>
+                ods-date-range-slider
+                
+                
+                <span class="tag pill is-size-7 is-rounded is-info">
+                  3
+                </span>
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-map-css/">
+              <div>
+                ods-map: CSS Hacks
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-map-tricks/">
+              <div>
+                ods-map: Refine &amp; Zoom
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-pop-in/">
+              <div>
+                ods-pop-in variants
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-select/">
+              <div>
+                ods-select
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-simple-tabs/">
+              <div>
+                ods-simple-tabs
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="is-active" href="/widget-tricks/share-print/">
+              <div>
+                Share and print
+                
+                
+              </div>
+            </a>
+          </li>
+          
+        </ul>
+      </li>
+      
+    
+  </ul>
+  <p class="menu-label">
+    Tags
+  </p>
+  <div class="tags">
+    
+    <a class="tag" href="/tags/aggregation/">
+      aggregation
+    </a>
+    
+    <a class="tag" href="/tags/chart/">
+      chart
+    </a>
+    
+    <a class="tag" href="/tags/date/">
+      date
+    </a>
+    
+    <a class="tag" href="/tags/display/">
+      display
+    </a>
+    
+    <a class="tag" href="/tags/filter/">
+      filter
+    </a>
+    
+    <a class="tag" href="/tags/geo/">
+      geo
+    </a>
+    
+    <a class="tag" href="/tags/list/">
+      list
+    </a>
+    
+    <a class="tag" href="/tags/map/">
+      map
+    </a>
+    
+    <a class="tag" href="/tags/navigation/">
+      navigation
+    </a>
+    
+    <a class="tag" href="/tags/ods-aggregation/">
+      ods-aggregation
+    </a>
+    
+    <a class="tag" href="/tags/ods-analysis/">
+      ods-analysis
+    </a>
+    
+    <a class="tag" href="/tags/ods-maps/">
+      ods-maps
+    </a>
+    
+  </div>
+</div>
 </aside>
 
       </div>
       <div class="column codelibrary-content">
         
-  <section>
-    <div class="content-header container is-max-desktop mb-5">
-      <div class="content">
-        <h1>Widget Tricks - Share and print</h1>
-        
-      </div>
+<section class="section resources">
+  <div class="container is-max-widescreen">
+    <h1 class="title is-1">Widget Tricks - Share and print</h1>
+    <div class="content">
+      
     </div>
     
-    <div class="container">
-      <div class="box box-example">
-        <h2 class="title is-2" id="browse-search-filter-then-share-or-print">
-          Browse, Search, Filter then Share or Print!
-          
-          <a class="is-link anchor" href="#browse-search-filter-then-share-or-print">
-            <span class="icon">
-              <img src="/img/fas-link.svg" />
-            </span>
-          </a>
-        </h2>
-        
-        <div class="content">
-          <p>This resource highlights the urlsync parameter that allows users to copy/share the URL with applied filters and query. It also proposes a scenario of a dedicated page to print a specific record&rsquo;s metadata.</p>
+    <article class="block">
+      <h2 class="title is-2" id="browse-search-filter-then-share-or-print">
+        Browse, Search, Filter then Share or Print! 
+        <a class="is-link anchor" href="#browse-search-filter-then-share-or-print">
+          <span class="icon">
+            <img src="/img/fas-link.svg" />
+          </span>
+        </a>
+      </h2>
+      <div class="content">
+        <p>This resource highlights the urlsync parameter that allows users to copy/share the URL with applied filters and query. It also proposes a scenario of a dedicated page to print a specific record&rsquo;s metadata.</p>
 
-        </div>
+      </div>
+      
+      <div class="box">
         
 
 
@@ -627,10 +650,11 @@
 
 
     
+
+
 
 
 <div class="codepen">
-
     <form id="form-browse-search-filter-then-share-or-print"
           action="https://codepen.io/pen/define"
           method="POST"
@@ -646,9 +670,9 @@
                }'>
     </form>
 </div>
-
 <div class="ods-content">
-    <section class="box box-live-example">
+    <div class="box-live-example"
+      style="height: 800px;">
       <iframe id="iframe-browse-search-filter-then-share-or-print"
               width="100%" height="100%"
               src="about:blank"
@@ -876,51 +900,161 @@
                 </body>
               ">
       </iframe>
-    </section>
-
-    <section class="box box-code js-tabs">
-        <nav class="level is-flex">
+      <div class="show-code buttons has-addons">
+          <button class="button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-browse-search-filter-then-share-or-print').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    <div class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
-                    <ul class="buttons has-addons js-tablist">
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-browse-search-filter-then-share-or-print-html-content">
-                                HTML
-                            </a>
-                        </li>
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-browse-search-filter-then-share-or-print-html-content"
+                        >
+                          HTML
+                        </a>
                         
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-browse-search-filter-then-share-or-print-css-content">
-                                CSS
-                            </a>
-                        </li>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-browse-search-filter-then-share-or-print-css-content"
+                        >
+                          CSS
+                        </a>
                         
-                    </ul>
+                    </div>
                 </div>
             </div>
-            <div class="level-right mt-0">
-                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
-                   data-tooltip="Edit on CodePen"
-                   target="_blank"
-                   aria-role="link"
-                   rel="noopener"
-                   title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-browse-search-filter-then-share-or-print').submit()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="feather feather-edit">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
                     </svg>
-                </a>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
             </div>
         </nav>
-
         <div class="tab-content">
             <div class="js-tabcontent"
-                 id="code-browse-search-filter-then-share-or-print-html-content">
+                 id="code-browse-search-filter-then-share-or-print-html-content"
+                 data-clipboard="&lt;div class=&#34;container&#34;&gt;
+    &lt;ods-dataset-context context=&#34;ctx&#34;
+                         ctx-dataset=&#34;record-stores&#34;
+                         ctx-domain=&#34;userclub&#34;
+                         ctx-urlsync=&#34;true&#34;&gt;
+        &lt;div class=&#34;row ods-box&#34;&gt;
+            &lt;h3&gt;
+                Share by copying this link :
+            &lt;/h3&gt;
+            &lt;h3 class=&#34;red-box&#34;&gt;
+                Filter and have a look to your browser URL ! It&#39;s synced !
+            &lt;/h3&gt;
+            &lt;h4&gt;
+                &lt;a href=&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}&#34;
+                   target=&#34;_blank&#34;&gt;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}&lt;/a&gt;
+            &lt;/h4&gt;
+            &lt;h3&gt;
+                Share through social network or by email:
+            &lt;/h3&gt;
+            &lt;div class=&#34;boutons&#34; style=&#34;font-size: 1.6rem;&#34;&gt;
+                &lt;a href=&#34;https://twitter.com/intent/tweet?text=Opendatasoft Page Test;url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
+                   class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--twitter&#34;
+                   target=&#34;_blank&#34;&gt;
+                    &lt;i class=&#34;fa fa-twitter ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+                &lt;a href=&#34;https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
+                   class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--facebook&#34;
+                   target=&#34;_blank&#34;&gt;
+                    &lt;i class=&#34;fa fa-facebook ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+                &lt;a href=&#34;https://plus.google.com/share?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
+                   class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--google-plus&#34;
+                   target=&#34;_blank&#34;&gt;
+                    &lt;i class=&#34;fa fa-google-plus ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+                &lt;a href=&#34;https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&amp;amp;mini=true&amp;amp;title=Opendatasoft Page Test;source=Opendatasoft&#34;
+                   class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--linkedin&#34;
+                   target=&#34;_blank&#34;&gt;
+                    &lt;i class=&#34;fa fa-linkedin ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+                &lt;a href=&#34;mailto:?subject=Opendatasoft Page Test&amp;amp;body=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
+                   class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--mail&#34;
+                   target=&#34;_blank&#34;&gt;
+                    &lt;i class=&#34;fa fa-envelope ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;/a&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;row ods-box&#34;&gt;
+            &lt;h3&gt;
+                A dashboard : Music record store in the world
+            &lt;/h3&gt;
+            &lt;div class=&#34;col-md-3 ods-box&#34;&gt;
+                &lt;ods-text-search context=&#34;ctx&#34; placeholder=&#34;disc, records, music...&#34;&gt;&lt;/ods-text-search&gt;
+                &lt;ods-filter-summary context=&#34;ctx&#34;&gt;&lt;/ods-filter-summary&gt;
+                &lt;ods-facets context=&#34;ctx&#34;&gt;&lt;/ods-facets&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-9 ods-box&#34;&gt;
+                &lt;ods-map&gt;
+                    &lt;ods-map-layer context=&#34;ctx&#34;&gt;
+                        &lt;div&gt;
+                            &lt;h3&gt;
+                                {{ record.fields.name }}
+                            &lt;/h3&gt;
+                            &lt;p style=&#34;font-style:italic; color:grey; font-weight:300&#34;&gt;
+                                {{ record.fields.address }}
+                            &lt;/p&gt;
+                            &lt;div style=&#34;line-height: 0px;&#34;&gt;
+                                &lt;p&gt;
+                                    &lt;span style=&#34;font-style:italic;&#34;&gt;Has closed &lt;/span&gt;&lt;b style=&#34;font-size:1.2em&#34;&gt;{{ record.fields.hasclosed }}&lt;/b&gt;
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;a style=&#34;color: #1e0c33; font-weight: 600; font-size: 1.1em;&#34;
+                               href=&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint-card?q=city:%22{{ record.fields.city }}%22 AND name:%22{{ record.fields.name }}%22&#34;
+                               target=&#34;_blank&#34;&gt;Go to the store card&lt;/a&gt;
+                        &lt;/div&gt;
+                    &lt;/ods-map-layer&gt;
+                &lt;/ods-map&gt;
+                &lt;div class=&#34;ods-box&#34;&gt;
+                    &lt;ods-table context=&#34;ctx&#34;&gt;&lt;/ods-table&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/ods-dataset-context&gt;
+&lt;/div&gt;
+"
+                 role="tabpanel">
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;container&#34;&gt;
     &lt;ods-dataset-context context=&#34;ctx&#34;
@@ -1011,7 +1145,19 @@
             </div>
             
             <div class="js-tabcontent"
-                 id="code-browse-search-filter-then-share-or-print-css-content">
+                 id="code-browse-search-filter-then-share-or-print-css-content"
+                 data-clipboard=".boutons {
+    margin-left: 30px;
+}
+.red-box {
+    float: right;
+    border: 2px solid darkred;
+    color: darkred;
+    padding: 20px;
+    background-color: #ffe8e8;
+}
+"
+            >
                 <div class="highlight">
                     <pre class="language-css" data-lang="css"><code>.boutons {
     margin-left: 30px;
@@ -1028,62 +1174,27 @@
             </div>
             
         </div>
-    </section>
+    </div>
 </div>
 
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-browse-search-filter-then-share-or-print";
-            iframe = document.getElementById(iframeId);
-             
-            size =  null 
-             
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-                if (iframe.height == size) {
-                    clearInterval(loopId);
-                } else {
-                    iframe.height = size > 1 ? size : scrollHeight;
-                }
-            }
-        }, 1000);
-    });
-</script>
-
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-browse-search-filter-then-share-or-print";
-            iframe = document.getElementById(iframeId);
-
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-            }
-        }, 1000);
-    });
-</script>
+      </div>
+    </article>
+    
+    <article class="block">
+      <h2 class="title is-2" id="card-with-print-style">
+        Card with print style! 
+        <a class="is-link anchor" href="#card-with-print-style">
+          <span class="icon">
+            <img src="/img/fas-link.svg" />
+          </span>
+        </a>
+      </h2>
+      <div class="content">
+        <p>This card lists all fields of the record, and has print styling to remove all unnecessary elements of the page.</p>
 
       </div>
-    </div>
-    
-    <div class="container">
-      <div class="box box-example">
-        <h2 class="title is-2" id="card-with-print-style">
-          Card with print style!
-          
-          <a class="is-link anchor" href="#card-with-print-style">
-            <span class="icon">
-              <img src="/img/fas-link.svg" />
-            </span>
-          </a>
-        </h2>
-        
-        <div class="content">
-          <p>This card lists all fields of the record, and has print styling to remove all unnecessary elements of the page.</p>
-
-        </div>
+      
+      <div class="box">
         
 
 
@@ -1092,10 +1203,11 @@
 
 
     
+
+
 
 
 <div class="codepen">
-
     <form id="form-card-with-print-style"
           action="https://codepen.io/pen/define"
           method="POST"
@@ -1111,9 +1223,9 @@
                }'>
     </form>
 </div>
-
 <div class="ods-content">
-    <section class="box box-live-example">
+    <div class="box-live-example"
+      style="height: 800px;">
       <iframe id="iframe-card-with-print-style"
               width="100%" height="100%"
               src="about:blank"
@@ -1301,51 +1413,99 @@
                 </body>
               ">
       </iframe>
-    </section>
-
-    <section class="box box-code js-tabs">
-        <nav class="level is-flex">
+      <div class="show-code buttons has-addons">
+          <button class="button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-card-with-print-style').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    <div class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
-                    <ul class="buttons has-addons js-tablist">
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-card-with-print-style-html-content">
-                                HTML
-                            </a>
-                        </li>
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-card-with-print-style-html-content"
+                        >
+                          HTML
+                        </a>
                         
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-card-with-print-style-css-content">
-                                CSS
-                            </a>
-                        </li>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-card-with-print-style-css-content"
+                        >
+                          CSS
+                        </a>
                         
-                    </ul>
+                    </div>
                 </div>
             </div>
-            <div class="level-right mt-0">
-                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
-                   data-tooltip="Edit on CodePen"
-                   target="_blank"
-                   aria-role="link"
-                   rel="noopener"
-                   title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-card-with-print-style').submit()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="feather feather-edit">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
                     </svg>
-                </a>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
             </div>
         </nav>
-
         <div class="tab-content">
             <div class="js-tabcontent"
-                 id="code-card-with-print-style-html-content">
+                 id="code-card-with-print-style-html-content"
+                 data-clipboard="&lt;div class=&#34;ods-box card&#34;&gt;
+    &lt;h2&gt;
+        Record store card &lt;span style=&#34;font-size:0.7em; color:darkred; margin-left:40px&#34;&gt;Print it (Ctrl/Cmd&#43;P) or just share the link !&lt;/span&gt;
+    &lt;/h2&gt;
+    &lt;ods-dataset-context context=&#34;ctx&#34;
+                         ctx-dataset=&#34;record-stores&#34;
+                         ctx-urlsync=&#34;true&#34;&gt;
+        &lt;div ng-repeat=&#34;item in items&#34; ods-results=&#34;items&#34; ods-results-context=&#34;ctx&#34; ods-results-max=&#34;1&#34;&gt;
+            &lt;ul class=&#34;field-list&#34;&gt;
+                &lt;li class=&#34;field&#34; ng-repeat=&#34;field in ctx.dataset.fields&#34;&gt;
+                    &lt;p class=&#34;label&#34;&gt;
+                        {{ field.label }}
+                    &lt;/p&gt;
+                    &lt;p class=&#34;value&#34;&gt;
+                        {{ item.fields[field.name] }}
+                    &lt;/p&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+        &lt;ods-map context=&#34;ctx&#34;&gt;&lt;/ods-map&gt;
+    &lt;/ods-dataset-context&gt;
+&lt;/div&gt;
+"
+                 role="tabpanel">
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;ods-box card&#34;&gt;
     &lt;h2&gt;
@@ -1374,7 +1534,41 @@
             </div>
             
             <div class="js-tabcontent"
-                 id="code-card-with-print-style-css-content">
+                 id="code-card-with-print-style-css-content"
+                 data-clipboard=".card {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.field-list {
+    list-style-type: none;
+    display: grid;
+}
+.field {
+    display: inline-flex;
+    line-height: 18px;
+    margin-bottom: 4px;
+}
+.label {
+    width: 175px;
+    color: black;
+    font-weight: 500;
+}
+.value {
+    width: 400px;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 2px 0px 0px 5px;
+    line-height: 25px;
+    background-color: #f0f0f0;
+}
+@media print {
+    header, footer {
+        display: none;
+    }
+}
+      "
+            >
                 <div class="highlight">
                     <pre class="language-css" data-lang="css"><code>.card {
     width: 700px;
@@ -1413,47 +1607,14 @@
             </div>
             
         </div>
-    </section>
+    </div>
 </div>
 
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-card-with-print-style";
-            iframe = document.getElementById(iframeId);
-             
-            size =  null 
-             
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-                if (iframe.height == size) {
-                    clearInterval(loopId);
-                } else {
-                    iframe.height = size > 1 ? size : scrollHeight;
-                }
-            }
-        }, 1000);
-    });
-</script>
-
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-card-with-print-style";
-            iframe = document.getElementById(iframeId);
-
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-            }
-        }, 1000);
-    });
-</script>
-
       </div>
-    </div>
+    </article>
     
-  </section>
+  </div>
+</section>
 
       </div>
     </div>
@@ -1480,7 +1641,7 @@
     </script>
     <script
       type="text/javascript"
-      src="/index.min.2c5b7dabef71618f00ce4f080e82d1e0fe7f366d83c46134fa5571225e40379c.js"
+      src="/index.min.dab9f7ba4764dc6713009aa8ec80ace48cbacb02d0b3fd62029c67e06f550354.js"
       defer
     ></script>
   </body>

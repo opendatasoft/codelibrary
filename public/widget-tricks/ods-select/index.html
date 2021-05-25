@@ -45,6 +45,34 @@
   </head>
 
   <body>
+    <div class="is-hidden">
+      <svg>
+  <defs>
+    <g id="link-2">
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+    </g>
+
+    <g id="check">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </g>
+
+    <g id="copy">
+      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+    </g>
+
+    <g id="external">
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+      <polyline points="15 3 21 3 21 9"></polyline>
+      <line x1="10" y1="14" x2="21" y2="3"></line>
+    </g>
+
+  </defs>
+</svg>
+
+    </div>
+
     <nav class="navbar is-fixed-top"
      role="navigation"
      aria-label="Main navigation">
@@ -112,545 +140,540 @@
 </nav>
 
 
-    <div class="columns is-desktop codelibrary">
-      <div class="column is-narrow">
-        <aside class="sidebar"
+    <div class="columns is-desktop codelibrary mb-0">
+      <div class="column is-narrow pb-0">
+        <div class="sidebar-search is-hidden-touch">
+  <div class="block search-wrapper">
+    <div id="algolia-box"></div>
+    <div class="search-results-wrapper">
+      <div id="algolia-results"></div>
+    </div>
+  </div>
+</div>
+<aside class="sidebar"
        id="sidebarNavbar">
-   <div class="sidebar-header">
-     <div class="block search-wrapper">
-       <div id="algolia-box"></div>
-       <div class="search-results-wrapper">
-         <div id="algolia-results"></div>
-       </div>
-     </div>
+  
+  <div class="sidebar-header">
+    <div class="block">
+      <ul class="menu-list">
+        <p class="menu-label">On this page</p>
+        <li>
+          <a href="#">
+            Top
+          </a>
+        </li>
+        
+        <li>
+          <a href="#basic-example-fed-by-a-static-list">
+            Basic example, fed by a static list
+          </a>
+        </li>
+        
+        <li>
+          <a href="#basic-example-with-a-default-selection">
+            Basic example, with a default selection
+          </a>
+        </li>
+        
+        <li>
+          <a href="#filter-by-type-fed-by-a-facet-via-ods-facet-results-widget">
+            Filter by type, fed by a facet (via ods-facet-results widget)
+          </a>
+        </li>
+        
+        <li>
+          <a href="#filter-by-the-results-of-an-analysis-via-ods-analysis-widget">
+            Filter by the results of an analysis (via ods-analysis widget)
+          </a>
+        </li>
+        
+        <li>
+          <a href="#last-but-not-least-the-good-practice-for-geo-filters--showcasing-ods-results">
+            Last but not least, the good practice for geo filters ! (showcasing ods-results)
+          </a>
+        </li>
+        
+        <li>
+          <a href="#filters-as-a-sentence">
+            Filters as a sentence
+          </a>
+        </li>
+        
+        <li>
+          <a href="#simple-inlined-layout">
+            Simple inlined layout
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+  
+  <div class="sidebar-body">
     
-       <div class="block">
-         <ul class="menu-list">
-           <p class="menu-label">On this page</p>
-           <li>
-             <a href="#">
-               Top
-             </a>
-           </li>
-           
-           <li>
-             <a href="#basic-example-fed-by-a-static-list">
-               Basic example, fed by a static list
-             </a>
-           </li>
-           
-           <li>
-             <a href="#basic-example-with-a-default-selection">
-               Basic example, with a default selection
-             </a>
-           </li>
-           
-           <li>
-             <a href="#filter-by-type-fed-by-a-facet-via-ods-facet-results-widget">
-               Filter by type, fed by a facet (via ods-facet-results widget)
-             </a>
-           </li>
-           
-           <li>
-             <a href="#filter-by-the-results-of-an-analysis-via-ods-analysis-widget">
-               Filter by the results of an analysis (via ods-analysis widget)
-             </a>
-           </li>
-           
-           <li>
-             <a href="#last-but-not-least-the-good-practice-for-geo-filters--showcasing-ods-results">
-               Last but not least, the good practice for geo filters ! (showcasing ods-results)
-             </a>
-           </li>
-           
-           <li>
-             <a href="#filters-as-a-sentence">
-               Filters as a sentence
-             </a>
-           </li>
-           
-           <li>
-             <a href="#simple-inlined-layout">
-               Simple inlined layout
-             </a>
-           </li>
-           
-         </ul>
-       </div>
-     </div>
-     
-
+    
+    <ul class="menu-list">
+      <li>
+        <a class="sidebar-subtitle"
+          href="https://codelibrary.opendatasoft.com">
+          Home
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/components/"
+        class="sidebar-subtitle">
+        Components
         
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/custom-views/"
+        class="sidebar-subtitle">
+        Custom views
         
-        <ul class="menu-list">
-            <li>
-                <a class="sidebar-subtitle"
-                   href="https://codelibrary.opendatasoft.com">
-                    Home
-                </a>
-            </li>
-            
-              
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/generators/"
+        class="sidebar-subtitle">
+        Generators
+        
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/page-templates/"
+        class="sidebar-subtitle">
+        Page templates
+        
+        <span class="tag pill is-size-7 is-rounded is-info">1</span>
+        
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/portal-themes/"
+        class="sidebar-subtitle">
+        Portal themes
+        
+      </a>
+    </li>
+    
+    
+      
+      <li>
+        <a class="sidebar-subtitle " href="/widget-tricks/">
+          Widget tricks
+        </a>
+        <ul>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-chart-css/">
+              <div>
+                ods-chart CSS Hacks
                 
                 
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-              <li>
-                  <a href="/components/"
-                     class="sidebar-subtitle">
-                      Components
-                      
-                  </a>
-              </li>
-              
-            
-              
-                
-                
-                  
-                  
-                
-                  
-                  
-                
-              <li>
-                  <a href="/custom-views/"
-                     class="sidebar-subtitle">
-                      Custom views
-                      
-                        <span class="tag pill is-size-7 is-rounded is-info">1</span>
-                      
-                  </a>
-              </li>
-              
-            
-              
-                
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-              <li>
-                  <a href="/generators/"
-                     class="sidebar-subtitle">
-                      Generators
-                      
-                  </a>
-              </li>
-              
-            
-              
-                
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-              <li>
-                  <a href="/page-templates/"
-                     class="sidebar-subtitle">
-                      Page templates
-                      
-                        <span class="tag pill is-size-7 is-rounded is-info">1</span>
-                      
-                  </a>
-              </li>
-              
-            
-              
-                
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-              <li>
-                  <a href="/portal-themes/"
-                     class="sidebar-subtitle">
-                      Portal themes
-                      
-                  </a>
-              </li>
-              
-            
-              
-              <li>
-                  <a class="sidebar-subtitle " href="/widget-tricks/">
-                  Widget tricks
-                  </a>
-                  <ul>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-chart-css/">
-                              <div>
-                                ods-chart CSS Hacks
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/animation/">
-                              <div>
-                                Animations
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/svg-maps/">
-                              <div>
-                                Static maps, a quick introduction
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/charts/">
-                              <div>
-                                Chart samples
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/catalog-cards/">
-                              <div>
-                                Custom catalog card
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/custom-tooltips/">
-                              <div>
-                                Custom Tooltips
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/dates/">
-                              <div>
-                                Dates
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/drill-down/">
-                              <div>
-                                Drill-down refine in charts
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/filter-as-list/">
-                              <div>
-                                Filters as an HTML Select
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-aggregation/">
-                              <div>
-                                ods-aggregation
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-analysis/">
-                              <div>
-                                ods-analysis, quick intro
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-color-gradient/">
-                              <div>
-                                ods-color-gradient &#43; ods-map : a choropleth alternative
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-date-range-slider/">
-                              <div>
-                                ods-date-range-slider
-                                
-                                
-                                <span class="tag pill is-size-7 is-rounded is-info">
-                                  3
-                                </span>
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-map-tricks/">
-                              <div>
-                                ods-map: Refine &amp; Zoom
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-map-css/">
-                              <div>
-                                ods-map: CSS Hacks
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-pop-in/">
-                              <div>
-                                ods-pop-in variants
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="is-active" href="/widget-tricks/ods-select/">
-                              <div>
-                                ods-select
-                                
-                                
-                                <span class="tag pill is-size-7 is-rounded is-info">
-                                  2
-                                </span>
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-simple-tabs/">
-                              <div>
-                                ods-simple-tabs
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/share-print/">
-                              <div>
-                                Share and print
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                  </ul>
-              </li>
-              
-            
-        </ul>
-        <p class="menu-label">
-            Tags
-        </p>
-        <div class="tags">
-            
-            <a class="tag" href="/tags/aggregation/">
-                aggregation
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/chart/">
-                chart
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/animation/">
+              <div>
+                Animations
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/date/">
-                date
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/svg-maps/">
+              <div>
+                Static maps, a quick introduction
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/display/">
-                display
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/charts/">
+              <div>
+                Chart samples
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/filter/">
-                filter
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/catalog-cards/">
+              <div>
+                Custom catalog card
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/geo/">
-                geo
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/custom-tooltips/">
+              <div>
+                Custom Tooltips
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/list/">
-                list
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/dates/">
+              <div>
+                Dates
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/map/">
-                map
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/drill-down/">
+              <div>
+                Drill-down refine in charts
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/navigation/">
-                navigation
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/filter-as-list/">
+              <div>
+                Filters as an HTML Select
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/ods-aggregation/">
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-aggregation/">
+              <div>
                 ods-aggregation
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/ods-analysis/">
-                ods-analysis
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-analysis/">
+              <div>
+                ods-analysis, quick intro
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/ods-maps/">
-                ods-maps
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-color-gradient/">
+              <div>
+                ods-color-gradient &#43; ods-map : a choropleth alternative
+                
+                
+              </div>
             </a>
-            
-        </div>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-date-range-slider/">
+              <div>
+                ods-date-range-slider
+                
+                
+                <span class="tag pill is-size-7 is-rounded is-info">
+                  3
+                </span>
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-map-css/">
+              <div>
+                ods-map: CSS Hacks
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-map-tricks/">
+              <div>
+                ods-map: Refine &amp; Zoom
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-pop-in/">
+              <div>
+                ods-pop-in variants
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="is-active" href="/widget-tricks/ods-select/">
+              <div>
+                ods-select
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-simple-tabs/">
+              <div>
+                ods-simple-tabs
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/share-print/">
+              <div>
+                Share and print
+                
+                
+              </div>
+            </a>
+          </li>
+          
+        </ul>
+      </li>
+      
+    
+  </ul>
+  <p class="menu-label">
+    Tags
+  </p>
+  <div class="tags">
+    
+    <a class="tag" href="/tags/aggregation/">
+      aggregation
+    </a>
+    
+    <a class="tag" href="/tags/chart/">
+      chart
+    </a>
+    
+    <a class="tag" href="/tags/date/">
+      date
+    </a>
+    
+    <a class="tag" href="/tags/display/">
+      display
+    </a>
+    
+    <a class="tag" href="/tags/filter/">
+      filter
+    </a>
+    
+    <a class="tag" href="/tags/geo/">
+      geo
+    </a>
+    
+    <a class="tag" href="/tags/list/">
+      list
+    </a>
+    
+    <a class="tag" href="/tags/map/">
+      map
+    </a>
+    
+    <a class="tag" href="/tags/navigation/">
+      navigation
+    </a>
+    
+    <a class="tag" href="/tags/ods-aggregation/">
+      ods-aggregation
+    </a>
+    
+    <a class="tag" href="/tags/ods-analysis/">
+      ods-analysis
+    </a>
+    
+    <a class="tag" href="/tags/ods-maps/">
+      ods-maps
+    </a>
+    
+  </div>
+</div>
 </aside>
 
       </div>
       <div class="column codelibrary-content">
         
-  <section>
-    <div class="content-header container is-max-desktop mb-5">
-      <div class="content">
-        <h1>Widget Tricks - ods-select</h1>
-        <p>ods-select allows the selection of one or more items from a list of options. This resource present different combination with ods-facet-results or ods-analysis to feed the selection list.</p>
+<section class="section resources">
+  <div class="container is-max-widescreen">
+    <h1 class="title is-1">Widget Tricks - ods-select</h1>
+    <div class="content">
+      <p>ods-select allows the selection of one or more items from a list of options. This resource present different combination with ods-facet-results or ods-analysis to feed the selection list.</p>
 <p><a href="https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsSelect">ods-select widget documentation</a></p>
 
-      </div>
     </div>
     
-    <div class="container">
-      <div class="box box-example">
-        <h2 class="title is-2" id="basic-example-fed-by-a-static-list">
-          Basic example, fed by a static list
-          
-          <a class="is-link anchor" href="#basic-example-fed-by-a-static-list">
-            <span class="icon">
-              <img src="/img/fas-link.svg" />
-            </span>
-          </a>
-        </h2>
-        
-        <div class="content">
-          <p><code>ods-select</code> accept any kind of source as long as it&rsquo;s a <code>json array</code>. It can be an array of strings, but also an array of object and ods-select <code>label-modifier</code> and <code>value-modifier</code> can be used to specify which key in the array item to use for, respectively the label and the field value.</p>
+    <article class="block">
+      <h2 class="title is-2" id="basic-example-fed-by-a-static-list">
+        Basic example, fed by a static list 
+        <a class="is-link anchor" href="#basic-example-fed-by-a-static-list">
+          <span class="icon">
+            <img src="/img/fas-link.svg" />
+          </span>
+        </a>
+      </h2>
+      <div class="content">
+        <p><code>ods-select</code> accept any kind of source as long as it&rsquo;s a <code>json array</code>. It can be an array of strings, but also an array of object and ods-select <code>label-modifier</code> and <code>value-modifier</code> can be used to specify which key in the array item to use for, respectively the label and the field value.</p>
 
-        </div>
+      </div>
+      
+      <div class="box">
         
 
 
@@ -659,10 +682,11 @@
 
 
     
+
+
 
 
 <div class="codepen">
-
     <form id="form-basic-example-fed-by-a-static-list"
           action="https://codepen.io/pen/define"
           method="POST"
@@ -678,9 +702,9 @@
                }'>
     </form>
 </div>
-
 <div class="ods-content">
-    <section class="box box-live-example">
+    <div class="box-live-example"
+      style="height: 800px;">
       <iframe id="iframe-basic-example-fed-by-a-static-list"
               width="100%" height="100%"
               src="about:blank"
@@ -860,51 +884,113 @@ h3 {
                 </body>
               ">
       </iframe>
-    </section>
-
-    <section class="box box-code js-tabs">
-        <nav class="level is-flex">
+      <div class="show-code buttons has-addons">
+          <button class="button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-basic-example-fed-by-a-static-list').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    <div class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
-                    <ul class="buttons has-addons js-tablist">
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-basic-example-fed-by-a-static-list-html-content">
-                                HTML
-                            </a>
-                        </li>
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-basic-example-fed-by-a-static-list-html-content"
+                        >
+                          HTML
+                        </a>
                         
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-basic-example-fed-by-a-static-list-css-content">
-                                CSS
-                            </a>
-                        </li>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-basic-example-fed-by-a-static-list-css-content"
+                        >
+                          CSS
+                        </a>
                         
-                    </ul>
+                    </div>
                 </div>
             </div>
-            <div class="level-right mt-0">
-                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
-                   data-tooltip="Edit on CodePen"
-                   target="_blank"
-                   aria-role="link"
-                   rel="noopener"
-                   title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-basic-example-fed-by-a-static-list').submit()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="feather feather-edit">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
                     </svg>
-                </a>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
             </div>
         </nav>
-
         <div class="tab-content">
             <div class="js-tabcontent"
-                 id="code-basic-example-fed-by-a-static-list-html-content">
+                 id="code-basic-example-fed-by-a-static-list-html-content"
+                 data-clipboard="&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-md-4 col-md-offset-2 col-sm-6 mb&#34; ng-if=&#34;true&#34;
+         ng-init=&#34;names = [&#39;John&#39;,&#39;George&#39;,&#39;Harry&#39;,&#39;Meredith&#39;]; selection&#34;&gt;
+        &lt;h3&gt;
+            Simplest mode, with a string array
+        &lt;/h3&gt;
+        &lt;ods-select options=&#34;names&#34;
+                    selected-values=&#34;selection&#34;
+                    placeholder=&#34;Pick a name&#34;&gt;&lt;/ods-select&gt;
+        &lt;h4&gt;Input:&lt;/h4&gt;
+        &lt;pre ng-bind=&#34;names|json&#34;&gt;&lt;/pre&gt;
+        &lt;h4&gt;Selection:&lt;/h4&gt;
+        &lt;pre ng-bind=&#34;selection|json&#34;&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-4 col-sm-6 mb&#34; ng-if=&#34;true&#34;
+         ng-init=&#34;
+            names = [
+                {name:&#39;Mister John&#39;,id:&#39;john&#39;},
+                {name:&#39;King George&#39;,id:&#39;george&#39;},
+                {name:&#39;Prince Harry&#39;,id:&#39;harry&#39;},
+                {name:&#39;Lady Meredith&#39;,id:&#39;meredith&#39;}
+            ];
+            selection&#34;&gt;
+        &lt;h3&gt;
+            Modifiers options with json object array
+        &lt;/h3&gt;
+        &lt;ods-select options=&#34;names&#34;
+                    selected-values=&#34;selection&#34;
+                    label-modifier=&#34;name&#34;
+                    value-modifier=&#34;id&#34;
+                    placeholder=&#34;Pick a name&#34;&gt;&lt;/ods-select&gt;
+        &lt;h4&gt;Input:&lt;/h4&gt;
+        &lt;pre ng-bind=&#34;names|json&#34;&gt;&lt;/pre&gt;
+        &lt;h4&gt;Selection:&lt;/h4&gt;
+        &lt;pre ng-bind=&#34;selection|json&#34;&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+&lt;/div&gt;"
+                 role="tabpanel">
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;row&#34;&gt;
     &lt;div class=&#34;col-md-4 col-md-offset-2 col-sm-6 mb&#34; ng-if=&#34;true&#34;
@@ -947,7 +1033,19 @@ h3 {
             </div>
             
             <div class="js-tabcontent"
-                 id="code-basic-example-fed-by-a-static-list-css-content">
+                 id="code-basic-example-fed-by-a-static-list-css-content"
+                 data-clipboard="/** DO NOT COPY **/
+/* the CSS is only for a better reading of the demo */
+.mb {
+    margin-bottom: 30px;
+}
+h3 {
+    height: 60px;
+}
+.odswidget-select {
+    margin-bottom: 25px;
+}"
+            >
                 <div class="highlight">
                     <pre class="language-css" data-lang="css"><code>/** DO NOT COPY **/
 /* the CSS is only for a better reading of the demo */
@@ -964,63 +1062,28 @@ h3 {
             </div>
             
         </div>
-    </section>
+    </div>
 </div>
 
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-basic-example-fed-by-a-static-list";
-            iframe = document.getElementById(iframeId);
-             
-            size =  null 
-             
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-                if (iframe.height == size) {
-                    clearInterval(loopId);
-                } else {
-                    iframe.height = size > 1 ? size : scrollHeight;
-                }
-            }
-        }, 1000);
-    });
-</script>
-
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-basic-example-fed-by-a-static-list";
-            iframe = document.getElementById(iframeId);
-
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-            }
-        }, 1000);
-    });
-</script>
-
       </div>
-    </div>
+    </article>
     
-    <div class="container">
-      <div class="box box-example">
-        <h2 class="title is-2" id="basic-example-with-a-default-selection">
-          Basic example, with a default selection
-          
-          <a class="is-link anchor" href="#basic-example-with-a-default-selection">
-            <span class="icon">
-              <img src="/img/fas-link.svg" />
-            </span>
-          </a>
-        </h2>
-        
-        <div class="content">
-          <p>Start with a selected value, and let the user select another one.</p>
+    <article class="block">
+      <h2 class="title is-2" id="basic-example-with-a-default-selection">
+        Basic example, with a default selection 
+        <a class="is-link anchor" href="#basic-example-with-a-default-selection">
+          <span class="icon">
+            <img src="/img/fas-link.svg" />
+          </span>
+        </a>
+      </h2>
+      <div class="content">
+        <p>Start with a selected value, and let the user select another one.</p>
 <p>You can also force the user to always have a selection.</p>
 
-        </div>
+      </div>
+      
+      <div class="box">
         
 
 
@@ -1029,10 +1092,11 @@ h3 {
 
 
     
+
+
 
 
 <div class="codepen">
-
     <form id="form-basic-example-with-a-default-selection"
           action="https://codepen.io/pen/define"
           method="POST"
@@ -1048,9 +1112,9 @@ h3 {
                }'>
     </form>
 </div>
-
 <div class="ods-content">
-    <section class="box box-live-example">
+    <div class="box-live-example"
+      style="height: 550px;">
       <iframe id="iframe-basic-example-with-a-default-selection"
               width="100%" height="100%"
               src="about:blank"
@@ -1223,51 +1287,106 @@ h3 {
                 </body>
               ">
       </iframe>
-    </section>
-
-    <section class="box box-code js-tabs">
-        <nav class="level is-flex">
+      <div class="show-code buttons has-addons">
+          <button class="button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-basic-example-with-a-default-selection').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    <div class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
-                    <ul class="buttons has-addons js-tablist">
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-basic-example-with-a-default-selection-html-content">
-                                HTML
-                            </a>
-                        </li>
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-basic-example-with-a-default-selection-html-content"
+                        >
+                          HTML
+                        </a>
                         
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-basic-example-with-a-default-selection-css-content">
-                                CSS
-                            </a>
-                        </li>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-basic-example-with-a-default-selection-css-content"
+                        >
+                          CSS
+                        </a>
                         
-                    </ul>
+                    </div>
                 </div>
             </div>
-            <div class="level-right mt-0">
-                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
-                   data-tooltip="Edit on CodePen"
-                   target="_blank"
-                   aria-role="link"
-                   rel="noopener"
-                   title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-basic-example-with-a-default-selection').submit()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="feather feather-edit">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
                     </svg>
-                </a>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
             </div>
         </nav>
-
         <div class="tab-content">
             <div class="js-tabcontent"
-                 id="code-basic-example-with-a-default-selection-html-content">
+                 id="code-basic-example-with-a-default-selection-html-content"
+                 data-clipboard="&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-md-4 col-md-offset-2 col-sm-6 mb&#34; ng-if=&#34;true&#34;
+         ng-init=&#34;names = [&#39;John&#39;,&#39;George&#39;,&#39;Harry&#39;,&#39;Meredith&#39;]; selection&#34;&gt;
+        &lt;h3&gt;
+            Use ng-init to set the selection only once at the start
+        &lt;/h3&gt;
+        &lt;ods-select ng-init=&#34;selection = [&#39;John&#39;]&#34;
+                    options=&#34;names&#34;
+                    selected-values=&#34;selection&#34;
+                    placeholder=&#34;Pick a name&#34;&gt;&lt;/ods-select&gt;
+        &lt;h4&gt;Input:&lt;/h4&gt;
+        &lt;pre ng-bind=&#34;names|json&#34;&gt;&lt;/pre&gt;
+        &lt;h4&gt;Selection:&lt;/h4&gt;
+        &lt;pre ng-bind=&#34;selection|json&#34;&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;col-md-4 col-sm-6 mb&#34; ng-if=&#34;true&#34;
+         ng-init=&#34;names = [&#39;John&#39;,&#39;George&#39;,&#39;Harry&#39;,&#39;Meredith&#39;]; selection&#34;&gt;
+        &lt;h3&gt;
+            If the selection is cleared, reset it to &#34;John&#34;
+        &lt;/h3&gt;
+        {{ selection = (selection.length &gt; 0 ? selection : [&#39;John&#39;]); &#39;&#39;}}
+        &lt;ods-select options=&#34;names&#34;
+                    selected-values=&#34;selection&#34;
+                    placeholder=&#34;Pick a name&#34;&gt;&lt;/ods-select&gt;
+        &lt;h4&gt;Input:&lt;/h4&gt;
+        &lt;pre ng-bind=&#34;names|json&#34;&gt;&lt;/pre&gt;
+        &lt;h4&gt;Selection:&lt;/h4&gt;
+        &lt;pre ng-bind=&#34;selection|json&#34;&gt;&lt;/pre&gt;
+    &lt;/div&gt;
+&lt;/div&gt;"
+                 role="tabpanel">
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;row&#34;&gt;
     &lt;div class=&#34;col-md-4 col-md-offset-2 col-sm-6 mb&#34; ng-if=&#34;true&#34;
@@ -1303,7 +1422,19 @@ h3 {
             </div>
             
             <div class="js-tabcontent"
-                 id="code-basic-example-with-a-default-selection-css-content">
+                 id="code-basic-example-with-a-default-selection-css-content"
+                 data-clipboard="/** DO NOT COPY **/
+/* the CSS is only for a better reading of the demo */
+.mb {
+    margin-bottom: 30px;
+}
+h3 {
+    height: 60px;
+}
+.odswidget-select {
+    margin-bottom: 25px;
+}"
+            >
                 <div class="highlight">
                     <pre class="language-css" data-lang="css"><code>/** DO NOT COPY **/
 /* the CSS is only for a better reading of the demo */
@@ -1320,60 +1451,23 @@ h3 {
             </div>
             
         </div>
-    </section>
+    </div>
 </div>
 
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-basic-example-with-a-default-selection";
-            iframe = document.getElementById(iframeId);
-             
-            size =  null 
-             
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-                if (iframe.height == size) {
-                    clearInterval(loopId);
-                } else {
-                    iframe.height = size > 1 ? size : scrollHeight;
-                }
-            }
-        }, 1000);
-    });
-</script>
-
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-basic-example-with-a-default-selection";
-            iframe = document.getElementById(iframeId);
-
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-            }
-        }, 1000);
-    });
-</script>
-
       </div>
-    </div>
+    </article>
     
-    <div class="container">
-      <div class="box box-example">
-        <h2 class="title is-2" id="filter-by-type-fed-by-a-facet-via-ods-facet-results-widget">
-          Filter by type, fed by a facet (via ods-facet-results widget)
-          
-          <a class="is-link anchor" href="#filter-by-type-fed-by-a-facet-via-ods-facet-results-widget">
-            <span class="icon">
-              <img src="/img/fas-link.svg" />
-            </span>
-          </a>
-        </h2>
-        
-        <div class="content">
-          <p><code>ods-facet-results</code> enumerates the values (&ldquo;categories&rdquo;) of a facet, and exposes it in a variable. this variable can then be the option source of <code>ods-select</code>.</p>
+    <article class="block">
+      <h2 class="title is-2" id="filter-by-type-fed-by-a-facet-via-ods-facet-results-widget">
+        Filter by type, fed by a facet (via ods-facet-results widget) 
+        <a class="is-link anchor" href="#filter-by-type-fed-by-a-facet-via-ods-facet-results-widget">
+          <span class="icon">
+            <img src="/img/fas-link.svg" />
+          </span>
+        </a>
+      </h2>
+      <div class="content">
+        <p><code>ods-facet-results</code> enumerates the values (&ldquo;categories&rdquo;) of a facet, and exposes it in a variable. this variable can then be the option source of <code>ods-select</code>.</p>
 <p><a href="https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsFacetResults">ods-facet-results widget documentation</a></p>
 <blockquote>
 <p><strong>Note 1:</strong> that facets are limited to the first 100 results, it&rsquo;s then suitable for categories, types, properties that have a small set of distinct values</p>
@@ -1382,7 +1476,9 @@ h3 {
 <p><strong>Note 2:</strong> set <code>disjunctive</code> mode to true in the context parameters to keep other values available after a selection</p>
 </blockquote>
 
-        </div>
+      </div>
+      
+      <div class="box">
         
 
 
@@ -1393,8 +1489,9 @@ h3 {
     
 
 
-<div class="codepen">
 
+
+<div class="codepen">
     <form id="form-filter-by-type-fed-by-a-facet-via-ods-facet-results-widget"
           action="https://codepen.io/pen/define"
           method="POST"
@@ -1410,9 +1507,9 @@ h3 {
                }'>
     </form>
 </div>
-
 <div class="ods-content">
-    <section class="box box-live-example">
+    <div class="box-live-example"
+      style="height: 600px;">
       <iframe id="iframe-filter-by-type-fed-by-a-facet-via-ods-facet-results-widget"
               width="100%" height="100%"
               src="about:blank"
@@ -1566,44 +1663,90 @@ h3 {
                 </body>
               ">
       </iframe>
-    </section>
-
-    <section class="box box-code js-tabs">
-        <nav class="level is-flex">
+      <div class="show-code buttons has-addons">
+          <button class="button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-filter-by-type-fed-by-a-facet-via-ods-facet-results-widget').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    <div class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
-                    <ul class="buttons has-addons js-tablist">
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-filter-by-type-fed-by-a-facet-via-ods-facet-results-widget-html-content">
-                                HTML
-                            </a>
-                        </li>
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-filter-by-type-fed-by-a-facet-via-ods-facet-results-widget-html-content"
+                        >
+                          HTML
+                        </a>
                         
-                    </ul>
+                    </div>
                 </div>
             </div>
-            <div class="level-right mt-0">
-                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
-                   data-tooltip="Edit on CodePen"
-                   target="_blank"
-                   aria-role="link"
-                   rel="noopener"
-                   title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-filter-by-type-fed-by-a-facet-via-ods-facet-results-widget').submit()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="feather feather-edit">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
                     </svg>
-                </a>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
             </div>
         </nav>
-
         <div class="tab-content">
             <div class="js-tabcontent"
-                 id="code-filter-by-type-fed-by-a-facet-via-ods-facet-results-widget-html-content">
+                 id="code-filter-by-type-fed-by-a-facet-via-ods-facet-results-widget-html-content"
+                 data-clipboard="&lt;div class=&#34;container&#34;&gt;
+    &lt;ods-dataset-context context=&#34;ushospitals&#34;
+                         ushospitals-dataset=&#34;us-hospitals&#34;
+                         ushospitals-parameters=&#34;{&#39;disjunctive.type&#39;:true}&#34;&gt;
+        &lt;div ods-facet-results=&#34;typelist&#34;
+             ods-facet-results-facet-name=&#34;type&#34;
+             ods-facet-results-context=&#34;ushospitals&#34;&gt;
+            &lt;h4&gt;
+                Type of hospitals
+            &lt;/h4&gt;
+            &lt;ods-select options=&#34;typelist&#34;
+                        selected-values=&#34;ushospitals.parameters[&#39;refine.type&#39;]&#34;
+                        label-modifier=&#34;name &#43; &#39; - &#39; &#43; (count | number) &#43; &#39; hospitals&#39;&#34;
+                        value-modifier=&#34;name&#34;
+                        placeholder=&#34;Select a type&#34;&gt;&lt;/ods-select&gt;
+            &lt;br/&gt;
+            &lt;ods-map context=&#34;ushospitals&#34; scroll-wheel-zoom=&#34;false&#34; location=&#34;4,38.37612,-106.69922&#34;
+                     basemap=&#34;jawg.streets&#34;&gt;&lt;/ods-map&gt;
+        &lt;/div&gt;
+    &lt;/ods-dataset-context&gt;
+&lt;/div&gt;"
+                 role="tabpanel">
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;container&#34;&gt;
     &lt;ods-dataset-context context=&#34;ushospitals&#34;
@@ -1630,60 +1773,23 @@ h3 {
             </div>
             
         </div>
-    </section>
+    </div>
 </div>
 
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-filter-by-type-fed-by-a-facet-via-ods-facet-results-widget";
-            iframe = document.getElementById(iframeId);
-             
-            size =  null 
-             
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-                if (iframe.height == size) {
-                    clearInterval(loopId);
-                } else {
-                    iframe.height = size > 1 ? size : scrollHeight;
-                }
-            }
-        }, 1000);
-    });
-</script>
-
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-filter-by-type-fed-by-a-facet-via-ods-facet-results-widget";
-            iframe = document.getElementById(iframeId);
-
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-            }
-        }, 1000);
-    });
-</script>
-
       </div>
-    </div>
+    </article>
     
-    <div class="container">
-      <div class="box box-example">
-        <h2 class="title is-2" id="filter-by-the-results-of-an-analysis-via-ods-analysis-widget">
-          Filter by the results of an analysis (via ods-analysis widget)
-          
-          <a class="is-link anchor" href="#filter-by-the-results-of-an-analysis-via-ods-analysis-widget">
-            <span class="icon">
-              <img src="/img/fas-link.svg" />
-            </span>
-          </a>
-        </h2>
-        
-        <div class="content">
-          <ul>
+    <article class="block">
+      <h2 class="title is-2" id="filter-by-the-results-of-an-analysis-via-ods-analysis-widget">
+        Filter by the results of an analysis (via ods-analysis widget) 
+        <a class="is-link anchor" href="#filter-by-the-results-of-an-analysis-via-ods-analysis-widget">
+          <span class="icon">
+            <img src="/img/fas-link.svg" />
+          </span>
+        </a>
+      </h2>
+      <div class="content">
+        <ul>
 <li>Select cities by their population</li>
 <li>Select companies by their capital, number of employees</li>
 <li>Select regions by their solar power production</li>
@@ -1699,7 +1805,9 @@ etc&hellip;</li>
 <p><strong>Note 2:</strong> selecting a value and refining the context will no longer let you choose other values as they will disappear with the selection. (contrary to <code>ods-facets</code> and <code>ods-facet-results</code> that can use the disjunctive mode, ie. multi selection mode). To counter that, we need 2 contexts: 1 to perform the analysis and feed ods-select, 1 to refine and display the chart</p>
 </blockquote>
 
-        </div>
+      </div>
+      
+      <div class="box">
         
 
 
@@ -1710,8 +1818,9 @@ etc&hellip;</li>
     
 
 
-<div class="codepen">
 
+
+<div class="codepen">
     <form id="form-filter-by-the-results-of-an-analysis-via-ods-analysis-widget"
           action="https://codepen.io/pen/define"
           method="POST"
@@ -1727,9 +1836,9 @@ etc&hellip;</li>
                }'>
     </form>
 </div>
-
 <div class="ods-content">
-    <section class="box box-live-example">
+    <div class="box-live-example"
+      style="height: 650px;">
       <iframe id="iframe-filter-by-the-results-of-an-analysis-via-ods-analysis-widget"
               width="100%" height="100%"
               src="about:blank"
@@ -1929,51 +2038,133 @@ h3 {
                 </body>
               ">
       </iframe>
-    </section>
-
-    <section class="box box-code js-tabs">
-        <nav class="level is-flex">
+      <div class="show-code buttons has-addons">
+          <button class="button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-filter-by-the-results-of-an-analysis-via-ods-analysis-widget').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    <div class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
-                    <ul class="buttons has-addons js-tablist">
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-filter-by-the-results-of-an-analysis-via-ods-analysis-widget-html-content">
-                                HTML
-                            </a>
-                        </li>
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-filter-by-the-results-of-an-analysis-via-ods-analysis-widget-html-content"
+                        >
+                          HTML
+                        </a>
                         
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-filter-by-the-results-of-an-analysis-via-ods-analysis-widget-css-content">
-                                CSS
-                            </a>
-                        </li>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-filter-by-the-results-of-an-analysis-via-ods-analysis-widget-css-content"
+                        >
+                          CSS
+                        </a>
                         
-                    </ul>
+                    </div>
                 </div>
             </div>
-            <div class="level-right mt-0">
-                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
-                   data-tooltip="Edit on CodePen"
-                   target="_blank"
-                   aria-role="link"
-                   rel="noopener"
-                   title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-filter-by-the-results-of-an-analysis-via-ods-analysis-widget').submit()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="feather feather-edit">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
                     </svg>
-                </a>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
             </div>
         </nav>
-
         <div class="tab-content">
             <div class="js-tabcontent"
-                 id="code-filter-by-the-results-of-an-analysis-via-ods-analysis-widget-html-content">
+                 id="code-filter-by-the-results-of-an-analysis-via-ods-analysis-widget-html-content"
+                 data-clipboard="&lt;div class=&#34;container&#34;&gt;
+    &lt;ods-dataset-context context=&#34;ctxanalysis,ctxrefine&#34;
+                         ctxanalysis-dataset=&#34;shanghai-world-university-ranking&#34;
+                         ctxanalysis-parameters=&#34;{&#39;sort&#39;:&#39;world_rank&#39;}&#34;
+                         ctxrefine-dataset=&#34;shanghai-world-university-ranking&#34;
+                         ctxrefine-parameters=&#34;{&#39;sort&#39;:&#39;world_rank&#39;}&#34;&gt;
+        &lt;div ods-analysis=&#34;rankings&#34;
+             ods-analysis-context=&#34;ctxanalysis&#34;
+             ods-analysis-x=&#34;university_name&#34;
+             ods-analysis-serie-maxscore=&#34;MAX(world_rank_int)&#34;
+             ods-analysis-sort=&#34;-maxscore&#34;
+             ods-analysis-max=&#34;100&#34;&gt;
+            &lt;h3&gt;
+                Select an university in this TOP 100 list (sorted by it&#39;s best ranking overall)
+            &lt;/h3&gt;
+            &lt;ods-select options=&#34;rankings.results&#34;
+                        selected-values=&#34;ctxrefine.parameters[&#39;refine.university_name&#39;]&#34;
+                        label-modifier=&#34;x &#43; &#39;, Best ranking: &#39; &#43; maxscore&#34;
+                        value-modifier=&#34;x&#34;
+                        placeholder=&#34;Select an university&#34;&gt;&lt;/ods-select&gt;
+
+            &lt;div ng-if=&#34;!ctxrefine.parameters[&#39;refine.university_name&#39;][0]&#34;&gt;
+                &lt;h4&gt;Select an university to see it&#39;s ranking details over years&lt;/h4&gt;
+            &lt;/div&gt;
+
+            &lt;div ng-if=&#34;ctxrefine.parameters[&#39;refine.university_name&#39;][0]&#34;&gt;
+                &lt;h4&gt;{{ ctxrefine.parameters[&#39;refine.university_name&#39;][0] }} rankings details, over years&lt;/h4&gt;
+                &lt;ods-chart single-y-axis=&#34;true&#34; align-month=&#34;true&#34;&gt;
+                    &lt;ods-chart-query context=&#34;ctxrefine&#34; field-x=&#34;year&#34; maxpoints=&#34;100&#34;
+                                     timescale=&#34;year&#34;&gt;
+                        &lt;ods-chart-serie expression-y=&#34;pcp&#34; chart-type=&#34;column&#34; label-y=&#34;PCP score&#34; function-y=&#34;AVG&#34; color=&#34;#263891&#34;
+                                         scientific-display=&#34;true&#34;&gt;
+                        &lt;/ods-chart-serie&gt;
+                        &lt;ods-chart-serie expression-y=&#34;alumni&#34; label-y=&#34;Alumni score&#34; chart-type=&#34;column&#34; function-y=&#34;AVG&#34; color=&#34;#19630A&#34;
+                                         scientific-display=&#34;true&#34;&gt;
+                        &lt;/ods-chart-serie&gt;
+                        &lt;ods-chart-serie expression-y=&#34;award&#34; label-y=&#34;Award score&#34; chart-type=&#34;column&#34; function-y=&#34;AVG&#34; color=&#34;#F7B133&#34;
+                                         scientific-display=&#34;true&#34;&gt;
+                        &lt;/ods-chart-serie&gt;
+                        &lt;ods-chart-serie expression-y=&#34;pub&#34; label-y=&#34;Pub score&#34; chart-type=&#34;column&#34; function-y=&#34;AVG&#34; color=&#34;#BA0129&#34;
+                                         scientific-display=&#34;true&#34;&gt;
+                        &lt;/ods-chart-serie&gt;
+                        &lt;ods-chart-serie expression-y=&#34;ns&#34; label-y=&#34;NS score&#34; chart-type=&#34;column&#34; function-y=&#34;AVG&#34; color=&#34;#C0C5CC&#34;
+                                         scientific-display=&#34;true&#34;&gt;
+                        &lt;/ods-chart-serie&gt;
+                        &lt;ods-chart-serie expression-y=&#34;hici&#34; label-y=&#34;HICI score&#34; chart-type=&#34;column&#34; function-y=&#34;AVG&#34; color=&#34;#000000&#34;
+                                         scientific-display=&#34;true&#34;&gt;
+                        &lt;/ods-chart-serie&gt;
+                    &lt;/ods-chart-query&gt;
+                &lt;/ods-chart&gt;
+
+            &lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/ods-dataset-context&gt;
+&lt;/div&gt;
+"
+                 role="tabpanel">
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;container&#34;&gt;
     &lt;ods-dataset-context context=&#34;ctxanalysis,ctxrefine&#34;
@@ -2036,7 +2227,19 @@ h3 {
             </div>
             
             <div class="js-tabcontent"
-                 id="code-filter-by-the-results-of-an-analysis-via-ods-analysis-widget-css-content">
+                 id="code-filter-by-the-results-of-an-analysis-via-ods-analysis-widget-css-content"
+                 data-clipboard="/** DO NOT COPY **/
+/* the CSS is only for a better reading of the demo */
+.mb {
+    margin-bottom: 30px;
+}
+h3 {
+    height: 60px;
+}
+.odswidget-select {
+    margin-bottom: 25px;
+}"
+            >
                 <div class="highlight">
                     <pre class="language-css" data-lang="css"><code>/** DO NOT COPY **/
 /* the CSS is only for a better reading of the demo */
@@ -2053,60 +2256,23 @@ h3 {
             </div>
             
         </div>
-    </section>
+    </div>
 </div>
 
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-filter-by-the-results-of-an-analysis-via-ods-analysis-widget";
-            iframe = document.getElementById(iframeId);
-             
-            size =  580 
-             
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-                if (iframe.height == size) {
-                    clearInterval(loopId);
-                } else {
-                    iframe.height = size > 1 ? size : scrollHeight;
-                }
-            }
-        }, 1000);
-    });
-</script>
-
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-filter-by-the-results-of-an-analysis-via-ods-analysis-widget";
-            iframe = document.getElementById(iframeId);
-
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-            }
-        }, 1000);
-    });
-</script>
-
       </div>
-    </div>
+    </article>
     
-    <div class="container">
-      <div class="box box-example">
-        <h2 class="title is-2" id="last-but-not-least-the-good-practice-for-geo-filters--showcasing-ods-results">
-          Last but not least, the good practice for geo filters ! (showcasing ods-results)
-          
-          <a class="is-link anchor" href="#last-but-not-least-the-good-practice-for-geo-filters--showcasing-ods-results">
-            <span class="icon">
-              <img src="/img/fas-link.svg" />
-            </span>
-          </a>
-        </h2>
-        
-        <div class="content">
-          <p>Each time it&rsquo;s available, filter with the ID! and avoid labels or names!
+    <article class="block">
+      <h2 class="title is-2" id="last-but-not-least-the-good-practice-for-geo-filters--showcasing-ods-results">
+        Last but not least, the good practice for geo filters ! (showcasing ods-results) 
+        <a class="is-link anchor" href="#last-but-not-least-the-good-practice-for-geo-filters--showcasing-ods-results">
+          <span class="icon">
+            <img src="/img/fas-link.svg" />
+          </span>
+        </a>
+      </h2>
+      <div class="content">
+        <p>Each time it&rsquo;s available, filter with the ID! and avoid labels or names!
 Specially for geographical division (City names, States etc&hellip;)</p>
 <p>This resource showcase <code>ods-results</code> as the source of ods-select but most of all <a href="https://data.opendatasoft.com/explore/?refine.publisher=Opendatasoft&amp;refine.theme=Geographical+referentials">Opendatasoft geo referentials</a> that always propose codes and labels for each division.</p>
 <p><code>ods-results</code> <a href="https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsResults">documentation</a>.</p>
@@ -2114,7 +2280,9 @@ Specially for geographical division (City names, States etc&hellip;)</p>
 <p><strong>IMPORTANT:</strong> In the <code>lander</code> context, an optional parameter <code>fields</code> is set to limit the size of the results. It improves DRASTICALLY the performance to avoid manipulating big geo shapes in geo datasets. We STRONGLY advise to keep this parameter and list only the required fields (ie. the &ldquo;label field&rdquo; and the &ldquo;value field&rdquo; of your ods-select)</p>
 </blockquote>
 
-        </div>
+      </div>
+      
+      <div class="box">
         
 
 
@@ -2125,8 +2293,9 @@ Specially for geographical division (City names, States etc&hellip;)</p>
     
 
 
-<div class="codepen">
 
+
+<div class="codepen">
     <form id="form-last-but-not-least-the-good-practice-for-geo-filters--showcasing-ods-results"
           action="https://codepen.io/pen/define"
           method="POST"
@@ -2142,9 +2311,9 @@ Specially for geographical division (City names, States etc&hellip;)</p>
                }'>
     </form>
 </div>
-
 <div class="ods-content">
-    <section class="box box-live-example">
+    <div class="box-live-example"
+      style="height: 650px;">
       <iframe id="iframe-last-but-not-least-the-good-practice-for-geo-filters--showcasing-ods-results"
               width="100%" height="100%"
               src="about:blank"
@@ -2317,44 +2486,109 @@ Specially for geographical division (City names, States etc&hellip;)</p>
                 </body>
               ">
       </iframe>
-    </section>
-
-    <section class="box box-code js-tabs">
-        <nav class="level is-flex">
+      <div class="show-code buttons has-addons">
+          <button class="button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-last-but-not-least-the-good-practice-for-geo-filters--showcasing-ods-results').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    <div class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
-                    <ul class="buttons has-addons js-tablist">
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-last-but-not-least-the-good-practice-for-geo-filters--showcasing-ods-results-html-content">
-                                HTML
-                            </a>
-                        </li>
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-last-but-not-least-the-good-practice-for-geo-filters--showcasing-ods-results-html-content"
+                        >
+                          HTML
+                        </a>
                         
-                    </ul>
+                    </div>
                 </div>
             </div>
-            <div class="level-right mt-0">
-                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
-                   data-tooltip="Edit on CodePen"
-                   target="_blank"
-                   aria-role="link"
-                   rel="noopener"
-                   title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-last-but-not-least-the-good-practice-for-geo-filters--showcasing-ods-results').submit()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="feather feather-edit">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
                     </svg>
-                </a>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
             </div>
         </nav>
-
         <div class="tab-content">
             <div class="js-tabcontent"
-                 id="code-last-but-not-least-the-good-practice-for-geo-filters--showcasing-ods-results-html-content">
+                 id="code-last-but-not-least-the-good-practice-for-geo-filters--showcasing-ods-results-html-content"
+                 data-clipboard="&lt;div class=&#34;container&#34;&gt;
+    &lt;ods-dataset-context context=&#34;kreis,lander&#34;
+                         lander-dataset=&#34;georef-germany-land@public&#34;
+                         lander-parameters=&#34;{&#39;fields&#39;:&#39;lan_name,lan_code&#39;}&#34;
+                         kreis-dataset=&#34;georef-germany-kreis@public&#34;&gt;
+        &lt;div ods-results=&#34;landerlist&#34;
+             ods-results-context=&#34;lander&#34;
+             ods-results-max=&#34;500&#34;&gt;
+            &lt;h3&gt;
+                Display the name, refine with the code
+            &lt;/h3&gt;
+            &lt;ods-select options=&#34;landerlist&#34;
+                        selected-values=&#34;kreis.parameters[&#39;refine.lan_code&#39;]&#34;
+                        label-modifier=&#34;fields.lan_name&#34;
+                        value-modifier=&#34;fields.lan_code&#34;
+                        placeholder=&#34;Select a Lander&#34;&gt;&lt;/ods-select&gt;
+            &lt;h4&gt;
+                Selected Lander code (used to refine the map context) : {{ kreis.parameters[&#39;refine.lan_code&#39;] }}
+            &lt;/h4&gt;
+            &lt;ods-map no-refit=&#34;true&#34; scroll-wheel-zoom=&#34;false&#34; basemap=&#34;jawg.sunny&#34; location=&#34;6,51.32924,10.45403&#34;&gt;
+                &lt;ods-map-layer-group&gt;
+                    &lt;ods-map-layer context=&#34;kreis&#34; color=&#34;#0086D6&#34; picto=&#34;ods-circle&#34;
+                                   show-marker=&#34;true&#34; display=&#34;auto&#34; shape-opacity=&#34;0.8&#34; point-opacity=&#34;1&#34;
+                                   border-color=&#34;#FFFFFF&#34; border-opacity=&#34;1&#34; border-size=&#34;1.5&#34;
+                                   border-pattern=&#34;solid&#34; size=&#34;4&#34; size-min=&#34;3&#34; size-max=&#34;5&#34;
+                                   size-function=&#34;linear&#34;&gt;&lt;/ods-map-layer&gt;
+                &lt;/ods-map-layer-group&gt;
+            &lt;/ods-map&gt;
+            &lt;ul&gt;
+                &lt;li&gt;
+                    &lt;a href=&#34;https://data.opendatasoft.com/explore/dataset/georef-germany-land%40public/&#34;
+                       target=&#34;_blank&#34;&gt;Germany Lander dataset source&lt;/a&gt;
+                &lt;/li&gt;
+                &lt;li&gt;
+                    &lt;a href=&#34;https://data.opendatasoft.com/explore/dataset/georef-germany-kreis%40public/&#34;
+                       target=&#34;_blank&#34;&gt;Germany Kreis dataset source&lt;/a&gt;
+                &lt;/li&gt;
+            &lt;/ul&gt;
+    &lt;/ods-dataset-context&gt;
+&lt;/div&gt;"
+                 role="tabpanel">
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;container&#34;&gt;
     &lt;ods-dataset-context context=&#34;kreis,lander&#34;
@@ -2400,64 +2634,29 @@ Specially for geographical division (City names, States etc&hellip;)</p>
             </div>
             
         </div>
-    </section>
+    </div>
 </div>
 
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-last-but-not-least-the-good-practice-for-geo-filters--showcasing-ods-results";
-            iframe = document.getElementById(iframeId);
-             
-            size =  null 
-             
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-                if (iframe.height == size) {
-                    clearInterval(loopId);
-                } else {
-                    iframe.height = size > 1 ? size : scrollHeight;
-                }
-            }
-        }, 1000);
-    });
-</script>
-
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-last-but-not-least-the-good-practice-for-geo-filters--showcasing-ods-results";
-            iframe = document.getElementById(iframeId);
-
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-            }
-        }, 1000);
-    });
-</script>
+      </div>
+    </article>
+    
+    <article class="block">
+      <h2 class="title is-2" id="filters-as-a-sentence">
+        Filters as a sentence 
+        <span class="tag is-rounded is-info">New</span>
+        
+        <a class="is-link anchor" href="#filters-as-a-sentence">
+          <span class="icon">
+            <img src="/img/fas-link.svg" />
+          </span>
+        </a>
+      </h2>
+      <div class="content">
+        <p>Read a sentence that describes the applied filters in your page by inlining several ods-select.</p>
 
       </div>
-    </div>
-    
-    <div class="container">
-      <div class="box box-example">
-        <h2 class="title is-2" id="filters-as-a-sentence">
-          Filters as a sentence
-          
-            <span class="tag is-rounded is-info">New</span>
-          
-          <a class="is-link anchor" href="#filters-as-a-sentence">
-            <span class="icon">
-              <img src="/img/fas-link.svg" />
-            </span>
-          </a>
-        </h2>
-        
-        <div class="content">
-          <p>Read a sentence that describes the applied filters in your page by inlining several ods-select.</p>
-
-        </div>
+      
+      <div class="box">
         
 
 
@@ -2466,10 +2665,11 @@ Specially for geographical division (City names, States etc&hellip;)</p>
 
 
     
+
+
 
 
 <div class="codepen">
-
     <form id="form-filters-as-a-sentence"
           action="https://codepen.io/pen/define"
           method="POST"
@@ -2485,9 +2685,9 @@ Specially for geographical division (City names, States etc&hellip;)</p>
                }'>
     </form>
 </div>
-
 <div class="ods-content">
-    <section class="box box-live-example">
+    <div class="box-live-example"
+      style="height: 400px;">
       <iframe id="iframe-filters-as-a-sentence"
               width="100%" height="100%"
               src="about:blank"
@@ -2651,51 +2851,94 @@ Specially for geographical division (City names, States etc&hellip;)</p>
                 </body>
               ">
       </iframe>
-    </section>
-
-    <section class="box box-code js-tabs">
-        <nav class="level is-flex">
+      <div class="show-code buttons has-addons">
+          <button class="button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-filters-as-a-sentence').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    <div class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
-                    <ul class="buttons has-addons js-tablist">
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-filters-as-a-sentence-html-content">
-                                HTML
-                            </a>
-                        </li>
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-filters-as-a-sentence-html-content"
+                        >
+                          HTML
+                        </a>
                         
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-filters-as-a-sentence-css-content">
-                                CSS
-                            </a>
-                        </li>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-filters-as-a-sentence-css-content"
+                        >
+                          CSS
+                        </a>
                         
-                    </ul>
+                    </div>
                 </div>
             </div>
-            <div class="level-right mt-0">
-                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
-                   data-tooltip="Edit on CodePen"
-                   target="_blank"
-                   aria-role="link"
-                   rel="noopener"
-                   title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-filters-as-a-sentence').submit()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="feather feather-edit">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
                     </svg>
-                </a>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
             </div>
         </nav>
-
         <div class="tab-content">
             <div class="js-tabcontent"
-                 id="code-filters-as-a-sentence-html-content">
+                 id="code-filters-as-a-sentence-html-content"
+                 data-clipboard="&lt;div class=&#34;ods-selects&#34;&gt;
+    &lt;p&gt;Show&lt;/p&gt;
+    &lt;ods-select selected-values=&#34;choice&#34;
+                options=&#34;[&#39;objects&#39;,&#39;things&#39;,&#39;stuff&#39;]&#34;
+                placeholder=&#34;pick what you want&#34;&gt;&lt;/ods-select&gt;
+    &lt;p&gt;in the&lt;/p&gt;
+    &lt;ods-select selected-values=&#34;place&#34;
+                options=&#34;[&#39;car&#39;,&#39;home&#39;]&#34;
+                placeholder=&#34;pick a place&#34;&gt;&lt;/ods-select&gt;
+    &lt;p&gt;since&lt;/p&gt;
+    &lt;ods-select selected-values=&#34;month&#34;
+                options=&#34;[&#39;Jan&#39;,&#39;Feb&#39;,&#39;Mar&#39;,&#39;Apr&#39;,&#39;May&#39;,&#39;Jun&#39;,&#39;Jul&#39;,&#39;Aug&#39;,&#39;Sep&#39;,&#39;Oct&#39;,&#39;Nov&#39;,&#39;Dec&#39;]&#34;
+                placeholder=&#34;month&#34;&gt;&lt;/ods-select&gt;
+    &lt;ods-select selected-values=&#34;year&#34;
+                options=&#34;[&#39;2018&#39;,&#39;2019&#39;,&#39;2020&#39;,&#39;2021&#39;]&#34;
+                placeholder=&#34;year&#34;&gt;&lt;/ods-select&gt;
+    &lt;p&gt;.&lt;/p&gt;
+&lt;/div&gt;"
+                 role="tabpanel">
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;ods-selects&#34;&gt;
     &lt;p&gt;Show&lt;/p&gt;
@@ -2719,7 +2962,22 @@ Specially for geographical division (City names, States etc&hellip;)</p>
             </div>
             
             <div class="js-tabcontent"
-                 id="code-filters-as-a-sentence-css-content">
+                 id="code-filters-as-a-sentence-css-content"
+                 data-clipboard="/***** Inlined SELECT *****/
+.ods-selects {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.ods-selects &gt; .odswidget-select {
+    margin: 3px 6px;
+}
+.ods-selects &gt; :not(.odswidget-select) {
+    margin-top: 0;
+    margin-bottom: 0;
+}"
+            >
                 <div class="highlight">
                     <pre class="language-css" data-lang="css"><code>/***** Inlined SELECT *****/
 .ods-selects {
@@ -2739,67 +2997,32 @@ Specially for geographical division (City names, States etc&hellip;)</p>
             </div>
             
         </div>
-    </section>
+    </div>
 </div>
 
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-filters-as-a-sentence";
-            iframe = document.getElementById(iframeId);
-             
-            size =  400 
-             
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-                if (iframe.height == size) {
-                    clearInterval(loopId);
-                } else {
-                    iframe.height = size > 1 ? size : scrollHeight;
-                }
-            }
-        }, 1000);
-    });
-</script>
-
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-filters-as-a-sentence";
-            iframe = document.getElementById(iframeId);
-
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-            }
-        }, 1000);
-    });
-</script>
-
       </div>
-    </div>
+    </article>
     
-    <div class="container">
-      <div class="box box-example">
-        <h2 class="title is-2" id="simple-inlined-layout">
-          Simple inlined layout
-          
-            <span class="tag is-rounded is-info">New</span>
-          
-          <a class="is-link anchor" href="#simple-inlined-layout">
-            <span class="icon">
-              <img src="/img/fas-link.svg" />
-            </span>
-          </a>
-        </h2>
+    <article class="block">
+      <h2 class="title is-2" id="simple-inlined-layout">
+        Simple inlined layout 
+        <span class="tag is-rounded is-info">New</span>
         
-        <div class="content">
-          <p><code>ods-select</code> takes all the available width. In order to inline several ods-select on the same line and keep the same strategy, you need to add some CSS. This resource provides the minimum CSS you need to achieve this easily.</p>
+        <a class="is-link anchor" href="#simple-inlined-layout">
+          <span class="icon">
+            <img src="/img/fas-link.svg" />
+          </span>
+        </a>
+      </h2>
+      <div class="content">
+        <p><code>ods-select</code> takes all the available width. In order to inline several ods-select on the same line and keep the same strategy, you need to add some CSS. This resource provides the minimum CSS you need to achieve this easily.</p>
 <blockquote>
 <p>For mobile display, to assure a minimum width of your <code>ods-select</code>, it can be convenient to set a <code>min-width</code>, see comments in the CSS code.</p>
 </blockquote>
 
-        </div>
+      </div>
+      
+      <div class="box">
         
 
 
@@ -2810,8 +3033,9 @@ Specially for geographical division (City names, States etc&hellip;)</p>
     
 
 
-<div class="codepen">
 
+
+<div class="codepen">
     <form id="form-simple-inlined-layout"
           action="https://codepen.io/pen/define"
           method="POST"
@@ -2827,9 +3051,9 @@ Specially for geographical division (City names, States etc&hellip;)</p>
                }'>
     </form>
 </div>
-
 <div class="ods-content">
-    <section class="box box-live-example">
+    <div class="box-live-example"
+      style="height: 300px;">
       <iframe id="iframe-simple-inlined-layout"
               width="100%" height="100%"
               src="about:blank"
@@ -2987,51 +3211,87 @@ Specially for geographical division (City names, States etc&hellip;)</p>
                 </body>
               ">
       </iframe>
-    </section>
-
-    <section class="box box-code js-tabs">
-        <nav class="level is-flex">
+      <div class="show-code buttons has-addons">
+          <button class="button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-simple-inlined-layout').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    <div class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
-                    <ul class="buttons has-addons js-tablist">
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-simple-inlined-layout-html-content">
-                                HTML
-                            </a>
-                        </li>
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-simple-inlined-layout-html-content"
+                        >
+                          HTML
+                        </a>
                         
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-simple-inlined-layout-css-content">
-                                CSS
-                            </a>
-                        </li>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-simple-inlined-layout-css-content"
+                        >
+                          CSS
+                        </a>
                         
-                    </ul>
+                    </div>
                 </div>
             </div>
-            <div class="level-right mt-0">
-                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
-                   data-tooltip="Edit on CodePen"
-                   target="_blank"
-                   aria-role="link"
-                   rel="noopener"
-                   title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-simple-inlined-layout').submit()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="feather feather-edit">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
                     </svg>
-                </a>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
             </div>
         </nav>
-
         <div class="tab-content">
             <div class="js-tabcontent"
-                 id="code-simple-inlined-layout-html-content">
+                 id="code-simple-inlined-layout-html-content"
+                 data-clipboard="&lt;div class=&#34;shared-width-ods-selects&#34;&gt;
+    &lt;ods-select selected-values=&#34;choice&#34;
+                options=&#34;[&#39;objects&#39;,&#39;things&#39;,&#39;stuff&#39;]&#34;
+                placeholder=&#34;pick what you want&#34;&gt;&lt;/ods-select&gt;
+    &lt;ods-select selected-values=&#34;place&#34;
+                options=&#34;[&#39;car&#39;,&#39;home&#39;]&#34;
+                placeholder=&#34;pick a place&#34;&gt;&lt;/ods-select&gt;
+    &lt;ods-select selected-values=&#34;long&#34;
+                options=&#34;[&#39;2018&#39;,&#39;2019&#39;,&#39;2020&#39;,&#39;2021&#39;, &#39;let see how it behaves with small screens.&#39;]&#34;
+                placeholder=&#34;very long content here, even too long for mobile display&#34;&gt;&lt;/ods-select&gt;
+&lt;/div&gt;"
+                 role="tabpanel">
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;shared-width-ods-selects&#34;&gt;
     &lt;ods-select selected-values=&#34;choice&#34;
@@ -3048,7 +3308,23 @@ Specially for geographical division (City names, States etc&hellip;)</p>
             </div>
             
             <div class="js-tabcontent"
-                 id="code-simple-inlined-layout-css-content">
+                 id="code-simple-inlined-layout-css-content"
+                 data-clipboard="/***** Share width inlined ods-select *****/
+.shared-width-ods-selects {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.shared-width-ods-selects &gt; .odswidget-select {
+    margin: 3px 6px;
+    flex: 1;
+    /*
+        To assure a minimum width, set a min-width property here.
+     */
+    min-width: 200px;
+}"
+            >
                 <div class="highlight">
                     <pre class="language-css" data-lang="css"><code>/***** Share width inlined ods-select *****/
 .shared-width-ods-selects {
@@ -3069,47 +3345,14 @@ Specially for geographical division (City names, States etc&hellip;)</p>
             </div>
             
         </div>
-    </section>
+    </div>
 </div>
 
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-simple-inlined-layout";
-            iframe = document.getElementById(iframeId);
-             
-            size =  400 
-             
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-                if (iframe.height == size) {
-                    clearInterval(loopId);
-                } else {
-                    iframe.height = size > 1 ? size : scrollHeight;
-                }
-            }
-        }, 1000);
-    });
-</script>
-
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-simple-inlined-layout";
-            iframe = document.getElementById(iframeId);
-
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-            }
-        }, 1000);
-    });
-</script>
-
       </div>
-    </div>
+    </article>
     
-  </section>
+  </div>
+</section>
 
       </div>
     </div>
@@ -3136,7 +3379,7 @@ Specially for geographical division (City names, States etc&hellip;)</p>
     </script>
     <script
       type="text/javascript"
-      src="/index.min.2c5b7dabef71618f00ce4f080e82d1e0fe7f366d83c46134fa5571225e40379c.js"
+      src="/index.min.dab9f7ba4764dc6713009aa8ec80ace48cbacb02d0b3fd62029c67e06f550354.js"
       defer
     ></script>
   </body>
