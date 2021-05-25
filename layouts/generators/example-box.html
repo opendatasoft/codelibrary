@@ -2,6 +2,7 @@
 {{ $posthtml := path.Join .File.Dir "../posthtml.inc" | readFile }}
 {{ $css := path.Join .File.Dir "../css.inc" | readFile }}
 {{ $config := path.Join .File.Dir "config.inc" | readFile }}
+{{ $htmlcontent := print $prehtml $config $posthtml }}
 {{ $openctx := "" }}
 {{ $closectx := "" }}
 
@@ -117,10 +118,10 @@
         <div class="tab-content">
             <div class="js-tabcontent"
                  id="code-{{ .Title | anchorize }}-html-content"
-                 data-clipboard="{{ $html }}"
+                 data-clipboard="{{ $htmlcontent }}"
                  role="tabpanel">
                 <div class="highlight">
-                    <pre class="language-html" data-lang="html"><code>{{ $html }}</code></pre>
+                    <pre class="language-html" data-lang="html"><code>{{ $htmlcontent }}</code></pre>
                 </div>
             </div>
             {{ if gt (len $css) 0 }}
