@@ -54,7 +54,7 @@ li.ng-scope.odswidget-map-display-control__group > span {
 }
 .map-legend {
     position: absolute;
-    bottom: 50px;
+    bottom: 100px;
     left: 10px;
     border-right-color: rgb(229, 229, 229);
     border-right-width: 5px;

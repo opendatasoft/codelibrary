@@ -2,6 +2,7 @@
 title: "Custom Tooltips"
 description: ""
 tags: ["map"]
+height: 700
 resources:
 - src: '*/'
   name: folder-:counter

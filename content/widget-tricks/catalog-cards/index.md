@@ -2,6 +2,7 @@
 title: "Custom catalog card"
 description: "Override default catalog cards to highlight key metadata for your business"
 tags: ["list", "display", "navigation"]
+height: 600
 resources:
 - src: '*/'
   name: folder-:counter

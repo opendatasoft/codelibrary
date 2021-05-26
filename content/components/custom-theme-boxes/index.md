@@ -2,6 +2,7 @@
 title: "Custom theme boxes"
 description: "Custom theme boxes with more flexibility in styling and layout."
 tags: ["display", "list", "navigation"]
+height: 360
 resources:
 - src: '*/'
   name: folder-:counter

@@ -1,6 +1,6 @@
 ---
 title: "Filter by the results of an analysis (via ods-analysis widget)"
-height: 580
+height: 650
 ---
 
 - Select cities by their population
