@@ -45,10 +45,6 @@ section {
     }
 }
 
-[class*="grid"] {
-
-}
-
 .content-box {
     height: 100%;
     /* Content management */
@@ -72,25 +68,18 @@ section {
         padding: 1rem;
     }
 }
-.content-box.text h3 {
-    margin: 0;
-}
 .content-box.text h4 {
     font-weight: 300;
-    margin: 0.5rem 0;
+    margin: 0;
 }
-
-/* DO NOT COPY, For layout presentation only */
-
-.heading, [class*="grid"], [class*="cell"] {
-    border: 1px dashed;
-    background-color: #ececec;
-}
-
-.content-box:not(.text) {
+.content-box .ods-chart {
     height: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #aaa;
 }
+
+g.highcharts-label.highcharts-data-label {
+    display: none;
+}
+g.highcharts-label.highcharts-data-label:nth-child(1), g.highcharts-label.highcharts-data-label:nth-child(2), g.highcharts-label.highcharts-data-label:nth-child(3), g.highcharts-label.highcharts-data-label:last-child {
+    display: inherit;
+}
+

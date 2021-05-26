@@ -84,9 +84,6 @@
     
       
       
-    
-      
-      
         <item>
           <title>Listing with map view - with image placeholder</title>
           <link>https://codelibrary.opendatasoft.com/generators/map-listing/#listing-with-map-view---with-image-placeholder</link>
@@ -360,6 +357,148 @@ we made this page public for the sake of example, but it is most likely a privat
           <guid>https://codelibrary.opendatasoft.com/page-templates/monitoring-dashboard/#blank</guid>
           <description>&lt;p&gt;This is a basic version without color theming.&lt;/p&gt;
 </description>
+        </item>
+      
+    
+      
+      
+        <item>
+          <title>Auto and fit</title>
+          <link>https://codelibrary.opendatasoft.com/layouts/101-the-framework/#auto-and-fit</link>
+          
+            <pubDate>Mon, 24 May 2021 12:12:02 +0200</pubDate>
+          
+          
+          <guid>https://codelibrary.opendatasoft.com/layouts/101-the-framework/#auto-and-fit</guid>
+          <description>&lt;p&gt;Use simply &lt;code&gt;grid&lt;/code&gt; to create a grid. The algorithm will automatically place cells depending on &lt;code&gt;cell-*&lt;/code&gt; classes seen previously.&lt;/p&gt;
+&lt;p&gt;Use &lt;code&gt;grid-cols-auto-flow&lt;/code&gt;, &lt;code&gt;grid-rows-auto-flow&lt;/code&gt; classes to control how the auto-placement algorithm works for a grid layout. &lt;code&gt;grid-auto&lt;/code&gt; shortcut stands for columns auto flow.&lt;/p&gt;
+&lt;p&gt;Use &lt;code&gt;grid-cols-fit&lt;/code&gt;, &lt;code&gt;grid-rows-fit&lt;/code&gt; classes to control the size implicitly-created grid columns and rows and make it fit the content.&lt;/p&gt;
+</description>
+        </item>
+      
+        <item>
+          <title>Benefits</title>
+          <link>https://codelibrary.opendatasoft.com/layouts/101-the-framework/#benefits</link>
+          
+            <pubDate>Mon, 24 May 2021 12:12:02 +0200</pubDate>
+          
+          
+          <guid>https://codelibrary.opendatasoft.com/layouts/101-the-framework/#benefits</guid>
+          <description>&lt;p&gt;Why should you use this framework ?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;adaptive height between cells of a same row.&lt;/li&gt;
+&lt;li&gt;automatic gap management (ie. no need of complex margins, with negative paddings on rows coupled with positive margins on columns).&lt;/li&gt;
+&lt;li&gt;reduced HTML depth/complexity, specially for nested grids (ie. avoid deep HTML trees of a box in a column in a row in a column in a row&amp;hellip; here the cell, the grid and the box can be the same element!).&lt;/li&gt;
+&lt;li&gt;mobile first, then force you to think about the mobile layout before the desktop one.&lt;/li&gt;
+&lt;li&gt;2D grid instead of 1D row (flexbox, width %, float)&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+      
+        <item>
+          <title>Change the order, by device</title>
+          <link>https://codelibrary.opendatasoft.com/layouts/101-the-framework/#change-the-order-by-device</link>
+          
+            <pubDate>Mon, 24 May 2021 12:12:02 +0200</pubDate>
+          
+          
+          <guid>https://codelibrary.opendatasoft.com/layouts/101-the-framework/#change-the-order-by-device</guid>
+          <description>&lt;p&gt;Responsive layouts can lead to strange and mixed results when you organise the content by columns.&lt;/p&gt;
+&lt;p&gt;In this example, on desktop view, the first grid keeps main content in the center, and let secondary content on the side.
+When this grid is shrunk to a mobile view, from 4 to 2 columns, the idea of main and secondary content is lost.&lt;/p&gt;
+&lt;p&gt;To fix this, you need to force a new order. The second grid is therefore coherent for mobile users.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note that the HTML structure changes, if we think &amp;ldquo;mobile first&amp;rdquo;, the HTML structure has the main content in first, the secondary in second. The CSS Grid framework then re-order element for small and above.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+      
+        <item>
+          <title>Columns position and size</title>
+          <link>https://codelibrary.opendatasoft.com/layouts/101-the-framework/#columns-position-and-size</link>
+          
+            <pubDate>Mon, 24 May 2021 12:12:02 +0200</pubDate>
+          
+          
+          <guid>https://codelibrary.opendatasoft.com/layouts/101-the-framework/#columns-position-and-size</guid>
+          <description>&lt;p&gt;Children are cells. They can be set on a specific position, and span on several columns.&lt;/p&gt;
+&lt;p&gt;Use &lt;code&gt;cell-span-{n}&lt;/code&gt; class to make an element span n columns.&lt;/p&gt;
+&lt;p&gt;Use &lt;code&gt;cell-start-{n}&lt;/code&gt; and &lt;code&gt;cell-end-{n}&lt;/code&gt; classes to make an element start or end at the nth grid line.
+Can be combined with &lt;code&gt;cell-span-{n}&lt;/code&gt; to span a specific number of columns.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;CSS grid lines start at 1, and ends at the size of the grid + 1. [1, 4] for a 3 columns wide grid for example.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+      
+        <item>
+          <title>Gap</title>
+          <link>https://codelibrary.opendatasoft.com/layouts/101-the-framework/#gap</link>
+          
+            <pubDate>Mon, 24 May 2021 12:12:02 +0200</pubDate>
+          
+          
+          <guid>https://codelibrary.opendatasoft.com/layouts/101-the-framework/#gap</guid>
+          <description>&lt;p&gt;Use &lt;code&gt;gap-{n}&lt;/code&gt; class to set grids gap. (Size of the gap is &lt;em&gt;n&lt;/em&gt; * 0.25 rem).
+Can be 0, 1, 2, 4, 6, 10.&lt;/p&gt;
+&lt;p&gt;Use &lt;code&gt;gap-x-{n}&lt;/code&gt; for columns gap, &lt;code&gt;gap-y-{n}&lt;/code&gt; for rows.&lt;/p&gt;
+&lt;p&gt;Default gap is &lt;code&gt;gap-4&lt;/code&gt;.&lt;/p&gt;
+</description>
+        </item>
+      
+        <item>
+          <title>Rows</title>
+          <link>https://codelibrary.opendatasoft.com/layouts/101-the-framework/#rows</link>
+          
+            <pubDate>Mon, 24 May 2021 12:12:02 +0200</pubDate>
+          
+          
+          <guid>https://codelibrary.opendatasoft.com/layouts/101-the-framework/#rows</guid>
+          <description>&lt;p&gt;As for columns, a specific number of rows can be set to a grid.
+The main benefit is to have an equal size for all children (cells) in the grid.
+It&amp;rsquo;s then also possible to span cells on several rows.&lt;/p&gt;
+&lt;p&gt;Use &lt;code&gt;grid-rows-{n}&lt;/code&gt; class to create grids with n equally sized rows.&lt;/p&gt;
+&lt;p&gt;Use &lt;code&gt;cell-row-span-{n}&lt;/code&gt;, &lt;code&gt;cell-row-start-{n}&lt;/code&gt;, &lt;code&gt;cell-row-end-{n}&lt;/code&gt; classes to, respectively, make an element span n rows, set its start position, end position.&lt;/p&gt;
+</description>
+        </item>
+      
+        <item>
+          <title>Set the grid</title>
+          <link>https://codelibrary.opendatasoft.com/layouts/101-the-framework/#set-the-grid</link>
+          
+            <pubDate>Mon, 24 May 2021 12:12:02 +0200</pubDate>
+          
+          
+          <guid>https://codelibrary.opendatasoft.com/layouts/101-the-framework/#set-the-grid</guid>
+          <description>&lt;p&gt;Use &lt;code&gt;grid-cols-{n}&lt;/code&gt; class to create grids with &lt;em&gt;n&lt;/em&gt; equally sized columns.
+&lt;code&gt;grid-{n}&lt;/code&gt; can be used as a shortcut.&lt;/p&gt;
+&lt;p&gt;Breakpoints for responsiveness are &lt;code&gt;sm&lt;/code&gt;, &lt;code&gt;md&lt;/code&gt; and &lt;code&gt;lg&lt;/code&gt;. They can be used as prefixes, for example: &lt;code&gt;sm:grid-cols-2 lg:grid-cols-3&lt;/code&gt;&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+      
+        <item>
+          <title>Light on 2 columns</title>
+          <link>https://codelibrary.opendatasoft.com/layouts/data-stories/#light-on-2-columns</link>
+          
+            <pubDate>Mon, 24 May 2021 12:12:02 +0200</pubDate>
+          
+          
+          <guid>https://codelibrary.opendatasoft.com/layouts/data-stories/#light-on-2-columns</guid>
+          <description></description>
+        </item>
+      
+        <item>
+          <title>Light on 2 columns - Example</title>
+          <link>https://codelibrary.opendatasoft.com/layouts/data-stories/#light-on-2-columns---example</link>
+          
+            <pubDate>Mon, 24 May 2021 12:12:02 +0200</pubDate>
+          
+          
+          <guid>https://codelibrary.opendatasoft.com/layouts/data-stories/#light-on-2-columns---example</guid>
+          <description></description>
         </item>
       
     

@@ -1,6 +1,7 @@
 ---
 title: "Set the grid"
 date: 2021-05-24T12:12:02+02:00
+height: 450
 ---
 
 Use `grid-cols-{n}` class to create grids with *n* equally sized columns.

@@ -1,6 +1,7 @@
 ---
 title: "Gap"
 date: 2021-05-24T12:12:02+02:00
+height: 450
 ---
 
 Use `gap-{n}` class to set grids gap. (Size of the gap is *n* * 0.25 rem).

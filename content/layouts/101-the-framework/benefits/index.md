@@ -1,6 +1,7 @@
 ---
 title: "Benefits"
 date: 2021-05-24T12:12:02+02:00
+height: 700
 ---
 
 Why should you use this framework ?

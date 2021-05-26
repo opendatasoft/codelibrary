@@ -7,4 +7,3 @@ resources:
   name: folder-:counter
 ---
 
-Data story layouts

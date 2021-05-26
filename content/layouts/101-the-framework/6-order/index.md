@@ -1,6 +1,7 @@
 ---
 title: "Change the order, by device"
 date: 2021-05-24T12:12:02+02:00
+height: 700
 ---
 
 Responsive layouts can lead to strange and mixed results when you organise the content by columns. 

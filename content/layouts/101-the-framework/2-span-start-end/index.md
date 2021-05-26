@@ -1,6 +1,7 @@
 ---
 title: "Columns position and size"
 date: 2021-05-24T12:12:02+02:00
+height: 600
 ---
 
 Children are cells. They can be set on a specific position, and span on several columns.

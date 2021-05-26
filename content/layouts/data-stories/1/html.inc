@@ -1,54 +1,37 @@
-<div class="container">
-    <div class="grid-6">
-        <div class="cell-full">
-            <div class="heading">
-                <h2>Title</h2>
-                <h3>Subtitle</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam atque commodi cupiditate, deserunt
-                    dolores dolorum ducimus ea fugiat non quidem repellat soluta voluptate voluptatem. Illo illum maxime
-                    nemo officia velit.</p>
+<section>
+    <div class="container">
+        <div class="heading">
+            <h1>Title</h1>
+            <h2>Sub title</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam atque commodi cupiditate, deserunt
+                dolores dolorum ducimus ea fugiat non quidem repellat soluta voluptate voluptatem. Illo illum maxime
+                nemo officia velit.</p>
+        </div>
+        <div class="grid-2 gap-1">
+            <div class="sm:cell-1 content-box text align-right">
+                <h3>Title</h3>
+                <h4>Subtitle</h4>
+                <p>Aligned text on the right</p>
+            </div>
+            <div class="sm:cell-1 content-box">
+                Chart here
             </div>
         </div>
-        <div class="cell-3 content-box text">
-            <h3>Evenements publics - OpenAgenda</h3>
-            <h4>Top 20 des départements par nombre d'évènements recensés</h4>
+        <div class="content-box text">
+            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam atque commodi cupiditate, deserunt
+                dolores dolorum ducimus ea fugiat non quidem repellat soluta voluptate voluptatem. Illo illum maxime
+                nemo officia velit.</p>
         </div>
-        <div class="cell-3 content-box">
-            <ods-dataset-context context="evenementspublicsopenagenda"
-                                 evenementspublicsopenagenda-dataset="evenements-publics-openagenda"
-                                 evenementspublicsopenagenda-parameters="{'disjunctive.tags':true,'disjunctive.placename':true,'disjunctive.city':true}">
-                <ods-chart class="no-bg hide-y-gridline hide-y-values medium-x-values" single-y-axis="true" step="10000" scientific-display="true" display-legend="false"
-                           labels-x-length="20" align-month="false">
-                    <ods-chart-query context="evenementspublicsopenagenda" field-x="department" maxpoints="20"
-                                     sort="serie1-1">
-                        <ods-chart-serie chart-type="bar" function-y="COUNT" label-y="Nombre d'événements"
-                                         color="#565656" display-values="true" display-stack-values="false"
-                                         scientific-display="true">
-                        </ods-chart-serie>
-                    </ods-chart-query>
-                </ods-chart>
-            </ods-dataset-context>
+        <div class="grid-2 gap-1">
+            <div class="sm:cell-1 sm:cell-order-2 content-box text align-left">
+                <h3>Title</h3>
+                <h4>Subtitle</h4>
+                <p>Aligned text on the left</p>
+            </div>
+            <div class="sm:cell-1 sm:cell-order-1 content-box">
+                Chart here
+            </div>
         </div>
-        <div class="cell-3 content-box">
-            <ods-dataset-context context="evenementspublicsopenagenda"
-                                 evenementspublicsopenagenda-dataset="evenements-publics-openagenda"
-                                 evenementspublicsopenagenda-parameters="{'disjunctive.tags':true,'disjunctive.placename':true,'disjunctive.city':true}">
-                <ods-chart class="no-bg hide-y-gridline hide-y-values medium-x-values" single-y-axis="true" step="10000" scientific-display="true" display-legend="false"
-                           labels-x-length="20" align-month="false">
-                    <ods-chart-query context="evenementspublicsopenagenda" field-x="department" maxpoints="20"
-                                     sort="serie1-1">
-                        <ods-chart-serie chart-type="bar" function-y="COUNT" label-y="Nombre d'événements"
-                                         color="#565656" display-values="true" display-stack-values="false"
-                                         scientific-display="true">
-                        </ods-chart-serie>
-                    </ods-chart-query>
-                </ods-chart>
-            </ods-dataset-context>
-        </div>
-        <div class="cell-3 content-box text">
-            <h3>Evenements publics - OpenAgenda</h3>
-            <h4>Top 20 des départements par nombre d'évènements recensés</h4>
-        </div>
-
     </div>
-</div>
+</section>

@@ -1,6 +1,7 @@
 ---
 title: "Rows"
 date: 2021-05-24T12:12:02+02:00
+height: 530
 ---
 
 As for columns, a specific number of rows can be set to a grid.
