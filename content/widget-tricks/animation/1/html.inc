@@ -21,7 +21,7 @@
                             auto-start="true"
                             exec="from = from + ((aggregation || 0) / nbticks);">
                     </ods-timer>
-                    <h2 class="kpi-title">{{ from | number:0 }}</h2>
+                    <p class="kpi-title">{{ from | number:0 }}</p>
                     <p class="kpi-description">tons of uranium produced since 2017</p>
                 </div>
             </div>
