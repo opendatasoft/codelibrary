@@ -1,0 +1,136 @@
+{{ $htmlcontent := path.Join .File.Dir "html.inc" | readFile }}
+{{ $css := path.Join .File.Dir "css.inc" | readFile }}
+{{ $head := "/layouts/partials/includes.html" | readFile }}
+
+{{ $html := "" }}
+
+{{ if (and .Params.domainid .Params.datasetid) }}
+    {{ $openctx := printf "%s%s%s%s%s" "<ods-dataset-context context=\"ctx\"\n ctx-dataset=\"" .Params.datasetid "\"\n ctx-domain=\"" .Params.domainid "\">\n" }}
+    {{ $closectx := "</ods-dataset-context>\n" }}
+    {{ $html = printf "%s%s%s%s%s%s%s" "<div ng-app=\"ods-widgets\">\n" $openctx "\n" $htmlcontent "\n" $closectx "</div>" }}
+{{ else }}
+    {{ $html = printf "%s%s%s" "<div ng-app=\"ods-widgets\">\n" $htmlcontent "</div>" }}
+{{ end }}
+
+<!-- {{ partial "live-code" (dict "context" . "html" $html "css" $css "head" $head) }} -->
+
+<div class="codepen">
+    <form id="form-{{ .Title | anchorize}}"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+                 "title": "New Pen!",
+                 "head": {{ $head | jsonify }},
+                 "editors": 110,
+                 "html": {{ $html | jsonify }},
+                 "css": {{ $css | jsonify }}
+               }'>
+    </form>
+</div>
+<div class="ods-content">
+    <div class="box-live-example"
+      style="height: {{ or .Params.height .Parent.Params.height | default 800 }}px;">
+      <iframe id="iframe-{{ .Title | anchorize }}"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+                <head>{{ $head }}</head>
+                <body>
+                <div ng-app='ods-widgets'>{{ $html }}</div>
+                <style type='text/css'>
+                    {{ $css }}
+                </style>
+                </body>
+              ">
+      </iframe>
+      <div class="show-code buttons has-addons">
+          <button class="button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-{{ .Title | anchorize}}').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    <div class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
+            <div class="level-left">
+                <div class="level-item">
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-{{ .Title | anchorize }}-html-content"
+                        >
+                          HTML
+                        </a>
+                        {{ if gt (len $css) 0 }}
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-{{ .Title | anchorize }}-css-content"
+                        >
+                          CSS
+                        </a>
+                        {{ end }}
+                    </div>
+                </div>
+            </div>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
+            </div>
+        </nav>
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-{{ .Title | anchorize }}-html-content"
+                 data-clipboard="{{ $htmlcontent }}"
+                 role="tabpanel">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>{{ $htmlcontent }}</code></pre>
+                </div>
+            </div>
+            {{ if gt (len $css) 0 }}
+            <div class="js-tabcontent"
+                 id="code-{{ .Title | anchorize }}-css-content"
+                 data-clipboard="{{ $css }}"
+            >
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>{{ $css }}</code></pre>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</div>

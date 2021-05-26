@@ -1,5 +1,6 @@
 ---
 title: "Animated KPI with auto-reload"
+height: 320
 ---
 
 Animate your KPI with `ods-timer` and add an auto-reload feature. 

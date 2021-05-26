@@ -2,6 +2,7 @@
 title: "ods-aggregation"
 description: "Various examples to showcase ods-aggregation. This widget exposes the results of an aggregation (sum, average, minimum, maximum etc...) function."
 tags: ["aggregation", "ods-aggregation"]
+height: 340
 resources:
 - src: '*/'
   name: folder-:counter

@@ -1,6 +1,7 @@
 ---
 title: "Animated KPI"
 date: 2021-04-06T20:57:00+02:00
+height: 320
 ---
 
 Animate your KPI with `ods-timer`. 

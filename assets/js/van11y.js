@@ -352,7 +352,6 @@ export default () => {
 
             document.body
                 .addEventListener(eventName, e => {
-
                     // click on a tab link or on something IN a tab link
                     let parentLink = searchParent(e.target, TABS_JS_LISTLINK);
                     if ((hasClass(e.target, TABS_JS_LISTLINK) === true || parentLink !== '') && eventName === 'click') {
@@ -371,6 +370,7 @@ export default () => {
                         selectLink(linkSelected);
 
                         e.preventDefault();
+
                     }
 
                     // Key down on tabs

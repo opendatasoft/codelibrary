@@ -1,41 +1,39 @@
 {{ define "title" }} {{ .Title }} &ndash; {{ .Site.Title }} {{ end }}
-
 {{ define "main" }}
-    <section class="container is-max-desktop my-6">
-        <h1 class="title is-size-1">
-            {{ if eq "tags" .Type }}Tag: {{ end}}{{ .Title | humanize }}
-        </h1>
-        <h2 class="subtitle is-size-3">
-            {{ .Description }}
-        </h2>
-    </section>
-    <section class="list-results">
-        {{ range (.Paginator (.Site.Params.listPaginate | default 20)).Pages }}
-        <a href="{{ .RelPermalink }}"
-           class="card card-list"
-           title="{{ .Title }}">
-            <div class="card-content">
-                <h3 class="title">
-                    {{ .Title }}
-                    {{ $newContentCount := len (where .Page.Resources ".Date" "ge" (now.AddDate 0 -1 0)) }}
-                    {{ if ne $newContentCount 0 }}
-                      <span class="tag pill is-size-7 is-rounded is-info">
-                        {{ $newContentCount }}
-                      </span>
-                    {{ end }}
-                </h3>
-                <p class="subtitle">
-                    {{ if eq "" .Description}}{{ .Summary }}{{ else }}{{ .Description }}{{ end }}
-                </p>
-                <div class="tags">
-                    {{ range .Params.tags }}
-                    <div class="tag">
-                        {{ . }}
-                    </div>
-                    {{ end }}
-                </div>
-            </div>
-        </a>
+<section class="container is-max-desktop my-6">
+  <h1 class="title is-size-1">
+    {{ if eq "tags" .Type }}Tag: {{ end}}{{ .Title | humanize }}
+  </h1>
+  <h2 class="subtitle is-size-3">
+    {{ .Description }}
+  </h2>
+</section>
+<section class="list-results">
+  {{ range (.Paginator (.Site.Params.listPaginate | default 20)).Pages }}
+  <a href="{{ .RelPermalink }}" class="card card-list" title="{{ .Title }}">
+    <div class="card-content">
+      <h3 class="title">
+        {{ .Title }}
+        {{ $newContentCount := len (where .Page.Resources ".Date" "ge" (now.AddDate 0 -1 0)) }}
+        {{ if ne $newContentCount 0 }}
+        <span class="tag pill is-size-7 is-rounded is-info">
+          {{ $newContentCount }}
+        </span>
         {{ end }}
-    </section>
+      </h3>
+      <p class="subtitle">
+        {{ if eq "" .Description}}{{ .Summary }}{{ else }}{{ .Description }}
+        {{ end }}
+      </p>
+      <div class="tags">
+        {{ range .Params.tags }}
+        <div class="tag">
+          {{ . }}
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </a>
+  {{ end }}
+</section>
 {{ end }}
