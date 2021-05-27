@@ -79,7 +79,10 @@ section {
 g.highcharts-label.highcharts-data-label {
     display: none;
 }
-g.highcharts-label.highcharts-data-label:nth-child(1), g.highcharts-label.highcharts-data-label:nth-child(2), g.highcharts-label.highcharts-data-label:nth-child(3), g.highcharts-label.highcharts-data-label:last-child {
+g.highcharts-label.highcharts-data-label:first-child {
+    display: inherit;
+}
+g.highcharts-label.highcharts-data-label:nth-child(5n) {
     display: inherit;
 }
 
