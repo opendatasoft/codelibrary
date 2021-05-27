@@ -1,10 +1,10 @@
 :root {
-  --primary: hsl(265, 90%, 47%);
-  --primary-h-s: 265, 90% ; /* If your color is hsl(36, 94, 59), input 36, 94 */
-  --surface: white;
+  --primary: hsl(14, 98%, 56%);
+  --primary-h-s: 14, 98% ; /* If your color is hsl(36, 94, 59), input 36, 94 */
+  --surface: hsl(50, 100%, 95%);
   --background: white;
-  --card-text: #424242;
-  --body-text: #424242;
+  --card-text: hsl(162, 32%, 31%);
+  --body-text: black;
 
   /* These are automatically computed unless you need to overwrite them */
   --primary-10: hsl(var(--primary-h-s), 10%);
@@ -43,9 +43,13 @@ h1 {
   justify-content: center;
 }
 
-@media screen and (max-width: 968px) {
+@media screen and (max-width: 768px) {
   .row {
     flex-direction: column;
+  }
+
+  .row > *:not(:last-child) {
+    margin-bottom: 16px;
   }
 }
 
@@ -336,6 +340,16 @@ h5.subtitle {
   color: var(--card-text);
 }
 
+@media screen and (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    width: 100%;
+    border-radius: 0;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .filter {
   display: flex;
   flex: 1 1;
@@ -391,6 +405,26 @@ h5.subtitle {
 
 .filter .odswidget-select-dropdown-menu {
   top: 32px;
+}
+
+@media screen and (max-width: 768px) {
+  .filter {
+    justify-content: center;
+  }
+
+  .filter .odswidget-timerange {
+    flex-direction: column;
+  }
+
+  .filter .odswidget-timerange__from {
+    margin-bottom: 2em;
+  }
+
+  .filter:not(:last-child) {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid lightgray;
+  }
 }
 
 .card {

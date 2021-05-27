@@ -50,7 +50,7 @@
                 </div>
             </nav>
             <section class="row">
-                <div class="col-md-6">
+                <div class="col-sm-6">
                     <div class="card z-depth-1">
                         <div class="card-head">
                             <h2 class="title">
@@ -66,7 +66,7 @@
                         </ods-chart>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-sm-6">
                     <div class="card z-depth-1">
                         <div class="card-head">
                             <h2 class="title">
@@ -84,7 +84,7 @@
                 </div>
             </section>
             <section class="row">
-                <div class="col-md-6">
+                <div class="col-sm-6">
                     <ods-dataset-context context="noresults"
                                          noresults-dataset="monitoring-copy"
                                          noresults-parameters="{'q':'nhits=0'}"
@@ -122,7 +122,7 @@
                         </div>
                     </ods-dataset-context>
                 </div>
-                <div class="col-md-6">
+                <div class="col-sm-6">
                     <ods-dataset-context context="queries"
                                          queries-dataset="monitoring-copy"
                                          queries-parameters="{'q':'NOT #null(query_text)'}"
@@ -162,7 +162,7 @@
                 </div>
             </section>
             <section class="row">
-                <div class="col-md-6">
+                <div class="col-sm-6">
                     <div class="card z-depth-1">
                         <div class="card-head">
                             <h2 class="title" >
@@ -178,7 +178,7 @@
                         </ods-chart>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-sm-6">
                     <div class="card z-depth-1">
                         <div class="card-head">
                             <h2 class="title">
@@ -196,7 +196,7 @@
                 </div>
             </section>
             <section class="row">
-                <div class="col-md-12">
+                <div class="col-sm-12">
                     <div class="card z-depth-1">
                         <div class="card-head">
                             <h2 class="title" >
