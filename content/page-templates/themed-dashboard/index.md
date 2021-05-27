@@ -18,6 +18,6 @@ These exemples present themable dashboards, that can be configured through the f
 --body-text: white;
 ```
 
-See the exemples on the themable components.
+See the exemples on the themed components.
 
 These dashboards are based on the [monitoring dashboard]("/monitoring-dashboard"), but can be configured for any source.
