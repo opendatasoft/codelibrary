@@ -5,50 +5,6 @@
                          >
         <!-- TITLE -->
         <div class="container">
-            <section>
-                <h1 class="title">
-                    Company Data Hub's Analytics
-                </h1>
-                <p>DISCLAIMER Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi sint, sequi ratione esse, officiis, aliquam quaerat perferendis mollitia laborum cumque molestiae aspernatur.</p>
-                <p >
-                    These Analytics are based on usages made on <a href="/explore" target="_blank">Company's</a> data portal. Contact <a href=mailto:admin@mycompany.com class="link_color">Admin</a> for any additional questions.
-                </p>
-                <a href="/explore/dataset/ods-api-monitoring/?source=monitoring&disjunctive.dataset_id"> Access source data</a>
-
-                <a href="/explore"> Access Company's Data Hub</a>
-            </section>
-            <nav class="row row-sticky">
-                <div class="menu z-depth-2">
-                    <div class="filter">
-                        <div ods-facet-results="items"
-                             ods-facet-results-context="stats"
-                             ods-facet-results-facet-name="dataset_id"
-                             ods-facet-results-sort="alphanum"
-                             >
-                            <ods-select placeholder="Dataset"
-                                        selected-values="stats.parameters['refine.dataset_id']"
-                                        multiple="false"
-                                        options="items"
-                                        label-modifier="name"
-                                        value-modifier="name"
-                                        >
-                            </ods-select>
-                        </div>
-                    </div>
-                    <div class="filter">
-                        <ods-timerange context="stats"
-                                       date-format="DD MMM YYYY"
-                                       precision="day"
-                                       default-from="{{ (now|momentadd:'months':-1)|moment:'YYYY-MM-DD' }}"
-                                       default-to="{{ now|moment:'YYYY-MM-DD' }}"
-                                       stats-time-field="timestamp"
-                                       from="startDate"
-                                       to="endDate"
-                                       >
-                        </ods-timerange>
-                    </div>
-                </div>
-            </nav>
             <section class="row">
                 <div class="col-sm-6">
                     <div class="card z-depth-1">
