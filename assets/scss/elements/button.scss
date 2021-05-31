@@ -1,64 +1,31 @@
 /* Button
-   ========================================================================== */
+//    ========================================================================== */
+@use "sass:list";
 
-.button {
-    line-height: 1;
-    border-radius: $radius-large;
-    height: auto;
+@each $name, $color-list in $colors {
+  .button.is-#{$name}.is-outlined:not(.is-active):hover {
+    color: rgba(nth($color-list, 1), 0.65);
+    border-color: rgba(nth($color-list, 1), 0.65);
+    background: transparent;
+  }
 }
 
-/* ODS Design pattern */
-.button.is-secondary {
-    background-color: $light;
-    border-color: $primary;
-    color: $primary;
-
-    &.edit-on-codepen,
-    &.button-copy {
-        border-radius: 100000px;
-        padding: 0;
-        width: 36px;
-        height: 36px;
-        > svg {
-            width: 16px;
-            height: 16px;
-        }
-    }
-    &.button-copy {
-        position: absolute;
-        top: 0;
-        right: 0;
-        margin-left: 6px;
-    }
-
-    &:not(.is-active):hover {
-        border-color: rgba($primary, 0.65);
-        color: rgba($primary, 0.65);
-    }
-    &.is-active {
-        pointer-events: none;
-    }
-}
-
-.color {
-    .button.button-copy {
-        position: inherit;
-        height: 27px;
-        width: 27px;
-        padding: 0px;
-
-        img, svg {
-            height: 15px;
-            width: 15px;
-        }
-    }
-}
-
-/* Bulma tooltips */
 [data-tooltip]::before {
     font-weight: 600;
     font-size: 0.9em !important;
 }
-.copied[data-tooltip]:before {
+
+.is-success[data-tooltip]:before {
     background-color: rgba(0,128,0,0.9);
+}
+
+.show-code button.button,
+.show-code button.button.is-active,
+.show-code button.button:hover,
+.show-code button.button:focus {
+  border: 1px solid $grey-light;
+  border-bottom: none;
+  &:last-child {
+    border-right: none;
+  }
 }

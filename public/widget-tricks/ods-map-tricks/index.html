@@ -45,6 +45,34 @@
   </head>
 
   <body>
+    <div class="is-hidden">
+      <svg>
+  <defs>
+    <g id="link-2">
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+    </g>
+
+    <g id="check">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </g>
+
+    <g id="copy">
+      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+    </g>
+
+    <g id="external">
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+      <polyline points="15 3 21 3 21 9"></polyline>
+      <line x1="10" y1="14" x2="21" y2="3"></line>
+    </g>
+
+  </defs>
+</svg>
+
+    </div>
+
     <nav class="navbar is-fixed-top"
      role="navigation"
      aria-label="Main navigation">
@@ -112,526 +140,544 @@
 </nav>
 
 
-    <div class="columns is-desktop codelibrary">
-      <div class="column is-narrow">
-        <aside class="sidebar"
+    <div class="columns is-desktop codelibrary mb-0">
+      <div class="column is-narrow pb-0">
+        <div class="sidebar-search is-hidden-touch">
+  <div class="block search-wrapper">
+    <div id="algolia-box"></div>
+    <div class="search-results-wrapper">
+      <div id="algolia-results"></div>
+    </div>
+  </div>
+</div>
+<aside class="sidebar"
        id="sidebarNavbar">
-   <div class="sidebar-header">
-     <div class="block search-wrapper">
-       <div id="algolia-box"></div>
-       <div class="search-results-wrapper">
-         <div id="algolia-results"></div>
-       </div>
-     </div>
+  
+  <div class="sidebar-header">
+    <div class="block">
+      <ul class="menu-list">
+        <p class="menu-label">On this page</p>
+        <li>
+          <a href="#">
+            Top
+          </a>
+        </li>
+        
+        <li>
+          <a href="#map-as-a-selector">
+            Map as a selector
+          </a>
+        </li>
+        
+        <li>
+          <a href="#map-drilldown">
+            Map drilldown
+          </a>
+        </li>
+        
+        <li>
+          <a href="#dynamic-map-by-zoom-level">
+            Dynamic map by zoom level
+          </a>
+        </li>
+        
+        <li>
+          <a href="#replace-map-tooltip-with-a-refine--in-a-pop-in-">
+            Replace map tooltip with a refine : in a pop-in !
+          </a>
+        </li>
+        
+        <li>
+          <a href="#replace-map-tooltip-with-a-refine--on-the-side-">
+            Replace map tooltip with a refine : on the side !
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+  
+  <div class="sidebar-body">
     
-       <div class="block">
-         <ul class="menu-list">
-           <p class="menu-label">On this page</p>
-           <li>
-             <a href="#">
-               Top
-             </a>
-           </li>
-           
-           <li>
-             <a href="#map-as-a-selector">
-               Map as a selector
-             </a>
-           </li>
-           
-           <li>
-             <a href="#map-drilldown">
-               Map drilldown
-             </a>
-           </li>
-           
-           <li>
-             <a href="#dynamic-map-by-zoom-level">
-               Dynamic map by zoom level
-             </a>
-           </li>
-           
-           <li>
-             <a href="#replace-map-tooltip-with-a-refine--in-a-pop-in-">
-               Replace map tooltip with a refine : in a pop-in !
-             </a>
-           </li>
-           
-           <li>
-             <a href="#replace-map-tooltip-with-a-refine--on-the-side-">
-               Replace map tooltip with a refine : on the side !
-             </a>
-           </li>
-           
-         </ul>
-       </div>
-     </div>
-     
-
+    
+    <ul class="menu-list">
+      <li>
+        <a class="sidebar-subtitle"
+          href="https://codelibrary.opendatasoft.com">
+          Home
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/components/"
+        class="sidebar-subtitle">
+        Components
         
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/custom-views/"
+        class="sidebar-subtitle">
+        Custom views
         
-        <ul class="menu-list">
-            <li>
-                <a class="sidebar-subtitle"
-                   href="https://codelibrary.opendatasoft.com">
-                    Home
-                </a>
-            </li>
-            
-              
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/generators/"
+        class="sidebar-subtitle">
+        Generators
+        
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/layouts/"
+        class="sidebar-subtitle">
+        Layouts
+        
+        <span class="tag pill is-size-7 is-rounded is-info">9</span>
+        
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/page-templates/"
+        class="sidebar-subtitle">
+        Page templates
+        
+        <span class="tag pill is-size-7 is-rounded is-info">1</span>
+        
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/portal-themes/"
+        class="sidebar-subtitle">
+        Portal themes
+        
+      </a>
+    </li>
+    
+    
+      
+      <li>
+        <a class="sidebar-subtitle " href="/widget-tricks/">
+          Widget tricks
+        </a>
+        <ul>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-chart-css/">
+              <div>
+                ods-chart CSS Hacks
                 
                 
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-              <li>
-                  <a href="/components/"
-                     class="sidebar-subtitle">
-                      Components
-                      
-                  </a>
-              </li>
-              
-            
-              
-                
-                
-                  
-                  
-                
-                  
-                  
-                
-              <li>
-                  <a href="/custom-views/"
-                     class="sidebar-subtitle">
-                      Custom views
-                      
-                  </a>
-              </li>
-              
-            
-              
-                
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-              <li>
-                  <a href="/generators/"
-                     class="sidebar-subtitle">
-                      Generators
-                      
-                  </a>
-              </li>
-              
-            
-              
-                
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-              <li>
-                  <a href="/page-templates/"
-                     class="sidebar-subtitle">
-                      Page templates
-                      
-                        <span class="tag pill is-size-7 is-rounded is-info">8</span>
-                      
-                  </a>
-              </li>
-              
-            
-              
-                
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-              <li>
-                  <a href="/portal-themes/"
-                     class="sidebar-subtitle">
-                      Portal themes
-                      
-                  </a>
-              </li>
-              
-            
-              
-              <li>
-                  <a class="sidebar-subtitle " href="/widget-tricks/">
-                  Widget tricks
-                  </a>
-                  <ul>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-chart-css/">
-                              <div>
-                                ods-chart CSS Hacks
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/animation/">
-                              <div>
-                                Animations
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/svg-maps/">
-                              <div>
-                                Static maps, a quick introduction
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/charts/">
-                              <div>
-                                Chart samples
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/catalog-cards/">
-                              <div>
-                                Custom catalog card
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/custom-tooltips/">
-                              <div>
-                                Custom Tooltips
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/dates/">
-                              <div>
-                                Dates
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/drill-down/">
-                              <div>
-                                Drill-down refine in charts
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/filter-as-list/">
-                              <div>
-                                Filters as an HTML Select
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-aggregation/">
-                              <div>
-                                ods-aggregation
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-analysis/">
-                              <div>
-                                ods-analysis, quick intro
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-color-gradient/">
-                              <div>
-                                ods-color-gradient &#43; ods-map : a choropleth alternative
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-date-range-slider/">
-                              <div>
-                                ods-date-range-slider
-                                
-                                
-                                <span class="tag pill is-size-7 is-rounded is-info">
-                                  3
-                                </span>
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="is-active" href="/widget-tricks/ods-map-tricks/">
-                              <div>
-                                ods-map: Refine &amp; Zoom
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-map-css/">
-                              <div>
-                                ods-map: CSS Hacks
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-pop-in/">
-                              <div>
-                                ods-pop-in variants
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-select/">
-                              <div>
-                                ods-select
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-simple-tabs/">
-                              <div>
-                                ods-simple-tabs
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/share-print/">
-                              <div>
-                                Share and print
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                  </ul>
-              </li>
-              
-            
-        </ul>
-        <p class="menu-label">
-            Tags
-        </p>
-        <div class="tags">
-            
-            <a class="tag" href="/tags/aggregation/">
-                aggregation
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/chart/">
-                chart
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/animation/">
+              <div>
+                Animations
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/date/">
-                date
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/svg-maps/">
+              <div>
+                Static maps, a quick introduction
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/display/">
-                display
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/charts/">
+              <div>
+                Chart samples
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/filter/">
-                filter
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/catalog-cards/">
+              <div>
+                Custom catalog card
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/geo/">
-                geo
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/custom-tooltips/">
+              <div>
+                Custom Tooltips
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/list/">
-                list
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/dates/">
+              <div>
+                Dates
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/map/">
-                map
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/drill-down/">
+              <div>
+                Drill-down refine in charts
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/navigation/">
-                navigation
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/filter-as-list/">
+              <div>
+                Filters as an HTML Select
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/ods-aggregation/">
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-aggregation/">
+              <div>
                 ods-aggregation
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/ods-analysis/">
-                ods-analysis
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-analysis/">
+              <div>
+                ods-analysis, quick intro
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/ods-maps/">
-                ods-maps
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-color-gradient/">
+              <div>
+                ods-color-gradient &#43; ods-map : a choropleth alternative
+                
+                
+              </div>
             </a>
-            
-        </div>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-date-range-slider/">
+              <div>
+                ods-date-range-slider
+                
+                
+                <span class="tag pill is-size-7 is-rounded is-info">
+                  3
+                </span>
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-map-css/">
+              <div>
+                ods-map: CSS Hacks
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="is-active" href="/widget-tricks/ods-map-tricks/">
+              <div>
+                ods-map: Refine &amp; Zoom
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-pop-in/">
+              <div>
+                ods-pop-in variants
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-select/">
+              <div>
+                ods-select
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-simple-tabs/">
+              <div>
+                ods-simple-tabs
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/share-print/">
+              <div>
+                Share and print
+                
+                
+              </div>
+            </a>
+          </li>
+          
+        </ul>
+      </li>
+      
+    
+  </ul>
+  <p class="menu-label">
+    Tags
+  </p>
+  <div class="tags">
+    
+    <a class="tag" href="/tags/aggregation/">
+      aggregation
+    </a>
+    
+    <a class="tag" href="/tags/chart/">
+      chart
+    </a>
+    
+    <a class="tag" href="/tags/date/">
+      date
+    </a>
+    
+    <a class="tag" href="/tags/display/">
+      display
+    </a>
+    
+    <a class="tag" href="/tags/filter/">
+      filter
+    </a>
+    
+    <a class="tag" href="/tags/geo/">
+      geo
+    </a>
+    
+    <a class="tag" href="/tags/list/">
+      list
+    </a>
+    
+    <a class="tag" href="/tags/map/">
+      map
+    </a>
+    
+    <a class="tag" href="/tags/navigation/">
+      navigation
+    </a>
+    
+    <a class="tag" href="/tags/ods-aggregation/">
+      ods-aggregation
+    </a>
+    
+    <a class="tag" href="/tags/ods-analysis/">
+      ods-analysis
+    </a>
+    
+    <a class="tag" href="/tags/ods-maps/">
+      ods-maps
+    </a>
+    
+  </div>
+</div>
 </aside>
 
       </div>
       <div class="column codelibrary-content">
         
-  <section>
-    <div class="content-header container is-max-desktop mb-5">
-      <div class="content">
-        <h1>Widget Tricks - ods-map: Refine &amp; Zoom</h1>
-        
-      </div>
+<section class="section resources">
+  <div class="container is-max-widescreen">
+    <h1 class="title is-1">Widget Tricks - ods-map: Refine &amp; Zoom</h1>
+    <div class="content">
+      
     </div>
     
-    <div class="container">
-      <div class="box box-example">
-        <h2 class="title is-2" id="map-as-a-selector">
-          Map as a selector
-          
-          <a class="is-link anchor" href="#map-as-a-selector">
-            <span class="icon">
-              <img src="/img/fas-link.svg" />
-            </span>
-          </a>
-        </h2>
-        
-        <div class="content">
-          <p>In this example, the french administrative regions are displayed first and the user click refines on the departments dataset. On the right section you can observe the applied filter on departments context and the list of departments returned. The &lsquo;regions&rsquo; context is not affected and is not filtered. Note that it would also be possible to apply the filter on regions context, to do so, please have a look to the next resource of this page.</p>
+    <article class="block">
+      <h2 class="title is-2" id="map-as-a-selector">
+        Map as a selector 
+        <a class="is-link anchor" href="#map-as-a-selector">
+          <span class="icon">
+            <img src="/img/fas-link.svg" />
+          </span>
+        </a>
+      </h2>
+      <div class="content">
+        <p>In this example, the french administrative regions are displayed first and the user click refines on the departments dataset. On the right section you can observe the applied filter on departments context and the list of departments returned. The &lsquo;regions&rsquo; context is not affected and is not filtered. Note that it would also be possible to apply the filter on regions context, to do so, please have a look to the next resource of this page.</p>
 <p><em>If your layer is displayed as raw or aggregation, you can configure a layer so that a click on an item triggers a refine on another context, using <strong>refineOnClickContext</strong>. One or more contexts can be defined:</em></p>
 
-        </div>
+      </div>
+      
+      <div class="box">
         
 
 
@@ -640,10 +686,11 @@
 
 
     
+
+
 
 
 <div class="codepen">
-
     <form id="form-map-as-a-selector"
           action="https://codepen.io/pen/define"
           method="POST"
@@ -659,9 +706,9 @@
                }'>
     </form>
 </div>
-
 <div class="ods-content">
-    <section class="box box-live-example">
+    <div class="box-live-example"
+      style="height: 680px;">
       <iframe id="iframe-map-as-a-selector"
               width="100%" height="100%"
               src="about:blank"
@@ -835,44 +882,109 @@
                 </body>
               ">
       </iframe>
-    </section>
-
-    <section class="box box-code js-tabs">
-        <nav class="level is-flex">
+      <div class="show-code buttons has-addons">
+          <button class="button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-map-as-a-selector').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    <div class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
-                    <ul class="buttons has-addons js-tablist">
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-map-as-a-selector-html-content">
-                                HTML
-                            </a>
-                        </li>
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-map-as-a-selector-html-content"
+                        >
+                          HTML
+                        </a>
                         
-                    </ul>
+                    </div>
                 </div>
             </div>
-            <div class="level-right mt-0">
-                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
-                   data-tooltip="Edit on CodePen"
-                   target="_blank"
-                   aria-role="link"
-                   rel="noopener"
-                   title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-map-as-a-selector').submit()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="feather feather-edit">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
                     </svg>
-                </a>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
             </div>
         </nav>
-
         <div class="tab-content">
             <div class="js-tabcontent"
-                 id="code-map-as-a-selector-html-content">
+                 id="code-map-as-a-selector-html-content"
+                 data-clipboard="&lt;div class=&#34;row ods-box&#34;&gt;
+    &lt;ods-dataset-context context=&#34;regions,depts&#34;
+                         regions-dataset=&#34;regions-et-collectivites-doutre-mer-france&#34;
+                         regions-domain=&#34;userclub&#34;
+                         depts-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
+                         depts-domain=&#34;userclub&#34;&gt;
+        &lt;div class=&#34;col-md-8&#34;&gt;
+            &lt;ods-map style=&#34;height:560px&#34; scroll-wheel-zoom=&#34;false&#34;&gt;
+                &lt;ods-map-layer context=&#34;regions&#34;
+                               refine-on-click-context=&#34;depts&#34;
+                               refine-on-click-depts-map-field=&#34;reg_code&#34;
+                               refine-on-click-depts-context-field=&#34;reg_code&#34;
+                               refine-on-click-depts-replace-refine=&#34;true&#34;
+                               color=&#34;#3D3D3D&#34;&gt;
+                &lt;/ods-map-layer&gt;
+            &lt;/ods-map&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-md-4&#34;&gt;
+            &lt;div ng-if=&#34;!depts.parameters[&#39;refine.reg_code&#39;]&#34;&gt;
+                &lt;h3 style=&#34;font-weight:600; margin-top: 40px&#34;&gt;
+                    Selectionnez une région sur la carte
+                &lt;/h3&gt;
+            &lt;/div&gt;
+            &lt;div ng-if=&#34;depts.parameters[&#39;refine.reg_code&#39;]&#34;&gt;
+                  &lt;span class=&#34;ods-button&#34; ng-click=&#34;depts.parameters = {};&#34;&gt;
+                      Supprimer le filtre
+                  &lt;/span&gt;
+                &lt;h3&gt;Filtre actif : code_reg = {{ depts.parameters[&#39;refine.reg_code&#39;] }}
+                &lt;/h3&gt;
+                &lt;h2&gt;
+                    Liste des départements
+                &lt;/h2&gt;
+                &lt;h4 ng-repeat=&#34;item in items&#34; ods-results=&#34;items&#34; ods-results-context=&#34;depts&#34;&gt;
+                    {{ item.fields.dep_name }}
+                &lt;/h4&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/ods-dataset-context&gt;
+&lt;/div&gt;
+"
+                 role="tabpanel">
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;row ods-box&#34;&gt;
     &lt;ods-dataset-context context=&#34;regions,depts&#34;
@@ -918,63 +1030,28 @@
             </div>
             
         </div>
-    </section>
+    </div>
 </div>
 
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-map-as-a-selector";
-            iframe = document.getElementById(iframeId);
-             
-            size =  null 
-             
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-                if (iframe.height == size) {
-                    clearInterval(loopId);
-                } else {
-                    iframe.height = size > 1 ? size : scrollHeight;
-                }
-            }
-        }, 1000);
-    });
-</script>
-
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-map-as-a-selector";
-            iframe = document.getElementById(iframeId);
-
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-            }
-        }, 1000);
-    });
-</script>
-
       </div>
-    </div>
+    </article>
     
-    <div class="container">
-      <div class="box box-example">
-        <h2 class="title is-2" id="map-drilldown">
-          Map drilldown
-          
-          <a class="is-link anchor" href="#map-drilldown">
-            <span class="icon">
-              <img src="/img/fas-link.svg" />
-            </span>
-          </a>
-        </h2>
-        
-        <div class="content">
-          <p>In this example, the french administrative regions are displayed first, the user click refines on both regions and departments datasets and will then display departments in the selected region. Another click on a departement will refine departements and cities datasets and display cities in this department.</p>
+    <article class="block">
+      <h2 class="title is-2" id="map-drilldown">
+        Map drilldown 
+        <a class="is-link anchor" href="#map-drilldown">
+          <span class="icon">
+            <img src="/img/fas-link.svg" />
+          </span>
+        </a>
+      </h2>
+      <div class="content">
+        <p>In this example, the french administrative regions are displayed first, the user click refines on both regions and departments datasets and will then display departments in the selected region. Another click on a departement will refine departements and cities datasets and display cities in this department.</p>
 <p><em>If your layer is displayed as <strong>raw</strong> or <strong>aggregation</strong>, you can configure a layer so that a click on an item triggers a refine on another context, using refineOnClickContext. One or more contexts can be defined:</em></p>
 
-        </div>
+      </div>
+      
+      <div class="box">
         
 
 
@@ -983,10 +1060,11 @@
 
 
     
+
+
 
 
 <div class="codepen">
-
     <form id="form-map-drilldown"
           action="https://codepen.io/pen/define"
           method="POST"
@@ -1002,9 +1080,9 @@
                }'>
     </form>
 </div>
-
 <div class="ods-content">
-    <section class="box box-live-example">
+    <div class="box-live-example"
+      style="height: 680px;">
       <iframe id="iframe-map-drilldown"
               width="100%" height="100%"
               src="about:blank"
@@ -1201,44 +1279,132 @@
                 </body>
               ">
       </iframe>
-    </section>
-
-    <section class="box box-code js-tabs">
-        <nav class="level is-flex">
+      <div class="show-code buttons has-addons">
+          <button class="button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-map-drilldown').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    <div class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
-                    <ul class="buttons has-addons js-tablist">
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-map-drilldown-html-content">
-                                HTML
-                            </a>
-                        </li>
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-map-drilldown-html-content"
+                        >
+                          HTML
+                        </a>
                         
-                    </ul>
+                    </div>
                 </div>
             </div>
-            <div class="level-right mt-0">
-                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
-                   data-tooltip="Edit on CodePen"
-                   target="_blank"
-                   aria-role="link"
-                   rel="noopener"
-                   title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-map-drilldown').submit()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="feather feather-edit">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
                     </svg>
-                </a>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
             </div>
         </nav>
-
         <div class="tab-content">
             <div class="js-tabcontent"
-                 id="code-map-drilldown-html-content">
+                 id="code-map-drilldown-html-content"
+                 data-clipboard="&lt;div class=&#34;row ods-box&#34;&gt;
+    &lt;ods-dataset-context context=&#34;regions,depts,comm&#34;
+                         regions-domain=&#34;userclub&#34;
+                         regions-dataset=&#34;regions-et-collectivites-doutre-mer-france&#34;
+                         depts-domain=&#34;userclub&#34;
+                         depts-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
+                         comm-domain=&#34;userclub&#34;
+                         comm-dataset=&#34;communes-et-arrondissements-municipaux-france&#34;&gt;
+        &lt;div class=&#34;col-md-8&#34;&gt;
+            &lt;ods-map style=&#34;height:560px&#34; scroll-wheel-zoom=&#34;false&#34;&gt;
+                &lt;ods-map-layer context=&#34;regions&#34;
+                               refine-on-click-context=&#34;[regions,depts]&#34;
+                               refine-on-click-regions-map-field=&#34;reg_code&#34;
+                               refine-on-click-regions-context-field=&#34;reg_code&#34;
+                               refine-on-click-depts-map-field=&#34;reg_code&#34;
+                               refine-on-click-depts-context-field=&#34;reg_code&#34;
+                               color=&#34;#3D3D3D&#34;
+                               show-if=&#34;!regions.parameters[&#39;refine.reg_code&#39;]&#34;&gt;
+                &lt;/ods-map-layer&gt;
+                &lt;ods-map-layer context=&#34;depts&#34;
+                               refine-on-click-context=&#34;[depts,comm]&#34;
+                               refine-on-click-depts-map-field=&#34;dep_code&#34;
+                               refine-on-click-depts-context-field=&#34;dep_code&#34;
+                               refine-on-click-comm-map-field=&#34;dep_code&#34;
+                               refine-on-click-comm-context-field=&#34;dep_code&#34;
+                               color=&#34;#3D3D3D&#34;
+                               show-if=&#34;depts.parameters[&#39;refine.reg_code&#39;] &amp;&amp; !comm.parameters[&#39;refine.dep_code&#39;]&#34;&gt;
+                &lt;/ods-map-layer&gt;
+                &lt;ods-map-layer context=&#34;comm&#34;
+                               show-if=&#34;comm.parameters[&#39;refine.dep_code&#39;]&#34;&gt;
+                &lt;/ods-map-layer&gt;
+            &lt;/ods-map&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-md-4&#34;&gt;
+              &lt;span class=&#34;ods-button&#34; ng-click=&#34;comm.parameters = {}; depts.parameters = {}; regions.parameters = {};&#34;&gt;
+                  Supprimer tous les filtres
+              &lt;/span&gt;
+            &lt;h2&gt;
+                Jeu de données région
+            &lt;/h2&gt;
+            &lt;h4&gt;
+                &lt;span ng-if=&#34;!regions.parameters[&#39;refine.reg_code&#39;]&#34;&gt;Aucun filtre actif&lt;/span&gt;
+                &lt;span ng-if=&#34;regions.parameters[&#39;refine.reg_code&#39;]&#34;&gt;Filtre actif : reg_code = {{ regions.parameters[&#39;refine.reg_code&#39;] }}&lt;/span&gt;
+            &lt;/h4&gt;
+            &lt;h2&gt;
+                Jeu de données département
+            &lt;/h2&gt;
+            &lt;h4&gt;
+                &lt;span ng-if=&#34;!(depts.parameters[&#39;refine.dep_code&#39;] || depts.parameters[&#39;refine.reg_code&#39;])&#34;&gt;Aucun filtre actif&lt;/span&gt;
+                &lt;span ng-if=&#34;depts.parameters[&#39;refine.reg_code&#39;]&#34;&gt;Filtre actif : reg_code = {{ depts.parameters[&#39;refine.reg_code&#39;] }}&lt;/span&gt;
+                &lt;span ng-if=&#34;depts.parameters[&#39;refine.dep_code&#39;]&#34;&gt;&lt;br/&gt;Filtre actif: dep_code = {{ depts.parameters[&#39;refine.dep_code&#39;] }}&lt;/span&gt;
+            &lt;/h4&gt;
+            &lt;h2&gt;
+                Jeu de données commune
+            &lt;/h2&gt;
+            &lt;h4&gt;
+                &lt;span ng-if=&#34;!comm.parameters[&#39;refine.dep_code&#39;]&#34;&gt;Aucun filtre actif&lt;/span&gt;
+                &lt;span ng-if=&#34;comm.parameters[&#39;refine.dep_code&#39;]&#34;&gt;Filtre actif : dep_code = {{ comm.parameters[&#39;refine.dep_code&#39;] }}&lt;/span&gt;
+            &lt;/h4&gt;
+        &lt;/div&gt;
+    &lt;/ods-dataset-context&gt;
+&lt;/div&gt;
+"
+                 role="tabpanel">
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;row ods-box&#34;&gt;
     &lt;ods-dataset-context context=&#34;regions,depts,comm&#34;
@@ -1307,64 +1473,29 @@
             </div>
             
         </div>
-    </section>
+    </div>
 </div>
 
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-map-drilldown";
-            iframe = document.getElementById(iframeId);
-             
-            size =  null 
-             
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-                if (iframe.height == size) {
-                    clearInterval(loopId);
-                } else {
-                    iframe.height = size > 1 ? size : scrollHeight;
-                }
-            }
-        }, 1000);
-    });
-</script>
-
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-map-drilldown";
-            iframe = document.getElementById(iframeId);
-
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-            }
-        }, 1000);
-    });
-</script>
-
       </div>
-    </div>
+    </article>
     
-    <div class="container">
-      <div class="box box-example">
-        <h2 class="title is-2" id="dynamic-map-by-zoom-level">
-          Dynamic map by zoom level
-          
-          <a class="is-link anchor" href="#dynamic-map-by-zoom-level">
-            <span class="icon">
-              <img src="/img/fas-link.svg" />
-            </span>
-          </a>
-        </h2>
-        
-        <div class="content">
-          <p>In this example, the French administrative regions, departments and cities are displayed in a specific zoom range.
+    <article class="block">
+      <h2 class="title is-2" id="dynamic-map-by-zoom-level">
+        Dynamic map by zoom level 
+        <a class="is-link anchor" href="#dynamic-map-by-zoom-level">
+          <span class="icon">
+            <img src="/img/fas-link.svg" />
+          </span>
+        </a>
+      </h2>
+      <div class="content">
+        <p>In this example, the French administrative regions, departments and cities are displayed in a specific zoom range.
 Regions from the minimum to 6, Departments from 7 to 8, Cities from 9 to the maximum</p>
 <p><em>You can also configure layers to only be visible between certain zoom levels, using <strong>show-zoom-min</strong>, <strong>show-zoom-max</strong>, or both.</em></p>
 
-        </div>
+      </div>
+      
+      <div class="box">
         
 
 
@@ -1375,8 +1506,9 @@ Regions from the minimum to 6, Departments from 7 to 8, Cities from 9 to the max
     
 
 
-<div class="codepen">
 
+
+<div class="codepen">
     <form id="form-dynamic-map-by-zoom-level"
           action="https://codepen.io/pen/define"
           method="POST"
@@ -1392,9 +1524,9 @@ Regions from the minimum to 6, Departments from 7 to 8, Cities from 9 to the max
                }'>
     </form>
 </div>
-
 <div class="ods-content">
-    <section class="box box-live-example">
+    <div class="box-live-example"
+      style="height: 680px;">
       <iframe id="iframe-dynamic-map-by-zoom-level"
               width="100%" height="100%"
               src="about:blank"
@@ -1552,44 +1684,93 @@ Regions from the minimum to 6, Departments from 7 to 8, Cities from 9 to the max
                 </body>
               ">
       </iframe>
-    </section>
-
-    <section class="box box-code js-tabs">
-        <nav class="level is-flex">
+      <div class="show-code buttons has-addons">
+          <button class="button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-dynamic-map-by-zoom-level').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    <div class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
-                    <ul class="buttons has-addons js-tablist">
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-dynamic-map-by-zoom-level-html-content">
-                                HTML
-                            </a>
-                        </li>
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-dynamic-map-by-zoom-level-html-content"
+                        >
+                          HTML
+                        </a>
                         
-                    </ul>
+                    </div>
                 </div>
             </div>
-            <div class="level-right mt-0">
-                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
-                   data-tooltip="Edit on CodePen"
-                   target="_blank"
-                   aria-role="link"
-                   rel="noopener"
-                   title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-dynamic-map-by-zoom-level').submit()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="feather feather-edit">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
                     </svg>
-                </a>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
             </div>
         </nav>
-
         <div class="tab-content">
             <div class="js-tabcontent"
-                 id="code-dynamic-map-by-zoom-level-html-content">
+                 id="code-dynamic-map-by-zoom-level-html-content"
+                 data-clipboard="&lt;ods-dataset-context context=&#34;regions,depts,comm&#34;
+                     regions-domain=&#34;userclub&#34;
+                     regions-dataset=&#34;regions-et-collectivites-doutre-mer-france&#34;
+                     depts-domain=&#34;userclub&#34;
+                     depts-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
+                     comm-domain=&#34;userclub&#34;
+                     comm-dataset=&#34;communes-et-arrondissements-municipaux-france&#34;&gt;
+    &lt;ods-map location=&#34;5,44.73113,4.21875&#34; style=&#34;height:560px&#34;&gt;
+        &lt;ods-map-layer context=&#34;regions&#34;
+                       color=&#34;#3D3D3D&#34;
+                       show-zoom-max=&#34;6&#34;&gt;
+        &lt;/ods-map-layer&gt;
+        &lt;ods-map-layer context=&#34;depts&#34;
+                       color=&#34;#3D3D3D&#34;
+                       show-zoom-min=&#34;7&#34;
+                       show-zoom-max=&#34;8&#34;&gt;
+        &lt;/ods-map-layer&gt;
+        &lt;ods-map-layer context=&#34;comm&#34;
+                       color=&#34;#c0c0c0&#34;
+                       show-zoom-min=&#34;9&#34;&gt;
+        &lt;/ods-map-layer&gt;
+    &lt;/ods-map&gt;
+&lt;/ods-dataset-context&gt;
+"
+                 role="tabpanel">
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;regions,depts,comm&#34;
                      regions-domain=&#34;userclub&#34;
@@ -1619,64 +1800,29 @@ Regions from the minimum to 6, Departments from 7 to 8, Cities from 9 to the max
             </div>
             
         </div>
-    </section>
+    </div>
 </div>
 
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-dynamic-map-by-zoom-level";
-            iframe = document.getElementById(iframeId);
-             
-            size =  null 
-             
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-                if (iframe.height == size) {
-                    clearInterval(loopId);
-                } else {
-                    iframe.height = size > 1 ? size : scrollHeight;
-                }
-            }
-        }, 1000);
-    });
-</script>
-
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-dynamic-map-by-zoom-level";
-            iframe = document.getElementById(iframeId);
-
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-            }
-        }, 1000);
-    });
-</script>
-
       </div>
-    </div>
+    </article>
     
-    <div class="container">
-      <div class="box box-example">
-        <h2 class="title is-2" id="replace-map-tooltip-with-a-refine--in-a-pop-in-">
-          Replace map tooltip with a refine : in a pop-in !
-          
-          <a class="is-link anchor" href="#replace-map-tooltip-with-a-refine--in-a-pop-in-">
-            <span class="icon">
-              <img src="/img/fas-link.svg" />
-            </span>
-          </a>
-        </h2>
-        
-        <div class="content">
-          <p>In this example, <code>refineOnClick</code> will be used to open a modal on top on the map. It&rsquo;s a good alternative to map tooltips, specially when their is a lot of content to display.
+    <article class="block">
+      <h2 class="title is-2" id="replace-map-tooltip-with-a-refine--in-a-pop-in-">
+        Replace map tooltip with a refine : in a pop-in ! 
+        <a class="is-link anchor" href="#replace-map-tooltip-with-a-refine--in-a-pop-in-">
+          <span class="icon">
+            <img src="/img/fas-link.svg" />
+          </span>
+        </a>
+      </h2>
+      <div class="content">
+        <p>In this example, <code>refineOnClick</code> will be used to open a modal on top on the map. It&rsquo;s a good alternative to map tooltips, specially when their is a lot of content to display.
 It&rsquo;s also easier to get contexts and refines from the page as default tooltips are in an isolated scope. that means that actions performed in the tooltip can&rsquo;t have any effect on the page.
 In this example, modals are simple html blocs, displayed when a refine is active.</p>
 
-        </div>
+      </div>
+      
+      <div class="box">
         
 
 
@@ -1687,8 +1833,9 @@ In this example, modals are simple html blocs, displayed when a refine is active
     
 
 
-<div class="codepen">
 
+
+<div class="codepen">
     <form id="form-replace-map-tooltip-with-a-refine--in-a-pop-in-"
           action="https://codepen.io/pen/define"
           method="POST"
@@ -1704,9 +1851,9 @@ In this example, modals are simple html blocs, displayed when a refine is active
                }'>
     </form>
 </div>
-
 <div class="ods-content">
-    <section class="box box-live-example">
+    <div class="box-live-example"
+      style="height: 600px;">
       <iframe id="iframe-replace-map-tooltip-with-a-refine--in-a-pop-in-"
               width="100%" height="100%"
               src="about:blank"
@@ -2036,51 +2183,140 @@ In this example, modals are simple html blocs, displayed when a refine is active
                 </body>
               ">
       </iframe>
-    </section>
-
-    <section class="box box-code js-tabs">
-        <nav class="level is-flex">
+      <div class="show-code buttons has-addons">
+          <button class="button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-replace-map-tooltip-with-a-refine--in-a-pop-in-').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    <div class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
-                    <ul class="buttons has-addons js-tablist">
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-replace-map-tooltip-with-a-refine--in-a-pop-in--html-content">
-                                HTML
-                            </a>
-                        </li>
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-replace-map-tooltip-with-a-refine--in-a-pop-in--html-content"
+                        >
+                          HTML
+                        </a>
                         
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-replace-map-tooltip-with-a-refine--in-a-pop-in--css-content">
-                                CSS
-                            </a>
-                        </li>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-replace-map-tooltip-with-a-refine--in-a-pop-in--css-content"
+                        >
+                          CSS
+                        </a>
                         
-                    </ul>
+                    </div>
                 </div>
             </div>
-            <div class="level-right mt-0">
-                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
-                   data-tooltip="Edit on CodePen"
-                   target="_blank"
-                   aria-role="link"
-                   rel="noopener"
-                   title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-replace-map-tooltip-with-a-refine--in-a-pop-in-').submit()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="feather feather-edit">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
                     </svg>
-                </a>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
             </div>
         </nav>
-
         <div class="tab-content">
             <div class="js-tabcontent"
-                 id="code-replace-map-tooltip-with-a-refine--in-a-pop-in--html-content">
+                 id="code-replace-map-tooltip-with-a-refine--in-a-pop-in--html-content"
+                 data-clipboard="&lt;div class=&#34;container&#34;&gt;
+    &lt;ods-dataset-context context=&#34;map,ctxrefine&#34;
+                         map-dataset=&#34;us-hospitals&#34;
+                         map-domain=&#34;userclub&#34;
+                         map-parameters=&#34;{&#39;refine.state&#39;:&#39;HI&#39;}&#34;
+                         ctxrefine-dataset=&#34;us-hospitals&#34;
+                         ctxrefine-domain=&#34;userclub&#34;&gt;
+        &lt;div class=&#34;map&#34;&gt;
+            &lt;ods-map basemap=&#34;streets&#34; style=&#34;height:500px&#34; no-refit=&#34;true&#34;&gt;
+                &lt;ods-map-layer context=&#34;map&#34;
+                               refine-on-click-context=&#34;ctxrefine&#34;
+                               refine-on-click-context-replace-refine=&#34;true&#34;&gt;&lt;/ods-map-layer&gt;
+            &lt;/ods-map&gt;
+            &lt;div class=&#34;refine&#34;
+                 ng-if=&#34;ctxrefine.parameters[&#39;geofilter.distance&#39;]&#34;
+                 ods-results=&#34;items&#34;
+                 ods-results-context=&#34;ctxrefine&#34;
+                 ods-results-max=&#34;1&#34;
+                 ng-repeat=&#34;item in items&#34;&gt;
+
+                &lt;div class=&#34;pop-in-card&#34; ng-if=&#34;item&#34;&gt;
+                    &lt;button class=&#34;pop-in-clear-button&#34;
+                            ng-click=&#34;ctxrefine.parameters[&#39;geofilter.distance&#39;] = undefined&#34;
+                            aria-label=&#34;Close popup window&#34;&gt;
+                        &lt;i class=&#34;fa fa-times&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;/button&gt;
+                    &lt;div class=&#34;pop-in-header row&#34;&gt;
+                        &lt;div class=&#34;col-xs-4&#34;&gt;
+                            &lt;div class=&#34;pop-in-photo-container&#34;&gt;
+                                &lt;img class=&#34;pop-in-photo&#34;
+                                     src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Seal_of_the_State_of_Hawaii.svg/1200px-Seal_of_the_State_of_Hawaii.svg.png&#34;&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;col-xs-8&#34;&gt;
+                            &lt;h2 class=&#34;pop-in-title&#34;&gt;
+                                {{ item.fields.name }}
+                            &lt;/h2&gt;
+                            &lt;h3 class=&#34;pop-in-subtitle&#34;&gt;
+                                {{ item.fields.type }}
+                            &lt;/h3&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;dl class=&#34;row pop-in-list&#34;&gt;
+                        &lt;dt class=&#34;col-sm-4&#34;&gt;ADDRESS&lt;/dt&gt;
+                        &lt;dd class=&#34;col-sm-8&#34;&gt;{{ item.fields.address }}&lt;/dd&gt;
+                        &lt;dt class=&#34;col-sm-4&#34;&gt;CITY&lt;/dt&gt;
+                        &lt;dd class=&#34;col-sm-8&#34;&gt;{{ item.fields.city }}&lt;/dd&gt;
+                        &lt;dt class=&#34;col-sm-4&#34;&gt;POPULATION&lt;/dt&gt;
+                        &lt;dd class=&#34;col-sm-8&#34;&gt;{{ item.fields.population }}&lt;/dd&gt;
+                        &lt;dt class=&#34;col-sm-4&#34;&gt;WEBSITE&lt;/dt&gt;
+                        &lt;dd class=&#34;col-sm-8&#34;&gt;
+                            &lt;a href=&#34;{{ item.fields.source }}&#34; target=&#34;_blank&#34;&gt;
+                                Link &lt;i class=&#34;fa fa-external-link&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                            &lt;/a&gt;
+                        &lt;/dd&gt;
+                    &lt;/dl&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;backdrop&#34;
+                     ng-click=&#34;ctxrefine.parameters[&#39;geofilter.distance&#39;] = undefined&#34;&gt;&lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/ods-dataset-context&gt;
+&lt;/div&gt;
+"
+                 role="tabpanel">
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;container&#34;&gt;
     &lt;ods-dataset-context context=&#34;map,ctxrefine&#34;
@@ -2150,7 +2386,141 @@ In this example, modals are simple html blocs, displayed when a refine is active
             </div>
             
             <div class="js-tabcontent"
-                 id="code-replace-map-tooltip-with-a-refine--in-a-pop-in--css-content">
+                 id="code-replace-map-tooltip-with-a-refine--in-a-pop-in--css-content"
+                 data-clipboard=".map {
+    position: relative;
+}
+
+.map .refine {
+    z-index: 20;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.map .refine .refine-close:hover {
+    opacity: 0.65;
+}
+
+.map .backdrop {
+    z-index: 19;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+
+
+
+/* Pop-in
+========================================================================== */
+.ods-pop-in__backdrop {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    z-index: 101;
+    cursor: auto;
+}
+.pop-in-clear-button {
+    font-size: 1.3em;
+    color: #ababab;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    border: none;
+    background: none;
+    z-index: 1;
+}
+.pop-in-clear-button:hover {
+    color: #09357a;
+}
+.pop-in-card {
+    z-index: 102;
+    height: auto;
+    min-width: 300px;
+    width: 700px;
+    background-color: white; /* Background color of card */
+    color: var(--text);
+    padding: 26px;
+    margin: 0 10px;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: all .2s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.pop-in-header {
+    margin-bottom: 20px;
+}
+.pop-in-photo-container {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    background-color: rgba(218, 218, 218, .2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+.pop-in-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 100px;
+    width: auto;
+    max-width: 100px;
+    border-radius: 50%;
+}
+.pop-in-title {
+    font-size: 1.5rem;
+    color: #071a70;
+    font-weight: normal;
+    margin-top: 17px !important;
+    margin-bottom: 10px;
+}
+.pop-in-subtitle {
+    font-size: 1rem;
+    margin: 4px 0;
+    text-transform: uppercase;
+    font-weight: normal;
+    border-radius: 4px;
+    margin: 0;
+    display: inline-block;
+}
+.pop-in-list {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.pop-in-list dt {
+    color: #6f6f6f;
+}
+@media screen and (min-width: 767px) {
+    .pop-in-list dt {
+        text-align: right;
+    }
+}
+.pop-in-list dd {
+    margin: 0;
+}
+"
+            >
                 <div class="highlight">
                     <pre class="language-css" data-lang="css"><code>.map {
     position: relative;
@@ -2289,65 +2659,30 @@ In this example, modals are simple html blocs, displayed when a refine is active
             </div>
             
         </div>
-    </section>
+    </div>
 </div>
 
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-replace-map-tooltip-with-a-refine--in-a-pop-in-";
-            iframe = document.getElementById(iframeId);
-             
-            size =  null 
-             
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-                if (iframe.height == size) {
-                    clearInterval(loopId);
-                } else {
-                    iframe.height = size > 1 ? size : scrollHeight;
-                }
-            }
-        }, 1000);
-    });
-</script>
-
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-replace-map-tooltip-with-a-refine--in-a-pop-in-";
-            iframe = document.getElementById(iframeId);
-
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-            }
-        }, 1000);
-    });
-</script>
-
       </div>
-    </div>
+    </article>
     
-    <div class="container">
-      <div class="box box-example">
-        <h2 class="title is-2" id="replace-map-tooltip-with-a-refine--on-the-side-">
-          Replace map tooltip with a refine : on the side !
-          
-          <a class="is-link anchor" href="#replace-map-tooltip-with-a-refine--on-the-side-">
-            <span class="icon">
-              <img src="/img/fas-link.svg" />
-            </span>
-          </a>
-        </h2>
-        
-        <div class="content">
-          <p>In this example, <code>refineOnClick</code> will be used to display record details on the side of the map. It&rsquo;s a good alternative to the pop-in version.</p>
+    <article class="block">
+      <h2 class="title is-2" id="replace-map-tooltip-with-a-refine--on-the-side-">
+        Replace map tooltip with a refine : on the side ! 
+        <a class="is-link anchor" href="#replace-map-tooltip-with-a-refine--on-the-side-">
+          <span class="icon">
+            <img src="/img/fas-link.svg" />
+          </span>
+        </a>
+      </h2>
+      <div class="content">
+        <p>In this example, <code>refineOnClick</code> will be used to display record details on the side of the map. It&rsquo;s a good alternative to the pop-in version.</p>
 <blockquote>
 <p>To  highlight the selected point on the map, the refined context is displayed. To achieve this, the context must be refined by a field that contains an unique name or ID, and therefore this field must be set has a filter/facet on the dataset.</p>
 </blockquote>
 
-        </div>
+      </div>
+      
+      <div class="box">
         
 
 
@@ -2358,8 +2693,9 @@ In this example, modals are simple html blocs, displayed when a refine is active
     
 
 
-<div class="codepen">
 
+
+<div class="codepen">
     <form id="form-replace-map-tooltip-with-a-refine--on-the-side-"
           action="https://codepen.io/pen/define"
           method="POST"
@@ -2375,9 +2711,9 @@ In this example, modals are simple html blocs, displayed when a refine is active
                }'>
     </form>
 </div>
-
 <div class="ods-content">
-    <section class="box box-live-example">
+    <div class="box-live-example"
+      style="height: 600px;">
       <iframe id="iframe-replace-map-tooltip-with-a-refine--on-the-side-"
               width="100%" height="100%"
               src="about:blank"
@@ -2712,51 +3048,164 @@ In this example, modals are simple html blocs, displayed when a refine is active
                 </body>
               ">
       </iframe>
-    </section>
-
-    <section class="box box-code js-tabs">
-        <nav class="level is-flex">
+      <div class="show-code buttons has-addons">
+          <button class="button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-replace-map-tooltip-with-a-refine--on-the-side-').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    <div class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
-                    <ul class="buttons has-addons js-tablist">
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-replace-map-tooltip-with-a-refine--on-the-side--html-content">
-                                HTML
-                            </a>
-                        </li>
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-replace-map-tooltip-with-a-refine--on-the-side--html-content"
+                        >
+                          HTML
+                        </a>
                         
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-replace-map-tooltip-with-a-refine--on-the-side--css-content">
-                                CSS
-                            </a>
-                        </li>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-replace-map-tooltip-with-a-refine--on-the-side--css-content"
+                        >
+                          CSS
+                        </a>
                         
-                    </ul>
+                    </div>
                 </div>
             </div>
-            <div class="level-right mt-0">
-                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
-                   data-tooltip="Edit on CodePen"
-                   target="_blank"
-                   aria-role="link"
-                   rel="noopener"
-                   title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-replace-map-tooltip-with-a-refine--on-the-side-').submit()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="feather feather-edit">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
                     </svg>
-                </a>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
             </div>
         </nav>
-
         <div class="tab-content">
             <div class="js-tabcontent"
-                 id="code-replace-map-tooltip-with-a-refine--on-the-side--html-content">
+                 id="code-replace-map-tooltip-with-a-refine--on-the-side--html-content"
+                 data-clipboard="&lt;div class=&#34;container&#34;&gt;
+    &lt;ods-dataset-context context=&#34;map,ctxrefine&#34;
+                         map-dataset=&#34;us-hospitals&#34;
+                         map-domain=&#34;userclub&#34;
+                         map-parameters=&#34;{&#39;refine.state&#39;:&#39;HI&#39;}&#34;
+                         ctxrefine-dataset=&#34;us-hospitals&#34;
+                         ctxrefine-domain=&#34;userclub&#34;&gt;
+        &lt;div class=&#34;row&#34;&gt;
+            &lt;div class=&#34;col-md-7&#34;&gt;
+                &lt;ods-map basemap=&#34;streets&#34; style=&#34;height:500px&#34; no-refit=&#34;true&#34;&gt;
+                    &lt;ods-map-layer context=&#34;map&#34;
+                                   refine-on-click-context=&#34;ctxrefine&#34;
+                                   refine-on-click-ctxrefine-replace-refine=&#34;true&#34;
+                                   refine-on-click-ctxrefine-map-field=&#34;id&#34;
+                                   refine-on-click-ctxrefine-context-field=&#34;id&#34;&gt;&lt;/ods-map-layer&gt;
+                    &lt;ods-map-layer context=&#34;ctxrefine&#34;
+                                   show-if=&#34;ctxrefine.parameters[&#39;refine.id&#39;]&#34;
+                                   color=&#34;green&#34;
+                                   picto-size=&#34;6&#34;&gt;&lt;/ods-map-layer&gt;
+                &lt;/ods-map&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-5&#34;&gt;
+                &lt;!-- WHEN NO POINT SELECTED, DISPLAY THIS --&gt;
+                &lt;div class=&#34;unrefined&#34;
+                     ng-if=&#34;!ctxrefine.parameters[&#39;refine.id&#39;]&#34;&gt;
+                    &lt;div class=&#34;header&#34;&gt;
+                        &lt;h2 class=&#34;title&#34;&gt;
+                            HAWAII Hospitals
+                        &lt;/h2&gt;
+                        &lt;h3 class=&#34;subtitle&#34;&gt;
+                            click on the map to see details
+                        &lt;/h3&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;!-- WHEN A POINT IS SELECTED, DISPLAY THIS --&gt;
+                &lt;div class=&#34;refined&#34;
+                     ng-if=&#34;ctxrefine.parameters[&#39;refine.id&#39;]&#34;
+                     ods-results=&#34;items&#34;
+                     ods-results-context=&#34;ctxrefine&#34;
+                     ods-results-max=&#34;1&#34;
+                     ng-repeat=&#34;item in items&#34;&gt;
+                    &lt;button class=&#34;button-go-back&#34;
+                            ng-click=&#34;ctxrefine.parameters[&#39;refine.id&#39;] = undefined&#34;
+                            aria-label=&#34;Close detail side&#34;&gt;
+                        &lt;i class=&#34;fa fa-long-arrow-left button-go-back-icon&#34;
+                           aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                        &lt;span&gt;back&lt;/span&gt;
+                    &lt;/button&gt;
+
+                    &lt;!-- DETAILS SIDE, AS AN EXAMPLE: YOU SHOULD REMOVE THIS BLOCK AND DO YOUR OWN --&gt;
+                    &lt;div class=&#34;pop-in-header row&#34;&gt;
+                        &lt;div class=&#34;col-xs-4&#34;&gt;
+                            &lt;div class=&#34;pop-in-photo-container&#34;&gt;
+                                &lt;img class=&#34;pop-in-photo&#34;
+                                     src=&#34;https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/Seal_of_the_State_of_Hawaii.svg/1200px-Seal_of_the_State_of_Hawaii.svg.png&#34;&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                        &lt;div class=&#34;col-xs-8&#34;&gt;
+                            &lt;h2 class=&#34;pop-in-title&#34;&gt;
+                                {{ item.fields.name }}
+                            &lt;/h2&gt;
+                            &lt;h3 class=&#34;pop-in-subtitle&#34;&gt;
+                                {{ item.fields.type }}
+                            &lt;/h3&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;dl class=&#34;row pop-in-list&#34;&gt;
+                        &lt;dt class=&#34;col-sm-4&#34;&gt;ADDRESS&lt;/dt&gt;
+                        &lt;dd class=&#34;col-sm-8&#34;&gt;{{ item.fields.address }}&lt;/dd&gt;
+                        &lt;dt class=&#34;col-sm-4&#34;&gt;CITY&lt;/dt&gt;
+                        &lt;dd class=&#34;col-sm-8&#34;&gt;{{ item.fields.city }}&lt;/dd&gt;
+                        &lt;dt class=&#34;col-sm-4&#34;&gt;POPULATION&lt;/dt&gt;
+                        &lt;dd class=&#34;col-sm-8&#34;&gt;{{ item.fields.population }}&lt;/dd&gt;
+                        &lt;dt class=&#34;col-sm-4&#34;&gt;WEBSITE&lt;/dt&gt;
+                        &lt;dd class=&#34;col-sm-8&#34;&gt;
+                            &lt;a href=&#34;{{ item.fields.source }}&#34; target=&#34;_blank&#34;&gt;
+                                Link &lt;i class=&#34;fa fa-external-link&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                            &lt;/a&gt;
+                        &lt;/dd&gt;
+                    &lt;/dl&gt;
+                    &lt;!-- END OF DETAIL SIDE --&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/ods-dataset-context&gt;
+&lt;/div&gt;
+"
+                 role="tabpanel">
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;container&#34;&gt;
     &lt;ods-dataset-context context=&#34;map,ctxrefine&#34;
@@ -2850,7 +3299,122 @@ In this example, modals are simple html blocs, displayed when a refine is active
             </div>
             
             <div class="js-tabcontent"
-                 id="code-replace-map-tooltip-with-a-refine--on-the-side--css-content">
+                 id="code-replace-map-tooltip-with-a-refine--on-the-side--css-content"
+                 data-clipboard="/* Unrefined state
+========================================================================== */
+.unrefined .header {
+    text-align: center;
+}
+.unrefined .title {
+    font-size: 1.5rem;
+    color: #071a70;
+    font-weight: normal;
+    margin-top: 17px !important;
+    margin-bottom: 10px;
+}
+.unrefined .subtitle {
+    font-size: 1rem;
+    margin: 4px 0;
+    text-transform: uppercase;
+    font-weight: normal;
+    border-radius: 4px;
+    margin: 0;
+    display: inline-block;
+}
+
+
+/* Button Go Back
+========================================================================== */
+.button-go-back {
+    font-size: 1.2rem;
+    color: var(--text);
+    padding: .5rem 1rem;
+    border-radius: .4rem;
+    border-width: 1px;
+    margin: 0 0 2rem 0;
+    display: inline-block;
+    text-decoration: none;
+    transition: all .2s;
+    background-color: #D9F1FF; /* Button background color */
+}
+.button-go-back:hover {
+    text-decoration: none;
+    background-color: #A6DEFF; /* Button background color on mouse hover */
+}
+.button-go-back-icon {
+    margin-right: .4rem;
+    position: relative;
+    left: 0;
+    transition: all .3s;
+}
+.button-go-back:hover .button-go-back-icon {
+    left: -.3rem;
+}
+
+
+
+
+/* Side detail as an exemple, you should remove this part and do you own
+========================================================================== */
+.pop-in-header {
+    margin-bottom: 20px;
+}
+.pop-in-photo-container {
+    position: relative;
+    height: 100px;
+    width: 100px;
+    background-color: rgba(218, 218, 218, .2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+.pop-in-photo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 100px;
+    width: auto;
+    max-width: 100px;
+    border-radius: 50%;
+}
+.pop-in-title {
+    font-size: 1.5rem;
+    color: #071a70;
+    font-weight: normal;
+    margin-top: 17px !important;
+    margin-bottom: 10px;
+}
+.pop-in-subtitle {
+    font-size: 1rem;
+    margin: 4px 0;
+    text-transform: uppercase;
+    font-weight: normal;
+    border-radius: 4px;
+    margin: 0;
+    display: inline-block;
+}
+.pop-in-list {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.pop-in-list dt {
+    color: #6f6f6f;
+}
+@media screen and (min-width: 767px) {
+    .pop-in-list dt {
+        text-align: right;
+    }
+}
+.pop-in-list dd {
+    margin: 0;
+}
+"
+            >
                 <div class="highlight">
                     <pre class="language-css" data-lang="css"><code>/* Unrefined state
 ========================================================================== */
@@ -2970,47 +3534,14 @@ In this example, modals are simple html blocs, displayed when a refine is active
             </div>
             
         </div>
-    </section>
+    </div>
 </div>
 
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-replace-map-tooltip-with-a-refine--on-the-side-";
-            iframe = document.getElementById(iframeId);
-             
-            size =  null 
-             
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-                if (iframe.height == size) {
-                    clearInterval(loopId);
-                } else {
-                    iframe.height = size > 1 ? size : scrollHeight;
-                }
-            }
-        }, 1000);
-    });
-</script>
-
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-replace-map-tooltip-with-a-refine--on-the-side-";
-            iframe = document.getElementById(iframeId);
-
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-            }
-        }, 1000);
-    });
-</script>
-
       </div>
-    </div>
+    </article>
     
-  </section>
+  </div>
+</section>
 
       </div>
     </div>
@@ -3037,7 +3568,7 @@ In this example, modals are simple html blocs, displayed when a refine is active
     </script>
     <script
       type="text/javascript"
-      src="/index.min.34c5a309e21ed7ebf769ff8917c0119ba0efc33353503e847d335c378022b772.js"
+      src="/index.min.b65df824365d99e02747153d4eeca1d7a840fbd4e06d720e8be44e9aa54586d2.js"
       defer
     ></script>
   </body>

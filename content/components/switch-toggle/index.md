@@ -2,6 +2,7 @@
 title: "Switch Module"
 description: "A switch is a visual toggle between two mutually exclusive states — on and off."
 tags: ["display"]
+height: 120
 resources:
 - src: '*/'
   name: folder-:counter

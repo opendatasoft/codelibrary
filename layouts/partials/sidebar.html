@@ -1,92 +1,95 @@
+<div class="sidebar-search is-hidden-touch">
+  <div class="block search-wrapper">
+    <div id="algolia-box"></div>
+    <div class="search-results-wrapper">
+      <div id="algolia-results"></div>
+    </div>
+  </div>
+</div>
 <aside class="sidebar"
        id="sidebarNavbar">
-   <div class="sidebar-header">
-     <div class="block search-wrapper">
-       <div id="algolia-box"></div>
-       <div class="search-results-wrapper">
-         <div id="algolia-results"></div>
-       </div>
-     </div>
-    {{ if .IsPage }}
-       <div class="block">
-         <ul class="menu-list">
-           <p class="menu-label">On this page</p>
-           <li>
-             <a href="#">
-               Top
-             </a>
-           </li>
-           {{ range sort (.Page.Resources.Match "*/index.md") "Name" }}
-           <li>
-             <a href="#{{ .Title | anchorize }}">
-               {{ .Title }}
-             </a>
-           </li>
-           {{ end }}
-         </ul>
-       </div>
-     </div>
-     {{ end }}
-
-        {{ $currentPage := . }}
-        {{ $newContentCount := 0 }}
-        <ul class="menu-list">
-            <li>
-                <a class="sidebar-subtitle"
-                   href="{{ .Site.BaseURL }}">
-                    Home
-                </a>
-            </li>
-            {{ range .Site.Menus.main }}
-              {{ if eq $currentPage.Section .Page.Section }}
-              <li>
-                  <a class="sidebar-subtitle {{ if $currentPage.IsMenuCurrent "main" . }}is-active{{ end }}" href="{{ .URL }}">
-                  {{ humanize .Name }}
-                  </a>
-                  <ul>
-                      {{ range .Page.Pages }}
-                        <li>
-                            <a class="{{ if eq $currentPage . }}is-active{{ end }}" href="{{ .RelPermalink }}">
-                              <div>
-                                {{ .Title }}
-                                {{ $newContentCount := len (where .Page.Resources ".Date" "ge" (now.AddDate 0 -1 0)) }}
-                                {{ if ne $newContentCount 0 }}
-                                <span class="tag pill is-size-7 is-rounded is-info">
-                                  {{ $newContentCount }}
-                                </span>
-                                {{ end }}
-                              </div>
-                            </a>
-                        </li>
-                      {{ end }}
-                  </ul>
-              </li>
-              {{ else }}
-                {{ $newContentCount := 0 }}
-                {{ range .Page.Pages }}
-                  {{ $pageNewContent := len (where .Resources ".Date" "ge" (now.AddDate 0 -1 0)) }}
-                  {{ $newContentCount = add $newContentCount $pageNewContent }}
+  {{ if .IsPage }}
+  <div class="sidebar-header">
+    <div class="block">
+      <ul class="menu-list">
+        <p class="menu-label">On this page</p>
+        <li>
+          <a href="#">
+            Top
+          </a>
+        </li>
+        {{ range sort (.Page.Resources.Match "*/index.md") "Name" }}
+        <li>
+          <a href="#{{ .Title | anchorize }}">
+            {{ .Title }}
+          </a>
+        </li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+  {{ end }}
+  <div class="sidebar-body">
+    {{ $currentPage := . }}
+    {{ $newContentCount := 0 }}
+    <ul class="menu-list">
+      <li>
+        <a class="sidebar-subtitle"
+          href="{{ .Site.BaseURL }}">
+          Home
+        </a>
+      </li>
+      {{ range .Site.Menus.main }}
+      {{ if eq $currentPage.Section .Page.Section }}
+      <li>
+        <a class="sidebar-subtitle {{ if $currentPage.IsMenuCurrent "main" . }}is-active{{ end }}" href="{{ .URL }}">
+          {{ humanize .Name }}
+        </a>
+        <ul>
+          {{ range .Page.Pages }}
+          <li>
+            <a class="{{ if eq $currentPage . }}is-active{{ end }}" href="{{ .RelPermalink }}">
+              <div>
+                {{ .Title }}
+                {{ $newContentCount := len (where .Page.Resources ".Date" "ge" (now.AddDate 0 -1 0)) }}
+                {{ if ne $newContentCount 0 }}
+                <span class="tag pill is-size-7 is-rounded is-info">
+                  {{ $newContentCount }}
+                </span>
                 {{ end }}
-              <li>
-                  <a href="{{ .URL }}"
-                     class="sidebar-subtitle">
-                      {{ humanize .Name }}
-                      {{ if ne $newContentCount 0 }}
-                        <span class="tag pill is-size-7 is-rounded is-info">{{ $newContentCount }}</span>
-                      {{ end }}
-                  </a>
-              </li>
-              {{ end }}
-            {{ end }}
-        </ul>
-        <p class="menu-label">
-            Tags
-        </p>
-        <div class="tags">
-            {{ range .Site.Taxonomies.tags }}
-            <a class="tag" href="{{ .Page.RelPermalink }}">
-                {{ .Page.Title }}
+              </div>
             </a>
-            {{ end }}
-        </div>
+          </li>
+          {{ end }}
+        </ul>
+      </li>
+      {{ else }}
+      {{ $newContentCount := 0 }}
+      {{ range .Page.Pages }}
+      {{ $pageNewContent := len (where .Resources ".Date" "ge" (now.AddDate 0 -1 0)) }}
+      {{ $newContentCount = add $newContentCount $pageNewContent }}
+      {{ end }}
+      <li>
+        <a href="{{ .URL }}"
+        class="sidebar-subtitle">
+        {{ humanize .Name }}
+        {{ if ne $newContentCount 0 }}
+        <span class="tag pill is-size-7 is-rounded is-info">{{ $newContentCount }}</span>
+        {{ end }}
+      </a>
+    </li>
+    {{ end }}
+    {{ end }}
+  </ul>
+  <p class="menu-label">
+    Tags
+  </p>
+  <div class="tags">
+    {{ range .Site.Taxonomies.tags }}
+    <a class="tag" href="{{ .Page.RelPermalink }}">
+      {{ .Page.Title }}
+    </a>
+    {{ end }}
+  </div>
+</div>
 </aside>
