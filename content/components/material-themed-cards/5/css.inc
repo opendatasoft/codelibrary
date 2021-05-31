@@ -1,10 +1,10 @@
 :root {
-  --primary: hsl(265, 90%, 47%);
-  --primary-h-s: 265, 90% ; /* If your color is hsl(36, 94, 59), input 36, 94 */
-  --surface: white;
-  --background: white;
-  --card-text: #424242;
-  --body-text: #424242;
+  --primary: hsl(36, 94%, 59%);
+  --primary-h-s: 36, 94% ; /* If your color is hsl(36, 94, 59), input 36, 94 */
+  --surface: hsl(200, 21%, 37%);
+  --background: hsl(198, 20%, 17%);
+  --card-text: white;
+  --body-text: white;
 
   /* These are automatically computed unless you need to overwrite them */
   --primary-10: hsl(var(--primary-h-s), 10%);
@@ -17,7 +17,58 @@
   --primary-80: hsl(var(--primary-h-s), 80%);
   --primary-90: hsl(var(--primary-h-s), 90%);
 
-  --overlay-10: hsla(var(--primary-h-s), 70%, 10%);
+  --overlay-10: hsla(var(--primary-h-s), 90%, 10%);
+}
+
+.is-info {
+  --primary: hsl(194, 100%, 73%);
+  --primary-h-s: 194, 100% ; /* If your color is hsl(36, 94, 59), input 36, 94 */
+
+  --primary-10: hsl(var(--primary-h-s), 10%);
+  --primary-20: hsl(var(--primary-h-s), 20%);
+  --primary-30: hsl(var(--primary-h-s), 30%);
+  --primary-40: hsl(var(--primary-h-s), 40%);
+  --primary-50: hsl(var(--primary-h-s), 50%);
+  --primary-60: hsl(var(--primary-h-s), 60%);
+  --primary-70: hsl(var(--primary-h-s), 70%);
+  --primary-80: hsl(var(--primary-h-s), 80%);
+  --primary-90: hsl(var(--primary-h-s), 90%);
+
+  --overlay-10: hsla(var(--primary-h-s), 90%, 10%);
+}
+
+.is-success {
+  --primary: hsl(158, 72%, 42%);
+  --primary-h-s: 158, 72% ; /* If your color is hsl(36, 94, 59), input 36, 94 */
+
+  --primary-10: hsl(var(--primary-h-s), 10%);
+  --primary-20: hsl(var(--primary-h-s), 20%);
+  --primary-30: hsl(var(--primary-h-s), 30%);
+  --primary-40: hsl(var(--primary-h-s), 40%);
+  --primary-50: hsl(var(--primary-h-s), 50%);
+  --primary-60: hsl(var(--primary-h-s), 60%);
+  --primary-70: hsl(var(--primary-h-s), 70%);
+  --primary-80: hsl(var(--primary-h-s), 80%);
+  --primary-90: hsl(var(--primary-h-s), 90%);
+
+  --overlay-10: hsla(var(--primary-h-s), 90%, 10%);
+}
+
+.is-warning {
+  --primary: hsl(5, 100%, 67%);
+  --primary-h-s: 5, 100% ; /* If your color is hsl(36, 94, 59), input 36, 94 */
+
+  --primary-10: hsl(var(--primary-h-s), 10%);
+  --primary-20: hsl(var(--primary-h-s), 20%);
+  --primary-30: hsl(var(--primary-h-s), 30%);
+  --primary-40: hsl(var(--primary-h-s), 40%);
+  --primary-50: hsl(var(--primary-h-s), 50%);
+  --primary-60: hsl(var(--primary-h-s), 60%);
+  --primary-70: hsl(var(--primary-h-s), 70%);
+  --primary-80: hsl(var(--primary-h-s), 80%);
+  --primary-90: hsl(var(--primary-h-s), 90%);
+
+  --overlay-10: hsla(var(--primary-h-s), 50%, 50%);
 }
 
 body {

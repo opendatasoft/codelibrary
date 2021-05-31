@@ -1,5 +1,5 @@
 ---
-title: "Stick filter"
+title: "Sticky filter"
 date: 2021-05-27T10:59:32+02:00
 height: 180
 ---

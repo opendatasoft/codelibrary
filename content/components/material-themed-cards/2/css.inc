@@ -1,10 +1,10 @@
 :root {
-  --primary: hsl(36, 94%, 59%);
-  --primary-h-s: 36, 94% ; /* If your color is hsl(36, 94, 59), input 36, 94 */
-  --surface: hsl(200, 21%, 37%);
-  --background: hsl(198, 20%, 17%);
-  --card-text: white;
-  --body-text: white;
+  --primary: hsl(14, 98%, 56%);
+  --primary-h-s: 14, 98% ; /* If your color is hsl(36, 94, 59), input 36, 94 */
+  --surface: hsl(50, 100%, 95%);
+  --background: white;
+  --card-text: hsl(162, 32%, 31%);
+  --body-text: black;
 
   /* These are automatically computed unless you need to overwrite them */
   --primary-10: hsl(var(--primary-h-s), 10%);
@@ -17,7 +17,7 @@
   --primary-80: hsl(var(--primary-h-s), 80%);
   --primary-90: hsl(var(--primary-h-s), 90%);
 
-  --overlay-10: hsla(var(--primary-h-s), 90%, 10%);
+  --overlay-10: hsla(var(--primary-h-s), 70%, 10%);
 }
 
 body {
@@ -328,105 +328,6 @@ h5.subtitle {
 }
 
 /* Components */
-.menu {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  background: white;
-  border-radius: 999px;
-  padding: 0 16px;
-  margin-top: 16px;
-  background: var(--surface);
-  color: var(--card-text);
-}
-
-@media screen and (max-width: 768px) {
-  .menu {
-    flex-direction: column;
-    width: 100%;
-    border-radius: 0;
-    margin: 0;
-    padding: 0;
-  }
-}
-
-.filter {
-  display: flex;
-  flex: 1 1;
-  align-items: center;
-  justify-content: flex-end;
-  padding: 8px;
-}
-
-.filter:not(:last-child) {
-  border-right: 1px solid lightgray;
-}
-
-.filter .odswidget-select {
-  min-width: 220px;
-}
-
-.filter > *:not(:last-child) {
-  margin-right: 8px;
-}
-
-.filter .odswidget-timerange {
-  display: flex;
-}
-
-.filter .odswidget-timerange__to,
-.filter .odswidget-timerange__from {
-  display: flex;
-  justify-content: space-between;
-  margin-right: 16px;
-}
-
-.filter .odswidget-timerange__label {
-  margin-right: 8px;
-}
-
-.filter .odswidget-select-button,
-.filter .odswidget-select-input {
-  padding: 8px;
-  border: none;
-  background: transparent;
-}
-
-.filter .odswidget-select-button:hover {
-  border: none;
-}
-
-.filter .odswidget-timerange__input {
-  border: none;
-  border-bottom: 1px solid;
-  background: var(--surface);
-  color: var(--card-text);
-}
-
-.filter .odswidget-select-dropdown-menu {
-  top: 32px;
-}
-
-@media screen and (max-width: 768px) {
-  .filter {
-    justify-content: center;
-  }
-
-  .filter .odswidget-timerange {
-    flex-direction: column;
-  }
-
-  .filter .odswidget-timerange__from {
-    margin-bottom: 2em;
-  }
-
-  .filter:not(:last-child) {
-      width: 100%;
-      border-right: none;
-      border-bottom: 1px solid lightgray;
-  }
-}
-
 .card {
   background: var(--surface);
   color: var(--card-text);
@@ -442,32 +343,4 @@ h5.subtitle {
 .card .title,
 .card .subtitle {
   color: var(--card-text);
-}
-
-.data-table {
-  margin: 0 -16px;
-  color: var(--card-text);
-}
-
-.data-table thead {
-  background: var(--overlay-10);
-  border-bottom: 1px solid var(--card-text);
-}
-
-.data-table tr {
-  line-height: 32px;
-  position: relative;
-}
-
-.data-table tr:hover {
-  background: var(--overlay-10);
-}
-
-.data-table td,
-.data-table th {
-  padding: 8px;
-}
-
-.data-table tbody tr:nth-child(-n + 3) * {
-  font-weight: 500;
 }
