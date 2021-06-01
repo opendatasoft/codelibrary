@@ -154,9 +154,8 @@ h1 {
 
 .odswidgets-rd-container .rd-day-body:hover,
 .odswidgets-rd-container .rd-day-selected,
-.odswidgets-rd-container .rd-time-selected,
-.odswidgets-rd-container .rd-time-selected:hover,
 .odswidgets-rd-container .rd-time-option:hover,
+.odswidgets-rd-container .rd-time-selected
 {
   background-color: var(--primary);
 }

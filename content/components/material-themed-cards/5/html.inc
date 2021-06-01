@@ -84,45 +84,7 @@
                 </div>
             </section>
             <section class="row is-warning">
-                <div class="col-sm-6">
-                    <ods-dataset-context context="noresults"
-                                         noresults-dataset="monitoring-copy"
-                                         noresults-parameters="{'q':'nhits=0'}"
-                                         >
-                        {{ noresults.parameters['q.timerange'] = stats.parameters['q.timerange'] ; '' }}
-                        {{ noresults.parameters['refine.dataset_id'] = stats.parameters['refine.dataset_id'] ; '' }}
-                        <div class="card z-depth-1">
-                            <div class="card-head">
-                                <h2 class="title">
-                                    Text searches leading to no result
-                                </h2>
-                            </div>
-                            <table class="data-table">
-                                <thead>
-                                    <tr>
-                                        <th> Rank </th>
-                                        <th>Request</th>
-                                        <th>Occurrences</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr ods-facet-results="emptyqueriesopen"
-                                        ods-facet-results-context="noresults"
-                                        ods-facet-results-facet-name="query_text"
-                                        ng-repeat="(i,emptyquery) in emptyqueriesopen.slice(0,9)"
-                                        ng-show="emptyquery.count>5"
-                                        >
-
-                                        <td style="text-align:center;">{{ i+1 }}</td>
-                                        <td style="width: 100%">{{ emptyquery.name }}</td>
-                                        <td>{{ emptyquery.count }}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </ods-dataset-context>
-                </div>
-                <div class="col-sm-6">
+                <div class="col-sm-12">
                     <ods-dataset-context context="queries"
                                          queries-dataset="monitoring-copy"
                                          queries-parameters="{'q':'NOT #null(query_text)'}"
