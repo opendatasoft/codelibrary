@@ -94,7 +94,7 @@ h1 {
   justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .row {
     flex-direction: column;
   }
@@ -390,7 +390,7 @@ h5.subtitle {
   color: var(--card-text);
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .menu {
     flex-direction: column;
     width: 100%;
@@ -516,6 +516,9 @@ h5.subtitle {
 .data-table td,
 .data-table th {
   padding: 8px;
+  max-width: 265px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .data-table tbody tr:nth-child(-n + 3) * {

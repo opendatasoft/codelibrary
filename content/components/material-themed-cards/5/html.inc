@@ -50,7 +50,7 @@
                 </div>
             </nav>
             <section class="row is-info">
-                <div class="col-sm-6">
+                <div class="col-md-6">
                     <div class="card z-depth-1">
                         <div class="card-head">
                             <h2 class="title">
@@ -66,7 +66,7 @@
                         </ods-chart>
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-md-6">
                     <div class="card z-depth-1">
                         <div class="card-head">
                             <h2 class="title">
@@ -84,7 +84,7 @@
                 </div>
             </section>
             <section class="row is-warning">
-                <div class="col-sm-12">
+                <div class="col-md-12">
                     <ods-dataset-context context="queries"
                                          queries-dataset="monitoring-copy"
                                          queries-parameters="{'q':'NOT #null(query_text)'}"
@@ -124,7 +124,7 @@
                 </div>
             </section>
             <section class="row is-success">
-                <div class="col-sm-6">
+                <div class="col-md-6">
                     <div class="card z-depth-1">
                         <div class="card-head">
                             <h2 class="title" >
@@ -140,7 +140,7 @@
                         </ods-chart>
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-md-6">
                     <div class="card z-depth-1">
                         <div class="card-head">
                             <h2 class="title">
@@ -158,7 +158,7 @@
                 </div>
             </section>
             <section class="row">
-                <div class="col-sm-12">
+                <div class="col-md-12">
                     <div class="card z-depth-1">
                         <div class="card-head">
                             <h2 class="title" >

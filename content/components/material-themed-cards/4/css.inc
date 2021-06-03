@@ -43,7 +43,7 @@ h1 {
   justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .row {
     flex-direction: column;
   }

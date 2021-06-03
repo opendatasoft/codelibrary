@@ -5,7 +5,7 @@
                          >
         <div class="container">
             <section class="row">
-                <div class="col-sm-6">
+                <div class="col-md-6">
                     <div class="card z-depth-1">
                         <div class="card-head">
                             <h2 class="title">
@@ -21,7 +21,7 @@
                         </ods-chart>
                     </div>
                 </div>
-                <div class="col-sm-6">
+                <div class="col-md-6">
                     <div class="card z-depth-1">
                         <div class="card-head">
                             <h2 class="title">
