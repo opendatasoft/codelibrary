@@ -56,12 +56,8 @@ li.scrolling-menu i {
 
 li.custom-menu-item.custom-menu-item__active > a,
 li.custom-menu-item.custom-menu-item:hover > a{
-    color: var(--highlight);
-    text-decoration: none;
-}
-
-li.custom-menu-item.custom-menu-item:hover > a li.scrolling-menu i {
-    color: var(--highlight);
+    color: white;
+    opacity: 1;
     text-decoration: none;
 }
 

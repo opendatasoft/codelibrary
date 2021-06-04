@@ -1,5 +1,5 @@
 ---
-title: "Based on click"
+title: "Based on click - for empty headers"
 description: "How to use it : 
 1. Copy the content of the HEADER tab
 2. Paste it in https://yourdomain.opendatasoft.com/backoffice/customization/theme/#header  instead of ##menu##
