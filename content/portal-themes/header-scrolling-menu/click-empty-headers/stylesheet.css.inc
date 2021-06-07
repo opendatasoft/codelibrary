@@ -1,4 +1,3 @@
-
 /* DESKTOP SPECIFICS - STYLE OF ODS HEADER
 ========================================================================== */
 
@@ -24,6 +23,7 @@
 
 /* DESKTOP SPECIFICS - STYLE OF SCROLLING MENU
 ========================================================================== */
+
 .portal-navigation {
     margin: 0;
     -webkit-box-flex: 1;
@@ -31,21 +31,14 @@
     flex: 1 1 auto;
 }
 
-li.custom-menu-item {
+.ods-front-header__menu-item {
     position: relative;
 }
 
-li.custom-menu-item > a {
-    display: flex;
-    align-items: center;
-    color: var(--header-links);
-    font-size: 1.4rem;
-        font-weight: 400;
-    border: none;
-    line-height: 55px;
-    opacity: .5;
-    margin: 0;
-    padding: 0 20px;
+.ods-front-header__menu-item-link--active {
+    border-bottom: 0px solid;
+    color: #FFF;
+    opacity: 1;
 }
 
 li.scrolling-menu i {
@@ -54,14 +47,7 @@ li.scrolling-menu i {
     color: var(--header-links);
 }
 
-li.custom-menu-item.custom-menu-item__active > a,
-li.custom-menu-item.custom-menu-item:hover > a{
-    color: white;
-    opacity: 1;
-    text-decoration: none;
-}
-
-ul.custom-menu-item-submenu {
+ul.scrolling-menu-submenu {
     display: none;
     margin: 0;
     padding: 22px 28px;
@@ -69,23 +55,22 @@ ul.custom-menu-item-submenu {
     background-color: var(--header-background); 
 }
 
-ul.custom-menu-item-submenu.custom-menu-item-submenu__active {
+ul.scrolling-menu-submenu.scrolling-menu-submenu__active {
     display: inherit; }
 
-li.custom-menu-item-submenu-item {
+li.scrolling-menu-submenu-item {
     margin-bottom: 26px; }
 
-li.custom-menu-item-submenu-item:last-child {
+li.scrolling-menu-submenu-item:last-child {
     margin-bottom: inherit; 
 }
 
-.ods-responsive-menu-collapsible:not(.ods-responsive-menu-collapsible--collapsed) ul.custom-menu {
+.ods-responsive-menu-collapsible:not(.ods-responsive-menu-collapsible--collapsed) ul.ods-front-header__menu {
     display: flex;
     align-items: center; 
 }
 
-.ods-responsive-menu-collapsible:not(.ods-responsive-menu-collapsible--collapsed) ul.custom-menu-item-submenu {
-    width: 230px;
+.ods-responsive-menu-collapsible:not(.ods-responsive-menu-collapsible--collapsed) ul.scrolling-menu-submenu {
     position: absolute;
     top: 55px;
     left: 1px;
@@ -93,14 +78,14 @@ li.custom-menu-item-submenu-item:last-child {
     filter: drop-shadow(0px 14px 8px rgba(37, 48, 59, 0.1)); 
 }
 
-.ods-responsive-menu-collapsible:not(.ods-responsive-menu-collapsible--collapsed) .custom-menu .custom-menu-item-submenu {
+.ods-responsive-menu-collapsible:not(.ods-responsive-menu-collapsible--collapsed) .ods-front-header__menu .custom-menu-item-submenu {
     width: auto !important;
     top: 55px !important;
     left: 1px !important;
     padding: 20px !important;
     filter: drop-shadow(0px 0px 8px rgba(37, 48, 59, 0.2)) !important; }
 
-.ods-responsive-menu-collapsible:not(.ods-responsive-menu-collapsible--collapsed) .custom-menu .custom-menu-item-submenu a {
+.ods-responsive-menu-collapsible:not(.ods-responsive-menu-collapsible--collapsed) .ods-front-header__menu .scrolling-menu-submenu a {
     white-space: nowrap; 
 }
 
