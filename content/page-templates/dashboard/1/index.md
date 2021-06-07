@@ -1,6 +1,6 @@
 ---
-title: "Dashboard"
-height: 800
+title: "1 - 1 - 1 - 1 grid"
+height: 350
 ---
 
-Get straight to the point with this efficient dashboard layout. 
+1 column for mobile, 2 for tablets, 4 above
