@@ -1,9 +1,7 @@
 ---
 title: "Numeric, difference between 2 values"
-date: 2021-04-20T00:05:01+02:00
+date: 2021-06-08T00:05:01+02:00
 ---
-
-[Visual documentation with 1 example here](https://docs.google.com/presentation/d/1pG1Q2RcP20Aep_6mMK7aeG184_mzczXAm7oxAu_eMz8/edit#slide=id.p)
 
 **The main KPI settings**
 
@@ -33,3 +31,5 @@ Value settings, to setup the aggregation :
 
 - `valref_prefix`: a sentence to add before the reference value
 - `valref_suffix`: a sentence to add after the reference value
+
+[Visual documentation with 1 example here](https://docs.google.com/presentation/d/1pG1Q2RcP20Aep_6mMK7aeG184_mzczXAm7oxAu_eMz8/edit#slide=id.p)

@@ -109,8 +109,8 @@
         'valref_prefix':'',
         'valref_suffix':'de la production totale',
 
-        'flip_additional_description':'Pfizer c\'est trop bien et même que c\'est rigolo à dire',
-        'flip_additional_link':'https://www.disney.com'
+        'flip_additional_description':'En savoir plus sur ce groupe pharmaceutique',
+        'flip_additional_link':'https://www.pfizer.com/'
     },
 
     {
