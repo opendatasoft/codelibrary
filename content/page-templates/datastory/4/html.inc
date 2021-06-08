@@ -3,12 +3,13 @@
         <div class="row chart-space chart-bottom-line">
             <div class="col-md-offset-3 col-md-6 title">
                 <h2>
-                    !!! TITLE HERE !!!
+                    Interesting title
                 </h2>
             </div>
             <div class="col-md-offset-2 col-md-8 title">
                 <p>
-                    !!! DESCRIPTION HERE !!!  <span class="brand">!!! BRAND STYLE HERE !!! </span>.
+                    Quam ob rem ut ii qui superiores sunt submittere se debent in amicitia, sic quodam modo inferiores extollere.
+                    <span class="brand">Opendatasoft</span>.
                 </p>
             </div>
         </div>
@@ -25,25 +26,25 @@
             </div>
             <div class="col-md-6 chart-text">
                 <h2>
-                    !!! TITLE HERE !!!
+                    A block subtitle
                 </h2>
                 <p>
-                    !!! DESCRIPTION HERE !!!
+                    Non ergo erunt homines deliciis diffluentes audiendi, si quando de amicitia, quam nec usu nec ratione habent cognitam, disputabunt.
                 </p>
-                <a class="access" href="#">!!! LINK HERE !!!</a>
+                <a class="access" href="#">ambo venenorum artibus</a>
             </div>
         </div>
         <div class="row chart-space">
             <div class="col-md-7 chart-text">
                 <h2>
-                    !!! TITLE HERE !!!
+                    A block subtitle
                 </h2>
                 <p>
-                    !!! DESCRIPTION HERE !!!
+                    Non ergo erunt homines deliciis diffluentes audiendi, si quando de amicitia, quam nec usu nec ratione habent cognitam, disputabunt.
                     <br/><span class="code">code style</span>
                     <br/><a target="_blanck" href="#">link style</a>
                 </p>
-                <a class="access" href="#">!!! LINK HERE !!!</a>
+                <a class="access" href="#">ambo venenorum artibus</a>
             </div>
             <div class="col-md-5 chart-block">
                 <div class="chart-inner-block">
@@ -59,10 +60,10 @@
         <div class="row chart-space chart-bottom-line">
             <div class="col-md-4 chart-text">
                 <h2>
-                    !!! TITLE HERE !!!
+                    A block subtitle
                 </h2>
                 <p>
-                    !!! DESCRIPTION HERE !!!
+                    Non ergo erunt homines deliciis diffluentes audiendi, si quando de amicitia, quam nec usu nec ratione habent cognitam, disputabunt.
                 </p>
                 <div class="chart-inner-block chart-inner-block__kpi">
                     <div ods-aggregation="cnt"
@@ -74,7 +75,7 @@
                         Aggregation
                     </div>
                 </div>
-                <a class="access" href="#">!!! LINK HERE !!!</a>
+                <a class="access" href="#">ambo venenorum artibus</a>
             </div>
             <div class="col-md-8 chart-block">
                 <div id="table1" class="chart-inner-block">
@@ -85,12 +86,12 @@
         <div class="row chart-space">
             <div class="col-md-offset-2 col-md-8 chart-text chart-text__announcement">
                 <h2>
-                    !!! TITLE HERE !!!
+                    A block subtitle
                 </h2>
                 <p>
-                    !!! DESCRIPTION HERE !!! <span class="brand">your PROJECT</span> or <span class="brand">your APP</span>.
+                    Non ergo erunt homines deliciis diffluentes audiendi, si quando de amicitia, quam nec usu nec ratione habent cognitam, disputabunt. <span class="brand">your PROJECT</span> or <span class="brand">your APP</span>.
                 </p>
-                <a target="_blanck" href="#"><i class="fa fa-hand-o-right" aria-hidden="true"></i>!!! LINK HERE !!!</a>
+                <a target="_blanck" href="#"><i class="fa fa-hand-o-right" aria-hidden="true"></i>ambo venenorum artibus</a>
             </div>
         </div>
     </ods-dataset-context>
