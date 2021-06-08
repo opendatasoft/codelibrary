@@ -136,10 +136,10 @@
                ods-aggregation-function="{{ kpi.function }}"
                ods-aggregation-expression="{{ kpi.expression }}">
             <i class="kpi-icon fa fa-{{ kpi.faicon || 'gitlab' }}" aria-hidden="true"></i>
-            <h2 class="kpi-title">
+            <p class="kpi-title">
               {{ (agg || 0) | number : (kpi.precision || 0) }}
               <span ng-if="kpi.unit" class="kpi-unit">{{ kpi.unit }}</span>
-            </h2>
+            </p>
             <p class="kpi-description">
               {{ kpi.title }}
             </p>

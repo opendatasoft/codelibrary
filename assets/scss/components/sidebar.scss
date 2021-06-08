@@ -3,18 +3,15 @@
 
 .sidebar {
   position: fixed;
-  overflow: scroll;
   top: $navbar-height;
   z-index: 10;
   display: none;
   padding: 0 $spacing-200;
+  padding-top: $search-height;
   border-bottom: 1px solid #dee5ef;
   height: 100%;
   background-color: $white;
   font-size: $size-6;
-  &:last-child {
-    margin-bottom: $spacing-200;
-  }
 }
 
 .sidebar.is-active {
@@ -24,15 +21,13 @@
 @media screen and (min-width: $desktop) {
   .sidebar {
     position: sticky;
-    display: block;
+    display: flex;
+    flex-direction: column;
     width: 280px;
     flex-basis: 280px;
     border-right: 1px solid #dee5ef;
     border-bottom: none;
     height: calc(100vh - #{$navbar-height});
-    &:last-child {
-      margin-bottom: $spacing-200;
-    }
   }
 }
 
@@ -40,6 +35,25 @@
   .sidebar-content {
     height: auto;
   }
+}
+
+.sidebar-search {
+  position: fixed;
+  top: $navbar-height;
+  left: $spacing-200;
+  background: white;
+  z-index: 100;
+  height: $search-height;
+}
+
+.sidebar-header {
+  padding-bottom: $spacing-100;
+  margin-bottom: $spacing-100;
+  border-bottom: 1px solid $grey-light;
+}
+
+.sidebar-body {
+  overflow: scroll;
 }
 
 .sidebar-logo-link {
@@ -64,13 +78,9 @@ a.sidebar-subtitle {
   padding-bottom: 8px;
 }
 
-.sidebar-header {
-  background: white;
-  border-bottom: 1px solid #dee5ef;
-}
-
 .search-wrapper {
   position: relative;
+  min-height: 100%;
   margin: 1.5em 0;
 }
 

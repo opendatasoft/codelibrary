@@ -7,12 +7,12 @@
             <!-- KPI box component -->
             <div class="kpi-card">
                 <i class="kpi-icon fa fa-hospital-o" aria-hidden="true"></i>
-                <h2 class="kpi-title"
+                <p class="kpi-title"
                     ods-aggregation="count"
                     ods-aggregation-context="ushospitals"
                     ods-aggregation-function="COUNT">
                     {{ count | number }}
-                </h2>
+                </p>
                 <p class="kpi-description">
                     Number of hospitals in Houston, TX
                 </p>

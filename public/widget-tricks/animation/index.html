@@ -45,6 +45,34 @@
   </head>
 
   <body>
+    <div class="is-hidden">
+      <svg>
+  <defs>
+    <g id="link-2">
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+    </g>
+
+    <g id="check">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </g>
+
+    <g id="copy">
+      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+    </g>
+
+    <g id="external">
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+      <polyline points="15 3 21 3 21 9"></polyline>
+      <line x1="10" y1="14" x2="21" y2="3"></line>
+    </g>
+
+  </defs>
+</svg>
+
+    </div>
+
     <nav class="navbar is-fixed-top"
      role="navigation"
      aria-label="Main navigation">
@@ -112,512 +140,518 @@
 </nav>
 
 
-    <div class="columns is-desktop codelibrary">
-      <div class="column is-narrow">
-        <aside class="sidebar"
+    <div class="columns is-desktop codelibrary mb-0">
+      <div class="column is-narrow pb-0">
+        <div class="sidebar-search is-hidden-touch">
+  <div class="block search-wrapper">
+    <div id="algolia-box"></div>
+    <div class="search-results-wrapper">
+      <div id="algolia-results"></div>
+    </div>
+  </div>
+</div>
+<aside class="sidebar"
        id="sidebarNavbar">
-   <div class="sidebar-header">
-     <div class="block search-wrapper">
-       <div id="algolia-box"></div>
-       <div class="search-results-wrapper">
-         <div id="algolia-results"></div>
-       </div>
-     </div>
+  
+  <div class="sidebar-header">
+    <div class="block">
+      <ul class="menu-list">
+        <p class="menu-label">On this page</p>
+        <li>
+          <a href="#">
+            Top
+          </a>
+        </li>
+        
+        <li>
+          <a href="#animated-kpi">
+            Animated KPI
+          </a>
+        </li>
+        
+        <li>
+          <a href="#animated-kpi-with-auto-reload">
+            Animated KPI with auto-reload
+          </a>
+        </li>
+        
+        <li>
+          <a href="#animated-kpi-with-a-gauge">
+            Animated KPI with a gauge
+          </a>
+        </li>
+        
+        <li>
+          <a href="#animated-kpi-with-a-gauge-and-auto-reload">
+            Animated KPI with a gauge and auto-reload
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+  
+  <div class="sidebar-body">
     
-       <div class="block">
-         <ul class="menu-list">
-           <p class="menu-label">On this page</p>
-           <li>
-             <a href="#">
-               Top
-             </a>
-           </li>
-           
-           <li>
-             <a href="#animated-kpi">
-               Animated KPI
-             </a>
-           </li>
-           
-           <li>
-             <a href="#animated-kpi-with-auto-reload">
-               Animated KPI with auto-reload
-             </a>
-           </li>
-           
-           <li>
-             <a href="#animated-kpi-with-a-gauge">
-               Animated KPI with a gauge
-             </a>
-           </li>
-           
-           <li>
-             <a href="#animated-kpi-with-a-gauge-and-auto-reload">
-               Animated KPI with a gauge and auto-reload
-             </a>
-           </li>
-           
-         </ul>
-       </div>
-     </div>
-     
-
+    
+    <ul class="menu-list">
+      <li>
+        <a class="sidebar-subtitle"
+          href="https://codelibrary.opendatasoft.com">
+          Home
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/components/"
+        class="sidebar-subtitle">
+        Components
         
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/custom-views/"
+        class="sidebar-subtitle">
+        Custom views
         
-        <ul class="menu-list">
-            <li>
-                <a class="sidebar-subtitle"
-                   href="https://codelibrary.opendatasoft.com">
-                    Home
-                </a>
-            </li>
-            
-              
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/generators/"
+        class="sidebar-subtitle">
+        Generators
+        
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/page-templates/"
+        class="sidebar-subtitle">
+        Page templates
+        
+        <span class="tag pill is-size-7 is-rounded is-info">10</span>
+        
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/portal-themes/"
+        class="sidebar-subtitle">
+        Portal themes
+        
+      </a>
+    </li>
+    
+    
+      
+      <li>
+        <a class="sidebar-subtitle " href="/widget-tricks/">
+          Widget tricks
+        </a>
+        <ul>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-chart-css/">
+              <div>
+                ods-chart CSS Hacks
                 
                 
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-              <li>
-                  <a href="/components/"
-                     class="sidebar-subtitle">
-                      Components
-                      
-                  </a>
-              </li>
-              
-            
-              
-                
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-              <li>
-                  <a href="/generators/"
-                     class="sidebar-subtitle">
-                      Generators
-                      
-                        <span class="tag pill is-size-7 is-rounded is-info">7</span>
-                      
-                  </a>
-              </li>
-              
-            
-              
-                
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-              <li>
-                  <a href="/page-templates/"
-                     class="sidebar-subtitle">
-                      Page templates
-                      
-                  </a>
-              </li>
-              
-            
-              
-                
-                
-                  
-                  
-                
-                  
-                  
-                
-                  
-                  
-                
-              <li>
-                  <a href="/portal-themes/"
-                     class="sidebar-subtitle">
-                      Portal themes
-                      
-                  </a>
-              </li>
-              
-            
-              
-              <li>
-                  <a class="sidebar-subtitle " href="/widget-tricks/">
-                  Widget tricks
-                  </a>
-                  <ul>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-chart-css/">
-                              <div>
-                                ods-chart CSS Hacks
-                                
-                                
-                                <span class="tag pill is-size-7 is-rounded is-info">
-                                  1
-                                </span>
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="is-active" href="/widget-tricks/animation/">
-                              <div>
-                                Animations
-                                
-                                
-                                <span class="tag pill is-size-7 is-rounded is-info">
-                                  1
-                                </span>
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/svg-maps/">
-                              <div>
-                                Static maps, a quick introduction
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/charts/">
-                              <div>
-                                Chart samples
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/catalog-cards/">
-                              <div>
-                                Custom catalog card
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/custom-tooltips/">
-                              <div>
-                                Custom Tooltips
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/dates/">
-                              <div>
-                                Dates
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/drill-down/">
-                              <div>
-                                Drill-down refine in charts
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/filter-as-list/">
-                              <div>
-                                Filters as an HTML Select
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-aggregation/">
-                              <div>
-                                ods-aggregation
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-analysis/">
-                              <div>
-                                ods-analysis, quick intro
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-color-gradient/">
-                              <div>
-                                ods-color-gradient &#43; ods-map : a choropleth alternative
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-date-range-slider/">
-                              <div>
-                                ods-date-range-slider
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-map-tricks/">
-                              <div>
-                                ods-map: Refine &amp; Zoom
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-map-css/">
-                              <div>
-                                ods-map: CSS Hacks
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-pop-in/">
-                              <div>
-                                ods-pop-in variants
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-select/">
-                              <div>
-                                ods-select
-                                
-                                
-                                <span class="tag pill is-size-7 is-rounded is-info">
-                                  2
-                                </span>
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/ods-simple-tabs/">
-                              <div>
-                                ods-simple-tabs
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                        <li>
-                            <a class="" href="/widget-tricks/share-print/">
-                              <div>
-                                Share and print
-                                
-                                
-                              </div>
-                            </a>
-                        </li>
-                      
-                  </ul>
-              </li>
-              
-            
-        </ul>
-        <p class="menu-label">
-            Tags
-        </p>
-        <div class="tags">
-            
-            <a class="tag" href="/tags/aggregation/">
-                aggregation
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/chart/">
-                chart
+          </li>
+          
+          <li>
+            <a class="is-active" href="/widget-tricks/animation/">
+              <div>
+                Animations
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/date/">
-                date
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/svg-maps/">
+              <div>
+                Static maps, a quick introduction
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/display/">
-                display
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/charts/">
+              <div>
+                Chart samples
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/filter/">
-                filter
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/catalog-cards/">
+              <div>
+                Custom catalog card
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/geo/">
-                geo
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/custom-tooltips/">
+              <div>
+                Custom Tooltips
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/list/">
-                list
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/dates/">
+              <div>
+                Dates
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/map/">
-                map
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/drill-down/">
+              <div>
+                Drill-down refine in charts
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/navigation/">
-                navigation
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/filter-as-list/">
+              <div>
+                Filters as an HTML Select
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/ods-aggregation/">
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-aggregation/">
+              <div>
                 ods-aggregation
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/ods-analysis/">
-                ods-analysis
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-analysis/">
+              <div>
+                ods-analysis, quick intro
+                
+                
+              </div>
             </a>
-            
-            <a class="tag" href="/tags/ods-maps/">
-                ods-maps
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-color-gradient/">
+              <div>
+                ods-color-gradient &#43; ods-map : a choropleth alternative
+                
+                
+              </div>
             </a>
-            
-        </div>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-date-range-slider/">
+              <div>
+                ods-date-range-slider
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-map-css/">
+              <div>
+                ods-map: CSS Hacks
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-map-tricks/">
+              <div>
+                ods-map: Refine &amp; Zoom
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-pop-in/">
+              <div>
+                ods-pop-in variants
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-select/">
+              <div>
+                ods-select
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-simple-tabs/">
+              <div>
+                ods-simple-tabs
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/share-print/">
+              <div>
+                Share and print
+                
+                
+              </div>
+            </a>
+          </li>
+          
+        </ul>
+      </li>
+      
+    
+  </ul>
+  <p class="menu-label">
+    Tags
+  </p>
+  <div class="tags">
+    
+    <a class="tag" href="/tags/aggregation/">
+      aggregation
+    </a>
+    
+    <a class="tag" href="/tags/chart/">
+      chart
+    </a>
+    
+    <a class="tag" href="/tags/date/">
+      date
+    </a>
+    
+    <a class="tag" href="/tags/display/">
+      display
+    </a>
+    
+    <a class="tag" href="/tags/filter/">
+      filter
+    </a>
+    
+    <a class="tag" href="/tags/geo/">
+      geo
+    </a>
+    
+    <a class="tag" href="/tags/list/">
+      list
+    </a>
+    
+    <a class="tag" href="/tags/map/">
+      map
+    </a>
+    
+    <a class="tag" href="/tags/navigation/">
+      navigation
+    </a>
+    
+    <a class="tag" href="/tags/ods-aggregation/">
+      ods-aggregation
+    </a>
+    
+    <a class="tag" href="/tags/ods-analysis/">
+      ods-analysis
+    </a>
+    
+    <a class="tag" href="/tags/ods-maps/">
+      ods-maps
+    </a>
+    
+  </div>
+</div>
 </aside>
 
       </div>
       <div class="column codelibrary-content">
         
-  <section>
-    <div class="content-header container is-max-desktop mb-5">
-      <div class="content">
-        <h1>Widget Tricks - Animations</h1>
-        
-      </div>
+<section class="section resources">
+  <div class="container is-max-widescreen">
+    <h1 class="title is-1">Widget Tricks - Animations</h1>
+    <div class="content">
+      
     </div>
     
-    <div class="container">
-      <div class="box box-example">
-        <h2 class="title is-2" id="animated-kpi">
-          Animated KPI
-          
-            <span class="tag is-rounded is-info">New</span>
-          
-          <a class="is-link anchor" href="#animated-kpi">
-            <span class="icon">
-              <img src="/img/fas-link.svg" />
-            </span>
-          </a>
-        </h2>
-        
-        <div class="content">
-          <p>Animate your KPI with <code>ods-timer</code>.</p>
+    <article class="block">
+      <h2 class="title is-2" id="animated-kpi">
+        Animated KPI 
+        <a class="is-link anchor" href="#animated-kpi">
+          <span class="icon">
+            <img src="/img/fas-link.svg" />
+          </span>
+        </a>
+      </h2>
+      <div class="content">
+        <p>Animate your KPI with <code>ods-timer</code>.</p>
 <p>The KPI is computed with <code>ods-aggregation</code>. For more information about how to compute metrics, see <a href="/widget-tricks/ods-aggregation">ods-aggregation resource</a>.</p>
 <p><strong>Animation</strong>: You can change the speed of the animation by changing 2 variables:</p>
 <blockquote>
@@ -627,15 +661,22 @@
 <p><code>delay</code>: delay between each tick. High delay = slow animation.</p>
 </blockquote>
 
-        </div>
+      </div>
+      
+      <div class="box">
         
 
 
-<div class="codepen">
-    
-    
+
+
+
+
     
 
+
+
+
+<div class="codepen">
     <form id="form-animated-kpi"
           action="https://codepen.io/pen/define"
           method="POST"
@@ -643,21 +684,22 @@
         <input type="hidden"
                name="data"
                value='{
-               "title": "New Pen!",
-               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
-               "editors": 110,
-               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;uraniumproduction\&#34;\n                     uraniumproduction-dataset=\&#34;uranium-production\&#34;\n                     uraniumproduction-domain=\&#34;userclub\&#34;\u003e\n    \u003cdiv ods-aggregation=\&#34;aggregation\&#34;\n         ods-aggregation-context=\&#34;uraniumproduction\&#34;\n         ods-aggregation-function=\&#34;SUM\&#34;\n         ods-aggregation-expression=\&#34;tonnes_of_uranium\&#34;\u003e\n        \u003cdiv class=\&#34;row\&#34;\u003e\n            \u003cdiv class=\&#34;col-sm-offset-4 col-sm-4\&#34;\u003e\n                \u003c!-- KPI box component --\u003e\n                \u003cdiv ng-if=\&#34;true\&#34;\n                     ng-init=\&#34;from = 0;\n                              nbticks = 30;\n                              delay = 100;\n                              tick = 0;\&#34;\n                     class=\&#34;kpi-card\&#34;\u003e\n                    \u003ci class=\&#34;kpi-icon fa fa-superpowers\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                    \u003cods-timer\n                            stop-condition=\&#34;from \u003e= aggregation\&#34;\n                            delay=\&#34;delay\&#34;\n                            auto-start=\&#34;true\&#34;\n                            exec=\&#34;from = from &#43; ((aggregation || 0) / nbticks);\&#34;\u003e\n                    \u003c/ods-timer\u003e\n                    \u003ch2 class=\&#34;kpi-title\&#34;\u003e{{ from | number:0 }}\u003c/h2\u003e\n                    \u003cp class=\&#34;kpi-description\&#34;\u003etons of uranium produced since 2017\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
-               "css": &#34;/* KPI Card\n========================================================================== */\n.kpi-card {\n    background-color: var(--boxes-background);\n    height: 100%;\n    padding: 39px;\n    border-radius: 4px;\n    margin-bottom: 20px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -ms-flex-direction: column;\n    flex-direction: column;\n    -webkit-box-align: center;\n    -ms-flex-align: center;\n    align-items: center;\n    text-align: center;\n    -webkit-box-pack: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    text-align: center;\n    max-height: 250px;\n}\n\n.kpi-icon {\n    color: var(--highlight);\n    color: var(--secondary-color);\n    font-size: 4rem;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n\n.kpi-title {\n    font-weight: normal;\n    color: var(--highlight);\n    font-size: 3.2rem;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n\n.kpi-description {\n    color: var(--text);\n    font-size: 1rem;\n    line-height: 1.5;\n    font-weight: normal;\n    margin-top: 0;\n    margin-bottom: 0;\n    max-width: 100%;\n}\n\n/* Hide the ods-timer button\n========================================================================== */\n.ods-button.ods-widget-timer-controller {\n    display: none;\n}&#34; }'>
+                 "title": "New Pen!",
+                 "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    const sourceMonitoringInterceptor = ($q) =\u003e {\n        return {\n            request: (config) =\u003e {\n              config.params \u0026\u0026 (delete config.params.source);\n              return config;\n          }\n        }\n    }\n\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider, $httpProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n        $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+                 "editors": 110,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;uraniumproduction\&#34;\n                     uraniumproduction-dataset=\&#34;uranium-production\&#34;\n                     uraniumproduction-domain=\&#34;userclub\&#34;\u003e\n    \u003cdiv ods-aggregation=\&#34;aggregation\&#34;\n         ods-aggregation-context=\&#34;uraniumproduction\&#34;\n         ods-aggregation-function=\&#34;SUM\&#34;\n         ods-aggregation-expression=\&#34;tonnes_of_uranium\&#34;\u003e\n        \u003cdiv class=\&#34;row\&#34;\u003e\n            \u003cdiv class=\&#34;col-sm-offset-4 col-sm-4\&#34;\u003e\n                \u003c!-- KPI box component --\u003e\n                \u003cdiv ng-if=\&#34;true\&#34;\n                     ng-init=\&#34;from = 0;\n                              nbticks = 30;\n                              delay = 100;\n                              tick = 0;\&#34;\n                     class=\&#34;kpi-card\&#34;\u003e\n                    \u003ci class=\&#34;kpi-icon fa fa-superpowers\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                    \u003cods-timer\n                            stop-condition=\&#34;from \u003e= aggregation\&#34;\n                            delay=\&#34;delay\&#34;\n                            auto-start=\&#34;true\&#34;\n                            exec=\&#34;from = from &#43; ((aggregation || 0) / nbticks);\&#34;\u003e\n                    \u003c/ods-timer\u003e\n                    \u003cp class=\&#34;kpi-title\&#34;\u003e{{ from | number:0 }}\u003c/p\u003e\n                    \u003cp class=\&#34;kpi-description\&#34;\u003etons of uranium produced since 2017\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+                 "css": &#34;/* KPI Card\n========================================================================== */\n.kpi-card {\n    background-color: var(--boxes-background);\n    height: 100%;\n    padding: 39px;\n    border-radius: 4px;\n    margin-bottom: 20px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -ms-flex-direction: column;\n    flex-direction: column;\n    -webkit-box-align: center;\n    -ms-flex-align: center;\n    align-items: center;\n    text-align: center;\n    -webkit-box-pack: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    text-align: center;\n    max-height: 250px;\n}\n\n.kpi-icon {\n    color: var(--highlight);\n    color: var(--secondary-color);\n    font-size: 4rem;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n\n.kpi-title {\n    font-weight: normal;\n    color: var(--highlight);\n    font-size: 3.2rem;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n\n.kpi-description {\n    color: var(--text);\n    font-size: 1rem;\n    line-height: 1.5;\n    font-weight: normal;\n    margin-top: 0;\n    margin-bottom: 0;\n    max-width: 100%;\n}\n\n/* Hide the ods-timer button\n========================================================================== */\n.ods-button.ods-widget-timer-controller {\n    display: none;\n}&#34;
+               }'>
     </form>
 </div>
-
 <div class="ods-content">
-    <section class="box box-live-example">
+    <div class="box-live-example"
+      style="height: 320px;">
       <iframe id="iframe-animated-kpi"
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
-        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+                <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;&gt;
 
@@ -668,13 +710,23 @@
 &lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js&#34;&gt;&lt;/script&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;&gt;&lt;/script&gt;
 
 &lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;&gt;&lt;/script&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {
+    const sourceMonitoringInterceptor = ($q) =&gt; {
+        return {
+            request: (config) =&gt; {
+              config.params &amp;&amp; (delete config.params.source);
+              return config;
+          }
+        }
+    }
+
+    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider, $httpProvider) {
         ODSWidgetsConfigProvider.setConfig({
             &#34;defaultDomain&#34;: &#34;https://userclub.opendatasoft.com/&#34;,
             &#34;basemaps&#34;: [
@@ -753,6 +805,7 @@
             },
             &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
         });
+        $httpProvider.interceptors.push(sourceMonitoringInterceptor);
     });
 &lt;/script&gt;
 
@@ -765,11 +818,10 @@
         })
     });
 &lt;/script&gt;
-
-        </head>
-        <body>
-        <div ng-app='ods-widgets'>
-            &lt;ods-dataset-context context=&#34;uraniumproduction&#34;
+</head>
+                <body>
+                <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
+&lt;ods-dataset-context context=&#34;uraniumproduction&#34;
                      uraniumproduction-dataset=&#34;uranium-production&#34;
                      uraniumproduction-domain=&#34;userclub&#34;&gt;
     &lt;div ods-aggregation=&#34;aggregation&#34;
@@ -792,17 +844,16 @@
                             auto-start=&#34;true&#34;
                             exec=&#34;from = from &#43; ((aggregation || 0) / nbticks);&#34;&gt;
                     &lt;/ods-timer&gt;
-                    &lt;h2 class=&#34;kpi-title&#34;&gt;{{ from | number:0 }}&lt;/h2&gt;
+                    &lt;p class=&#34;kpi-title&#34;&gt;{{ from | number:0 }}&lt;/p&gt;
                     &lt;p class=&#34;kpi-description&#34;&gt;tons of uranium produced since 2017&lt;/p&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/ods-dataset-context&gt;
-
-        </div>
-        <style type='text/css'>
-            /* KPI Card
+&lt;/div&gt;</div>
+                <style type='text/css'>
+                    /* KPI Card
 ========================================================================== */
 .kpi-card {
     background-color: var(--boxes-background);
@@ -861,55 +912,111 @@
 .ods-button.ods-widget-timer-controller {
     display: none;
 }
-        </style>
-        </body>
-        ">
+                </style>
+                </body>
+              ">
       </iframe>
-    </section>
-
-    <section class="box box-code js-tabs">
-        <nav class="level is-flex">
+      <div class="show-code buttons has-addons">
+          <button class="button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-animated-kpi').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    <div class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
-                    <ul class="buttons has-addons js-tablist">
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-animated-kpi-html-content">
-                                HTML
-                            </a>
-                        </li>
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-animated-kpi-html-content"
+                        >
+                          HTML
+                        </a>
                         
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-animated-kpi-css-content">
-                                CSS
-                            </a>
-                        </li>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-animated-kpi-css-content"
+                        >
+                          CSS
+                        </a>
                         
-                    </ul>
+                    </div>
                 </div>
             </div>
-            <div class="level-right mt-0">
-                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
-                   data-tooltip="Edit on CodePen"
-                   target="_blank"
-                   aria-role="link"
-                   rel="noopener"
-                   title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-animated-kpi').submit()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="feather feather-edit">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
                     </svg>
-                </a>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
             </div>
         </nav>
-
         <div class="tab-content">
             <div class="js-tabcontent"
-                 id="code-animated-kpi-html-content">
+                 id="code-animated-kpi-html-content"
+                 data-clipboard="&lt;ods-dataset-context context=&#34;uraniumproduction&#34;
+                     uraniumproduction-dataset=&#34;uranium-production&#34;
+                     uraniumproduction-domain=&#34;userclub&#34;&gt;
+    &lt;div ods-aggregation=&#34;aggregation&#34;
+         ods-aggregation-context=&#34;uraniumproduction&#34;
+         ods-aggregation-function=&#34;SUM&#34;
+         ods-aggregation-expression=&#34;tonnes_of_uranium&#34;&gt;
+        &lt;div class=&#34;row&#34;&gt;
+            &lt;div class=&#34;col-sm-offset-4 col-sm-4&#34;&gt;
+                &lt;!-- KPI box component --&gt;
+                &lt;div ng-if=&#34;true&#34;
+                     ng-init=&#34;from = 0;
+                              nbticks = 30;
+                              delay = 100;
+                              tick = 0;&#34;
+                     class=&#34;kpi-card&#34;&gt;
+                    &lt;i class=&#34;kpi-icon fa fa-superpowers&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;ods-timer
+                            stop-condition=&#34;from &gt;= aggregation&#34;
+                            delay=&#34;delay&#34;
+                            auto-start=&#34;true&#34;
+                            exec=&#34;from = from &#43; ((aggregation || 0) / nbticks);&#34;&gt;
+                    &lt;/ods-timer&gt;
+                    &lt;p class=&#34;kpi-title&#34;&gt;{{ from | number:0 }}&lt;/p&gt;
+                    &lt;p class=&#34;kpi-description&#34;&gt;tons of uranium produced since 2017&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+"
+                 role="tabpanel">
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;uraniumproduction&#34;
                      uraniumproduction-dataset=&#34;uranium-production&#34;
@@ -934,7 +1041,7 @@
                             auto-start=&#34;true&#34;
                             exec=&#34;from = from &#43; ((aggregation || 0) / nbticks);&#34;&gt;
                     &lt;/ods-timer&gt;
-                    &lt;h2 class=&#34;kpi-title&#34;&gt;{{ from | number:0 }}&lt;/h2&gt;
+                    &lt;p class=&#34;kpi-title&#34;&gt;{{ from | number:0 }}&lt;/p&gt;
                     &lt;p class=&#34;kpi-description&#34;&gt;tons of uranium produced since 2017&lt;/p&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
@@ -946,7 +1053,67 @@
             </div>
             
             <div class="js-tabcontent"
-                 id="code-animated-kpi-css-content">
+                 id="code-animated-kpi-css-content"
+                 data-clipboard="/* KPI Card
+========================================================================== */
+.kpi-card {
+    background-color: var(--boxes-background);
+    height: 100%;
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    max-height: 250px;
+}
+
+.kpi-icon {
+    color: var(--highlight);
+    color: var(--secondary-color);
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.kpi-title {
+    font-weight: normal;
+    color: var(--highlight);
+    font-size: 3.2rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.kpi-description {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 100%;
+}
+
+/* Hide the ods-timer button
+========================================================================== */
+.ods-button.ods-widget-timer-controller {
+    display: none;
+}"
+            >
                 <div class="highlight">
                     <pre class="language-css" data-lang="css"><code>/* KPI Card
 ========================================================================== */
@@ -1011,60 +1178,23 @@
             </div>
             
         </div>
-    </section>
+    </div>
 </div>
 
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-animated-kpi";
-            iframe = document.getElementById(iframeId);
-             
-            size =  null 
-             
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-                if (iframe.height == size) {
-                    clearInterval(loopId);
-                } else {
-                    iframe.height = size > 1 ? size : scrollHeight;
-                }
-            }
-        }, 1000);
-    });
-</script>
-
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-animated-kpi";
-            iframe = document.getElementById(iframeId);
-
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-            }
-        }, 1000);
-    });
-</script>
-
       </div>
-    </div>
+    </article>
     
-    <div class="container">
-      <div class="box box-example">
-        <h2 class="title is-2" id="animated-kpi-with-auto-reload">
-          Animated KPI with auto-reload
-          
-          <a class="is-link anchor" href="#animated-kpi-with-auto-reload">
-            <span class="icon">
-              <img src="/img/fas-link.svg" />
-            </span>
-          </a>
-        </h2>
-        
-        <div class="content">
-          <p>Animate your KPI with <code>ods-timer</code> and add an auto-reload feature.</p>
+    <article class="block">
+      <h2 class="title is-2" id="animated-kpi-with-auto-reload">
+        Animated KPI with auto-reload 
+        <a class="is-link anchor" href="#animated-kpi-with-auto-reload">
+          <span class="icon">
+            <img src="/img/fas-link.svg" />
+          </span>
+        </a>
+      </h2>
+      <div class="content">
+        <p>Animate your KPI with <code>ods-timer</code> and add an auto-reload feature.</p>
 <p>The KPI is computed with <code>ods-aggregation</code>. For more information about how to compute metrics, see <a href="/widget-tricks/ods-aggregation">ods-aggregation resource</a>.</p>
 <p><strong>Animation</strong>: You can change the speed of the animation by changing 2 variables:</p>
 <blockquote>
@@ -1075,15 +1205,22 @@
 </blockquote>
 <p>You change also change the delay between 2 reloads by changing the variable <code>reloadeverynbtick</code>. High value = long delay betweens 2 reloads.</p>
 
-        </div>
+      </div>
+      
+      <div class="box">
         
 
 
-<div class="codepen">
-    
-    
+
+
+
+
     
 
+
+
+
+<div class="codepen">
     <form id="form-animated-kpi-with-auto-reload"
           action="https://codepen.io/pen/define"
           method="POST"
@@ -1091,21 +1228,22 @@
         <input type="hidden"
                name="data"
                value='{
-               "title": "New Pen!",
-               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
-               "editors": 110,
-               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;uraniumproduction\&#34;\n                     uraniumproduction-dataset=\&#34;uranium-production\&#34;\n                     uraniumproduction-domain=\&#34;userclub\&#34;\u003e\n    \u003cdiv ods-aggregation=\&#34;aggregation\&#34;\n         ods-aggregation-context=\&#34;uraniumproduction\&#34;\n         ods-aggregation-function=\&#34;SUM\&#34;\n         ods-aggregation-expression=\&#34;tonnes_of_uranium\&#34;\u003e\n        \u003cdiv class=\&#34;row\&#34;\u003e\n            \u003cdiv class=\&#34;col-sm-offset-4 col-sm-4\&#34;\u003e\n                \u003c!-- KPI box component --\u003e\n                \u003cdiv ng-if=\&#34;true\&#34;\n                     ng-init=\&#34;from = 0;\n                              nbticks = 15;\n                              delay = 100;\n                              tick = 0;\n                              reloadeverynbtick = 100;\&#34;\n                     class=\&#34;kpi-card\&#34;\u003e\n                    {{ to = aggregation ; &#39;&#39;}}\n                    \u003ci class=\&#34;kpi-icon fa fa-superpowers\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                    \u003cods-timer stop-condition=\&#34;\&#34;\n                               delay=\&#34;delay\&#34;\n                               auto-start=\&#34;true\&#34;\n                               exec=\&#34;(from \u003c to ? from = (((from &#43; ((to || 0) / nbticks)) * 100) | math : &#39;round&#39;) / 100 : undefined);\n                                     (tick = tick &#43; 1);\n                                     (tick % reloadeverynbtick == 0 ? from = 0 : undefined); \&#34;\u003e\n                    \u003c/ods-timer\u003e\n                    \u003ch2 class=\&#34;kpi-title\&#34;\u003e{{ from | number : 0 }}\u003c/h2\u003e\n                    \u003cp class=\&#34;kpi-description\&#34;\u003etons of uranium produced since 2017\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
-               "css": &#34;/* KPI Card\n========================================================================== */\n.kpi-card {\n    background-color: var(--boxes-background);\n    height: 100%;\n    padding: 39px;\n    border-radius: 4px;\n    margin-bottom: 20px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -ms-flex-direction: column;\n    flex-direction: column;\n    -webkit-box-align: center;\n    -ms-flex-align: center;\n    align-items: center;\n    text-align: center;\n    -webkit-box-pack: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    text-align: center;\n    max-height: 250px;\n}\n\n.kpi-icon {\n    color: var(--highlight);\n    color: var(--secondary-color);\n    font-size: 4rem;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n\n.kpi-title {\n    font-weight: normal;\n    color: var(--highlight);\n    font-size: 3.2rem;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n\n.kpi-description {\n    color: var(--text);\n    font-size: 1rem;\n    line-height: 1.5;\n    font-weight: normal;\n    margin-top: 0;\n    margin-bottom: 0;\n    max-width: 100%;\n}\n\n/* Hide the ods-timer button\n========================================================================== */\n.ods-button.ods-widget-timer-controller {\n    display: none;\n}&#34; }'>
+                 "title": "New Pen!",
+                 "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    const sourceMonitoringInterceptor = ($q) =\u003e {\n        return {\n            request: (config) =\u003e {\n              config.params \u0026\u0026 (delete config.params.source);\n              return config;\n          }\n        }\n    }\n\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider, $httpProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n        $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+                 "editors": 110,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;uraniumproduction\&#34;\n                     uraniumproduction-dataset=\&#34;uranium-production\&#34;\n                     uraniumproduction-domain=\&#34;userclub\&#34;\u003e\n    \u003cdiv ods-aggregation=\&#34;aggregation\&#34;\n         ods-aggregation-context=\&#34;uraniumproduction\&#34;\n         ods-aggregation-function=\&#34;SUM\&#34;\n         ods-aggregation-expression=\&#34;tonnes_of_uranium\&#34;\u003e\n        \u003cdiv class=\&#34;row\&#34;\u003e\n            \u003cdiv class=\&#34;col-sm-offset-4 col-sm-4\&#34;\u003e\n                \u003c!-- KPI box component --\u003e\n                \u003cdiv ng-if=\&#34;true\&#34;\n                     ng-init=\&#34;from = 0;\n                              nbticks = 15;\n                              delay = 100;\n                              tick = 0;\n                              reloadeverynbtick = 100;\&#34;\n                     class=\&#34;kpi-card\&#34;\u003e\n                    {{ to = aggregation ; &#39;&#39;}}\n                    \u003ci class=\&#34;kpi-icon fa fa-superpowers\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                    \u003cods-timer stop-condition=\&#34;\&#34;\n                               delay=\&#34;delay\&#34;\n                               auto-start=\&#34;true\&#34;\n                               exec=\&#34;(from \u003c to ? from = (((from &#43; ((to || 0) / nbticks)) * 100) | math : &#39;round&#39;) / 100 : undefined);\n                                     (tick = tick &#43; 1);\n                                     (tick % reloadeverynbtick == 0 ? from = 0 : undefined); \&#34;\u003e\n                    \u003c/ods-timer\u003e\n                    \u003cp class=\&#34;kpi-title\&#34;\u003e{{ from | number : 0 }}\u003c/p\u003e\n                    \u003cp class=\&#34;kpi-description\&#34;\u003etons of uranium produced since 2017\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+                 "css": &#34;/* KPI Card\n========================================================================== */\n.kpi-card {\n    background-color: var(--boxes-background);\n    height: 100%;\n    padding: 39px;\n    border-radius: 4px;\n    margin-bottom: 20px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -ms-flex-direction: column;\n    flex-direction: column;\n    -webkit-box-align: center;\n    -ms-flex-align: center;\n    align-items: center;\n    text-align: center;\n    -webkit-box-pack: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    text-align: center;\n    max-height: 250px;\n}\n\n.kpi-icon {\n    color: var(--highlight);\n    color: var(--secondary-color);\n    font-size: 4rem;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n\n.kpi-title {\n    font-weight: normal;\n    color: var(--highlight);\n    font-size: 3.2rem;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n\n.kpi-description {\n    color: var(--text);\n    font-size: 1rem;\n    line-height: 1.5;\n    font-weight: normal;\n    margin-top: 0;\n    margin-bottom: 0;\n    max-width: 100%;\n}\n\n/* Hide the ods-timer button\n========================================================================== */\n.ods-button.ods-widget-timer-controller {\n    display: none;\n}&#34;
+               }'>
     </form>
 </div>
-
 <div class="ods-content">
-    <section class="box box-live-example">
+    <div class="box-live-example"
+      style="height: 320px;">
       <iframe id="iframe-animated-kpi-with-auto-reload"
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
-        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+                <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;&gt;
 
@@ -1116,13 +1254,23 @@
 &lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js&#34;&gt;&lt;/script&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;&gt;&lt;/script&gt;
 
 &lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;&gt;&lt;/script&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {
+    const sourceMonitoringInterceptor = ($q) =&gt; {
+        return {
+            request: (config) =&gt; {
+              config.params &amp;&amp; (delete config.params.source);
+              return config;
+          }
+        }
+    }
+
+    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider, $httpProvider) {
         ODSWidgetsConfigProvider.setConfig({
             &#34;defaultDomain&#34;: &#34;https://userclub.opendatasoft.com/&#34;,
             &#34;basemaps&#34;: [
@@ -1201,6 +1349,7 @@
             },
             &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
         });
+        $httpProvider.interceptors.push(sourceMonitoringInterceptor);
     });
 &lt;/script&gt;
 
@@ -1213,11 +1362,10 @@
         })
     });
 &lt;/script&gt;
-
-        </head>
-        <body>
-        <div ng-app='ods-widgets'>
-            &lt;ods-dataset-context context=&#34;uraniumproduction&#34;
+</head>
+                <body>
+                <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
+&lt;ods-dataset-context context=&#34;uraniumproduction&#34;
                      uraniumproduction-dataset=&#34;uranium-production&#34;
                      uraniumproduction-domain=&#34;userclub&#34;&gt;
     &lt;div ods-aggregation=&#34;aggregation&#34;
@@ -1243,17 +1391,16 @@
                                      (tick = tick &#43; 1);
                                      (tick % reloadeverynbtick == 0 ? from = 0 : undefined); &#34;&gt;
                     &lt;/ods-timer&gt;
-                    &lt;h2 class=&#34;kpi-title&#34;&gt;{{ from | number : 0 }}&lt;/h2&gt;
+                    &lt;p class=&#34;kpi-title&#34;&gt;{{ from | number : 0 }}&lt;/p&gt;
                     &lt;p class=&#34;kpi-description&#34;&gt;tons of uranium produced since 2017&lt;/p&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/ods-dataset-context&gt;
-
-        </div>
-        <style type='text/css'>
-            /* KPI Card
+&lt;/div&gt;</div>
+                <style type='text/css'>
+                    /* KPI Card
 ========================================================================== */
 .kpi-card {
     background-color: var(--boxes-background);
@@ -1312,55 +1459,114 @@
 .ods-button.ods-widget-timer-controller {
     display: none;
 }
-        </style>
-        </body>
-        ">
+                </style>
+                </body>
+              ">
       </iframe>
-    </section>
-
-    <section class="box box-code js-tabs">
-        <nav class="level is-flex">
+      <div class="show-code buttons has-addons">
+          <button class="button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-animated-kpi-with-auto-reload').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    <div class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
-                    <ul class="buttons has-addons js-tablist">
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-animated-kpi-with-auto-reload-html-content">
-                                HTML
-                            </a>
-                        </li>
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-animated-kpi-with-auto-reload-html-content"
+                        >
+                          HTML
+                        </a>
                         
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-animated-kpi-with-auto-reload-css-content">
-                                CSS
-                            </a>
-                        </li>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-animated-kpi-with-auto-reload-css-content"
+                        >
+                          CSS
+                        </a>
                         
-                    </ul>
+                    </div>
                 </div>
             </div>
-            <div class="level-right mt-0">
-                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
-                   data-tooltip="Edit on CodePen"
-                   target="_blank"
-                   aria-role="link"
-                   rel="noopener"
-                   title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-animated-kpi-with-auto-reload').submit()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="feather feather-edit">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
                     </svg>
-                </a>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
             </div>
         </nav>
-
         <div class="tab-content">
             <div class="js-tabcontent"
-                 id="code-animated-kpi-with-auto-reload-html-content">
+                 id="code-animated-kpi-with-auto-reload-html-content"
+                 data-clipboard="&lt;ods-dataset-context context=&#34;uraniumproduction&#34;
+                     uraniumproduction-dataset=&#34;uranium-production&#34;
+                     uraniumproduction-domain=&#34;userclub&#34;&gt;
+    &lt;div ods-aggregation=&#34;aggregation&#34;
+         ods-aggregation-context=&#34;uraniumproduction&#34;
+         ods-aggregation-function=&#34;SUM&#34;
+         ods-aggregation-expression=&#34;tonnes_of_uranium&#34;&gt;
+        &lt;div class=&#34;row&#34;&gt;
+            &lt;div class=&#34;col-sm-offset-4 col-sm-4&#34;&gt;
+                &lt;!-- KPI box component --&gt;
+                &lt;div ng-if=&#34;true&#34;
+                     ng-init=&#34;from = 0;
+                              nbticks = 15;
+                              delay = 100;
+                              tick = 0;
+                              reloadeverynbtick = 100;&#34;
+                     class=&#34;kpi-card&#34;&gt;
+                    {{ to = aggregation ; &#39;&#39;}}
+                    &lt;i class=&#34;kpi-icon fa fa-superpowers&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;ods-timer stop-condition=&#34;&#34;
+                               delay=&#34;delay&#34;
+                               auto-start=&#34;true&#34;
+                               exec=&#34;(from &lt; to ? from = (((from &#43; ((to || 0) / nbticks)) * 100) | math : &#39;round&#39;) / 100 : undefined);
+                                     (tick = tick &#43; 1);
+                                     (tick % reloadeverynbtick == 0 ? from = 0 : undefined); &#34;&gt;
+                    &lt;/ods-timer&gt;
+                    &lt;p class=&#34;kpi-title&#34;&gt;{{ from | number : 0 }}&lt;/p&gt;
+                    &lt;p class=&#34;kpi-description&#34;&gt;tons of uranium produced since 2017&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+"
+                 role="tabpanel">
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;uraniumproduction&#34;
                      uraniumproduction-dataset=&#34;uranium-production&#34;
@@ -1388,7 +1594,7 @@
                                      (tick = tick &#43; 1);
                                      (tick % reloadeverynbtick == 0 ? from = 0 : undefined); &#34;&gt;
                     &lt;/ods-timer&gt;
-                    &lt;h2 class=&#34;kpi-title&#34;&gt;{{ from | number : 0 }}&lt;/h2&gt;
+                    &lt;p class=&#34;kpi-title&#34;&gt;{{ from | number : 0 }}&lt;/p&gt;
                     &lt;p class=&#34;kpi-description&#34;&gt;tons of uranium produced since 2017&lt;/p&gt;
                 &lt;/div&gt;
             &lt;/div&gt;
@@ -1400,7 +1606,67 @@
             </div>
             
             <div class="js-tabcontent"
-                 id="code-animated-kpi-with-auto-reload-css-content">
+                 id="code-animated-kpi-with-auto-reload-css-content"
+                 data-clipboard="/* KPI Card
+========================================================================== */
+.kpi-card {
+    background-color: var(--boxes-background);
+    height: 100%;
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+    max-height: 250px;
+}
+
+.kpi-icon {
+    color: var(--highlight);
+    color: var(--secondary-color);
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.kpi-title {
+    font-weight: normal;
+    color: var(--highlight);
+    font-size: 3.2rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.kpi-description {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 100%;
+}
+
+/* Hide the ods-timer button
+========================================================================== */
+.ods-button.ods-widget-timer-controller {
+    display: none;
+}"
+            >
                 <div class="highlight">
                     <pre class="language-css" data-lang="css"><code>/* KPI Card
 ========================================================================== */
@@ -1465,72 +1731,42 @@
             </div>
             
         </div>
-    </section>
+    </div>
 </div>
 
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-animated-kpi-with-auto-reload";
-            iframe = document.getElementById(iframeId);
-             
-            size =  null 
-             
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-                if (iframe.height == size) {
-                    clearInterval(loopId);
-                } else {
-                    iframe.height = size > 1 ? size : scrollHeight;
-                }
-            }
-        }, 1000);
-    });
-</script>
-
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-animated-kpi-with-auto-reload";
-            iframe = document.getElementById(iframeId);
-
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-            }
-        }, 1000);
-    });
-</script>
-
       </div>
-    </div>
+    </article>
     
-    <div class="container">
-      <div class="box box-example">
-        <h2 class="title is-2" id="animated-kpi-with-a-gauge">
-          Animated KPI with a gauge
-          
-          <a class="is-link anchor" href="#animated-kpi-with-a-gauge">
-            <span class="icon">
-              <img src="/img/fas-link.svg" />
-            </span>
-          </a>
-        </h2>
-        
-        <div class="content">
-          <p>Animate your percentage KPI with <code>ods-gauge</code>.
+    <article class="block">
+      <h2 class="title is-2" id="animated-kpi-with-a-gauge">
+        Animated KPI with a gauge 
+        <a class="is-link anchor" href="#animated-kpi-with-a-gauge">
+          <span class="icon">
+            <img src="/img/fas-link.svg" />
+          </span>
+        </a>
+      </h2>
+      <div class="content">
+        <p>Animate your percentage KPI with <code>ods-gauge</code>.
 The percentage is computed with 2 <code>ods-aggregation</code> : one for value, and one for the max. For more information about how to compute metrics, see <a href="/widget-tricks/ods-aggregation">ods-aggregation resource</a>.</p>
 <p>These 2 aggregations are then used in <code>ods-gauge</code>, in 2 parameters : <strong>value</strong> and <strong>max</strong>.</p>
 
-        </div>
+      </div>
+      
+      <div class="box">
         
 
 
-<div class="codepen">
-    
-    
+
+
+
+
     
 
+
+
+
+<div class="codepen">
     <form id="form-animated-kpi-with-a-gauge"
           action="https://codepen.io/pen/define"
           method="POST"
@@ -1538,21 +1774,22 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
         <input type="hidden"
                name="data"
                value='{
-               "title": "New Pen!",
-               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
-               "editors": 110,
-               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;uraniumproduction,uraniumproductionfrance\&#34;\n                     uraniumproduction-dataset=\&#34;uranium-production\&#34;\n                     uraniumproduction-domain=\&#34;userclub\&#34;\n                     uraniumproductionfrance-dataset=\&#34;uranium-production\&#34;\n                     uraniumproductionfrance-domain=\&#34;userclub\&#34;\n                     uraniumproductionfrance-parameters=\&#34;{&#39;refine.country&#39;:&#39;Kazakhstan&#39;}\&#34;\u003e\n    \u003cdiv ods-aggregation=\&#34;sum,sumkazakhstan\&#34;\n         ods-aggregation-sum-context=\&#34;uraniumproduction\&#34;\n         ods-aggregation-sum-function=\&#34;SUM\&#34;\n         ods-aggregation-sum-expression=\&#34;tonnes_of_uranium\&#34;\n         ods-aggregation-sumkazakhstan-context=\&#34;uraniumproductionfrance\&#34;\n         ods-aggregation-sumkazakhstan-function=\&#34;SUM\&#34;\n         ods-aggregation-sumkazakhstan-expression=\&#34;tonnes_of_uranium\&#34;\u003e\n        \u003cdiv class=\&#34;row row-equal-height\&#34;\u003e\n            \u003cdiv class=\&#34;col-sm-offset-4 col-sm-4\&#34;\u003e\n                \u003c!-- KPI box component --\u003e\n                \u003cdiv class=\&#34;kpi-card kpi-animated\&#34;\u003e\n                    \u003cods-gauge display-mode=\&#34;circle\&#34; value=\&#34;sumkazakhstan\&#34; max=\&#34;sum\&#34;\u003e\n                    \u003c/ods-gauge\u003e\n                    \u003cp class=\&#34;kpi-description\&#34;\u003e% of Uranium production in Kazakhstan\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
-               "css": &#34;/* Variables \u0026 Shared classes\n========================================================================== */\n.row-equal-height {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-wrap: wrap;\n    flex-wrap: wrap;\n    margin-bottom: 20px;\n}\n\n/* Fix for early content wrapping in Safari*/\n.row-equal-height:before,\n.row-equal-height:after {\n    content: normal;\n}\n\n/* KPI Card\n========================================================================== */\n.kpi-card {\n    background-color: var(--boxes-background);\n    height: 100%;\n    padding: 39px;\n    border-radius: 4px;\n    margin-bottom: 20px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -ms-flex-direction: column;\n    flex-direction: column;\n    -webkit-box-align: center;\n    -ms-flex-align: center;\n    align-items: center;\n    text-align: center;\n    -webkit-box-pack: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    text-align: center;\n}\n\n.kpi-icon {\n    color: var(--highlight);\n    color: var(--secondary-color);\n    font-size: 4rem;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n\n.kpi-title {\n    font-weight: normal;\n    color: var(--highlight);\n    font-size: 3.2rem;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n\n.kpi-description {\n    color: var(--text);\n    font-size: 1rem;\n    line-height: 1.5;\n    font-weight: normal;\n    margin-top: 0;\n    margin-bottom: 0;\n    max-width: 100%;\n}\n\n/* Hide the ods-timer button\n========================================================================== */\n.ods-button.ods-widget-timer-controller {\n    display: none;\n}\n\n/* ODS-Gauge\n========================================================================== */\n.odswidget-gauge--circle .odswidget-gauge__svg {\n    -webkit-transform: rotate(\n            -90deg\n    );\n    transform: rotate(\n            -90deg\n    );\n    height: 100%;\n}\n\n.kpi-animated .odswidget-gauge__svg-filler {\n    fill: none;\n    stroke-width: 8px;\n    stroke: var(--highlight);\n    -webkit-transition: stroke-dasharray 0.1s;\n    transition: stroke-dasharray 0.1s;\n}\n\n.odswidget-gauge {\n    display: flex;\n    height: 100%;\n    width: 100%;\n}&#34; }'>
+                 "title": "New Pen!",
+                 "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    const sourceMonitoringInterceptor = ($q) =\u003e {\n        return {\n            request: (config) =\u003e {\n              config.params \u0026\u0026 (delete config.params.source);\n              return config;\n          }\n        }\n    }\n\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider, $httpProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n        $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+                 "editors": 110,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;uraniumproduction,uraniumproductionfrance\&#34;\n                     uraniumproduction-dataset=\&#34;uranium-production\&#34;\n                     uraniumproduction-domain=\&#34;userclub\&#34;\n                     uraniumproductionfrance-dataset=\&#34;uranium-production\&#34;\n                     uraniumproductionfrance-domain=\&#34;userclub\&#34;\n                     uraniumproductionfrance-parameters=\&#34;{&#39;refine.country&#39;:&#39;Kazakhstan&#39;}\&#34;\u003e\n    \u003cdiv ods-aggregation=\&#34;sum,sumkazakhstan\&#34;\n         ods-aggregation-sum-context=\&#34;uraniumproduction\&#34;\n         ods-aggregation-sum-function=\&#34;SUM\&#34;\n         ods-aggregation-sum-expression=\&#34;tonnes_of_uranium\&#34;\n         ods-aggregation-sumkazakhstan-context=\&#34;uraniumproductionfrance\&#34;\n         ods-aggregation-sumkazakhstan-function=\&#34;SUM\&#34;\n         ods-aggregation-sumkazakhstan-expression=\&#34;tonnes_of_uranium\&#34;\u003e\n        \u003cdiv class=\&#34;row row-equal-height\&#34;\u003e\n            \u003cdiv class=\&#34;col-sm-offset-4 col-sm-4\&#34;\u003e\n                \u003c!-- KPI box component --\u003e\n                \u003cdiv class=\&#34;kpi-card kpi-animated\&#34;\u003e\n                    \u003cods-gauge display-mode=\&#34;circle\&#34; value=\&#34;sumkazakhstan\&#34; max=\&#34;sum\&#34;\u003e\n                    \u003c/ods-gauge\u003e\n                    \u003cp class=\&#34;kpi-description\&#34;\u003e% of Uranium production in Kazakhstan\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+                 "css": &#34;/* Variables \u0026 Shared classes\n========================================================================== */\n.row-equal-height {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-wrap: wrap;\n    flex-wrap: wrap;\n    margin-bottom: 20px;\n}\n\n/* Fix for early content wrapping in Safari*/\n.row-equal-height:before,\n.row-equal-height:after {\n    content: normal;\n}\n\n/* KPI Card\n========================================================================== */\n.kpi-card {\n    background-color: var(--boxes-background);\n    height: 100%;\n    padding: 39px;\n    border-radius: 4px;\n    margin-bottom: 20px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -ms-flex-direction: column;\n    flex-direction: column;\n    -webkit-box-align: center;\n    -ms-flex-align: center;\n    align-items: center;\n    text-align: center;\n    -webkit-box-pack: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    text-align: center;\n}\n\n.kpi-icon {\n    color: var(--highlight);\n    color: var(--secondary-color);\n    font-size: 4rem;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n\n.kpi-title {\n    font-weight: normal;\n    color: var(--highlight);\n    font-size: 3.2rem;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n\n.kpi-description {\n    color: var(--text);\n    font-size: 1rem;\n    line-height: 1.5;\n    font-weight: normal;\n    margin-top: 0;\n    margin-bottom: 0;\n    max-width: 100%;\n}\n\n/* Hide the ods-timer button\n========================================================================== */\n.ods-button.ods-widget-timer-controller {\n    display: none;\n}\n\n/* ODS-Gauge\n========================================================================== */\n.odswidget-gauge--circle .odswidget-gauge__svg {\n    -webkit-transform: rotate(\n            -90deg\n    );\n    transform: rotate(\n            -90deg\n    );\n    height: 100%;\n}\n\n.kpi-animated .odswidget-gauge__svg-filler {\n    fill: none;\n    stroke-width: 8px;\n    stroke: var(--highlight);\n    -webkit-transition: stroke-dasharray 0.1s;\n    transition: stroke-dasharray 0.1s;\n}\n\n.odswidget-gauge {\n    display: flex;\n    height: 100%;\n    width: 100%;\n}&#34;
+               }'>
     </form>
 </div>
-
 <div class="ods-content">
-    <section class="box box-live-example">
+    <div class="box-live-example"
+      style="height: 460px;">
       <iframe id="iframe-animated-kpi-with-a-gauge"
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
-        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+                <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;&gt;
 
@@ -1563,13 +1800,23 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
 &lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js&#34;&gt;&lt;/script&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;&gt;&lt;/script&gt;
 
 &lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;&gt;&lt;/script&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {
+    const sourceMonitoringInterceptor = ($q) =&gt; {
+        return {
+            request: (config) =&gt; {
+              config.params &amp;&amp; (delete config.params.source);
+              return config;
+          }
+        }
+    }
+
+    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider, $httpProvider) {
         ODSWidgetsConfigProvider.setConfig({
             &#34;defaultDomain&#34;: &#34;https://userclub.opendatasoft.com/&#34;,
             &#34;basemaps&#34;: [
@@ -1648,6 +1895,7 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
             },
             &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
         });
+        $httpProvider.interceptors.push(sourceMonitoringInterceptor);
     });
 &lt;/script&gt;
 
@@ -1660,11 +1908,10 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
         })
     });
 &lt;/script&gt;
-
-        </head>
-        <body>
-        <div ng-app='ods-widgets'>
-            &lt;ods-dataset-context context=&#34;uraniumproduction,uraniumproductionfrance&#34;
+</head>
+                <body>
+                <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
+&lt;ods-dataset-context context=&#34;uraniumproduction,uraniumproductionfrance&#34;
                      uraniumproduction-dataset=&#34;uranium-production&#34;
                      uraniumproduction-domain=&#34;userclub&#34;
                      uraniumproductionfrance-dataset=&#34;uranium-production&#34;
@@ -1689,10 +1936,9 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/ods-dataset-context&gt;
-
-        </div>
-        <style type='text/css'>
-            /* Variables &amp; Shared classes
+&lt;/div&gt;</div>
+                <style type='text/css'>
+                    /* Variables &amp; Shared classes
 ========================================================================== */
 .row-equal-height {
     display: -webkit-box;
@@ -1793,55 +2039,106 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
     height: 100%;
     width: 100%;
 }
-        </style>
-        </body>
-        ">
+                </style>
+                </body>
+              ">
       </iframe>
-    </section>
-
-    <section class="box box-code js-tabs">
-        <nav class="level is-flex">
+      <div class="show-code buttons has-addons">
+          <button class="button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-animated-kpi-with-a-gauge').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    <div class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
-                    <ul class="buttons has-addons js-tablist">
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-animated-kpi-with-a-gauge-html-content">
-                                HTML
-                            </a>
-                        </li>
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-animated-kpi-with-a-gauge-html-content"
+                        >
+                          HTML
+                        </a>
                         
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-animated-kpi-with-a-gauge-css-content">
-                                CSS
-                            </a>
-                        </li>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-animated-kpi-with-a-gauge-css-content"
+                        >
+                          CSS
+                        </a>
                         
-                    </ul>
+                    </div>
                 </div>
             </div>
-            <div class="level-right mt-0">
-                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
-                   data-tooltip="Edit on CodePen"
-                   target="_blank"
-                   aria-role="link"
-                   rel="noopener"
-                   title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-animated-kpi-with-a-gauge').submit()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="feather feather-edit">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
                     </svg>
-                </a>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
             </div>
         </nav>
-
         <div class="tab-content">
             <div class="js-tabcontent"
-                 id="code-animated-kpi-with-a-gauge-html-content">
+                 id="code-animated-kpi-with-a-gauge-html-content"
+                 data-clipboard="&lt;ods-dataset-context context=&#34;uraniumproduction,uraniumproductionfrance&#34;
+                     uraniumproduction-dataset=&#34;uranium-production&#34;
+                     uraniumproduction-domain=&#34;userclub&#34;
+                     uraniumproductionfrance-dataset=&#34;uranium-production&#34;
+                     uraniumproductionfrance-domain=&#34;userclub&#34;
+                     uraniumproductionfrance-parameters=&#34;{&#39;refine.country&#39;:&#39;Kazakhstan&#39;}&#34;&gt;
+    &lt;div ods-aggregation=&#34;sum,sumkazakhstan&#34;
+         ods-aggregation-sum-context=&#34;uraniumproduction&#34;
+         ods-aggregation-sum-function=&#34;SUM&#34;
+         ods-aggregation-sum-expression=&#34;tonnes_of_uranium&#34;
+         ods-aggregation-sumkazakhstan-context=&#34;uraniumproductionfrance&#34;
+         ods-aggregation-sumkazakhstan-function=&#34;SUM&#34;
+         ods-aggregation-sumkazakhstan-expression=&#34;tonnes_of_uranium&#34;&gt;
+        &lt;div class=&#34;row row-equal-height&#34;&gt;
+            &lt;div class=&#34;col-sm-offset-4 col-sm-4&#34;&gt;
+                &lt;!-- KPI box component --&gt;
+                &lt;div class=&#34;kpi-card kpi-animated&#34;&gt;
+                    &lt;ods-gauge display-mode=&#34;circle&#34; value=&#34;sumkazakhstan&#34; max=&#34;sum&#34;&gt;
+                    &lt;/ods-gauge&gt;
+                    &lt;p class=&#34;kpi-description&#34;&gt;% of Uranium production in Kazakhstan&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+"
+                 role="tabpanel">
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;uraniumproduction,uraniumproductionfrance&#34;
                      uraniumproduction-dataset=&#34;uranium-production&#34;
@@ -1873,7 +2170,109 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
             </div>
             
             <div class="js-tabcontent"
-                 id="code-animated-kpi-with-a-gauge-css-content">
+                 id="code-animated-kpi-with-a-gauge-css-content"
+                 data-clipboard="/* Variables &amp; Shared classes
+========================================================================== */
+.row-equal-height {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+/* Fix for early content wrapping in Safari*/
+.row-equal-height:before,
+.row-equal-height:after {
+    content: normal;
+}
+
+/* KPI Card
+========================================================================== */
+.kpi-card {
+    background-color: var(--boxes-background);
+    height: 100%;
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.kpi-icon {
+    color: var(--highlight);
+    color: var(--secondary-color);
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.kpi-title {
+    font-weight: normal;
+    color: var(--highlight);
+    font-size: 3.2rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.kpi-description {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 100%;
+}
+
+/* Hide the ods-timer button
+========================================================================== */
+.ods-button.ods-widget-timer-controller {
+    display: none;
+}
+
+/* ODS-Gauge
+========================================================================== */
+.odswidget-gauge--circle .odswidget-gauge__svg {
+    -webkit-transform: rotate(
+            -90deg
+    );
+    transform: rotate(
+            -90deg
+    );
+    height: 100%;
+}
+
+.kpi-animated .odswidget-gauge__svg-filler {
+    fill: none;
+    stroke-width: 8px;
+    stroke: var(--highlight);
+    -webkit-transition: stroke-dasharray 0.1s;
+    transition: stroke-dasharray 0.1s;
+}
+
+.odswidget-gauge {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}"
+            >
                 <div class="highlight">
                     <pre class="language-css" data-lang="css"><code>/* Variables &amp; Shared classes
 ========================================================================== */
@@ -1980,60 +2379,23 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
             </div>
             
         </div>
-    </section>
+    </div>
 </div>
 
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-animated-kpi-with-a-gauge";
-            iframe = document.getElementById(iframeId);
-             
-            size =  null 
-             
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-                if (iframe.height == size) {
-                    clearInterval(loopId);
-                } else {
-                    iframe.height = size > 1 ? size : scrollHeight;
-                }
-            }
-        }, 1000);
-    });
-</script>
-
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-animated-kpi-with-a-gauge";
-            iframe = document.getElementById(iframeId);
-
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-            }
-        }, 1000);
-    });
-</script>
-
       </div>
-    </div>
+    </article>
     
-    <div class="container">
-      <div class="box box-example">
-        <h2 class="title is-2" id="animated-kpi-with-a-gauge-and-auto-reload">
-          Animated KPI with a gauge and auto-reload
-          
-          <a class="is-link anchor" href="#animated-kpi-with-a-gauge-and-auto-reload">
-            <span class="icon">
-              <img src="/img/fas-link.svg" />
-            </span>
-          </a>
-        </h2>
-        
-        <div class="content">
-          <p>Animate your percentage KPI with <code>ods-gauge</code> and add an auto-reload feature.</p>
+    <article class="block">
+      <h2 class="title is-2" id="animated-kpi-with-a-gauge-and-auto-reload">
+        Animated KPI with a gauge and auto-reload 
+        <a class="is-link anchor" href="#animated-kpi-with-a-gauge-and-auto-reload">
+          <span class="icon">
+            <img src="/img/fas-link.svg" />
+          </span>
+        </a>
+      </h2>
+      <div class="content">
+        <p>Animate your percentage KPI with <code>ods-gauge</code> and add an auto-reload feature.</p>
 <p>The percentage is computed with 2 <code>ods-aggregation</code> : one for value, and one for the max. For more information about how to compute metrics, see <a href="/widget-tricks/ods-aggregation">ods-aggregation resource</a>.</p>
 <p>These 2 aggregations are used in an AngularJS expression line 28 to set the value and the max of <code>ods-gauge</code> filled in by <code>ods-timer</code>.</p>
 <p><strong>Animation</strong>: You can change the speed of the animation by changing 2 variables:</p>
@@ -2045,15 +2407,22 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
 </blockquote>
 <p>You change also change the delay between 2 reloads by changing the variable <code>reloadeverynbtick</code>. High value = long delay betweens 2 reloads.</p>
 
-        </div>
+      </div>
+      
+      <div class="box">
         
 
 
-<div class="codepen">
-    
-    
+
+
+
+
     
 
+
+
+
+<div class="codepen">
     <form id="form-animated-kpi-with-a-gauge-and-auto-reload"
           action="https://codepen.io/pen/define"
           method="POST"
@@ -2061,21 +2430,22 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
         <input type="hidden"
                name="data"
                value='{
-               "title": "New Pen!",
-               "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
-               "editors": 110,
-               "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;uraniumproduction,uraniumproductionfrance\&#34;\n                     uraniumproduction-dataset=\&#34;uranium-production\&#34;\n                     uraniumproduction-domain=\&#34;userclub\&#34;\n                     uraniumproductionfrance-dataset=\&#34;uranium-production\&#34;\n                     uraniumproductionfrance-domain=\&#34;userclub\&#34;\n                     uraniumproductionfrance-parameters=\&#34;{&#39;refine.country&#39;:&#39;Kazakhstan&#39;}\&#34;\u003e\n    \u003cdiv ods-aggregation=\&#34;sum,sumkazakhstan\&#34;\n         ods-aggregation-sum-context=\&#34;uraniumproduction\&#34;\n         ods-aggregation-sum-function=\&#34;SUM\&#34;\n         ods-aggregation-sum-expression=\&#34;tonnes_of_uranium\&#34;\n         ods-aggregation-sumkazakhstan-context=\&#34;uraniumproductionfrance\&#34;\n         ods-aggregation-sumkazakhstan-function=\&#34;SUM\&#34;\n         ods-aggregation-sumkazakhstan-expression=\&#34;tonnes_of_uranium\&#34;\u003e\n        \u003cdiv class=\&#34;row row-equal-height\&#34;\u003e\n            \u003cdiv class=\&#34;col-sm-offset-4 col-sm-4\&#34;\u003e\n                \u003c!-- KPI box component --\u003e\n                \u003cdiv ng-if=\&#34;true\&#34;\n                     class=\&#34;kpi-card kpi-animated\&#34;\n                     ng-init=\&#34;from = 0;\n                              nbticks = 30;\n                              delay = 100;\n                              tick = 0;\n                              reloadeverynbtick = 100;\&#34;\u003e\n                    {{ to = sumkazakhstan ; &#39;&#39;}} {{ max = sum ; &#39;&#39; }}\n                    \u003cods-timer stop-condition=\&#34;\&#34;\n                               delay=\&#34;delay\&#34;\n                               auto-start=\&#34;true\&#34;\n                               exec=\&#34;(from \u003c to ? from = ((((from &#43; ((to || 0) / nbticks)) * 100) | math : &#39;round&#39;) / 100 | min : to) : undefined);\n                                     (tick = tick &#43; 1);\n                                     (tick % reloadeverynbtick == 0 ? from = 0 : undefined); \&#34;\u003e\n                    \u003c/ods-timer\u003e\n                    \u003cods-gauge display-mode=\&#34;circle\&#34; value=\&#34;from\&#34; max=\&#34;max\&#34;\u003e\u003c/ods-gauge\u003e\n                    \u003cp class=\&#34;kpi-description\&#34;\u003e\n                        {{ from | number : 0 }} tons of Uranium produced in Kazakhstan (out of {{ max |\n                        number }} in total)\n                    \u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
-               "css": &#34;/* Variables \u0026 Shared classes\n========================================================================== */\n.row-equal-height {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-wrap: wrap;\n    flex-wrap: wrap;\n    margin-bottom: 20px;\n}\n\n/* Fix for early content wrapping in Safari*/\n.row-equal-height:before,\n.row-equal-height:after {\n    content: normal;\n}\n\n/* KPI Card\n========================================================================== */\n.kpi-card {\n    background-color: var(--boxes-background);\n    height: 100%;\n    padding: 39px;\n    border-radius: 4px;\n    margin-bottom: 20px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -ms-flex-direction: column;\n    flex-direction: column;\n    -webkit-box-align: center;\n    -ms-flex-align: center;\n    align-items: center;\n    text-align: center;\n    -webkit-box-pack: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    text-align: center;\n}\n\n.kpi-icon {\n    color: var(--highlight);\n    color: var(--secondary-color);\n    font-size: 4rem;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n\n.kpi-title {\n    font-weight: normal;\n    color: var(--highlight);\n    font-size: 3.2rem;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n\n.kpi-description {\n    color: var(--text);\n    font-size: 1rem;\n    line-height: 1.5;\n    font-weight: normal;\n    margin-top: 0;\n    margin-bottom: 0;\n    max-width: 100%;\n}\n\n/* Hide the ods-timer button\n========================================================================== */\n.ods-button.ods-widget-timer-controller {\n    display: none;\n}\n\n/* ODS-Gauge\n========================================================================== */\n.odswidget-gauge--circle .odswidget-gauge__svg {\n    -webkit-transform: rotate(\n            -90deg\n    );\n    transform: rotate(\n            -90deg\n    );\n    height: 100%;\n}\n\n.kpi-animated .odswidget-gauge__svg-filler {\n    fill: none;\n    stroke-width: 8px;\n    stroke: var(--highlight);\n    -webkit-transition: stroke-dasharray 0.1s;\n    transition: stroke-dasharray 0.1s;\n}\n\n.odswidget-gauge {\n    display: flex;\n    height: 100%;\n    width: 100%;\n}&#34; }'>
+                 "title": "New Pen!",
+                 "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    const sourceMonitoringInterceptor = ($q) =\u003e {\n        return {\n            request: (config) =\u003e {\n              config.params \u0026\u0026 (delete config.params.source);\n              return config;\n          }\n        }\n    }\n\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider, $httpProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n        $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+                 "editors": 110,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;uraniumproduction,uraniumproductionfrance\&#34;\n                     uraniumproduction-dataset=\&#34;uranium-production\&#34;\n                     uraniumproduction-domain=\&#34;userclub\&#34;\n                     uraniumproductionfrance-dataset=\&#34;uranium-production\&#34;\n                     uraniumproductionfrance-domain=\&#34;userclub\&#34;\n                     uraniumproductionfrance-parameters=\&#34;{&#39;refine.country&#39;:&#39;Kazakhstan&#39;}\&#34;\u003e\n    \u003cdiv ods-aggregation=\&#34;sum,sumkazakhstan\&#34;\n         ods-aggregation-sum-context=\&#34;uraniumproduction\&#34;\n         ods-aggregation-sum-function=\&#34;SUM\&#34;\n         ods-aggregation-sum-expression=\&#34;tonnes_of_uranium\&#34;\n         ods-aggregation-sumkazakhstan-context=\&#34;uraniumproductionfrance\&#34;\n         ods-aggregation-sumkazakhstan-function=\&#34;SUM\&#34;\n         ods-aggregation-sumkazakhstan-expression=\&#34;tonnes_of_uranium\&#34;\u003e\n        \u003cdiv class=\&#34;row row-equal-height\&#34;\u003e\n            \u003cdiv class=\&#34;col-sm-offset-4 col-sm-4\&#34;\u003e\n                \u003c!-- KPI box component --\u003e\n                \u003cdiv ng-if=\&#34;true\&#34;\n                     class=\&#34;kpi-card kpi-animated\&#34;\n                     ng-init=\&#34;from = 0;\n                              nbticks = 30;\n                              delay = 100;\n                              tick = 0;\n                              reloadeverynbtick = 100;\&#34;\u003e\n                    {{ to = sumkazakhstan ; &#39;&#39;}} {{ max = sum ; &#39;&#39; }}\n                    \u003cods-timer stop-condition=\&#34;\&#34;\n                               delay=\&#34;delay\&#34;\n                               auto-start=\&#34;true\&#34;\n                               exec=\&#34;(from \u003c to ? from = ((((from &#43; ((to || 0) / nbticks)) * 100) | math : &#39;round&#39;) / 100 | min : to) : undefined);\n                                     (tick = tick &#43; 1);\n                                     (tick % reloadeverynbtick == 0 ? from = 0 : undefined); \&#34;\u003e\n                    \u003c/ods-timer\u003e\n                    \u003cods-gauge display-mode=\&#34;circle\&#34; value=\&#34;from\&#34; max=\&#34;max\&#34;\u003e\u003c/ods-gauge\u003e\n                    \u003cp class=\&#34;kpi-description\&#34;\u003e\n                        {{ from | number : 0 }} tons of Uranium produced in Kazakhstan (out of {{ max |\n                        number }} in total)\n                    \u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+                 "css": &#34;/* Variables \u0026 Shared classes\n========================================================================== */\n.row-equal-height {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-wrap: wrap;\n    flex-wrap: wrap;\n    margin-bottom: 20px;\n}\n\n/* Fix for early content wrapping in Safari*/\n.row-equal-height:before,\n.row-equal-height:after {\n    content: normal;\n}\n\n/* KPI Card\n========================================================================== */\n.kpi-card {\n    background-color: var(--boxes-background);\n    height: 100%;\n    padding: 39px;\n    border-radius: 4px;\n    margin-bottom: 20px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -ms-flex-direction: column;\n    flex-direction: column;\n    -webkit-box-align: center;\n    -ms-flex-align: center;\n    align-items: center;\n    text-align: center;\n    -webkit-box-pack: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    text-align: center;\n}\n\n.kpi-icon {\n    color: var(--highlight);\n    color: var(--secondary-color);\n    font-size: 4rem;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n\n.kpi-title {\n    font-weight: normal;\n    color: var(--highlight);\n    font-size: 3.2rem;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n\n.kpi-description {\n    color: var(--text);\n    font-size: 1rem;\n    line-height: 1.5;\n    font-weight: normal;\n    margin-top: 0;\n    margin-bottom: 0;\n    max-width: 100%;\n}\n\n/* Hide the ods-timer button\n========================================================================== */\n.ods-button.ods-widget-timer-controller {\n    display: none;\n}\n\n/* ODS-Gauge\n========================================================================== */\n.odswidget-gauge--circle .odswidget-gauge__svg {\n    -webkit-transform: rotate(\n            -90deg\n    );\n    transform: rotate(\n            -90deg\n    );\n    height: 100%;\n}\n\n.kpi-animated .odswidget-gauge__svg-filler {\n    fill: none;\n    stroke-width: 8px;\n    stroke: var(--highlight);\n    -webkit-transition: stroke-dasharray 0.1s;\n    transition: stroke-dasharray 0.1s;\n}\n\n.odswidget-gauge {\n    display: flex;\n    height: 100%;\n    width: 100%;\n}&#34;
+               }'>
     </form>
 </div>
-
 <div class="ods-content">
-    <section class="box box-live-example">
+    <div class="box-live-example"
+      style="height: 460px;">
       <iframe id="iframe-animated-kpi-with-a-gauge-and-auto-reload"
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
-        <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+                <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
 &lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;&gt;
 
@@ -2086,13 +2456,23 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
 &lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
 &lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js&#34;&gt;&lt;/script&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;&gt;&lt;/script&gt;
 
 &lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;&gt;&lt;/script&gt;
 &lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
 
 &lt;script type=&#34;text/javascript&#34;&gt;
-    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider) {
+    const sourceMonitoringInterceptor = ($q) =&gt; {
+        return {
+            request: (config) =&gt; {
+              config.params &amp;&amp; (delete config.params.source);
+              return config;
+          }
+        }
+    }
+
+    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider, $httpProvider) {
         ODSWidgetsConfigProvider.setConfig({
             &#34;defaultDomain&#34;: &#34;https://userclub.opendatasoft.com/&#34;,
             &#34;basemaps&#34;: [
@@ -2171,6 +2551,7 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
             },
             &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
         });
+        $httpProvider.interceptors.push(sourceMonitoringInterceptor);
     });
 &lt;/script&gt;
 
@@ -2183,11 +2564,10 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
         })
     });
 &lt;/script&gt;
-
-        </head>
-        <body>
-        <div ng-app='ods-widgets'>
-            &lt;ods-dataset-context context=&#34;uraniumproduction,uraniumproductionfrance&#34;
+</head>
+                <body>
+                <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
+&lt;ods-dataset-context context=&#34;uraniumproduction,uraniumproductionfrance&#34;
                      uraniumproduction-dataset=&#34;uranium-production&#34;
                      uraniumproduction-domain=&#34;userclub&#34;
                      uraniumproductionfrance-dataset=&#34;uranium-production&#34;
@@ -2228,10 +2608,9 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
         &lt;/div&gt;
     &lt;/div&gt;
 &lt;/ods-dataset-context&gt;
-
-        </div>
-        <style type='text/css'>
-            /* Variables &amp; Shared classes
+&lt;/div&gt;</div>
+                <style type='text/css'>
+                    /* Variables &amp; Shared classes
 ========================================================================== */
 .row-equal-height {
     display: -webkit-box;
@@ -2332,55 +2711,122 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
     height: 100%;
     width: 100%;
 }
-        </style>
-        </body>
-        ">
+                </style>
+                </body>
+              ">
       </iframe>
-    </section>
-
-    <section class="box box-code js-tabs">
-        <nav class="level is-flex">
+      <div class="show-code buttons has-addons">
+          <button class="button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-animated-kpi-with-a-gauge-and-auto-reload').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    <div class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
-                    <ul class="buttons has-addons js-tablist">
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-animated-kpi-with-a-gauge-and-auto-reload-html-content">
-                                HTML
-                            </a>
-                        </li>
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-animated-kpi-with-a-gauge-and-auto-reload-html-content"
+                        >
+                          HTML
+                        </a>
                         
-                        <li class="button is-secondary is-outlined js-tablist__item">
-                            <a class="js-tablist__link"
-                               href="#code-animated-kpi-with-a-gauge-and-auto-reload-css-content">
-                                CSS
-                            </a>
-                        </li>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-animated-kpi-with-a-gauge-and-auto-reload-css-content"
+                        >
+                          CSS
+                        </a>
                         
-                    </ul>
+                    </div>
                 </div>
             </div>
-            <div class="level-right mt-0">
-                <a class="button is-secondary is-outlined edit-on-codepen has-tooltip-left"
-                   data-tooltip="Edit on CodePen"
-                   target="_blank"
-                   aria-role="link"
-                   rel="noopener"
-                   title="Edit on CodePen, open a new tab"
-                   onclick="document.getElementById('form-animated-kpi-with-a-gauge-and-auto-reload').submit()">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                         stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                         class="feather feather-edit">
-                        <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path>
-                        <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
                     </svg>
-                </a>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
             </div>
         </nav>
-
         <div class="tab-content">
             <div class="js-tabcontent"
-                 id="code-animated-kpi-with-a-gauge-and-auto-reload-html-content">
+                 id="code-animated-kpi-with-a-gauge-and-auto-reload-html-content"
+                 data-clipboard="&lt;ods-dataset-context context=&#34;uraniumproduction,uraniumproductionfrance&#34;
+                     uraniumproduction-dataset=&#34;uranium-production&#34;
+                     uraniumproduction-domain=&#34;userclub&#34;
+                     uraniumproductionfrance-dataset=&#34;uranium-production&#34;
+                     uraniumproductionfrance-domain=&#34;userclub&#34;
+                     uraniumproductionfrance-parameters=&#34;{&#39;refine.country&#39;:&#39;Kazakhstan&#39;}&#34;&gt;
+    &lt;div ods-aggregation=&#34;sum,sumkazakhstan&#34;
+         ods-aggregation-sum-context=&#34;uraniumproduction&#34;
+         ods-aggregation-sum-function=&#34;SUM&#34;
+         ods-aggregation-sum-expression=&#34;tonnes_of_uranium&#34;
+         ods-aggregation-sumkazakhstan-context=&#34;uraniumproductionfrance&#34;
+         ods-aggregation-sumkazakhstan-function=&#34;SUM&#34;
+         ods-aggregation-sumkazakhstan-expression=&#34;tonnes_of_uranium&#34;&gt;
+        &lt;div class=&#34;row row-equal-height&#34;&gt;
+            &lt;div class=&#34;col-sm-offset-4 col-sm-4&#34;&gt;
+                &lt;!-- KPI box component --&gt;
+                &lt;div ng-if=&#34;true&#34;
+                     class=&#34;kpi-card kpi-animated&#34;
+                     ng-init=&#34;from = 0;
+                              nbticks = 30;
+                              delay = 100;
+                              tick = 0;
+                              reloadeverynbtick = 100;&#34;&gt;
+                    {{ to = sumkazakhstan ; &#39;&#39;}} {{ max = sum ; &#39;&#39; }}
+                    &lt;ods-timer stop-condition=&#34;&#34;
+                               delay=&#34;delay&#34;
+                               auto-start=&#34;true&#34;
+                               exec=&#34;(from &lt; to ? from = ((((from &#43; ((to || 0) / nbticks)) * 100) | math : &#39;round&#39;) / 100 | min : to) : undefined);
+                                     (tick = tick &#43; 1);
+                                     (tick % reloadeverynbtick == 0 ? from = 0 : undefined); &#34;&gt;
+                    &lt;/ods-timer&gt;
+                    &lt;ods-gauge display-mode=&#34;circle&#34; value=&#34;from&#34; max=&#34;max&#34;&gt;&lt;/ods-gauge&gt;
+                    &lt;p class=&#34;kpi-description&#34;&gt;
+                        {{ from | number : 0 }} tons of Uranium produced in Kazakhstan (out of {{ max |
+                        number }} in total)
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+"
+                 role="tabpanel">
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;uraniumproduction,uraniumproductionfrance&#34;
                      uraniumproduction-dataset=&#34;uranium-production&#34;
@@ -2428,7 +2874,109 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
             </div>
             
             <div class="js-tabcontent"
-                 id="code-animated-kpi-with-a-gauge-and-auto-reload-css-content">
+                 id="code-animated-kpi-with-a-gauge-and-auto-reload-css-content"
+                 data-clipboard="/* Variables &amp; Shared classes
+========================================================================== */
+.row-equal-height {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+/* Fix for early content wrapping in Safari*/
+.row-equal-height:before,
+.row-equal-height:after {
+    content: normal;
+}
+
+/* KPI Card
+========================================================================== */
+.kpi-card {
+    background-color: var(--boxes-background);
+    height: 100%;
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.kpi-icon {
+    color: var(--highlight);
+    color: var(--secondary-color);
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.kpi-title {
+    font-weight: normal;
+    color: var(--highlight);
+    font-size: 3.2rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.kpi-description {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 100%;
+}
+
+/* Hide the ods-timer button
+========================================================================== */
+.ods-button.ods-widget-timer-controller {
+    display: none;
+}
+
+/* ODS-Gauge
+========================================================================== */
+.odswidget-gauge--circle .odswidget-gauge__svg {
+    -webkit-transform: rotate(
+            -90deg
+    );
+    transform: rotate(
+            -90deg
+    );
+    height: 100%;
+}
+
+.kpi-animated .odswidget-gauge__svg-filler {
+    fill: none;
+    stroke-width: 8px;
+    stroke: var(--highlight);
+    -webkit-transition: stroke-dasharray 0.1s;
+    transition: stroke-dasharray 0.1s;
+}
+
+.odswidget-gauge {
+    display: flex;
+    height: 100%;
+    width: 100%;
+}"
+            >
                 <div class="highlight">
                     <pre class="language-css" data-lang="css"><code>/* Variables &amp; Shared classes
 ========================================================================== */
@@ -2535,47 +3083,14 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
             </div>
             
         </div>
-    </section>
+    </div>
 </div>
 
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-animated-kpi-with-a-gauge-and-auto-reload";
-            iframe = document.getElementById(iframeId);
-             
-            size =  null 
-             
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-                if (iframe.height == size) {
-                    clearInterval(loopId);
-                } else {
-                    iframe.height = size > 1 ? size : scrollHeight;
-                }
-            }
-        }, 1000);
-    });
-</script>
-
-
-<script type="text/javascript">
-    window.addEventListener("DOMContentLoaded", () => {
-        var loopId = setInterval(() => {
-            iframeId = "iframe-animated-kpi-with-a-gauge-and-auto-reload";
-            iframe = document.getElementById(iframeId);
-
-            if (iframe != undefined && iframe.contentWindow.document.body != undefined){
-                scrollHeight = parseInt(iframe.contentWindow.document.body.scrollHeight);
-            }
-        }, 1000);
-    });
-</script>
-
       </div>
-    </div>
+    </article>
     
-  </section>
+  </div>
+</section>
 
       </div>
     </div>
@@ -2602,7 +3117,7 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
     </script>
     <script
       type="text/javascript"
-      src="/index.min.34c5a309e21ed7ebf769ff8917c0119ba0efc33353503e847d335c378022b772.js"
+      src="/index.min.b65df824365d99e02747153d4eeca1d7a840fbd4e06d720e8be44e9aa54586d2.js"
       defer
     ></script>
   </body>

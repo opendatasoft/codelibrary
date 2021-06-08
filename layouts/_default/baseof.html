@@ -6,9 +6,8 @@
       {{ block "title" . }} {{ .Site.Title }} {{ end }}
     </title>
 
-    {{ with .OutputFormats.Get "rss" -}} {{ printf `
-    <link rel="%s" type="%s" href="%s" title="%s" />
-    ` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }} {{ end -}}
+    {{ with .OutputFormats.Get "rss" -}}
+    {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .RelPermalink $.Site.Title | safeHTML }} {{ end -}}
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
@@ -57,10 +56,14 @@
   </head>
 
   <body>
+    <div class="is-hidden">
+      {{ "static/icons.svg" | readFile | safeHTML }}
+    </div>
+
     {{ partial "header" . }}
 
-    <div class="columns is-desktop codelibrary">
-      <div class="column is-narrow">
+    <div class="columns is-desktop codelibrary mb-0">
+      <div class="column is-narrow pb-0">
         {{ partial "sidebar" . }}
       </div>
       <div class="column codelibrary-content">

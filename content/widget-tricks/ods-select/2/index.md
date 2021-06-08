@@ -1,5 +1,6 @@
 ---
 title: "Filter by type, fed by a facet (via ods-facet-results widget)"
+height: 600
 ---
 
 `ods-facet-results` enumerates the values ("categories") of a facet, and exposes it in a variable. this variable can then be the option source of `ods-select`.

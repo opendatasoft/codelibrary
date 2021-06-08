@@ -2,7 +2,7 @@ export function responsiveNavbar() {
     document.addEventListener('DOMContentLoaded', () => {
 
     // Get all "navbar-burger" elements
-    const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+    const $navbarBurgers = document.querySelectorAll('.navbar-burger');
 
     // Check if there are any navbar burgers
     if ($navbarBurgers.length > 0) {
@@ -18,6 +18,11 @@ export function responsiveNavbar() {
                 // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
                 el.classList.toggle('is-active');
                 $target.classList.toggle('is-active');
+
+                if (target === 'sidebarNavbar') {
+                  const $search = document.querySelector('.sidebar-search');
+                  $search.classList.toggle('is-hidden-touch');
+                }
 
             });
         });

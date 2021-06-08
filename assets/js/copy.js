@@ -3,61 +3,67 @@
 // References
 // 1. https://tomspencer.dev/blog/2018/09/14/adding-click-to-copy-buttons-to-a-hugo-powered-blog/
 // 2. https://www.dannyguo.com/blog/how-to-add-copy-to-clipboard-buttons-to-code-blocks-in-hugo/
-export const initCopyToCB = (event) => {
-    const copyIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
-    const copiedIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><polyline points="20 6 9 17 4 12"></polyline></svg>';
-    const copyText = "Copy to clipboard";
-    const copiedText = "Copied!";
+import * as clipboard from 'clipboard-polyfill';
 
-    function addCopyButtons(clipboard) {
-        const highlights = document.querySelectorAll('.ods-content .box-code .highlight');
-        highlights.forEach((highlight) => {
-            const pres = highlight.querySelectorAll('pre[data-lang="html"], pre[data-lang="css"]');
-            pres.forEach((pre) => {
-                var codeBlock = pre.querySelector('code');
+const addCCtoColor = (color) => {
+  const clipContent = color.querySelector('code').innerText;
+  color.addEventListener('click', async (event) => {
+    await clipboard.writeText(clipContent);
+    color.classList.add('is-success');
+    color.dataset.tooltip = 'Copied!';
+  })
 
-                const button = document.createElement('button');
-                button.className = 'button button-copy is-rounded is-secondary has-tooltip-left';
-                button.dataset['tooltip'] = copyText;
-                button.type = 'button';
-                button.innerHTML = copyIcon;
-                button.addEventListener('click', (event) => {
-                    clipboard.writeText(codeBlock.innerText).then(() => {
-                        /* Chrome doesn't seem to blur automatically,
-                        leaving the button in a focused state. */
-                        button.blur();
+  color.addEventListener('mouseleave', (event) => {
+      color.classList.remove('is-success');
+      color.dataset.tooltip = 'Copy color to clipboard';
+  })
+}
 
-                        button.innerHTML = copiedIcon;
-                        button.dataset['tooltip'] = copiedText;
-                        button.classList.add('copied');
-
-                        setTimeout(() => {
-                            button.innerHTML = copyIcon;
-                            button.dataset['tooltip'] = copyText;
-                            button.classList.remove('copied');
-                        }, 2000);
-                    }).catch((error) => {
-                        button.innerText = 'Error';
-
-                        console.error(error);
-                    });
-                });
-
-                highlight.appendChild(button);
-            });
-        });
+const addCCToCode = (codeBox, copyButton, copiedButton) => {
+  copyButton.addEventListener('click', async (event) => {
+    const activeTab = codeBox.querySelector('.js-tabcontent.is-active');
+    const clipContent = activeTab.dataset.clipboard;
+    if (clipContent) {
+      await clipboard.writeText(clipContent);
+      copyButton.blur();
+      toggleHidden([copyButton, copiedButton]);
     }
+  });
 
-    if (navigator && navigator.clipboard) {
-        addCopyButtons(navigator.clipboard);
-    } else {
-        const script = document.createElement('script');
-        script.src = 'https://cdn.jsdelivr.net/npm/clipboard-polyfill@2.8.6/dist/clipboard-polyfill.min.js';
-        script.defer = true;
-        script.onload = function () {
-            addCopyButtons(clipboard);
-        };
+  copiedButton.addEventListener('mouseleave', (event) => {
+    setTimeout(() => toggleHidden([copyButton, copiedButton]), 200);
+  })
+}
 
-        document.head.appendChild(script);
-    }
+const toggleHidden = (nodeArray) => {
+  nodeArray.forEach((node) => node.classList.toggle('is-hidden'));
+}
+
+const hideCopyIfColors = (copyButton, colorsTab) => {
+  const observer = new MutationObserver((mutations) => {
+    colorsTab.classList.contains('is-active')
+      ? copyButton.classList.add('is-hidden')
+      : copyButton.classList.remove('is-hidden')
+  })
+
+  observer.observe(colorsTab, { attributeFilter: ['class'] })
+}
+
+const initCC = (codeBox) => {
+  const copyButton = codeBox.querySelector('.copy-to-cc');
+  const copiedButton = codeBox.querySelector('.copied-to-cc');
+  const colorsTab = codeBox.querySelector('.theme-colors');
+
+  if (colorsTab) {
+    hideCopyIfColors(copyButton, colorsTab);
+    const colorNodes =  colorsTab.querySelectorAll('.color')
+    colorNodes.forEach(addCCtoColor);
+  }
+
+  addCCToCode(codeBox, copyButton, copiedButton)
+}
+
+export default () => {
+    const codeBoxes = document.querySelectorAll('.box-code');
+    codeBoxes.forEach(codeBox => initCC(codeBox));
 }

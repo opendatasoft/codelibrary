@@ -1,5 +1,6 @@
 ---
 title: "Replace map tooltip with a refine : in a pop-in !"
+height: 600
 date: "2021-02-09"
 ---
 

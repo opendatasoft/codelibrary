@@ -2,6 +2,7 @@
 title: "Search box"
 description: "A stylized search box that allows searching for datasets in the catalog."
 tags: ["navigation"]
+height: 240
 resources:
 - src: '*/'
   name: folder-:counter
