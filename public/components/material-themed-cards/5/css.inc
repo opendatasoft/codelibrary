@@ -1,74 +1,86 @@
 :root {
-  --primary: hsl(36, 94%, 59%);
-  --primary-h-s: 36, 94% ; /* If your color is hsl(36, 94, 59), input 36, 94 */
+  --primary-hue: 36;
+  --primary-saturation: 94%;
+  --primary-lightness: 59%;
+
   --surface: hsl(200, 21%, 37%);
   --background: hsl(198, 20%, 17%);
   --card-text: white;
   --body-text: white;
 
   /* These are automatically computed unless you need to overwrite them */
-  --primary-10: hsl(var(--primary-h-s), 10%);
-  --primary-20: hsl(var(--primary-h-s), 20%);
-  --primary-30: hsl(var(--primary-h-s), 30%);
-  --primary-40: hsl(var(--primary-h-s), 40%);
-  --primary-50: hsl(var(--primary-h-s), 50%);
-  --primary-60: hsl(var(--primary-h-s), 60%);
-  --primary-70: hsl(var(--primary-h-s), 70%);
-  --primary-80: hsl(var(--primary-h-s), 80%);
-  --primary-90: hsl(var(--primary-h-s), 90%);
+  --primary:    hsl(var(--primary-hue), var(--primary-saturation), var(--primary-lightness));
+  --primary-10: hsl(var(--primary-hue), var(--primary-saturation), 10%);
+  --primary-20: hsl(var(--primary-hue), var(--primary-saturation), 20%);
+  --primary-30: hsl(var(--primary-hue), var(--primary-saturation), 30%);
+  --primary-40: hsl(var(--primary-hue), var(--primary-saturation), 40%);
+  --primary-50: hsl(var(--primary-hue), var(--primary-saturation), 50%);
+  --primary-60: hsl(var(--primary-hue), var(--primary-saturation), 60%);
+  --primary-70: hsl(var(--primary-hue), var(--primary-saturation), 70%);
+  --primary-80: hsl(var(--primary-hue), var(--primary-saturation), 80%);
+  --primary-90: hsl(var(--primary-hue), var(--primary-saturation), 90%);
 
-  --overlay-10: hsla(var(--primary-h-s), 90%, 10%);
+  --overlay-10: hsla(var(--primary-hue), var(--primary-saturation), 90%, 10%);
 }
 
 .is-info {
-  --primary: hsl(194, 100%, 73%);
-  --primary-h-s: 194, 100% ; /* If your color is hsl(36, 94, 59), input 36, 94 */
+  --primary-hue: 194;
+  --primary-saturation: 100%;
+  --primary-lightness: 73%;
 
-  --primary-10: hsl(var(--primary-h-s), 10%);
-  --primary-20: hsl(var(--primary-h-s), 20%);
-  --primary-30: hsl(var(--primary-h-s), 30%);
-  --primary-40: hsl(var(--primary-h-s), 40%);
-  --primary-50: hsl(var(--primary-h-s), 50%);
-  --primary-60: hsl(var(--primary-h-s), 60%);
-  --primary-70: hsl(var(--primary-h-s), 70%);
-  --primary-80: hsl(var(--primary-h-s), 80%);
-  --primary-90: hsl(var(--primary-h-s), 90%);
+  /* These are automatically computed unless you need to overwrite them */
+  --primary:    hsl(var(--primary-hue), var(--primary-saturation), var(--primary-lightness));
+  --primary-10: hsl(var(--primary-hue), var(--primary-saturation), 10%);
+  --primary-20: hsl(var(--primary-hue), var(--primary-saturation), 20%);
+  --primary-30: hsl(var(--primary-hue), var(--primary-saturation), 30%);
+  --primary-40: hsl(var(--primary-hue), var(--primary-saturation), 40%);
+  --primary-50: hsl(var(--primary-hue), var(--primary-saturation), 50%);
+  --primary-60: hsl(var(--primary-hue), var(--primary-saturation), 60%);
+  --primary-70: hsl(var(--primary-hue), var(--primary-saturation), 70%);
+  --primary-80: hsl(var(--primary-hue), var(--primary-saturation), 80%);
+  --primary-90: hsl(var(--primary-hue), var(--primary-saturation), 90%);
 
-  --overlay-10: hsla(var(--primary-h-s), 90%, 10%);
+  --overlay-10: hsla(var(--primary-hue), var(--primary-saturation), 90%, 10%);
 }
 
 .is-success {
-  --primary: hsl(158, 72%, 42%);
-  --primary-h-s: 158, 72% ; /* If your color is hsl(36, 94, 59), input 36, 94 */
+  --primary-hue: 158;
+  --primary-saturation: 72%;
+  --primary-lightness: 42%;
 
-  --primary-10: hsl(var(--primary-h-s), 10%);
-  --primary-20: hsl(var(--primary-h-s), 20%);
-  --primary-30: hsl(var(--primary-h-s), 30%);
-  --primary-40: hsl(var(--primary-h-s), 40%);
-  --primary-50: hsl(var(--primary-h-s), 50%);
-  --primary-60: hsl(var(--primary-h-s), 60%);
-  --primary-70: hsl(var(--primary-h-s), 70%);
-  --primary-80: hsl(var(--primary-h-s), 80%);
-  --primary-90: hsl(var(--primary-h-s), 90%);
+  /* These are automatically computed unless you need to overwrite them */
+  --primary:    hsl(var(--primary-hue), var(--primary-saturation), var(--primary-lightness));
+  --primary-10: hsl(var(--primary-hue), var(--primary-saturation), 10%);
+  --primary-20: hsl(var(--primary-hue), var(--primary-saturation), 20%);
+  --primary-30: hsl(var(--primary-hue), var(--primary-saturation), 30%);
+  --primary-40: hsl(var(--primary-hue), var(--primary-saturation), 40%);
+  --primary-50: hsl(var(--primary-hue), var(--primary-saturation), 50%);
+  --primary-60: hsl(var(--primary-hue), var(--primary-saturation), 60%);
+  --primary-70: hsl(var(--primary-hue), var(--primary-saturation), 70%);
+  --primary-80: hsl(var(--primary-hue), var(--primary-saturation), 80%);
+  --primary-90: hsl(var(--primary-hue), var(--primary-saturation), 90%);
 
-  --overlay-10: hsla(var(--primary-h-s), 90%, 10%);
+  --overlay-10: hsla(var(--primary-hue), var(--primary-saturation), 90%, 10%);
 }
 
 .is-warning {
-  --primary: hsl(5, 100%, 67%);
-  --primary-h-s: 5, 100% ; /* If your color is hsl(36, 94, 59), input 36, 94 */
+  --primary-hue: 5;
+  --primary-saturation: 100%;
+  --primary-lightness: 67%;
 
-  --primary-10: hsl(var(--primary-h-s), 10%);
-  --primary-20: hsl(var(--primary-h-s), 20%);
-  --primary-30: hsl(var(--primary-h-s), 30%);
-  --primary-40: hsl(var(--primary-h-s), 40%);
-  --primary-50: hsl(var(--primary-h-s), 50%);
-  --primary-60: hsl(var(--primary-h-s), 60%);
-  --primary-70: hsl(var(--primary-h-s), 70%);
-  --primary-80: hsl(var(--primary-h-s), 80%);
-  --primary-90: hsl(var(--primary-h-s), 90%);
+  /* These are automatically computed unless you need to overwrite them */
+  --primary:    hsl(var(--primary-hue), var(--primary-saturation), var(--primary-lightness));
+  --primary-10: hsl(var(--primary-hue), var(--primary-saturation), 10%);
+  --primary-20: hsl(var(--primary-hue), var(--primary-saturation), 20%);
+  --primary-30: hsl(var(--primary-hue), var(--primary-saturation), 30%);
+  --primary-40: hsl(var(--primary-hue), var(--primary-saturation), 40%);
+  --primary-50: hsl(var(--primary-hue), var(--primary-saturation), 50%);
+  --primary-60: hsl(var(--primary-hue), var(--primary-saturation), 60%);
+  --primary-70: hsl(var(--primary-hue), var(--primary-saturation), 70%);
+  --primary-80: hsl(var(--primary-hue), var(--primary-saturation), 80%);
+  --primary-90: hsl(var(--primary-hue), var(--primary-saturation), 90%);
 
-  --overlay-10: hsla(var(--primary-h-s), 50%, 50%);
+  --overlay-10: hsla(var(--primary-hue), var(--primary-saturation), 50%, 50%);
 }
 
 body {
@@ -80,7 +92,7 @@ h1 {
   color: var(--body-text);
 }
 
-/* ODS Over-ride */
+/* ODS Over-ride */
 .row > *:first-child {
   margin-left: 0;
 }

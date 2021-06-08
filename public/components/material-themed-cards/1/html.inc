@@ -11,7 +11,9 @@
                             <h2 class="title">
                                 Simple line
                             </h2>
-                            <p class="subtitle">Since there is no x-axis, don't forget to put date range in this descpription! From: {{ now | momentadd:month:-1 |date:longDate }} to {{ now | date:longDate }}.</p>
+                            <p class="subtitle">
+                                Since there is no x-axis, don't forget to put date range in this descpription!
+                                From: {{ (now | momentadd: "month": -1) | date: "longDate" }} to {{ now | date: "longDate" }}.</p>
                         </div>
                         <ods-chart class="mini-card hide-x hide-y y-values" timescale="day" single-y-axis="true" align-month="true">
                             <ods-chart-query context="stats" field-x="timestamp" maxpoints="10" timescale="day">

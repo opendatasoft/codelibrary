@@ -1,23 +1,26 @@
 :root {
-  --primary: hsl(36, 94%, 59%);
-  --primary-h-s: 36, 94% ; /* If your color is hsl(36, 94, 59), input 36, 94 */
+  --primary-hue: 36;
+  --primary-saturation: 94%;
+  --primary-lightness: 59%;
+
   --surface: hsl(200, 21%, 37%);
   --background: hsl(198, 20%, 17%);
   --card-text: white;
   --body-text: white;
 
   /* These are automatically computed unless you need to overwrite them */
-  --primary-10: hsl(var(--primary-h-s), 10%);
-  --primary-20: hsl(var(--primary-h-s), 20%);
-  --primary-30: hsl(var(--primary-h-s), 30%);
-  --primary-40: hsl(var(--primary-h-s), 40%);
-  --primary-50: hsl(var(--primary-h-s), 50%);
-  --primary-60: hsl(var(--primary-h-s), 60%);
-  --primary-70: hsl(var(--primary-h-s), 70%);
-  --primary-80: hsl(var(--primary-h-s), 80%);
-  --primary-90: hsl(var(--primary-h-s), 90%);
+  --primary:    hsl(var(--primary-hue), var(--primary-saturation), var(--primary-lightness));
+  --primary-10: hsl(var(--primary-hue), var(--primary-saturation), 10%);
+  --primary-20: hsl(var(--primary-hue), var(--primary-saturation), 20%);
+  --primary-30: hsl(var(--primary-hue), var(--primary-saturation), 30%);
+  --primary-40: hsl(var(--primary-hue), var(--primary-saturation), 40%);
+  --primary-50: hsl(var(--primary-hue), var(--primary-saturation), 50%);
+  --primary-60: hsl(var(--primary-hue), var(--primary-saturation), 60%);
+  --primary-70: hsl(var(--primary-hue), var(--primary-saturation), 70%);
+  --primary-80: hsl(var(--primary-hue), var(--primary-saturation), 80%);
+  --primary-90: hsl(var(--primary-hue), var(--primary-saturation), 90%);
 
-  --overlay-10: hsla(var(--primary-h-s), 90%, 10%);
+  --overlay-10: hsla(var(--primary-hue), var(--primary-saturation), 90%, 10%);
 }
 
 body {

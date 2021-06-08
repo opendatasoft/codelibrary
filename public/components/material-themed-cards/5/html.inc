@@ -39,7 +39,7 @@
                         <ods-timerange context="stats"
                                        date-format="DD MMM YYYY"
                                        precision="day"
-                                       default-from="{{ (now|momentadd:'months':-1)|moment:'YYYY-MM-DD' }}"
+                                       default-from="{{ (now|momentadd:'months':-2)|moment:'YYYY-MM-DD' }}"
                                        default-to="{{ now|moment:'YYYY-MM-DD' }}"
                                        stats-time-field="timestamp"
                                        from="startDate"
@@ -167,7 +167,7 @@
                         </div>
                         <ods-map scroll-wheel-zoom="false"
                                  location="5,47.27923,2.94434"
-                                 basemap="jawg.light"
+                                 basemap="jawg.dark"
                                  toolbar-geolocation="false"
                                  toolbar-drawing="true"
                                  toolbar-fullscreen="true"
@@ -175,7 +175,7 @@
                                  display-control="false"
                                  display-control-single-layer="true">
                             <ods-map-layer-group>
-                                <ods-map-layer context="stats" color="#26ADFF" picto="ods-circle" show-marker="true" display="auto" shape-opacity="0.5" point-opacity="1" border-color="#FFFFFF" border-opacity="1" border-size="1" border-pattern="solid" caption="false" caption-picto-color="#f2cb46" title="Company Data Hub" size="4" size-min="3" size-max="5" size-function="linear"></ods-map-layer>
+                                <ods-map-layer context="stats" color="hsl(194, 100%, 73%)" picto="ods-circle" show-marker="true" display="auto" shape-opacity="0.5" point-opacity="1" border-color="#FFFFFF" border-opacity="1" border-size="1" border-pattern="solid" caption="false" caption-picto-color="#f2cb46" title="Company Data Hub" size="4" size-min="3" size-max="5" size-function="linear"></ods-map-layer>
                             </ods-map-layer-group>
                         </ods-map>
                     </div>

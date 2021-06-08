@@ -10,18 +10,20 @@ resources:
 
 These cards are meant to be themed using only the following variables:
 ```
---primary: hsl(36, 94%, 59%);
---primary-h-s: 36, 94% ; /* If your color is hsl(36, 94, 59), input 36, 94 */
---surface: hsl(200, 21%, 37%);
---background: hsl(198, 20%, 17%);
---card-text: white;
---body-text: white;
+  --primary-hue: 265;
+  --primary-saturation: 90%;
+  --primary-lightness: 47%;
+
+  --surface: white;
+  --background: white;
+  --card-text: #424242;
+  --body-text: #424242;
 ```
 
-You will need to input both `--primary` and `--primary-h-s` for the color gradient to work.
+It works with HSL colors, by inputting the `--primary-hue`, `--primary-saturation` and `--primary-lightness` separately. 
 
 These cards can be used anywhere and will fit 100% of their parent container. We recommend using them with a grid system, like the one used here.
 
-All cards are prented with the [sticky filter bar](/sticky-filters), to present how their interactivity. The sticky bar is compabtible with the color theming, but is not required.
+All cards are prented with a sticky filter bar, to present how they can interact. The sticky bar is compatible with the color theming, but is not required.
 
 Those cards follow the material design guidelines. If you need to build your page around those cards, visit <https://www.material.io>.
