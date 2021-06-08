@@ -1,68 +1,3 @@
-/***** GRID ******/
-[class^=grid] {
-    display: grid;
-    grid-gap: 1rem;
-}
-
-@media screen and (min-width: 640px), print {
-    .sm\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-@media screen and (min-width: 768px), print {
-    .md\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .md\:grid-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .md\:grid-4 {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .md\:grid-rows-3 {
-        grid-template-rows: repeat(3, minmax(0, 1fr));
-    }
-}
-
-[class^=cell],
-[class*=":cell"] {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-}
-
-.cell-1 {
-    grid-column: span 1/span 1;
-}
-
-.cell-row-2 {
-    grid-row: span 2/span 2;
-}
-@media screen and (min-width: 768px), print {
-
-    .md\:cell-1 {
-        grid-column: span 1/span 1;
-    }
-
-    .md\:cell-2 {
-        grid-column: span 2/span 2;
-    }
-}
-
-.gap-6,
-.gap-6 [class^=grid] {
-    gap: 1.5rem;
-}
-
-.gap-10,
-.gap-10 [class^=grid] {
-    gap: 2.5rem;
-}
-
-
 /**** Dashboard ****/
 :root {
     --boxes-radius: 6px;
@@ -185,6 +120,70 @@ h3 {
 }
 .no-bg rect.highcharts-background {
     fill: transparent !important;
+}
+
+/***** GRID ******/
+[class^=grid] {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+@media screen and (min-width: 640px), print {
+    .sm\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media screen and (min-width: 768px), print {
+    .md\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .md\:grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .md\:grid-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .md\:grid-rows-3 {
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+    }
+}
+
+[class^=cell],
+[class*=":cell"] {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.cell-1 {
+    grid-column: span 1/span 1;
+}
+
+.cell-row-2 {
+    grid-row: span 2/span 2;
+}
+@media screen and (min-width: 768px), print {
+
+    .md\:cell-1 {
+        grid-column: span 1/span 1;
+    }
+
+    .md\:cell-2 {
+        grid-column: span 2/span 2;
+    }
+}
+
+.gap-6,
+.gap-6 [class^=grid] {
+    gap: 1.5rem;
+}
+
+.gap-10,
+.gap-10 [class^=grid] {
+    gap: 2.5rem;
 }
 
 

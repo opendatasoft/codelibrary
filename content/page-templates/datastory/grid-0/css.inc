@@ -1,52 +1,3 @@
-/***** GRID ******/
-[class^=grid] {
-    display: grid;
-    grid-gap: 1rem;
-}
-
-@media screen and (min-width: 640px), print {
-
-    .sm\:grid-5 {
-        grid-template-columns: repeat(5, minmax(0, 1fr));
-    }
-}
-
-[class*=":cell"] {
-    display: flex;
-    flex-direction: column;
-    /*grid-column: 1 / -1;*/
-    justify-content: stretch;
-}
-
-@media screen and (min-width: 640px), print {
-
-    .sm\:cell-2 {
-        grid-column: span 2/span 2;
-    }
-
-    .sm\:cell-3 {
-        grid-column: span 3/span 3;
-    }
-
-    .sm\:cell-order-1 {
-        order: 1;
-    }
-
-    .sm\:cell-order-2 {
-        order: 2;
-    }
-}
-
-.gap-1,
-.gap-1 [class^=grid] {
-    gap: 0.25rem;
-}
-
-.gap-10,
-.gap-10 [class^=grid] {
-    gap: 2.5rem;
-}
-
 main {
     margin: 0;
 }
@@ -113,6 +64,55 @@ section {
 
 .content-box .ods-chart {
     height: 400px;
+}
+
+/***** GRID ******/
+[class^=grid] {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+@media screen and (min-width: 640px), print {
+
+    .sm\:grid-5 {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+    }
+}
+
+[class*=":cell"] {
+    display: flex;
+    flex-direction: column;
+    /*grid-column: 1 / -1;*/
+    justify-content: stretch;
+}
+
+@media screen and (min-width: 640px), print {
+
+    .sm\:cell-2 {
+        grid-column: span 2/span 2;
+    }
+
+    .sm\:cell-3 {
+        grid-column: span 3/span 3;
+    }
+
+    .sm\:cell-order-1 {
+        order: 1;
+    }
+
+    .sm\:cell-order-2 {
+        order: 2;
+    }
+}
+
+.gap-1,
+.gap-1 [class^=grid] {
+    gap: 0.25rem;
+}
+
+.gap-10,
+.gap-10 [class^=grid] {
+    gap: 2.5rem;
 }
 
 g.highcharts-label.highcharts-data-label {

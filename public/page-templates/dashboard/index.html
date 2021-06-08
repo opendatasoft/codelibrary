@@ -6921,7 +6921,7 @@ h3 {
                  "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    const sourceMonitoringInterceptor = ($q) =\u003e {\n        return {\n            request: (config) =\u003e {\n              config.params \u0026\u0026 (delete config.params[&#39;source&#39;]);\n              (config.params.dataset === &#39;ods-api-monitoring&#39;) \u0026\u0026 (config.params.dataset = &#39;monitoring-copy&#39;);\n              return config;\n          }\n        }\n    }\n\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider, $httpProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n        $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
                  "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;container\&#34;\u003e\n    \u003cdiv class=\&#34;grid sm:grid-2 md:grid-4 gap-10\&#34;\u003e\n        \u003cdiv class=\&#34;cell-1 box white flat\&#34;\u003e\n            \u003cdiv class=\&#34;advanced-kpi\&#34;\u003e\n                \u003cdiv class=\&#34;advanced-kpi--top\&#34;\u003e\n                    \u003ch3 class=\&#34;title\&#34;\u003e\n                        Title\n                    \u003c/h3\u003e\n                    \u003cp class=\&#34;description\&#34;\u003e\n                        Description\n                    \u003c/p\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;advanced-kpi--middle centered\&#34;\u003e\n                    \u003cp class=\&#34;value\&#34;\u003e\n                        1&#39;234 %\n                    \u003c/p\u003e\n                    \u003cp class=\&#34;description\&#34;\u003e\n                    \u003c/p\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;advanced-kpi--bottom\&#34;\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--bottom-second-stage\&#34;\u003e\n                        \u003cspan class=\&#34;date\&#34;\u003eDate\u003c/span\u003e\n                        \u003ca class=\&#34;source\&#34;\n                           href=\&#34;#\&#34;\n                           title=\&#34;Title\&#34;\u003e\n                            Source \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                        \u003c/a\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;cell-1 box white flat\&#34;\u003e\n            \u003cdiv class=\&#34;advanced-kpi\&#34;\u003e\n                \u003cdiv class=\&#34;advanced-kpi--top\&#34;\u003e\n                    \u003ch3 class=\&#34;title\&#34;\u003e\n                        Title\n                    \u003c/h3\u003e\n                    \u003cp class=\&#34;description\&#34;\u003e\n                        Description\n                    \u003c/p\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;advanced-kpi--middle centered\&#34;\u003e\n                    \u003cp class=\&#34;value\&#34;\u003e\n                        1&#39;234 %\n                    \u003c/p\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;advanced-kpi--bottom\&#34;\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--bottom-second-stage\&#34;\u003e\n                        \u003cspan class=\&#34;date\&#34;\u003eDate\u003c/span\u003e\n                        \u003ca class=\&#34;source\&#34;\n                           href=\&#34;#\&#34;\n                           title=\&#34;Title\&#34;\u003e\n                            Source \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                        \u003c/a\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;cell-1 box white flat\&#34;\u003e\n            \u003cdiv class=\&#34;advanced-kpi\&#34;\u003e\n                \u003cdiv class=\&#34;advanced-kpi--top\&#34;\u003e\n                    \u003ch3 class=\&#34;title\&#34;\u003e\n                        Title\n                    \u003c/h3\u003e\n                    \u003cp class=\&#34;description\&#34;\u003e\n                        Description\n                    \u003c/p\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;advanced-kpi--middle centered\&#34;\u003e\n                    \u003cp class=\&#34;value\&#34;\u003e\n                        1&#39;234 %\n                    \u003c/p\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;advanced-kpi--bottom\&#34;\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--bottom-second-stage\&#34;\u003e\n                        \u003cspan class=\&#34;date\&#34;\u003eDate\u003c/span\u003e\n                        \u003ca class=\&#34;source\&#34;\n                           href=\&#34;#\&#34;\n                           title=\&#34;Title\&#34;\u003e\n                            Source \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                        \u003c/a\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;cell-1 box white flat\&#34;\u003e\n            \u003cdiv class=\&#34;advanced-kpi\&#34;\u003e\n                \u003cdiv class=\&#34;advanced-kpi--top\&#34;\u003e\n                    \u003ch3 class=\&#34;title\&#34;\u003e\n                        Title\n                    \u003c/h3\u003e\n                    \u003cp class=\&#34;description\&#34;\u003e\n                        Description\n                    \u003c/p\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;advanced-kpi--middle centered\&#34;\u003e\n                    \u003cp class=\&#34;value\&#34;\u003e\n                        1&#39;234 %\n                    \u003c/p\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;advanced-kpi--bottom\&#34;\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--bottom-second-stage\&#34;\u003e\n                        \u003cspan class=\&#34;date\&#34;\u003eDate\u003c/span\u003e\n                        \u003ca class=\&#34;source\&#34;\n                           href=\&#34;#\&#34;\n                           title=\&#34;Title\&#34;\u003e\n                            Source \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                        \u003c/a\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
-                 "css": &#34;/***** GRID ******/\n[class^=grid] {\n    display: grid;\n    grid-gap: 1rem;\n}\n\n@media screen and (min-width: 640px), print {\n    .sm\\:grid-2 {\n        grid-template-columns: repeat(2, minmax(0, 1fr));\n    }\n}\n@media screen and (min-width: 768px), print {\n    .md\\:grid-2 {\n        grid-template-columns: repeat(2, minmax(0, 1fr));\n    }\n\n    .md\\:grid-3 {\n        grid-template-columns: repeat(3, minmax(0, 1fr));\n    }\n\n    .md\\:grid-4 {\n        grid-template-columns: repeat(4, minmax(0, 1fr));\n    }\n\n    .md\\:grid-rows-3 {\n        grid-template-rows: repeat(3, minmax(0, 1fr));\n    }\n}\n\n[class^=cell],\n[class*=\&#34;:cell\&#34;] {\n    display: flex;\n    flex-direction: column;\n    justify-content: stretch;\n}\n\n.cell-1 {\n    grid-column: span 1/span 1;\n}\n\n.cell-row-2 {\n    grid-row: span 2/span 2;\n}\n@media screen and (min-width: 768px), print {\n\n    .md\\:cell-1 {\n        grid-column: span 1/span 1;\n    }\n\n    .md\\:cell-2 {\n        grid-column: span 2/span 2;\n    }\n}\n\n.gap-6,\n.gap-6 [class^=grid] {\n    gap: 1.5rem;\n}\n\n.gap-10,\n.gap-10 [class^=grid] {\n    gap: 2.5rem;\n}\n\n\n/**** Dashboard ****/\n:root {\n    --boxes-radius: 6px;\n}\n\nbody, main {\n    margin: 0;\n    background-color: #F2F3F8;\n}\n\nsection {\n    padding: 1.5rem 0;\n}\n\n.header {\n    margin: 3rem 2rem;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-weight: 500;\n}\n\nh3 {\n    font-weight: 400;\n}\n\n.mb-0 {\n    margin-bottom: 0;\n}\n\n.mb-2 {\n    margin-bottom: 2rem;\n}\n\n.box {\n    position: relative;\n    padding: 13px;\n}\n.box.white {\n    background-color: white;\n}\n.box.flat {\n    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);\n    border-radius: var(--boxes-radius);\n}\n\n.advanced-kpi {\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n}\n\n.advanced-kpi--top .title {\n    font-size: 1.2em;\n    margin: 0;\n}\n.advanced-kpi--top .description {\n    margin: 0 auto;\n    color: #565656;\n    font-size: 1em;\n    font-weight: 400;\n}\n\n.advanced-kpi--middle {\n    display: flex;\n    flex-direction: column;\n    margin: 20px 0;\n}\n.advanced-kpi--middle.centered {\n    align-items: center;\n}\n.advanced-kpi--middle \u003e * {\n    margin: 5px 0;\n}\n.advanced-kpi--middle .value {\n    color: var(--highlight);\n    font-weight: 500;\n    font-size: 2.5rem;\n}\n\n.advanced-kpi--bottom {\n    font-size: 0.8em;\n}\n.advanced-kpi--bottom .advanced-kpi--bottom-second-stage {\n    display: flex;\n    justify-content: space-between;\n}\n.advanced-kpi--bottom .source {\n    text-decoration: underline;\n    color: var(--links);\n}\n.advanced-kpi--bottom .source i {\n    margin-left: 6px;\n}\n.advanced-kpi--bottom .source:hover {\n    opacity: 0.65;\n}\n.advanced-kpi--bottom .source:hover i {\n    animation: bounce 0.7s ease infinite;\n}\n\n@keyframes bounce {\n    from {\n        margin-left: 6px;\n        margin-right: 0;\n    }\n    50% {\n        margin-left: 2px;\n        margin-right: 4px;\n    }\n    to {\n        margin-left: 6px;\n        margin-right: 0;\n    }\n}\n.no-bg rect.highcharts-background {\n    fill: transparent !important;\n}\n\n\n/* DO NOT COPY, just for Code Library resource */\n.chart-placeholder {\n    background-color: #fff1f1;\n    height: 350px;\n}\n.chart-placeholder:before {\n    display: block;\n    font-size: 2rem;\n    margin: 0.2rem 0.5rem;\n    content: \&#34;Chart\&#34;;\n}&#34;
+                 "css": &#34;/**** Dashboard ****/\n:root {\n    --boxes-radius: 6px;\n}\n\nbody, main {\n    margin: 0;\n    background-color: #F2F3F8;\n}\n\nsection {\n    padding: 1.5rem 0;\n}\n\n.header {\n    margin: 3rem 2rem;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-weight: 500;\n}\n\nh3 {\n    font-weight: 400;\n}\n\n.mb-0 {\n    margin-bottom: 0;\n}\n\n.mb-2 {\n    margin-bottom: 2rem;\n}\n\n.box {\n    position: relative;\n    padding: 13px;\n}\n.box.white {\n    background-color: white;\n}\n.box.flat {\n    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);\n    border-radius: var(--boxes-radius);\n}\n\n.advanced-kpi {\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n}\n\n.advanced-kpi--top .title {\n    font-size: 1.2em;\n    margin: 0;\n}\n.advanced-kpi--top .description {\n    margin: 0 auto;\n    color: #565656;\n    font-size: 1em;\n    font-weight: 400;\n}\n\n.advanced-kpi--middle {\n    display: flex;\n    flex-direction: column;\n    margin: 20px 0;\n}\n.advanced-kpi--middle.centered {\n    align-items: center;\n}\n.advanced-kpi--middle \u003e * {\n    margin: 5px 0;\n}\n.advanced-kpi--middle .value {\n    color: var(--highlight);\n    font-weight: 500;\n    font-size: 2.5rem;\n}\n\n.advanced-kpi--bottom {\n    font-size: 0.8em;\n}\n.advanced-kpi--bottom .advanced-kpi--bottom-second-stage {\n    display: flex;\n    justify-content: space-between;\n}\n.advanced-kpi--bottom .source {\n    text-decoration: underline;\n    color: var(--links);\n}\n.advanced-kpi--bottom .source i {\n    margin-left: 6px;\n}\n.advanced-kpi--bottom .source:hover {\n    opacity: 0.65;\n}\n.advanced-kpi--bottom .source:hover i {\n    animation: bounce 0.7s ease infinite;\n}\n\n@keyframes bounce {\n    from {\n        margin-left: 6px;\n        margin-right: 0;\n    }\n    50% {\n        margin-left: 2px;\n        margin-right: 4px;\n    }\n    to {\n        margin-left: 6px;\n        margin-right: 0;\n    }\n}\n.no-bg rect.highcharts-background {\n    fill: transparent !important;\n}\n\n/***** GRID ******/\n[class^=grid] {\n    display: grid;\n    grid-gap: 1rem;\n}\n\n@media screen and (min-width: 640px), print {\n    .sm\\:grid-2 {\n        grid-template-columns: repeat(2, minmax(0, 1fr));\n    }\n}\n@media screen and (min-width: 768px), print {\n    .md\\:grid-2 {\n        grid-template-columns: repeat(2, minmax(0, 1fr));\n    }\n\n    .md\\:grid-3 {\n        grid-template-columns: repeat(3, minmax(0, 1fr));\n    }\n\n    .md\\:grid-4 {\n        grid-template-columns: repeat(4, minmax(0, 1fr));\n    }\n\n    .md\\:grid-rows-3 {\n        grid-template-rows: repeat(3, minmax(0, 1fr));\n    }\n}\n\n[class^=cell],\n[class*=\&#34;:cell\&#34;] {\n    display: flex;\n    flex-direction: column;\n    justify-content: stretch;\n}\n\n.cell-1 {\n    grid-column: span 1/span 1;\n}\n\n.cell-row-2 {\n    grid-row: span 2/span 2;\n}\n@media screen and (min-width: 768px), print {\n\n    .md\\:cell-1 {\n        grid-column: span 1/span 1;\n    }\n\n    .md\\:cell-2 {\n        grid-column: span 2/span 2;\n    }\n}\n\n.gap-6,\n.gap-6 [class^=grid] {\n    gap: 1.5rem;\n}\n\n.gap-10,\n.gap-10 [class^=grid] {\n    gap: 2.5rem;\n}\n\n\n/* DO NOT COPY, just for Code Library resource */\n.chart-placeholder {\n    background-color: #fff1f1;\n    height: 350px;\n}\n.chart-placeholder:before {\n    display: block;\n    font-size: 2rem;\n    margin: 0.2rem 0.5rem;\n    content: \&#34;Chart\&#34;;\n}&#34;
                }'>
     </form>
 </div>
@@ -7170,72 +7170,7 @@ h3 {
     &lt;/div&gt;
 &lt;/div&gt;&lt;/div&gt;</div>
                 <style type='text/css'>
-                    /***** GRID ******/
-[class^=grid] {
-    display: grid;
-    grid-gap: 1rem;
-}
-
-@media screen and (min-width: 640px), print {
-    .sm\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-@media screen and (min-width: 768px), print {
-    .md\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .md\:grid-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .md\:grid-4 {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .md\:grid-rows-3 {
-        grid-template-rows: repeat(3, minmax(0, 1fr));
-    }
-}
-
-[class^=cell],
-[class*=&#34;:cell&#34;] {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-}
-
-.cell-1 {
-    grid-column: span 1/span 1;
-}
-
-.cell-row-2 {
-    grid-row: span 2/span 2;
-}
-@media screen and (min-width: 768px), print {
-
-    .md\:cell-1 {
-        grid-column: span 1/span 1;
-    }
-
-    .md\:cell-2 {
-        grid-column: span 2/span 2;
-    }
-}
-
-.gap-6,
-.gap-6 [class^=grid] {
-    gap: 1.5rem;
-}
-
-.gap-10,
-.gap-10 [class^=grid] {
-    gap: 2.5rem;
-}
-
-
-/**** Dashboard ****/
+                    /**** Dashboard ****/
 :root {
     --boxes-radius: 6px;
 }
@@ -7357,6 +7292,70 @@ h3 {
 }
 .no-bg rect.highcharts-background {
     fill: transparent !important;
+}
+
+/***** GRID ******/
+[class^=grid] {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+@media screen and (min-width: 640px), print {
+    .sm\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media screen and (min-width: 768px), print {
+    .md\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .md\:grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .md\:grid-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .md\:grid-rows-3 {
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+    }
+}
+
+[class^=cell],
+[class*=&#34;:cell&#34;] {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.cell-1 {
+    grid-column: span 1/span 1;
+}
+
+.cell-row-2 {
+    grid-row: span 2/span 2;
+}
+@media screen and (min-width: 768px), print {
+
+    .md\:cell-1 {
+        grid-column: span 1/span 1;
+    }
+
+    .md\:cell-2 {
+        grid-column: span 2/span 2;
+    }
+}
+
+.gap-6,
+.gap-6 [class^=grid] {
+    gap: 1.5rem;
+}
+
+.gap-10,
+.gap-10 [class^=grid] {
+    gap: 2.5rem;
 }
 
 
@@ -7679,72 +7678,7 @@ h3 {
             
             <div class="js-tabcontent"
                  id="code-css-grid--1---1---1---1-css-content"
-                 data-clipboard="/***** GRID ******/
-[class^=grid] {
-    display: grid;
-    grid-gap: 1rem;
-}
-
-@media screen and (min-width: 640px), print {
-    .sm\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-@media screen and (min-width: 768px), print {
-    .md\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .md\:grid-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .md\:grid-4 {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .md\:grid-rows-3 {
-        grid-template-rows: repeat(3, minmax(0, 1fr));
-    }
-}
-
-[class^=cell],
-[class*=&#34;:cell&#34;] {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-}
-
-.cell-1 {
-    grid-column: span 1/span 1;
-}
-
-.cell-row-2 {
-    grid-row: span 2/span 2;
-}
-@media screen and (min-width: 768px), print {
-
-    .md\:cell-1 {
-        grid-column: span 1/span 1;
-    }
-
-    .md\:cell-2 {
-        grid-column: span 2/span 2;
-    }
-}
-
-.gap-6,
-.gap-6 [class^=grid] {
-    gap: 1.5rem;
-}
-
-.gap-10,
-.gap-10 [class^=grid] {
-    gap: 2.5rem;
-}
-
-
-/**** Dashboard ****/
+                 data-clipboard="/**** Dashboard ****/
 :root {
     --boxes-radius: 6px;
 }
@@ -7866,6 +7800,70 @@ h3 {
 }
 .no-bg rect.highcharts-background {
     fill: transparent !important;
+}
+
+/***** GRID ******/
+[class^=grid] {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+@media screen and (min-width: 640px), print {
+    .sm\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media screen and (min-width: 768px), print {
+    .md\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .md\:grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .md\:grid-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .md\:grid-rows-3 {
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+    }
+}
+
+[class^=cell],
+[class*=&#34;:cell&#34;] {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.cell-1 {
+    grid-column: span 1/span 1;
+}
+
+.cell-row-2 {
+    grid-row: span 2/span 2;
+}
+@media screen and (min-width: 768px), print {
+
+    .md\:cell-1 {
+        grid-column: span 1/span 1;
+    }
+
+    .md\:cell-2 {
+        grid-column: span 2/span 2;
+    }
+}
+
+.gap-6,
+.gap-6 [class^=grid] {
+    gap: 1.5rem;
+}
+
+.gap-10,
+.gap-10 [class^=grid] {
+    gap: 2.5rem;
 }
 
 
@@ -7882,72 +7880,7 @@ h3 {
 }"
             >
                 <div class="highlight">
-                    <pre class="language-css" data-lang="css"><code>/***** GRID ******/
-[class^=grid] {
-    display: grid;
-    grid-gap: 1rem;
-}
-
-@media screen and (min-width: 640px), print {
-    .sm\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-@media screen and (min-width: 768px), print {
-    .md\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .md\:grid-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .md\:grid-4 {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .md\:grid-rows-3 {
-        grid-template-rows: repeat(3, minmax(0, 1fr));
-    }
-}
-
-[class^=cell],
-[class*=&#34;:cell&#34;] {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-}
-
-.cell-1 {
-    grid-column: span 1/span 1;
-}
-
-.cell-row-2 {
-    grid-row: span 2/span 2;
-}
-@media screen and (min-width: 768px), print {
-
-    .md\:cell-1 {
-        grid-column: span 1/span 1;
-    }
-
-    .md\:cell-2 {
-        grid-column: span 2/span 2;
-    }
-}
-
-.gap-6,
-.gap-6 [class^=grid] {
-    gap: 1.5rem;
-}
-
-.gap-10,
-.gap-10 [class^=grid] {
-    gap: 2.5rem;
-}
-
-
-/**** Dashboard ****/
+                    <pre class="language-css" data-lang="css"><code>/**** Dashboard ****/
 :root {
     --boxes-radius: 6px;
 }
@@ -8069,6 +8002,70 @@ h3 {
 }
 .no-bg rect.highcharts-background {
     fill: transparent !important;
+}
+
+/***** GRID ******/
+[class^=grid] {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+@media screen and (min-width: 640px), print {
+    .sm\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media screen and (min-width: 768px), print {
+    .md\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .md\:grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .md\:grid-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .md\:grid-rows-3 {
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+    }
+}
+
+[class^=cell],
+[class*=&#34;:cell&#34;] {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.cell-1 {
+    grid-column: span 1/span 1;
+}
+
+.cell-row-2 {
+    grid-row: span 2/span 2;
+}
+@media screen and (min-width: 768px), print {
+
+    .md\:cell-1 {
+        grid-column: span 1/span 1;
+    }
+
+    .md\:cell-2 {
+        grid-column: span 2/span 2;
+    }
+}
+
+.gap-6,
+.gap-6 [class^=grid] {
+    gap: 1.5rem;
+}
+
+.gap-10,
+.gap-10 [class^=grid] {
+    gap: 2.5rem;
 }
 
 
@@ -8132,7 +8129,7 @@ h3 {
                  "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    const sourceMonitoringInterceptor = ($q) =\u003e {\n        return {\n            request: (config) =\u003e {\n              config.params \u0026\u0026 (delete config.params[&#39;source&#39;]);\n              (config.params.dataset === &#39;ods-api-monitoring&#39;) \u0026\u0026 (config.params.dataset = &#39;monitoring-copy&#39;);\n              return config;\n          }\n        }\n    }\n\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider, $httpProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n        $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
                  "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;container\&#34;\u003e\n    \u003cdiv class=\&#34;grid md:grid-3\&#34;\u003e\n        \u003cdiv class=\&#34;grid\&#34;\u003e\n            \u003cdiv class=\&#34;cell-1 box white flat\&#34;\u003e\n                \u003cdiv class=\&#34;advanced-kpi\&#34;\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--top\&#34;\u003e\n                        \u003ch3 class=\&#34;title\&#34;\u003e\n                            Title\n                        \u003c/h3\u003e\n                        \u003cp class=\&#34;description\&#34;\u003e\n                            Description\n                        \u003c/p\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--middle centered\&#34;\u003e\n                        \u003cp class=\&#34;value\&#34;\u003e\n                            1&#39;234 %\n                        \u003c/p\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--bottom\&#34;\u003e\n                        \u003cdiv class=\&#34;advanced-kpi--bottom-second-stage\&#34;\u003e\n                            \u003cspan class=\&#34;date\&#34;\u003eDate\u003c/span\u003e\n                            \u003ca class=\&#34;source\&#34;\n                               href=\&#34;#\&#34;\n                               title=\&#34;Title\&#34;\u003e\n                                Source \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                            \u003c/a\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;cell-1 box white flat\&#34;\u003e\n                \u003cdiv class=\&#34;advanced-kpi\&#34;\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--top\&#34;\u003e\n                        \u003ch3 class=\&#34;title\&#34;\u003e\n                            Title\n                        \u003c/h3\u003e\n                        \u003cp class=\&#34;description\&#34;\u003e\n                            Description\n                        \u003c/p\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--middle centered\&#34;\u003e\n                        \u003cp class=\&#34;value\&#34;\u003e\n                            1&#39;234 %\n                        \u003c/p\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--bottom\&#34;\u003e\n                        \u003cdiv class=\&#34;advanced-kpi--bottom-second-stage\&#34;\u003e\n                            \u003cspan class=\&#34;date\&#34;\u003eDate\u003c/span\u003e\n                            \u003ca class=\&#34;source\&#34;\n                               href=\&#34;#\&#34;\n                               title=\&#34;Title\&#34;\u003e\n                                Source \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                            \u003c/a\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;md:cell-2 box white flat\&#34;\u003e\n            \u003cdiv class=\&#34;advanced-kpi\&#34;\u003e\n                \u003cdiv class=\&#34;advanced-kpi--top\&#34;\u003e\n                    \u003ch3 class=\&#34;title\&#34;\u003e\n                        Title\n                    \u003c/h3\u003e\n                    \u003cp class=\&#34;description\&#34;\u003e\n                        Description\n                    \u003c/p\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;advanced-kpi--middle no-bg mb-0\&#34;\u003e\n                    \u003cdiv class=\&#34;chart-placeholder\&#34;\u003e\u003c/div\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;advanced-kpi--bottom\&#34;\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--bottom-second-stage\&#34;\u003e\n                        \u003cspan class=\&#34;date\&#34;\u003eDate\u003c/span\u003e\n                        \u003ca class=\&#34;source\&#34;\n                           href=\&#34;#\&#34;\n                           title=\&#34;Title\&#34;\u003e\n                            Source \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                        \u003c/a\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\n\u003c/div\u003e&#34;,
-                 "css": &#34;/***** GRID ******/\n[class^=grid] {\n    display: grid;\n    grid-gap: 1rem;\n}\n\n@media screen and (min-width: 640px), print {\n    .sm\\:grid-2 {\n        grid-template-columns: repeat(2, minmax(0, 1fr));\n    }\n}\n@media screen and (min-width: 768px), print {\n    .md\\:grid-2 {\n        grid-template-columns: repeat(2, minmax(0, 1fr));\n    }\n\n    .md\\:grid-3 {\n        grid-template-columns: repeat(3, minmax(0, 1fr));\n    }\n\n    .md\\:grid-4 {\n        grid-template-columns: repeat(4, minmax(0, 1fr));\n    }\n\n    .md\\:grid-rows-3 {\n        grid-template-rows: repeat(3, minmax(0, 1fr));\n    }\n}\n\n[class^=cell],\n[class*=\&#34;:cell\&#34;] {\n    display: flex;\n    flex-direction: column;\n    justify-content: stretch;\n}\n\n.cell-1 {\n    grid-column: span 1/span 1;\n}\n\n.cell-row-2 {\n    grid-row: span 2/span 2;\n}\n@media screen and (min-width: 768px), print {\n\n    .md\\:cell-1 {\n        grid-column: span 1/span 1;\n    }\n\n    .md\\:cell-2 {\n        grid-column: span 2/span 2;\n    }\n}\n\n.gap-6,\n.gap-6 [class^=grid] {\n    gap: 1.5rem;\n}\n\n.gap-10,\n.gap-10 [class^=grid] {\n    gap: 2.5rem;\n}\n\n\n/**** Dashboard ****/\n:root {\n    --boxes-radius: 6px;\n}\n\nbody, main {\n    margin: 0;\n    background-color: #F2F3F8;\n}\n\nsection {\n    padding: 1.5rem 0;\n}\n\n.header {\n    margin: 3rem 2rem;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-weight: 500;\n}\n\nh3 {\n    font-weight: 400;\n}\n\n.mb-0 {\n    margin-bottom: 0;\n}\n\n.mb-2 {\n    margin-bottom: 2rem;\n}\n\n.box {\n    position: relative;\n    padding: 13px;\n}\n.box.white {\n    background-color: white;\n}\n.box.flat {\n    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);\n    border-radius: var(--boxes-radius);\n}\n\n.advanced-kpi {\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n}\n\n.advanced-kpi--top .title {\n    font-size: 1.2em;\n    margin: 0;\n}\n.advanced-kpi--top .description {\n    margin: 0 auto;\n    color: #565656;\n    font-size: 1em;\n    font-weight: 400;\n}\n\n.advanced-kpi--middle {\n    display: flex;\n    flex-direction: column;\n    margin: 20px 0;\n}\n.advanced-kpi--middle.centered {\n    align-items: center;\n}\n.advanced-kpi--middle \u003e * {\n    margin: 5px 0;\n}\n.advanced-kpi--middle .value {\n    color: var(--highlight);\n    font-weight: 500;\n    font-size: 2.5rem;\n}\n\n.advanced-kpi--bottom {\n    font-size: 0.8em;\n}\n.advanced-kpi--bottom .advanced-kpi--bottom-second-stage {\n    display: flex;\n    justify-content: space-between;\n}\n.advanced-kpi--bottom .source {\n    text-decoration: underline;\n    color: var(--links);\n}\n.advanced-kpi--bottom .source i {\n    margin-left: 6px;\n}\n.advanced-kpi--bottom .source:hover {\n    opacity: 0.65;\n}\n.advanced-kpi--bottom .source:hover i {\n    animation: bounce 0.7s ease infinite;\n}\n\n@keyframes bounce {\n    from {\n        margin-left: 6px;\n        margin-right: 0;\n    }\n    50% {\n        margin-left: 2px;\n        margin-right: 4px;\n    }\n    to {\n        margin-left: 6px;\n        margin-right: 0;\n    }\n}\n.no-bg rect.highcharts-background {\n    fill: transparent !important;\n}\n\n\n/* DO NOT COPY, just for Code Library resource */\n.chart-placeholder {\n    background-color: #fff1f1;\n    height: 350px;\n}\n.chart-placeholder:before {\n    display: block;\n    font-size: 2rem;\n    margin: 0.2rem 0.5rem;\n    content: \&#34;Chart\&#34;;\n}&#34;
+                 "css": &#34;/**** Dashboard ****/\n:root {\n    --boxes-radius: 6px;\n}\n\nbody, main {\n    margin: 0;\n    background-color: #F2F3F8;\n}\n\nsection {\n    padding: 1.5rem 0;\n}\n\n.header {\n    margin: 3rem 2rem;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-weight: 500;\n}\n\nh3 {\n    font-weight: 400;\n}\n\n.mb-0 {\n    margin-bottom: 0;\n}\n\n.mb-2 {\n    margin-bottom: 2rem;\n}\n\n.box {\n    position: relative;\n    padding: 13px;\n}\n.box.white {\n    background-color: white;\n}\n.box.flat {\n    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);\n    border-radius: var(--boxes-radius);\n}\n\n.advanced-kpi {\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n}\n\n.advanced-kpi--top .title {\n    font-size: 1.2em;\n    margin: 0;\n}\n.advanced-kpi--top .description {\n    margin: 0 auto;\n    color: #565656;\n    font-size: 1em;\n    font-weight: 400;\n}\n\n.advanced-kpi--middle {\n    display: flex;\n    flex-direction: column;\n    margin: 20px 0;\n}\n.advanced-kpi--middle.centered {\n    align-items: center;\n}\n.advanced-kpi--middle \u003e * {\n    margin: 5px 0;\n}\n.advanced-kpi--middle .value {\n    color: var(--highlight);\n    font-weight: 500;\n    font-size: 2.5rem;\n}\n\n.advanced-kpi--bottom {\n    font-size: 0.8em;\n}\n.advanced-kpi--bottom .advanced-kpi--bottom-second-stage {\n    display: flex;\n    justify-content: space-between;\n}\n.advanced-kpi--bottom .source {\n    text-decoration: underline;\n    color: var(--links);\n}\n.advanced-kpi--bottom .source i {\n    margin-left: 6px;\n}\n.advanced-kpi--bottom .source:hover {\n    opacity: 0.65;\n}\n.advanced-kpi--bottom .source:hover i {\n    animation: bounce 0.7s ease infinite;\n}\n\n@keyframes bounce {\n    from {\n        margin-left: 6px;\n        margin-right: 0;\n    }\n    50% {\n        margin-left: 2px;\n        margin-right: 4px;\n    }\n    to {\n        margin-left: 6px;\n        margin-right: 0;\n    }\n}\n.no-bg rect.highcharts-background {\n    fill: transparent !important;\n}\n\n/***** GRID ******/\n[class^=grid] {\n    display: grid;\n    grid-gap: 1rem;\n}\n\n@media screen and (min-width: 640px), print {\n    .sm\\:grid-2 {\n        grid-template-columns: repeat(2, minmax(0, 1fr));\n    }\n}\n@media screen and (min-width: 768px), print {\n    .md\\:grid-2 {\n        grid-template-columns: repeat(2, minmax(0, 1fr));\n    }\n\n    .md\\:grid-3 {\n        grid-template-columns: repeat(3, minmax(0, 1fr));\n    }\n\n    .md\\:grid-4 {\n        grid-template-columns: repeat(4, minmax(0, 1fr));\n    }\n\n    .md\\:grid-rows-3 {\n        grid-template-rows: repeat(3, minmax(0, 1fr));\n    }\n}\n\n[class^=cell],\n[class*=\&#34;:cell\&#34;] {\n    display: flex;\n    flex-direction: column;\n    justify-content: stretch;\n}\n\n.cell-1 {\n    grid-column: span 1/span 1;\n}\n\n.cell-row-2 {\n    grid-row: span 2/span 2;\n}\n@media screen and (min-width: 768px), print {\n\n    .md\\:cell-1 {\n        grid-column: span 1/span 1;\n    }\n\n    .md\\:cell-2 {\n        grid-column: span 2/span 2;\n    }\n}\n\n.gap-6,\n.gap-6 [class^=grid] {\n    gap: 1.5rem;\n}\n\n.gap-10,\n.gap-10 [class^=grid] {\n    gap: 2.5rem;\n}\n\n\n\n/* DO NOT COPY, just for Code Library resource */\n.chart-placeholder {\n    background-color: #fff1f1;\n    height: 350px;\n}\n.chart-placeholder:before {\n    display: block;\n    font-size: 2rem;\n    margin: 0.2rem 0.5rem;\n    content: \&#34;Chart\&#34;;\n}&#34;
                }'>
     </form>
 </div>
@@ -8353,72 +8350,7 @@ h3 {
 &lt;/div&gt;
 &lt;/div&gt;</div>
                 <style type='text/css'>
-                    /***** GRID ******/
-[class^=grid] {
-    display: grid;
-    grid-gap: 1rem;
-}
-
-@media screen and (min-width: 640px), print {
-    .sm\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-@media screen and (min-width: 768px), print {
-    .md\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .md\:grid-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .md\:grid-4 {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .md\:grid-rows-3 {
-        grid-template-rows: repeat(3, minmax(0, 1fr));
-    }
-}
-
-[class^=cell],
-[class*=&#34;:cell&#34;] {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-}
-
-.cell-1 {
-    grid-column: span 1/span 1;
-}
-
-.cell-row-2 {
-    grid-row: span 2/span 2;
-}
-@media screen and (min-width: 768px), print {
-
-    .md\:cell-1 {
-        grid-column: span 1/span 1;
-    }
-
-    .md\:cell-2 {
-        grid-column: span 2/span 2;
-    }
-}
-
-.gap-6,
-.gap-6 [class^=grid] {
-    gap: 1.5rem;
-}
-
-.gap-10,
-.gap-10 [class^=grid] {
-    gap: 2.5rem;
-}
-
-
-/**** Dashboard ****/
+                    /**** Dashboard ****/
 :root {
     --boxes-radius: 6px;
 }
@@ -8541,6 +8473,71 @@ h3 {
 .no-bg rect.highcharts-background {
     fill: transparent !important;
 }
+
+/***** GRID ******/
+[class^=grid] {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+@media screen and (min-width: 640px), print {
+    .sm\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media screen and (min-width: 768px), print {
+    .md\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .md\:grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .md\:grid-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .md\:grid-rows-3 {
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+    }
+}
+
+[class^=cell],
+[class*=&#34;:cell&#34;] {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.cell-1 {
+    grid-column: span 1/span 1;
+}
+
+.cell-row-2 {
+    grid-row: span 2/span 2;
+}
+@media screen and (min-width: 768px), print {
+
+    .md\:cell-1 {
+        grid-column: span 1/span 1;
+    }
+
+    .md\:cell-2 {
+        grid-column: span 2/span 2;
+    }
+}
+
+.gap-6,
+.gap-6 [class^=grid] {
+    gap: 1.5rem;
+}
+
+.gap-10,
+.gap-10 [class^=grid] {
+    gap: 2.5rem;
+}
+
 
 
 /* DO NOT COPY, just for Code Library resource */
@@ -8806,72 +8803,7 @@ h3 {
             
             <div class="js-tabcontent"
                  id="code-css-grid--1---2-css-content"
-                 data-clipboard="/***** GRID ******/
-[class^=grid] {
-    display: grid;
-    grid-gap: 1rem;
-}
-
-@media screen and (min-width: 640px), print {
-    .sm\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-@media screen and (min-width: 768px), print {
-    .md\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .md\:grid-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .md\:grid-4 {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .md\:grid-rows-3 {
-        grid-template-rows: repeat(3, minmax(0, 1fr));
-    }
-}
-
-[class^=cell],
-[class*=&#34;:cell&#34;] {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-}
-
-.cell-1 {
-    grid-column: span 1/span 1;
-}
-
-.cell-row-2 {
-    grid-row: span 2/span 2;
-}
-@media screen and (min-width: 768px), print {
-
-    .md\:cell-1 {
-        grid-column: span 1/span 1;
-    }
-
-    .md\:cell-2 {
-        grid-column: span 2/span 2;
-    }
-}
-
-.gap-6,
-.gap-6 [class^=grid] {
-    gap: 1.5rem;
-}
-
-.gap-10,
-.gap-10 [class^=grid] {
-    gap: 2.5rem;
-}
-
-
-/**** Dashboard ****/
+                 data-clipboard="/**** Dashboard ****/
 :root {
     --boxes-radius: 6px;
 }
@@ -8994,6 +8926,71 @@ h3 {
 .no-bg rect.highcharts-background {
     fill: transparent !important;
 }
+
+/***** GRID ******/
+[class^=grid] {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+@media screen and (min-width: 640px), print {
+    .sm\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media screen and (min-width: 768px), print {
+    .md\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .md\:grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .md\:grid-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .md\:grid-rows-3 {
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+    }
+}
+
+[class^=cell],
+[class*=&#34;:cell&#34;] {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.cell-1 {
+    grid-column: span 1/span 1;
+}
+
+.cell-row-2 {
+    grid-row: span 2/span 2;
+}
+@media screen and (min-width: 768px), print {
+
+    .md\:cell-1 {
+        grid-column: span 1/span 1;
+    }
+
+    .md\:cell-2 {
+        grid-column: span 2/span 2;
+    }
+}
+
+.gap-6,
+.gap-6 [class^=grid] {
+    gap: 1.5rem;
+}
+
+.gap-10,
+.gap-10 [class^=grid] {
+    gap: 2.5rem;
+}
+
 
 
 /* DO NOT COPY, just for Code Library resource */
@@ -9009,72 +9006,7 @@ h3 {
 }"
             >
                 <div class="highlight">
-                    <pre class="language-css" data-lang="css"><code>/***** GRID ******/
-[class^=grid] {
-    display: grid;
-    grid-gap: 1rem;
-}
-
-@media screen and (min-width: 640px), print {
-    .sm\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-@media screen and (min-width: 768px), print {
-    .md\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .md\:grid-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .md\:grid-4 {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .md\:grid-rows-3 {
-        grid-template-rows: repeat(3, minmax(0, 1fr));
-    }
-}
-
-[class^=cell],
-[class*=&#34;:cell&#34;] {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-}
-
-.cell-1 {
-    grid-column: span 1/span 1;
-}
-
-.cell-row-2 {
-    grid-row: span 2/span 2;
-}
-@media screen and (min-width: 768px), print {
-
-    .md\:cell-1 {
-        grid-column: span 1/span 1;
-    }
-
-    .md\:cell-2 {
-        grid-column: span 2/span 2;
-    }
-}
-
-.gap-6,
-.gap-6 [class^=grid] {
-    gap: 1.5rem;
-}
-
-.gap-10,
-.gap-10 [class^=grid] {
-    gap: 2.5rem;
-}
-
-
-/**** Dashboard ****/
+                    <pre class="language-css" data-lang="css"><code>/**** Dashboard ****/
 :root {
     --boxes-radius: 6px;
 }
@@ -9197,6 +9129,71 @@ h3 {
 .no-bg rect.highcharts-background {
     fill: transparent !important;
 }
+
+/***** GRID ******/
+[class^=grid] {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+@media screen and (min-width: 640px), print {
+    .sm\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media screen and (min-width: 768px), print {
+    .md\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .md\:grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .md\:grid-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .md\:grid-rows-3 {
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+    }
+}
+
+[class^=cell],
+[class*=&#34;:cell&#34;] {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.cell-1 {
+    grid-column: span 1/span 1;
+}
+
+.cell-row-2 {
+    grid-row: span 2/span 2;
+}
+@media screen and (min-width: 768px), print {
+
+    .md\:cell-1 {
+        grid-column: span 1/span 1;
+    }
+
+    .md\:cell-2 {
+        grid-column: span 2/span 2;
+    }
+}
+
+.gap-6,
+.gap-6 [class^=grid] {
+    gap: 1.5rem;
+}
+
+.gap-10,
+.gap-10 [class^=grid] {
+    gap: 2.5rem;
+}
+
 
 
 /* DO NOT COPY, just for Code Library resource */
@@ -9258,7 +9255,7 @@ h3 {
                  "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    const sourceMonitoringInterceptor = ($q) =\u003e {\n        return {\n            request: (config) =\u003e {\n              config.params \u0026\u0026 (delete config.params[&#39;source&#39;]);\n              (config.params.dataset === &#39;ods-api-monitoring&#39;) \u0026\u0026 (config.params.dataset = &#39;monitoring-copy&#39;);\n              return config;\n          }\n        }\n    }\n\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider, $httpProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n        $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
                  "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;container\&#34;\u003e\n    \u003cdiv class=\&#34;grid md:grid-2\&#34;\u003e\n        \u003cdiv class=\&#34;md:cell-1 box white flat\&#34;\u003e\n            \u003cdiv class=\&#34;advanced-kpi\&#34;\u003e\n                \u003cdiv class=\&#34;advanced-kpi--top\&#34;\u003e\n                    \u003ch3 class=\&#34;title\&#34;\u003e\n                        Title\n                    \u003c/h3\u003e\n                    \u003cp class=\&#34;description\&#34;\u003e\n                        Description\n                    \u003c/p\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;advanced-kpi--middle no-bg mb-0\&#34;\u003e\n                    \u003cdiv class=\&#34;chart-placeholder\&#34;\u003e\u003c/div\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;advanced-kpi--bottom\&#34;\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--bottom-second-stage\&#34;\u003e\n                        \u003cspan class=\&#34;date\&#34;\u003eDate\u003c/span\u003e\n                        \u003ca class=\&#34;source\&#34;\n                           href=\&#34;#\&#34;\n                           title=\&#34;Title\&#34;\u003e\n                            Source \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                        \u003c/a\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;md:cell-1 box white flat\&#34;\u003e\n            \u003cdiv class=\&#34;advanced-kpi\&#34;\u003e\n                \u003cdiv class=\&#34;advanced-kpi--top\&#34;\u003e\n                    \u003ch3 class=\&#34;title\&#34;\u003e\n                        Title\n                    \u003c/h3\u003e\n                    \u003cp class=\&#34;description\&#34;\u003e\n                        Description\n                    \u003c/p\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;advanced-kpi--middle no-bg mb-0\&#34;\u003e\n                    \u003cdiv class=\&#34;chart-placeholder\&#34;\u003e\u003c/div\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;advanced-kpi--bottom\&#34;\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--bottom-second-stage\&#34;\u003e\n                        \u003cspan class=\&#34;date\&#34;\u003eDate\u003c/span\u003e\n                        \u003ca class=\&#34;source\&#34;\n                           href=\&#34;#\&#34;\n                           title=\&#34;Title\&#34;\u003e\n                            Source \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                        \u003c/a\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\n\u003c/div\u003e&#34;,
-                 "css": &#34;/***** GRID ******/\n[class^=grid] {\n    display: grid;\n    grid-gap: 1rem;\n}\n\n@media screen and (min-width: 640px), print {\n    .sm\\:grid-2 {\n        grid-template-columns: repeat(2, minmax(0, 1fr));\n    }\n}\n@media screen and (min-width: 768px), print {\n    .md\\:grid-2 {\n        grid-template-columns: repeat(2, minmax(0, 1fr));\n    }\n\n    .md\\:grid-3 {\n        grid-template-columns: repeat(3, minmax(0, 1fr));\n    }\n\n    .md\\:grid-4 {\n        grid-template-columns: repeat(4, minmax(0, 1fr));\n    }\n\n    .md\\:grid-rows-3 {\n        grid-template-rows: repeat(3, minmax(0, 1fr));\n    }\n}\n\n[class^=cell],\n[class*=\&#34;:cell\&#34;] {\n    display: flex;\n    flex-direction: column;\n    justify-content: stretch;\n}\n\n.cell-1 {\n    grid-column: span 1/span 1;\n}\n\n.cell-row-2 {\n    grid-row: span 2/span 2;\n}\n@media screen and (min-width: 768px), print {\n\n    .md\\:cell-1 {\n        grid-column: span 1/span 1;\n    }\n\n    .md\\:cell-2 {\n        grid-column: span 2/span 2;\n    }\n}\n\n.gap-6,\n.gap-6 [class^=grid] {\n    gap: 1.5rem;\n}\n\n.gap-10,\n.gap-10 [class^=grid] {\n    gap: 2.5rem;\n}\n\n\n/**** Dashboard ****/\n:root {\n    --boxes-radius: 6px;\n}\n\nbody, main {\n    margin: 0;\n    background-color: #F2F3F8;\n}\n\nsection {\n    padding: 1.5rem 0;\n}\n\n.header {\n    margin: 3rem 2rem;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-weight: 500;\n}\n\nh3 {\n    font-weight: 400;\n}\n\n.mb-0 {\n    margin-bottom: 0;\n}\n\n.mb-2 {\n    margin-bottom: 2rem;\n}\n\n.box {\n    position: relative;\n    padding: 13px;\n}\n.box.white {\n    background-color: white;\n}\n.box.flat {\n    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);\n    border-radius: var(--boxes-radius);\n}\n\n.advanced-kpi {\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n}\n\n.advanced-kpi--top .title {\n    font-size: 1.2em;\n    margin: 0;\n}\n.advanced-kpi--top .description {\n    margin: 0 auto;\n    color: #565656;\n    font-size: 1em;\n    font-weight: 400;\n}\n\n.advanced-kpi--middle {\n    display: flex;\n    flex-direction: column;\n    margin: 20px 0;\n}\n.advanced-kpi--middle.centered {\n    align-items: center;\n}\n.advanced-kpi--middle \u003e * {\n    margin: 5px 0;\n}\n.advanced-kpi--middle .value {\n    color: var(--highlight);\n    font-weight: 500;\n    font-size: 2.5rem;\n}\n\n.advanced-kpi--bottom {\n    font-size: 0.8em;\n}\n.advanced-kpi--bottom .advanced-kpi--bottom-second-stage {\n    display: flex;\n    justify-content: space-between;\n}\n.advanced-kpi--bottom .source {\n    text-decoration: underline;\n    color: var(--links);\n}\n.advanced-kpi--bottom .source i {\n    margin-left: 6px;\n}\n.advanced-kpi--bottom .source:hover {\n    opacity: 0.65;\n}\n.advanced-kpi--bottom .source:hover i {\n    animation: bounce 0.7s ease infinite;\n}\n\n@keyframes bounce {\n    from {\n        margin-left: 6px;\n        margin-right: 0;\n    }\n    50% {\n        margin-left: 2px;\n        margin-right: 4px;\n    }\n    to {\n        margin-left: 6px;\n        margin-right: 0;\n    }\n}\n.no-bg rect.highcharts-background {\n    fill: transparent !important;\n}\n\n\n/* DO NOT COPY, just for Code Library resource */\n.chart-placeholder {\n    background-color: #fff1f1;\n    height: 350px;\n}\n.chart-placeholder:before {\n    display: block;\n    font-size: 2rem;\n    margin: 0.2rem 0.5rem;\n    content: \&#34;Chart\&#34;;\n}&#34;
+                 "css": &#34;/**** Dashboard ****/\n:root {\n    --boxes-radius: 6px;\n}\n\nbody, main {\n    margin: 0;\n    background-color: #F2F3F8;\n}\n\nsection {\n    padding: 1.5rem 0;\n}\n\n.header {\n    margin: 3rem 2rem;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-weight: 500;\n}\n\nh3 {\n    font-weight: 400;\n}\n\n.mb-0 {\n    margin-bottom: 0;\n}\n\n.mb-2 {\n    margin-bottom: 2rem;\n}\n\n.box {\n    position: relative;\n    padding: 13px;\n}\n.box.white {\n    background-color: white;\n}\n.box.flat {\n    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);\n    border-radius: var(--boxes-radius);\n}\n\n.advanced-kpi {\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n}\n\n.advanced-kpi--top .title {\n    font-size: 1.2em;\n    margin: 0;\n}\n.advanced-kpi--top .description {\n    margin: 0 auto;\n    color: #565656;\n    font-size: 1em;\n    font-weight: 400;\n}\n\n.advanced-kpi--middle {\n    display: flex;\n    flex-direction: column;\n    margin: 20px 0;\n}\n.advanced-kpi--middle.centered {\n    align-items: center;\n}\n.advanced-kpi--middle \u003e * {\n    margin: 5px 0;\n}\n.advanced-kpi--middle .value {\n    color: var(--highlight);\n    font-weight: 500;\n    font-size: 2.5rem;\n}\n\n.advanced-kpi--bottom {\n    font-size: 0.8em;\n}\n.advanced-kpi--bottom .advanced-kpi--bottom-second-stage {\n    display: flex;\n    justify-content: space-between;\n}\n.advanced-kpi--bottom .source {\n    text-decoration: underline;\n    color: var(--links);\n}\n.advanced-kpi--bottom .source i {\n    margin-left: 6px;\n}\n.advanced-kpi--bottom .source:hover {\n    opacity: 0.65;\n}\n.advanced-kpi--bottom .source:hover i {\n    animation: bounce 0.7s ease infinite;\n}\n\n@keyframes bounce {\n    from {\n        margin-left: 6px;\n        margin-right: 0;\n    }\n    50% {\n        margin-left: 2px;\n        margin-right: 4px;\n    }\n    to {\n        margin-left: 6px;\n        margin-right: 0;\n    }\n}\n.no-bg rect.highcharts-background {\n    fill: transparent !important;\n}\n\n/***** GRID ******/\n[class^=grid] {\n    display: grid;\n    grid-gap: 1rem;\n}\n\n@media screen and (min-width: 640px), print {\n    .sm\\:grid-2 {\n        grid-template-columns: repeat(2, minmax(0, 1fr));\n    }\n}\n@media screen and (min-width: 768px), print {\n    .md\\:grid-2 {\n        grid-template-columns: repeat(2, minmax(0, 1fr));\n    }\n\n    .md\\:grid-3 {\n        grid-template-columns: repeat(3, minmax(0, 1fr));\n    }\n\n    .md\\:grid-4 {\n        grid-template-columns: repeat(4, minmax(0, 1fr));\n    }\n\n    .md\\:grid-rows-3 {\n        grid-template-rows: repeat(3, minmax(0, 1fr));\n    }\n}\n\n[class^=cell],\n[class*=\&#34;:cell\&#34;] {\n    display: flex;\n    flex-direction: column;\n    justify-content: stretch;\n}\n\n.cell-1 {\n    grid-column: span 1/span 1;\n}\n\n.cell-row-2 {\n    grid-row: span 2/span 2;\n}\n@media screen and (min-width: 768px), print {\n\n    .md\\:cell-1 {\n        grid-column: span 1/span 1;\n    }\n\n    .md\\:cell-2 {\n        grid-column: span 2/span 2;\n    }\n}\n\n.gap-6,\n.gap-6 [class^=grid] {\n    gap: 1.5rem;\n}\n\n.gap-10,\n.gap-10 [class^=grid] {\n    gap: 2.5rem;\n}\n\n\n\n\n/* DO NOT COPY, just for Code Library resource */\n.chart-placeholder {\n    background-color: #fff1f1;\n    height: 350px;\n}\n.chart-placeholder:before {\n    display: block;\n    font-size: 2rem;\n    margin: 0.2rem 0.5rem;\n    content: \&#34;Chart\&#34;;\n}&#34;
                }'>
     </form>
 </div>
@@ -9448,72 +9445,7 @@ h3 {
 &lt;/div&gt;
 &lt;/div&gt;</div>
                 <style type='text/css'>
-                    /***** GRID ******/
-[class^=grid] {
-    display: grid;
-    grid-gap: 1rem;
-}
-
-@media screen and (min-width: 640px), print {
-    .sm\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-@media screen and (min-width: 768px), print {
-    .md\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .md\:grid-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .md\:grid-4 {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .md\:grid-rows-3 {
-        grid-template-rows: repeat(3, minmax(0, 1fr));
-    }
-}
-
-[class^=cell],
-[class*=&#34;:cell&#34;] {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-}
-
-.cell-1 {
-    grid-column: span 1/span 1;
-}
-
-.cell-row-2 {
-    grid-row: span 2/span 2;
-}
-@media screen and (min-width: 768px), print {
-
-    .md\:cell-1 {
-        grid-column: span 1/span 1;
-    }
-
-    .md\:cell-2 {
-        grid-column: span 2/span 2;
-    }
-}
-
-.gap-6,
-.gap-6 [class^=grid] {
-    gap: 1.5rem;
-}
-
-.gap-10,
-.gap-10 [class^=grid] {
-    gap: 2.5rem;
-}
-
-
-/**** Dashboard ****/
+                    /**** Dashboard ****/
 :root {
     --boxes-radius: 6px;
 }
@@ -9636,6 +9568,72 @@ h3 {
 .no-bg rect.highcharts-background {
     fill: transparent !important;
 }
+
+/***** GRID ******/
+[class^=grid] {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+@media screen and (min-width: 640px), print {
+    .sm\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media screen and (min-width: 768px), print {
+    .md\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .md\:grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .md\:grid-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .md\:grid-rows-3 {
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+    }
+}
+
+[class^=cell],
+[class*=&#34;:cell&#34;] {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.cell-1 {
+    grid-column: span 1/span 1;
+}
+
+.cell-row-2 {
+    grid-row: span 2/span 2;
+}
+@media screen and (min-width: 768px), print {
+
+    .md\:cell-1 {
+        grid-column: span 1/span 1;
+    }
+
+    .md\:cell-2 {
+        grid-column: span 2/span 2;
+    }
+}
+
+.gap-6,
+.gap-6 [class^=grid] {
+    gap: 1.5rem;
+}
+
+.gap-10,
+.gap-10 [class^=grid] {
+    gap: 2.5rem;
+}
+
+
 
 
 /* DO NOT COPY, just for Code Library resource */
@@ -9839,72 +9837,7 @@ h3 {
             
             <div class="js-tabcontent"
                  id="code-css-grid--1---1-css-content"
-                 data-clipboard="/***** GRID ******/
-[class^=grid] {
-    display: grid;
-    grid-gap: 1rem;
-}
-
-@media screen and (min-width: 640px), print {
-    .sm\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-@media screen and (min-width: 768px), print {
-    .md\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .md\:grid-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .md\:grid-4 {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .md\:grid-rows-3 {
-        grid-template-rows: repeat(3, minmax(0, 1fr));
-    }
-}
-
-[class^=cell],
-[class*=&#34;:cell&#34;] {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-}
-
-.cell-1 {
-    grid-column: span 1/span 1;
-}
-
-.cell-row-2 {
-    grid-row: span 2/span 2;
-}
-@media screen and (min-width: 768px), print {
-
-    .md\:cell-1 {
-        grid-column: span 1/span 1;
-    }
-
-    .md\:cell-2 {
-        grid-column: span 2/span 2;
-    }
-}
-
-.gap-6,
-.gap-6 [class^=grid] {
-    gap: 1.5rem;
-}
-
-.gap-10,
-.gap-10 [class^=grid] {
-    gap: 2.5rem;
-}
-
-
-/**** Dashboard ****/
+                 data-clipboard="/**** Dashboard ****/
 :root {
     --boxes-radius: 6px;
 }
@@ -10027,6 +9960,72 @@ h3 {
 .no-bg rect.highcharts-background {
     fill: transparent !important;
 }
+
+/***** GRID ******/
+[class^=grid] {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+@media screen and (min-width: 640px), print {
+    .sm\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media screen and (min-width: 768px), print {
+    .md\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .md\:grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .md\:grid-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .md\:grid-rows-3 {
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+    }
+}
+
+[class^=cell],
+[class*=&#34;:cell&#34;] {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.cell-1 {
+    grid-column: span 1/span 1;
+}
+
+.cell-row-2 {
+    grid-row: span 2/span 2;
+}
+@media screen and (min-width: 768px), print {
+
+    .md\:cell-1 {
+        grid-column: span 1/span 1;
+    }
+
+    .md\:cell-2 {
+        grid-column: span 2/span 2;
+    }
+}
+
+.gap-6,
+.gap-6 [class^=grid] {
+    gap: 1.5rem;
+}
+
+.gap-10,
+.gap-10 [class^=grid] {
+    gap: 2.5rem;
+}
+
+
 
 
 /* DO NOT COPY, just for Code Library resource */
@@ -10042,72 +10041,7 @@ h3 {
 }"
             >
                 <div class="highlight">
-                    <pre class="language-css" data-lang="css"><code>/***** GRID ******/
-[class^=grid] {
-    display: grid;
-    grid-gap: 1rem;
-}
-
-@media screen and (min-width: 640px), print {
-    .sm\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-@media screen and (min-width: 768px), print {
-    .md\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .md\:grid-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .md\:grid-4 {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .md\:grid-rows-3 {
-        grid-template-rows: repeat(3, minmax(0, 1fr));
-    }
-}
-
-[class^=cell],
-[class*=&#34;:cell&#34;] {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-}
-
-.cell-1 {
-    grid-column: span 1/span 1;
-}
-
-.cell-row-2 {
-    grid-row: span 2/span 2;
-}
-@media screen and (min-width: 768px), print {
-
-    .md\:cell-1 {
-        grid-column: span 1/span 1;
-    }
-
-    .md\:cell-2 {
-        grid-column: span 2/span 2;
-    }
-}
-
-.gap-6,
-.gap-6 [class^=grid] {
-    gap: 1.5rem;
-}
-
-.gap-10,
-.gap-10 [class^=grid] {
-    gap: 2.5rem;
-}
-
-
-/**** Dashboard ****/
+                    <pre class="language-css" data-lang="css"><code>/**** Dashboard ****/
 :root {
     --boxes-radius: 6px;
 }
@@ -10230,6 +10164,72 @@ h3 {
 .no-bg rect.highcharts-background {
     fill: transparent !important;
 }
+
+/***** GRID ******/
+[class^=grid] {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+@media screen and (min-width: 640px), print {
+    .sm\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media screen and (min-width: 768px), print {
+    .md\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .md\:grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .md\:grid-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .md\:grid-rows-3 {
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+    }
+}
+
+[class^=cell],
+[class*=&#34;:cell&#34;] {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.cell-1 {
+    grid-column: span 1/span 1;
+}
+
+.cell-row-2 {
+    grid-row: span 2/span 2;
+}
+@media screen and (min-width: 768px), print {
+
+    .md\:cell-1 {
+        grid-column: span 1/span 1;
+    }
+
+    .md\:cell-2 {
+        grid-column: span 2/span 2;
+    }
+}
+
+.gap-6,
+.gap-6 [class^=grid] {
+    gap: 1.5rem;
+}
+
+.gap-10,
+.gap-10 [class^=grid] {
+    gap: 2.5rem;
+}
+
+
 
 
 /* DO NOT COPY, just for Code Library resource */
@@ -10291,7 +10291,7 @@ h3 {
                  "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    const sourceMonitoringInterceptor = ($q) =\u003e {\n        return {\n            request: (config) =\u003e {\n              config.params \u0026\u0026 (delete config.params[&#39;source&#39;]);\n              (config.params.dataset === &#39;ods-api-monitoring&#39;) \u0026\u0026 (config.params.dataset = &#39;monitoring-copy&#39;);\n              return config;\n          }\n        }\n    }\n\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider, $httpProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n        $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
                  "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;container\&#34;\u003e\n    \u003cdiv class=\&#34;grid md:grid-2\&#34;\u003e\n        \u003cdiv class=\&#34;grid md:grid-2\&#34;\u003e\n            \u003cdiv class=\&#34;cell-1 box white flat\&#34;\u003e\n                \u003cdiv class=\&#34;advanced-kpi\&#34;\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--top\&#34;\u003e\n                        \u003ch3 class=\&#34;title\&#34;\u003e\n                            Title\n                        \u003c/h3\u003e\n                        \u003cp class=\&#34;description\&#34;\u003e\n                            Description\n                        \u003c/p\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--middle centered\&#34;\u003e\n                        \u003cp class=\&#34;value\&#34;\u003e\n                            1&#39;234 %\n                        \u003c/p\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--bottom\&#34;\u003e\n                        \u003cdiv class=\&#34;advanced-kpi--bottom-second-stage\&#34;\u003e\n                            \u003cspan class=\&#34;date\&#34;\u003eDate\u003c/span\u003e\n                            \u003ca class=\&#34;source\&#34;\n                               href=\&#34;#\&#34;\n                               title=\&#34;Title\&#34;\u003e\n                                Source \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                            \u003c/a\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;cell-1 box white flat\&#34;\u003e\n                \u003cdiv class=\&#34;advanced-kpi\&#34;\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--top\&#34;\u003e\n                        \u003ch3 class=\&#34;title\&#34;\u003e\n                            Title\n                        \u003c/h3\u003e\n                        \u003cp class=\&#34;description\&#34;\u003e\n                            Description\n                        \u003c/p\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--middle centered\&#34;\u003e\n                        \u003cp class=\&#34;value\&#34;\u003e\n                            1&#39;234 %\n                        \u003c/p\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--bottom\&#34;\u003e\n                        \u003cdiv class=\&#34;advanced-kpi--bottom-second-stage\&#34;\u003e\n                            \u003cspan class=\&#34;date\&#34;\u003eDate\u003c/span\u003e\n                            \u003ca class=\&#34;source\&#34;\n                               href=\&#34;#\&#34;\n                               title=\&#34;Title\&#34;\u003e\n                                Source \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                            \u003c/a\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;md:cell-2 box white flat\&#34;\u003e\n                \u003cdiv class=\&#34;advanced-kpi\&#34;\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--top\&#34;\u003e\n                        \u003ch3 class=\&#34;title\&#34;\u003e\n                            Title\n                        \u003c/h3\u003e\n                        \u003cp class=\&#34;description\&#34;\u003e\n                            Description\n                        \u003c/p\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--middle no-bg mb-0\&#34;\u003e\n                        \u003cdiv class=\&#34;chart-placeholder\&#34;\u003e\u003c/div\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--bottom\&#34;\u003e\n                        \u003cdiv class=\&#34;advanced-kpi--bottom-second-stage\&#34;\u003e\n                            \u003cspan class=\&#34;date\&#34;\u003eDate\u003c/span\u003e\n                            \u003ca class=\&#34;source\&#34;\n                               href=\&#34;#\&#34;\n                               title=\&#34;Title\&#34;\u003e\n                                Source \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                            \u003c/a\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;grid md:grid-2\&#34;\u003e\n            \u003cdiv class=\&#34;md:cell-2 box white flat\&#34;\u003e\n                \u003cdiv class=\&#34;advanced-kpi\&#34;\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--top\&#34;\u003e\n                        \u003ch3 class=\&#34;title\&#34;\u003e\n                            Title\n                        \u003c/h3\u003e\n                        \u003cp class=\&#34;description\&#34;\u003e\n                            Description\n                        \u003c/p\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--middle no-bg mb-0\&#34;\u003e\n                        \u003cdiv class=\&#34;chart-placeholder\&#34;\u003e\u003c/div\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--bottom\&#34;\u003e\n                        \u003cdiv class=\&#34;advanced-kpi--bottom-second-stage\&#34;\u003e\n                            \u003cspan class=\&#34;date\&#34;\u003eDate\u003c/span\u003e\n                            \u003ca class=\&#34;source\&#34;\n                               href=\&#34;#\&#34;\n                               title=\&#34;Title\&#34;\u003e\n                                Source \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                            \u003c/a\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;cell-1 box white flat\&#34;\u003e\n                \u003cdiv class=\&#34;advanced-kpi\&#34;\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--top\&#34;\u003e\n                        \u003ch3 class=\&#34;title\&#34;\u003e\n                            Title\n                        \u003c/h3\u003e\n                        \u003cp class=\&#34;description\&#34;\u003e\n                            Description\n                        \u003c/p\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--middle centered\&#34;\u003e\n                        \u003cp class=\&#34;value\&#34;\u003e\n                            1&#39;234 %\n                        \u003c/p\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--bottom\&#34;\u003e\n                        \u003cdiv class=\&#34;advanced-kpi--bottom-second-stage\&#34;\u003e\n                            \u003cspan class=\&#34;date\&#34;\u003eDate\u003c/span\u003e\n                            \u003ca class=\&#34;source\&#34;\n                               href=\&#34;#\&#34;\n                               title=\&#34;Title\&#34;\u003e\n                                Source \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                            \u003c/a\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;cell-1 box white flat\&#34;\u003e\n                \u003cdiv class=\&#34;advanced-kpi\&#34;\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--top\&#34;\u003e\n                        \u003ch3 class=\&#34;title\&#34;\u003e\n                            Title\n                        \u003c/h3\u003e\n                        \u003cp class=\&#34;description\&#34;\u003e\n                            Description\n                        \u003c/p\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--middle centered\&#34;\u003e\n                        \u003cp class=\&#34;value\&#34;\u003e\n                            1&#39;234 %\n                        \u003c/p\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--bottom\&#34;\u003e\n                        \u003cdiv class=\&#34;advanced-kpi--bottom-second-stage\&#34;\u003e\n                            \u003cspan class=\&#34;date\&#34;\u003eDate\u003c/span\u003e\n                            \u003ca class=\&#34;source\&#34;\n                               href=\&#34;#\&#34;\n                               title=\&#34;Title\&#34;\u003e\n                                Source \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                            \u003c/a\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\n\u003c/div\u003e&#34;,
-                 "css": &#34;/***** GRID ******/\n[class^=grid] {\n    display: grid;\n    grid-gap: 1rem;\n}\n\n@media screen and (min-width: 640px), print {\n    .sm\\:grid-2 {\n        grid-template-columns: repeat(2, minmax(0, 1fr));\n    }\n}\n@media screen and (min-width: 768px), print {\n    .md\\:grid-2 {\n        grid-template-columns: repeat(2, minmax(0, 1fr));\n    }\n\n    .md\\:grid-3 {\n        grid-template-columns: repeat(3, minmax(0, 1fr));\n    }\n\n    .md\\:grid-4 {\n        grid-template-columns: repeat(4, minmax(0, 1fr));\n    }\n\n    .md\\:grid-rows-3 {\n        grid-template-rows: repeat(3, minmax(0, 1fr));\n    }\n}\n\n[class^=cell],\n[class*=\&#34;:cell\&#34;] {\n    display: flex;\n    flex-direction: column;\n    justify-content: stretch;\n}\n\n.cell-1 {\n    grid-column: span 1/span 1;\n}\n\n.cell-row-2 {\n    grid-row: span 2/span 2;\n}\n@media screen and (min-width: 768px), print {\n\n    .md\\:cell-1 {\n        grid-column: span 1/span 1;\n    }\n\n    .md\\:cell-2 {\n        grid-column: span 2/span 2;\n    }\n}\n\n.gap-6,\n.gap-6 [class^=grid] {\n    gap: 1.5rem;\n}\n\n.gap-10,\n.gap-10 [class^=grid] {\n    gap: 2.5rem;\n}\n\n\n/**** Dashboard ****/\n:root {\n    --boxes-radius: 6px;\n}\n\nbody, main {\n    margin: 0;\n    background-color: #F2F3F8;\n}\n\nsection {\n    padding: 1.5rem 0;\n}\n\n.header {\n    margin: 3rem 2rem;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-weight: 500;\n}\n\nh3 {\n    font-weight: 400;\n}\n\n.mb-0 {\n    margin-bottom: 0;\n}\n\n.mb-2 {\n    margin-bottom: 2rem;\n}\n\n.box {\n    position: relative;\n    padding: 13px;\n}\n.box.white {\n    background-color: white;\n}\n.box.flat {\n    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);\n    border-radius: var(--boxes-radius);\n}\n\n.advanced-kpi {\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n}\n\n.advanced-kpi--top .title {\n    font-size: 1.2em;\n    margin: 0;\n}\n.advanced-kpi--top .description {\n    margin: 0 auto;\n    color: #565656;\n    font-size: 1em;\n    font-weight: 400;\n}\n\n.advanced-kpi--middle {\n    display: flex;\n    flex-direction: column;\n    margin: 20px 0;\n}\n.advanced-kpi--middle.centered {\n    align-items: center;\n}\n.advanced-kpi--middle \u003e * {\n    margin: 5px 0;\n}\n.advanced-kpi--middle .value {\n    color: var(--highlight);\n    font-weight: 500;\n    font-size: 2.5rem;\n}\n\n.advanced-kpi--bottom {\n    font-size: 0.8em;\n}\n.advanced-kpi--bottom .advanced-kpi--bottom-second-stage {\n    display: flex;\n    justify-content: space-between;\n}\n.advanced-kpi--bottom .source {\n    text-decoration: underline;\n    color: var(--links);\n}\n.advanced-kpi--bottom .source i {\n    margin-left: 6px;\n}\n.advanced-kpi--bottom .source:hover {\n    opacity: 0.65;\n}\n.advanced-kpi--bottom .source:hover i {\n    animation: bounce 0.7s ease infinite;\n}\n\n@keyframes bounce {\n    from {\n        margin-left: 6px;\n        margin-right: 0;\n    }\n    50% {\n        margin-left: 2px;\n        margin-right: 4px;\n    }\n    to {\n        margin-left: 6px;\n        margin-right: 0;\n    }\n}\n.no-bg rect.highcharts-background {\n    fill: transparent !important;\n}\n\n\n/* DO NOT COPY, just for Code Library resource */\n.chart-placeholder {\n    background-color: #fff1f1;\n    height: 350px;\n}\n.chart-placeholder:before {\n    display: block;\n    font-size: 2rem;\n    margin: 0.2rem 0.5rem;\n    content: \&#34;Chart\&#34;;\n}&#34;
+                 "css": &#34;/**** Dashboard ****/\n:root {\n    --boxes-radius: 6px;\n}\n\nbody, main {\n    margin: 0;\n    background-color: #F2F3F8;\n}\n\nsection {\n    padding: 1.5rem 0;\n}\n\n.header {\n    margin: 3rem 2rem;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-weight: 500;\n}\n\nh3 {\n    font-weight: 400;\n}\n\n.mb-0 {\n    margin-bottom: 0;\n}\n\n.mb-2 {\n    margin-bottom: 2rem;\n}\n\n.box {\n    position: relative;\n    padding: 13px;\n}\n.box.white {\n    background-color: white;\n}\n.box.flat {\n    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);\n    border-radius: var(--boxes-radius);\n}\n\n.advanced-kpi {\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n}\n\n.advanced-kpi--top .title {\n    font-size: 1.2em;\n    margin: 0;\n}\n.advanced-kpi--top .description {\n    margin: 0 auto;\n    color: #565656;\n    font-size: 1em;\n    font-weight: 400;\n}\n\n.advanced-kpi--middle {\n    display: flex;\n    flex-direction: column;\n    margin: 20px 0;\n}\n.advanced-kpi--middle.centered {\n    align-items: center;\n}\n.advanced-kpi--middle \u003e * {\n    margin: 5px 0;\n}\n.advanced-kpi--middle .value {\n    color: var(--highlight);\n    font-weight: 500;\n    font-size: 2.5rem;\n}\n\n.advanced-kpi--bottom {\n    font-size: 0.8em;\n}\n.advanced-kpi--bottom .advanced-kpi--bottom-second-stage {\n    display: flex;\n    justify-content: space-between;\n}\n.advanced-kpi--bottom .source {\n    text-decoration: underline;\n    color: var(--links);\n}\n.advanced-kpi--bottom .source i {\n    margin-left: 6px;\n}\n.advanced-kpi--bottom .source:hover {\n    opacity: 0.65;\n}\n.advanced-kpi--bottom .source:hover i {\n    animation: bounce 0.7s ease infinite;\n}\n\n@keyframes bounce {\n    from {\n        margin-left: 6px;\n        margin-right: 0;\n    }\n    50% {\n        margin-left: 2px;\n        margin-right: 4px;\n    }\n    to {\n        margin-left: 6px;\n        margin-right: 0;\n    }\n}\n.no-bg rect.highcharts-background {\n    fill: transparent !important;\n}\n\n/***** GRID ******/\n[class^=grid] {\n    display: grid;\n    grid-gap: 1rem;\n}\n\n@media screen and (min-width: 640px), print {\n    .sm\\:grid-2 {\n        grid-template-columns: repeat(2, minmax(0, 1fr));\n    }\n}\n@media screen and (min-width: 768px), print {\n    .md\\:grid-2 {\n        grid-template-columns: repeat(2, minmax(0, 1fr));\n    }\n\n    .md\\:grid-3 {\n        grid-template-columns: repeat(3, minmax(0, 1fr));\n    }\n\n    .md\\:grid-4 {\n        grid-template-columns: repeat(4, minmax(0, 1fr));\n    }\n\n    .md\\:grid-rows-3 {\n        grid-template-rows: repeat(3, minmax(0, 1fr));\n    }\n}\n\n[class^=cell],\n[class*=\&#34;:cell\&#34;] {\n    display: flex;\n    flex-direction: column;\n    justify-content: stretch;\n}\n\n.cell-1 {\n    grid-column: span 1/span 1;\n}\n\n.cell-row-2 {\n    grid-row: span 2/span 2;\n}\n@media screen and (min-width: 768px), print {\n\n    .md\\:cell-1 {\n        grid-column: span 1/span 1;\n    }\n\n    .md\\:cell-2 {\n        grid-column: span 2/span 2;\n    }\n}\n\n.gap-6,\n.gap-6 [class^=grid] {\n    gap: 1.5rem;\n}\n\n.gap-10,\n.gap-10 [class^=grid] {\n    gap: 2.5rem;\n}\n\n\n\n/* DO NOT COPY, just for Code Library resource */\n.chart-placeholder {\n    background-color: #fff1f1;\n    height: 350px;\n}\n.chart-placeholder:before {\n    display: block;\n    font-size: 2rem;\n    margin: 0.2rem 0.5rem;\n    content: \&#34;Chart\&#34;;\n}&#34;
                }'>
     </form>
 </div>
@@ -10593,72 +10593,7 @@ h3 {
 &lt;/div&gt;
 &lt;/div&gt;</div>
                 <style type='text/css'>
-                    /***** GRID ******/
-[class^=grid] {
-    display: grid;
-    grid-gap: 1rem;
-}
-
-@media screen and (min-width: 640px), print {
-    .sm\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-@media screen and (min-width: 768px), print {
-    .md\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .md\:grid-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .md\:grid-4 {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .md\:grid-rows-3 {
-        grid-template-rows: repeat(3, minmax(0, 1fr));
-    }
-}
-
-[class^=cell],
-[class*=&#34;:cell&#34;] {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-}
-
-.cell-1 {
-    grid-column: span 1/span 1;
-}
-
-.cell-row-2 {
-    grid-row: span 2/span 2;
-}
-@media screen and (min-width: 768px), print {
-
-    .md\:cell-1 {
-        grid-column: span 1/span 1;
-    }
-
-    .md\:cell-2 {
-        grid-column: span 2/span 2;
-    }
-}
-
-.gap-6,
-.gap-6 [class^=grid] {
-    gap: 1.5rem;
-}
-
-.gap-10,
-.gap-10 [class^=grid] {
-    gap: 2.5rem;
-}
-
-
-/**** Dashboard ****/
+                    /**** Dashboard ****/
 :root {
     --boxes-radius: 6px;
 }
@@ -10781,6 +10716,71 @@ h3 {
 .no-bg rect.highcharts-background {
     fill: transparent !important;
 }
+
+/***** GRID ******/
+[class^=grid] {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+@media screen and (min-width: 640px), print {
+    .sm\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media screen and (min-width: 768px), print {
+    .md\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .md\:grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .md\:grid-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .md\:grid-rows-3 {
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+    }
+}
+
+[class^=cell],
+[class*=&#34;:cell&#34;] {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.cell-1 {
+    grid-column: span 1/span 1;
+}
+
+.cell-row-2 {
+    grid-row: span 2/span 2;
+}
+@media screen and (min-width: 768px), print {
+
+    .md\:cell-1 {
+        grid-column: span 1/span 1;
+    }
+
+    .md\:cell-2 {
+        grid-column: span 2/span 2;
+    }
+}
+
+.gap-6,
+.gap-6 [class^=grid] {
+    gap: 1.5rem;
+}
+
+.gap-10,
+.gap-10 [class^=grid] {
+    gap: 2.5rem;
+}
+
 
 
 /* DO NOT COPY, just for Code Library resource */
@@ -11208,72 +11208,7 @@ h3 {
             
             <div class="js-tabcontent"
                  id="code-css-grid--complex-example-1-css-content"
-                 data-clipboard="/***** GRID ******/
-[class^=grid] {
-    display: grid;
-    grid-gap: 1rem;
-}
-
-@media screen and (min-width: 640px), print {
-    .sm\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-@media screen and (min-width: 768px), print {
-    .md\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .md\:grid-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .md\:grid-4 {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .md\:grid-rows-3 {
-        grid-template-rows: repeat(3, minmax(0, 1fr));
-    }
-}
-
-[class^=cell],
-[class*=&#34;:cell&#34;] {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-}
-
-.cell-1 {
-    grid-column: span 1/span 1;
-}
-
-.cell-row-2 {
-    grid-row: span 2/span 2;
-}
-@media screen and (min-width: 768px), print {
-
-    .md\:cell-1 {
-        grid-column: span 1/span 1;
-    }
-
-    .md\:cell-2 {
-        grid-column: span 2/span 2;
-    }
-}
-
-.gap-6,
-.gap-6 [class^=grid] {
-    gap: 1.5rem;
-}
-
-.gap-10,
-.gap-10 [class^=grid] {
-    gap: 2.5rem;
-}
-
-
-/**** Dashboard ****/
+                 data-clipboard="/**** Dashboard ****/
 :root {
     --boxes-radius: 6px;
 }
@@ -11396,6 +11331,71 @@ h3 {
 .no-bg rect.highcharts-background {
     fill: transparent !important;
 }
+
+/***** GRID ******/
+[class^=grid] {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+@media screen and (min-width: 640px), print {
+    .sm\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media screen and (min-width: 768px), print {
+    .md\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .md\:grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .md\:grid-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .md\:grid-rows-3 {
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+    }
+}
+
+[class^=cell],
+[class*=&#34;:cell&#34;] {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.cell-1 {
+    grid-column: span 1/span 1;
+}
+
+.cell-row-2 {
+    grid-row: span 2/span 2;
+}
+@media screen and (min-width: 768px), print {
+
+    .md\:cell-1 {
+        grid-column: span 1/span 1;
+    }
+
+    .md\:cell-2 {
+        grid-column: span 2/span 2;
+    }
+}
+
+.gap-6,
+.gap-6 [class^=grid] {
+    gap: 1.5rem;
+}
+
+.gap-10,
+.gap-10 [class^=grid] {
+    gap: 2.5rem;
+}
+
 
 
 /* DO NOT COPY, just for Code Library resource */
@@ -11411,72 +11411,7 @@ h3 {
 }"
             >
                 <div class="highlight">
-                    <pre class="language-css" data-lang="css"><code>/***** GRID ******/
-[class^=grid] {
-    display: grid;
-    grid-gap: 1rem;
-}
-
-@media screen and (min-width: 640px), print {
-    .sm\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-@media screen and (min-width: 768px), print {
-    .md\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .md\:grid-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .md\:grid-4 {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .md\:grid-rows-3 {
-        grid-template-rows: repeat(3, minmax(0, 1fr));
-    }
-}
-
-[class^=cell],
-[class*=&#34;:cell&#34;] {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-}
-
-.cell-1 {
-    grid-column: span 1/span 1;
-}
-
-.cell-row-2 {
-    grid-row: span 2/span 2;
-}
-@media screen and (min-width: 768px), print {
-
-    .md\:cell-1 {
-        grid-column: span 1/span 1;
-    }
-
-    .md\:cell-2 {
-        grid-column: span 2/span 2;
-    }
-}
-
-.gap-6,
-.gap-6 [class^=grid] {
-    gap: 1.5rem;
-}
-
-.gap-10,
-.gap-10 [class^=grid] {
-    gap: 2.5rem;
-}
-
-
-/**** Dashboard ****/
+                    <pre class="language-css" data-lang="css"><code>/**** Dashboard ****/
 :root {
     --boxes-radius: 6px;
 }
@@ -11599,6 +11534,71 @@ h3 {
 .no-bg rect.highcharts-background {
     fill: transparent !important;
 }
+
+/***** GRID ******/
+[class^=grid] {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+@media screen and (min-width: 640px), print {
+    .sm\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media screen and (min-width: 768px), print {
+    .md\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .md\:grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .md\:grid-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .md\:grid-rows-3 {
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+    }
+}
+
+[class^=cell],
+[class*=&#34;:cell&#34;] {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.cell-1 {
+    grid-column: span 1/span 1;
+}
+
+.cell-row-2 {
+    grid-row: span 2/span 2;
+}
+@media screen and (min-width: 768px), print {
+
+    .md\:cell-1 {
+        grid-column: span 1/span 1;
+    }
+
+    .md\:cell-2 {
+        grid-column: span 2/span 2;
+    }
+}
+
+.gap-6,
+.gap-6 [class^=grid] {
+    gap: 1.5rem;
+}
+
+.gap-10,
+.gap-10 [class^=grid] {
+    gap: 2.5rem;
+}
+
 
 
 /* DO NOT COPY, just for Code Library resource */
@@ -11660,7 +11660,7 @@ h3 {
                  "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;https://cdnjs.cloudflare.com/ajax/libs/angular-i18n/1.8.2/angular-locale_fr.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    const sourceMonitoringInterceptor = ($q) =\u003e {\n        return {\n            request: (config) =\u003e {\n              config.params \u0026\u0026 (delete config.params[&#39;source&#39;]);\n              (config.params.dataset === &#39;ods-api-monitoring&#39;) \u0026\u0026 (config.params.dataset = &#39;monitoring-copy&#39;);\n              return config;\n          }\n        }\n    }\n\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider, $httpProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n        $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
                  "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;container\&#34;\u003e\n    \u003cdiv class=\&#34;grid md:grid-3 md:grid-rows-3 gap-6\&#34;\u003e\n        \u003cdiv class=\&#34;cell-1 box white flat\&#34;\u003e\n            \u003cdiv class=\&#34;advanced-kpi\&#34;\u003e\n                \u003cdiv class=\&#34;advanced-kpi--top\&#34;\u003e\n                    \u003ch3 class=\&#34;title\&#34;\u003e\n                        Title\n                    \u003c/h3\u003e\n                    \u003cp class=\&#34;description\&#34;\u003e\n                        Description\n                    \u003c/p\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;advanced-kpi--middle centered\&#34;\u003e\n                    \u003cp class=\&#34;value\&#34;\u003e\n                        1&#39;234 %\n                    \u003c/p\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;advanced-kpi--bottom\&#34;\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--bottom-second-stage\&#34;\u003e\n                        \u003cspan class=\&#34;date\&#34;\u003eDate\u003c/span\u003e\n                        \u003ca class=\&#34;source\&#34;\n                           href=\&#34;#\&#34;\n                           title=\&#34;Title\&#34;\u003e\n                            Source \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                        \u003c/a\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;cell-1 box white flat\&#34;\u003e\n            \u003cdiv class=\&#34;advanced-kpi\&#34;\u003e\n                \u003cdiv class=\&#34;advanced-kpi--top\&#34;\u003e\n                    \u003ch3 class=\&#34;title\&#34;\u003e\n                        Title\n                    \u003c/h3\u003e\n                    \u003cp class=\&#34;description\&#34;\u003e\n                        Description\n                    \u003c/p\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;advanced-kpi--middle centered\&#34;\u003e\n                    \u003cp class=\&#34;value\&#34;\u003e\n                        1&#39;234 %\n                    \u003c/p\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;advanced-kpi--bottom\&#34;\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--bottom-second-stage\&#34;\u003e\n                        \u003cspan class=\&#34;date\&#34;\u003eDate\u003c/span\u003e\n                        \u003ca class=\&#34;source\&#34;\n                           href=\&#34;#\&#34;\n                           title=\&#34;Title\&#34;\u003e\n                            Source \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                        \u003c/a\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;cell-1 cell-row-2 box white flat\&#34;\u003e\n            \u003cdiv class=\&#34;advanced-kpi\&#34;\u003e\n                \u003cdiv class=\&#34;advanced-kpi--top\&#34;\u003e\n                    \u003ch3 class=\&#34;title\&#34;\u003e\n                        Title\n                    \u003c/h3\u003e\n                    \u003cp class=\&#34;description\&#34;\u003e\n                        Description\n                    \u003c/p\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;advanced-kpi--middle no-bg mb-0\&#34;\u003e\n                    \u003cdiv class=\&#34;chart-placeholder\&#34;\u003e\u003c/div\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;advanced-kpi--bottom\&#34;\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--bottom-second-stage\&#34;\u003e\n                        \u003cspan class=\&#34;date\&#34;\u003eDate\u003c/span\u003e\n                        \u003ca class=\&#34;source\&#34;\n                           href=\&#34;#\&#34;\n                           title=\&#34;Title\&#34;\u003e\n                            Source \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                        \u003c/a\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;cell-1 cell-row-2 box white flat\&#34;\u003e\n            \u003cdiv class=\&#34;advanced-kpi\&#34;\u003e\n                \u003cdiv class=\&#34;advanced-kpi--top\&#34;\u003e\n                    \u003ch3 class=\&#34;title\&#34;\u003e\n                        Title\n                    \u003c/h3\u003e\n                    \u003cp class=\&#34;description\&#34;\u003e\n                        Description\n                    \u003c/p\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;advanced-kpi--middle no-bg mb-0\&#34;\u003e\n                    \u003cdiv class=\&#34;chart-placeholder\&#34;\u003e\u003c/div\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;advanced-kpi--bottom\&#34;\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--bottom-second-stage\&#34;\u003e\n                        \u003cspan class=\&#34;date\&#34;\u003eDate\u003c/span\u003e\n                        \u003ca class=\&#34;source\&#34;\n                           href=\&#34;#\&#34;\n                           title=\&#34;Title\&#34;\u003e\n                            Source \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                        \u003c/a\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;cell-1 box white flat\&#34;\u003e\n            \u003cdiv class=\&#34;advanced-kpi\&#34;\u003e\n                \u003cdiv class=\&#34;advanced-kpi--top\&#34;\u003e\n                    \u003ch3 class=\&#34;title\&#34;\u003e\n                        Title\n                    \u003c/h3\u003e\n                    \u003cp class=\&#34;description\&#34;\u003e\n                        Description\n                    \u003c/p\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;advanced-kpi--middle centered\&#34;\u003e\n                    \u003cp class=\&#34;value\&#34;\u003e\n                        1&#39;234 %\n                    \u003c/p\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;advanced-kpi--bottom\&#34;\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--bottom-second-stage\&#34;\u003e\n                        \u003cspan class=\&#34;date\&#34;\u003eDate\u003c/span\u003e\n                        \u003ca class=\&#34;source\&#34;\n                           href=\&#34;#\&#34;\n                           title=\&#34;Title\&#34;\u003e\n                            Source \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                        \u003c/a\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;cell-1 md:cell-2 box white flat\&#34;\u003e\n            \u003cdiv class=\&#34;advanced-kpi\&#34;\u003e\n                \u003cdiv class=\&#34;advanced-kpi--top\&#34;\u003e\n                    \u003ch3 class=\&#34;title\&#34;\u003e\n                        Title\n                    \u003c/h3\u003e\n                    \u003cp class=\&#34;description\&#34;\u003e\n                        Description\n                    \u003c/p\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;advanced-kpi--middle centered\&#34;\u003e\n                    \u003cp class=\&#34;value\&#34;\u003e\n                        1&#39;234 %\n                    \u003c/p\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;advanced-kpi--bottom\&#34;\u003e\n                    \u003cdiv class=\&#34;advanced-kpi--bottom-second-stage\&#34;\u003e\n                        \u003cspan class=\&#34;date\&#34;\u003eDate\u003c/span\u003e\n                        \u003ca class=\&#34;source\&#34;\n                           href=\&#34;#\&#34;\n                           title=\&#34;Title\&#34;\u003e\n                            Source \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                        \u003c/a\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\n\u003c/div\u003e&#34;,
-                 "css": &#34;/***** GRID ******/\n[class^=grid] {\n    display: grid;\n    grid-gap: 1rem;\n}\n\n@media screen and (min-width: 640px), print {\n    .sm\\:grid-2 {\n        grid-template-columns: repeat(2, minmax(0, 1fr));\n    }\n}\n@media screen and (min-width: 768px), print {\n    .md\\:grid-2 {\n        grid-template-columns: repeat(2, minmax(0, 1fr));\n    }\n\n    .md\\:grid-3 {\n        grid-template-columns: repeat(3, minmax(0, 1fr));\n    }\n\n    .md\\:grid-4 {\n        grid-template-columns: repeat(4, minmax(0, 1fr));\n    }\n\n    .md\\:grid-rows-3 {\n        grid-template-rows: repeat(3, minmax(0, 1fr));\n    }\n}\n\n[class^=cell],\n[class*=\&#34;:cell\&#34;] {\n    display: flex;\n    flex-direction: column;\n    justify-content: stretch;\n}\n\n.cell-1 {\n    grid-column: span 1/span 1;\n}\n\n.cell-row-2 {\n    grid-row: span 2/span 2;\n}\n@media screen and (min-width: 768px), print {\n\n    .md\\:cell-1 {\n        grid-column: span 1/span 1;\n    }\n\n    .md\\:cell-2 {\n        grid-column: span 2/span 2;\n    }\n}\n\n.gap-6,\n.gap-6 [class^=grid] {\n    gap: 1.5rem;\n}\n\n.gap-10,\n.gap-10 [class^=grid] {\n    gap: 2.5rem;\n}\n\n\n/**** Dashboard ****/\n:root {\n    --boxes-radius: 6px;\n}\n\nbody, main {\n    margin: 0;\n    background-color: #F2F3F8;\n}\n\nsection {\n    padding: 1.5rem 0;\n}\n\n.header {\n    margin: 3rem 2rem;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-weight: 500;\n}\n\nh3 {\n    font-weight: 400;\n}\n\n.mb-0 {\n    margin-bottom: 0;\n}\n\n.mb-2 {\n    margin-bottom: 2rem;\n}\n\n.box {\n    position: relative;\n    padding: 13px;\n}\n.box.white {\n    background-color: white;\n}\n.box.flat {\n    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);\n    border-radius: var(--boxes-radius);\n}\n\n.advanced-kpi {\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n}\n\n.advanced-kpi--top .title {\n    font-size: 1.2em;\n    margin: 0;\n}\n.advanced-kpi--top .description {\n    margin: 0 auto;\n    color: #565656;\n    font-size: 1em;\n    font-weight: 400;\n}\n\n.advanced-kpi--middle {\n    display: flex;\n    flex-direction: column;\n    margin: 20px 0;\n}\n.advanced-kpi--middle.centered {\n    align-items: center;\n}\n.advanced-kpi--middle \u003e * {\n    margin: 5px 0;\n}\n.advanced-kpi--middle .value {\n    color: var(--highlight);\n    font-weight: 500;\n    font-size: 2.5rem;\n}\n\n.advanced-kpi--bottom {\n    font-size: 0.8em;\n}\n.advanced-kpi--bottom .advanced-kpi--bottom-second-stage {\n    display: flex;\n    justify-content: space-between;\n}\n.advanced-kpi--bottom .source {\n    text-decoration: underline;\n    color: var(--links);\n}\n.advanced-kpi--bottom .source i {\n    margin-left: 6px;\n}\n.advanced-kpi--bottom .source:hover {\n    opacity: 0.65;\n}\n.advanced-kpi--bottom .source:hover i {\n    animation: bounce 0.7s ease infinite;\n}\n\n@keyframes bounce {\n    from {\n        margin-left: 6px;\n        margin-right: 0;\n    }\n    50% {\n        margin-left: 2px;\n        margin-right: 4px;\n    }\n    to {\n        margin-left: 6px;\n        margin-right: 0;\n    }\n}\n.no-bg rect.highcharts-background {\n    fill: transparent !important;\n}\n\n\n/* DO NOT COPY, just for Code Library resource */\n.chart-placeholder {\n    background-color: #fff1f1;\n    height: 350px;\n}\n.chart-placeholder:before {\n    display: block;\n    font-size: 2rem;\n    margin: 0.2rem 0.5rem;\n    content: \&#34;Chart\&#34;;\n}&#34;
+                 "css": &#34;/**** Dashboard ****/\n:root {\n    --boxes-radius: 6px;\n}\n\nbody, main {\n    margin: 0;\n    background-color: #F2F3F8;\n}\n\nsection {\n    padding: 1.5rem 0;\n}\n\n.header {\n    margin: 3rem 2rem;\n}\n\nh1 {\n    font-size: 3rem;\n}\n\nh2 {\n    font-weight: 500;\n}\n\nh3 {\n    font-weight: 400;\n}\n\n.mb-0 {\n    margin-bottom: 0;\n}\n\n.mb-2 {\n    margin-bottom: 2rem;\n}\n\n.box {\n    position: relative;\n    padding: 13px;\n}\n.box.white {\n    background-color: white;\n}\n.box.flat {\n    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);\n    border-radius: var(--boxes-radius);\n}\n\n.advanced-kpi {\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n}\n\n.advanced-kpi--top .title {\n    font-size: 1.2em;\n    margin: 0;\n}\n.advanced-kpi--top .description {\n    margin: 0 auto;\n    color: #565656;\n    font-size: 1em;\n    font-weight: 400;\n}\n\n.advanced-kpi--middle {\n    display: flex;\n    flex-direction: column;\n    margin: 20px 0;\n}\n.advanced-kpi--middle.centered {\n    align-items: center;\n}\n.advanced-kpi--middle \u003e * {\n    margin: 5px 0;\n}\n.advanced-kpi--middle .value {\n    color: var(--highlight);\n    font-weight: 500;\n    font-size: 2.5rem;\n}\n\n.advanced-kpi--bottom {\n    font-size: 0.8em;\n}\n.advanced-kpi--bottom .advanced-kpi--bottom-second-stage {\n    display: flex;\n    justify-content: space-between;\n}\n.advanced-kpi--bottom .source {\n    text-decoration: underline;\n    color: var(--links);\n}\n.advanced-kpi--bottom .source i {\n    margin-left: 6px;\n}\n.advanced-kpi--bottom .source:hover {\n    opacity: 0.65;\n}\n.advanced-kpi--bottom .source:hover i {\n    animation: bounce 0.7s ease infinite;\n}\n\n@keyframes bounce {\n    from {\n        margin-left: 6px;\n        margin-right: 0;\n    }\n    50% {\n        margin-left: 2px;\n        margin-right: 4px;\n    }\n    to {\n        margin-left: 6px;\n        margin-right: 0;\n    }\n}\n.no-bg rect.highcharts-background {\n    fill: transparent !important;\n}\n\n/***** GRID ******/\n[class^=grid] {\n    display: grid;\n    grid-gap: 1rem;\n}\n\n@media screen and (min-width: 640px), print {\n    .sm\\:grid-2 {\n        grid-template-columns: repeat(2, minmax(0, 1fr));\n    }\n}\n@media screen and (min-width: 768px), print {\n    .md\\:grid-2 {\n        grid-template-columns: repeat(2, minmax(0, 1fr));\n    }\n\n    .md\\:grid-3 {\n        grid-template-columns: repeat(3, minmax(0, 1fr));\n    }\n\n    .md\\:grid-4 {\n        grid-template-columns: repeat(4, minmax(0, 1fr));\n    }\n\n    .md\\:grid-rows-3 {\n        grid-template-rows: repeat(3, minmax(0, 1fr));\n    }\n}\n\n[class^=cell],\n[class*=\&#34;:cell\&#34;] {\n    display: flex;\n    flex-direction: column;\n    justify-content: stretch;\n}\n\n.cell-1 {\n    grid-column: span 1/span 1;\n}\n\n.cell-row-2 {\n    grid-row: span 2/span 2;\n}\n@media screen and (min-width: 768px), print {\n\n    .md\\:cell-1 {\n        grid-column: span 1/span 1;\n    }\n\n    .md\\:cell-2 {\n        grid-column: span 2/span 2;\n    }\n}\n\n.gap-6,\n.gap-6 [class^=grid] {\n    gap: 1.5rem;\n}\n\n.gap-10,\n.gap-10 [class^=grid] {\n    gap: 2.5rem;\n}\n\n\n\n/* DO NOT COPY, just for Code Library resource */\n.chart-placeholder {\n    background-color: #fff1f1;\n    height: 350px;\n}\n.chart-placeholder:before {\n    display: block;\n    font-size: 2rem;\n    margin: 0.2rem 0.5rem;\n    content: \&#34;Chart\&#34;;\n}&#34;
                }'>
     </form>
 </div>
@@ -11958,72 +11958,7 @@ h3 {
 &lt;/div&gt;
 &lt;/div&gt;</div>
                 <style type='text/css'>
-                    /***** GRID ******/
-[class^=grid] {
-    display: grid;
-    grid-gap: 1rem;
-}
-
-@media screen and (min-width: 640px), print {
-    .sm\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-@media screen and (min-width: 768px), print {
-    .md\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .md\:grid-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .md\:grid-4 {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .md\:grid-rows-3 {
-        grid-template-rows: repeat(3, minmax(0, 1fr));
-    }
-}
-
-[class^=cell],
-[class*=&#34;:cell&#34;] {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-}
-
-.cell-1 {
-    grid-column: span 1/span 1;
-}
-
-.cell-row-2 {
-    grid-row: span 2/span 2;
-}
-@media screen and (min-width: 768px), print {
-
-    .md\:cell-1 {
-        grid-column: span 1/span 1;
-    }
-
-    .md\:cell-2 {
-        grid-column: span 2/span 2;
-    }
-}
-
-.gap-6,
-.gap-6 [class^=grid] {
-    gap: 1.5rem;
-}
-
-.gap-10,
-.gap-10 [class^=grid] {
-    gap: 2.5rem;
-}
-
-
-/**** Dashboard ****/
+                    /**** Dashboard ****/
 :root {
     --boxes-radius: 6px;
 }
@@ -12146,6 +12081,71 @@ h3 {
 .no-bg rect.highcharts-background {
     fill: transparent !important;
 }
+
+/***** GRID ******/
+[class^=grid] {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+@media screen and (min-width: 640px), print {
+    .sm\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media screen and (min-width: 768px), print {
+    .md\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .md\:grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .md\:grid-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .md\:grid-rows-3 {
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+    }
+}
+
+[class^=cell],
+[class*=&#34;:cell&#34;] {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.cell-1 {
+    grid-column: span 1/span 1;
+}
+
+.cell-row-2 {
+    grid-row: span 2/span 2;
+}
+@media screen and (min-width: 768px), print {
+
+    .md\:cell-1 {
+        grid-column: span 1/span 1;
+    }
+
+    .md\:cell-2 {
+        grid-column: span 2/span 2;
+    }
+}
+
+.gap-6,
+.gap-6 [class^=grid] {
+    gap: 1.5rem;
+}
+
+.gap-10,
+.gap-10 [class^=grid] {
+    gap: 2.5rem;
+}
+
 
 
 /* DO NOT COPY, just for Code Library resource */
@@ -12565,72 +12565,7 @@ h3 {
             
             <div class="js-tabcontent"
                  id="code-css-grid--complex-example-2-css-content"
-                 data-clipboard="/***** GRID ******/
-[class^=grid] {
-    display: grid;
-    grid-gap: 1rem;
-}
-
-@media screen and (min-width: 640px), print {
-    .sm\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-@media screen and (min-width: 768px), print {
-    .md\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .md\:grid-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .md\:grid-4 {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .md\:grid-rows-3 {
-        grid-template-rows: repeat(3, minmax(0, 1fr));
-    }
-}
-
-[class^=cell],
-[class*=&#34;:cell&#34;] {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-}
-
-.cell-1 {
-    grid-column: span 1/span 1;
-}
-
-.cell-row-2 {
-    grid-row: span 2/span 2;
-}
-@media screen and (min-width: 768px), print {
-
-    .md\:cell-1 {
-        grid-column: span 1/span 1;
-    }
-
-    .md\:cell-2 {
-        grid-column: span 2/span 2;
-    }
-}
-
-.gap-6,
-.gap-6 [class^=grid] {
-    gap: 1.5rem;
-}
-
-.gap-10,
-.gap-10 [class^=grid] {
-    gap: 2.5rem;
-}
-
-
-/**** Dashboard ****/
+                 data-clipboard="/**** Dashboard ****/
 :root {
     --boxes-radius: 6px;
 }
@@ -12753,6 +12688,71 @@ h3 {
 .no-bg rect.highcharts-background {
     fill: transparent !important;
 }
+
+/***** GRID ******/
+[class^=grid] {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+@media screen and (min-width: 640px), print {
+    .sm\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media screen and (min-width: 768px), print {
+    .md\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .md\:grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .md\:grid-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .md\:grid-rows-3 {
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+    }
+}
+
+[class^=cell],
+[class*=&#34;:cell&#34;] {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.cell-1 {
+    grid-column: span 1/span 1;
+}
+
+.cell-row-2 {
+    grid-row: span 2/span 2;
+}
+@media screen and (min-width: 768px), print {
+
+    .md\:cell-1 {
+        grid-column: span 1/span 1;
+    }
+
+    .md\:cell-2 {
+        grid-column: span 2/span 2;
+    }
+}
+
+.gap-6,
+.gap-6 [class^=grid] {
+    gap: 1.5rem;
+}
+
+.gap-10,
+.gap-10 [class^=grid] {
+    gap: 2.5rem;
+}
+
 
 
 /* DO NOT COPY, just for Code Library resource */
@@ -12768,72 +12768,7 @@ h3 {
 }"
             >
                 <div class="highlight">
-                    <pre class="language-css" data-lang="css"><code>/***** GRID ******/
-[class^=grid] {
-    display: grid;
-    grid-gap: 1rem;
-}
-
-@media screen and (min-width: 640px), print {
-    .sm\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-}
-@media screen and (min-width: 768px), print {
-    .md\:grid-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-    .md\:grid-3 {
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
-
-    .md\:grid-4 {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .md\:grid-rows-3 {
-        grid-template-rows: repeat(3, minmax(0, 1fr));
-    }
-}
-
-[class^=cell],
-[class*=&#34;:cell&#34;] {
-    display: flex;
-    flex-direction: column;
-    justify-content: stretch;
-}
-
-.cell-1 {
-    grid-column: span 1/span 1;
-}
-
-.cell-row-2 {
-    grid-row: span 2/span 2;
-}
-@media screen and (min-width: 768px), print {
-
-    .md\:cell-1 {
-        grid-column: span 1/span 1;
-    }
-
-    .md\:cell-2 {
-        grid-column: span 2/span 2;
-    }
-}
-
-.gap-6,
-.gap-6 [class^=grid] {
-    gap: 1.5rem;
-}
-
-.gap-10,
-.gap-10 [class^=grid] {
-    gap: 2.5rem;
-}
-
-
-/**** Dashboard ****/
+                    <pre class="language-css" data-lang="css"><code>/**** Dashboard ****/
 :root {
     --boxes-radius: 6px;
 }
@@ -12956,6 +12891,71 @@ h3 {
 .no-bg rect.highcharts-background {
     fill: transparent !important;
 }
+
+/***** GRID ******/
+[class^=grid] {
+    display: grid;
+    grid-gap: 1rem;
+}
+
+@media screen and (min-width: 640px), print {
+    .sm\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+@media screen and (min-width: 768px), print {
+    .md\:grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .md\:grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .md\:grid-4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .md\:grid-rows-3 {
+        grid-template-rows: repeat(3, minmax(0, 1fr));
+    }
+}
+
+[class^=cell],
+[class*=&#34;:cell&#34;] {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+}
+
+.cell-1 {
+    grid-column: span 1/span 1;
+}
+
+.cell-row-2 {
+    grid-row: span 2/span 2;
+}
+@media screen and (min-width: 768px), print {
+
+    .md\:cell-1 {
+        grid-column: span 1/span 1;
+    }
+
+    .md\:cell-2 {
+        grid-column: span 2/span 2;
+    }
+}
+
+.gap-6,
+.gap-6 [class^=grid] {
+    gap: 1.5rem;
+}
+
+.gap-10,
+.gap-10 [class^=grid] {
+    gap: 2.5rem;
+}
+
 
 
 /* DO NOT COPY, just for Code Library resource */

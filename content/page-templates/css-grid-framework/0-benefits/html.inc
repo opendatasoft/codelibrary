@@ -30,7 +30,7 @@
         <div class="cell-3">
             <div class="box dark">I'm a small KPI !</div>
         </div>
-        <div class="cell-5">
+        <div class="grid cell-5">
             <div class="box dark">
                 I'm a KPI
             </div>
