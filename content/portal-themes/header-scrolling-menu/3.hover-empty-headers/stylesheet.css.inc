@@ -55,7 +55,7 @@
 /* DESKTOP SPECIFICS - STYLE OF SCROLLING MENU
 ========================================================================== */
 
-.dropdown-content {
+.scrolling-menu-content {
     position: absolute;
     background-color: var(--header-background);
     filter: drop-shadow(0px 14px 8px rgba(37, 48, 59, 0.1));
@@ -64,26 +64,27 @@
     min-width: 150px;  
 }
 
-.dropdown-content a {
+.scrolling-menu-content a {
     color: var(--links);
     text-decoration: none;
     display: block;
-    opacity:1 !important;
+    opacity:1;
     padding: 5px;
     font-size: 1rem;
     line-height: 35px;
 }
 
-.dropdown-content a:hover {
-    color: var(--highlight)
+.scrolling-menu-content a:hover {
+    color: var(--links);
+    text-decoration: underline;
 }
 
 @media screen and (min-width: 1000px){
-    .dropdown-content {
+    .scrolling-menu-content {
         display: none;
     }
 
-    .scrolling-menu:hover  .dropdown-content {
+    .scrolling-menu:hover  .scrolling-menu-content {
         display: block;
     }
 
@@ -96,7 +97,7 @@
 ========================================================================== */
 
 @media screen and (max-width: 1000px){    
-    .dropdown-content {
+    .scrolling-menu-content {
         position: relative;
         padding-left: 25px;
         filter: none;

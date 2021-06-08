@@ -1,10 +1,6 @@
 ---
 title: "Based on click - for empty headers"
-description: "How to use it : 
-1. Copy the content of the HEADER tab
-2. Paste it in https://yourdomain.opendatasoft.com/backoffice/customization/theme/#header  instead of ##menu##
-3. Copy the content of the STYLESHEET tab
-4. Paste it in https://yourdomain.opendatasoft.com/backoffice/customization/theme/#stylesheet"
+description: "Scrolling menu with click for empty headers"
 tags: []
 iframe: "https://header-discovery.opendatasoft.com/explore/"
 text: "#565656"
@@ -27,3 +23,9 @@ resources:
 - src: 'stylesheet.css'
   title: 'CSS'
 ---
+**How to use it**
+1. Copy the content of the `HEADER` tab.
+2. Paste it in `https://yourdomain.opendatasoft.com/backoffice/customization/theme/#header`  instead of `##menu##`.
+3. Copy the content of the `STYLESHEET` tab.
+4. Paste it in `https://yourdomain.opendatasoft.com/backoffice/customization/theme/#stylesheet`.
+5. Replace the links and titles of the items menu in the `HEADER` tab.
