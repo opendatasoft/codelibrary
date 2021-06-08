@@ -7,7 +7,9 @@ resources:
   name: folder-:counter
 ---
 
-This resource introduces a **CSS Grid based framework** to empower Opendatasoft users to do their own layouts. 
+This resource introduces a **CSS Grid framework** based on CSS Grid layout system.  
+
+> It's an alternative to ODS Layout system, suitable for **expert users**, looking for more advanced layout system, specially designed for 2 dimensions layouts instead of one.
 
 **CSS Grid** is the most modern and performant way to structure pages. 
 
@@ -19,6 +21,5 @@ This framework covers :
   - the ordering of elements
 
 > Note: this framework is used by ODS Labs team for some resources. 
-> It is not intended to replace ODS default layout already used in pages. 
-> It's an alternative for **power users**, looking for advanced tools, specially designed for 2 dimensions layouts instead of one.
-> You should also consider that CSS Grid layout or Flexbox are already available in very browser and can directly be used on the platform without any required framework.  
+> It is not intended to replace ODS default layout already used in pages.
+> You should also consider that CSS Grid layout or Flexbox are already available in every browser and can directly be used on the platform without any required framework.  

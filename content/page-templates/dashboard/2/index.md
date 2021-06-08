@@ -1,5 +1,5 @@
 ---
-title: "1 - 2 grid"
+title: "ODS Layout : 1 - 2"
 height: 600
 ---
 

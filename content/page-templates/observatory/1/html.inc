@@ -121,138 +121,153 @@
 
         <section>
             <div class="container">
-                <div class="grid md:grid-4 gap-6">
-                    <div class="md:cell-2 box white flat">
-                        <div class="advanced-kpi">
-                            <div class="advanced-kpi--top">
-                                <h3 class="title">
-                                    Nombre d'équipements en 2019
-                                </h3>
-                                <p class="description">
-                                    Données INSEE issu de la BPE (Base permanente des équipements)
-                                </p>
-                            </div>
-                            <div class="advanced-kpi--middle centered">
-                                <p class="value">
-                                    {{ values.nbequip | number }}
-                                </p>
-                            </div>
-                            <div class="advanced-kpi--bottom">
-                                <div class="advanced-kpi--bottom-second-stage">
-                                    <span class="date">{{ ctx1.dataset.metas.data_processed | date }}</span>
-                                    <a class="source"
-                                       href="{{ 'https://' + ctx1.dataset.metas.domain + '.opendatasoft.com/explore/dataset/' + ctx1.dataset.datasetid }}"
-                                       title="{{ ctx1.dataset.metas.title }}">Source <i class="fa fa-long-arrow-right"
-                                                                                        aria-hidden="true"></i>
-                                    </a>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="box white flat">
+                            <div class="advanced-kpi">
+                                <div class="advanced-kpi--top">
+                                    <h3 class="title">
+                                        Nombre d'équipements en 2019
+                                    </h3>
+                                    <p class="description">
+                                        Données INSEE issu de la BPE (Base permanente des équipements)
+                                    </p>
+                                </div>
+                                <div class="advanced-kpi--middle centered">
+                                    <p class="value">
+                                        {{ values.nbequip | number }}
+                                    </p>
+                                </div>
+                                <div class="advanced-kpi--bottom">
+                                    <div class="advanced-kpi--bottom-second-stage">
+                                        <span class="date">{{ ctx1.dataset.metas.data_processed | date }}</span>
+                                        <a class="source"
+                                           href="{{ 'https://' + ctx1.dataset.metas.domain + '.opendatasoft.com/explore/dataset/' + ctx1.dataset.datasetid }}"
+                                           title="{{ ctx1.dataset.metas.title }}">Source <i
+                                                class="fa fa-long-arrow-right"
+                                                aria-hidden="true"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="md:cell-2 box white flat"
+                    <div class="col-md-6"
                          ng-if="!ctx1.parameters['refine.reg_name']">
-                        <div class="advanced-kpi">
-                            <div class="advanced-kpi--top">
-                                <h3 class="title">
-                                    Top 5 Région
-                                </h3>
-                                <p class="description">
-                                    Nombre d'équipements des 5 régions les mieux équipées
-                                </p>
-                            </div>
-                            <div class="advanced-kpi--middle">
-                                <ods-chart style="height: 170px" class="small-chart" single-y-axis="true"
-                                           scientific-display="true"
-                                           display-legend="false"
-                                           labels-x-length="20" align-month="false">
-                                    <ods-chart-query context="ctx1" field-x="reg_name" maxpoints="5"
-                                                     sort="serie1-1">
-                                        <ods-chart-serie chart-type="bar" function-y="COUNT" color="#000000"
-                                                         scientific-display="true">
-                                        </ods-chart-serie>
-                                    </ods-chart-query>
-                                </ods-chart>
-                            </div>
-                            <div class="advanced-kpi--bottom">
-                                <div class="advanced-kpi--bottom-second-stage">
-                                    <span class="date">{{ ctx1.dataset.metas.data_processed | date }}</span>
-                                    <a class="source"
-                                       href="{{ 'https://' + ctx1.dataset.metas.domain + '.opendatasoft.com/explore/dataset/' + ctx1.dataset.datasetid }}"
-                                       title="{{ ctx1.dataset.metas.title }}">Source <i
-                                            class="fa fa-long-arrow-right"
-                                            aria-hidden="true"></i>
-                                    </a>
+                        <div class="box white flat">
+                            <div class="advanced-kpi">
+                                <div class="advanced-kpi--top">
+                                    <h3 class="title">
+                                        Top 5 Région
+                                    </h3>
+                                    <p class="description">
+                                        Nombre d'équipements des 5 régions les mieux équipées
+                                    </p>
+                                </div>
+                                <div class="advanced-kpi--middle">
+                                    <ods-chart style="height: 170px" class="small-chart" single-y-axis="true"
+                                               scientific-display="true"
+                                               display-legend="false"
+                                               labels-x-length="20" align-month="false">
+                                        <ods-chart-query context="ctx1" field-x="reg_name" maxpoints="5"
+                                                         sort="serie1-1">
+                                            <ods-chart-serie chart-type="bar" function-y="COUNT" color="#000000"
+                                                             scientific-display="true">
+                                            </ods-chart-serie>
+                                        </ods-chart-query>
+                                    </ods-chart>
+                                </div>
+                                <div class="advanced-kpi--bottom">
+                                    <div class="advanced-kpi--bottom-second-stage">
+                                        <span class="date">{{ ctx1.dataset.metas.data_processed | date }}</span>
+                                        <a class="source"
+                                           href="{{ 'https://' + ctx1.dataset.metas.domain + '.opendatasoft.com/explore/dataset/' + ctx1.dataset.datasetid }}"
+                                           title="{{ ctx1.dataset.metas.title }}">Source <i
+                                                class="fa fa-long-arrow-right"
+                                                aria-hidden="true"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="md:cell-2 box white flat"
+                    <div class="col-md-6"
                          ng-if="ctx1.parameters['refine.reg_name']">
-                        <div class="advanced-kpi">
-                            <div class="advanced-kpi--top">
-                                <h3 class="title">
-                                    Top 5 Département
-                                </h3>
-                                <p class="description">
-                                    Nombre d'équipements des 5 départements les mieux équipées
-                                </p>
-                            </div>
-                            <div class="advanced-kpi--middle">
-                                <ods-chart style="height: 170px" class="small-chart" single-y-axis="true"
-                                           scientific-display="true"
-                                           display-legend="false"
-                                           labels-x-length="20" align-month="false">
-                                    <ods-chart-query context="ctx1" field-x="dep_name" maxpoints="5"
-                                                     sort="serie1-1">
-                                        <ods-chart-serie chart-type="bar" function-y="COUNT" color="#000000"
-                                                         scientific-display="true">
-                                        </ods-chart-serie>
-                                    </ods-chart-query>
-                                </ods-chart>
-                            </div>
-                            <div class="advanced-kpi--bottom">
-                                <div class="advanced-kpi--bottom-second-stage">
-                                    <span class="date">{{ ctx1.dataset.metas.data_processed | date }}</span>
-                                    <a class="source"
-                                       href="{{ 'https://' + ctx1.dataset.metas.domain + '.opendatasoft.com/explore/dataset/' + ctx1.dataset.datasetid }}"
-                                       title="{{ ctx1.dataset.metas.title }}">Source <i
-                                            class="fa fa-long-arrow-right"
-                                            aria-hidden="true"></i>
-                                    </a>
+                        <div class="box white flat">
+                            <div class="advanced-kpi">
+                                <div class="advanced-kpi--top">
+                                    <h3 class="title">
+                                        Top 5 Département
+                                    </h3>
+                                    <p class="description">
+                                        Nombre d'équipements des 5 départements les mieux équipées
+                                    </p>
+                                </div>
+                                <div class="advanced-kpi--middle">
+                                    <ods-chart style="height: 170px" class="small-chart" single-y-axis="true"
+                                               scientific-display="true"
+                                               display-legend="false"
+                                               labels-x-length="20" align-month="false">
+                                        <ods-chart-query context="ctx1" field-x="dep_name" maxpoints="5"
+                                                         sort="serie1-1">
+                                            <ods-chart-serie chart-type="bar" function-y="COUNT" color="#000000"
+                                                             scientific-display="true">
+                                            </ods-chart-serie>
+                                        </ods-chart-query>
+                                    </ods-chart>
+                                </div>
+                                <div class="advanced-kpi--bottom">
+                                    <div class="advanced-kpi--bottom-second-stage">
+                                        <span class="date">{{ ctx1.dataset.metas.data_processed | date }}</span>
+                                        <a class="source"
+                                           href="{{ 'https://' + ctx1.dataset.metas.domain + '.opendatasoft.com/explore/dataset/' + ctx1.dataset.datasetid }}"
+                                           title="{{ ctx1.dataset.metas.title }}">Source <i
+                                                class="fa fa-long-arrow-right"
+                                                aria-hidden="true"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="md:cell-full box white flat">
-                        <div class="advanced-kpi">
-                            <div class="advanced-kpi--top">
-                                <h3 class="title">
-                                    Répartis en grandes catégories
-                                </h3>
-                                <p class="description">
-                                    La Base Permanente des Équipements est réparti en 7 grands domaines : services aux
-                                    particuliers ; commerces ; enseignement ; santé ; transports et déplacements ;
-                                    sports, loisirs et culture ; tourisme.
-                                </p>
-                            </div>
-                            <div class="advanced-kpi--middle">
-                                <ods-chart class="medium-chart" labels-x-length="30" align-month="true">
-                                    <ods-chart-query context="ctx1" field-x="category" maxpoints="0" sort="serie1-1"
-                                                     category-colors="{'Services aux particuliers':'#ff714d','Santé':'#25c9ff','Commerces':'#CCEFC2','Sports, loisirs et culture':'#E5E2A7','Enseignement':'#E9D9FF','Transports et déplacements':'#FFFFFF','Tourisme':'#F4C5C8'}">
-                                        <ods-chart-serie chart-type="treemap" function-y="COUNT" color="range-PiYG"
-                                                         scientific-display="false">
-                                        </ods-chart-serie>
-                                    </ods-chart-query>
-                                </ods-chart>
-                            </div>
-                            <div class="advanced-kpi--bottom">
-                                <div class="advanced-kpi--bottom-second-stage">
-                                    <span class="date">{{ ctx1.dataset.metas.data_processed | date }}</span>
-                                    <a class="source"
-                                       href="{{ 'https://' + ctx1.dataset.metas.domain + '.opendatasoft.com/explore/dataset/' + ctx1.dataset.datasetid }}"
-                                       title="{{ ctx1.dataset.metas.title }}">Source <i class="fa fa-long-arrow-right"
-                                                                                        aria-hidden="true"></i>
-                                    </a>
+                    <div class="col-md-12">
+                        <div class="box white flat">
+                            <div class="advanced-kpi">
+                                <div class="advanced-kpi--top">
+                                    <h3 class="title">
+                                        Répartis en grandes catégories
+                                    </h3>
+                                    <p class="description">
+                                        La Base Permanente des Équipements est réparti en 7 grands domaines :
+                                        services
+                                        aux
+                                        particuliers ; commerces ; enseignement ; santé ; transports et
+                                        déplacements ;
+                                        sports, loisirs et culture ; tourisme.
+                                    </p>
+                                </div>
+                                <div class="advanced-kpi--middle">
+                                    <ods-chart class="medium-chart" labels-x-length="30" align-month="true">
+                                        <ods-chart-query context="ctx1" field-x="category" maxpoints="0"
+                                                         sort="serie1-1"
+                                                         category-colors="{'Services aux particuliers':'#ff714d','Santé':'#25c9ff','Commerces':'#CCEFC2','Sports, loisirs et culture':'#E5E2A7','Enseignement':'#E9D9FF','Transports et déplacements':'#FFFFFF','Tourisme':'#F4C5C8'}">
+                                            <ods-chart-serie chart-type="treemap" function-y="COUNT"
+                                                             color="range-PiYG"
+                                                             scientific-display="false">
+                                            </ods-chart-serie>
+                                        </ods-chart-query>
+                                    </ods-chart>
+                                </div>
+                                <div class="advanced-kpi--bottom">
+                                    <div class="advanced-kpi--bottom-second-stage">
+                                        <span class="date">{{ ctx1.dataset.metas.data_processed | date }}</span>
+                                        <a class="source"
+                                           href="{{ 'https://' + ctx1.dataset.metas.domain + '.opendatasoft.com/explore/dataset/' + ctx1.dataset.datasetid }}"
+                                           title="{{ ctx1.dataset.metas.title }}">Source <i
+                                                class="fa fa-long-arrow-right"
+                                                aria-hidden="true"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -263,121 +278,135 @@
                     Observons ses deux principales catégories
                 </h2>
 
-                <div class="grid lg:grid-4 gap-6">
-                    <div class="lg:cell-2 lg:cell-order-1 box white flat colored services">
-                        <div class="advanced-kpi">
-                            <div class="advanced-kpi--top">
-                                <h3 class="title">
-                                    Les Services aux particuliers
-                                </h3>
-                                <p class="description">
-                                    qui représentent
-                                </p>
-                            </div>
-                            <div class="advanced-kpi--middle centered">
-                                <p class="value">
-                                    {{ (values.services / values.nbequip * 100) | number : 1 }} %
-                                </p>
-                            </div>
-                            <div class="advanced-kpi--bottom">
-                                <div class="advanced-kpi--bottom-second-stage">
-                                    <span class="date">{{ ctx1.dataset.metas.data_processed | date }}</span>
-                                    <a class="source"
-                                       href="{{ 'https://' + ctx1.dataset.metas.domain + '.opendatasoft.com/explore/dataset/' + ctx1.dataset.datasetid }}"
-                                       title="{{ ctx1.dataset.metas.title }}">Source <i class="fa fa-long-arrow-right"
-                                                                                        aria-hidden="true"></i>
-                                    </a>
+                <div class="row">
+                    <div class="col-md-6 order-md-1">
+                        <div class="box white flat colored services">
+                            <div class="advanced-kpi">
+                                <div class="advanced-kpi--top">
+                                    <h3 class="title">
+                                        Les Services aux particuliers
+                                    </h3>
+                                    <p class="description">
+                                        qui représentent
+                                    </p>
+                                </div>
+                                <div class="advanced-kpi--middle centered">
+                                    <p class="value">
+                                        {{ (values.services / values.nbequip * 100) | number : 1 }} %
+                                    </p>
+                                </div>
+                                <div class="advanced-kpi--bottom">
+                                    <div class="advanced-kpi--bottom-second-stage">
+                                        <span class="date">{{ ctx1.dataset.metas.data_processed | date }}</span>
+                                        <a class="source"
+                                           href="{{ 'https://' + ctx1.dataset.metas.domain + '.opendatasoft.com/explore/dataset/' + ctx1.dataset.datasetid }}"
+                                           title="{{ ctx1.dataset.metas.title }}">Source <i
+                                                class="fa fa-long-arrow-right"
+                                                aria-hidden="true"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="lg:cell-2 lg:cell-order-3 box white flat colored services">
-                        <div class="advanced-kpi">
-                            <div class="advanced-kpi--top">
-                                <h3 class="title">
-                                    Principaux équipement de services aux particuliers
-                                </h3>
-                                <p class="description">
-                                    Description du TOP 20 de cette catégorie
-                                </p>
-                            </div>
-                            <div class="advanced-kpi--middle">
-                                <ods-chart class="medium-chart" labels-x-length="40" align-month="true">
-                                    <ods-chart-query context="ctx2" field-x="equipment_name" maxpoints="20"
-                                                     sort="serie1-1">
-                                        <ods-chart-serie chart-type="bar" function-y="COUNT" color="#ff714d"
-                                                         scientific-display="true" label-y="Nb. équipements">
-                                        </ods-chart-serie>
-                                    </ods-chart-query>
-                                </ods-chart>
-                            </div>
-                            <div class="advanced-kpi--bottom">
-                                <div class="advanced-kpi--bottom-second-stage">
-                                    <span class="date">{{ ctx1.dataset.metas.data_processed | date }}</span>
-                                    <a class="source"
-                                       href="{{ 'https://' + ctx1.dataset.metas.domain + '.opendatasoft.com/explore/dataset/' + ctx1.dataset.datasetid }}"
-                                       title="{{ ctx1.dataset.metas.title }}">Source <i class="fa fa-long-arrow-right"
-                                                                                        aria-hidden="true"></i>
-                                    </a>
+                    <div class="col-md-6 order-md-3">
+                        <div class="box white flat colored services">
+                            <div class="advanced-kpi">
+                                <div class="advanced-kpi--top">
+                                    <h3 class="title">
+                                        Principaux équipement de services aux particuliers
+                                    </h3>
+                                    <p class="description">
+                                        Description du TOP 20 de cette catégorie
+                                    </p>
+                                </div>
+                                <div class="advanced-kpi--middle">
+                                    <ods-chart class="medium-chart" labels-x-length="40" align-month="true">
+                                        <ods-chart-query context="ctx2" field-x="equipment_name" maxpoints="20"
+                                                         sort="serie1-1">
+                                            <ods-chart-serie chart-type="bar" function-y="COUNT" color="#ff714d"
+                                                             scientific-display="true"
+                                                             label-y="Nb. équipements">
+                                            </ods-chart-serie>
+                                        </ods-chart-query>
+                                    </ods-chart>
+                                </div>
+                                <div class="advanced-kpi--bottom">
+                                    <div class="advanced-kpi--bottom-second-stage">
+                                        <span class="date">{{ ctx1.dataset.metas.data_processed | date }}</span>
+                                        <a class="source"
+                                           href="{{ 'https://' + ctx1.dataset.metas.domain + '.opendatasoft.com/explore/dataset/' + ctx1.dataset.datasetid }}"
+                                           title="{{ ctx1.dataset.metas.title }}">Source <i
+                                                class="fa fa-long-arrow-right"
+                                                aria-hidden="true"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="lg:cell-2 lg:cell-order-2 box white flat colored sante">
-                        <div class="advanced-kpi">
-                            <div class="advanced-kpi--top">
-                                <h3 class="title">
-                                    et la Santé
-                                </h3>
-                                <p class="description">
-                                    qui représente
-                                </p>
-                            </div>
-                            <div class="advanced-kpi--middle centered">
-                                <p class="value">
-                                    {{ (values.sante / values.nbequip * 100) | number : 1 }} %
-                                </p>
-                            </div>
-                            <div class="advanced-kpi--bottom">
-                                <div class="advanced-kpi--bottom-second-stage">
-                                    <span class="date">{{ ctx1.dataset.metas.data_processed | date }}</span>
-                                    <a class="source"
-                                       href="{{ 'https://' + ctx1.dataset.metas.domain + '.opendatasoft.com/explore/dataset/' + ctx1.dataset.datasetid }}"
-                                       title="{{ ctx1.dataset.metas.title }}">Source <i class="fa fa-long-arrow-right"
-                                                                                        aria-hidden="true"></i>
-                                    </a>
+                    <div class="col-md-6 order-md-2">
+                        <div class="box white flat colored sante">
+                            <div class="advanced-kpi">
+                                <div class="advanced-kpi--top">
+                                    <h3 class="title">
+                                        et la Santé
+                                    </h3>
+                                    <p class="description">
+                                        qui représente
+                                    </p>
+                                </div>
+                                <div class="advanced-kpi--middle centered">
+                                    <p class="value">
+                                        {{ (values.sante / values.nbequip * 100) | number : 1 }} %
+                                    </p>
+                                </div>
+                                <div class="advanced-kpi--bottom">
+                                    <div class="advanced-kpi--bottom-second-stage">
+                                        <span class="date">{{ ctx1.dataset.metas.data_processed | date }}</span>
+                                        <a class="source"
+                                           href="{{ 'https://' + ctx1.dataset.metas.domain + '.opendatasoft.com/explore/dataset/' + ctx1.dataset.datasetid }}"
+                                           title="{{ ctx1.dataset.metas.title }}">Source <i
+                                                class="fa fa-long-arrow-right"
+                                                aria-hidden="true"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="lg:cell-2 lg:cell-order-4 box white flat colored sante">
-                        <div class="advanced-kpi">
-                            <div class="advanced-kpi--top">
-                                <h3 class="title">
-                                    Principaux équipements de Santé
-                                </h3>
-                                <p class="description">
-                                    Description du TOP 20 de cette catégorie
-                                </p>
-                            </div>
-                            <div class="advanced-kpi--middle">
-                                <ods-chart class="medium-chart" labels-x-length="40" align-month="true">
-                                    <ods-chart-query context="ctx3" field-x="equipment_name" maxpoints="20"
-                                                     sort="serie1-1">
-                                        <ods-chart-serie chart-type="bar" function-y="COUNT" color="#25c9ff"
-                                                         scientific-display="true" label-y="Nb. équipements">
-                                        </ods-chart-serie>
-                                    </ods-chart-query>
-                                </ods-chart>
-                            </div>
-                            <div class="advanced-kpi--bottom">
-                                <div class="advanced-kpi--bottom-second-stage">
-                                    <span class="date">{{ ctx1.dataset.metas.data_processed | date }}</span>
-                                    <a class="source"
-                                       href="{{ 'https://' + ctx1.dataset.metas.domain + '.opendatasoft.com/explore/dataset/' + ctx1.dataset.datasetid }}"
-                                       title="{{ ctx1.dataset.metas.title }}">Source <i class="fa fa-long-arrow-right"
-                                                                                        aria-hidden="true"></i>
-                                    </a>
+                    <div class="col-md-6 order-md-4">
+                        <div class="box white flat colored sante">
+                            <div class="advanced-kpi">
+                                <div class="advanced-kpi--top">
+                                    <h3 class="title">
+                                        Principaux équipements de Santé
+                                    </h3>
+                                    <p class="description">
+                                        Description du TOP 20 de cette catégorie
+                                    </p>
+                                </div>
+                                <div class="advanced-kpi--middle">
+                                    <ods-chart class="medium-chart" labels-x-length="40" align-month="true">
+                                        <ods-chart-query context="ctx3" field-x="equipment_name" maxpoints="20"
+                                                         sort="serie1-1">
+                                            <ods-chart-serie chart-type="bar" function-y="COUNT" color="#25c9ff"
+                                                             scientific-display="true"
+                                                             label-y="Nb. équipements">
+                                            </ods-chart-serie>
+                                        </ods-chart-query>
+                                    </ods-chart>
+                                </div>
+                                <div class="advanced-kpi--bottom">
+                                    <div class="advanced-kpi--bottom-second-stage">
+                                        <span class="date">{{ ctx1.dataset.metas.data_processed | date }}</span>
+                                        <a class="source"
+                                           href="{{ 'https://' + ctx1.dataset.metas.domain + '.opendatasoft.com/explore/dataset/' + ctx1.dataset.datasetid }}"
+                                           title="{{ ctx1.dataset.metas.title }}">Source <i
+                                                class="fa fa-long-arrow-right"
+                                                aria-hidden="true"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>

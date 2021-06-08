@@ -1,7 +1,7 @@
-<section>
-    <div class="container">
-        <div class="grid md:grid-2">
-            <div class="md:cell-1 box white flat">
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="box white flat">
                 <div class="advanced-kpi">
                     <div class="advanced-kpi--top">
                         <h3 class="title">
@@ -26,7 +26,9 @@
                     </div>
                 </div>
             </div>
-            <div class="md:cell-1 box white flat">
+        </div>
+        <div class="col-md-6">
+            <div class="box white flat">
                 <div class="advanced-kpi">
                     <div class="advanced-kpi--top">
                         <h3 class="title">
@@ -53,4 +55,4 @@
             </div>
         </div>
     </div>
-</section>
+</div>

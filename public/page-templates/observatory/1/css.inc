@@ -1,4 +1,3 @@
-/***** Observatory *****/
 :root {
     --boxes-radius: 6px;
 }
@@ -7,76 +6,14 @@ main {
     margin: 0;
 }
 
+/* ALL PAGE CONTAINER */
 .observatory {
     background-color: var(--page-background);
     /* prerequisite for full height modal bar */
     position: relative;
 }
 
-/***** GRID ******/
-[class^=grid] {
-    display: grid;
-    grid-gap: 1rem;
-}
-
-@media screen and (min-width: 768px), print {
-
-    .md\:grid-4 {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-}
-@media screen and (min-width: 1024px), print {
-
-    .lg\:grid-4 {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-}
-
-[class*=":cell"] {
-    display: flex;
-    flex-direction: column;
-    /*grid-column: 1 / -1;*/
-    justify-content: stretch;
-}
-@media screen and (min-width: 768px), print {
-
-    .md\:cell-full {
-        grid-column: 1/-1;
-    }
-
-    .md\:cell-2 {
-        grid-column: span 2/span 2;
-    }
-}
-@media screen and (min-width: 1024px), print {
-
-    .lg\:cell-2 {
-        grid-column: span 2/span 2;
-    }
-
-    .lg\:cell-order-1 {
-        order: 1;
-    }
-
-    .lg\:cell-order-2 {
-        order: 2;
-    }
-
-    .lg\:cell-order-3 {
-        order: 3;
-    }
-
-    .lg\:cell-order-4 {
-        order: 4;
-    }
-}
-
-.gap-6,
-.gap-6 [class^=grid] {
-    gap: 1.5rem;
-}
-
-
+/* Section 1 : heading */
 section.head {
     background-color: white;
     padding: 26px 0;
@@ -90,11 +27,13 @@ section.head {
     margin-bottom: 35px;
     background-color: black;
 }
+
 .filter-block .container {
     display: flex;
     align-items: center;
     padding: 18px 0;
 }
+
 .filter-block button {
     padding: 0 13px;
     margin: 0 10px;
@@ -107,9 +46,11 @@ section.head {
     height: 36px;
     min-width: max-content;
 }
+
 .filter-block button:hover {
     filter: invert();
 }
+
 .filter-block button svg {
     margin-right: 6px;
 }
@@ -133,6 +74,7 @@ section.head {
     line-height: 1.8em;
     margin-top: 26px;
 }
+
 @media screen and (min-width: 640px) {
     #resume {
         margin-right: 33%;
@@ -160,6 +102,10 @@ section.head {
 }
 
 /* MODAL */
+/* The modal is composed of 2 parts:
+the leftside, that is the banner that is always visible, and contains an icon on top to click and actiavte the modal
+the right side, that contains filters, searchbar, charts etc... that is not visible, activated on demand
+the modal default size (width) is 57px, it correspond to the leftside width */
 .cl-modal {
     display: flex;
     flex-direction: column;
@@ -179,7 +125,7 @@ section.head {
     right: 0;
 }
 
-/* specific because ods-widgets are loaded inside */
+/* specific because charts are loaded inside */
 .cl-modal__content {
     width: 400px;
 }
@@ -193,6 +139,7 @@ section.head {
         width: 100vw;
     }
 }
+
 .cl-modal__header {
     min-height: 35px;
     background-color: white;
@@ -203,6 +150,7 @@ section.head {
     opacity: 0;
     transition: opacity 0s;
 }
+
 .cl-modal__header .closebtn {
     padding: 0 13px;
     color: black;
@@ -250,6 +198,7 @@ ul.odswidget.odswidget-filter-summary {
         align-items: center;
     }
 }
+
 li.odswidget-filter-summary__active-filter,
 li.odswidget-filter-summary__clear-all {
     border-radius: 3px;
@@ -280,6 +229,7 @@ a.odswidget-clear-all-filters {
     color: white;
     opacity: 0.8;
 }
+
 a.odswidget-clear-all-filters:hover {
     color: white;
     opacity: 1;
@@ -293,10 +243,11 @@ a.odswidget-clear-all-filters i {
     position: relative;
     padding: 13px;
 }
+
 .box.colored {
     padding-top: calc(13px + 9px);
-    border-radius: var(--boxes-radius) var(--boxes-radius) 0 0;
 }
+
 .box.colored:before {
     position: absolute;
     top: 0;
@@ -304,16 +255,21 @@ a.odswidget-clear-all-filters i {
     right: 0;
     height: 9px;
     content: "";
+    border-radius: var(--boxes-radius) var(--boxes-radius) 0 0;
 }
+
 .box.colored.services:before {
     background-color: #ff714d;
 }
+
 .box.colored.sante:before {
     background-color: #25c9ff;
 }
+
 .box.white {
     background-color: white;
 }
+
 .box.flat {
     border: 1px solid #dfdfdf;
     border-radius: var(--boxes-radius);
@@ -330,6 +286,7 @@ a.odswidget-clear-all-filters i {
     font-size: 1.2em;
     margin: 0 auto 6px;
 }
+
 .advanced-kpi--top .description {
     margin: 0 auto;
     color: #565656;
@@ -342,12 +299,15 @@ a.odswidget-clear-all-filters i {
     flex-direction: column;
     margin: 20px 0;
 }
+
 .advanced-kpi--middle.centered {
     align-items: center;
 }
+
 .advanced-kpi--middle > * {
     margin: 5px 0;
 }
+
 .advanced-kpi--middle .value {
     color: var(--highlight);
     font-weight: 600;
@@ -357,20 +317,25 @@ a.odswidget-clear-all-filters i {
 .advanced-kpi--bottom {
     font-size: 0.8em;
 }
+
 .advanced-kpi--bottom .advanced-kpi--bottom-second-stage {
     display: flex;
     justify-content: space-between;
 }
+
 .advanced-kpi--bottom .source {
     text-decoration: underline;
     color: var(--links);
 }
+
 .advanced-kpi--bottom .source i {
     margin-left: 6px;
 }
+
 .advanced-kpi--bottom .source:hover {
     opacity: 0.65;
 }
+
 .advanced-kpi--bottom .source:hover i {
     animation: bounce 0.7s ease infinite;
 }
@@ -389,6 +354,7 @@ a.odswidget-clear-all-filters i {
         margin-right: 0;
     }
 }
+
 /* CHARTS */
 .ods-chart {
     min-height: inherit;
@@ -409,3 +375,13 @@ a.odswidget-clear-all-filters i {
 .ods-highcharts__tooltip {
     align-items: center;
 }
+
+/**
+ * License: MIT License
+ * Generated on 07 Jun 2021
+ * Author: Labs from opendatasoft
+ * Version: 0.2
+ * Description: ODS Layout over-ride to Flexbox system
+ */
+
+.box,.row.full-height{height:100%}.row{display:flex;flex-wrap:wrap;justify-content:center}.row>*{margin-bottom:20px;flex-grow:1}.order-0{order:0}@media screen and (min-width:750px){.order-sm-0{order:0}}@media screen and (min-width:970px){.order-md-0{order:0}}@media screen and (min-width:1170px){.order-lg-0{order:0}.order-lg-1{order:1}}.order-1{order:1}@media screen and (min-width:750px){.order-sm-1{order:1}}@media screen and (min-width:970px){.order-md-1{order:1}.order-md-2{order:2}}.order-2{order:2}@media screen and (min-width:750px){.order-sm-2{order:2}}@media screen and (min-width:1170px){.order-lg-2{order:2}.order-lg-3{order:3}}.order-3{order:3}@media screen and (min-width:750px){.order-sm-3{order:3}}@media screen and (min-width:970px){.order-md-3{order:3}.order-md-4{order:4}}.order-4{order:4}@media screen and (min-width:750px){.order-sm-4{order:4}}@media screen and (min-width:1170px){.order-lg-4{order:4}.order-lg-5{order:5}}.order-5{order:5}@media screen and (min-width:750px){.order-sm-5{order:5}}@media screen and (min-width:970px){.order-md-5{order:5}.order-md-6{order:6}}.order-6{order:6}@media screen and (min-width:750px){.order-sm-6{order:6}}@media screen and (min-width:1170px){.order-lg-6{order:6}.order-lg-7{order:7}}.order-7{order:7}@media screen and (min-width:750px){.order-sm-7{order:7}}@media screen and (min-width:970px){.order-md-7{order:7}.order-md-8{order:8}}.order-8{order:8}@media screen and (min-width:750px){.order-sm-8{order:8}}@media screen and (min-width:1170px){.order-lg-8{order:8}.order-lg-9{order:9}}.order-9{order:9}@media screen and (min-width:750px){.order-sm-9{order:9}}@media screen and (min-width:970px){.order-md-9{order:9}.order-md-10{order:10}}.order-10{order:10}@media screen and (min-width:750px){.order-sm-10{order:10}}@media screen and (min-width:1170px){.order-lg-10{order:10}.order-lg-11{order:11}}.order-11{order:11}@media screen and (min-width:750px){.order-sm-11{order:11}}@media screen and (min-width:970px){.order-md-11{order:11}.order-md-12{order:12}}.order-12{order:12}@media screen and (min-width:750px){.order-sm-12{order:12}}@media screen and (min-width:1170px){.order-lg-12{order:12}}@media screen and (max-width:1169px){:not([class*=col-md]):not([class*=col-sm]):not([class*=col-xs]).col-lg-1,:not([class*=col-md]):not([class*=col-sm]):not([class*=col-xs]).col-lg-10,:not([class*=col-md]):not([class*=col-sm]):not([class*=col-xs]).col-lg-11,:not([class*=col-md]):not([class*=col-sm]):not([class*=col-xs]).col-lg-12,:not([class*=col-md]):not([class*=col-sm]):not([class*=col-xs]).col-lg-2,:not([class*=col-md]):not([class*=col-sm]):not([class*=col-xs]).col-lg-3,:not([class*=col-md]):not([class*=col-sm]):not([class*=col-xs]).col-lg-4,:not([class*=col-md]):not([class*=col-sm]):not([class*=col-xs]).col-lg-5,:not([class*=col-md]):not([class*=col-sm]):not([class*=col-xs]).col-lg-6,:not([class*=col-md]):not([class*=col-sm]):not([class*=col-xs]).col-lg-7,:not([class*=col-md]):not([class*=col-sm]):not([class*=col-xs]).col-lg-8,:not([class*=col-md]):not([class*=col-sm]):not([class*=col-xs]).col-lg-9{width:100%}}@media screen and (max-width:969px){:not([class*=col-sm]):not([class*=col-xs]).col-md-1,:not([class*=col-sm]):not([class*=col-xs]).col-md-10,:not([class*=col-sm]):not([class*=col-xs]).col-md-11,:not([class*=col-sm]):not([class*=col-xs]).col-md-12,:not([class*=col-sm]):not([class*=col-xs]).col-md-2,:not([class*=col-sm]):not([class*=col-xs]).col-md-3,:not([class*=col-sm]):not([class*=col-xs]).col-md-4,:not([class*=col-sm]):not([class*=col-xs]).col-md-5,:not([class*=col-sm]):not([class*=col-xs]).col-md-6,:not([class*=col-sm]):not([class*=col-xs]).col-md-7,:not([class*=col-sm]):not([class*=col-xs]).col-md-8,:not([class*=col-sm]):not([class*=col-xs]).col-md-9{width:100%}}@media screen and (max-width:749px){.row{flex-direction:column}:not([class*=col-xs]).col-sm-1,:not([class*=col-xs]).col-sm-10,:not([class*=col-xs]).col-sm-11,:not([class*=col-xs]).col-sm-12,:not([class*=col-xs]).col-sm-2,:not([class*=col-xs]).col-sm-3,:not([class*=col-xs]).col-sm-4,:not([class*=col-xs]).col-sm-5,:not([class*=col-xs]).col-sm-6,:not([class*=col-xs]).col-sm-7,:not([class*=col-xs]).col-sm-8,:not([class*=col-xs]).col-sm-9{width:100%}}.no-margin-bottom,.no-mb{margin-bottom:0!important}.no-margin-x,.no-mx{margin-left:0!important;margin-right:0!important}
