@@ -7,9 +7,9 @@ resources:
   name: folder-:counter
 ---
 
-> This resource is EXPERIMENTAL
+> EXPERIMENTAL
 
-This generator build a KPI wall. 
+This generator builds a KPI wall. 
 
 With specific parameters for each KPI card, it will compare values, compute a progression or analyse how your data evolved over time on a specific period. 
 
