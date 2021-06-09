@@ -61,7 +61,7 @@
                         </p>
 
                         <ods-chart timescale="day" single-y-axis="true" align-month="true">
-                            <ods-chart-query context="stats" field-x="timestamp" maxpoints="20" timescale="day">
+                            <ods-chart-query context="stats" field-x="timestamp" maxpoints="0" timescale="day">
                                 <ods-chart-serie expression-y="size_res" chart-type="areaspline" function-y="COUNT" color="#26ADFF" label-y="Count API calls" scientific-display="true" display-values="true">
                                 </ods-chart-serie>
                             </ods-chart-query>
@@ -80,7 +80,7 @@
                             </h2>
                             <p class="subtitle">Daily number of full dataset download, in any format.</p>
                             <ods-chart timescale="day" single-y-axis="true" align-month="true">
-                                <ods-chart-query context="download" field-x="timestamp" maxpoints="20" timescale="day">
+                                <ods-chart-query context="download" field-x="timestamp" maxpoints="0" timescale="day">
                                     <ods-chart-serie expression-y="size_res" chart-type="areaspline" function-y="COUNT" color="#26ADFF" label-y="Count exports" scientific-display="true" display-values="true">
                                     </ods-chart-serie>
                                 </ods-chart-query>
