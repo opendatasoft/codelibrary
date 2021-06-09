@@ -165,6 +165,12 @@ h1 {
   display: none;
 }
 
+.y-values .highcharts-data-label:first-child,
+.y-values .highcharts-data-label:last-child {
+  opacity: 1;
+  visibility: inherit; /* force the last child to be visible, as it can be hidden by highchart */
+}
+
 .mini-card .highcharts-point.highcharts-color-0 {
   fill: var(--primary) !important;
 }

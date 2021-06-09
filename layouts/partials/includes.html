@@ -19,9 +19,13 @@
     const sourceMonitoringInterceptor = ($q) => {
         return {
             request: (config) => {
-              config.params && (delete config.params.source);
-              return config;
-          }
+                if (config.params)
+                    if (config.params.source)
+                        delete config.params.source;
+
+                config.url = config.url.replace("ods-api-monitoring", "monitoring-copy");
+                return config;
+            }
         }
     }
 

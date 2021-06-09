@@ -4,7 +4,7 @@
   --primary-lightness: 21%;
 
   --surface: white;
-  --background: hsl(316, 71%, 21%);
+  --background: var(--primary);
   --card-text: black;
   --body-text: white;
 

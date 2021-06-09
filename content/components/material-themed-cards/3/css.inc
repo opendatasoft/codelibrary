@@ -4,6 +4,7 @@
   --primary-lightness: 21%;
 
   --surface: white;
+  --background: var(--primary);
   --card-text: black;
   --body-text: white;
 

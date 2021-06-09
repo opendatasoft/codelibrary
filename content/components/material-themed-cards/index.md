@@ -20,7 +20,7 @@ These cards are meant to be themed using only the following variables:
   --body-text: #424242;
 ```
 
-It works with HSL colors, by inputting the `--primary-hue`, `--primary-saturation` and `--primary-lightness` separately. 
+It works with [HSL colors](https://www.w3schools.com/colors/colors_hsl.asp), by inputting the `--primary-hue`, `--primary-saturation` and `--primary-lightness` separately. 
 
 These cards can be used anywhere and will fit 100% of their parent container. We recommend using them with a grid system, like the one used here.
 
