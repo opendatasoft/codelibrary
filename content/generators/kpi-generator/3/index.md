@@ -1,6 +1,5 @@
 ---
 title: "Turn the KPI component into a flip card"
-date: 2021-04-20T00:05:01+02:00
 ---
 
 - `link_label`: set a custom label for the link button

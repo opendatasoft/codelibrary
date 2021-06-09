@@ -1,7 +1,7 @@
 ---
 description: "Cards with minimalistic customization of widget that you can theme with colors"
 title: "Material themed cards"
-date: 2021-05-27T16:39:16+02:00
+date: 2021-06-09T10:39:16+02:00
 tags: ["display", "navigation", "list"]
 resources:
 - src: '*/'

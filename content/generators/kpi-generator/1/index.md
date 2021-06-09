@@ -1,6 +1,5 @@
 ---
 title: "Date : progression between 2 periods"
-date: 2021-04-20T00:05:01+02:00
 ---
 
 For date period comparison, additional parameters are required such as :
