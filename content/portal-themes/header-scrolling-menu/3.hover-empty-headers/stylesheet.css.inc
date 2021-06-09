@@ -1,10 +1,6 @@
 /* DESKTOP SPECIFICS - STYLE OF ODS HEADER
 ========================================================================== */
 
-.ods-front-header {
-    height: 60px;
-}
-
 .ods-responsive-menu-collapsible__content {
     display: -webkit-box;
     display: -ms-flexbox;

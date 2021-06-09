@@ -2,7 +2,7 @@
 title: "Based on hover - for empty headers"
 description: "Scrolling menu with hover for empty headers"
 tags: []
-iframe: "https://header-hover-discovery.opendatasoft.com/explore/?sort=modified"
+iframe: "https://header-hover-discovery.opendatasoft.com/explore/"
 text: "#565656"
 links: "#0086D6"
 titles: "#000000"

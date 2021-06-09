@@ -1,10 +1,6 @@
 /* DESKTOP SPECIFICS - STYLE OF ODS HEADER
 ========================================================================== */
 
-.ods-front-header {
-    height: 60px;
-}
-
 .ods-responsive-menu-collapsible__content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -23,13 +19,6 @@
 
 /* DESKTOP SPECIFICS - STYLE OF SCROLLING MENU
 ========================================================================== */
-
-.portal-navigation {
-    margin: 0;
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 auto;
-    flex: 1 1 auto;
-}
 
 .ods-front-header__menu-item {
     position: relative;
@@ -115,7 +104,6 @@ li.scrolling-menu-submenu-item:last-child {
     display: none;
 }
 
-.ods-responsive-menu-collapsible--collapsed .portal-navigation,
 .ods-responsive-menu-collapsible--collapsed .ods-front-header__menu,
 .ods-responsive-menu-collapsible--collapsed .ods-front-header__management-menu
 {
