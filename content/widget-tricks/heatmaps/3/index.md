@@ -1,8 +1,11 @@
 ---
-title: "Content title"
-date: 2021-06-16T14:46:47+02:00
-height: 70
-external_url: "https://wwww.opendatasoft.com"
+title: "Heatmap: Month x Days, with quantile scale"
+date: 2021-06-16T14:46:45+02:00
+height: 550
 ---
 
-Text
+- x: Days
+- y: Months
+- color scheme: Oranges
+- color aggregate: mean temperature
+- **scale type: quantile**

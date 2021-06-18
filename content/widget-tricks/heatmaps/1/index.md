@@ -1,5 +1,5 @@
 ---
-title: "Vega-lite heatmap"
+title: "Vega-lite presentation"
 date: 2021-06-16T14:46:16+02:00
 ---
 
@@ -7,4 +7,4 @@ date: 2021-06-16T14:46:16+02:00
 
 [ods-vega-lite-chart](https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsVegaLiteChart) widget, in combinaison with `ods-adv-analysis` to get the data, allows adding Vega-Lite charts into your pages.
 
-This resource presents an heatmap powered by Vega-Lite and an Opendatasoft dataset.
+This first resource is an introduction and pre-requisite to understand key concepts of Vega-Lite within ODS.

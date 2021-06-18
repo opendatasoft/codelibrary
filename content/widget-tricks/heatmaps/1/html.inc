@@ -1,558 +1,300 @@
-<ods-dataset-context context="datum,sites"
-                     datum-dataset="donnees-eco-compteur-tours-metropole"
-                     datum-domain="eco-compteur-odsapps"
-                     datum-parameters="{'q':'date >= 2021'}"
-                     sites-dataset="sites-eco-compteur-tours-metropole"
-                     sites-domain="eco-compteur-odsapps">
-    <div class="container">
-        <p>Default font & size</p>
-        <ods-simple-tabs>
-            <ods-simple-tab label="heatmap vegalite">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h1>Nombre de passage vélo, journée type, par mois</h1>
-                        <div ods-adv-analysis="myData"
-                             ods-adv-analysis-context="datum"
-                             ods-adv-analysis-select="sum(counts) as count"
-                             ods-adv-analysis-group-by="date"
-                             ng-init="jsondef={
-                              '$schema': 'https://vega.github.io/schema/vega-lite/v2.json',
-                              'data': {'name': 'adva'},
-                              'height': 220,
-                              'config': {
-                                  'view': {
-                                      'strokeWidth': 0,
-                                      'step': 13
-                                  },
-                                  'axis': {
-                                      'grid': true,
-                                      'tickBand': 'extent',
-                                      'domain': false,
-                                      'labelFontSize':14,
-                                      'labelFont':'Roboto, Helvetica, Arial, sans-serif'
-                                  }
-                              },
-                              'mark': {
-                                'type':'rect',
-                                'height':200,
-                                'width':200
-                              },
-                              'encoding': {
-                                  'x': {
-                                      'field': 'date',
-                                      'timeUnit': 'hours',
-                                      'type': 'ordinal',
-                                      'title': 'Heures'
-                                  },
-                                  'y': {
-                                      'field': 'date',
-                                      'timeUnit': 'month',
-                                      'type': 'ordinal',
-                                      'title': 'Mois'
-                                  },
-                                  'color': {
-                                      'field': 'count',
-                                      'aggregate': 'sum',
-                                      'type': 'quantitative',
-                                      'title': 'Nombre de passages',
-                                      'scale' : {
-                                          'scheme': 'Oranges',
-                                          'type': 'pow',
-                                          'exponent': 0.5
-                                      },
-                                      'legend': {
-                                          'title': null
-                                      }
-                                  }
-                              }
-                              }">
-                            <ods-vega-lite-chart spec="jsondef" values-adva="myData"></ods-vega-lite-chart>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <h1>Nombre de passage vélo, mois type</h1>
-                        <div ods-adv-analysis="myData"
-                             ods-adv-analysis-context="datum"
-                             ods-adv-analysis-select="sum(counts) as count"
-                             ods-adv-analysis-group-by="date"
-                             ng-init="jsondef={
-                              '$schema': 'https://vega.github.io/schema/vega-lite/v2.json',
-                              'data': {'name': 'adva'},
-                              'height': 220,
-                              'config': {
-                                  'view': {
-                                      'strokeWidth': 0,
-                                      'step': 13
-                                  },
-                                  'axis': {
-                                      'grid': true,
-                                      'tickBand': 'extent',
-                                      'domain': false,
-                                      'labelFontSize':14,
-                                      'labelFont':'Roboto, Helvetica, Arial, sans-serif'
-                                  }
-                              },
-                              'mark': {
-                                'type':'rect'
-                              },
-                              'encoding': {
-                                  'x': {
-                                      'field': 'date',
-                                      'timeUnit': 'days',
-                                      'type': 'ordinal',
-                                      'title': 'Jour'
-                                  },
-                                  'y': {
-                                      'field': 'date',
-                                      'timeUnit': 'month',
-                                      'type': 'ordinal',
-                                      'title': 'Mois'
-                                  },
-                                  'color': {
-                                      'field': 'count',
-                                      'aggregate': 'sum',
-                                      'type': 'quantitative',
-                                      'title': 'Nombre de passages',
-                                      'scale' : {
-                                          'scheme': 'Oranges',
-                                          'type': 'pow',
-                                          'exponent': 0.5
-                                      },
-                                      'legend': {
-                                          'title': null
-                                      }
-                                  }
-                              }
-                              }">
-                            <ods-vega-lite-chart spec="jsondef" values-adva="myData"></ods-vega-lite-chart>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <h1>Month X Day : nombre de passage vélo</h1>
-                        <div ods-adv-analysis="myData"
-                             ods-adv-analysis-context="datum"
-                             ods-adv-analysis-select="sum(counts) as count"
-                             ods-adv-analysis-group-by="date"
-                             ng-init="jsondef={
-                              '$schema': 'https://vega.github.io/schema/vega-lite/v2.json',
-                              'data': {'name': 'adva'},
-                              'config': {
-                                  'view': {
-                                      'strokeWidth': 0,
-                                      'step': 13
-                                  },
-                                  'axis': {
-                                      'domain': false
-                                  }
-                              },
-                              'mark': {
-                                  'type': 'circle',
-                                  'opacity': 0.8,
-                                  'stroke': 'black',
-                                  'strokeWidth': 1
-                              },
-                              'encoding': {
-                                  'x': {
-                                      'field': 'date',
-                                      'timeUnit': 'date',
-                                      'type': 'ordinal',
-                                      'title': 'Jour',
-                                      'axis': {
-                                          'labelAngle': 0,
-                                          'format': '%e'
-                                      }
-                                  },
-                                  'y': {
-                                      'field': 'date',
-                                      'timeUnit': 'month',
-                                      'type': 'ordinal',
-                                      'title': 'Mois'
-                                  },
-                                  'color': {
-                                      'field': 'count',
-                                      'aggregate': 'sum',
-                                      'type': 'quantitative',
-                                      'scale' : {'scheme': 'yellowgreenblue'},
-                                      'legend': {
-                                          'title': null
-                                      }
-                                  },
-                                  'size': {
-                                      'field': 'count',
-                                      'aggregate': 'sum',
-                                      'type': 'quantitative',
-                                      'scale': {
-                                          'type':'quantile'
-                                      }
-                                  }
-
-                              }
-                              }">
-                            <ods-vega-lite-chart spec="jsondef" values-adva="myData"></ods-vega-lite-chart>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                        <h1>Month X Day : nombre de passage vélo</h1>
-                        <div ods-adv-analysis="myData"
-                             ods-adv-analysis-context="datum"
-                             ods-adv-analysis-select="sum(counts) as count"
-                             ods-adv-analysis-group-by="date"
-                             ng-init="jsondef={
-                              '$schema': 'https://vega.github.io/schema/vega-lite/v2.json',
-                              'data': {'name': 'adva'},
-                              'config': {
-                                  'view': {
-                                      'strokeWidth': 0
-                                  },
-                                  'axis': {
-                                      'domain': false
-                                  }
-                              },
-                              'mark': {
-                                  'type': 'circle',
-                                  'opacity': 0.8,
-                                  'stroke': 'black',
-                                  'strokeWidth': 1
-                              },
-                              'encoding': {
-                                  'x': {
-                                      'field': 'date',
-                                      'timeUnit': 'day',
-                                      'sort': ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'],
-                                      'type': 'ordinal',
-                                      'title': 'Jour',
-                                      'axis': {
-                                          'labelAngle': 315
-                                      }
-                                  },
-                                  'y': {
-                                      'field': 'date',
-                                      'timeUnit': 'month',
-                                      'type': 'ordinal',
-                                      'title': 'Mois'
-                                  },
-                                  'color': {
-                                      'field': 'count',
-                                      'aggregate': 'sum',
-                                      'type': 'quantitative',
-                                      'scale' : {
-                                        'scheme': 'yellowgreenblue'
-                                      },
-                                      'legend': {
-                                          'title': null
-                                      }
-                                  },
-                                  'size': {
-                                      'field': 'count',
-                                      'aggregate': 'sum',
-                                      'type': 'quantitative'
-                                  }
-                              }
-                              }">
-                            <ods-vega-lite-chart spec="jsondef" values-adva="myData"></ods-vega-lite-chart>
-                        </div>
-                    </div>
-                </div>
-            </ods-simple-tab>
-            <ods-simple-tab label="heatmap">
-                <div class="row">
-                    <div class="col-md-12"
-                         ng-if="true"
-                         ng-init="variables = {'min':undefined, 'max':undefined};
-                                  colors = {};
-                                  rgbstart = [0,55,237];
-                                  rgbend = [180,197,241]">
-                        <h1>Month X Day : nombre de passage vélo</h1>
-                        <div ods-adv-analysis="results"
-                             ods-adv-analysis-context="datum"
-                             ods-adv-analysis-select="sum(counts) as count"
-                             ods-adv-analysis-group-by="month(date) as month, day(date) as day"
-                             ods-adv-analysis-limit="-1"
-                             ods-adv-analysis-order-by="month asc, day asc">
-                            {{
-                            variables.numrow = (results | toObject:"month" | numKeys) ;
-                            variables.numcol = (results | toObject:"day" | numKeys) ;
-                            variables.listrow = (results | toObject:"month" | keys | orderBy) ;
-                            variables.listcol = (results | toObject:"day" | keys | orderBy) ; ""}}
-
-                            <span ng-repeat="res in results">
-                                {{ variables.min = (!variables.min || res.count < variables.min ? res.count : variables.min); '' }}
-                                {{ variables.max = (!variables.max || res.count > variables.max ? res.count : variables.max); '' }}
-                            </span>
-
-                            <div class="grid"
-                                 ng-class="{'display-values': variables.displayvalues}"
-                                 ng-if="variables.min && variables.max">
-                                <!-- Bottom horizontal -->
-                                <div ng-repeat="(i,e) in variables.listcol"
-                                     style="grid-column: {{ i + 2 }};
-                                    grid-row: {{variables.numrow + 1}};">
-                                    <strong>{{e}}</strong>
-                                </div>
-
-                                <!-- Left vertical -->
-                                <div ng-repeat="(i,e) in variables.listrow"
-                                     style="grid-column: 1;
-                                    grid-row: {{ i + 1 }};">
-                                    <strong>{{e}}</strong>
-                                </div>
-
-                                <!-- Grid content -->
-                                <div class="cell square"
-                                     ng-repeat="e in results"
-                                     ng-init="val = ((e.count - variables.min) / (variables.max - variables.min))"
-                                     style="grid-column: {{variables.listcol.indexOf(e.day) + 2}};
-                                            grid-row: {{variables.listrow.indexOf(e.month) + 1}};">
-                                    <div class="round"
-                                         style="width : {{ ((val | math : 'sqrt')/(variables.max|math:'sqrt'))*10000 }}%;
-                                                height : {{ ((val | math : 'sqrt')/(variables.max|math:'sqrt'))*10000 }}%;
-                                                background-color: {{ 'rgb(' +
-                                                                    ((val * rgbstart[0] + (1 - val) * rgbend[0]) | math : 'floor') +
-                                                                    ',' +
-                                                                    ((val * rgbstart[1] + (1 - val) * rgbend[1]) | math : 'floor') +
-                                                                    ',' +
-                                                                    ((val * rgbstart[2] + (1 - val) * rgbend[2]) | math : 'floor') +
-                                                                    ')' }};"
-                                         ods-tooltip="{{e.count | number}}">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="grid-sub row">
-                                <div class="col-sm-6">
-
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="grid-legend">
-                                        <div class="grid-legend__min-value">{{ variables.min | number }}</div>
-                                        <div class="grid-legend__gradient"
-                                             style="background: linear-gradient(270deg,
-                                                                        {{ 'rgb('+rgbstart[0]+','+rgbstart[1]+','+rgbstart[2]+')' }},
-                                                                        {{ 'rgb('+rgbend[0]+','+rgbend[1]+','+rgbend[2]+')' }}
-                                     )"></div>
-                                        <div class="grid-legend__max-value">{{ variables.max | number }}</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12"
-                         ng-if="true"
-                         ng-init="variables = {'min':undefined, 'max':undefined};
-                                  colors = {};
-                                  rgbstart = [0,55,237];
-                                  rgbend = [180,197,241]">
-                        <h1>Month X Day : nombre de passage vélo</h1>
-                        <div ods-adv-analysis="results"
-                             ods-adv-analysis-context="datum"
-                             ods-adv-analysis-select="sum(counts) as count"
-                             ods-adv-analysis-group-by="month(date) as month, day(date) as day"
-                             ods-adv-analysis-limit="-1"
-                             ods-adv-analysis-order-by="month asc, day asc">
-                            {{
-                            variables.numrow = (results | toObject:"month" | numKeys) ;
-                            variables.numcol = (results | toObject:"day" | numKeys) ;
-                            variables.listrow = (results | toObject:"month" | keys | orderBy) ;
-                            variables.listcol = (results | toObject:"day" | keys | orderBy) ; ""}}
-
-                            <span ng-repeat="res in results">
-                                {{ variables.min = (!variables.min || res.count < variables.min ? res.count : variables.min); '' }}
-                                {{ variables.max = (!variables.max || res.count > variables.max ? res.count : variables.max); '' }}
-                            </span>
-
-                            <div class="grid"
-                                 ng-class="{'display-values': variables.displayvalues}"
-                                 ng-if="variables.min && variables.max">
-                                <!-- Bottom horizontal -->
-                                <div ng-repeat="(i,e) in variables.listcol"
-                                     style="grid-column: {{ i + 2 }};
-                                    grid-row: {{variables.numrow + 1}};">
-                                    <strong>{{e}}</strong>
-                                </div>
-
-                                <!-- Left vertical -->
-                                <div ng-repeat="(i,e) in variables.listrow"
-                                     style="grid-column: 1;
-                                    grid-row: {{ i + 1 }};">
-                                    <strong>{{e}}</strong>
-                                </div>
-
-                                <!-- Grid content -->
-                                <div class="cell square"
-                                     ng-repeat="e in results"
-                                     ng-init="val = ((e.count - variables.min) / (variables.max - variables.min))"
-                                     style="background-color: {{ 'rgb(' +
-                                                                    ((val * rgbstart[0] + (1 - val) * rgbend[0]) | math : 'floor') +
-                                                                    ',' +
-                                                                    ((val * rgbstart[1] + (1 - val) * rgbend[1]) | math : 'floor') +
-                                                                    ',' +
-                                                                    ((val * rgbstart[2] + (1 - val) * rgbend[2]) | math : 'floor') +
-                                                                    ')' }};
-                                               grid-column: {{variables.listcol.indexOf(e.day) + 2}};
-                                               grid-row: {{variables.listrow.indexOf(e.month) + 1}};">
-                                    {{e.count | number}}
-                                </div>
-                            </div>
-
-                            <div class="grid-sub row">
-                                <div class="col-sm-6">
-                                    <div class="grid-switch">
-                                        <p>Display values: </p>
-                                        <label class="switch">
-                                            <input class="switch-input"
-                                                   ng-model="variables.displayvalues"
-                                                   type="checkbox">
-                                            <div class="switch-button">
-                                                <span class="switch-button-left">OFF</span>
-                                                <span class="switch-button-right">ON</span>
-                                            </div>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="grid-legend">
-                                        <div class="grid-legend__min-value">{{ variables.min | number }}</div>
-                                        <div class="grid-legend__gradient"
-                                             style="background: linear-gradient(270deg,
-                                                                        {{ 'rgb('+rgbstart[0]+','+rgbstart[1]+','+rgbstart[2]+')' }},
-                                                                        {{ 'rgb('+rgbend[0]+','+rgbend[1]+','+rgbend[2]+')' }}
-                                     )"></div>
-                                        <div class="grid-legend__max-value">{{ variables.max | number }}</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12"
-                         ng-if="true"
-                         ng-init="variables = {}">
-                        <h1>Departement X Communes : nombre de sites</h1>
-                        <div ods-adv-analysis="results"
-                             ods-adv-analysis-context="sites"
-                             ods-adv-analysis-select="count(*) as count"
-                             ods-adv-analysis-group-by="departement, commune"
-                             ods-adv-analysis-limit="-1"
-                             ods-adv-analysis-order-by="commune asc">
-                            {{
-                            variables.numrow = (results | toObject:"departement" | numKeys) ;
-                            variables.numcol = (results | toObject:"commune" | numKeys) ;
-                            variables.listrow = (results | toObject:"departement" | keys | orderBy) ;
-                            variables.listcol = (results | toObject:"commune" | keys | orderBy) ; ""}}
-
-                            <span ng-repeat="res in results">
-                                {{ variables.min = (!variables.min || res.count < variables.min ? res.count : variables.min); '' }}
-                                {{ variables.max = (!variables.max || res.count > variables.max ? res.count : variables.max); '' }}
-                            </span>
-
-                            <div class="grid"
-                                 ng-class="{'display-values': variables.displayvalues}">
-                                <!-- Bottom horizontal -->
-                                <div ng-repeat="(i,e) in variables.listcol"
-                                     style="grid-column: {{ i + 2 }};
-                                    grid-row: {{variables.numrow + 1}};">
-                                    <strong>{{e}}</strong>
-                                </div>
-
-                                <!-- Left vertical -->
-                                <div ng-repeat="(i,e) in variables.listrow"
-                                     style="grid-column: 1;
-                                    grid-row: {{ i + 1 }};">
-                                    <strong>{{e}}</strong>
-                                </div>
-
-                                <!-- Grid content -->
-                                <div class="cell"
-                                     ng-repeat="(i,e) in results"
-                                     ng-class="{'orange': e.count <= 1, 'lightgreen': e.count > 1 && e.count <= 2,'darkgreen': e.count > 2}"
-                                     style="grid-column: {{variables.listcol.indexOf(e.commune) + 2}};
-                                    grid-row: {{variables.listrow.indexOf(e.departement) + 1}};">
-                                    {{e.count | number : 0}}
-                                </div>
-                            </div>
-
-                            <div class="grid-sub row">
-                                <div class="col-sm-6">
-                                    <div class="grid-switch">
-                                        <p>Display values: </p>
-                                        <label class="switch">
-                                            <input class="switch-input"
-                                                   ng-model="variables.displayvalues"
-                                                   type="checkbox">
-                                            <div class="switch-button">
-                                                <span class="switch-button-left">OFF</span>
-                                                <span class="switch-button-right">ON</span>
-                                            </div>
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12"
-                         ng-if="true"
-                         ng-init="variables = {}">
-                        <h1>Departement X Communes : nombre de sites</h1>
-                        <div ods-adv-analysis="results"
-                             ods-adv-analysis-context="sites"
-                             ods-adv-analysis-select="count(*) as count"
-                             ods-adv-analysis-group-by="departement, commune"
-                             ods-adv-analysis-limit="-1"
-                             ods-adv-analysis-order-by="commune asc">
-                            {{
-                            variables.numrow = (results | toObject:"departement" | numKeys) ;
-                            variables.numcol = (results | toObject:"commune" | numKeys) ;
-                            variables.listrow = (results | toObject:"departement" | keys | orderBy) ;
-                            variables.listcol = (results | toObject:"commune" | keys | orderBy) ; ""}}
-
-                            <span ng-repeat="res in results">
-                                {{ variables.min = (!variables.min || res.count < variables.min ? res.count : variables.min); '' }}
-                                {{ variables.max = (!variables.max || res.count > variables.max ? res.count : variables.max); '' }}
-                            </span>
-
-                            <div class="grid"
-                                 ng-class="{'display-values': variables.displayvalues}">
-                                <!-- Bottom horizontal -->
-                                <div ng-repeat="(i,e) in variables.listcol"
-                                     style="grid-column: {{ i + 2 }};
-                                    grid-row: {{variables.numrow + 1}};">
-                                    <strong>{{e}}</strong>
-                                </div>
-
-                                <!-- Left vertical -->
-                                <div ng-repeat="(i,e) in variables.listrow"
-                                     style="grid-column: 1;
-                                    grid-row: {{ i + 1 }};">
-                                    <strong>{{e}}</strong>
-                                </div>
-
-                                <!-- Grid content -->
-                                <div class="cell square"
-                                     ng-repeat="e in results"
-                                     style="grid-column: {{variables.listcol.indexOf(e.commune) + 2}};
-                                            grid-row: {{variables.listrow.indexOf(e.departement) + 1}};">
-                                    <div class="round"
-                                         ng-class="{'orange': e.count <= 1, 'lightgreen': e.count > 1 && e.count <= 2,'darkgreen': e.count > 2}"
-                                         style="width : {{ ((e.count | math : 'sqrt')/(variables.max|math:'sqrt'))*100 }}%;
-                                                height : {{ ((e.count | math : 'sqrt')/(variables.max|math:'sqrt'))*100 }}%;"
-                                         ods-tooltip="{{e.count | number}}">
-                                    </div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </ods-simple-tab>
-        </ods-simple-tabs>
+<div class="container">
+    <h3>Vega-Lite works with a json block that contains the entire description of the chart. It looks like this:</h3>
+    <div class="row">
+        <div class="col-md-8">
+        <pre><code>{
+    '$schema': 'https://vega.github.io/schema/vega-lite/v2.json',
+    'data': {
+        'name': 'data'
+    },
+    'height': 300,
+    'config': {
+        ...
+    },
+    'mark': 'rect',
+    'encoding': {
+        'y': ...,
+        'x': ...,
+        'color': ...,
+        'size': ...
+    }
+}</code></pre>
+        </div>
+        <div class="col-md-4">
+            <h4>The structure</h4>
+            <ul>
+                <li><code>data</code> is the data from your <code>ods-adv-analysis</code></li>
+                <li><code>height</code> th height of the chart. The width is 100% of the container</li>
+                <li>
+                    <code>mark</code> is the type of chart, rect for heatmaps, circle for bubble maps, it can be line, area, text etc...
+                    <a target="_blank"
+                       href="https://vega.github.io/vega-lite-v2/docs/mark.html">See mark documentation</a>
+                </li>
+                <li><code>encoding</code> is the axis, scale, legend, and all specific settings of the visualisation
+                </li>
+            </ul>
+        </div>
     </div>
-</ods-dataset-context>
+    <h3>Encoding block is the most important, it contains your axis settings, color and size settings, and the legend</h3>
+    <div class="row">
+        <div class="col-md-8">
+        <pre><code>'encoding': {
+        'y': {
+            'field': 'date',
+            'timeUnit': 'month',
+            'type': 'ordinal'
+        },
+        'x': {
+            'field': 'date',
+            'timeUnit': 'hours',
+            'type': 'ordinal'
+        },
+        'color': {
+            'field': 'count',
+            'aggregate': 'sum',
+            'type': 'quantitative'
+        }
+    }
+}</code></pre>
+        </div>
+        <div class="col-md-4">
+            <h4>Example of minimal encoding for an heatmap</h4>
+            <ul>
+                <li><strong>y axis</strong> are the months, taken from the <code>date</code> field of the data</li>
+                <li><strong>x axis</strong> are the hours of the day, taken from the <code>date</code> field of the data
+                </li>
+                <li>the heatmap is colored by computing the sum of
+                    <code>count</code> field from the data, for each month and hours.
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-12">
+            <p>
+                The difficult part here is the type of scale of color,
+                <code>type: quantitative</code>. The resulting values is a quantity (a sum, an average etc...).
+                See other <a target="_blank"
+                             href="https://vega.github.io/vega-lite-v2/docs/type.html">encoding types in the documentation</a>.
+                But in brief :
+            </p>
+            <ul>
+                <li><code>quantitative</code>: numerical values and quantities</li>
+                <li><code>temporal</code>: specific to dates and datetimes</li>
+                <li><code>ordinal</code>: values that you can order (ex: Jan, Feb, Mar, Apr...)</li>
+                <li><code>nominal</code>: values that you can name (ex: Male, Female.</li>
+            </ul>
+        </div>
+    </div>
+
+    <h3>Config</h3>
+    <div class="row">
+        <div class="col-md-8">
+        <pre><code>'config': {
+        'view': {
+            'stroke': 'transparent',
+            'strokeWidth': 0
+        },
+        'axis': {
+            'grid': true,
+            'domain': false,
+            'labelFontSize':14,
+            'labelFont':'Roboto, Helvetica, Arial, sans-serif'
+        }
+    }
+}</code></pre>
+        </div>
+        <div class="col-md-4">
+            <h4>Overall configuration</h4>
+            <p>Optional, but useful to customize the final rendering. Here
+                <code>grid: true</code> set a grid canvas with X and Y lines.
+                <code>domain: false</code> remove the base line between the visualization and the axis legends.
+                <a target="_blank"
+                   href="https://vega.github.io/vega-lite-v2/docs/config.html">See the documentation for more personalization</a>
+        </div>
+    </div>
+    <h3>All together</h3>
+    <div class="row">
+        <div class="col-md-5">
+        <pre><code>{
+    '$schema': 'https://vega.github.io/schema/vega-lite/v2.json',
+    'data': {
+        'name': 'data'
+    },
+    'height': 300,
+    'mark': 'rect',
+    'encoding': {
+        'y': {
+            'field': 'date',
+            'timeUnit': 'month',
+            'type': 'ordinal',
+        },
+        'x': {
+            'field': 'date',
+            'timeUnit': 'date',
+            'type': 'ordinal',
+        },
+        'color': {
+            'field': 'count',
+            'aggregate': 'sum',
+            'type': 'quantitative'
+        }
+    }
+}</code></pre>
+        </div>
+        <div class="col-md-7">
+            <ods-dataset-context context="datum"
+                                 datum-dataset="comptage-velo-donnees-compteurs">
+                <h4>Counting of cyclists by month and day. Analysis of the trend.</h4>
+                <div ods-adv-analysis="myData"
+                     ods-adv-analysis-context="datum"
+                     ods-adv-analysis-select="sum(sum_counts) as count"
+                     ods-adv-analysis-group-by="date_format(date,'YYYY-MM-dd') as date">
+                    <div ng-init="jsondef=
+{
+    '$schema': 'https://vega.github.io/schema/vega-lite/v2.json',
+    'data': {
+        'name': 'data'
+    },
+    'height': 300,
+    'mark': 'rect',
+    'encoding': {
+        'y': {
+            'field': 'date',
+            'timeUnit': 'month',
+            'type': 'ordinal',
+        },
+        'x': {
+            'field': 'date',
+            'timeUnit': 'date',
+            'type': 'ordinal',
+        },
+        'color': {
+            'field': 'count',
+            'aggregate': 'sum',
+            'type': 'quantitative'
+        }
+    }
+}">
+                        <ods-vega-lite-chart spec="jsondef"
+                                             values-data="myData"></ods-vega-lite-chart>
+                    </div>
+                </div>
+            </ods-dataset-context>
+        </div>
+    </div>
+    <h3>With optional config, titles and custom scale colors</h3>
+    <div class="row">
+        <div class="col-md-5">
+        <pre><code>{
+    '$schema': 'https://vega.github.io/schema/vega-lite/v2.json',
+    'data': {
+        'name': 'data'
+    },
+    'height': 300,
+    'config': {
+        'view': {
+            'stroke': 'transparent',
+            'strokeWidth': 0
+        },
+        'axis': {
+            'grid': true,
+            'domain': false,
+            'labelFontSize':14,
+            'labelFont':'Roboto, Helvetica, Arial, sans-serif'
+        }
+    },
+    'mark': 'rect',
+    'encoding': {
+        'y': {
+            'field': 'date',
+            'timeUnit': 'month',
+            'type': 'ordinal',
+            'title': 'Month'
+        },
+        'x': {
+            'field': 'date',
+            'timeUnit': 'date',
+            'type': 'ordinal',
+            'title': 'Day'
+        },
+        'color': {
+            'title': 'Nombre de passages',
+            'field': 'count',
+            'aggregate': 'sum',
+            'type': 'quantitative',
+            'scale': {
+                'scheme': 'yellowgreenblue',
+            },
+            'legend': {
+                'title': null
+            }
+        }
+    }
+}</code></pre>
+        </div>
+        <div class="col-md-7">
+            <ods-dataset-context context="datum"
+                                 datum-dataset="comptage-velo-donnees-compteurs">
+                <h4>Counting of cyclists by month and day. Analysis of the trend.</h4>
+                <div ods-adv-analysis="myData"
+                     ods-adv-analysis-context="datum"
+                     ods-adv-analysis-select="sum(sum_counts) as count"
+                     ods-adv-analysis-group-by="date_format(date,'YYYY-MM-dd') as date">
+                    <div ng-init="jsondef=
+{
+    '$schema': 'https://vega.github.io/schema/vega-lite/v2.json',
+    'data': {
+        'name': 'data'
+    },
+    'height': 300,
+    'config': {
+        'view': {
+            'stroke': 'transparent',
+            'strokeWidth': 0
+        },
+        'axis': {
+            'grid': true,
+            'domain': false,
+            'labelFontSize':14,
+            'labelFont':'Roboto, Helvetica, Arial, sans-serif'
+        }
+    },
+    'mark': 'rect',
+    'encoding': {
+        'y': {
+            'field': 'date',
+            'timeUnit': 'month',
+            'type': 'ordinal',
+            'title': 'Month',
+            'format': '%e'
+        },
+        'x': {
+            'field': 'date',
+            'timeUnit': 'date',
+            'type': 'ordinal',
+            'title': 'Day'
+        },
+        'color': {
+            'title': 'Number of cyclists',
+            'field': 'count',
+            'aggregate': 'sum',
+            'type': 'quantitative',
+            'scale': {
+                'scheme': 'purples',
+            },
+            'legend': {
+                'title': null
+            }
+        }
+    }
+}">
+                        <ods-vega-lite-chart spec="jsondef"
+                                             values-data="myData"></ods-vega-lite-chart>
+                    </div>
+                </div>
+            </ods-dataset-context>
+        </div>
+        <div class="col-md-12">
+            All available scale colors can be found in the <a target="_blank" href="https://vega.github.io/vega/docs/schemes/#scheme-properties">scheme documentation</a>
+        </div>
+    </div>
+</div>
