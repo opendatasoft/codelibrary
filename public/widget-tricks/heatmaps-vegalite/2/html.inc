@@ -1,15 +1,79 @@
 <div class="container">
-    <ods-simple-tabs class="tab-pills">
-        <ods-simple-tab label="Heatmap"
-                        fontawesome-class="map"
-                        keep-content="false">
-            <ods-dataset-context context="datum"
-                                 datum-dataset="observation-synop">
-                <div ods-adv-analysis="myData"
-                     ods-adv-analysis-context="datum"
-                     ods-adv-analysis-select="avg(t) as count"
-                     ods-adv-analysis-group-by="date_format(date,'YYYY-MM-dd') as date">
-                    <div ng-init="jsondef={
+    <ods-dataset-context context="datum"
+                         datum-dataset="observation-synop">
+        <div ods-adv-analysis="myData"
+             ods-adv-analysis-context="datum"
+             ods-adv-analysis-select="avg(t) as count"
+             ods-adv-analysis-group-by="date_format(date,'YYYY-MM-dd') as date">
+
+            <div class="row">
+                <div class="col-md-6">
+                    <p>
+                        Years by months, default (linear) scale, blueorange color scheme, mean temperature
+                    </p>
+                    <div ng-init="jsondefa={
+'$schema': 'https://vega.github.io/schema/vega-lite/v2.json',
+'data': {
+    'name': 'data'
+},
+'height': 400,
+'config': {
+    'view': {
+        'stroke': 'transparent',
+        'strokeWidth': 0,
+        'binSpacing': 2,
+    },
+    'axis': {
+        'grid': true,
+        'domain': false,
+        'labelFontSize':14,
+        'labelFont':'Roboto, Helvetica, Arial, sans-serif'
+    }
+},
+'mark': {
+    'type': 'rect',
+    'binSpacing': 5,
+},
+'encoding': {
+    'y': {
+        'field': 'date',
+        'timeUnit': 'year',
+        'type': 'ordinal',
+        'title': 'Year'
+    },
+    'x': {
+        'field': 'date',
+        'timeUnit': 'month',
+        'type': 'ordinal',
+        'title': 'Month',
+        'axis': {
+           'labelAngle': 290
+        }
+    },
+    'color': {
+        'title': 'Average temperature (K)',
+        'field': 'count',
+        'aggregate': 'mean',
+        'type': 'quantitative',
+        scale: {
+            'scheme': 'blueorange'
+        },
+        'legend': {
+            'format':'.0f',
+            'title': null
+        }
+    }
+}
+}">
+                        <ods-vega-lite-chart spec="jsondefa"
+                                             values-data="myData"></ods-vega-lite-chart>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <p>
+                        Months by days, default (linear) scale, mean temperature
+                    </p>
+                    <div ng-init="jsondefb={
 '$schema': 'https://vega.github.io/schema/vega-lite/v2.json',
 'data': {
     'name': 'data'
@@ -41,7 +105,10 @@
         'field': 'date',
         'timeUnit': 'date',
         'type': 'ordinal',
-        'title': 'Day'
+        'title': 'Day',
+        'axis': {
+           'labelAngle': 290
+        }
     },
     'color': {
         'title': 'Average temperature (K)',
@@ -55,62 +122,12 @@
     }
 }
 }">
-                        <ods-vega-lite-chart spec="jsondef"
+                        <ods-vega-lite-chart spec="jsondefb"
                                              values-data="myData"></ods-vega-lite-chart>
                     </div>
                 </div>
-            </ods-dataset-context>
-        </ods-simple-tab>
-        <ods-simple-tab label="Json config"
-                        fontawesome-class="code"
-                        keep-content="false">
-        <pre><code>{
-'$schema': 'https://vega.github.io/schema/vega-lite/v2.json',
-'data': {
-    'name': 'data'
-},
-'height': 400,
-'config': {
-    'view': {
-        'stroke': 'transparent',
-        'strokeWidth': 0
-    },
-    'axis': {
-        'grid': true,
-        'domain': false,
-        'labelFontSize':14,
-        'labelFont':'Roboto, Helvetica, Arial, sans-serif'
-    }
-},
-'mark': {
-    'type': 'rect'
-},
-'encoding': {
-    'y': {
-        'field': 'date',
-        'timeUnit': 'year',
-        'type': 'ordinal',
-        'title': 'Year'
-    },
-    'x': {
-        'field': 'date',
-        'timeUnit': 'month',
-        'type': 'ordinal',
-        'title': 'Month'
-    },
-    'color': {
-        'title': 'Average temperature (K)',
-        'field': 'count',
-        'aggregate': 'mean',
-        'type': 'quantitative',
-        'legend': {
-            'format':'.0f',
-            'title': null
-        }
-    }
-}
-}
-</code></pre>
-        </ods-simple-tab>
-    </ods-simple-tabs>
+
+            </div>
+        </div>
+    </ods-dataset-context>
 </div>
