@@ -430,9 +430,6 @@
     
       
       
-    
-      
-      
         <item>
           <title>Vega-lite presentation</title>
           <link>https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-vegalite/#vega-lite-presentation</link>
@@ -444,6 +441,34 @@
           <description>&lt;p&gt;&lt;strong&gt;Vega-Lite&lt;/strong&gt; is a high-level grammar of interactive graphics. It provides a concise, declarative JSON syntax to create an expressive range of visualizations for data analysis and presentation.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsVegaLiteChart&#34;&gt;ods-vega-lite-chart&lt;/a&gt; widget, in combinaison with &lt;code&gt;ods-adv-analysis&lt;/code&gt; to get the data, allows adding Vega-Lite charts into your pages.&lt;/p&gt;
 &lt;p&gt;This first resource is an introduction and pre-requisite to understand key concepts of Vega-Lite within ODS.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+      
+        <item>
+          <title>Custom heatmap with dates</title>
+          <link>https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-custom/#custom-heatmap-with-dates</link>
+          
+            <pubDate>Mon, 21 Jun 2021 14:46:16 +0200</pubDate>
+          
+          
+          <guid>https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-custom/#custom-heatmap-with-dates</guid>
+          <description>&lt;p&gt;Custom heatmaps or bubblemaps are made of a CSS grid, an &lt;code&gt;ods-adv-analysis&lt;/code&gt; and several computations to get the colors and the axis.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Out of the &lt;code&gt;ods-adv-analysis&lt;/code&gt;, the list of different values for each axis is computed. You need to adapt the axis &lt;code&gt;id&lt;/code&gt; in &lt;code&gt;toObject&lt;/code&gt; filter.&lt;/li&gt;
+&lt;li&gt;Then the min and max of all aggregation is computed to get the boundaries and will be useful for colors computations.&lt;/li&gt;
+&lt;li&gt;Then the grid is displayed, it&amp;rsquo;s more or less 3 loops :
+&lt;ol&gt;
+&lt;li&gt;One for the X axis, listing all values and setting the right position in the grid&lt;/li&gt;
+&lt;li&gt;One for the Y axis, listing all values and setting the right position in the grid&lt;/li&gt;
+&lt;li&gt;The last one for the content itself, computing the color, and setting the right position. Axis &lt;code&gt;id&lt;/code&gt; will also need to be modified in the style attribute.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Colors are RGB codes, computed of the aggregation value within the range of all values. Low and high colors values are set into &lt;code&gt;variables&lt;/code&gt; object at the beginning of the code.&lt;/p&gt;
+&lt;p&gt;The toggle button, and the legend are independent of the grid and can be removed.&lt;/p&gt;
 </description>
         </item>
       

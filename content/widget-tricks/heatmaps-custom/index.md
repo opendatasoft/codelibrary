@@ -1,6 +1,6 @@
 ---
 title: "Heatmaps with custom HTML/CSS"
-date: 2021-06-16T14:46:16+02:00
+date: 2021-06-21T14:46:16+02:00
 tags: ["display", "ods-analysis", "aggregation"]
 resources:
 - src: '*/'
