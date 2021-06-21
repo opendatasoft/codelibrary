@@ -15,6 +15,15 @@
                 variables.listrow = (results | toObject:"year" | keys | orderBy) ;
                 variables.listcol = (results | toObject:"nom_compteur" | keys | orderBy) ; ""}}
 
+                <!--
+                                    To compute color ranges and bubble size lateron, you need to get the min and max values from the analysis
+                                    this block list all values, and store the min and max in variables each time it finds a new one.
+                                -->
+                <span ng-repeat="res in results">
+                    {{ variables.min = (!variables.min || res.count < variables.min ? res.count : variables.min); '' }}
+                    {{ variables.max = (!variables.max || res.count > variables.max ? res.count : variables.max); '' }}
+                </span>
+
                 <!-- the grid -->
                 <div class="bubblemap"
                      ng-class="{'display-values': variables.displayvalues}">

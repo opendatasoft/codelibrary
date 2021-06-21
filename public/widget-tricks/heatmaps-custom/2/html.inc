@@ -20,7 +20,7 @@
                 variables.listcol = (results | toObject:"day" | keys | orderBy) ; ""}}
 
                 <!--
-                    To compute color ranges lateron, you need to get the min and max values from the analysis
+                    To compute color ranges and bubble size lateron, you need to get the min and max values from the analysis
                     this block list all values, and store the min and max in variables each time it finds a new one.
                 -->
                 <span ng-repeat="res in results">
