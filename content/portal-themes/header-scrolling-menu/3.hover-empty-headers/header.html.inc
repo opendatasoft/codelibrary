@@ -18,8 +18,7 @@
       <!-- ITEM MENU FR TITLE HERE -->
       <span ng-if="'fr'|currentLanguage">Outils</span>
       <!-- ITEM MENU EN TITLE HERE -->
-      <span ng-if="'en'|currentLanguage">Tools</span></a
-    >
+      <span ng-if="'en'|currentLanguage">Tools</span></a>
     <!-- START - SUBMENU -->
     <ul class="scrolling-menu-content">
       <!-- ITEM SUBMENU LINK HERE -->
@@ -30,11 +29,9 @@
         <span ng-if="'en'|currentLanguage">Map builder</span>
       </a>
       <!-- ITEM SUBMENU LINK HERE -->
-      <a
-        class="ods-front-header__menu-item-link"
-        href="/chart/"
-        title="Créer des graphiques"
-      >
+      <a class="ods-front-header__menu-item-link"
+         href="/chart/"
+         title="Créer des graphiques">
         <!-- ITEM SUBMENU FR TITLE HERE -->
         <span ng-if="'fr'|currentLanguage">Créateur de graphique</span>
         <!-- ITEM SUBMENU EN TITLE HERE -->

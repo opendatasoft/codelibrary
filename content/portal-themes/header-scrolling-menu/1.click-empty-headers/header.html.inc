@@ -1,7 +1,5 @@
-<ul
-  class="ods-front-header__menu"
-  ng-init="variables = { 'menuState' : false }"
->
+<ul class="ods-front-header__menu"
+    ng-init="variables = { 'menuState' : false }">
   <!-- START - CLASSIC MENU ITEM -->
   <li class="ods-front-header__menu-item">
     <!-- ITEM MENU LINK HERE -->
@@ -15,27 +13,21 @@
   <!-- END - CLASSIC MENU ITEM -->
   <!-- START - SCROLLING MENU ITEM -->
   <!-- ITEM MENU FR AND EN TITLES HERE -->
-  <li
-    class="ods-front-header__menu-item scrolling-menu"
-    ng-init="titre = 'Outils'; title = 'Tools'"
-    ng-if="true"
-  >
+  <li class="ods-front-header__menu-item scrolling-menu"
+      ng-init="titre = 'Outils'; title = 'Tools'"
+      ng-if="true">
     <!-- ITEM MENU LINK HERE -->
-    <a
-      class="ods-front-header__menu-item-link"
-      href="#"
-      ng-class="{'ods-front-header__menu-item-link--active': variables.menuState == title}"
-      ng-click="variables.menuState = (variables.menuState == title ? variables.menuState = false : variables.menuState = title)"
-    >
+    <a class="ods-front-header__menu-item-link"
+       href="#"
+       ng-class="{'ods-front-header__menu-item-link--active': variables.menuState == title}"
+       ng-click="variables.menuState = (variables.menuState == title ? variables.menuState = false : variables.menuState = title)">
       <span ng-if="'fr'|currentLanguage">{{titre}}</span>
       <span ng-if="'en'|currentLanguage">{{title}}</span>
       <i class="fa fa-angle-down" aria-hidden="true"></i>
     </a>
     <!-- START - SUBMENU -->
-    <ul
-      class="scrolling-menu-submenu"
-      ng-class="{'scrolling-menu-submenu__active': variables.menuState == title}"
-    >
+    <ul class="scrolling-menu-submenu"
+        ng-class="{'scrolling-menu-submenu__active': variables.menuState == title}">
       <li class="scrolling-menu-submenu-item">
         <!-- ITEM SUBMENU LINK HERE -->
         <a href="/map">

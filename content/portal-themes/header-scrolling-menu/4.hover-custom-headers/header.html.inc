@@ -18,8 +18,7 @@
       <!-- ITEM MENU FR TITLE HERE -->
       <span ng-if="'fr'|currentLanguage">Outils</span>
       <!-- ITEM MENU EN TITLE HERE -->
-      <span ng-if="'en'|currentLanguage">Tools</span></a
-    >
+      <span ng-if="'en'|currentLanguage">Tools</span></a>
     <!-- START - SUBMENU -->
     <ul class="dropdown-content">
       <!-- ITEM SUBMENU LINK HERE -->
