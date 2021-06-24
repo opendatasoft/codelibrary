@@ -1,244 +1,85 @@
 :root {
-    /* change values by the size of the header & the footer to make the modal fit your page properly */
-    --header-size: 20px;
-    --footer-size: 20px;
-    --modal-margin: calc(var(--header-size) + var(--footer-size));
+    --boxes-radius: 6px;
+}
+
+main {
+    margin: 0;
 }
 
 /* ALL PAGE CONTAINER */
 .observatory {
-    background-color: #F6F8FB !important;
+    background-color: var(--page-background);
     /* prerequisite for full height modal bar */
     position: relative;
-    /* prevent the page to be shrinked if the content is less than the browser height, force a minimal height */
-    min-height: calc(100vh - var(--modal-margin));
 }
 
-.level {
-    margin: 70px 0 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* Section 1 : heading */
+section.head {
+    background-color: white;
+    padding: 26px 0;
 }
-button {
+
+.filter-block {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    box-shadow: 0px 15px 10px -15px #2b2b2b;
+    margin-bottom: 35px;
     background-color: black;
-    color: white;
-    line-height: 36px;
-    padding: 0 13px;
-    border-radius: 100000px;
-    font-size: 1.1em;
-    border: 1px solid #142e7b;
+}
+
+.filter-block .container {
     display: flex;
     align-items: center;
+    padding: 18px 0;
+}
+
+.filter-block button {
+    padding: 0 13px;
+    margin: 0 10px;
+    border-radius: 100000px;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    height: 36px;
     min-width: max-content;
 }
-button svg {
+
+.filter-block button:hover {
+    filter: invert();
+}
+
+.filter-block button svg {
     margin-right: 6px;
 }
-button:hover {
-    opacity: 0.65;
-}
-.level button {
-    margin-top: 13px;
-}
-@media screen and (min-width: 768px) {
-    .level {
-        justify-content: space-between;
-        flex-direction: row;
-    }
-    .level button {
-        margin-top: 0;
-    }
-}
 
-
-h1 .smaller {
-    font-size: 0.5em;
-}
-h2 .smaller {
-    font-size: 0.8em;
-}
-.ods-box {
-    border-radius: 0px;
-}
 .titre {
     font-size: 37px;
     margin: 26px 0 6px;
 }
+
 .edito {
     margin: 0;
     font-size: 19px;
 }
+
 .edito q {
     font-style: italic;
 }
+
 #resume {
-    text-align: justify;
     font-size: 1.1em;
     line-height: 1.8em;
+    margin-top: 26px;
 }
 
-.row ~ h2 {
-    font-size: 2em;
-    margin: 26px 0;
-}
-/* BOX */
-.box {
-    padding-left: 12.5px;
-    padding-right: 12.5px;
-}
-.grey-box {
-    position: relative;
-    background: white;
-    border-radius: 6px;
-    padding: 20px;
-    margin-bottom: 25px;
-    height: 453px;
-}
-.grey-box.half-box {
-    height: 213.5px;
-}
-.grey-box.colored:before {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 9px;
-    content: '';
-}
-.grey-box.colored.services:before {
-    background-color: #D8D8DD;
-}
-.grey-box.colored.sante:before {
-    background-color: #D1F1FF;
-}
-
-
-
-/* BOX CONTENT */
-.title {
-    font-size: 1.2em;
-    margin: 0 auto 6px;
-}
-.description {
-    margin: 0 auto;
-    color: #565656;
-    font-size: 1em;
-    font-weight: 400;
-}
-.kpi {
-    color: black;
-    font-size: 2.2em;
-    margin-top: 35px;
-    font-weight: 500;
-    text-align: center;
-}
-.kpi-footer {
-    font-size: 0.8em;
-}
-.kpi-footer-date {
-    position: absolute;
-    bottom: 6px;
-    left: 13px;
-}
-a.kpi-footer-source {
-    position: absolute;
-    bottom: 6px;
-    right: 13px;
-    color: black;
-    text-decoration: underline;
-}
-a.kpi-footer-source {
-    color: blue;
-}
-a.kpi-footer-source:hover {
-    opacity: 0.65;
-}
-/* BOX Title Line */
-h2.grey-box {
-    height: 70px;
-    font-size: 1.3em;
-    display: flex;
-    align-items: center;
-}
-/* CHARTS */
-.ods-chart {
-    min-height: inherit;
-}
-.grey-box .ods-chart {
-    height: 350px;
-}
-.grey-box.half-box .ods-chart {
-    height: 130px;
-}
-.odswidget-charts {
-    margin-top: 10px;
-}
-.odswidget-table {
-    height: 338px;
-    margin-top: 10px;
-}
-rect.highcharts-background {
-    fill: transparent !important;
-}
-
-
-
-
-
-/** FILTER SUMMARY */
-ul.odswidget.odswidget-filter-summary {
-    font-size: 1.2em;
-    margin: 15px 0;
-    position: relative;
-}
-@media (min-width: 420px) {
-    ul.odswidget.odswidget-filter-summary {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
+@media screen and (min-width: 640px) {
+    #resume {
+        margin-right: 33%;
     }
 }
-li.odswidget-filter-summary__active-filter:first-child {
-    margin-left: 110px;
-}
-li.odswidget-filter-summary__active-filter:first-child:before {
-    content: 'Filtres actifs: ';
-    font-weight: 600;
-    line-height: 1.8em;
-    position: absolute;
-    left: 0;
-}
-
-li.odswidget-filter-summary__active-filter,
-li.odswidget-filter-summary__clear-all {
-    border-radius: 3px;
-    margin: 2px 4px;
-    padding: 0;
-}
-li.odswidget-filter-summary__active-filter {
-    background-color: #f3f3f3;
-}
-li.odswidget-filter-summary__active-filter-label {
-    font-size: 1rem;
-}
-a.odswidget-filter-summary__active-filter-link,
-a.odswidget-clear-all-filters {
-    border-left: none;
-    margin: 0;
-    padding: 2px 4px 2px 2px;
-    display: flex;
-    align-items: center;
-}
-a.odswidget-clear-all-filters {
-    align-items: center;
-}
-a.odswidget-clear-all-filters i {
-    margin-right: 3px;
-}
-
-
 
 /* BACKDROP (black screen when modal active) */
 .backdrop {
@@ -250,13 +91,16 @@ a.odswidget-clear-all-filters i {
     z-index: 900;
     background-color: #000;
     cursor: default;
-    -webkit-transition: visibility .5s,opacity .5s;
-    transition: visibility .5s,opacity .5s;
+    -webkit-transition: visibility 0.5s, opacity 0.5s;
+    transition: visibility 0.5s, opacity 0.5s;
 }
+
 .backdrop-active {
     visibility: visible;
-    opacity: .6; /* make a more or less darker backdrop, 1:totally dark, 0:totally transparent (invisibile) */
+    opacity: 0.6;
+    /* make a more or less darker backdrop, 1:totally dark, 0:totally transparent (invisibile) */
 }
+
 /* MODAL */
 /* The modal is composed of 2 parts:
 the leftside, that is the banner that is always visible, and contains an icon on top to click and actiavte the modal
@@ -264,40 +108,39 @@ the right side, that contains filters, searchbar, charts etc... that is not visi
 the modal default size (width) is 57px, it correspond to the leftside width */
 .cl-modal {
     display: flex;
-    position: absolute;
+    flex-direction: column;
+    position: fixed;
     top: 0;
-    right: 0;
+    right: -400px;
     bottom: 0;
-    width: 0;
+    width: 400px;
     background-color: white;
     z-index: 1000;
-    overflow: hidden; /* Disable horizontal scroll */
+    overflow: hidden;
+    /* Disable horizontal scroll */
     transition: ease-in 0.3s;
 }
+
 .cl-modal-active {
-    width: 400px; /* size of the modal when active */
+    right: 0;
 }
+
 /* specific because charts are loaded inside */
 .cl-modal__content {
     width: 400px;
 }
+
 @media (max-width: 420px) {
     .cl-modal-active {
         width: 100%;
     }
+
     .cl-modal__content {
         width: 100vw;
     }
 }
 
-/* SHOW/HIDE SIDE */
-.cl-modal__rightside {
-    display: flex;
-    flex-direction: column;
-    border-left: solid 1px lightgrey;
-}
-.cl-modal__header,
-.cl-modal__footer {
+.cl-modal__header {
     min-height: 35px;
     background-color: white;
     padding: 0 10px;
@@ -307,19 +150,23 @@ the modal default size (width) is 57px, it correspond to the leftside width */
     opacity: 0;
     transition: opacity 0s;
 }
-.cl-modal-active .cl-modal__header, .cl-modal-active .cl-modal__footer {
+
+.cl-modal__header .closebtn {
+    padding: 0 13px;
+    color: black;
+}
+
+.cl-modal-active .cl-modal__header {
     opacity: 1;
     transition-delay: 0.3s;
 }
+
 /* CONTENT OF THE MODAL */
 /* HEADER / UPPER PART */
 .cl-modal__header {
     border-bottom: 1px solid lightgrey;
 }
-/* FOOTER / LOWER PART (optionnal) */
-.cl-modal__footer {
-    border-top: 1px solid lightgrey;
-}
+
 /* THEN THE MIDDLE / CONTENT */
 .cl-modal__content {
     height: 100%;
@@ -328,6 +175,7 @@ the modal default size (width) is 57px, it correspond to the leftside width */
     opacity: 0;
     transition: opacity 0s;
 }
+
 /* WARNING ! This part is very important : it renders the content only after the end of the openning of the modal
 ie. when the modal is resized, nothing is visible, after 0.3s of resizing, it's displays the content
 this trick is very important to avoid the browser the resize all the content during the modal opening */
@@ -335,3 +183,205 @@ this trick is very important to avoid the browser the resize all the content dur
     opacity: 1;
     transition-delay: 0.3s;
 }
+
+/** FILTER SUMMARY */
+ul.odswidget.odswidget-filter-summary {
+    font-size: 1em;
+    margin-left: 13px;
+    position: relative;
+}
+
+@media (min-width: 420px) {
+    ul.odswidget.odswidget-filter-summary {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+}
+
+li.odswidget-filter-summary__active-filter,
+li.odswidget-filter-summary__clear-all {
+    border-radius: 3px;
+    margin: 2px 4px;
+    padding: 0;
+}
+
+li.odswidget-filter-summary__active-filter {
+    color: white;
+}
+
+.odswidget-filter-summary__active-filter-label {
+    color: black;
+    font-size: 1rem;
+}
+
+a.odswidget-filter-summary__active-filter-link,
+a.odswidget-clear-all-filters {
+    border-left: none;
+    margin: 0;
+    padding: 2px 4px 2px 2px;
+    display: flex;
+    align-items: center;
+}
+
+a.odswidget-clear-all-filters {
+    align-items: center;
+    color: white;
+    opacity: 0.8;
+}
+
+a.odswidget-clear-all-filters:hover {
+    color: white;
+    opacity: 1;
+}
+
+a.odswidget-clear-all-filters i {
+    margin-right: 3px;
+}
+
+.box {
+    position: relative;
+    padding: 13px;
+}
+
+.box.colored {
+    padding-top: calc(13px + 9px);
+}
+
+.box.colored:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 9px;
+    content: "";
+    border-radius: var(--boxes-radius) var(--boxes-radius) 0 0;
+}
+
+.box.colored.services:before {
+    background-color: #ff714d;
+}
+
+.box.colored.sante:before {
+    background-color: #25c9ff;
+}
+
+.box.white {
+    background-color: white;
+}
+
+.box.flat {
+    border: 1px solid #dfdfdf;
+    border-radius: var(--boxes-radius);
+}
+
+.advanced-kpi {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.advanced-kpi--top .title {
+    font-size: 1.2em;
+    margin: 0 auto 6px;
+}
+
+.advanced-kpi--top .description {
+    margin: 0 auto;
+    color: #565656;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.advanced-kpi--middle {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+.advanced-kpi--middle.centered {
+    align-items: center;
+}
+
+.advanced-kpi--middle > * {
+    margin: 5px 0;
+}
+
+.advanced-kpi--middle .value {
+    color: var(--highlight);
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+.advanced-kpi--bottom {
+    font-size: 0.8em;
+}
+
+.advanced-kpi--bottom .advanced-kpi--bottom-second-stage {
+    display: flex;
+    justify-content: space-between;
+}
+
+.advanced-kpi--bottom .source {
+    text-decoration: underline;
+    color: var(--links);
+}
+
+.advanced-kpi--bottom .source i {
+    margin-left: 6px;
+}
+
+.advanced-kpi--bottom .source:hover {
+    opacity: 0.65;
+}
+
+.advanced-kpi--bottom .source:hover i {
+    animation: bounce 0.7s ease infinite;
+}
+
+@keyframes bounce {
+    from {
+        margin-left: 6px;
+        margin-right: 0;
+    }
+    50% {
+        margin-left: 2px;
+        margin-right: 4px;
+    }
+    to {
+        margin-left: 6px;
+        margin-right: 0;
+    }
+}
+
+/* CHARTS */
+.ods-chart {
+    min-height: inherit;
+}
+
+.medium-chart {
+    height: 350px;
+}
+
+.small-chart {
+    height: 130px;
+}
+
+.highcharts-axis tspan, .highcharts-data-label tspan, .highcharts-label span, .highcharts-xaxis-labels text, .highcharts-yaxis-labels text {
+    font-family: Gotham-book, Arial, sans-serif !important;
+}
+
+.ods-highcharts__tooltip {
+    align-items: center;
+}
+
+/**
+ * License: MIT License
+ * Generated on 07 Jun 2021
+ * Author: Labs from opendatasoft
+ * Version: 0.2
+ * Description: ODS Layout over-ride to Flexbox system
+ */
+
+.box,.row.full-height{height:100%}.row{display:flex;flex-wrap:wrap;justify-content:center}.row>*{margin-bottom:20px;flex-grow:1}.order-0{order:0}@media screen and (min-width:750px){.order-sm-0{order:0}}@media screen and (min-width:970px){.order-md-0{order:0}}@media screen and (min-width:1170px){.order-lg-0{order:0}.order-lg-1{order:1}}.order-1{order:1}@media screen and (min-width:750px){.order-sm-1{order:1}}@media screen and (min-width:970px){.order-md-1{order:1}.order-md-2{order:2}}.order-2{order:2}@media screen and (min-width:750px){.order-sm-2{order:2}}@media screen and (min-width:1170px){.order-lg-2{order:2}.order-lg-3{order:3}}.order-3{order:3}@media screen and (min-width:750px){.order-sm-3{order:3}}@media screen and (min-width:970px){.order-md-3{order:3}.order-md-4{order:4}}.order-4{order:4}@media screen and (min-width:750px){.order-sm-4{order:4}}@media screen and (min-width:1170px){.order-lg-4{order:4}.order-lg-5{order:5}}.order-5{order:5}@media screen and (min-width:750px){.order-sm-5{order:5}}@media screen and (min-width:970px){.order-md-5{order:5}.order-md-6{order:6}}.order-6{order:6}@media screen and (min-width:750px){.order-sm-6{order:6}}@media screen and (min-width:1170px){.order-lg-6{order:6}.order-lg-7{order:7}}.order-7{order:7}@media screen and (min-width:750px){.order-sm-7{order:7}}@media screen and (min-width:970px){.order-md-7{order:7}.order-md-8{order:8}}.order-8{order:8}@media screen and (min-width:750px){.order-sm-8{order:8}}@media screen and (min-width:1170px){.order-lg-8{order:8}.order-lg-9{order:9}}.order-9{order:9}@media screen and (min-width:750px){.order-sm-9{order:9}}@media screen and (min-width:970px){.order-md-9{order:9}.order-md-10{order:10}}.order-10{order:10}@media screen and (min-width:750px){.order-sm-10{order:10}}@media screen and (min-width:1170px){.order-lg-10{order:10}.order-lg-11{order:11}}.order-11{order:11}@media screen and (min-width:750px){.order-sm-11{order:11}}@media screen and (min-width:970px){.order-md-11{order:11}.order-md-12{order:12}}.order-12{order:12}@media screen and (min-width:750px){.order-sm-12{order:12}}@media screen and (min-width:1170px){.order-lg-12{order:12}}@media screen and (max-width:1169px){:not([class*=col-md]):not([class*=col-sm]):not([class*=col-xs]).col-lg-1,:not([class*=col-md]):not([class*=col-sm]):not([class*=col-xs]).col-lg-10,:not([class*=col-md]):not([class*=col-sm]):not([class*=col-xs]).col-lg-11,:not([class*=col-md]):not([class*=col-sm]):not([class*=col-xs]).col-lg-12,:not([class*=col-md]):not([class*=col-sm]):not([class*=col-xs]).col-lg-2,:not([class*=col-md]):not([class*=col-sm]):not([class*=col-xs]).col-lg-3,:not([class*=col-md]):not([class*=col-sm]):not([class*=col-xs]).col-lg-4,:not([class*=col-md]):not([class*=col-sm]):not([class*=col-xs]).col-lg-5,:not([class*=col-md]):not([class*=col-sm]):not([class*=col-xs]).col-lg-6,:not([class*=col-md]):not([class*=col-sm]):not([class*=col-xs]).col-lg-7,:not([class*=col-md]):not([class*=col-sm]):not([class*=col-xs]).col-lg-8,:not([class*=col-md]):not([class*=col-sm]):not([class*=col-xs]).col-lg-9{width:100%}}@media screen and (max-width:969px){:not([class*=col-sm]):not([class*=col-xs]).col-md-1,:not([class*=col-sm]):not([class*=col-xs]).col-md-10,:not([class*=col-sm]):not([class*=col-xs]).col-md-11,:not([class*=col-sm]):not([class*=col-xs]).col-md-12,:not([class*=col-sm]):not([class*=col-xs]).col-md-2,:not([class*=col-sm]):not([class*=col-xs]).col-md-3,:not([class*=col-sm]):not([class*=col-xs]).col-md-4,:not([class*=col-sm]):not([class*=col-xs]).col-md-5,:not([class*=col-sm]):not([class*=col-xs]).col-md-6,:not([class*=col-sm]):not([class*=col-xs]).col-md-7,:not([class*=col-sm]):not([class*=col-xs]).col-md-8,:not([class*=col-sm]):not([class*=col-xs]).col-md-9{width:100%}}@media screen and (max-width:749px){.row{flex-direction:column}:not([class*=col-xs]).col-sm-1,:not([class*=col-xs]).col-sm-10,:not([class*=col-xs]).col-sm-11,:not([class*=col-xs]).col-sm-12,:not([class*=col-xs]).col-sm-2,:not([class*=col-xs]).col-sm-3,:not([class*=col-xs]).col-sm-4,:not([class*=col-xs]).col-sm-5,:not([class*=col-xs]).col-sm-6,:not([class*=col-xs]).col-sm-7,:not([class*=col-xs]).col-sm-8,:not([class*=col-xs]).col-sm-9{width:100%}}.no-margin-bottom,.no-mb{margin-bottom:0!important}.no-margin-x,.no-mx{margin-left:0!important;margin-right:0!important}
