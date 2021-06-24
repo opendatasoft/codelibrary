@@ -116,5 +116,3 @@
         </div>
     </div>
 </section>
-
-<!-- heavy-shadow -> heavy-shadow -->

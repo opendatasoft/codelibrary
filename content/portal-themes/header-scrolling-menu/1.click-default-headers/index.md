@@ -1,6 +1,6 @@
 ---
-title: "Based on click - for empty headers"
-description: "Scrolling menu with click for empty headers"
+title: "Based on click - for default headers"
+description: "Scrolling menu with click for default headers"
 tags: []
 iframe: "https://header-discovery.opendatasoft.com/explore/"
 text: "#565656"

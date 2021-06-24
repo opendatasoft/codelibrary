@@ -1,6 +1,6 @@
 ---
-title: "Based on hover - for empty headers"
-description: "Scrolling menu with hover for empty headers"
+title: "Based on hover - for default headers"
+description: "Scrolling menu with hover for default headers"
 tags: []
 iframe: "https://header-hover-discovery.opendatasoft.com/explore/"
 text: "#565656"

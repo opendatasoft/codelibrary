@@ -1,6 +1,6 @@
 ---
 title: "Based on click - for Code Library custom headers"
-description: "Scrolling menu for headers customed with templates from the Code Library"
+description: "Scrolling menu for headers customized with templates from the Code Library"
 tags: []
 iframe: "https://header-with-theme-discovery.opendatasoft.com/explore/"
 text: "#565656"
