@@ -1,4 +1,3 @@
-
 /* START - STYLE OF HEADER SCROLLING MENU
 ========================================================================== */
 
@@ -13,7 +12,7 @@ li.custom-menu-item > a {
     display: flex;
     align-items: center;
     color: var(--header-links);
-    font-size: 1rem;
+    font-size: 0.8rem;
     border: none;
     letter-spacing: .8px;
     line-height: 59px;

@@ -66,7 +66,7 @@
     display: block;
     opacity:1;
     padding: 5px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     line-height: 35px;
 }
 
