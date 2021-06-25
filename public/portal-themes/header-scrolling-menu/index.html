@@ -1,0 +1,2764 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+       Scrolling menu for header &ndash; Codelibrary 
+    </title>
+
+    
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-41201218-21"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-41201218-21");
+    </script>
+
+    
+    
+
+    
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css"
+      integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8="
+      crossorigin="anonymous"
+    />
+
+    
+    <link rel="stylesheet" type="text/css" href="/scss/main.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+  </head>
+
+  <body>
+    <div class="is-hidden">
+      <svg>
+  <defs>
+    <g id="link-2">
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+    </g>
+
+    <g id="check">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </g>
+
+    <g id="copy">
+      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+    </g>
+
+    <g id="external">
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+      <polyline points="15 3 21 3 21 9"></polyline>
+      <line x1="10" y1="14" x2="21" y2="3"></line>
+    </g>
+
+  </defs>
+</svg>
+
+    </div>
+
+    <nav class="navbar is-fixed-top"
+     role="navigation"
+     aria-label="Main navigation">
+    <div class="navbar-brand">
+        <button class="navbar-burger burger"
+                type="button"
+                data-target="sidebarNavbar"
+                aria-controls="sidebarNavbar"
+                aria-expanded="false"
+                aria-label="Main menu">
+            Menu
+        </button>
+        <a class="navbar-item"
+           href="/"
+           title="Back to the homepage">
+            <img src="/img/ods-logo-helphub.svg"
+                 alt="Helphub Logo"/>
+        </a>
+        <button class="navbar-burger burger"
+                type="button"
+                data-target="helphubNavbar"
+                aria-controls="helphubNavbar"
+                aria-expanded="false"
+                aria-label="Help Hub Menu">
+            Help Hub
+        </button>
+    </div>
+    <div class="navbar-menu"
+         id="helphubNavbar">
+        <div class="navbar-start">
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/">
+                Help Hub
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/platform/en/">
+                User guide
+            </a>
+            <a class="navbar-item is-active"
+               href="https://codelibrary.opendatasoft.com">
+                Code Library
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/faq-glossary/en/">
+                FAQ
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/widgets/">
+                Widgets
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/en/apis/">
+                APIs
+            </a>
+            <a class="navbar-item"
+               href="https://academy.opendatasoft.com/page/homepage">
+                Academy
+            </a>
+            <a class="navbar-item"
+               href="https://documentation-resources.opendatasoft.com/pages/release-notes/?headless=true">
+                Release Notes
+            </a>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="columns is-desktop codelibrary mb-0">
+      <div class="column is-narrow pb-0">
+        <div class="sidebar-search is-hidden-touch">
+  <div class="block search-wrapper">
+    <div id="algolia-box"></div>
+    <div class="search-results-wrapper">
+      <div id="algolia-results"></div>
+    </div>
+  </div>
+</div>
+<aside class="sidebar"
+       id="sidebarNavbar">
+  
+  <div class="sidebar-header">
+    <div class="block">
+      <ul class="menu-list">
+        <p class="menu-label">On this page</p>
+        <li>
+          <a href="#">
+            Top
+          </a>
+        </li>
+        
+        <li>
+          <a href="#based-on-click---for-default-headers">
+            Based on click - for default headers
+          </a>
+        </li>
+        
+        <li>
+          <a href="#based-on-click---for-code-library-custom-headers">
+            Based on click - for Code Library custom headers
+          </a>
+        </li>
+        
+        <li>
+          <a href="#based-on-hover---for-default-headers">
+            Based on hover - for default headers
+          </a>
+        </li>
+        
+        <li>
+          <a href="#based-on-hover---for-code-library-customer-headers">
+            Based on hover - for Code Library customer headers
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+  
+  <div class="sidebar-body">
+    
+    
+    <ul class="menu-list">
+      <li>
+        <a class="sidebar-subtitle"
+          href="https://codelibrary.opendatasoft.com">
+          Home
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/components/"
+        class="sidebar-subtitle">
+        Components
+        
+        <span class="tag pill is-size-7 is-rounded is-info">1</span>
+        
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/custom-views/"
+        class="sidebar-subtitle">
+        Custom views
+        
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/generators/"
+        class="sidebar-subtitle">
+        Generators
+        
+        <span class="tag pill is-size-7 is-rounded is-info">1</span>
+        
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/page-templates/"
+        class="sidebar-subtitle">
+        Page templates
+        
+        <span class="tag pill is-size-7 is-rounded is-info">10</span>
+        
+      </a>
+    </li>
+    
+    
+      
+      <li>
+        <a class="sidebar-subtitle " href="/portal-themes/">
+          Portal themes
+        </a>
+        <ul>
+          
+          <li>
+            <a class="is-active" href="/portal-themes/header-scrolling-menu/">
+              <div>
+                Scrolling menu for header
+                
+                
+                <span class="tag pill is-size-7 is-rounded is-info">
+                  1
+                </span>
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/portal-themes/color/">
+              <div>
+                Colored theme
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/portal-themes/dark/">
+              <div>
+                Dark theme
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/portal-themes/light/">
+              <div>
+                Light theme
+                
+                
+              </div>
+            </a>
+          </li>
+          
+        </ul>
+      </li>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/widget-tricks/"
+        class="sidebar-subtitle">
+        Widget tricks
+        
+      </a>
+    </li>
+    
+    
+  </ul>
+  <p class="menu-label">
+    Tags
+  </p>
+  <div class="tags">
+    
+    <a class="tag" href="/tags/aggregation/">
+      aggregation
+    </a>
+    
+    <a class="tag" href="/tags/chart/">
+      chart
+    </a>
+    
+    <a class="tag" href="/tags/date/">
+      date
+    </a>
+    
+    <a class="tag" href="/tags/display/">
+      display
+    </a>
+    
+    <a class="tag" href="/tags/filter/">
+      filter
+    </a>
+    
+    <a class="tag" href="/tags/geo/">
+      geo
+    </a>
+    
+    <a class="tag" href="/tags/list/">
+      list
+    </a>
+    
+    <a class="tag" href="/tags/map/">
+      map
+    </a>
+    
+    <a class="tag" href="/tags/navigation/">
+      navigation
+    </a>
+    
+    <a class="tag" href="/tags/ods-aggregation/">
+      ods-aggregation
+    </a>
+    
+    <a class="tag" href="/tags/ods-analysis/">
+      ods-analysis
+    </a>
+    
+    <a class="tag" href="/tags/ods-maps/">
+      ods-maps
+    </a>
+    
+  </div>
+</div>
+</aside>
+
+      </div>
+      <div class="column codelibrary-content">
+        
+<section class="section resources">
+  <div class="container is-max-widescreen">
+    <h1 class="title is-1">Portal Themes - Scrolling menu for header</h1>
+    <div class="content">
+      <p><strong>Important note</strong></p>
+<p><em>By using these types of headers, you will note be able to link the menu items to the ones you enter in the back office of your domain (<code>https://yourdomain.opendatasoft.com/backoffice/customization/navigation/</code>)</em>. <em>These customed headers will recreate the navigation bar and you will have to enter the title and the link for each  of them, in the HTML code</em>.</p>
+<p><em>Moreover, you will not be able to have a specific CSS class for the active items (no background/underline effect on an item title to highlight the active page)</em>.</p>
+
+    </div>
+    
+    <article class="block">
+      <h2 class="title is-2" id="based-on-click---for-default-headers">
+        Based on click - for default headers 
+        <span class="tag is-rounded is-info">New</span>
+        
+        <a class="is-link anchor" href="#based-on-click---for-default-headers">
+          <span class="icon">
+            <img src="/img/fas-link.svg" />
+          </span>
+        </a>
+      </h2>
+      <div class="content">
+        <p><strong>How to use it</strong></p>
+<ol>
+<li>Copy the content of the <code>HEADER</code> tab.</li>
+<li>Paste it in <code>https://yourdomain.opendatasoft.com/backoffice/customization/theme/#header</code>  instead of <code>##menu##</code>.</li>
+<li>Copy the content of the <code>STYLESHEET</code> tab.</li>
+<li>Paste it in <code>https://yourdomain.opendatasoft.com/backoffice/customization/theme/#stylesheet</code>.</li>
+<li>Replace the links and titles of the items menu in the <code>HEADER</code> tab.</li>
+</ol>
+
+      </div>
+      
+      <div class="box">
+        
+
+
+
+<div class="ods-content">
+    <div class="box-live-example">
+        <iframe id="iframe-based-on-click-for-default-headers" width="100%" height="600px"
+                src="https://header-discovery.opendatasoft.com/explore/">
+        </iframe>
+    </div>
+
+    <div class="box-code js-tabs">
+        <div class="level is-mobile">
+            <div class="level-left">
+                <div class="level-item">
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-based-on-click-for-default-headers-colors-content"
+                        >
+                            Colors
+                        </a>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-based-on-click-for-default-headers-header-content"
+                        >
+                            Header
+                        </a>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-based-on-click-for-default-headers-footer-content"
+                        >
+                            Footer
+                        </a>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                         href="#code-based-on-click-for-default-headers-css-content"
+                        >
+                            Stylesheet
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
+            </div>
+        </div>
+
+        <div class="tab-content">
+            <div class="js-tabcontent theme-colors"
+                 id="code-based-on-click-for-default-headers-colors-content"
+                 role="tabpanel">
+                <div class="columns">
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#565656"></span>
+                                    <div class="highlight">
+                                        <pre><code>#565656</code></pre>
+                                    </div>
+                                    <span class="color-title">Text</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#0086D6"></span>
+                                    <div class="highlight">
+                                        <pre><code>#0086D6</code></pre>
+                                    </div>
+                                    <span class="color-title">Links</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#000000"></span>
+                                    <div class="highlight">
+                                        <pre><code>#000000</code></pre>
+                                    </div>
+                                    <span class="color-title">Titles</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#F6F8FB"></span>
+                                    <div class="highlight">
+                                        <pre><code>#F6F8FB</code></pre>
+                                    </div>
+                                    <span class="color-title">Page Background</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#0086D6"></span>
+                                    <div class="highlight">
+                                        <pre><code>#0086D6</code></pre>
+                                    </div>
+                                    <span class="color-title">Highlight</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#FFFFFF"></span>
+                                    <div class="highlight">
+                                        <pre><code>#FFFFFF</code></pre>
+                                    </div>
+                                    <span class="color-title">Boxes background</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#CBD2DB"></span>
+                                    <div class="highlight">
+                                        <pre><code>#CBD2DB</code></pre>
+                                    </div>
+                                    <span class="color-title">Boxes border</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#142E7B"></span>
+                                    <div class="highlight">
+                                        <pre><code>#142E7B</code></pre>
+                                    </div>
+                                    <span class="color-title">Section Titles</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#F6F8FB"></span>
+                                    <div class="highlight">
+                                        <pre><code>#F6F8FB</code></pre>
+                                    </div>
+                                    <span class="color-title">Section titles background</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#142E7B"></span>
+                                    <div class="highlight">
+                                        <pre><code>#142E7B</code></pre>
+                                    </div>
+                                    <span class="color-title">Header Background</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#FFFFFF"></span>
+                                    <div class="highlight">
+                                        <pre><code>#FFFFFF</code></pre>
+                                    </div>
+                                    <span class="color-title">Links in the header</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#FFFFFF"></span>
+                                    <div class="highlight">
+                                        <pre><code>#FFFFFF</code></pre>
+                                    </div>
+                                    <span class="color-title">Footer background</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#0086D6"></span>
+                                    <div class="highlight">
+                                        <pre><code>#0086D6</code></pre>
+                                    </div>
+                                    <span class="color-title">Links in the footer</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div
+              class="js-tabcontent"
+              id="code-based-on-click-for-default-headers-header-content"
+              data-clipboard="&lt;ul class=&#34;ods-front-header__menu&#34;
+    ng-init=&#34;variables = { &#39;menuState&#39; : false }&#34;&gt;
+  &lt;!-- START - CLASSIC MENU ITEM --&gt;
+  &lt;li class=&#34;ods-front-header__menu-item&#34;&gt;
+    &lt;!-- ITEM MENU LINK HERE --&gt;
+    &lt;a href=&#34;/explore&#34; class=&#34;ods-front-header__menu-item-link&#34;&gt;
+      &lt;!-- ITEM MENU FR TITLE HERE --&gt;
+      &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Données&lt;/span&gt;
+      &lt;!-- ITEM MENU EN TITLE HERE --&gt;
+      &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Data&lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;!-- END - CLASSIC MENU ITEM --&gt;
+  &lt;!-- START - SCROLLING MENU ITEM --&gt;
+  &lt;!-- ITEM MENU FR AND EN TITLES HERE --&gt;
+  &lt;li class=&#34;ods-front-header__menu-item scrolling-menu&#34;
+      ng-init=&#34;titre = &#39;Outils&#39;; title = &#39;Tools&#39;&#34;
+      ng-if=&#34;true&#34;&gt;
+    &lt;!-- ITEM MENU LINK HERE --&gt;
+    &lt;a class=&#34;ods-front-header__menu-item-link&#34;
+       href=&#34;#&#34;
+       ng-class=&#34;{&#39;ods-front-header__menu-item-link--active&#39;: variables.menuState == title}&#34;
+       ng-click=&#34;variables.menuState = (variables.menuState == title ? variables.menuState = false : variables.menuState = title)&#34;&gt;
+      &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;{{titre}}&lt;/span&gt;
+      &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;{{title}}&lt;/span&gt;
+      &lt;i class=&#34;fa fa-angle-down&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;!-- START - SUBMENU --&gt;
+    &lt;ul class=&#34;scrolling-menu-submenu&#34;
+        ng-class=&#34;{&#39;scrolling-menu-submenu__active&#39;: variables.menuState == title}&#34;&gt;
+      &lt;li class=&#34;scrolling-menu-submenu-item&#34;&gt;
+        &lt;!-- ITEM SUBMENU LINK HERE --&gt;
+        &lt;a href=&#34;/map&#34;&gt;
+          &lt;!-- ITEM SUBMENU FR TITLE HERE --&gt;
+          &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Cartographe&lt;/span&gt;
+          &lt;!-- ITEM SUBMENU EN TITLE HERE --&gt;
+          &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Map builder&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&#34;scrolling-menu-submenu-item&#34;&gt;
+        &lt;!-- ITEM SUBMENU LINK HERE --&gt;
+        &lt;a href=&#34;/chart&#34;&gt;
+          &lt;!-- ITEM SUBMENU FR TITLE HERE --&gt;
+          &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Créateur de graphique&lt;/span&gt;
+          &lt;!-- ITEM SUBMENU EN TITLE HERE --&gt;
+          &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Chart builder&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;!-- END - SUBMENU --&gt;
+  &lt;/li&gt;
+  &lt;!-- END - SCROLLING MENU ITEM --&gt;
+&lt;/ul&gt;
+"
+            >
+              <div class="highlight">
+                  <pre class="language-html" data-lang="html"><code>&lt;ul class=&#34;ods-front-header__menu&#34;
+    ng-init=&#34;variables = { &#39;menuState&#39; : false }&#34;&gt;
+  &lt;!-- START - CLASSIC MENU ITEM --&gt;
+  &lt;li class=&#34;ods-front-header__menu-item&#34;&gt;
+    &lt;!-- ITEM MENU LINK HERE --&gt;
+    &lt;a href=&#34;/explore&#34; class=&#34;ods-front-header__menu-item-link&#34;&gt;
+      &lt;!-- ITEM MENU FR TITLE HERE --&gt;
+      &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Données&lt;/span&gt;
+      &lt;!-- ITEM MENU EN TITLE HERE --&gt;
+      &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Data&lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;!-- END - CLASSIC MENU ITEM --&gt;
+  &lt;!-- START - SCROLLING MENU ITEM --&gt;
+  &lt;!-- ITEM MENU FR AND EN TITLES HERE --&gt;
+  &lt;li class=&#34;ods-front-header__menu-item scrolling-menu&#34;
+      ng-init=&#34;titre = &#39;Outils&#39;; title = &#39;Tools&#39;&#34;
+      ng-if=&#34;true&#34;&gt;
+    &lt;!-- ITEM MENU LINK HERE --&gt;
+    &lt;a class=&#34;ods-front-header__menu-item-link&#34;
+       href=&#34;#&#34;
+       ng-class=&#34;{&#39;ods-front-header__menu-item-link--active&#39;: variables.menuState == title}&#34;
+       ng-click=&#34;variables.menuState = (variables.menuState == title ? variables.menuState = false : variables.menuState = title)&#34;&gt;
+      &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;{{titre}}&lt;/span&gt;
+      &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;{{title}}&lt;/span&gt;
+      &lt;i class=&#34;fa fa-angle-down&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;!-- START - SUBMENU --&gt;
+    &lt;ul class=&#34;scrolling-menu-submenu&#34;
+        ng-class=&#34;{&#39;scrolling-menu-submenu__active&#39;: variables.menuState == title}&#34;&gt;
+      &lt;li class=&#34;scrolling-menu-submenu-item&#34;&gt;
+        &lt;!-- ITEM SUBMENU LINK HERE --&gt;
+        &lt;a href=&#34;/map&#34;&gt;
+          &lt;!-- ITEM SUBMENU FR TITLE HERE --&gt;
+          &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Cartographe&lt;/span&gt;
+          &lt;!-- ITEM SUBMENU EN TITLE HERE --&gt;
+          &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Map builder&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&#34;scrolling-menu-submenu-item&#34;&gt;
+        &lt;!-- ITEM SUBMENU LINK HERE --&gt;
+        &lt;a href=&#34;/chart&#34;&gt;
+          &lt;!-- ITEM SUBMENU FR TITLE HERE --&gt;
+          &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Créateur de graphique&lt;/span&gt;
+          &lt;!-- ITEM SUBMENU EN TITLE HERE --&gt;
+          &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Chart builder&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;!-- END - SUBMENU --&gt;
+  &lt;/li&gt;
+  &lt;!-- END - SCROLLING MENU ITEM --&gt;
+&lt;/ul&gt;
+</code></pre>
+              </div>
+            </div>
+            <div
+              class="js-tabcontent"
+              id="code-based-on-click-for-default-headers-footer-content"
+              data-clipboard="NOTHING TO COPY/PASTE"
+            >
+              <div class="highlight">
+                  <pre class="language-html" data-lang="html"><code>NOTHING TO COPY/PASTE</code></pre>
+              </div>
+            </div>
+            <div
+              class="js-tabcontent"
+              id="code-based-on-click-for-default-headers-css-content"
+              data-clipboard="/* DESKTOP SPECIFICS - STYLE OF ODS HEADER
+========================================================================== */
+
+.ods-responsive-menu-collapsible__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.ods-front-header__portal-brand {
+    display: flex;
+    height: 40px;
+    position: relative;
+    top: 0;
+}
+
+/* DESKTOP SPECIFICS - STYLE OF SCROLLING MENU
+========================================================================== */
+
+.ods-front-header__menu-item {
+    position: relative;
+}
+
+.ods-front-header__menu-item-link--active {
+    border-bottom: 0px solid;
+    color: #FFF;
+    opacity: 1;
+}
+
+li.scrolling-menu i {
+    font-size: 1.2em;
+    margin-left: 13.5px;
+    color: var(--header-links);
+}
+
+ul.scrolling-menu-submenu {
+    display: none;
+    margin: 0;
+    padding: 22px 28px;
+    list-style: none;
+    background-color: var(--header-background); 
+}
+
+ul.scrolling-menu-submenu.scrolling-menu-submenu__active {
+    display: inherit; }
+
+li.scrolling-menu-submenu-item {
+    margin-bottom: 26px; }
+
+li.scrolling-menu-submenu-item:last-child {
+    margin-bottom: inherit; 
+}
+
+.ods-responsive-menu-collapsible:not(.ods-responsive-menu-collapsible--collapsed) ul.ods-front-header__menu {
+    display: flex;
+    align-items: center; 
+}
+
+.ods-responsive-menu-collapsible:not(.ods-responsive-menu-collapsible--collapsed) ul.scrolling-menu-submenu {
+    position: absolute;
+    top: 55px;
+    left: 1px;
+    z-index: 1001;
+    filter: drop-shadow(0px 14px 8px rgba(37, 48, 59, 0.1)); 
+}
+
+.ods-responsive-menu-collapsible:not(.ods-responsive-menu-collapsible--collapsed) .ods-front-header__menu .custom-menu-item-submenu {
+    width: auto !important;
+    top: 55px !important;
+    left: 1px !important;
+    padding: 20px !important;
+    filter: drop-shadow(0px 0px 8px rgba(37, 48, 59, 0.2)) !important; }
+
+.ods-responsive-menu-collapsible:not(.ods-responsive-menu-collapsible--collapsed) .ods-front-header__menu .scrolling-menu-submenu a {
+    white-space: nowrap; 
+}
+
+
+/* MOBILE SPECIFICS
+========================================================================== */
+.ods-responsive-menu-placeholder.ods-responsive-menu-placeholder--active {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.ods-responsive-menu--collapsed .ods-responsive-menu-collapsible__content {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.ods-responsive-menu-collapsible--collapsed .ods-front-header__logo {
+    display: none;
+}
+
+.ods-responsive-menu-collapsible--collapsed .ods-front-header__menu,
+.ods-responsive-menu-collapsible--collapsed .ods-front-header__management-menu
+{
+    width: 100%;
+}"
+            >
+              <div class="highlight">
+                  <pre class="language-css" data-lang="css"><code>/* DESKTOP SPECIFICS - STYLE OF ODS HEADER
+========================================================================== */
+
+.ods-responsive-menu-collapsible__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.ods-front-header__portal-brand {
+    display: flex;
+    height: 40px;
+    position: relative;
+    top: 0;
+}
+
+/* DESKTOP SPECIFICS - STYLE OF SCROLLING MENU
+========================================================================== */
+
+.ods-front-header__menu-item {
+    position: relative;
+}
+
+.ods-front-header__menu-item-link--active {
+    border-bottom: 0px solid;
+    color: #FFF;
+    opacity: 1;
+}
+
+li.scrolling-menu i {
+    font-size: 1.2em;
+    margin-left: 13.5px;
+    color: var(--header-links);
+}
+
+ul.scrolling-menu-submenu {
+    display: none;
+    margin: 0;
+    padding: 22px 28px;
+    list-style: none;
+    background-color: var(--header-background); 
+}
+
+ul.scrolling-menu-submenu.scrolling-menu-submenu__active {
+    display: inherit; }
+
+li.scrolling-menu-submenu-item {
+    margin-bottom: 26px; }
+
+li.scrolling-menu-submenu-item:last-child {
+    margin-bottom: inherit; 
+}
+
+.ods-responsive-menu-collapsible:not(.ods-responsive-menu-collapsible--collapsed) ul.ods-front-header__menu {
+    display: flex;
+    align-items: center; 
+}
+
+.ods-responsive-menu-collapsible:not(.ods-responsive-menu-collapsible--collapsed) ul.scrolling-menu-submenu {
+    position: absolute;
+    top: 55px;
+    left: 1px;
+    z-index: 1001;
+    filter: drop-shadow(0px 14px 8px rgba(37, 48, 59, 0.1)); 
+}
+
+.ods-responsive-menu-collapsible:not(.ods-responsive-menu-collapsible--collapsed) .ods-front-header__menu .custom-menu-item-submenu {
+    width: auto !important;
+    top: 55px !important;
+    left: 1px !important;
+    padding: 20px !important;
+    filter: drop-shadow(0px 0px 8px rgba(37, 48, 59, 0.2)) !important; }
+
+.ods-responsive-menu-collapsible:not(.ods-responsive-menu-collapsible--collapsed) .ods-front-header__menu .scrolling-menu-submenu a {
+    white-space: nowrap; 
+}
+
+
+/* MOBILE SPECIFICS
+========================================================================== */
+.ods-responsive-menu-placeholder.ods-responsive-menu-placeholder--active {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.ods-responsive-menu--collapsed .ods-responsive-menu-collapsible__content {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.ods-responsive-menu-collapsible--collapsed .ods-front-header__logo {
+    display: none;
+}
+
+.ods-responsive-menu-collapsible--collapsed .ods-front-header__menu,
+.ods-responsive-menu-collapsible--collapsed .ods-front-header__management-menu
+{
+    width: 100%;
+}</code></pre>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+      </div>
+    </article>
+    
+    <article class="block">
+      <h2 class="title is-2" id="based-on-click---for-code-library-custom-headers">
+        Based on click - for Code Library custom headers 
+        <a class="is-link anchor" href="#based-on-click---for-code-library-custom-headers">
+          <span class="icon">
+            <img src="/img/fas-link.svg" />
+          </span>
+        </a>
+      </h2>
+      <div class="content">
+        <p><strong>How to use it</strong></p>
+<ol>
+<li>Copy the content of the <code>HEADER</code> tab.</li>
+<li>Paste it in <code>https://yourdomain.opendatasoft.com/backoffice/customization/theme/#header</code>  instead of <code>##menu##</code>.</li>
+<li>Copy the content of the <code>STYLESHEET</code> tab.</li>
+<li>Paste it in <code>https://yourdomain.opendatasoft.com/backoffice/customization/theme/#stylesheet</code> <strong>AFTER</strong> the existing code.</li>
+<li>Replace the links and titles of the items menu in the <code>HEADER</code> tab.</li>
+</ol>
+
+      </div>
+      
+      <div class="box">
+        
+
+
+
+<div class="ods-content">
+    <div class="box-live-example">
+        <iframe id="iframe-based-on-click-for-code-library-custom-headers" width="100%" height="600px"
+                src="https://header-with-theme-discovery.opendatasoft.com/explore/">
+        </iframe>
+    </div>
+
+    <div class="box-code js-tabs">
+        <div class="level is-mobile">
+            <div class="level-left">
+                <div class="level-item">
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-based-on-click-for-code-library-custom-headers-colors-content"
+                        >
+                            Colors
+                        </a>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-based-on-click-for-code-library-custom-headers-header-content"
+                        >
+                            Header
+                        </a>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-based-on-click-for-code-library-custom-headers-footer-content"
+                        >
+                            Footer
+                        </a>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                         href="#code-based-on-click-for-code-library-custom-headers-css-content"
+                        >
+                            Stylesheet
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
+            </div>
+        </div>
+
+        <div class="tab-content">
+            <div class="js-tabcontent theme-colors"
+                 id="code-based-on-click-for-code-library-custom-headers-colors-content"
+                 role="tabpanel">
+                <div class="columns">
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#565656"></span>
+                                    <div class="highlight">
+                                        <pre><code>#565656</code></pre>
+                                    </div>
+                                    <span class="color-title">Text</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#0086D6"></span>
+                                    <div class="highlight">
+                                        <pre><code>#0086D6</code></pre>
+                                    </div>
+                                    <span class="color-title">Links</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#000000"></span>
+                                    <div class="highlight">
+                                        <pre><code>#000000</code></pre>
+                                    </div>
+                                    <span class="color-title">Titles</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#F6F8FB"></span>
+                                    <div class="highlight">
+                                        <pre><code>#F6F8FB</code></pre>
+                                    </div>
+                                    <span class="color-title">Page Background</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#00C7B1"></span>
+                                    <div class="highlight">
+                                        <pre><code>#00C7B1</code></pre>
+                                    </div>
+                                    <span class="color-title">Highlight</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#FFFFFF"></span>
+                                    <div class="highlight">
+                                        <pre><code>#FFFFFF</code></pre>
+                                    </div>
+                                    <span class="color-title">Boxes background</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#DEE5EF"></span>
+                                    <div class="highlight">
+                                        <pre><code>#DEE5EF</code></pre>
+                                    </div>
+                                    <span class="color-title">Boxes border</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#000000"></span>
+                                    <div class="highlight">
+                                        <pre><code>#000000</code></pre>
+                                    </div>
+                                    <span class="color-title">Section Titles</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#F6F8FB"></span>
+                                    <div class="highlight">
+                                        <pre><code>#F6F8FB</code></pre>
+                                    </div>
+                                    <span class="color-title">Section titles background</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:##FFFFFF"></span>
+                                    <div class="highlight">
+                                        <pre><code>##FFFFFF</code></pre>
+                                    </div>
+                                    <span class="color-title">Header Background</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#000000"></span>
+                                    <div class="highlight">
+                                        <pre><code>#000000</code></pre>
+                                    </div>
+                                    <span class="color-title">Links in the header</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#F6F8FB"></span>
+                                    <div class="highlight">
+                                        <pre><code>#F6F8FB</code></pre>
+                                    </div>
+                                    <span class="color-title">Footer background</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#000000"></span>
+                                    <div class="highlight">
+                                        <pre><code>#000000</code></pre>
+                                    </div>
+                                    <span class="color-title">Links in the footer</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div
+              class="js-tabcontent"
+              id="code-based-on-click-for-code-library-custom-headers-header-content"
+              data-clipboard="&lt;!--- START - HEADER SCROLLING MENU ---&gt;
+&lt;ul class=&#34;ods-front-header__menu custom-menu&#34;
+    ng-init=&#34;variables = { &#39;menuState&#39; : false }&#34;&gt;
+  &lt;!-- START - CLASSIC MENU ITEM --&gt;
+  &lt;li class=&#34;custom-menu-item&#34;&gt;
+    &lt;!-- ITEM MENU LINK HERE --&gt;
+    &lt;a href=&#34;/explore&#34;&gt;
+      &lt;!-- ITEM MENU FR TITLE HERE --&gt;
+      &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Données&lt;/span&gt;
+      &lt;!-- ITEM MENU EN TITLE HERE --&gt;
+      &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Data&lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;!-- END - CLASSIC MENU ITEM --&gt;
+  &lt;!-- START - SCROLLING MENU ITEM --&gt;
+  &lt;!-- ITEM MENU FR AND EN TITLES HERE --&gt;
+  &lt;li class=&#34;custom-menu-item scrolling-menu&#34;
+      ng-init=&#34;titre = &#39;Outils&#39;; title = &#39;Tools&#39;&#34;
+      ng-if=&#34;true&#34;
+      ng-class=&#34;{&#39;custom-menu-item__active&#39;: variables.menuState == title}&#34;&gt;
+    &lt;!-- ITEM MENU LINK HERE --&gt;
+    &lt;a href=&#34;&#34;
+       ng-click=&#34;variables.menuState = (variables.menuState == title ? variables.menuState = false : variables.menuState = title)&#34;&gt;
+       &lt;!-- ITEM MENU FR TITLE HERE --&gt;
+       &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;{{titre}}&lt;/span&gt;
+       &lt;!-- ITEM MENU EN TITLE HERE --&gt;
+       &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;{{title}}&lt;/span&gt;
+       &lt;i class=&#34;fa fa-angle-down&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;!-- START - SUBMENU --&gt;
+    &lt;ul class=&#34;custom-menu-item-submenu&#34;
+        ng-class=&#34;{&#39;custom-menu-item-submenu__active&#39;: variables.menuState == title}&#34;&gt;
+      &lt;li class=&#34;custom-menu-item-submenu-item&#34;&gt;
+        &lt;!-- ITEM SUBMENU LINK HERE --&gt;
+        &lt;a href=&#34;/map&#34;&gt;
+          &lt;!-- ITEM SUBMENU FR TITLE HERE --&gt;
+          &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Cartographe&lt;/span&gt;
+          &lt;!-- ITEM SUBMENU EN TITLE HERE --&gt;
+          &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Map builder&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&#34;custom-menu-item-submenu-item&#34;&gt;
+        &lt;!-- ITEM SUBMENU LINK HERE --&gt;
+        &lt;a href=&#34;/chart&#34;&gt;
+          &lt;!-- ITEM SUBMENU FR TITLE HERE --&gt;
+          &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Créateur de graphique&lt;/span&gt;
+          &lt;!-- ITEM SUBMENU EN TITLE HERE --&gt;
+          &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Chart buildez&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;!-- END - SUBMENU --&gt;
+  &lt;/li&gt;
+  &lt;!-- END - SCROLLING MENU ITEM --&gt;
+&lt;/ul&gt;
+&lt;!--- END - HEADER SCROLLING MENU ---&gt;
+"
+            >
+              <div class="highlight">
+                  <pre class="language-html" data-lang="html"><code>&lt;!--- START - HEADER SCROLLING MENU ---&gt;
+&lt;ul class=&#34;ods-front-header__menu custom-menu&#34;
+    ng-init=&#34;variables = { &#39;menuState&#39; : false }&#34;&gt;
+  &lt;!-- START - CLASSIC MENU ITEM --&gt;
+  &lt;li class=&#34;custom-menu-item&#34;&gt;
+    &lt;!-- ITEM MENU LINK HERE --&gt;
+    &lt;a href=&#34;/explore&#34;&gt;
+      &lt;!-- ITEM MENU FR TITLE HERE --&gt;
+      &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Données&lt;/span&gt;
+      &lt;!-- ITEM MENU EN TITLE HERE --&gt;
+      &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Data&lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;!-- END - CLASSIC MENU ITEM --&gt;
+  &lt;!-- START - SCROLLING MENU ITEM --&gt;
+  &lt;!-- ITEM MENU FR AND EN TITLES HERE --&gt;
+  &lt;li class=&#34;custom-menu-item scrolling-menu&#34;
+      ng-init=&#34;titre = &#39;Outils&#39;; title = &#39;Tools&#39;&#34;
+      ng-if=&#34;true&#34;
+      ng-class=&#34;{&#39;custom-menu-item__active&#39;: variables.menuState == title}&#34;&gt;
+    &lt;!-- ITEM MENU LINK HERE --&gt;
+    &lt;a href=&#34;&#34;
+       ng-click=&#34;variables.menuState = (variables.menuState == title ? variables.menuState = false : variables.menuState = title)&#34;&gt;
+       &lt;!-- ITEM MENU FR TITLE HERE --&gt;
+       &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;{{titre}}&lt;/span&gt;
+       &lt;!-- ITEM MENU EN TITLE HERE --&gt;
+       &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;{{title}}&lt;/span&gt;
+       &lt;i class=&#34;fa fa-angle-down&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+    &lt;/a&gt;
+    &lt;!-- START - SUBMENU --&gt;
+    &lt;ul class=&#34;custom-menu-item-submenu&#34;
+        ng-class=&#34;{&#39;custom-menu-item-submenu__active&#39;: variables.menuState == title}&#34;&gt;
+      &lt;li class=&#34;custom-menu-item-submenu-item&#34;&gt;
+        &lt;!-- ITEM SUBMENU LINK HERE --&gt;
+        &lt;a href=&#34;/map&#34;&gt;
+          &lt;!-- ITEM SUBMENU FR TITLE HERE --&gt;
+          &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Cartographe&lt;/span&gt;
+          &lt;!-- ITEM SUBMENU EN TITLE HERE --&gt;
+          &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Map builder&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+      &lt;li class=&#34;custom-menu-item-submenu-item&#34;&gt;
+        &lt;!-- ITEM SUBMENU LINK HERE --&gt;
+        &lt;a href=&#34;/chart&#34;&gt;
+          &lt;!-- ITEM SUBMENU FR TITLE HERE --&gt;
+          &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Créateur de graphique&lt;/span&gt;
+          &lt;!-- ITEM SUBMENU EN TITLE HERE --&gt;
+          &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Chart buildez&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;!-- END - SUBMENU --&gt;
+  &lt;/li&gt;
+  &lt;!-- END - SCROLLING MENU ITEM --&gt;
+&lt;/ul&gt;
+&lt;!--- END - HEADER SCROLLING MENU ---&gt;
+</code></pre>
+              </div>
+            </div>
+            <div
+              class="js-tabcontent"
+              id="code-based-on-click-for-code-library-custom-headers-footer-content"
+              data-clipboard="NOTHING TO COPY/PASTE"
+            >
+              <div class="highlight">
+                  <pre class="language-html" data-lang="html"><code>NOTHING TO COPY/PASTE</code></pre>
+              </div>
+            </div>
+            <div
+              class="js-tabcontent"
+              id="code-based-on-click-for-code-library-custom-headers-css-content"
+              data-clipboard="/* START - STYLE OF HEADER SCROLLING MENU
+========================================================================== */
+
+li.custom-menu-item {
+    position: relative;
+}
+
+li.custom-menu-item:first-child {
+    margin-left: inherit; }
+
+li.custom-menu-item &gt; a {
+    display: flex;
+    align-items: center;
+    color: var(--header-links);
+    font-size: 0.8rem;
+    border: none;
+    letter-spacing: .8px;
+    line-height: 59px;
+    opacity: 1;
+    margin: 0;
+    text-transform: uppercase;
+    padding: 0 20px;
+}
+
+li.scrolling-menu i {
+font-size: 1.2em;
+    margin-left: 13.5px;
+    color: var(--header-links);
+}
+
+
+li.custom-menu-item.custom-menu-item__active &gt; a,
+li.custom-menu-item.custom-menu-item:hover &gt; a{
+    background-color: var(--highlight);
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+ul.custom-menu-item-submenu {
+    display: none;
+    margin: 0;
+    padding: 22px 28px;
+    list-style: none;
+    background-color: white; }
+
+ul.custom-menu-item-submenu.custom-menu-item-submenu__active {
+    display: inherit; }
+
+li.custom-menu-item-submenu-item {
+    margin-bottom: 26px; }
+
+li.custom-menu-item-submenu-item:last-child {
+    margin-bottom: inherit; 
+}
+
+.ods-responsive-menu-collapsible:not(.ods-responsive-menu-collapsible--collapsed) ul.custom-menu {
+    display: flex;
+    align-items: center; 
+}
+
+.ods-responsive-menu-collapsible:not(.ods-responsive-menu-collapsible--collapsed) ul.custom-menu-item-submenu {
+    width: 230px;
+    position: absolute;
+    top: 59px;
+    left: 1px;
+    z-index: 1001;
+    filter: drop-shadow(0px 14px 8px rgba(37, 48, 59, 0.1)); 
+}
+
+.ods-responsive-menu-collapsible:not(.ods-responsive-menu-collapsible--collapsed) .custom-menu .custom-menu-item-submenu {
+    width: auto !important;
+    top: 59px !important;
+    left: 1px !important;
+    padding: 20px !important;
+    filter: drop-shadow(0px 0px 8px rgba(37, 48, 59, 0.2)) !important; }
+
+.ods-responsive-menu-collapsible:not(.ods-responsive-menu-collapsible--collapsed) .custom-menu .custom-menu-item-submenu a {
+    white-space: nowrap; 
+}
+
+/* END - STYLE OF HEADER SCROLLING MENU
+========================================================================== */
+"
+            >
+              <div class="highlight">
+                  <pre class="language-css" data-lang="css"><code>/* START - STYLE OF HEADER SCROLLING MENU
+========================================================================== */
+
+li.custom-menu-item {
+    position: relative;
+}
+
+li.custom-menu-item:first-child {
+    margin-left: inherit; }
+
+li.custom-menu-item &gt; a {
+    display: flex;
+    align-items: center;
+    color: var(--header-links);
+    font-size: 0.8rem;
+    border: none;
+    letter-spacing: .8px;
+    line-height: 59px;
+    opacity: 1;
+    margin: 0;
+    text-transform: uppercase;
+    padding: 0 20px;
+}
+
+li.scrolling-menu i {
+font-size: 1.2em;
+    margin-left: 13.5px;
+    color: var(--header-links);
+}
+
+
+li.custom-menu-item.custom-menu-item__active &gt; a,
+li.custom-menu-item.custom-menu-item:hover &gt; a{
+    background-color: var(--highlight);
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+ul.custom-menu-item-submenu {
+    display: none;
+    margin: 0;
+    padding: 22px 28px;
+    list-style: none;
+    background-color: white; }
+
+ul.custom-menu-item-submenu.custom-menu-item-submenu__active {
+    display: inherit; }
+
+li.custom-menu-item-submenu-item {
+    margin-bottom: 26px; }
+
+li.custom-menu-item-submenu-item:last-child {
+    margin-bottom: inherit; 
+}
+
+.ods-responsive-menu-collapsible:not(.ods-responsive-menu-collapsible--collapsed) ul.custom-menu {
+    display: flex;
+    align-items: center; 
+}
+
+.ods-responsive-menu-collapsible:not(.ods-responsive-menu-collapsible--collapsed) ul.custom-menu-item-submenu {
+    width: 230px;
+    position: absolute;
+    top: 59px;
+    left: 1px;
+    z-index: 1001;
+    filter: drop-shadow(0px 14px 8px rgba(37, 48, 59, 0.1)); 
+}
+
+.ods-responsive-menu-collapsible:not(.ods-responsive-menu-collapsible--collapsed) .custom-menu .custom-menu-item-submenu {
+    width: auto !important;
+    top: 59px !important;
+    left: 1px !important;
+    padding: 20px !important;
+    filter: drop-shadow(0px 0px 8px rgba(37, 48, 59, 0.2)) !important; }
+
+.ods-responsive-menu-collapsible:not(.ods-responsive-menu-collapsible--collapsed) .custom-menu .custom-menu-item-submenu a {
+    white-space: nowrap; 
+}
+
+/* END - STYLE OF HEADER SCROLLING MENU
+========================================================================== */
+</code></pre>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+      </div>
+    </article>
+    
+    <article class="block">
+      <h2 class="title is-2" id="based-on-hover---for-default-headers">
+        Based on hover - for default headers 
+        <a class="is-link anchor" href="#based-on-hover---for-default-headers">
+          <span class="icon">
+            <img src="/img/fas-link.svg" />
+          </span>
+        </a>
+      </h2>
+      <div class="content">
+        <p><strong>How to use it</strong></p>
+<ol>
+<li>Copy the content of the <code>HEADER</code> tab.</li>
+<li>Paste it in <code>https://yourdomain.opendatasoft.com/backoffice/customization/theme/#header</code>  instead of <code>##menu##</code>.</li>
+<li>Copy the content of the <code>STYLESHEET</code> tab.</li>
+<li>Paste it in <code>https://yourdomain.opendatasoft.com/backoffice/customization/theme/#stylesheet&quot;</code>.</li>
+</ol>
+
+      </div>
+      
+      <div class="box">
+        
+
+
+
+<div class="ods-content">
+    <div class="box-live-example">
+        <iframe id="iframe-based-on-hover-for-default-headers" width="100%" height="600px"
+                src="https://header-hover-discovery.opendatasoft.com/explore/">
+        </iframe>
+    </div>
+
+    <div class="box-code js-tabs">
+        <div class="level is-mobile">
+            <div class="level-left">
+                <div class="level-item">
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-based-on-hover-for-default-headers-colors-content"
+                        >
+                            Colors
+                        </a>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-based-on-hover-for-default-headers-header-content"
+                        >
+                            Header
+                        </a>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-based-on-hover-for-default-headers-footer-content"
+                        >
+                            Footer
+                        </a>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                         href="#code-based-on-hover-for-default-headers-css-content"
+                        >
+                            Stylesheet
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
+            </div>
+        </div>
+
+        <div class="tab-content">
+            <div class="js-tabcontent theme-colors"
+                 id="code-based-on-hover-for-default-headers-colors-content"
+                 role="tabpanel">
+                <div class="columns">
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#565656"></span>
+                                    <div class="highlight">
+                                        <pre><code>#565656</code></pre>
+                                    </div>
+                                    <span class="color-title">Text</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#0086D6"></span>
+                                    <div class="highlight">
+                                        <pre><code>#0086D6</code></pre>
+                                    </div>
+                                    <span class="color-title">Links</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#000000"></span>
+                                    <div class="highlight">
+                                        <pre><code>#000000</code></pre>
+                                    </div>
+                                    <span class="color-title">Titles</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#F6F8FB"></span>
+                                    <div class="highlight">
+                                        <pre><code>#F6F8FB</code></pre>
+                                    </div>
+                                    <span class="color-title">Page Background</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#0086D6"></span>
+                                    <div class="highlight">
+                                        <pre><code>#0086D6</code></pre>
+                                    </div>
+                                    <span class="color-title">Highlight</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#FFFFFF"></span>
+                                    <div class="highlight">
+                                        <pre><code>#FFFFFF</code></pre>
+                                    </div>
+                                    <span class="color-title">Boxes background</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#CBD2DB"></span>
+                                    <div class="highlight">
+                                        <pre><code>#CBD2DB</code></pre>
+                                    </div>
+                                    <span class="color-title">Boxes border</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#142E7B"></span>
+                                    <div class="highlight">
+                                        <pre><code>#142E7B</code></pre>
+                                    </div>
+                                    <span class="color-title">Section Titles</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#F6F8FB"></span>
+                                    <div class="highlight">
+                                        <pre><code>#F6F8FB</code></pre>
+                                    </div>
+                                    <span class="color-title">Section titles background</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#142E7B"></span>
+                                    <div class="highlight">
+                                        <pre><code>#142E7B</code></pre>
+                                    </div>
+                                    <span class="color-title">Header Background</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#FFFFFF"></span>
+                                    <div class="highlight">
+                                        <pre><code>#FFFFFF</code></pre>
+                                    </div>
+                                    <span class="color-title">Links in the header</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#FFFFFF"></span>
+                                    <div class="highlight">
+                                        <pre><code>#FFFFFF</code></pre>
+                                    </div>
+                                    <span class="color-title">Footer background</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#0086D6"></span>
+                                    <div class="highlight">
+                                        <pre><code>#0086D6</code></pre>
+                                    </div>
+                                    <span class="color-title">Links in the footer</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div
+              class="js-tabcontent"
+              id="code-based-on-hover-for-default-headers-header-content"
+              data-clipboard="&lt;!--- START - HEADER SCROLLING MENU ---&gt;
+&lt;ul class=&#34;ods-front-header__menu custom-menu&#34;&gt;
+  &lt;!-- START - CLASSIC MENU ITEM --&gt;
+  &lt;li class=&#34;ods-front-header__menu-item&#34;&gt;
+    &lt;!-- ITEM MENU LINK HERE --&gt;
+    &lt;a href=&#34;#&#34; class=&#34;ods-front-header__menu-item-link&#34;&gt;
+      &lt;!-- ITEM MENU FR TITLE HERE --&gt;
+      &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Données&lt;/span&gt;
+      &lt;!-- ITEM MENU EN TITLE HERE --&gt;
+      &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Data&lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;!-- END - CLASSIC MENU ITEM --&gt;
+  &lt;!-- START - SCROLLING MENU ITEM --&gt;
+  &lt;li class=&#34;ods-front-header__menu-item scrolling-menu&#34;&gt;
+    &lt;!-- ITEM MENU LINK HERE --&gt;
+    &lt;a href=&#34;&#34; class=&#34;ods-front-header__menu-item-link&#34;&gt;
+      &lt;!-- ITEM MENU FR TITLE HERE --&gt;
+      &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Outils&lt;/span&gt;
+      &lt;!-- ITEM MENU EN TITLE HERE --&gt;
+      &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Tools&lt;/span&gt;&lt;/a&gt;
+    &lt;!-- START - SUBMENU --&gt;
+    &lt;ul class=&#34;scrolling-menu-content&#34;&gt;
+      &lt;!-- ITEM SUBMENU LINK HERE --&gt;
+      &lt;a class=&#34;ods-front-header__menu-item-link&#34; href=&#34;/map/&#34;&gt;
+        &lt;!-- ITEM SUBMENU FR TITLE HERE --&gt;
+        &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Cartographe&lt;/span&gt;
+        &lt;!-- ITEM SUBMENU EN TITLE HERE --&gt;
+        &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Map builder&lt;/span&gt;
+      &lt;/a&gt;
+      &lt;!-- ITEM SUBMENU LINK HERE --&gt;
+      &lt;a class=&#34;ods-front-header__menu-item-link&#34;
+         href=&#34;/chart/&#34;
+         title=&#34;Créer des graphiques&#34;&gt;
+        &lt;!-- ITEM SUBMENU FR TITLE HERE --&gt;
+        &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Créateur de graphique&lt;/span&gt;
+        &lt;!-- ITEM SUBMENU EN TITLE HERE --&gt;
+        &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Chart builder&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/ul&gt;
+    &lt;!-- END - SUBMENU --&gt;
+  &lt;/li&gt;
+  &lt;!-- END - SCROLLING MENU ITEM --&gt;
+&lt;/ul&gt;
+&lt;!--- END - HEADER SCROLLING MENU ---&gt;
+"
+            >
+              <div class="highlight">
+                  <pre class="language-html" data-lang="html"><code>&lt;!--- START - HEADER SCROLLING MENU ---&gt;
+&lt;ul class=&#34;ods-front-header__menu custom-menu&#34;&gt;
+  &lt;!-- START - CLASSIC MENU ITEM --&gt;
+  &lt;li class=&#34;ods-front-header__menu-item&#34;&gt;
+    &lt;!-- ITEM MENU LINK HERE --&gt;
+    &lt;a href=&#34;#&#34; class=&#34;ods-front-header__menu-item-link&#34;&gt;
+      &lt;!-- ITEM MENU FR TITLE HERE --&gt;
+      &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Données&lt;/span&gt;
+      &lt;!-- ITEM MENU EN TITLE HERE --&gt;
+      &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Data&lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;!-- END - CLASSIC MENU ITEM --&gt;
+  &lt;!-- START - SCROLLING MENU ITEM --&gt;
+  &lt;li class=&#34;ods-front-header__menu-item scrolling-menu&#34;&gt;
+    &lt;!-- ITEM MENU LINK HERE --&gt;
+    &lt;a href=&#34;&#34; class=&#34;ods-front-header__menu-item-link&#34;&gt;
+      &lt;!-- ITEM MENU FR TITLE HERE --&gt;
+      &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Outils&lt;/span&gt;
+      &lt;!-- ITEM MENU EN TITLE HERE --&gt;
+      &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Tools&lt;/span&gt;&lt;/a&gt;
+    &lt;!-- START - SUBMENU --&gt;
+    &lt;ul class=&#34;scrolling-menu-content&#34;&gt;
+      &lt;!-- ITEM SUBMENU LINK HERE --&gt;
+      &lt;a class=&#34;ods-front-header__menu-item-link&#34; href=&#34;/map/&#34;&gt;
+        &lt;!-- ITEM SUBMENU FR TITLE HERE --&gt;
+        &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Cartographe&lt;/span&gt;
+        &lt;!-- ITEM SUBMENU EN TITLE HERE --&gt;
+        &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Map builder&lt;/span&gt;
+      &lt;/a&gt;
+      &lt;!-- ITEM SUBMENU LINK HERE --&gt;
+      &lt;a class=&#34;ods-front-header__menu-item-link&#34;
+         href=&#34;/chart/&#34;
+         title=&#34;Créer des graphiques&#34;&gt;
+        &lt;!-- ITEM SUBMENU FR TITLE HERE --&gt;
+        &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Créateur de graphique&lt;/span&gt;
+        &lt;!-- ITEM SUBMENU EN TITLE HERE --&gt;
+        &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Chart builder&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/ul&gt;
+    &lt;!-- END - SUBMENU --&gt;
+  &lt;/li&gt;
+  &lt;!-- END - SCROLLING MENU ITEM --&gt;
+&lt;/ul&gt;
+&lt;!--- END - HEADER SCROLLING MENU ---&gt;
+</code></pre>
+              </div>
+            </div>
+            <div
+              class="js-tabcontent"
+              id="code-based-on-hover-for-default-headers-footer-content"
+              data-clipboard="NOTHING TO COPY/PASTE"
+            >
+              <div class="highlight">
+                  <pre class="language-html" data-lang="html"><code>NOTHING TO COPY/PASTE</code></pre>
+              </div>
+            </div>
+            <div
+              class="js-tabcontent"
+              id="code-based-on-hover-for-default-headers-css-content"
+              data-clipboard="/* DESKTOP SPECIFICS - STYLE OF ODS HEADER
+========================================================================== */
+
+.ods-responsive-menu-collapsible__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.ods-front-header__portal-brand {
+    display: flex;
+    height: 40px;
+    position: relative;
+    top: 0;
+}
+
+/* MOBILE SPECIFICS - STYLE OF ODS HEADER
+========================================================================== */
+.ods-responsive-menu-placeholder.ods-responsive-menu-placeholder--active {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.ods-responsive-menu--collapsed .ods-responsive-menu-collapsible__content {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.ods-responsive-menu-collapsible--collapsed .ods-front-header__logo {
+    display: none;
+}
+
+.ods-responsive-menu-collapsible--collapsed .ods-front-header__menu,
+.ods-responsive-menu-collapsible--collapsed .ods-front-header__management-menu
+{
+    width: 100%;
+}
+
+/* DESKTOP SPECIFICS - STYLE OF SCROLLING MENU
+========================================================================== */
+
+.scrolling-menu-content {
+    position: absolute;
+    background-color: var(--header-background);
+    filter: drop-shadow(0px 14px 8px rgba(37, 48, 59, 0.1));
+    z-index: 1;
+    padding: 10px 20px;
+    min-width: 150px;  
+}
+
+.scrolling-menu-content a {
+    color: var(--links);
+    text-decoration: none;
+    display: block;
+    opacity:1;
+    padding: 5px;
+    font-size: 0.8rem;
+    line-height: 35px;
+}
+
+.scrolling-menu-content a:hover {
+    color: var(--links);
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 1000px){
+    .scrolling-menu-content {
+        display: none;
+    }
+
+    .scrolling-menu:hover  .scrolling-menu-content {
+        display: block;
+    }
+
+    .scrolling-menu:hover .ods-front-header__menu-item-link {
+        opacity: 1;
+    }   
+}
+
+/* MOBILE SPECIFICS - STYLE OF SCROLLING MENU
+========================================================================== */
+
+@media screen and (max-width: 1000px){    
+    .scrolling-menu-content {
+        position: relative;
+        padding-left: 25px;
+        filter: none;
+    }
+}
+"
+            >
+              <div class="highlight">
+                  <pre class="language-css" data-lang="css"><code>/* DESKTOP SPECIFICS - STYLE OF ODS HEADER
+========================================================================== */
+
+.ods-responsive-menu-collapsible__content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.ods-front-header__portal-brand {
+    display: flex;
+    height: 40px;
+    position: relative;
+    top: 0;
+}
+
+/* MOBILE SPECIFICS - STYLE OF ODS HEADER
+========================================================================== */
+.ods-responsive-menu-placeholder.ods-responsive-menu-placeholder--active {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.ods-responsive-menu--collapsed .ods-responsive-menu-collapsible__content {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+.ods-responsive-menu-collapsible--collapsed .ods-front-header__logo {
+    display: none;
+}
+
+.ods-responsive-menu-collapsible--collapsed .ods-front-header__menu,
+.ods-responsive-menu-collapsible--collapsed .ods-front-header__management-menu
+{
+    width: 100%;
+}
+
+/* DESKTOP SPECIFICS - STYLE OF SCROLLING MENU
+========================================================================== */
+
+.scrolling-menu-content {
+    position: absolute;
+    background-color: var(--header-background);
+    filter: drop-shadow(0px 14px 8px rgba(37, 48, 59, 0.1));
+    z-index: 1;
+    padding: 10px 20px;
+    min-width: 150px;  
+}
+
+.scrolling-menu-content a {
+    color: var(--links);
+    text-decoration: none;
+    display: block;
+    opacity:1;
+    padding: 5px;
+    font-size: 0.8rem;
+    line-height: 35px;
+}
+
+.scrolling-menu-content a:hover {
+    color: var(--links);
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 1000px){
+    .scrolling-menu-content {
+        display: none;
+    }
+
+    .scrolling-menu:hover  .scrolling-menu-content {
+        display: block;
+    }
+
+    .scrolling-menu:hover .ods-front-header__menu-item-link {
+        opacity: 1;
+    }   
+}
+
+/* MOBILE SPECIFICS - STYLE OF SCROLLING MENU
+========================================================================== */
+
+@media screen and (max-width: 1000px){    
+    .scrolling-menu-content {
+        position: relative;
+        padding-left: 25px;
+        filter: none;
+    }
+}
+</code></pre>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+      </div>
+    </article>
+    
+    <article class="block">
+      <h2 class="title is-2" id="based-on-hover---for-code-library-customer-headers">
+        Based on hover - for Code Library customer headers 
+        <a class="is-link anchor" href="#based-on-hover---for-code-library-customer-headers">
+          <span class="icon">
+            <img src="/img/fas-link.svg" />
+          </span>
+        </a>
+      </h2>
+      <div class="content">
+        <p><strong>How to use it</strong></p>
+<ol>
+<li>Copy the content of the <code>HEADER</code> tab.</li>
+<li>Paste it in <code>https://yourdomain.opendatasoft.com/backoffice/customization/theme/#header</code>  instead of <code>##menu##</code>.</li>
+<li>Copy the content of the <code>STYLESHEET</code> tab.</li>
+<li>Paste it in <code>https://yourdomain.opendatasoft.com/backoffice/customization/theme/#stylesheet</code> <strong>AFTER</strong> the existing code.</li>
+<li>Replace the links and titles of the items menu in the <code>HEADER</code> tab.</li>
+</ol>
+
+      </div>
+      
+      <div class="box">
+        
+
+
+
+<div class="ods-content">
+    <div class="box-live-example">
+        <iframe id="iframe-based-on-hover-for-code-library-customer-headers" width="100%" height="600px"
+                src="https://header-hover-with-theme-discovery.opendatasoft.com">
+        </iframe>
+    </div>
+
+    <div class="box-code js-tabs">
+        <div class="level is-mobile">
+            <div class="level-left">
+                <div class="level-item">
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-based-on-hover-for-code-library-customer-headers-colors-content"
+                        >
+                            Colors
+                        </a>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-based-on-hover-for-code-library-customer-headers-header-content"
+                        >
+                            Header
+                        </a>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-based-on-hover-for-code-library-customer-headers-footer-content"
+                        >
+                            Footer
+                        </a>
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                         href="#code-based-on-hover-for-code-library-customer-headers-css-content"
+                        >
+                            Stylesheet
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
+            </div>
+        </div>
+
+        <div class="tab-content">
+            <div class="js-tabcontent theme-colors"
+                 id="code-based-on-hover-for-code-library-customer-headers-colors-content"
+                 role="tabpanel">
+                <div class="columns">
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#565656"></span>
+                                    <div class="highlight">
+                                        <pre><code>#565656</code></pre>
+                                    </div>
+                                    <span class="color-title">Text</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#0086D6"></span>
+                                    <div class="highlight">
+                                        <pre><code>#0086D6</code></pre>
+                                    </div>
+                                    <span class="color-title">Links</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#000000"></span>
+                                    <div class="highlight">
+                                        <pre><code>#000000</code></pre>
+                                    </div>
+                                    <span class="color-title">Titles</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#F6F8FB"></span>
+                                    <div class="highlight">
+                                        <pre><code>#F6F8FB</code></pre>
+                                    </div>
+                                    <span class="color-title">Page Background</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#00C7B1"></span>
+                                    <div class="highlight">
+                                        <pre><code>#00C7B1</code></pre>
+                                    </div>
+                                    <span class="color-title">Highlight</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#FFFFFF"></span>
+                                    <div class="highlight">
+                                        <pre><code>#FFFFFF</code></pre>
+                                    </div>
+                                    <span class="color-title">Boxes background</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#DEE5EF"></span>
+                                    <div class="highlight">
+                                        <pre><code>#DEE5EF</code></pre>
+                                    </div>
+                                    <span class="color-title">Boxes border</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="column">
+                        <ul>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#000000"></span>
+                                    <div class="highlight">
+                                        <pre><code>#000000</code></pre>
+                                    </div>
+                                    <span class="color-title">Section Titles</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#F6F8FB"></span>
+                                    <div class="highlight">
+                                        <pre><code>#F6F8FB</code></pre>
+                                    </div>
+                                    <span class="color-title">Section titles background</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:##FFFFFF"></span>
+                                    <div class="highlight">
+                                        <pre><code>##FFFFFF</code></pre>
+                                    </div>
+                                    <span class="color-title">Header Background</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#000000"></span>
+                                    <div class="highlight">
+                                        <pre><code>#000000</code></pre>
+                                    </div>
+                                    <span class="color-title">Links in the header</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#F6F8FB"></span>
+                                    <div class="highlight">
+                                        <pre><code>#F6F8FB</code></pre>
+                                    </div>
+                                    <span class="color-title">Footer background</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="color is-clickable has-tooltip-top" data-tooltip="Copy color to clipboard">
+                                    <span class="color-preview"
+                                          style="background-color:#000000"></span>
+                                    <div class="highlight">
+                                        <pre><code>#000000</code></pre>
+                                    </div>
+                                    <span class="color-title">Links in the footer</span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div
+              class="js-tabcontent"
+              id="code-based-on-hover-for-code-library-customer-headers-header-content"
+              data-clipboard="&lt;!--- START - HEADER SCROLLING MENU ---&gt;
+&lt;ul class=&#34;ods-front-header__menu custom-menu&#34;&gt;
+  &lt;!-- START - CLASSIC MENU ITEM --&gt;
+  &lt;li class=&#34;ods-front-header__menu-item&#34; title=&#34;Accéder aux données&#34;&gt;
+    &lt;!-- ITEM MENU LINK HERE --&gt;
+    &lt;a href=&#34;#&#34; class=&#34;ods-front-header__menu-item-link&#34;&gt;
+      &lt;!-- ITEM MENU FR TITLE HERE --&gt;
+      &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Données&lt;/span&gt;
+      &lt;!-- ITEM MENU EN TITLE HERE --&gt;
+      &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Data&lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;!-- END - CLASSIC MENU ITEM --&gt;
+  &lt;!-- START - SCROLLING MENU ITEM --&gt;
+  &lt;li class=&#34;ods-front-header__menu-item scrolling-menu&#34;&gt;
+    &lt;!-- ITEM MENU LINK HERE --&gt;
+    &lt;a href=&#34;&#34; class=&#34;ods-front-header__menu-item-link&#34;&gt;
+      &lt;!-- ITEM MENU FR TITLE HERE --&gt;
+      &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Outils&lt;/span&gt;
+      &lt;!-- ITEM MENU EN TITLE HERE --&gt;
+      &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Tools&lt;/span&gt;&lt;/a&gt;
+    &lt;!-- START - SUBMENU --&gt;
+    &lt;ul class=&#34;dropdown-content&#34;&gt;
+      &lt;!-- ITEM SUBMENU LINK HERE --&gt;
+      &lt;a class=&#34;ods-front-header__menu-item-link&#34; href=&#34;/map/&#34;&gt;
+        &lt;!-- ITEM SUBMENU FR TITLE HERE --&gt;
+        &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Cartographe&lt;/span&gt;
+        &lt;!-- ITEM SUBMENU EN TITLE HERE --&gt;
+        &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Map builder&lt;/span&gt;
+      &lt;/a&gt;
+      &lt;!-- ITEM SUBMENU LINK HERE --&gt;
+      &lt;a class=&#34;ods-front-header__menu-item-link&#34; href=&#34;/chart/&#34;&gt;
+        &lt;!-- ITEM SUBMENU FR TITLE HERE --&gt;
+        &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Créateur de graphique&lt;/span&gt;
+        &lt;!-- ITEM SUBMENU EN TITLE HERE --&gt;
+        &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Chart builder&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/ul&gt;
+    &lt;!-- END - SUBMENU --&gt;
+  &lt;/li&gt;
+  &lt;!-- END - SCROLLING MENU ITEM --&gt;
+&lt;/ul&gt;
+&lt;!--- END - HEADER SCROLLING MENU ---&gt;
+"
+            >
+              <div class="highlight">
+                  <pre class="language-html" data-lang="html"><code>&lt;!--- START - HEADER SCROLLING MENU ---&gt;
+&lt;ul class=&#34;ods-front-header__menu custom-menu&#34;&gt;
+  &lt;!-- START - CLASSIC MENU ITEM --&gt;
+  &lt;li class=&#34;ods-front-header__menu-item&#34; title=&#34;Accéder aux données&#34;&gt;
+    &lt;!-- ITEM MENU LINK HERE --&gt;
+    &lt;a href=&#34;#&#34; class=&#34;ods-front-header__menu-item-link&#34;&gt;
+      &lt;!-- ITEM MENU FR TITLE HERE --&gt;
+      &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Données&lt;/span&gt;
+      &lt;!-- ITEM MENU EN TITLE HERE --&gt;
+      &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Data&lt;/span&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;!-- END - CLASSIC MENU ITEM --&gt;
+  &lt;!-- START - SCROLLING MENU ITEM --&gt;
+  &lt;li class=&#34;ods-front-header__menu-item scrolling-menu&#34;&gt;
+    &lt;!-- ITEM MENU LINK HERE --&gt;
+    &lt;a href=&#34;&#34; class=&#34;ods-front-header__menu-item-link&#34;&gt;
+      &lt;!-- ITEM MENU FR TITLE HERE --&gt;
+      &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Outils&lt;/span&gt;
+      &lt;!-- ITEM MENU EN TITLE HERE --&gt;
+      &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Tools&lt;/span&gt;&lt;/a&gt;
+    &lt;!-- START - SUBMENU --&gt;
+    &lt;ul class=&#34;dropdown-content&#34;&gt;
+      &lt;!-- ITEM SUBMENU LINK HERE --&gt;
+      &lt;a class=&#34;ods-front-header__menu-item-link&#34; href=&#34;/map/&#34;&gt;
+        &lt;!-- ITEM SUBMENU FR TITLE HERE --&gt;
+        &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Cartographe&lt;/span&gt;
+        &lt;!-- ITEM SUBMENU EN TITLE HERE --&gt;
+        &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Map builder&lt;/span&gt;
+      &lt;/a&gt;
+      &lt;!-- ITEM SUBMENU LINK HERE --&gt;
+      &lt;a class=&#34;ods-front-header__menu-item-link&#34; href=&#34;/chart/&#34;&gt;
+        &lt;!-- ITEM SUBMENU FR TITLE HERE --&gt;
+        &lt;span ng-if=&#34;&#39;fr&#39;|currentLanguage&#34;&gt;Créateur de graphique&lt;/span&gt;
+        &lt;!-- ITEM SUBMENU EN TITLE HERE --&gt;
+        &lt;span ng-if=&#34;&#39;en&#39;|currentLanguage&#34;&gt;Chart builder&lt;/span&gt;
+      &lt;/a&gt;
+    &lt;/ul&gt;
+    &lt;!-- END - SUBMENU --&gt;
+  &lt;/li&gt;
+  &lt;!-- END - SCROLLING MENU ITEM --&gt;
+&lt;/ul&gt;
+&lt;!--- END - HEADER SCROLLING MENU ---&gt;
+</code></pre>
+              </div>
+            </div>
+            <div
+              class="js-tabcontent"
+              id="code-based-on-hover-for-code-library-customer-headers-footer-content"
+              data-clipboard="NOTHING TO COPY/PASTE"
+            >
+              <div class="highlight">
+                  <pre class="language-html" data-lang="html"><code>NOTHING TO COPY/PASTE</code></pre>
+              </div>
+            </div>
+            <div
+              class="js-tabcontent"
+              id="code-based-on-hover-for-code-library-customer-headers-css-content"
+              data-clipboard="/* DESKTOP SPECIFICS - STYLE OF SCROLLING MENU
+========================================================================== */
+
+.dropdown-content {
+    position: absolute;
+    background-color: #FFF;
+    filter: drop-shadow(0px 14px 8px rgba(37, 48, 59, 0.1));
+    z-index: 1;
+    padding: 10px 20px;
+    min-width: 150px;  
+}
+
+.dropdown-content a {
+    color: var(--links);
+    text-decoration: none;
+    display: block;
+    opacity:1;
+    padding: 5px;
+    font-size: 0.8rem;
+    line-height: 35px;
+}
+
+.dropdown-content a:hover {
+    text-decoration: underline;
+    background-color: #FFF;
+    color: var(--links);
+}
+
+@media screen and (min-width: 1000px){
+    .dropdown-content {
+        display: none;
+    }
+
+    .scrolling-menu:hover  .dropdown-content {
+        display: block;
+    }
+
+    .scrolling-menu:hover .ods-front-header__menu-item-link {
+         background-color: var(--highlight);
+         color: #FFFFFF; /* Header link color when the link is active */
+    }   
+    .scrolling-menu:hover .dropdown-content a {
+            background-color: #FFF;
+    color: var(--links);
+    }
+}
+
+/* MOBILE SPECIFICS - STYLE OF SCROLLING MENU
+========================================================================== */
+
+@media screen and (max-width: 1000px){    
+    .dropdown-content {
+        position: relative;
+        padding-left: 25px;
+        filter: none;
+    }
+}"
+            >
+              <div class="highlight">
+                  <pre class="language-css" data-lang="css"><code>/* DESKTOP SPECIFICS - STYLE OF SCROLLING MENU
+========================================================================== */
+
+.dropdown-content {
+    position: absolute;
+    background-color: #FFF;
+    filter: drop-shadow(0px 14px 8px rgba(37, 48, 59, 0.1));
+    z-index: 1;
+    padding: 10px 20px;
+    min-width: 150px;  
+}
+
+.dropdown-content a {
+    color: var(--links);
+    text-decoration: none;
+    display: block;
+    opacity:1;
+    padding: 5px;
+    font-size: 0.8rem;
+    line-height: 35px;
+}
+
+.dropdown-content a:hover {
+    text-decoration: underline;
+    background-color: #FFF;
+    color: var(--links);
+}
+
+@media screen and (min-width: 1000px){
+    .dropdown-content {
+        display: none;
+    }
+
+    .scrolling-menu:hover  .dropdown-content {
+        display: block;
+    }
+
+    .scrolling-menu:hover .ods-front-header__menu-item-link {
+         background-color: var(--highlight);
+         color: #FFFFFF; /* Header link color when the link is active */
+    }   
+    .scrolling-menu:hover .dropdown-content a {
+            background-color: #FFF;
+    color: var(--links);
+    }
+}
+
+/* MOBILE SPECIFICS - STYLE OF SCROLLING MENU
+========================================================================== */
+
+@media screen and (max-width: 1000px){    
+    .dropdown-content {
+        position: relative;
+        padding-left: 25px;
+        filter: none;
+    }
+}</code></pre>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+      </div>
+    </article>
+    
+  </div>
+</section>
+
+      </div>
+    </div>
+
+    <footer class="footer">
+    <a href="https://www.opendatasoft.com"
+       class="footer-link"
+       title="Opendatasoft website">
+        <img src="/img/ods-logo.svg"
+             class="footer-logo"
+             alt="Opendatasoft logo"
+        />
+    </a>
+    <span class="footer-copyright">
+        &copy; Copyright 2020
+    </span>
+</footer>
+    
+    
+    
+
+    <script>
+      var process = { env: { NODE_ENV: "production" } };
+    </script>
+    <script
+      type="text/javascript"
+      src="/index.min.b65df824365d99e02747153d4eeca1d7a840fbd4e06d720e8be44e9aa54586d2.js"
+      defer
+    ></script>
+  </body>
+</html>

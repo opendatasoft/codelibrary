@@ -116,5 +116,3 @@
         </div>
     </div>
 </section>
-
-<!-- tiny-shadow -> heavy-shadow -->
