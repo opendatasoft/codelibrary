@@ -1,5 +1,6 @@
 ---
 title: "ods-results"
+description: "Examples to showcase ods-results widget: a simple widget to list records from a dataset, as a list or set of cards."
 date: 2021-06-21T20:03:38+02:00
 tags: ["display", "list"]
 resources:
