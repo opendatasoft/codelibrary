@@ -1,0 +1,2397 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+       Chart samples &ndash; Codelibrary 
+    </title>
+
+    
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-41201218-21"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-41201218-21");
+    </script>
+
+    
+    
+
+    
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css"
+      integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8="
+      crossorigin="anonymous"
+    />
+
+    
+    <link rel="stylesheet" type="text/css" href="/scss/main.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+  </head>
+
+  <body>
+    <div class="is-hidden">
+      <svg>
+  <defs>
+    <g id="link-2">
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+    </g>
+
+    <g id="check">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </g>
+
+    <g id="copy">
+      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+    </g>
+
+    <g id="external">
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+      <polyline points="15 3 21 3 21 9"></polyline>
+      <line x1="10" y1="14" x2="21" y2="3"></line>
+    </g>
+
+  </defs>
+</svg>
+
+    </div>
+
+    <nav class="navbar is-fixed-top"
+     role="navigation"
+     aria-label="Main navigation">
+    <div class="navbar-brand">
+        <button class="navbar-burger burger"
+                type="button"
+                data-target="sidebarNavbar"
+                aria-controls="sidebarNavbar"
+                aria-expanded="false"
+                aria-label="Main menu">
+            Menu
+        </button>
+        <a class="navbar-item"
+           href="/"
+           title="Back to the homepage">
+            <img src="/img/ods-logo-helphub.svg"
+                 alt="Helphub Logo"/>
+        </a>
+        <button class="navbar-burger burger"
+                type="button"
+                data-target="helphubNavbar"
+                aria-controls="helphubNavbar"
+                aria-expanded="false"
+                aria-label="Help Hub Menu">
+            Help Hub
+        </button>
+    </div>
+    <div class="navbar-menu"
+         id="helphubNavbar">
+        <div class="navbar-start">
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/">
+                Help Hub
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/platform/en/">
+                User guide
+            </a>
+            <a class="navbar-item is-active"
+               href="https://codelibrary.opendatasoft.com">
+                Code Library
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/faq-glossary/en/">
+                FAQ
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/widgets/">
+                Widgets
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/en/apis/">
+                APIs
+            </a>
+            <a class="navbar-item"
+               href="https://academy.opendatasoft.com/page/homepage">
+                Academy
+            </a>
+            <a class="navbar-item"
+               href="https://documentation-resources.opendatasoft.com/pages/release-notes/?headless=true">
+                Release Notes
+            </a>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="columns is-desktop codelibrary mb-0">
+      <div class="column is-narrow pb-0">
+        <div class="sidebar-search is-hidden-touch">
+  <div class="block search-wrapper">
+    <div id="algolia-box"></div>
+    <div class="search-results-wrapper">
+      <div id="algolia-results"></div>
+    </div>
+  </div>
+</div>
+<aside class="sidebar"
+       id="sidebarNavbar">
+  
+  <div class="sidebar-header">
+    <div class="block">
+      <ul class="menu-list">
+        <p class="menu-label">On this page</p>
+        <li>
+          <a href="#">
+            Top
+          </a>
+        </li>
+        
+        <li>
+          <a href="#ods-widgets-charts">
+            ODS-Widgets Charts
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+  
+  <div class="sidebar-body">
+    
+    
+    <ul class="menu-list">
+      <li>
+        <a class="sidebar-subtitle"
+          href="https://codelibrary.opendatasoft.com">
+          Home
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/components/"
+        class="sidebar-subtitle">
+        Components
+        
+        <span class="tag pill is-size-7 is-rounded is-info">1</span>
+        
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/custom-views/"
+        class="sidebar-subtitle">
+        Custom views
+        
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/generators/"
+        class="sidebar-subtitle">
+        Generators
+        
+        <span class="tag pill is-size-7 is-rounded is-info">1</span>
+        
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/page-templates/"
+        class="sidebar-subtitle">
+        Page templates
+        
+        <span class="tag pill is-size-7 is-rounded is-info">10</span>
+        
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/portal-themes/"
+        class="sidebar-subtitle">
+        Portal themes
+        
+        <span class="tag pill is-size-7 is-rounded is-info">1</span>
+        
+      </a>
+    </li>
+    
+    
+      
+      <li>
+        <a class="sidebar-subtitle " href="/widget-tricks/">
+          Widget tricks
+        </a>
+        <ul>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-results/">
+              <div>
+                ods-results
+                
+                
+                <span class="tag pill is-size-7 is-rounded is-info">
+                  1
+                </span>
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-chart-css/">
+              <div>
+                ods-chart CSS Hacks
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/animation/">
+              <div>
+                Animations
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/svg-maps/">
+              <div>
+                Static maps, a quick introduction
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="is-active" href="/widget-tricks/charts/">
+              <div>
+                Chart samples
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/catalog-cards/">
+              <div>
+                Custom catalog card
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/custom-tooltips/">
+              <div>
+                Custom Tooltips
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/dates/">
+              <div>
+                Dates
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/drill-down/">
+              <div>
+                Drill-down refine in charts
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/filter-as-list/">
+              <div>
+                Filters as an HTML Select
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-aggregation/">
+              <div>
+                ods-aggregation
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-analysis/">
+              <div>
+                ods-analysis, quick intro
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-color-gradient/">
+              <div>
+                ods-color-gradient &#43; ods-map : a choropleth alternative
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-date-range-slider/">
+              <div>
+                ods-date-range-slider
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-map-css/">
+              <div>
+                ods-map: CSS Hacks
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-map-tricks/">
+              <div>
+                ods-map: Refine &amp; Zoom
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-pop-in/">
+              <div>
+                ods-pop-in variants
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-select/">
+              <div>
+                ods-select
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/ods-simple-tabs/">
+              <div>
+                ods-simple-tabs
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/share-print/">
+              <div>
+                Share and print
+                
+                
+              </div>
+            </a>
+          </li>
+          
+        </ul>
+      </li>
+      
+    
+  </ul>
+  <p class="menu-label">
+    Tags
+  </p>
+  <div class="tags">
+    
+    <a class="tag" href="/tags/aggregation/">
+      aggregation
+    </a>
+    
+    <a class="tag" href="/tags/chart/">
+      chart
+    </a>
+    
+    <a class="tag" href="/tags/date/">
+      date
+    </a>
+    
+    <a class="tag" href="/tags/display/">
+      display
+    </a>
+    
+    <a class="tag" href="/tags/filter/">
+      filter
+    </a>
+    
+    <a class="tag" href="/tags/geo/">
+      geo
+    </a>
+    
+    <a class="tag" href="/tags/list/">
+      list
+    </a>
+    
+    <a class="tag" href="/tags/map/">
+      map
+    </a>
+    
+    <a class="tag" href="/tags/navigation/">
+      navigation
+    </a>
+    
+    <a class="tag" href="/tags/ods-aggregation/">
+      ods-aggregation
+    </a>
+    
+    <a class="tag" href="/tags/ods-analysis/">
+      ods-analysis
+    </a>
+    
+    <a class="tag" href="/tags/ods-maps/">
+      ods-maps
+    </a>
+    
+  </div>
+</div>
+</aside>
+
+      </div>
+      <div class="column codelibrary-content">
+        
+<section class="section resources">
+  <div class="container is-max-widescreen">
+    <h1 class="title is-1">Widget Tricks - Chart samples</h1>
+    <div class="content">
+      
+    </div>
+    
+    <article class="block">
+      <h2 class="title is-2" id="ods-widgets-charts">
+        ODS-Widgets Charts 
+        <a class="is-link anchor" href="#ods-widgets-charts">
+          <span class="icon">
+            <img src="/img/fas-link.svg" />
+          </span>
+        </a>
+      </h2>
+      <div class="content">
+        
+      </div>
+      
+      <div class="box">
+        
+
+
+
+
+
+
+    
+
+
+
+
+<div class="codepen">
+    <form id="form-ods-widgets-charts"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+                 "title": "New Pen!",
+                 "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    const sourceMonitoringInterceptor = ($q) =\u003e {\n        return {\n            request: (config) =\u003e {\n                if (config.params)\n                    if (config.params.source)\n                        delete config.params.source;\n\n                config.url = config.url.replace(\&#34;ods-api-monitoring\&#34;, \&#34;monitoring-copy\&#34;);\n                return config;\n            }\n        }\n    }\n\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider, $httpProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n        $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+                 "editors": 110,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;container\&#34;\u003e\n    \u003cdiv class=\&#34;ods-box\&#34;\u003e\n        \u003ch1\u003e\n            ODS-Widgets Charts\n        \u003c/h1\u003e\n        \u003cods-simple-tabs\u003e\n            \u003cods-simple-tab\n                    label=\&#34;Bar, Column\&#34;\n                    keep-content=\&#34;false\&#34;\u003e\n                \u003c!-- BAR COLMUN --\u003e\n                \u003cdiv class=\&#34;row\&#34;\u003e\n                    \u003cdiv class=\&#34;col-md-9\&#34;\u003e\n                        \u003ch3\u003e\n                            To see order of magnitude\n                        \u003c/h3\u003e\n                        \u003cdiv class=\&#34;chart-title\&#34;\u003e\n                            \u003cb\u003eSum of available beds\u003c/b\u003e for each types of hospital.\n                        \u003c/div\u003e\n                        \u003cods-dataset-context context=\&#34;ushospitals\&#34; ushospitals-dataset=\&#34;us-hospitals\&#34;\n                                             ushospitals-domain=\&#34;userclub\&#34;\u003e\n                            \u003cods-chart label-x=\&#34;Hospital types\&#34;\u003e\n                                \u003cods-chart-query context=\&#34;ushospitals\&#34; field-x=\&#34;type\&#34; sort=\&#34;serie1-1\&#34;\u003e\n                                    \u003cods-chart-serie expression-y=\&#34;beds\&#34; chart-type=\&#34;bar\&#34; function-y=\&#34;SUM\&#34;\n                                                     logarithmic=\&#34;true\&#34; label-y=\&#34;Number of beds\&#34; color=\&#34;#1E0C33\&#34;\n                                                     scientific-display=\&#34;true\&#34;\u003e\n                                    \u003c/ods-chart-serie\u003e\n                                \u003c/ods-chart-query\u003e\n                            \u003c/ods-chart\u003e\n                        \u003c/ods-dataset-context\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;col-md-3\&#34;\u003e\n                        \u003ch5\u003e\n                            Bar chart with logarithmic scale\n                        \u003c/h5\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;spacer\&#34;\u003e\u003c/div\u003e\n                \u003cdiv class=\&#34;row\&#34;\u003e\n                    \u003cdiv class=\&#34;col-md-9\&#34;\u003e\n                        \u003ch3\u003e\n                            To see distribution by columns with one or more series\n                        \u003c/h3\u003e\n                        \u003cdiv class=\&#34;chart-title\&#34;\u003e\n                            \u003cb\u003eNumber of winning\u003c/b\u003e or \u003cb\u003elosing\u003c/b\u003e points for \u003cb\u003eSuper Bowl\u003c/b\u003e events since\n                            1967.\n                        \u003c/div\u003e\n                        \u003cods-dataset-context context=\&#34;superbowlpublic\&#34; superbowlpublic-dataset=\&#34;super-bowl\&#34;\n                                             superbowlpublic-domain=\&#34;public\&#34;\u003e\n                            \u003cods-chart single-y-axis=\&#34;true\&#34;\u003e\n                                \u003cods-chart-query context=\&#34;superbowlpublic\&#34; field-x=\&#34;date\&#34; timescale=\&#34;year\&#34;\n                                                 stacked=\&#34;normal\&#34;\u003e\n                                    \u003cods-chart-serie expression-y=\&#34;winning_pts\&#34;\n                                                     label-y=\&#34;Winning points\&#34;\n                                                     chart-type=\&#34;column\&#34; function-y=\&#34;SUM\&#34; color=\&#34;#4F8F55\&#34;\n                                                     scientific-display=\&#34;true\&#34;\u003e\n                                    \u003c/ods-chart-serie\u003e\n                                    \u003cods-chart-serie expression-y=\&#34;losing_pts\&#34;\n                                                     label-y=\&#34;Losing points\&#34;\n                                                     chart-type=\&#34;column\&#34; function-y=\&#34;SUM\&#34; color=\&#34;#EC643C\&#34;\n                                                     scientific-display=\&#34;true\&#34;\u003e\n                                    \u003c/ods-chart-serie\u003e\n                                \u003c/ods-chart-query\u003e\n                            \u003c/ods-chart\u003e\n                        \u003c/ods-dataset-context\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;col-md-3\&#34;\u003e\n                        \u003ch5\u003e\n                            Colmumn chart with 1 axis\n                        \u003c/h5\u003e\n                        \u003ch5\u003e\n                            Stacked view\n                        \u003c/h5\u003e\n                        \u003ch5\u003e\n                            1 serie : SUM (winning points)\n                        \u003c/h5\u003e\n                        \u003ch5\u003e\n                            1 serie : SUM (losing points)\n                        \u003c/h5\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/ods-simple-tab\u003e\n            \u003cods-simple-tab\n                    label=\&#34;Spline, Range, Boxplot\&#34;\n                    keep-content=\&#34;false\&#34;\u003e\n                \u003c!-- SPLINE RANGE BOXPLOT --\u003e\n                \u003cdiv class=\&#34;row\&#34;\u003e\n                    \u003cdiv class=\&#34;col-md-9\&#34;\u003e\n                        \u003ch3\u003e\n                            To express fickleness\n                        \u003c/h3\u003e\n                        \u003cdiv class=\&#34;chart-title\&#34;\u003e\n                            \u003cb\u003eGazoline (all types) consumer price index\u003c/b\u003e fluctuation over years.\n                        \u003c/div\u003e\n                        \u003cods-dataset-context context=\&#34;cpigasoline\&#34;\n                                             cpigasoline-domain=\&#34;discovery\&#34;\n                                             cpigasoline-dataset=\&#34;consumer-price-index-all-urban-consumers\&#34;\n                                             cpigasoline-parameters=\&#34;{&#39;refine.area_name&#39;:&#39;U.S. city average&#39;,&#39;refine.item_name&#39;:&#39;Gasoline (all types)&#39;}\&#34;\u003e\n                            \u003cods-chart timescale=\&#34;year\&#34; single-y-axis=\&#34;true\&#34;\n                                       single-y-axis-label=\&#34;Base 100 : 1982/1984\&#34;\n                                       scientific-display=\&#34;false\&#34; label-x=\&#34;All types of Gazoline\&#34;\u003e\n                                \u003cods-chart-query context=\&#34;cpigasoline\&#34; field-x=\&#34;date\&#34; timescale=\&#34;year\&#34;\u003e\n                                    \u003cods-chart-serie expression-y=\&#34;value\&#34; chart-type=\&#34;areasplinerange\&#34;\n                                                     function-y=\&#34;COUNT\&#34;\n                                                     label-y=\&#34;MIN MAX\&#34; color=\&#34;#0B72B5\&#34;\n                                                     scientific-display=\&#34;true\&#34;\n                                                     subseries=&#39;[{\&#34;func\&#34;:\&#34;MIN\&#34;,\&#34;yAxis\&#34;:\&#34;value\&#34;},{\&#34;func\&#34;:\&#34;MAX\&#34;,\&#34;yAxis\&#34;:\&#34;value\&#34;}]&#39;\u003e\n                                    \u003c/ods-chart-serie\u003e\n                                    \u003cods-chart-serie expression-y=\&#34;value\&#34; chart-type=\&#34;spline\&#34; function-y=\&#34;AVG\&#34;\n                                                     label-y=\&#34;AVG\&#34; color=\&#34;#2C3F56\&#34;\n                                                     display-units=\&#34;false\&#34; display-values=\&#34;false\&#34;\n                                                     scientific-display=\&#34;true\&#34;\u003e\n                                    \u003c/ods-chart-serie\u003e\n                                \u003c/ods-chart-query\u003e\n                            \u003c/ods-chart\u003e\n                        \u003c/ods-dataset-context\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;col-md-3\&#34;\u003e\n                        \u003ch5\u003e\n                            Range spline : MIN and MAX of the consumer price index\n                        \u003c/h5\u003e\n                        \u003ch5\u003e\n                            Spline : AVG of the consumer price index\n                        \u003c/h5\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;spacer\&#34;\u003e\u003c/div\u003e\n                \u003cdiv class=\&#34;row\&#34;\u003e\n                    \u003cdiv class=\&#34;col-md-9\&#34;\u003e\n                        \u003cdiv class=\&#34;chart-title\&#34;\u003e\n                            Same chart with boxplot.\n                        \u003c/div\u003e\n                        \u003cods-dataset-context context=\&#34;consumerpriceindexallurbanconsumers\&#34;\n                                             consumerpriceindexallurbanconsumers-domain=\&#34;discovery\&#34;\n                                             consumerpriceindexallurbanconsumers-dataset=\&#34;consumer-price-index-all-urban-consumers\&#34;\n                                             consumerpriceindexallurbanconsumers-parameters=\&#34;{&#39;refine.area_name&#39;:&#39;U.S. city average&#39;,&#39;refine.item_name&#39;:&#39;Gasoline (all types)&#39;}\&#34;\u003e\n                            \u003cods-chart timescale=\&#34;month\&#34; scientific-display=\&#34;true\&#34;\u003e\n                                \u003cods-chart-query context=\&#34;consumerpriceindexallurbanconsumers\&#34; field-x=\&#34;date\&#34;\n                                                 timescale=\&#34;year\&#34;\u003e\n                                    \u003cods-chart-serie expression-y=\&#34;value\&#34;\n                                                     chart-type=\&#34;boxplot\&#34;\n                                                     function-y=\&#34;COUNT\&#34;\n                                                     label-y=\&#34;All types of gazoline versatility over years\&#34;\n                                                     color=\&#34;#00757E\&#34;\n                                                     display-values=\&#34;false\&#34;\n                                                     scientific-display=\&#34;true\&#34;\n                                                     subseries=&#39;[{\&#34;func\&#34;:\&#34;MIN\&#34;,\&#34;yAxis\&#34;:\&#34;value\&#34;},{\&#34;func\&#34;:\&#34;QUANTILES\&#34;,\&#34;yAxis\&#34;:\&#34;value\&#34;,\&#34;subsets\&#34;:25},{\&#34;func\&#34;:\&#34;QUANTILES\&#34;,\&#34;yAxis\&#34;:\&#34;value\&#34;,\&#34;subsets\&#34;:50},{\&#34;func\&#34;:\&#34;QUANTILES\&#34;,\&#34;yAxis\&#34;:\&#34;value\&#34;,\&#34;subsets\&#34;:75},{\&#34;func\&#34;:\&#34;MAX\&#34;,\&#34;yAxis\&#34;:\&#34;value\&#34;}]&#39;\u003e\n                                    \u003c/ods-chart-serie\u003e\n                                \u003c/ods-chart-query\u003e\n                            \u003c/ods-chart\u003e\n                        \u003c/ods-dataset-context\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;col-md-3\&#34;\u003e\n                        \u003ch5\u003e\n                            Box plot of the consumer price index\n                        \u003c/h5\u003e\n                        \u003ch5\u003e\n                            Minimum, Lower quartile at percentile 25, Median at percentile 50, Upper quartile at\n                            percentile\n                            75, Maximum\n                        \u003c/h5\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;spacer\&#34;\u003e\u003c/div\u003e\n                \u003cdiv class=\&#34;row\&#34;\u003e\n                    \u003cdiv class=\&#34;col-md-9\&#34;\u003e\n                        \u003ch3\u003e\n                            To express stability\n                        \u003c/h3\u003e\n                        \u003cdiv class=\&#34;chart-title\&#34;\u003e\n                            Comparison of \u003cb\u003ealcoholic beverages consumer price index\u003c/b\u003e, \u003cb\u003eat home\u003c/b\u003e or \u003cb\u003eaway\n                            from\n                            home\u003c/b\u003e.\n                        \u003c/div\u003e\n                        \u003cods-dataset-context context=\&#34;cpialcoholicawayfromhome,cpialcoholicathome\&#34;\n                                             cpialcoholicawayfromhome-domain=\&#34;discovery\&#34;\n                                             cpialcoholicawayfromhome-dataset=\&#34;consumer-price-index-all-urban-consumers\&#34;\n                                             cpialcoholicawayfromhome-parameters=\&#34;{&#39;refine.area_name&#39;:&#39;U.S. city average&#39;,&#39;refine.item_name&#39;:&#39;Alcoholic beverages away from home&#39;}\&#34;\n                                             cpialcoholicathome-domain=\&#34;discovery\&#34;\n                                             cpialcoholicathome-dataset=\&#34;consumer-price-index-all-urban-consumers\&#34;\n                                             cpialcoholicathome-parameters=\&#34;{&#39;refine.area_name&#39;:&#39;U.S. city average&#39;,&#39;refine.item_name&#39;:&#39;Alcoholic beverages at home&#39;}\&#34;\u003e\n                            \u003cods-chart timescale=\&#34;year\&#34; single-y-axis=\&#34;true\&#34;\n                                       single-y-axis-label=\&#34;Base 100 : 1982/1984\&#34;\n                                       min=\&#34;125\&#34;\n                                       step=\&#34;25\&#34; scientific-display=\&#34;false\&#34;\u003e\n                                \u003cods-chart-query context=\&#34;cpialcoholicawayfromhome\&#34; field-x=\&#34;date\&#34; timescale=\&#34;year\&#34;\u003e\n                                    \u003cods-chart-serie expression-y=\&#34;value\&#34; chart-type=\&#34;areasplinerange\&#34;\n                                                     function-y=\&#34;COUNT\&#34;\n                                                     label-y=\&#34;Alcoholic beverages away from home(MIN MAX)\&#34;\n                                                     color=\&#34;#0B72B5\&#34;\n                                                     scientific-display=\&#34;true\&#34;\n                                                     subseries=&#39;[{\&#34;func\&#34;:\&#34;MIN\&#34;,\&#34;yAxis\&#34;:\&#34;value\&#34;},{\&#34;func\&#34;:\&#34;MAX\&#34;,\&#34;yAxis\&#34;:\&#34;value\&#34;}]&#39;\u003e\n                                    \u003c/ods-chart-serie\u003e\n                                    \u003cods-chart-serie expression-y=\&#34;value\&#34; chart-type=\&#34;spline\&#34; function-y=\&#34;AVG\&#34;\n                                                     label-y=\&#34;Alcoholic beverages away from home(AVG)\&#34;\n                                                     color=\&#34;#2C3F56\&#34;\n                                                     display-units=\&#34;false\&#34; display-values=\&#34;true\&#34;\n                                                     scientific-display=\&#34;true\&#34;\u003e\n                                    \u003c/ods-chart-serie\u003e\n                                \u003c/ods-chart-query\u003e\n                                \u003cods-chart-query context=\&#34;cpialcoholicathome\&#34; field-x=\&#34;date\&#34; timescale=\&#34;year\&#34;\u003e\n                                    \u003cods-chart-serie expression-y=\&#34;value\&#34; chart-type=\&#34;areasplinerange\&#34;\n                                                     function-y=\&#34;COUNT\&#34;\n                                                     label-y=\&#34;Alcoholic beverages at home(MIN MAX)\&#34; color=\&#34;#FA8C44\&#34;\n                                                     scientific-display=\&#34;true\&#34;\n                                                     subseries=&#39;[{\&#34;func\&#34;:\&#34;MIN\&#34;,\&#34;yAxis\&#34;:\&#34;value\&#34;},{\&#34;func\&#34;:\&#34;MAX\&#34;,\&#34;yAxis\&#34;:\&#34;value\&#34;}]&#39;\u003e\n                                    \u003c/ods-chart-serie\u003e\n                                    \u003cods-chart-serie expression-y=\&#34;value\&#34; chart-type=\&#34;spline\&#34; function-y=\&#34;AVG\&#34;\n                                                     label-y=\&#34;Alcoholic beverages at home(AVG)\&#34; color=\&#34;#BA022A\&#34;\n                                                     display-units=\&#34;false\&#34; display-values=\&#34;true\&#34;\n                                                     scientific-display=\&#34;true\&#34;\u003e\n                                    \u003c/ods-chart-serie\u003e\n                                \u003c/ods-chart-query\u003e\n                            \u003c/ods-chart\u003e\n                        \u003c/ods-dataset-context\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;col-md-3\&#34;\u003e\n                        \u003ch5\u003e\n                            2 x Range spline : MIN and MAX of the consumer price index\n                        \u003c/h5\u003e\n                        \u003ch5\u003e\n                            2 x spline : AVG of the consumer price index\n                        \u003c/h5\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/ods-simple-tab\u003e\n            \u003cods-simple-tab\n                    label=\&#34;Gauge, Tree, Pie\&#34;\n                    keep-content=\&#34;false\&#34;\u003e\n                \u003c!-- TREE PIE GAUGE --\u003e\n                \u003cdiv class=\&#34;row\&#34;\u003e\n                    \u003cdiv class=\&#34;col-md-9\&#34;\u003e\n                        \u003ch3\u003e\n                            To simply show a progress or percentage\n                        \u003c/h3\u003e\n                        \u003cdiv class=\&#34;row\&#34;\u003e\n                            \u003cdiv class=\&#34;col-md-6\&#34;\u003e\n                                \u003cods-gauge id=\&#34;circle-gauge\&#34;\n                                           display-mode=\&#34;circle\&#34;\n                                           max=\&#34;100\&#34;\n                                           value=\&#34;73\&#34;\u003e\n                                \u003c/ods-gauge\u003e\n                            \u003c/div\u003e\n                            \u003cdiv class=\&#34;col-md-6\&#34;\u003e\n                                \u003cods-gauge id=\&#34;red-gauge\&#34;\n                                           display-mode=\&#34;bar\&#34;\n                                           max=\&#34;100\&#34;\n                                           value=\&#34;12\&#34;\u003e\n                                \u003c/ods-gauge\u003e\n                                \u003cods-gauge id=\&#34;orange-gauge\&#34;\n                                           display-mode=\&#34;bar\&#34;\n                                           max=\&#34;100\&#34;\n                                           value=\&#34;18\&#34;\u003e\n                                \u003c/ods-gauge\u003e\n                                \u003cods-gauge id=\&#34;green-gauge\&#34;\n                                           display-mode=\&#34;bar\&#34;\n                                           max=\&#34;100\&#34;\n                                           value=\&#34;56\&#34;\u003e\n                                \u003c/ods-gauge\u003e\n                            \u003c/div\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;col-md-3\&#34;\u003e\n                        \u003ch5\u003e\n                            Jauge\n                        \u003c/h5\u003e\n                        \u003ch5\u003e\n                            Circle and bar display\n                        \u003c/h5\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;spacer\&#34;\u003e\u003c/div\u003e\n                \u003cdiv class=\&#34;row\&#34;\u003e\n                    \u003cdiv class=\&#34;col-md-9\&#34;\u003e\n                        \u003ch3\u003e\n                            To see distribution\n                        \u003c/h3\u003e\n                        \u003cdiv class=\&#34;chart-title\&#34;\u003e\n                            \u003cb\u003eNumber of sport equipment\u003c/b\u003e in \u003cb\u003eParis and suburbs area\u003c/b\u003e by \u003cb\u003efamilly\u003c/b\u003e.\n                        \u003c/div\u003e\n                        \u003cods-dataset-context context=\&#34;ensembledesequipementssportifsdiledefranceen2016\&#34;\n                                             ensembledesequipementssportifsdiledefranceen2016-domain=\&#34;discovery\&#34;\n                                             ensembledesequipementssportifsdiledefranceen2016-dataset=\&#34;ensemble-des-equipements-sportifs-dile-de-france-en-2016\&#34;\u003e\n                            \u003cods-chart\u003e\n                                \u003cods-chart-query context=\&#34;ensembledesequipementssportifsdiledefranceen2016\&#34;\n                                                 field-x=\&#34;eqt_fam\&#34; maxpoints=\&#34;50\&#34; sort=\&#34;serie1-1\&#34;\u003e\n                                    \u003cods-chart-serie chart-type=\&#34;treemap\&#34; function-y=\&#34;COUNT\&#34; color=\&#34;range-Paired\&#34;\n                                                     scientific-display=\&#34;true\&#34;\u003e\n                                    \u003c/ods-chart-serie\u003e\n                                \u003c/ods-chart-query\u003e\n                            \u003c/ods-chart\u003e\n                        \u003c/ods-dataset-context\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;col-md-3\&#34;\u003e\n                        \u003ch5\u003e\n                            Treemap\n                        \u003c/h5\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;spacer\&#34;\u003e\u003c/div\u003e\n                \u003cdiv class=\&#34;row\&#34;\u003e\n                    \u003cdiv class=\&#34;col-md-9\&#34;\u003e\n                        \u003cdiv class=\&#34;chart-title\&#34;\u003e\n                            \u003cb\u003ePopulation\u003c/b\u003e distribution by region.\n                        \u003c/div\u003e\n                        \u003cods-dataset-context context=\&#34;geoflarcommunes2015\&#34;\n                                             geoflarcommunes2015-domain=\&#34;public\&#34;\n                                             geoflarcommunes2015-dataset=\&#34;geoflar-communes-2015\&#34;\n                                             geoflarcommunes2015-parameters=\&#34;{&#39;geofilter.polygon&#39;:&#39;(37.50972584293751,-16.171875),(55.32914440840507,-16.171875),(55.32914440840507,22.148437499999996),(37.50972584293751,22.148437499999996),(37.50972584293751,-16.171875)&#39;}\&#34;\u003e\n                            \u003cods-chart\u003e\n                                \u003cods-chart-query context=\&#34;geoflarcommunes2015\&#34; field-x=\&#34;nom_reg\&#34;\n                                                 label-x=\&#34;Population\&#34;\n                                                 maxpoints=\&#34;20\&#34; sort=\&#34;serie1-1\&#34;\u003e\n                                    \u003cods-chart-serie expression-y=\&#34;population\&#34; chart-type=\&#34;pie\&#34; function-y=\&#34;SUM\&#34;\n                                                     label-y=\&#34;Population\&#34; color=\&#34;range-Paired\&#34;\n                                                     scientific-display=\&#34;true\&#34;\u003e\n                                    \u003c/ods-chart-serie\u003e\n                                \u003c/ods-chart-query\u003e\n                            \u003c/ods-chart\u003e\n                        \u003c/ods-dataset-context\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;col-md-3\&#34;\u003e\n                        \u003ch5\u003e\n                            Pie chart : Sum of the population\n                        \u003c/h5\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/ods-simple-tab\u003e\n            \u003cods-simple-tab\n                    label=\&#34;Polar, Spider\&#34;\n                    keep-content=\&#34;false\&#34;\u003e\n                \u003c!-- POLAR SPIDER --\u003e\n                \u003cdiv class=\&#34;row\&#34;\u003e\n                    \u003cdiv class=\&#34;col-md-9\&#34;\u003e\n                        \u003ch3\u003e\n                            To see distribution\n                        \u003c/h3\u003e\n                        \u003cdiv class=\&#34;chart-title\&#34;\u003e\n                            \u003cb\u003ePopulation\u003c/b\u003e distribution by region &#43; average surface area of cities in this region\n                        \u003c/div\u003e\n                        \u003cods-dataset-context context=\&#34;geoflarcommunes2015\&#34;\n                                             geoflarcommunes2015-domain=\&#34;public\&#34;\n                                             geoflarcommunes2015-dataset=\&#34;geoflar-communes-2015\&#34;\n                                             geoflarcommunes2015-parameters=\&#34;{&#39;geofilter.polygon&#39;:&#39;(37.50972584293751,-16.171875),(55.32914440840507,-16.171875),(55.32914440840507,22.148437499999996),(37.50972584293751,22.148437499999996),(37.50972584293751,-16.171875)&#39;}\&#34;\u003e\n                            \u003cods-chart\u003e\n                                \u003cods-chart-query context=\&#34;geoflarcommunes2015\&#34; field-x=\&#34;nom_reg\&#34; maxpoints=\&#34;20\&#34;\n                                                 sort=\&#34;serie1-1\&#34;\u003e\n                                    \u003cods-chart-serie expression-y=\&#34;population\&#34; chart-type=\&#34;spiderweb\&#34;\n                                                     function-y=\&#34;SUM\&#34;\n                                                     label-y=\&#34;Population (SUM)\&#34; color=\&#34;#BA022A\&#34;\n                                                     scientific-display=\&#34;true\&#34;\u003e\n                                    \u003c/ods-chart-serie\u003e\n                                    \u003cods-chart-serie expression-y=\&#34;superficie\&#34; chart-type=\&#34;spiderweb\&#34;\n                                                     function-y=\&#34;AVG\&#34;\n                                                     label-y=\&#34;Surface area (AVG)\&#34; color=\&#34;#19630A\&#34;\n                                                     scientific-display=\&#34;true\&#34;\u003e\n                                    \u003c/ods-chart-serie\u003e\n                                \u003c/ods-chart-query\u003e\n                            \u003c/ods-chart\u003e\n                        \u003c/ods-dataset-context\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;col-md-3\&#34;\u003e\n                        \u003ch5\u003e\n                            Spiderweb chart, sorted by serie 1 : Sum of the population\n                        \u003c/h5\u003e\n                        \u003ch5\u003e\n                            Serie 2 : Average of the surface area\n                        \u003c/h5\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;spacer\&#34;\u003e\u003c/div\u003e\n                \u003cdiv class=\&#34;row\&#34;\u003e\n                    \u003cdiv class=\&#34;col-md-9\&#34;\u003e\n                        \u003cdiv class=\&#34;chart-title\&#34;\u003e\n                            \u003cb\u003ePopulation\u003c/b\u003e, \u003cb\u003esurface area\u003c/b\u003e and \u003cb\u003eaverage high (Z axis)\u003c/b\u003e by region.\n                        \u003c/div\u003e\n                        \u003cods-dataset-context context=\&#34;geoflarcommunes2015\&#34;\n                                             geoflarcommunes2015-domain=\&#34;public\&#34;\n                                             geoflarcommunes2015-dataset=\&#34;geoflar-communes-2015\&#34;\u003e\n                            \u003cods-chart style=\&#34;height:550px\&#34; scientific-display=\&#34;true\&#34;\u003e\n                                \u003cods-chart-query context=\&#34;geoflarcommunes2015\&#34; field-x=\&#34;nom_reg\&#34;\u003e\n                                    \u003cods-chart-serie expression-y=\&#34;population\&#34; chart-type=\&#34;polar\&#34; function-y=\&#34;SUM\&#34;\n                                                     label-y=\&#34;Population\&#34; color=\&#34;#000000\&#34; display-units=\&#34;false\&#34;\n                                                     display-values=\&#34;false\&#34; scientific-display=\&#34;true\&#34;\u003e\n                                    \u003c/ods-chart-serie\u003e\n                                    \u003cods-chart-serie expression-y=\&#34;superficie\&#34; chart-type=\&#34;polar\&#34; function-y=\&#34;SUM\&#34;\n                                                     label-y=\&#34;Surface area\&#34; color=\&#34;#F8B334\&#34; display-values=\&#34;false\&#34;\n                                                     scientific-display=\&#34;true\&#34;\u003e\n                                    \u003c/ods-chart-serie\u003e\n                                    \u003cods-chart-serie expression-y=\&#34;z_moyen\&#34; chart-type=\&#34;column\&#34; function-y=\&#34;AVG\&#34;\n                                                     label-y=\&#34;Average high (Z)\&#34; color=\&#34;#00757E\&#34;\n                                                     scientific-display=\&#34;true\&#34;\u003e\n                                    \u003c/ods-chart-serie\u003e\n                                \u003c/ods-chart-query\u003e\n                            \u003c/ods-chart\u003e\n                        \u003c/ods-dataset-context\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;col-md-3\&#34;\u003e\n                        \u003ch5\u003e\n                            Polar chart with 3 series\n                        \u003c/h5\u003e\n                        \u003ch5\u003e\n                            Serie 1 : SUM of city population\n                        \u003c/h5\u003e\n                        \u003ch5\u003e\n                            Serie 2 : SUM of city surface area\n                        \u003c/h5\u003e\n                        \u003ch5\u003e\n                            Serie 3 : AVG Z (third axis coordinate)\n                        \u003c/h5\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/ods-simple-tab\u003e\n        \u003c/ods-simple-tabs\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\n\u003c/div\u003e&#34;,
+                 "css": &#34;.items-row {\n    text-align: center; /* center all buttons */\n}\n.items {\n    display: inline-flex; /* Display in line */\n    list-style-type: none; /* Remove the list bullet */\n}\n.item {\n    margin: 0 20px; /* give some space left and right */\n}\n.ods-button {\n    font-weight: 500;\n}\n.ods-button--primary {\n    border: solid 1px #1E0C33;\n    background-color: #1E0C33;\n}\n.ods-button--danger {\n    border: solid 1px #a94442;\n    background-color: #a94442;\n}\n.chart-title, .hint {\n    text-align: center;\n    font-style: italic;\n    color: darkgrey;\n    font-weight: 300;\n}\n.chart-title b {\n    font-weight: 500;\n}\ntspan.highcharts-text-outline {\n    display: none;\n}\n.spacer {\n        margin-bottom: 20px;\n    width: 90%;\n    border-top: 1px solid rgba(30, 12, 51, 0.53);\n    margin-left: auto;\n    margin-right: auto;\n}\n#circle-gauge {\n    max-width: 300px;\n    margin: auto;\n}\n#red-gauge .odswidget-gauge__svg-filler {\n    stroke: red;\n}\n#orange-gauge .odswidget-gauge__svg-filler {\n    stroke: orange;\n}\n#green-gauge .odswidget-gauge__svg-filler {\n    stroke: green;\n}\n#red-gauge .odswidget-gauge__value {\n    color: red;\n}\n#orange-gauge .odswidget-gauge__value {\n    color: orange;\n}\n#green-gauge .odswidget-gauge__value {\n    color: green;\n}\n\n&#34;
+               }'>
+    </form>
+</div>
+<div class="ods-content">
+    <div class="box-live-example"
+      style="height: 800px;">
+      <iframe id="iframe-ods-widgets-charts"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+                <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    const sourceMonitoringInterceptor = ($q) =&gt; {
+        return {
+            request: (config) =&gt; {
+                if (config.params)
+                    if (config.params.source)
+                        delete config.params.source;
+
+                config.url = config.url.replace(&#34;ods-api-monitoring&#34;, &#34;monitoring-copy&#34;);
+                return config;
+            }
+        }
+    }
+
+    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider, $httpProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;defaultDomain&#34;: &#34;https://userclub.opendatasoft.com/&#34;,
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                },
+                {
+                    &#34;provider&#34;: &#34;jawg.streets&#34;,
+                    &#34;label&#34;: &#34;Jawg Streets&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;,
+                    &#34;id&#34;: &#34;streets&#34;
+                }
+            ],
+            &#34;themes&#34;: {
+                &#39;default&#39;: {
+                    &#39;url&#39;: &#39;/img/ods.svg&#39;
+                },
+                &#39;Santé&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Culture, Patrimoine&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Environment&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Transports, Déplacements&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Justice, Sécurité, Police, Crime&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Sport, Loisirs&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Hébergement, Restauration&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Services, Social&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Checklist&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Usages&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                }
+            },
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+        $httpProvider.interceptors.push(sourceMonitoringInterceptor);
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+</head>
+                <body>
+                <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
+&lt;div class=&#34;container&#34;&gt;
+    &lt;div class=&#34;ods-box&#34;&gt;
+        &lt;h1&gt;
+            ODS-Widgets Charts
+        &lt;/h1&gt;
+        &lt;ods-simple-tabs&gt;
+            &lt;ods-simple-tab
+                    label=&#34;Bar, Column&#34;
+                    keep-content=&#34;false&#34;&gt;
+                &lt;!-- BAR COLMUN --&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;h3&gt;
+                            To see order of magnitude
+                        &lt;/h3&gt;
+                        &lt;div class=&#34;chart-title&#34;&gt;
+                            &lt;b&gt;Sum of available beds&lt;/b&gt; for each types of hospital.
+                        &lt;/div&gt;
+                        &lt;ods-dataset-context context=&#34;ushospitals&#34; ushospitals-dataset=&#34;us-hospitals&#34;
+                                             ushospitals-domain=&#34;userclub&#34;&gt;
+                            &lt;ods-chart label-x=&#34;Hospital types&#34;&gt;
+                                &lt;ods-chart-query context=&#34;ushospitals&#34; field-x=&#34;type&#34; sort=&#34;serie1-1&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;beds&#34; chart-type=&#34;bar&#34; function-y=&#34;SUM&#34;
+                                                     logarithmic=&#34;true&#34; label-y=&#34;Number of beds&#34; color=&#34;#1E0C33&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/ods-dataset-context&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            Bar chart with logarithmic scale
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;spacer&#34;&gt;&lt;/div&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;h3&gt;
+                            To see distribution by columns with one or more series
+                        &lt;/h3&gt;
+                        &lt;div class=&#34;chart-title&#34;&gt;
+                            &lt;b&gt;Number of winning&lt;/b&gt; or &lt;b&gt;losing&lt;/b&gt; points for &lt;b&gt;Super Bowl&lt;/b&gt; events since
+                            1967.
+                        &lt;/div&gt;
+                        &lt;ods-dataset-context context=&#34;superbowlpublic&#34; superbowlpublic-dataset=&#34;super-bowl&#34;
+                                             superbowlpublic-domain=&#34;public&#34;&gt;
+                            &lt;ods-chart single-y-axis=&#34;true&#34;&gt;
+                                &lt;ods-chart-query context=&#34;superbowlpublic&#34; field-x=&#34;date&#34; timescale=&#34;year&#34;
+                                                 stacked=&#34;normal&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;winning_pts&#34;
+                                                     label-y=&#34;Winning points&#34;
+                                                     chart-type=&#34;column&#34; function-y=&#34;SUM&#34; color=&#34;#4F8F55&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;losing_pts&#34;
+                                                     label-y=&#34;Losing points&#34;
+                                                     chart-type=&#34;column&#34; function-y=&#34;SUM&#34; color=&#34;#EC643C&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/ods-dataset-context&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            Colmumn chart with 1 axis
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            Stacked view
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            1 serie : SUM (winning points)
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            1 serie : SUM (losing points)
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/ods-simple-tab&gt;
+            &lt;ods-simple-tab
+                    label=&#34;Spline, Range, Boxplot&#34;
+                    keep-content=&#34;false&#34;&gt;
+                &lt;!-- SPLINE RANGE BOXPLOT --&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;h3&gt;
+                            To express fickleness
+                        &lt;/h3&gt;
+                        &lt;div class=&#34;chart-title&#34;&gt;
+                            &lt;b&gt;Gazoline (all types) consumer price index&lt;/b&gt; fluctuation over years.
+                        &lt;/div&gt;
+                        &lt;ods-dataset-context context=&#34;cpigasoline&#34;
+                                             cpigasoline-domain=&#34;discovery&#34;
+                                             cpigasoline-dataset=&#34;consumer-price-index-all-urban-consumers&#34;
+                                             cpigasoline-parameters=&#34;{&#39;refine.area_name&#39;:&#39;U.S. city average&#39;,&#39;refine.item_name&#39;:&#39;Gasoline (all types)&#39;}&#34;&gt;
+                            &lt;ods-chart timescale=&#34;year&#34; single-y-axis=&#34;true&#34;
+                                       single-y-axis-label=&#34;Base 100 : 1982/1984&#34;
+                                       scientific-display=&#34;false&#34; label-x=&#34;All types of Gazoline&#34;&gt;
+                                &lt;ods-chart-query context=&#34;cpigasoline&#34; field-x=&#34;date&#34; timescale=&#34;year&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;value&#34; chart-type=&#34;areasplinerange&#34;
+                                                     function-y=&#34;COUNT&#34;
+                                                     label-y=&#34;MIN MAX&#34; color=&#34;#0B72B5&#34;
+                                                     scientific-display=&#34;true&#34;
+                                                     subseries=&#39;[{&#34;func&#34;:&#34;MIN&#34;,&#34;yAxis&#34;:&#34;value&#34;},{&#34;func&#34;:&#34;MAX&#34;,&#34;yAxis&#34;:&#34;value&#34;}]&#39;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;value&#34; chart-type=&#34;spline&#34; function-y=&#34;AVG&#34;
+                                                     label-y=&#34;AVG&#34; color=&#34;#2C3F56&#34;
+                                                     display-units=&#34;false&#34; display-values=&#34;false&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/ods-dataset-context&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            Range spline : MIN and MAX of the consumer price index
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            Spline : AVG of the consumer price index
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;spacer&#34;&gt;&lt;/div&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;div class=&#34;chart-title&#34;&gt;
+                            Same chart with boxplot.
+                        &lt;/div&gt;
+                        &lt;ods-dataset-context context=&#34;consumerpriceindexallurbanconsumers&#34;
+                                             consumerpriceindexallurbanconsumers-domain=&#34;discovery&#34;
+                                             consumerpriceindexallurbanconsumers-dataset=&#34;consumer-price-index-all-urban-consumers&#34;
+                                             consumerpriceindexallurbanconsumers-parameters=&#34;{&#39;refine.area_name&#39;:&#39;U.S. city average&#39;,&#39;refine.item_name&#39;:&#39;Gasoline (all types)&#39;}&#34;&gt;
+                            &lt;ods-chart timescale=&#34;month&#34; scientific-display=&#34;true&#34;&gt;
+                                &lt;ods-chart-query context=&#34;consumerpriceindexallurbanconsumers&#34; field-x=&#34;date&#34;
+                                                 timescale=&#34;year&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;value&#34;
+                                                     chart-type=&#34;boxplot&#34;
+                                                     function-y=&#34;COUNT&#34;
+                                                     label-y=&#34;All types of gazoline versatility over years&#34;
+                                                     color=&#34;#00757E&#34;
+                                                     display-values=&#34;false&#34;
+                                                     scientific-display=&#34;true&#34;
+                                                     subseries=&#39;[{&#34;func&#34;:&#34;MIN&#34;,&#34;yAxis&#34;:&#34;value&#34;},{&#34;func&#34;:&#34;QUANTILES&#34;,&#34;yAxis&#34;:&#34;value&#34;,&#34;subsets&#34;:25},{&#34;func&#34;:&#34;QUANTILES&#34;,&#34;yAxis&#34;:&#34;value&#34;,&#34;subsets&#34;:50},{&#34;func&#34;:&#34;QUANTILES&#34;,&#34;yAxis&#34;:&#34;value&#34;,&#34;subsets&#34;:75},{&#34;func&#34;:&#34;MAX&#34;,&#34;yAxis&#34;:&#34;value&#34;}]&#39;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/ods-dataset-context&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            Box plot of the consumer price index
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            Minimum, Lower quartile at percentile 25, Median at percentile 50, Upper quartile at
+                            percentile
+                            75, Maximum
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;spacer&#34;&gt;&lt;/div&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;h3&gt;
+                            To express stability
+                        &lt;/h3&gt;
+                        &lt;div class=&#34;chart-title&#34;&gt;
+                            Comparison of &lt;b&gt;alcoholic beverages consumer price index&lt;/b&gt;, &lt;b&gt;at home&lt;/b&gt; or &lt;b&gt;away
+                            from
+                            home&lt;/b&gt;.
+                        &lt;/div&gt;
+                        &lt;ods-dataset-context context=&#34;cpialcoholicawayfromhome,cpialcoholicathome&#34;
+                                             cpialcoholicawayfromhome-domain=&#34;discovery&#34;
+                                             cpialcoholicawayfromhome-dataset=&#34;consumer-price-index-all-urban-consumers&#34;
+                                             cpialcoholicawayfromhome-parameters=&#34;{&#39;refine.area_name&#39;:&#39;U.S. city average&#39;,&#39;refine.item_name&#39;:&#39;Alcoholic beverages away from home&#39;}&#34;
+                                             cpialcoholicathome-domain=&#34;discovery&#34;
+                                             cpialcoholicathome-dataset=&#34;consumer-price-index-all-urban-consumers&#34;
+                                             cpialcoholicathome-parameters=&#34;{&#39;refine.area_name&#39;:&#39;U.S. city average&#39;,&#39;refine.item_name&#39;:&#39;Alcoholic beverages at home&#39;}&#34;&gt;
+                            &lt;ods-chart timescale=&#34;year&#34; single-y-axis=&#34;true&#34;
+                                       single-y-axis-label=&#34;Base 100 : 1982/1984&#34;
+                                       min=&#34;125&#34;
+                                       step=&#34;25&#34; scientific-display=&#34;false&#34;&gt;
+                                &lt;ods-chart-query context=&#34;cpialcoholicawayfromhome&#34; field-x=&#34;date&#34; timescale=&#34;year&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;value&#34; chart-type=&#34;areasplinerange&#34;
+                                                     function-y=&#34;COUNT&#34;
+                                                     label-y=&#34;Alcoholic beverages away from home(MIN MAX)&#34;
+                                                     color=&#34;#0B72B5&#34;
+                                                     scientific-display=&#34;true&#34;
+                                                     subseries=&#39;[{&#34;func&#34;:&#34;MIN&#34;,&#34;yAxis&#34;:&#34;value&#34;},{&#34;func&#34;:&#34;MAX&#34;,&#34;yAxis&#34;:&#34;value&#34;}]&#39;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;value&#34; chart-type=&#34;spline&#34; function-y=&#34;AVG&#34;
+                                                     label-y=&#34;Alcoholic beverages away from home(AVG)&#34;
+                                                     color=&#34;#2C3F56&#34;
+                                                     display-units=&#34;false&#34; display-values=&#34;true&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                                &lt;ods-chart-query context=&#34;cpialcoholicathome&#34; field-x=&#34;date&#34; timescale=&#34;year&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;value&#34; chart-type=&#34;areasplinerange&#34;
+                                                     function-y=&#34;COUNT&#34;
+                                                     label-y=&#34;Alcoholic beverages at home(MIN MAX)&#34; color=&#34;#FA8C44&#34;
+                                                     scientific-display=&#34;true&#34;
+                                                     subseries=&#39;[{&#34;func&#34;:&#34;MIN&#34;,&#34;yAxis&#34;:&#34;value&#34;},{&#34;func&#34;:&#34;MAX&#34;,&#34;yAxis&#34;:&#34;value&#34;}]&#39;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;value&#34; chart-type=&#34;spline&#34; function-y=&#34;AVG&#34;
+                                                     label-y=&#34;Alcoholic beverages at home(AVG)&#34; color=&#34;#BA022A&#34;
+                                                     display-units=&#34;false&#34; display-values=&#34;true&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/ods-dataset-context&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            2 x Range spline : MIN and MAX of the consumer price index
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            2 x spline : AVG of the consumer price index
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/ods-simple-tab&gt;
+            &lt;ods-simple-tab
+                    label=&#34;Gauge, Tree, Pie&#34;
+                    keep-content=&#34;false&#34;&gt;
+                &lt;!-- TREE PIE GAUGE --&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;h3&gt;
+                            To simply show a progress or percentage
+                        &lt;/h3&gt;
+                        &lt;div class=&#34;row&#34;&gt;
+                            &lt;div class=&#34;col-md-6&#34;&gt;
+                                &lt;ods-gauge id=&#34;circle-gauge&#34;
+                                           display-mode=&#34;circle&#34;
+                                           max=&#34;100&#34;
+                                           value=&#34;73&#34;&gt;
+                                &lt;/ods-gauge&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&#34;col-md-6&#34;&gt;
+                                &lt;ods-gauge id=&#34;red-gauge&#34;
+                                           display-mode=&#34;bar&#34;
+                                           max=&#34;100&#34;
+                                           value=&#34;12&#34;&gt;
+                                &lt;/ods-gauge&gt;
+                                &lt;ods-gauge id=&#34;orange-gauge&#34;
+                                           display-mode=&#34;bar&#34;
+                                           max=&#34;100&#34;
+                                           value=&#34;18&#34;&gt;
+                                &lt;/ods-gauge&gt;
+                                &lt;ods-gauge id=&#34;green-gauge&#34;
+                                           display-mode=&#34;bar&#34;
+                                           max=&#34;100&#34;
+                                           value=&#34;56&#34;&gt;
+                                &lt;/ods-gauge&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            Jauge
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            Circle and bar display
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;spacer&#34;&gt;&lt;/div&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;h3&gt;
+                            To see distribution
+                        &lt;/h3&gt;
+                        &lt;div class=&#34;chart-title&#34;&gt;
+                            &lt;b&gt;Number of sport equipment&lt;/b&gt; in &lt;b&gt;Paris and suburbs area&lt;/b&gt; by &lt;b&gt;familly&lt;/b&gt;.
+                        &lt;/div&gt;
+                        &lt;ods-dataset-context context=&#34;ensembledesequipementssportifsdiledefranceen2016&#34;
+                                             ensembledesequipementssportifsdiledefranceen2016-domain=&#34;discovery&#34;
+                                             ensembledesequipementssportifsdiledefranceen2016-dataset=&#34;ensemble-des-equipements-sportifs-dile-de-france-en-2016&#34;&gt;
+                            &lt;ods-chart&gt;
+                                &lt;ods-chart-query context=&#34;ensembledesequipementssportifsdiledefranceen2016&#34;
+                                                 field-x=&#34;eqt_fam&#34; maxpoints=&#34;50&#34; sort=&#34;serie1-1&#34;&gt;
+                                    &lt;ods-chart-serie chart-type=&#34;treemap&#34; function-y=&#34;COUNT&#34; color=&#34;range-Paired&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/ods-dataset-context&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            Treemap
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;spacer&#34;&gt;&lt;/div&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;div class=&#34;chart-title&#34;&gt;
+                            &lt;b&gt;Population&lt;/b&gt; distribution by region.
+                        &lt;/div&gt;
+                        &lt;ods-dataset-context context=&#34;geoflarcommunes2015&#34;
+                                             geoflarcommunes2015-domain=&#34;public&#34;
+                                             geoflarcommunes2015-dataset=&#34;geoflar-communes-2015&#34;
+                                             geoflarcommunes2015-parameters=&#34;{&#39;geofilter.polygon&#39;:&#39;(37.50972584293751,-16.171875),(55.32914440840507,-16.171875),(55.32914440840507,22.148437499999996),(37.50972584293751,22.148437499999996),(37.50972584293751,-16.171875)&#39;}&#34;&gt;
+                            &lt;ods-chart&gt;
+                                &lt;ods-chart-query context=&#34;geoflarcommunes2015&#34; field-x=&#34;nom_reg&#34;
+                                                 label-x=&#34;Population&#34;
+                                                 maxpoints=&#34;20&#34; sort=&#34;serie1-1&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;population&#34; chart-type=&#34;pie&#34; function-y=&#34;SUM&#34;
+                                                     label-y=&#34;Population&#34; color=&#34;range-Paired&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/ods-dataset-context&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            Pie chart : Sum of the population
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/ods-simple-tab&gt;
+            &lt;ods-simple-tab
+                    label=&#34;Polar, Spider&#34;
+                    keep-content=&#34;false&#34;&gt;
+                &lt;!-- POLAR SPIDER --&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;h3&gt;
+                            To see distribution
+                        &lt;/h3&gt;
+                        &lt;div class=&#34;chart-title&#34;&gt;
+                            &lt;b&gt;Population&lt;/b&gt; distribution by region &#43; average surface area of cities in this region
+                        &lt;/div&gt;
+                        &lt;ods-dataset-context context=&#34;geoflarcommunes2015&#34;
+                                             geoflarcommunes2015-domain=&#34;public&#34;
+                                             geoflarcommunes2015-dataset=&#34;geoflar-communes-2015&#34;
+                                             geoflarcommunes2015-parameters=&#34;{&#39;geofilter.polygon&#39;:&#39;(37.50972584293751,-16.171875),(55.32914440840507,-16.171875),(55.32914440840507,22.148437499999996),(37.50972584293751,22.148437499999996),(37.50972584293751,-16.171875)&#39;}&#34;&gt;
+                            &lt;ods-chart&gt;
+                                &lt;ods-chart-query context=&#34;geoflarcommunes2015&#34; field-x=&#34;nom_reg&#34; maxpoints=&#34;20&#34;
+                                                 sort=&#34;serie1-1&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;population&#34; chart-type=&#34;spiderweb&#34;
+                                                     function-y=&#34;SUM&#34;
+                                                     label-y=&#34;Population (SUM)&#34; color=&#34;#BA022A&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;superficie&#34; chart-type=&#34;spiderweb&#34;
+                                                     function-y=&#34;AVG&#34;
+                                                     label-y=&#34;Surface area (AVG)&#34; color=&#34;#19630A&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/ods-dataset-context&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            Spiderweb chart, sorted by serie 1 : Sum of the population
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            Serie 2 : Average of the surface area
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;spacer&#34;&gt;&lt;/div&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;div class=&#34;chart-title&#34;&gt;
+                            &lt;b&gt;Population&lt;/b&gt;, &lt;b&gt;surface area&lt;/b&gt; and &lt;b&gt;average high (Z axis)&lt;/b&gt; by region.
+                        &lt;/div&gt;
+                        &lt;ods-dataset-context context=&#34;geoflarcommunes2015&#34;
+                                             geoflarcommunes2015-domain=&#34;public&#34;
+                                             geoflarcommunes2015-dataset=&#34;geoflar-communes-2015&#34;&gt;
+                            &lt;ods-chart style=&#34;height:550px&#34; scientific-display=&#34;true&#34;&gt;
+                                &lt;ods-chart-query context=&#34;geoflarcommunes2015&#34; field-x=&#34;nom_reg&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;population&#34; chart-type=&#34;polar&#34; function-y=&#34;SUM&#34;
+                                                     label-y=&#34;Population&#34; color=&#34;#000000&#34; display-units=&#34;false&#34;
+                                                     display-values=&#34;false&#34; scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;superficie&#34; chart-type=&#34;polar&#34; function-y=&#34;SUM&#34;
+                                                     label-y=&#34;Surface area&#34; color=&#34;#F8B334&#34; display-values=&#34;false&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;z_moyen&#34; chart-type=&#34;column&#34; function-y=&#34;AVG&#34;
+                                                     label-y=&#34;Average high (Z)&#34; color=&#34;#00757E&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/ods-dataset-context&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            Polar chart with 3 series
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            Serie 1 : SUM of city population
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            Serie 2 : SUM of city surface area
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            Serie 3 : AVG Z (third axis coordinate)
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/ods-simple-tab&gt;
+        &lt;/ods-simple-tabs&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</div>
+                <style type='text/css'>
+                    .items-row {
+    text-align: center; /* center all buttons */
+}
+.items {
+    display: inline-flex; /* Display in line */
+    list-style-type: none; /* Remove the list bullet */
+}
+.item {
+    margin: 0 20px; /* give some space left and right */
+}
+.ods-button {
+    font-weight: 500;
+}
+.ods-button--primary {
+    border: solid 1px #1E0C33;
+    background-color: #1E0C33;
+}
+.ods-button--danger {
+    border: solid 1px #a94442;
+    background-color: #a94442;
+}
+.chart-title, .hint {
+    text-align: center;
+    font-style: italic;
+    color: darkgrey;
+    font-weight: 300;
+}
+.chart-title b {
+    font-weight: 500;
+}
+tspan.highcharts-text-outline {
+    display: none;
+}
+.spacer {
+        margin-bottom: 20px;
+    width: 90%;
+    border-top: 1px solid rgba(30, 12, 51, 0.53);
+    margin-left: auto;
+    margin-right: auto;
+}
+#circle-gauge {
+    max-width: 300px;
+    margin: auto;
+}
+#red-gauge .odswidget-gauge__svg-filler {
+    stroke: red;
+}
+#orange-gauge .odswidget-gauge__svg-filler {
+    stroke: orange;
+}
+#green-gauge .odswidget-gauge__svg-filler {
+    stroke: green;
+}
+#red-gauge .odswidget-gauge__value {
+    color: red;
+}
+#orange-gauge .odswidget-gauge__value {
+    color: orange;
+}
+#green-gauge .odswidget-gauge__value {
+    color: green;
+}
+
+
+                </style>
+                </body>
+              ">
+      </iframe>
+      <div class="show-code buttons has-addons">
+          <button class="button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-ods-widgets-charts').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    <div class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
+            <div class="level-left">
+                <div class="level-item">
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-ods-widgets-charts-html-content"
+                        >
+                          HTML
+                        </a>
+                        
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-ods-widgets-charts-css-content"
+                        >
+                          CSS
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
+            </div>
+        </nav>
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-ods-widgets-charts-html-content"
+                 data-clipboard="&lt;div class=&#34;container&#34;&gt;
+    &lt;div class=&#34;ods-box&#34;&gt;
+        &lt;h1&gt;
+            ODS-Widgets Charts
+        &lt;/h1&gt;
+        &lt;ods-simple-tabs&gt;
+            &lt;ods-simple-tab
+                    label=&#34;Bar, Column&#34;
+                    keep-content=&#34;false&#34;&gt;
+                &lt;!-- BAR COLMUN --&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;h3&gt;
+                            To see order of magnitude
+                        &lt;/h3&gt;
+                        &lt;div class=&#34;chart-title&#34;&gt;
+                            &lt;b&gt;Sum of available beds&lt;/b&gt; for each types of hospital.
+                        &lt;/div&gt;
+                        &lt;ods-dataset-context context=&#34;ushospitals&#34; ushospitals-dataset=&#34;us-hospitals&#34;
+                                             ushospitals-domain=&#34;userclub&#34;&gt;
+                            &lt;ods-chart label-x=&#34;Hospital types&#34;&gt;
+                                &lt;ods-chart-query context=&#34;ushospitals&#34; field-x=&#34;type&#34; sort=&#34;serie1-1&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;beds&#34; chart-type=&#34;bar&#34; function-y=&#34;SUM&#34;
+                                                     logarithmic=&#34;true&#34; label-y=&#34;Number of beds&#34; color=&#34;#1E0C33&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/ods-dataset-context&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            Bar chart with logarithmic scale
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;spacer&#34;&gt;&lt;/div&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;h3&gt;
+                            To see distribution by columns with one or more series
+                        &lt;/h3&gt;
+                        &lt;div class=&#34;chart-title&#34;&gt;
+                            &lt;b&gt;Number of winning&lt;/b&gt; or &lt;b&gt;losing&lt;/b&gt; points for &lt;b&gt;Super Bowl&lt;/b&gt; events since
+                            1967.
+                        &lt;/div&gt;
+                        &lt;ods-dataset-context context=&#34;superbowlpublic&#34; superbowlpublic-dataset=&#34;super-bowl&#34;
+                                             superbowlpublic-domain=&#34;public&#34;&gt;
+                            &lt;ods-chart single-y-axis=&#34;true&#34;&gt;
+                                &lt;ods-chart-query context=&#34;superbowlpublic&#34; field-x=&#34;date&#34; timescale=&#34;year&#34;
+                                                 stacked=&#34;normal&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;winning_pts&#34;
+                                                     label-y=&#34;Winning points&#34;
+                                                     chart-type=&#34;column&#34; function-y=&#34;SUM&#34; color=&#34;#4F8F55&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;losing_pts&#34;
+                                                     label-y=&#34;Losing points&#34;
+                                                     chart-type=&#34;column&#34; function-y=&#34;SUM&#34; color=&#34;#EC643C&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/ods-dataset-context&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            Colmumn chart with 1 axis
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            Stacked view
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            1 serie : SUM (winning points)
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            1 serie : SUM (losing points)
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/ods-simple-tab&gt;
+            &lt;ods-simple-tab
+                    label=&#34;Spline, Range, Boxplot&#34;
+                    keep-content=&#34;false&#34;&gt;
+                &lt;!-- SPLINE RANGE BOXPLOT --&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;h3&gt;
+                            To express fickleness
+                        &lt;/h3&gt;
+                        &lt;div class=&#34;chart-title&#34;&gt;
+                            &lt;b&gt;Gazoline (all types) consumer price index&lt;/b&gt; fluctuation over years.
+                        &lt;/div&gt;
+                        &lt;ods-dataset-context context=&#34;cpigasoline&#34;
+                                             cpigasoline-domain=&#34;discovery&#34;
+                                             cpigasoline-dataset=&#34;consumer-price-index-all-urban-consumers&#34;
+                                             cpigasoline-parameters=&#34;{&#39;refine.area_name&#39;:&#39;U.S. city average&#39;,&#39;refine.item_name&#39;:&#39;Gasoline (all types)&#39;}&#34;&gt;
+                            &lt;ods-chart timescale=&#34;year&#34; single-y-axis=&#34;true&#34;
+                                       single-y-axis-label=&#34;Base 100 : 1982/1984&#34;
+                                       scientific-display=&#34;false&#34; label-x=&#34;All types of Gazoline&#34;&gt;
+                                &lt;ods-chart-query context=&#34;cpigasoline&#34; field-x=&#34;date&#34; timescale=&#34;year&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;value&#34; chart-type=&#34;areasplinerange&#34;
+                                                     function-y=&#34;COUNT&#34;
+                                                     label-y=&#34;MIN MAX&#34; color=&#34;#0B72B5&#34;
+                                                     scientific-display=&#34;true&#34;
+                                                     subseries=&#39;[{&#34;func&#34;:&#34;MIN&#34;,&#34;yAxis&#34;:&#34;value&#34;},{&#34;func&#34;:&#34;MAX&#34;,&#34;yAxis&#34;:&#34;value&#34;}]&#39;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;value&#34; chart-type=&#34;spline&#34; function-y=&#34;AVG&#34;
+                                                     label-y=&#34;AVG&#34; color=&#34;#2C3F56&#34;
+                                                     display-units=&#34;false&#34; display-values=&#34;false&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/ods-dataset-context&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            Range spline : MIN and MAX of the consumer price index
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            Spline : AVG of the consumer price index
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;spacer&#34;&gt;&lt;/div&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;div class=&#34;chart-title&#34;&gt;
+                            Same chart with boxplot.
+                        &lt;/div&gt;
+                        &lt;ods-dataset-context context=&#34;consumerpriceindexallurbanconsumers&#34;
+                                             consumerpriceindexallurbanconsumers-domain=&#34;discovery&#34;
+                                             consumerpriceindexallurbanconsumers-dataset=&#34;consumer-price-index-all-urban-consumers&#34;
+                                             consumerpriceindexallurbanconsumers-parameters=&#34;{&#39;refine.area_name&#39;:&#39;U.S. city average&#39;,&#39;refine.item_name&#39;:&#39;Gasoline (all types)&#39;}&#34;&gt;
+                            &lt;ods-chart timescale=&#34;month&#34; scientific-display=&#34;true&#34;&gt;
+                                &lt;ods-chart-query context=&#34;consumerpriceindexallurbanconsumers&#34; field-x=&#34;date&#34;
+                                                 timescale=&#34;year&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;value&#34;
+                                                     chart-type=&#34;boxplot&#34;
+                                                     function-y=&#34;COUNT&#34;
+                                                     label-y=&#34;All types of gazoline versatility over years&#34;
+                                                     color=&#34;#00757E&#34;
+                                                     display-values=&#34;false&#34;
+                                                     scientific-display=&#34;true&#34;
+                                                     subseries=&#39;[{&#34;func&#34;:&#34;MIN&#34;,&#34;yAxis&#34;:&#34;value&#34;},{&#34;func&#34;:&#34;QUANTILES&#34;,&#34;yAxis&#34;:&#34;value&#34;,&#34;subsets&#34;:25},{&#34;func&#34;:&#34;QUANTILES&#34;,&#34;yAxis&#34;:&#34;value&#34;,&#34;subsets&#34;:50},{&#34;func&#34;:&#34;QUANTILES&#34;,&#34;yAxis&#34;:&#34;value&#34;,&#34;subsets&#34;:75},{&#34;func&#34;:&#34;MAX&#34;,&#34;yAxis&#34;:&#34;value&#34;}]&#39;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/ods-dataset-context&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            Box plot of the consumer price index
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            Minimum, Lower quartile at percentile 25, Median at percentile 50, Upper quartile at
+                            percentile
+                            75, Maximum
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;spacer&#34;&gt;&lt;/div&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;h3&gt;
+                            To express stability
+                        &lt;/h3&gt;
+                        &lt;div class=&#34;chart-title&#34;&gt;
+                            Comparison of &lt;b&gt;alcoholic beverages consumer price index&lt;/b&gt;, &lt;b&gt;at home&lt;/b&gt; or &lt;b&gt;away
+                            from
+                            home&lt;/b&gt;.
+                        &lt;/div&gt;
+                        &lt;ods-dataset-context context=&#34;cpialcoholicawayfromhome,cpialcoholicathome&#34;
+                                             cpialcoholicawayfromhome-domain=&#34;discovery&#34;
+                                             cpialcoholicawayfromhome-dataset=&#34;consumer-price-index-all-urban-consumers&#34;
+                                             cpialcoholicawayfromhome-parameters=&#34;{&#39;refine.area_name&#39;:&#39;U.S. city average&#39;,&#39;refine.item_name&#39;:&#39;Alcoholic beverages away from home&#39;}&#34;
+                                             cpialcoholicathome-domain=&#34;discovery&#34;
+                                             cpialcoholicathome-dataset=&#34;consumer-price-index-all-urban-consumers&#34;
+                                             cpialcoholicathome-parameters=&#34;{&#39;refine.area_name&#39;:&#39;U.S. city average&#39;,&#39;refine.item_name&#39;:&#39;Alcoholic beverages at home&#39;}&#34;&gt;
+                            &lt;ods-chart timescale=&#34;year&#34; single-y-axis=&#34;true&#34;
+                                       single-y-axis-label=&#34;Base 100 : 1982/1984&#34;
+                                       min=&#34;125&#34;
+                                       step=&#34;25&#34; scientific-display=&#34;false&#34;&gt;
+                                &lt;ods-chart-query context=&#34;cpialcoholicawayfromhome&#34; field-x=&#34;date&#34; timescale=&#34;year&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;value&#34; chart-type=&#34;areasplinerange&#34;
+                                                     function-y=&#34;COUNT&#34;
+                                                     label-y=&#34;Alcoholic beverages away from home(MIN MAX)&#34;
+                                                     color=&#34;#0B72B5&#34;
+                                                     scientific-display=&#34;true&#34;
+                                                     subseries=&#39;[{&#34;func&#34;:&#34;MIN&#34;,&#34;yAxis&#34;:&#34;value&#34;},{&#34;func&#34;:&#34;MAX&#34;,&#34;yAxis&#34;:&#34;value&#34;}]&#39;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;value&#34; chart-type=&#34;spline&#34; function-y=&#34;AVG&#34;
+                                                     label-y=&#34;Alcoholic beverages away from home(AVG)&#34;
+                                                     color=&#34;#2C3F56&#34;
+                                                     display-units=&#34;false&#34; display-values=&#34;true&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                                &lt;ods-chart-query context=&#34;cpialcoholicathome&#34; field-x=&#34;date&#34; timescale=&#34;year&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;value&#34; chart-type=&#34;areasplinerange&#34;
+                                                     function-y=&#34;COUNT&#34;
+                                                     label-y=&#34;Alcoholic beverages at home(MIN MAX)&#34; color=&#34;#FA8C44&#34;
+                                                     scientific-display=&#34;true&#34;
+                                                     subseries=&#39;[{&#34;func&#34;:&#34;MIN&#34;,&#34;yAxis&#34;:&#34;value&#34;},{&#34;func&#34;:&#34;MAX&#34;,&#34;yAxis&#34;:&#34;value&#34;}]&#39;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;value&#34; chart-type=&#34;spline&#34; function-y=&#34;AVG&#34;
+                                                     label-y=&#34;Alcoholic beverages at home(AVG)&#34; color=&#34;#BA022A&#34;
+                                                     display-units=&#34;false&#34; display-values=&#34;true&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/ods-dataset-context&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            2 x Range spline : MIN and MAX of the consumer price index
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            2 x spline : AVG of the consumer price index
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/ods-simple-tab&gt;
+            &lt;ods-simple-tab
+                    label=&#34;Gauge, Tree, Pie&#34;
+                    keep-content=&#34;false&#34;&gt;
+                &lt;!-- TREE PIE GAUGE --&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;h3&gt;
+                            To simply show a progress or percentage
+                        &lt;/h3&gt;
+                        &lt;div class=&#34;row&#34;&gt;
+                            &lt;div class=&#34;col-md-6&#34;&gt;
+                                &lt;ods-gauge id=&#34;circle-gauge&#34;
+                                           display-mode=&#34;circle&#34;
+                                           max=&#34;100&#34;
+                                           value=&#34;73&#34;&gt;
+                                &lt;/ods-gauge&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&#34;col-md-6&#34;&gt;
+                                &lt;ods-gauge id=&#34;red-gauge&#34;
+                                           display-mode=&#34;bar&#34;
+                                           max=&#34;100&#34;
+                                           value=&#34;12&#34;&gt;
+                                &lt;/ods-gauge&gt;
+                                &lt;ods-gauge id=&#34;orange-gauge&#34;
+                                           display-mode=&#34;bar&#34;
+                                           max=&#34;100&#34;
+                                           value=&#34;18&#34;&gt;
+                                &lt;/ods-gauge&gt;
+                                &lt;ods-gauge id=&#34;green-gauge&#34;
+                                           display-mode=&#34;bar&#34;
+                                           max=&#34;100&#34;
+                                           value=&#34;56&#34;&gt;
+                                &lt;/ods-gauge&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            Jauge
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            Circle and bar display
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;spacer&#34;&gt;&lt;/div&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;h3&gt;
+                            To see distribution
+                        &lt;/h3&gt;
+                        &lt;div class=&#34;chart-title&#34;&gt;
+                            &lt;b&gt;Number of sport equipment&lt;/b&gt; in &lt;b&gt;Paris and suburbs area&lt;/b&gt; by &lt;b&gt;familly&lt;/b&gt;.
+                        &lt;/div&gt;
+                        &lt;ods-dataset-context context=&#34;ensembledesequipementssportifsdiledefranceen2016&#34;
+                                             ensembledesequipementssportifsdiledefranceen2016-domain=&#34;discovery&#34;
+                                             ensembledesequipementssportifsdiledefranceen2016-dataset=&#34;ensemble-des-equipements-sportifs-dile-de-france-en-2016&#34;&gt;
+                            &lt;ods-chart&gt;
+                                &lt;ods-chart-query context=&#34;ensembledesequipementssportifsdiledefranceen2016&#34;
+                                                 field-x=&#34;eqt_fam&#34; maxpoints=&#34;50&#34; sort=&#34;serie1-1&#34;&gt;
+                                    &lt;ods-chart-serie chart-type=&#34;treemap&#34; function-y=&#34;COUNT&#34; color=&#34;range-Paired&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/ods-dataset-context&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            Treemap
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;spacer&#34;&gt;&lt;/div&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;div class=&#34;chart-title&#34;&gt;
+                            &lt;b&gt;Population&lt;/b&gt; distribution by region.
+                        &lt;/div&gt;
+                        &lt;ods-dataset-context context=&#34;geoflarcommunes2015&#34;
+                                             geoflarcommunes2015-domain=&#34;public&#34;
+                                             geoflarcommunes2015-dataset=&#34;geoflar-communes-2015&#34;
+                                             geoflarcommunes2015-parameters=&#34;{&#39;geofilter.polygon&#39;:&#39;(37.50972584293751,-16.171875),(55.32914440840507,-16.171875),(55.32914440840507,22.148437499999996),(37.50972584293751,22.148437499999996),(37.50972584293751,-16.171875)&#39;}&#34;&gt;
+                            &lt;ods-chart&gt;
+                                &lt;ods-chart-query context=&#34;geoflarcommunes2015&#34; field-x=&#34;nom_reg&#34;
+                                                 label-x=&#34;Population&#34;
+                                                 maxpoints=&#34;20&#34; sort=&#34;serie1-1&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;population&#34; chart-type=&#34;pie&#34; function-y=&#34;SUM&#34;
+                                                     label-y=&#34;Population&#34; color=&#34;range-Paired&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/ods-dataset-context&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            Pie chart : Sum of the population
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/ods-simple-tab&gt;
+            &lt;ods-simple-tab
+                    label=&#34;Polar, Spider&#34;
+                    keep-content=&#34;false&#34;&gt;
+                &lt;!-- POLAR SPIDER --&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;h3&gt;
+                            To see distribution
+                        &lt;/h3&gt;
+                        &lt;div class=&#34;chart-title&#34;&gt;
+                            &lt;b&gt;Population&lt;/b&gt; distribution by region &#43; average surface area of cities in this region
+                        &lt;/div&gt;
+                        &lt;ods-dataset-context context=&#34;geoflarcommunes2015&#34;
+                                             geoflarcommunes2015-domain=&#34;public&#34;
+                                             geoflarcommunes2015-dataset=&#34;geoflar-communes-2015&#34;
+                                             geoflarcommunes2015-parameters=&#34;{&#39;geofilter.polygon&#39;:&#39;(37.50972584293751,-16.171875),(55.32914440840507,-16.171875),(55.32914440840507,22.148437499999996),(37.50972584293751,22.148437499999996),(37.50972584293751,-16.171875)&#39;}&#34;&gt;
+                            &lt;ods-chart&gt;
+                                &lt;ods-chart-query context=&#34;geoflarcommunes2015&#34; field-x=&#34;nom_reg&#34; maxpoints=&#34;20&#34;
+                                                 sort=&#34;serie1-1&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;population&#34; chart-type=&#34;spiderweb&#34;
+                                                     function-y=&#34;SUM&#34;
+                                                     label-y=&#34;Population (SUM)&#34; color=&#34;#BA022A&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;superficie&#34; chart-type=&#34;spiderweb&#34;
+                                                     function-y=&#34;AVG&#34;
+                                                     label-y=&#34;Surface area (AVG)&#34; color=&#34;#19630A&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/ods-dataset-context&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            Spiderweb chart, sorted by serie 1 : Sum of the population
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            Serie 2 : Average of the surface area
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;spacer&#34;&gt;&lt;/div&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;div class=&#34;chart-title&#34;&gt;
+                            &lt;b&gt;Population&lt;/b&gt;, &lt;b&gt;surface area&lt;/b&gt; and &lt;b&gt;average high (Z axis)&lt;/b&gt; by region.
+                        &lt;/div&gt;
+                        &lt;ods-dataset-context context=&#34;geoflarcommunes2015&#34;
+                                             geoflarcommunes2015-domain=&#34;public&#34;
+                                             geoflarcommunes2015-dataset=&#34;geoflar-communes-2015&#34;&gt;
+                            &lt;ods-chart style=&#34;height:550px&#34; scientific-display=&#34;true&#34;&gt;
+                                &lt;ods-chart-query context=&#34;geoflarcommunes2015&#34; field-x=&#34;nom_reg&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;population&#34; chart-type=&#34;polar&#34; function-y=&#34;SUM&#34;
+                                                     label-y=&#34;Population&#34; color=&#34;#000000&#34; display-units=&#34;false&#34;
+                                                     display-values=&#34;false&#34; scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;superficie&#34; chart-type=&#34;polar&#34; function-y=&#34;SUM&#34;
+                                                     label-y=&#34;Surface area&#34; color=&#34;#F8B334&#34; display-values=&#34;false&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;z_moyen&#34; chart-type=&#34;column&#34; function-y=&#34;AVG&#34;
+                                                     label-y=&#34;Average high (Z)&#34; color=&#34;#00757E&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/ods-dataset-context&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            Polar chart with 3 series
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            Serie 1 : SUM of city population
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            Serie 2 : SUM of city surface area
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            Serie 3 : AVG Z (third axis coordinate)
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/ods-simple-tab&gt;
+        &lt;/ods-simple-tabs&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+"
+                 role="tabpanel">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;container&#34;&gt;
+    &lt;div class=&#34;ods-box&#34;&gt;
+        &lt;h1&gt;
+            ODS-Widgets Charts
+        &lt;/h1&gt;
+        &lt;ods-simple-tabs&gt;
+            &lt;ods-simple-tab
+                    label=&#34;Bar, Column&#34;
+                    keep-content=&#34;false&#34;&gt;
+                &lt;!-- BAR COLMUN --&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;h3&gt;
+                            To see order of magnitude
+                        &lt;/h3&gt;
+                        &lt;div class=&#34;chart-title&#34;&gt;
+                            &lt;b&gt;Sum of available beds&lt;/b&gt; for each types of hospital.
+                        &lt;/div&gt;
+                        &lt;ods-dataset-context context=&#34;ushospitals&#34; ushospitals-dataset=&#34;us-hospitals&#34;
+                                             ushospitals-domain=&#34;userclub&#34;&gt;
+                            &lt;ods-chart label-x=&#34;Hospital types&#34;&gt;
+                                &lt;ods-chart-query context=&#34;ushospitals&#34; field-x=&#34;type&#34; sort=&#34;serie1-1&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;beds&#34; chart-type=&#34;bar&#34; function-y=&#34;SUM&#34;
+                                                     logarithmic=&#34;true&#34; label-y=&#34;Number of beds&#34; color=&#34;#1E0C33&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/ods-dataset-context&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            Bar chart with logarithmic scale
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;spacer&#34;&gt;&lt;/div&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;h3&gt;
+                            To see distribution by columns with one or more series
+                        &lt;/h3&gt;
+                        &lt;div class=&#34;chart-title&#34;&gt;
+                            &lt;b&gt;Number of winning&lt;/b&gt; or &lt;b&gt;losing&lt;/b&gt; points for &lt;b&gt;Super Bowl&lt;/b&gt; events since
+                            1967.
+                        &lt;/div&gt;
+                        &lt;ods-dataset-context context=&#34;superbowlpublic&#34; superbowlpublic-dataset=&#34;super-bowl&#34;
+                                             superbowlpublic-domain=&#34;public&#34;&gt;
+                            &lt;ods-chart single-y-axis=&#34;true&#34;&gt;
+                                &lt;ods-chart-query context=&#34;superbowlpublic&#34; field-x=&#34;date&#34; timescale=&#34;year&#34;
+                                                 stacked=&#34;normal&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;winning_pts&#34;
+                                                     label-y=&#34;Winning points&#34;
+                                                     chart-type=&#34;column&#34; function-y=&#34;SUM&#34; color=&#34;#4F8F55&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;losing_pts&#34;
+                                                     label-y=&#34;Losing points&#34;
+                                                     chart-type=&#34;column&#34; function-y=&#34;SUM&#34; color=&#34;#EC643C&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/ods-dataset-context&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            Colmumn chart with 1 axis
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            Stacked view
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            1 serie : SUM (winning points)
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            1 serie : SUM (losing points)
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/ods-simple-tab&gt;
+            &lt;ods-simple-tab
+                    label=&#34;Spline, Range, Boxplot&#34;
+                    keep-content=&#34;false&#34;&gt;
+                &lt;!-- SPLINE RANGE BOXPLOT --&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;h3&gt;
+                            To express fickleness
+                        &lt;/h3&gt;
+                        &lt;div class=&#34;chart-title&#34;&gt;
+                            &lt;b&gt;Gazoline (all types) consumer price index&lt;/b&gt; fluctuation over years.
+                        &lt;/div&gt;
+                        &lt;ods-dataset-context context=&#34;cpigasoline&#34;
+                                             cpigasoline-domain=&#34;discovery&#34;
+                                             cpigasoline-dataset=&#34;consumer-price-index-all-urban-consumers&#34;
+                                             cpigasoline-parameters=&#34;{&#39;refine.area_name&#39;:&#39;U.S. city average&#39;,&#39;refine.item_name&#39;:&#39;Gasoline (all types)&#39;}&#34;&gt;
+                            &lt;ods-chart timescale=&#34;year&#34; single-y-axis=&#34;true&#34;
+                                       single-y-axis-label=&#34;Base 100 : 1982/1984&#34;
+                                       scientific-display=&#34;false&#34; label-x=&#34;All types of Gazoline&#34;&gt;
+                                &lt;ods-chart-query context=&#34;cpigasoline&#34; field-x=&#34;date&#34; timescale=&#34;year&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;value&#34; chart-type=&#34;areasplinerange&#34;
+                                                     function-y=&#34;COUNT&#34;
+                                                     label-y=&#34;MIN MAX&#34; color=&#34;#0B72B5&#34;
+                                                     scientific-display=&#34;true&#34;
+                                                     subseries=&#39;[{&#34;func&#34;:&#34;MIN&#34;,&#34;yAxis&#34;:&#34;value&#34;},{&#34;func&#34;:&#34;MAX&#34;,&#34;yAxis&#34;:&#34;value&#34;}]&#39;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;value&#34; chart-type=&#34;spline&#34; function-y=&#34;AVG&#34;
+                                                     label-y=&#34;AVG&#34; color=&#34;#2C3F56&#34;
+                                                     display-units=&#34;false&#34; display-values=&#34;false&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/ods-dataset-context&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            Range spline : MIN and MAX of the consumer price index
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            Spline : AVG of the consumer price index
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;spacer&#34;&gt;&lt;/div&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;div class=&#34;chart-title&#34;&gt;
+                            Same chart with boxplot.
+                        &lt;/div&gt;
+                        &lt;ods-dataset-context context=&#34;consumerpriceindexallurbanconsumers&#34;
+                                             consumerpriceindexallurbanconsumers-domain=&#34;discovery&#34;
+                                             consumerpriceindexallurbanconsumers-dataset=&#34;consumer-price-index-all-urban-consumers&#34;
+                                             consumerpriceindexallurbanconsumers-parameters=&#34;{&#39;refine.area_name&#39;:&#39;U.S. city average&#39;,&#39;refine.item_name&#39;:&#39;Gasoline (all types)&#39;}&#34;&gt;
+                            &lt;ods-chart timescale=&#34;month&#34; scientific-display=&#34;true&#34;&gt;
+                                &lt;ods-chart-query context=&#34;consumerpriceindexallurbanconsumers&#34; field-x=&#34;date&#34;
+                                                 timescale=&#34;year&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;value&#34;
+                                                     chart-type=&#34;boxplot&#34;
+                                                     function-y=&#34;COUNT&#34;
+                                                     label-y=&#34;All types of gazoline versatility over years&#34;
+                                                     color=&#34;#00757E&#34;
+                                                     display-values=&#34;false&#34;
+                                                     scientific-display=&#34;true&#34;
+                                                     subseries=&#39;[{&#34;func&#34;:&#34;MIN&#34;,&#34;yAxis&#34;:&#34;value&#34;},{&#34;func&#34;:&#34;QUANTILES&#34;,&#34;yAxis&#34;:&#34;value&#34;,&#34;subsets&#34;:25},{&#34;func&#34;:&#34;QUANTILES&#34;,&#34;yAxis&#34;:&#34;value&#34;,&#34;subsets&#34;:50},{&#34;func&#34;:&#34;QUANTILES&#34;,&#34;yAxis&#34;:&#34;value&#34;,&#34;subsets&#34;:75},{&#34;func&#34;:&#34;MAX&#34;,&#34;yAxis&#34;:&#34;value&#34;}]&#39;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/ods-dataset-context&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            Box plot of the consumer price index
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            Minimum, Lower quartile at percentile 25, Median at percentile 50, Upper quartile at
+                            percentile
+                            75, Maximum
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;spacer&#34;&gt;&lt;/div&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;h3&gt;
+                            To express stability
+                        &lt;/h3&gt;
+                        &lt;div class=&#34;chart-title&#34;&gt;
+                            Comparison of &lt;b&gt;alcoholic beverages consumer price index&lt;/b&gt;, &lt;b&gt;at home&lt;/b&gt; or &lt;b&gt;away
+                            from
+                            home&lt;/b&gt;.
+                        &lt;/div&gt;
+                        &lt;ods-dataset-context context=&#34;cpialcoholicawayfromhome,cpialcoholicathome&#34;
+                                             cpialcoholicawayfromhome-domain=&#34;discovery&#34;
+                                             cpialcoholicawayfromhome-dataset=&#34;consumer-price-index-all-urban-consumers&#34;
+                                             cpialcoholicawayfromhome-parameters=&#34;{&#39;refine.area_name&#39;:&#39;U.S. city average&#39;,&#39;refine.item_name&#39;:&#39;Alcoholic beverages away from home&#39;}&#34;
+                                             cpialcoholicathome-domain=&#34;discovery&#34;
+                                             cpialcoholicathome-dataset=&#34;consumer-price-index-all-urban-consumers&#34;
+                                             cpialcoholicathome-parameters=&#34;{&#39;refine.area_name&#39;:&#39;U.S. city average&#39;,&#39;refine.item_name&#39;:&#39;Alcoholic beverages at home&#39;}&#34;&gt;
+                            &lt;ods-chart timescale=&#34;year&#34; single-y-axis=&#34;true&#34;
+                                       single-y-axis-label=&#34;Base 100 : 1982/1984&#34;
+                                       min=&#34;125&#34;
+                                       step=&#34;25&#34; scientific-display=&#34;false&#34;&gt;
+                                &lt;ods-chart-query context=&#34;cpialcoholicawayfromhome&#34; field-x=&#34;date&#34; timescale=&#34;year&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;value&#34; chart-type=&#34;areasplinerange&#34;
+                                                     function-y=&#34;COUNT&#34;
+                                                     label-y=&#34;Alcoholic beverages away from home(MIN MAX)&#34;
+                                                     color=&#34;#0B72B5&#34;
+                                                     scientific-display=&#34;true&#34;
+                                                     subseries=&#39;[{&#34;func&#34;:&#34;MIN&#34;,&#34;yAxis&#34;:&#34;value&#34;},{&#34;func&#34;:&#34;MAX&#34;,&#34;yAxis&#34;:&#34;value&#34;}]&#39;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;value&#34; chart-type=&#34;spline&#34; function-y=&#34;AVG&#34;
+                                                     label-y=&#34;Alcoholic beverages away from home(AVG)&#34;
+                                                     color=&#34;#2C3F56&#34;
+                                                     display-units=&#34;false&#34; display-values=&#34;true&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                                &lt;ods-chart-query context=&#34;cpialcoholicathome&#34; field-x=&#34;date&#34; timescale=&#34;year&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;value&#34; chart-type=&#34;areasplinerange&#34;
+                                                     function-y=&#34;COUNT&#34;
+                                                     label-y=&#34;Alcoholic beverages at home(MIN MAX)&#34; color=&#34;#FA8C44&#34;
+                                                     scientific-display=&#34;true&#34;
+                                                     subseries=&#39;[{&#34;func&#34;:&#34;MIN&#34;,&#34;yAxis&#34;:&#34;value&#34;},{&#34;func&#34;:&#34;MAX&#34;,&#34;yAxis&#34;:&#34;value&#34;}]&#39;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;value&#34; chart-type=&#34;spline&#34; function-y=&#34;AVG&#34;
+                                                     label-y=&#34;Alcoholic beverages at home(AVG)&#34; color=&#34;#BA022A&#34;
+                                                     display-units=&#34;false&#34; display-values=&#34;true&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/ods-dataset-context&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            2 x Range spline : MIN and MAX of the consumer price index
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            2 x spline : AVG of the consumer price index
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/ods-simple-tab&gt;
+            &lt;ods-simple-tab
+                    label=&#34;Gauge, Tree, Pie&#34;
+                    keep-content=&#34;false&#34;&gt;
+                &lt;!-- TREE PIE GAUGE --&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;h3&gt;
+                            To simply show a progress or percentage
+                        &lt;/h3&gt;
+                        &lt;div class=&#34;row&#34;&gt;
+                            &lt;div class=&#34;col-md-6&#34;&gt;
+                                &lt;ods-gauge id=&#34;circle-gauge&#34;
+                                           display-mode=&#34;circle&#34;
+                                           max=&#34;100&#34;
+                                           value=&#34;73&#34;&gt;
+                                &lt;/ods-gauge&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&#34;col-md-6&#34;&gt;
+                                &lt;ods-gauge id=&#34;red-gauge&#34;
+                                           display-mode=&#34;bar&#34;
+                                           max=&#34;100&#34;
+                                           value=&#34;12&#34;&gt;
+                                &lt;/ods-gauge&gt;
+                                &lt;ods-gauge id=&#34;orange-gauge&#34;
+                                           display-mode=&#34;bar&#34;
+                                           max=&#34;100&#34;
+                                           value=&#34;18&#34;&gt;
+                                &lt;/ods-gauge&gt;
+                                &lt;ods-gauge id=&#34;green-gauge&#34;
+                                           display-mode=&#34;bar&#34;
+                                           max=&#34;100&#34;
+                                           value=&#34;56&#34;&gt;
+                                &lt;/ods-gauge&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            Jauge
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            Circle and bar display
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;spacer&#34;&gt;&lt;/div&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;h3&gt;
+                            To see distribution
+                        &lt;/h3&gt;
+                        &lt;div class=&#34;chart-title&#34;&gt;
+                            &lt;b&gt;Number of sport equipment&lt;/b&gt; in &lt;b&gt;Paris and suburbs area&lt;/b&gt; by &lt;b&gt;familly&lt;/b&gt;.
+                        &lt;/div&gt;
+                        &lt;ods-dataset-context context=&#34;ensembledesequipementssportifsdiledefranceen2016&#34;
+                                             ensembledesequipementssportifsdiledefranceen2016-domain=&#34;discovery&#34;
+                                             ensembledesequipementssportifsdiledefranceen2016-dataset=&#34;ensemble-des-equipements-sportifs-dile-de-france-en-2016&#34;&gt;
+                            &lt;ods-chart&gt;
+                                &lt;ods-chart-query context=&#34;ensembledesequipementssportifsdiledefranceen2016&#34;
+                                                 field-x=&#34;eqt_fam&#34; maxpoints=&#34;50&#34; sort=&#34;serie1-1&#34;&gt;
+                                    &lt;ods-chart-serie chart-type=&#34;treemap&#34; function-y=&#34;COUNT&#34; color=&#34;range-Paired&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/ods-dataset-context&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            Treemap
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;spacer&#34;&gt;&lt;/div&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;div class=&#34;chart-title&#34;&gt;
+                            &lt;b&gt;Population&lt;/b&gt; distribution by region.
+                        &lt;/div&gt;
+                        &lt;ods-dataset-context context=&#34;geoflarcommunes2015&#34;
+                                             geoflarcommunes2015-domain=&#34;public&#34;
+                                             geoflarcommunes2015-dataset=&#34;geoflar-communes-2015&#34;
+                                             geoflarcommunes2015-parameters=&#34;{&#39;geofilter.polygon&#39;:&#39;(37.50972584293751,-16.171875),(55.32914440840507,-16.171875),(55.32914440840507,22.148437499999996),(37.50972584293751,22.148437499999996),(37.50972584293751,-16.171875)&#39;}&#34;&gt;
+                            &lt;ods-chart&gt;
+                                &lt;ods-chart-query context=&#34;geoflarcommunes2015&#34; field-x=&#34;nom_reg&#34;
+                                                 label-x=&#34;Population&#34;
+                                                 maxpoints=&#34;20&#34; sort=&#34;serie1-1&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;population&#34; chart-type=&#34;pie&#34; function-y=&#34;SUM&#34;
+                                                     label-y=&#34;Population&#34; color=&#34;range-Paired&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/ods-dataset-context&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            Pie chart : Sum of the population
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/ods-simple-tab&gt;
+            &lt;ods-simple-tab
+                    label=&#34;Polar, Spider&#34;
+                    keep-content=&#34;false&#34;&gt;
+                &lt;!-- POLAR SPIDER --&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;h3&gt;
+                            To see distribution
+                        &lt;/h3&gt;
+                        &lt;div class=&#34;chart-title&#34;&gt;
+                            &lt;b&gt;Population&lt;/b&gt; distribution by region &#43; average surface area of cities in this region
+                        &lt;/div&gt;
+                        &lt;ods-dataset-context context=&#34;geoflarcommunes2015&#34;
+                                             geoflarcommunes2015-domain=&#34;public&#34;
+                                             geoflarcommunes2015-dataset=&#34;geoflar-communes-2015&#34;
+                                             geoflarcommunes2015-parameters=&#34;{&#39;geofilter.polygon&#39;:&#39;(37.50972584293751,-16.171875),(55.32914440840507,-16.171875),(55.32914440840507,22.148437499999996),(37.50972584293751,22.148437499999996),(37.50972584293751,-16.171875)&#39;}&#34;&gt;
+                            &lt;ods-chart&gt;
+                                &lt;ods-chart-query context=&#34;geoflarcommunes2015&#34; field-x=&#34;nom_reg&#34; maxpoints=&#34;20&#34;
+                                                 sort=&#34;serie1-1&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;population&#34; chart-type=&#34;spiderweb&#34;
+                                                     function-y=&#34;SUM&#34;
+                                                     label-y=&#34;Population (SUM)&#34; color=&#34;#BA022A&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;superficie&#34; chart-type=&#34;spiderweb&#34;
+                                                     function-y=&#34;AVG&#34;
+                                                     label-y=&#34;Surface area (AVG)&#34; color=&#34;#19630A&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/ods-dataset-context&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            Spiderweb chart, sorted by serie 1 : Sum of the population
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            Serie 2 : Average of the surface area
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;spacer&#34;&gt;&lt;/div&gt;
+                &lt;div class=&#34;row&#34;&gt;
+                    &lt;div class=&#34;col-md-9&#34;&gt;
+                        &lt;div class=&#34;chart-title&#34;&gt;
+                            &lt;b&gt;Population&lt;/b&gt;, &lt;b&gt;surface area&lt;/b&gt; and &lt;b&gt;average high (Z axis)&lt;/b&gt; by region.
+                        &lt;/div&gt;
+                        &lt;ods-dataset-context context=&#34;geoflarcommunes2015&#34;
+                                             geoflarcommunes2015-domain=&#34;public&#34;
+                                             geoflarcommunes2015-dataset=&#34;geoflar-communes-2015&#34;&gt;
+                            &lt;ods-chart style=&#34;height:550px&#34; scientific-display=&#34;true&#34;&gt;
+                                &lt;ods-chart-query context=&#34;geoflarcommunes2015&#34; field-x=&#34;nom_reg&#34;&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;population&#34; chart-type=&#34;polar&#34; function-y=&#34;SUM&#34;
+                                                     label-y=&#34;Population&#34; color=&#34;#000000&#34; display-units=&#34;false&#34;
+                                                     display-values=&#34;false&#34; scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;superficie&#34; chart-type=&#34;polar&#34; function-y=&#34;SUM&#34;
+                                                     label-y=&#34;Surface area&#34; color=&#34;#F8B334&#34; display-values=&#34;false&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                    &lt;ods-chart-serie expression-y=&#34;z_moyen&#34; chart-type=&#34;column&#34; function-y=&#34;AVG&#34;
+                                                     label-y=&#34;Average high (Z)&#34; color=&#34;#00757E&#34;
+                                                     scientific-display=&#34;true&#34;&gt;
+                                    &lt;/ods-chart-serie&gt;
+                                &lt;/ods-chart-query&gt;
+                            &lt;/ods-chart&gt;
+                        &lt;/ods-dataset-context&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;col-md-3&#34;&gt;
+                        &lt;h5&gt;
+                            Polar chart with 3 series
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            Serie 1 : SUM of city population
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            Serie 2 : SUM of city surface area
+                        &lt;/h5&gt;
+                        &lt;h5&gt;
+                            Serie 3 : AVG Z (third axis coordinate)
+                        &lt;/h5&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/ods-simple-tab&gt;
+        &lt;/ods-simple-tabs&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+            
+            <div class="js-tabcontent"
+                 id="code-ods-widgets-charts-css-content"
+                 data-clipboard=".items-row {
+    text-align: center; /* center all buttons */
+}
+.items {
+    display: inline-flex; /* Display in line */
+    list-style-type: none; /* Remove the list bullet */
+}
+.item {
+    margin: 0 20px; /* give some space left and right */
+}
+.ods-button {
+    font-weight: 500;
+}
+.ods-button--primary {
+    border: solid 1px #1E0C33;
+    background-color: #1E0C33;
+}
+.ods-button--danger {
+    border: solid 1px #a94442;
+    background-color: #a94442;
+}
+.chart-title, .hint {
+    text-align: center;
+    font-style: italic;
+    color: darkgrey;
+    font-weight: 300;
+}
+.chart-title b {
+    font-weight: 500;
+}
+tspan.highcharts-text-outline {
+    display: none;
+}
+.spacer {
+        margin-bottom: 20px;
+    width: 90%;
+    border-top: 1px solid rgba(30, 12, 51, 0.53);
+    margin-left: auto;
+    margin-right: auto;
+}
+#circle-gauge {
+    max-width: 300px;
+    margin: auto;
+}
+#red-gauge .odswidget-gauge__svg-filler {
+    stroke: red;
+}
+#orange-gauge .odswidget-gauge__svg-filler {
+    stroke: orange;
+}
+#green-gauge .odswidget-gauge__svg-filler {
+    stroke: green;
+}
+#red-gauge .odswidget-gauge__value {
+    color: red;
+}
+#orange-gauge .odswidget-gauge__value {
+    color: orange;
+}
+#green-gauge .odswidget-gauge__value {
+    color: green;
+}
+
+"
+            >
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>.items-row {
+    text-align: center; /* center all buttons */
+}
+.items {
+    display: inline-flex; /* Display in line */
+    list-style-type: none; /* Remove the list bullet */
+}
+.item {
+    margin: 0 20px; /* give some space left and right */
+}
+.ods-button {
+    font-weight: 500;
+}
+.ods-button--primary {
+    border: solid 1px #1E0C33;
+    background-color: #1E0C33;
+}
+.ods-button--danger {
+    border: solid 1px #a94442;
+    background-color: #a94442;
+}
+.chart-title, .hint {
+    text-align: center;
+    font-style: italic;
+    color: darkgrey;
+    font-weight: 300;
+}
+.chart-title b {
+    font-weight: 500;
+}
+tspan.highcharts-text-outline {
+    display: none;
+}
+.spacer {
+        margin-bottom: 20px;
+    width: 90%;
+    border-top: 1px solid rgba(30, 12, 51, 0.53);
+    margin-left: auto;
+    margin-right: auto;
+}
+#circle-gauge {
+    max-width: 300px;
+    margin: auto;
+}
+#red-gauge .odswidget-gauge__svg-filler {
+    stroke: red;
+}
+#orange-gauge .odswidget-gauge__svg-filler {
+    stroke: orange;
+}
+#green-gauge .odswidget-gauge__svg-filler {
+    stroke: green;
+}
+#red-gauge .odswidget-gauge__value {
+    color: red;
+}
+#orange-gauge .odswidget-gauge__value {
+    color: orange;
+}
+#green-gauge .odswidget-gauge__value {
+    color: green;
+}
+
+</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+      </div>
+    </article>
+    
+  </div>
+</section>
+
+      </div>
+    </div>
+
+    <footer class="footer">
+    <a href="https://www.opendatasoft.com"
+       class="footer-link"
+       title="Opendatasoft website">
+        <img src="/img/ods-logo.svg"
+             class="footer-logo"
+             alt="Opendatasoft logo"
+        />
+    </a>
+    <span class="footer-copyright">
+        &copy; Copyright 2020
+    </span>
+</footer>
+    
+    
+    
+
+    <script>
+      var process = { env: { NODE_ENV: "production" } };
+    </script>
+    <script
+      type="text/javascript"
+      src="/index.min.b65df824365d99e02747153d4eeca1d7a840fbd4e06d720e8be44e9aa54586d2.js"
+      defer
+    ></script>
+  </body>
+</html>
