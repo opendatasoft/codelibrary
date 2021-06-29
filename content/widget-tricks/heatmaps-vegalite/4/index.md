@@ -9,6 +9,6 @@ To switch to a bubblemap:
 - in addition to the `color` property, a new mark property is necessary to change the size of the circles: `size`.
 
 [`size` mark property documentation here](https://vega.github.io/vega-lite-v2/docs/encoding.html#mark-prop). 
-It's very similar to the color property, it excepts an aggregate and field option to be able to size circles depending on your data. 
+It's very similar to the color property, it expects an aggregate and field option to be able to size circles depending on your data. 
 It also accepts different scale types (quantile, power, log etc...). 
 

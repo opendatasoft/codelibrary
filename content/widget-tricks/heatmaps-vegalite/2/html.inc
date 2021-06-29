@@ -11,7 +11,7 @@
                     <p>
                         Years by months, default (linear) scale, blueorange color scheme, mean temperature
                     </p>
-                    <div ng-init="jsondefa={
+                    <ods-vega-lite-chart spec="{
 '$schema': 'https://vega.github.io/schema/vega-lite/v2.json',
 'data': {
     'name': 'data'
@@ -64,16 +64,14 @@
         }
     }
 }
-}">
-                        <ods-vega-lite-chart spec="jsondefa"
-                                             values-data="myData"></ods-vega-lite-chart>
-                    </div>
+}"
+                                         values-data="myData"></ods-vega-lite-chart>
                 </div>
                 <div class="col-md-6">
                     <p>
                         Months by days, default (linear) scale, mean temperature
                     </p>
-                    <div ng-init="jsondefb={
+                    <ods-vega-lite-chart spec="{
 '$schema': 'https://vega.github.io/schema/vega-lite/v2.json',
 'data': {
     'name': 'data'
@@ -121,12 +119,9 @@
         }
     }
 }
-}">
-                        <ods-vega-lite-chart spec="jsondefb"
-                                             values-data="myData"></ods-vega-lite-chart>
-                    </div>
+}"
+                                         values-data="myData"></ods-vega-lite-chart>
                 </div>
-
             </div>
         </div>
     </ods-dataset-context>

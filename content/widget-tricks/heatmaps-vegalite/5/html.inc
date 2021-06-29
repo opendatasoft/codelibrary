@@ -5,7 +5,7 @@
              ods-adv-analysis-context="datum"
              ods-adv-analysis-select="avg(t) as count"
              ods-adv-analysis-group-by="year(date) as year, nom_reg">
-            <div ng-init="jsondef={
+            <ods-vega-lite-chart spec="{
 '$schema': 'https://vega.github.io/schema/vega-lite/v2.json',
 'data': {
     'name': 'data'
@@ -54,12 +54,11 @@
         }
     }
 }
-}">
-                <ods-vega-lite-chart spec="jsondef"
-                                     values-data="myData"></ods-vega-lite-chart>
-            </div>
+}"
+                                 values-data="myData"></ods-vega-lite-chart>
             <p>
-                Here, <code>ods-adv-analysis</code> returns the year only (and not the complete date). Therefore, Vega-lite considers it as text and not as a date.
+                Here,
+                <code>ods-adv-analysis</code> returns the year only (and not the complete date). Therefore, Vega-lite considers it as text and not as a date.
             </p>
         </div>
     </ods-dataset-context>

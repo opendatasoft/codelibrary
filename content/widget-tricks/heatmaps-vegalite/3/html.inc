@@ -5,7 +5,7 @@
              ods-adv-analysis-context="datum"
              ods-adv-analysis-select="avg(t) as count"
              ods-adv-analysis-group-by="date_format(date,'YYYY-MM-dd') as date">
-            <div ng-init="jsondef={
+            <ods-vega-lite-chart spec="{
 '$schema': 'https://vega.github.io/schema/vega-lite/v2.json',
 'data': {
     'name': 'data'
@@ -57,10 +57,8 @@
         }
     }
 }
-}">
-                <ods-vega-lite-chart spec="jsondef"
-                                     values-data="myData"></ods-vega-lite-chart>
-            </div>
+}"
+                                 values-data="myData"></ods-vega-lite-chart>
         </div>
     </ods-dataset-context>
 </div>

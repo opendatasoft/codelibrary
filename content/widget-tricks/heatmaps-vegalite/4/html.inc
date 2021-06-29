@@ -7,7 +7,7 @@
              ods-adv-analysis-group-by="date_format(date,'YYYY-MM-dd') as date">
             <div class="row">
                 <div class="col-md-5">
-                    <div ng-init="jsondefa={
+                    <ods-vega-lite-chart spec="{
 '$schema': 'https://vega.github.io/schema/vega-lite/v2.json',
 'data': {
     'name': 'data'
@@ -67,15 +67,13 @@
         }
     }
 }
-}">
-                        <ods-vega-lite-chart spec="jsondefa"
-                                             values-data="myData"></ods-vega-lite-chart>
-                    </div>
+}"
+                                         values-data="myData"></ods-vega-lite-chart>
                     <p>In <code>encoding</code>, <code>x</code> is <code>timeUnit: day</code>, and has a new property
                         <code>sort</code>, to force the week to start from Monday (instead of Sunday by default)</p>
                 </div>
                 <div class="col-md-7">
-                    <div ng-init="jsondefb={
+                    <ods-vega-lite-chart spec="{
 '$schema': 'https://vega.github.io/schema/vega-lite/v2.json',
 'data': {
     'name': 'data'
@@ -137,10 +135,8 @@
         }
     }
 }
-}">
-                        <ods-vega-lite-chart spec="jsondefb"
-                                             values-data="myData"></ods-vega-lite-chart>
-                    </div>
+}"
+                                         values-data="myData"></ods-vega-lite-chart>
                 </div>
             </div>
         </div>
