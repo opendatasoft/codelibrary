@@ -1,0 +1,2023 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+       Eco Counter &ndash; Codelibrary 
+    </title>
+
+    
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-41201218-21"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-41201218-21");
+    </script>
+
+    
+    
+
+    
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css"
+      integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8="
+      crossorigin="anonymous"
+    />
+
+    
+    <link rel="stylesheet" type="text/css" href="/scss/main.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+  </head>
+
+  <body>
+    <div class="is-hidden">
+      <svg>
+  <defs>
+    <g id="link-2">
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+    </g>
+
+    <g id="check">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </g>
+
+    <g id="copy">
+      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+    </g>
+
+    <g id="external">
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+      <polyline points="15 3 21 3 21 9"></polyline>
+      <line x1="10" y1="14" x2="21" y2="3"></line>
+    </g>
+
+  </defs>
+</svg>
+
+    </div>
+
+    <nav class="navbar is-fixed-top"
+     role="navigation"
+     aria-label="Main navigation">
+    <div class="navbar-brand">
+        <button class="navbar-burger burger"
+                type="button"
+                data-target="sidebarNavbar"
+                aria-controls="sidebarNavbar"
+                aria-expanded="false"
+                aria-label="Main menu">
+            Menu
+        </button>
+        <a class="navbar-item"
+           href="/"
+           title="Back to the homepage">
+            <img src="/img/ods-logo-helphub.svg"
+                 alt="Helphub Logo"/>
+        </a>
+        <button class="navbar-burger burger"
+                type="button"
+                data-target="helphubNavbar"
+                aria-controls="helphubNavbar"
+                aria-expanded="false"
+                aria-label="Help Hub Menu">
+            Help Hub
+        </button>
+    </div>
+    <div class="navbar-menu"
+         id="helphubNavbar">
+        <div class="navbar-start">
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/">
+                Help Hub
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/platform/en/">
+                User guide
+            </a>
+            <a class="navbar-item is-active"
+               href="https://codelibrary.opendatasoft.com">
+                Code Library
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/faq-glossary/en/">
+                FAQ
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/widgets/">
+                Widgets
+            </a>
+            <a class="navbar-item"
+               href="https://help.opendatasoft.com/en/apis/">
+                APIs
+            </a>
+            <a class="navbar-item"
+               href="https://academy.opendatasoft.com/page/homepage">
+                Academy
+            </a>
+            <a class="navbar-item"
+               href="https://documentation-resources.opendatasoft.com/pages/release-notes/?headless=true">
+                Release Notes
+            </a>
+        </div>
+    </div>
+</nav>
+
+
+    <div class="columns is-desktop codelibrary mb-0">
+      <div class="column is-narrow pb-0">
+        <div class="sidebar-search is-hidden-touch">
+  <div class="block search-wrapper">
+    <div id="algolia-box"></div>
+    <div class="search-results-wrapper">
+      <div id="algolia-results"></div>
+    </div>
+  </div>
+</div>
+<aside class="sidebar"
+       id="sidebarNavbar">
+  
+  <div class="sidebar-header">
+    <div class="block">
+      <ul class="menu-list">
+        <p class="menu-label">On this page</p>
+        <li>
+          <a href="#">
+            Top
+          </a>
+        </li>
+        
+        <li>
+          <a href="#widget-version">
+            Widget version
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+  
+  <div class="sidebar-body">
+    
+    
+    <ul class="menu-list">
+      <li>
+        <a class="sidebar-subtitle"
+          href="https://codelibrary.opendatasoft.com">
+          Home
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/components/"
+        class="sidebar-subtitle">
+        Components
+        
+        <span class="tag pill is-size-7 is-rounded is-info">1</span>
+        
+      </a>
+    </li>
+    
+    
+      
+      <li>
+        <a class="sidebar-subtitle " href="/custom-views/">
+          Custom views
+        </a>
+        <ul>
+          
+          <li>
+            <a class="is-active" href="/custom-views/eco-counter/">
+              <div>
+                Eco Counter
+                
+                
+                <span class="tag pill is-size-7 is-rounded is-info">
+                  1
+                </span>
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/custom-views/domain-dataset/">
+              <div>
+                Domain Datasets
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/custom-views/custom-view-generator/">
+              <div>
+                Custom view Generator
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/custom-views/gtfs-custom/">
+              <div>
+                GTFS Custom View
+                
+                
+              </div>
+            </a>
+          </li>
+          
+        </ul>
+      </li>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/generators/"
+        class="sidebar-subtitle">
+        Generators
+        
+        <span class="tag pill is-size-7 is-rounded is-info">1</span>
+        
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/page-templates/"
+        class="sidebar-subtitle">
+        Page templates
+        
+        <span class="tag pill is-size-7 is-rounded is-info">10</span>
+        
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/portal-themes/"
+        class="sidebar-subtitle">
+        Portal themes
+        
+        <span class="tag pill is-size-7 is-rounded is-info">1</span>
+        
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/widget-tricks/"
+        class="sidebar-subtitle">
+        Widget tricks
+        
+        <span class="tag pill is-size-7 is-rounded is-info">1</span>
+        
+      </a>
+    </li>
+    
+    
+  </ul>
+  <p class="menu-label">
+    Tags
+  </p>
+  <div class="tags">
+    
+    <a class="tag" href="/tags/aggregation/">
+      aggregation
+    </a>
+    
+    <a class="tag" href="/tags/chart/">
+      chart
+    </a>
+    
+    <a class="tag" href="/tags/date/">
+      date
+    </a>
+    
+    <a class="tag" href="/tags/display/">
+      display
+    </a>
+    
+    <a class="tag" href="/tags/filter/">
+      filter
+    </a>
+    
+    <a class="tag" href="/tags/geo/">
+      geo
+    </a>
+    
+    <a class="tag" href="/tags/list/">
+      list
+    </a>
+    
+    <a class="tag" href="/tags/map/">
+      map
+    </a>
+    
+    <a class="tag" href="/tags/navigation/">
+      navigation
+    </a>
+    
+    <a class="tag" href="/tags/ods-aggregation/">
+      ods-aggregation
+    </a>
+    
+    <a class="tag" href="/tags/ods-analysis/">
+      ods-analysis
+    </a>
+    
+    <a class="tag" href="/tags/ods-maps/">
+      ods-maps
+    </a>
+    
+  </div>
+</div>
+</aside>
+
+      </div>
+      <div class="column codelibrary-content">
+        
+<section class="section resources">
+  <div class="container is-max-widescreen">
+    <h1 class="title is-1">Custom Views - Eco Counter</h1>
+    <div class="content">
+      <p>This custom view is a plug and play add-on for data from the eco-counter extractor. You will need to up set up two datasets (either via URL or file upload), with the following configuration:</p>
+<ul>
+<li>Eco-counter sites: with <strong>eco-counter-sites</strong> as source type (which will do automatically sort and format everything).</li>
+<li>Eco-counter data: with <strong>eco-counter</strong> as source type and a join processor with the <em>eco-counter-sites</em> dataset with <code>id</code> as local and remote key and <code>name</code> as return field.</li>
+</ul>
+<p><img src="processor.png" alt="processor setup"></p>
+<p>The view can then be copy-pasted in your <a href="https://help.opendatasoft.com/platform/en/publishing_data/07_configuring_visualizations/06_configuring_custom_view/custom.html#configuring-the-custom-view">visualization tab</a>.</p>
+
+    </div>
+    
+    <article class="block">
+      <h2 class="title is-2" id="widget-version">
+        Widget version 
+        <span class="tag is-rounded is-info">New</span>
+        
+        <a class="is-link anchor" href="#widget-version">
+          <span class="icon">
+            <img src="/img/fas-link.svg" />
+          </span>
+        </a>
+      </h2>
+      <div class="content">
+        <p>This version is made with basic and documented widgets options only. It should be fairly easy to modify the options should you need to—although it is ready to work as is.</p>
+
+      </div>
+      
+      <div class="box">
+        
+
+
+
+
+
+
+    
+    
+    
+
+
+
+
+<div class="codepen">
+    <form id="form-widget-version"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+                 "title": "New Pen!",
+                 "head": &#34;\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\u003e\n\u003clink rel=\&#34;stylesheet\&#34; href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\u003e\u003c/script\u003e\n\u003cscript type=\&#34;text/javascript\&#34; src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    const sourceMonitoringInterceptor = ($q) =\u003e {\n        return {\n            request: (config) =\u003e {\n                if (config.params)\n                    if (config.params.source)\n                        delete config.params.source;\n\n                config.url = config.url.replace(\&#34;ods-api-monitoring\&#34;, \&#34;monitoring-copy\&#34;);\n                return config;\n            }\n        }\n    }\n\n    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider, $httpProvider) {\n        ODSWidgetsConfigProvider.setConfig({\n            \&#34;defaultDomain\&#34;: \&#34;https://userclub.opendatasoft.com/\&#34;,\n            \&#34;basemaps\&#34;: [\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.light\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Light\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;\n                },\n                {\n                    \&#34;provider\&#34;: \&#34;jawg.streets\&#34;,\n                    \&#34;label\&#34;: \&#34;Jawg Streets\&#34;,\n                    \&#34;jawg_apikey\&#34;: \&#34;opendatasoft-community\&#34;,\n                    \&#34;id\&#34;: \&#34;streets\&#34;\n                }\n            ],\n            \&#34;themes\&#34;: {\n                &#39;default&#39;: {\n                    &#39;url&#39;: &#39;/img/ods.svg&#39;\n                },\n                &#39;Santé&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Culture, Patrimoine&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Environment&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Transports, Déplacements&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Justice, Sécurité, Police, Crime&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Sport, Loisirs&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Hébergement, Restauration&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Services, Social&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Checklist&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                },\n                &#39;Usages&#39;: {\n                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,\n                    &#39;color&#39;: &#39;#1446A0&#39;\n                }\n            },\n            \&#34;mapPrependAttribution\&#34;: \&#34;Jawg apikey NOT suitable for production\&#34;\n        });\n        $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n    document.addEventListener(\&#34;DOMContentLoaded\&#34;, function () {\n        document.querySelectorAll(&#39;a[href=\&#34;#\&#34;]&#39;).forEach((el) =\u003e {\n            el.addEventListener(&#39;click&#39;, (event) =\u003e {\n                event.preventDefault();\n            });\n        })\n    });\n\u003c/script\u003e\n&#34;,
+                 "editors": 110,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;ctx\&#34;\n ctx-dataset=\&#34;donnees-eco-compteur-tours-metropole\&#34;\n ctx-domain=\&#34;eco-compteur-odsapps\&#34;\u003e\n\n\u003cods-dataset-context\n  context=\&#34;sites, refinedsites\&#34;\n  sites-dataset=\&#34;sites-eco-compteur-tours-metropole\&#34;\n  sites-domain=\&#34;eco-compteur-odsapps\&#34;\n  refinedsites-dataset=\&#34;sites-eco-compteur-tours-metropole\&#34;\n  refinedsites-domain=\&#34;eco-compteur-odsapps\&#34;\n\u003e\n  {{ refinedsites.parameters[&#39;refine.name&#39;] = ctx.parameters[&#39;refine.name&#39;];\n  &#39;&#39;}}\n  \u003cdiv class=\&#34;container\&#34; ng-init=\&#34;mobileMap = false\&#34;\u003e\n    \u003cdiv id=\&#34;map-and-legend\&#34;\u003e\n      \u003cbutton\n        class=\&#34;button is-hidden-desktop\&#34;\n        id=\&#34;map-button\&#34;\n        ng-click=\&#34;mobileMap = !mobileMap\&#34;\n      \u003e\n        \u003cspan class=\&#34;icon-text\&#34;\u003e\n          \u003cspan\u003eCarte\u003c/span\u003e\n          \u003cspan class=\&#34;icon\&#34;\u003e\n            \u003ci ng-if=\&#34;!mobileMap\&#34; class=\&#34;fa fa-map\&#34;\u003e\u003c/i\u003e\n            \u003ci ng-if=\&#34;mobileMap\&#34; class=\&#34;fa fa-map\&#34;\u003e\u003c/i\u003e\n          \u003c/span\u003e\n        \u003c/span\u003e\n      \u003c/button\u003e\n      \u003cdiv\n        id=\&#34;map\&#34;\n        ng-class=\&#34;{&#39;is-visible&#39;: mobileMap}\&#34;\n        ods-color-gradient=\&#34;countgradient\&#34;\n        ods-color-gradient-context=\&#34;ctx\&#34;\n        ods-color-gradient-x=\&#34;name\&#34;\n        ods-color-gradient-serie=\&#34;SUM(counts)\&#34;\n        ods-color-gradient-high=\&#34;#142E7B\&#34;\n        ods-color-gradient-low=\&#34;#00C7B1\&#34;\n        ods-color-gradient-nb-classes=\&#34;10\&#34;\n        ods-color-gradient-pow-exponent=\&#34;0.1\&#34;\n      \u003e\n        \u003cods-map\n          scroll-wheel-zoom=\&#34;true\&#34;\n          location=\&#34;12,47.36755,0.64888\&#34;\n          toolbar-drawing=\&#34;false\&#34;\n          toolbar-fullscreen=\&#34;false\&#34;\n          toolbar-geolocation=\&#34;false\&#34;\n          display-control=\&#34;false\&#34;\n          display-control-single-layer=\&#34;false\&#34;\n        \u003e\n          \u003cods-map-layer-group\u003e\n            \u003cods-map-layer\n              context=\&#34;sites\&#34;\n              display=\&#34;categories\&#34;\n              expresion=\&#34;name\&#34;\n              color-categories=\&#34;countgradient[&#39;colors&#39;]\&#34;\n              color-categories-other=\&#34;rgb(207, 207, 207)\&#34;\n              color-by-field=\&#34;name\&#34;\n              picto=\&#34;ods-circle\&#34;\n              size=\&#34;3\&#34;\n              show-marker=\&#34;false\&#34;\n              refine-on-click-context=\&#34;[ctx,refinedsites]\&#34;\n              refine-on-click-ctx-map-field=\&#34;name\&#34;\n              refine-on-click-ctx-context-field=\&#34;name\&#34;\n              refine-on-click-ctx-replace-refine=\&#34;true\&#34;\n              refine-on-click-refinedsites-map-field=\&#34;name\&#34;\n              refine-on-click-refinedsites-context-field=\&#34;name\&#34;\n              refine-on-click-refinedsites-replace-refine=\&#34;true\&#34;\n            \u003e\u003c/ods-map-layer\u003e\n          \u003c/ods-map-layer-group\u003e\n          \u003cods-map-layer\n            context=\&#34;refinedsites\&#34;\n            show-if=\&#34;ctx.parameters[&#39;refine.name&#39;]\&#34;\n            color=\&#34;#142E7B\&#34;\n            tooltip-disabled=\&#34;true\&#34;\n          \u003e\n          \u003c/ods-map-layer\u003e\n        \u003c/ods-map\u003e\n        \u003cdiv id=\&#34;map-legend\&#34; ng-if=\&#34;!ctx.parameters[&#39;refine.name&#39;]\&#34;\u003e\n          \u003cods-legend\n            title=\&#34;Nombre de passages\&#34;\n            color-gradient=\&#34;countgradient\&#34;\n            display=\&#34;steps\&#34;\n            decimal-precision=\&#34;0\&#34;\n          \u003e\u003c/ods-legend\u003e\n        \u003c/div\u003e\n      \u003c/div\u003e\n      \u003cdiv id=\&#34;chart-header\&#34; class=\&#34;level is-size-3\&#34;\u003e\n        \u003cspan\u003eNombre total de passages comptés\u003c/span\u003e\n        \u003cspan class=\&#34;text-icon\&#34; ng-if=\&#34;ctx.parameters[&#39;refine.name&#39;]\&#34;\u003e\n          \u003cspan\u003e{{ ctx.parameters[&#39;refine.name&#39;] }}\u003c/span\u003e\n          \u003cbutton\n            class=\&#34;button icon-cta\&#34;\n            ng-click=\&#34;ctx.parameters[&#39;refine.name&#39;] = undefined; refinedsites.parameters[&#39;refine.name&#39;] = undefined\&#34;\n          \u003e\n            \u003cspan class=\&#34;icon\&#34;\u003e\u003ci class=\&#34;fa fa-times\&#34;\u003e\u003c/i\u003e\u003c/span\u003e\n          \u003c/button\u003e\n        \u003c/span\u003e\n      \u003c/div\u003e\n    \u003c/div\u003e\n    \u003cdiv id=\&#34;charts\&#34;\u003e\n      \u003cdiv id=\&#34;ranking\&#34; ng-class=\&#34;{&#39;is-hidden&#39;: ctx.parameters[&#39;refine.name&#39;]}\&#34;\u003e\n        \u003cods-chart\n          class=\&#34;hide-x-grid hide-y\&#34;\n          style=\&#34;height: {{ 40 * sites.dataset.metas.records_count }}px\&#34;\n          labels-x-length=\&#34;30\&#34;\n          single-y-axis=\&#34;true\&#34;\n        \u003e\n          \u003cods-chart-query\n            context=\&#34;ctx\&#34;\n            field-x=\&#34;name\&#34;\n            display-legend=\&#34;false\&#34;\n            sort=\&#34;serie1-1\&#34;\n          \u003e\n            \u003cods-chart-serie\n              chart-type=\&#34;bar\&#34;\n              expression-y=\&#34;counts\&#34;\n              function-y=\&#34;SUM\&#34;\n              color=\&#34;#142E7B\&#34;\n              refine-on-click-context=\&#34;ctx,refinedsites\&#34;\n              refine-on-click-ctx-context-field=\&#34;name\&#34;\n              refine-on-click-refinedsites-context-field=\&#34;name\&#34;\n              display-values=\&#34;true\&#34;\n            \u003e\u003c/ods-chart-serie\u003e\n          \u003c/ods-chart-query\u003e\n        \u003c/ods-chart\u003e\n      \u003c/div\u003e\n      \u003cdiv\n        id=\&#34;details\&#34;\n        ng-class=\&#34;{&#39;is-hidden&#39;: !ctx.parameters[&#39;refine.name&#39;] || map}\&#34;\n        ng-if=\&#34;ctx.parameters[&#39;refine.name&#39;]\&#34;\n      \u003e\n        \u003cods-chart\n          timescale=\&#34;day\&#34;\n          single-y-axis=\&#34;true\&#34;\n          align-month=\&#34;true\&#34;\n          display-legend=\&#34;false\&#34;\n        \u003e\n          \u003cods-chart-query\n            context=\&#34;ctx\&#34;\n            field-x=\&#34;date\&#34;\n            maxpoints=\&#34;0\&#34;\n            timescale=\&#34;day\&#34;\n          \u003e\n            \u003cods-chart-serie\n              chart-type=\&#34;spline\&#34;\n              expression-y=\&#34;counts\&#34;\n              function-y=\&#34;SUM\&#34;\n              color=\&#34;#142E7B\&#34;\n            \u003e\u003c/ods-chart-serie\u003e\n          \u003c/ods-chart-query\u003e\n        \u003c/ods-chart\u003e\n      \u003c/div\u003e\n    \u003c/div\u003e\n  \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+                 "css": &#34;html {\n  font-size: 16px;\n}\n\n/* ODS override */\n.highcharts-axis-labels span {\n  font-size: 13px !important;\n}\n\n.highcharts-point {\n  stroke: transparent !important;\n  rx: 8px;\n  width: 20px;\n}\n\n.highcharts-label text {\n  font-size: 13px !important;\n}\n\n.hide-y .highcharts-yaxis-grid path.highcharts-grid-line,\n.hide-y .highcharts-yaxis-labels text,\n.hide-y .highcharts-yaxis-labels span,\n.hide-y .highcharts-yaxis-labels,\n.hide-y .highcharts-legend,\n.hide-y .highcharts-axis-title {\n  display: none !important;\n}\n\n.hide-x-grid .highcharts-xaxis tspan,\n.hide-x-grid .highcharts-axis.highcharts-xaxis path.highcharts-axis-line,\n.hide-x-grid .highcharts-xaxis-grid path.highcharts-grid-line,\n.hide-x-grid .highcharts-tick {\n  display: none !important;\n}\n\n.leaflet-vectormarker-singleicon {\n  stroke: black;\n}\n\n/* Utilites */\n.is-hidden {\n  visibility: hidden;\n  display: none;\n}\n\n@media screen and (min-width: 993px) {\n  .is-hidden-desktop {\n    display: none !important;\n    visibility: hidden !important;\n  }\n}\n\n.is-size-3 {\n  font-size: 1.2rem;\n}\n\n@media screen and (max-width: 992px) {\n  .is-size-3 {\n    font-size: 1rem;\n  }\n}\n\n.level {\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: space-between;\n  align-items: baseline;\n}\n\n/* Elements */\n.text-icon {\n  display: inline-flex;\n  align-items: center;\n  justify-content: space-between;\n}\n\n.icon {\n  font-size: 1em;\n}\n\n.button {\n  display: inline-flex;\n  justify-content: center;\n  align-items: center;\n  border-radius: 999px;\n  background-color: #142e7b;\n  color: white;\n  border: none;\n  padding: 0.5em 1em;\n}\n\n.button:not(:first-child) {\n  margin-left: 0.25em;\n}\n\n.icon-cta {\n  border: none;\n  height: 1.5em;\n  width: 1.5em;\n  background-color: transparent;\n  color: black;\n  padding: 8px;\n}\n\n.icon-cta:hover {\n  background-color: #cbd2db;\n}\n\n/* Layout \u0026 Components */\n.container {\n  position: relative;\n  max-width: 992px;\n}\n\n#chart-header {\n  background: white;\n  padding: 8px;\n  border-bottom: 1px solid;\n}\n\n#charts {\n  position: relative;\n  width: 100%;\n  height: 400px;\n  overflow-y: scroll;\n  overflow-x: hidden;\n}\n\n@media screen and (max-width: 992px) {\n  #charts {\n    height: 100%;\n  }\n\n  #charts.is-hidden {\n    height: 0;\n  }\n}\n\n#details {\n  position: absolute;\n  top: 0;\n  right: 0;\n  width: 100%;\n  padding: 16px 0;\n  opacity: 1;\n  transition: right 200ms 200ms ease-in-out;\n}\n\n#details.is-hidden {\n  right: -100%;\n  opacity: 0;\n  transition: all 200ms 200ms ease-in-out;\n}\n\n#ranking {\n  position: relative;\n  width: 100%;\n  color: #565656;\n}\n\n#ranking p:first-child {\n  border-bottom: 1px solid;\n}\n\n#ranking.is-hidden {\n  left: -100%;\n  opacity: 0;\n}\n\n#map {\n  height: 432px;\n  padding: 16px 0;\n  background: white;\n}\n\n@media screen and (max-width: 992px) {\n  #map {\n    visibility: hidden;\n    height: 0;\n    padding: 0;\n  }\n\n  #map.is-visible {\n    visibility: visible;\n    height: 432px;\n    padding: 16px 0;\n  }\n}\n\n#map-and-legend {\n  position: sticky;\n  top: 0;\n  z-index: 3;\n}\n\n#map-legend {\n  position: absolute;\n  bottom: 80px;\n  right: 8px;\n  background: white;\n  border: 1px solid #565656;\n  z-index: 10;\n}\n\n@media screen and (max-width: 992px) {\n  #map-legend {\n    width: 100%;\n    right: 0;\n    bottom: 88px;\n    border: none;\n  }\n\n  #map-legend .odswidget-legend__title {\n    font-size: 0.8rem;\n  }\n\n  #map-legend .odswidget-legend__indexes {\n    flex-direction: row;\n    flex-wrap: wrap;\n  }\n\n  #map-legend .odswidget-legend__index-circle {\n    height: 1em;\n    width: 1em;\n  }\n}\n\n#map-button {\n  display: block;\n  margin: 8px 0;\n  width: 100%;\n}\n&#34;
+               }'>
+    </form>
+</div>
+<div class="ods-content">
+    <div class="box-live-example"
+      style="height: 800px;">
+      <iframe id="iframe-widget-version"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+                <head>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;&gt;
+&lt;link rel=&#34;stylesheet&#34; href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;&gt;&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34; src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    const sourceMonitoringInterceptor = ($q) =&gt; {
+        return {
+            request: (config) =&gt; {
+                if (config.params)
+                    if (config.params.source)
+                        delete config.params.source;
+
+                config.url = config.url.replace(&#34;ods-api-monitoring&#34;, &#34;monitoring-copy&#34;);
+                return config;
+            }
+        }
+    }
+
+    angular.module(&#39;ods-widgets&#39;).config(function (ODSWidgetsConfigProvider, $httpProvider) {
+        ODSWidgetsConfigProvider.setConfig({
+            &#34;defaultDomain&#34;: &#34;https://userclub.opendatasoft.com/&#34;,
+            &#34;basemaps&#34;: [
+                {
+                    &#34;provider&#34;: &#34;jawg.light&#34;,
+                    &#34;label&#34;: &#34;Jawg Light&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;
+                },
+                {
+                    &#34;provider&#34;: &#34;jawg.streets&#34;,
+                    &#34;label&#34;: &#34;Jawg Streets&#34;,
+                    &#34;jawg_apikey&#34;: &#34;opendatasoft-community&#34;,
+                    &#34;id&#34;: &#34;streets&#34;
+                }
+            ],
+            &#34;themes&#34;: {
+                &#39;default&#39;: {
+                    &#39;url&#39;: &#39;/img/ods.svg&#39;
+                },
+                &#39;Santé&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Culture, Patrimoine&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Éducation, Formation, Recherche, Enseignement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Environment&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Transports, Déplacements&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Économie, Business, PME, Développement économique, Emploi&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Administration, Gouvernement, Finances publiques, Citoyenneté&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Justice, Sécurité, Police, Crime&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Sport, Loisirs&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Hébergement, Restauration&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Services, Social&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Checklist&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                },
+                &#39;Usages&#39;: {
+                    &#39;url&#39;: &#39;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#39;,
+                    &#39;color&#39;: &#39;#1446A0&#39;
+                }
+            },
+            &#34;mapPrependAttribution&#34;: &#34;Jawg apikey NOT suitable for production&#34;
+        });
+        $httpProvider.interceptors.push(sourceMonitoringInterceptor);
+    });
+&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+    document.addEventListener(&#34;DOMContentLoaded&#34;, function () {
+        document.querySelectorAll(&#39;a[href=&#34;#&#34;]&#39;).forEach((el) =&gt; {
+            el.addEventListener(&#39;click&#39;, (event) =&gt; {
+                event.preventDefault();
+            });
+        })
+    });
+&lt;/script&gt;
+</head>
+                <body>
+                <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
+&lt;ods-dataset-context context=&#34;ctx&#34;
+ ctx-dataset=&#34;donnees-eco-compteur-tours-metropole&#34;
+ ctx-domain=&#34;eco-compteur-odsapps&#34;&gt;
+
+&lt;ods-dataset-context
+  context=&#34;sites, refinedsites&#34;
+  sites-dataset=&#34;sites-eco-compteur-tours-metropole&#34;
+  sites-domain=&#34;eco-compteur-odsapps&#34;
+  refinedsites-dataset=&#34;sites-eco-compteur-tours-metropole&#34;
+  refinedsites-domain=&#34;eco-compteur-odsapps&#34;
+&gt;
+  {{ refinedsites.parameters[&#39;refine.name&#39;] = ctx.parameters[&#39;refine.name&#39;];
+  &#39;&#39;}}
+  &lt;div class=&#34;container&#34; ng-init=&#34;mobileMap = false&#34;&gt;
+    &lt;div id=&#34;map-and-legend&#34;&gt;
+      &lt;button
+        class=&#34;button is-hidden-desktop&#34;
+        id=&#34;map-button&#34;
+        ng-click=&#34;mobileMap = !mobileMap&#34;
+      &gt;
+        &lt;span class=&#34;icon-text&#34;&gt;
+          &lt;span&gt;Carte&lt;/span&gt;
+          &lt;span class=&#34;icon&#34;&gt;
+            &lt;i ng-if=&#34;!mobileMap&#34; class=&#34;fa fa-map&#34;&gt;&lt;/i&gt;
+            &lt;i ng-if=&#34;mobileMap&#34; class=&#34;fa fa-map&#34;&gt;&lt;/i&gt;
+          &lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/button&gt;
+      &lt;div
+        id=&#34;map&#34;
+        ng-class=&#34;{&#39;is-visible&#39;: mobileMap}&#34;
+        ods-color-gradient=&#34;countgradient&#34;
+        ods-color-gradient-context=&#34;ctx&#34;
+        ods-color-gradient-x=&#34;name&#34;
+        ods-color-gradient-serie=&#34;SUM(counts)&#34;
+        ods-color-gradient-high=&#34;#142E7B&#34;
+        ods-color-gradient-low=&#34;#00C7B1&#34;
+        ods-color-gradient-nb-classes=&#34;10&#34;
+        ods-color-gradient-pow-exponent=&#34;0.1&#34;
+      &gt;
+        &lt;ods-map
+          scroll-wheel-zoom=&#34;true&#34;
+          location=&#34;12,47.36755,0.64888&#34;
+          toolbar-drawing=&#34;false&#34;
+          toolbar-fullscreen=&#34;false&#34;
+          toolbar-geolocation=&#34;false&#34;
+          display-control=&#34;false&#34;
+          display-control-single-layer=&#34;false&#34;
+        &gt;
+          &lt;ods-map-layer-group&gt;
+            &lt;ods-map-layer
+              context=&#34;sites&#34;
+              display=&#34;categories&#34;
+              expresion=&#34;name&#34;
+              color-categories=&#34;countgradient[&#39;colors&#39;]&#34;
+              color-categories-other=&#34;rgb(207, 207, 207)&#34;
+              color-by-field=&#34;name&#34;
+              picto=&#34;ods-circle&#34;
+              size=&#34;3&#34;
+              show-marker=&#34;false&#34;
+              refine-on-click-context=&#34;[ctx,refinedsites]&#34;
+              refine-on-click-ctx-map-field=&#34;name&#34;
+              refine-on-click-ctx-context-field=&#34;name&#34;
+              refine-on-click-ctx-replace-refine=&#34;true&#34;
+              refine-on-click-refinedsites-map-field=&#34;name&#34;
+              refine-on-click-refinedsites-context-field=&#34;name&#34;
+              refine-on-click-refinedsites-replace-refine=&#34;true&#34;
+            &gt;&lt;/ods-map-layer&gt;
+          &lt;/ods-map-layer-group&gt;
+          &lt;ods-map-layer
+            context=&#34;refinedsites&#34;
+            show-if=&#34;ctx.parameters[&#39;refine.name&#39;]&#34;
+            color=&#34;#142E7B&#34;
+            tooltip-disabled=&#34;true&#34;
+          &gt;
+          &lt;/ods-map-layer&gt;
+        &lt;/ods-map&gt;
+        &lt;div id=&#34;map-legend&#34; ng-if=&#34;!ctx.parameters[&#39;refine.name&#39;]&#34;&gt;
+          &lt;ods-legend
+            title=&#34;Nombre de passages&#34;
+            color-gradient=&#34;countgradient&#34;
+            display=&#34;steps&#34;
+            decimal-precision=&#34;0&#34;
+          &gt;&lt;/ods-legend&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div id=&#34;chart-header&#34; class=&#34;level is-size-3&#34;&gt;
+        &lt;span&gt;Nombre total de passages comptés&lt;/span&gt;
+        &lt;span class=&#34;text-icon&#34; ng-if=&#34;ctx.parameters[&#39;refine.name&#39;]&#34;&gt;
+          &lt;span&gt;{{ ctx.parameters[&#39;refine.name&#39;] }}&lt;/span&gt;
+          &lt;button
+            class=&#34;button icon-cta&#34;
+            ng-click=&#34;ctx.parameters[&#39;refine.name&#39;] = undefined; refinedsites.parameters[&#39;refine.name&#39;] = undefined&#34;
+          &gt;
+            &lt;span class=&#34;icon&#34;&gt;&lt;i class=&#34;fa fa-times&#34;&gt;&lt;/i&gt;&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id=&#34;charts&#34;&gt;
+      &lt;div id=&#34;ranking&#34; ng-class=&#34;{&#39;is-hidden&#39;: ctx.parameters[&#39;refine.name&#39;]}&#34;&gt;
+        &lt;ods-chart
+          class=&#34;hide-x-grid hide-y&#34;
+          style=&#34;height: {{ 40 * sites.dataset.metas.records_count }}px&#34;
+          labels-x-length=&#34;30&#34;
+          single-y-axis=&#34;true&#34;
+        &gt;
+          &lt;ods-chart-query
+            context=&#34;ctx&#34;
+            field-x=&#34;name&#34;
+            display-legend=&#34;false&#34;
+            sort=&#34;serie1-1&#34;
+          &gt;
+            &lt;ods-chart-serie
+              chart-type=&#34;bar&#34;
+              expression-y=&#34;counts&#34;
+              function-y=&#34;SUM&#34;
+              color=&#34;#142E7B&#34;
+              refine-on-click-context=&#34;ctx,refinedsites&#34;
+              refine-on-click-ctx-context-field=&#34;name&#34;
+              refine-on-click-refinedsites-context-field=&#34;name&#34;
+              display-values=&#34;true&#34;
+            &gt;&lt;/ods-chart-serie&gt;
+          &lt;/ods-chart-query&gt;
+        &lt;/ods-chart&gt;
+      &lt;/div&gt;
+      &lt;div
+        id=&#34;details&#34;
+        ng-class=&#34;{&#39;is-hidden&#39;: !ctx.parameters[&#39;refine.name&#39;] || map}&#34;
+        ng-if=&#34;ctx.parameters[&#39;refine.name&#39;]&#34;
+      &gt;
+        &lt;ods-chart
+          timescale=&#34;day&#34;
+          single-y-axis=&#34;true&#34;
+          align-month=&#34;true&#34;
+          display-legend=&#34;false&#34;
+        &gt;
+          &lt;ods-chart-query
+            context=&#34;ctx&#34;
+            field-x=&#34;date&#34;
+            maxpoints=&#34;0&#34;
+            timescale=&#34;day&#34;
+          &gt;
+            &lt;ods-chart-serie
+              chart-type=&#34;spline&#34;
+              expression-y=&#34;counts&#34;
+              function-y=&#34;SUM&#34;
+              color=&#34;#142E7B&#34;
+            &gt;&lt;/ods-chart-serie&gt;
+          &lt;/ods-chart-query&gt;
+        &lt;/ods-chart&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+
+&lt;/ods-dataset-context&gt;
+&lt;/div&gt;</div>
+                <style type='text/css'>
+                    html {
+  font-size: 16px;
+}
+
+/* ODS override */
+.highcharts-axis-labels span {
+  font-size: 13px !important;
+}
+
+.highcharts-point {
+  stroke: transparent !important;
+  rx: 8px;
+  width: 20px;
+}
+
+.highcharts-label text {
+  font-size: 13px !important;
+}
+
+.hide-y .highcharts-yaxis-grid path.highcharts-grid-line,
+.hide-y .highcharts-yaxis-labels text,
+.hide-y .highcharts-yaxis-labels span,
+.hide-y .highcharts-yaxis-labels,
+.hide-y .highcharts-legend,
+.hide-y .highcharts-axis-title {
+  display: none !important;
+}
+
+.hide-x-grid .highcharts-xaxis tspan,
+.hide-x-grid .highcharts-axis.highcharts-xaxis path.highcharts-axis-line,
+.hide-x-grid .highcharts-xaxis-grid path.highcharts-grid-line,
+.hide-x-grid .highcharts-tick {
+  display: none !important;
+}
+
+.leaflet-vectormarker-singleicon {
+  stroke: black;
+}
+
+/* Utilites */
+.is-hidden {
+  visibility: hidden;
+  display: none;
+}
+
+@media screen and (min-width: 993px) {
+  .is-hidden-desktop {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+.is-size-3 {
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 992px) {
+  .is-size-3 {
+    font-size: 1rem;
+  }
+}
+
+.level {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+/* Elements */
+.text-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon {
+  font-size: 1em;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  background-color: #142e7b;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+}
+
+.button:not(:first-child) {
+  margin-left: 0.25em;
+}
+
+.icon-cta {
+  border: none;
+  height: 1.5em;
+  width: 1.5em;
+  background-color: transparent;
+  color: black;
+  padding: 8px;
+}
+
+.icon-cta:hover {
+  background-color: #cbd2db;
+}
+
+/* Layout &amp; Components */
+.container {
+  position: relative;
+  max-width: 992px;
+}
+
+#chart-header {
+  background: white;
+  padding: 8px;
+  border-bottom: 1px solid;
+}
+
+#charts {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 992px) {
+  #charts {
+    height: 100%;
+  }
+
+  #charts.is-hidden {
+    height: 0;
+  }
+}
+
+#details {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 16px 0;
+  opacity: 1;
+  transition: right 200ms 200ms ease-in-out;
+}
+
+#details.is-hidden {
+  right: -100%;
+  opacity: 0;
+  transition: all 200ms 200ms ease-in-out;
+}
+
+#ranking {
+  position: relative;
+  width: 100%;
+  color: #565656;
+}
+
+#ranking p:first-child {
+  border-bottom: 1px solid;
+}
+
+#ranking.is-hidden {
+  left: -100%;
+  opacity: 0;
+}
+
+#map {
+  height: 432px;
+  padding: 16px 0;
+  background: white;
+}
+
+@media screen and (max-width: 992px) {
+  #map {
+    visibility: hidden;
+    height: 0;
+    padding: 0;
+  }
+
+  #map.is-visible {
+    visibility: visible;
+    height: 432px;
+    padding: 16px 0;
+  }
+}
+
+#map-and-legend {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+#map-legend {
+  position: absolute;
+  bottom: 80px;
+  right: 8px;
+  background: white;
+  border: 1px solid #565656;
+  z-index: 10;
+}
+
+@media screen and (max-width: 992px) {
+  #map-legend {
+    width: 100%;
+    right: 0;
+    bottom: 88px;
+    border: none;
+  }
+
+  #map-legend .odswidget-legend__title {
+    font-size: 0.8rem;
+  }
+
+  #map-legend .odswidget-legend__indexes {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #map-legend .odswidget-legend__index-circle {
+    height: 1em;
+    width: 1em;
+  }
+}
+
+#map-button {
+  display: block;
+  margin: 8px 0;
+  width: 100%;
+}
+
+                </style>
+                </body>
+              ">
+      </iframe>
+      <div class="show-code buttons has-addons">
+          <button class="button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-widget-version').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    <div class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
+            <div class="level-left">
+                <div class="level-item">
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-widget-version-html-content"
+                        >
+                          HTML
+                        </a>
+                        
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-widget-version-css-content"
+                        >
+                          CSS
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
+            </div>
+        </nav>
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-widget-version-html-content"
+                 data-clipboard="&lt;ods-dataset-context
+  context=&#34;sites, refinedsites&#34;
+  sites-dataset=&#34;sites-eco-compteur-tours-metropole&#34;
+  sites-domain=&#34;eco-compteur-odsapps&#34;
+  refinedsites-dataset=&#34;sites-eco-compteur-tours-metropole&#34;
+  refinedsites-domain=&#34;eco-compteur-odsapps&#34;
+&gt;
+  {{ refinedsites.parameters[&#39;refine.name&#39;] = ctx.parameters[&#39;refine.name&#39;];
+  &#39;&#39;}}
+  &lt;div class=&#34;container&#34; ng-init=&#34;mobileMap = false&#34;&gt;
+    &lt;div id=&#34;map-and-legend&#34;&gt;
+      &lt;button
+        class=&#34;button is-hidden-desktop&#34;
+        id=&#34;map-button&#34;
+        ng-click=&#34;mobileMap = !mobileMap&#34;
+      &gt;
+        &lt;span class=&#34;icon-text&#34;&gt;
+          &lt;span&gt;Carte&lt;/span&gt;
+          &lt;span class=&#34;icon&#34;&gt;
+            &lt;i ng-if=&#34;!mobileMap&#34; class=&#34;fa fa-map&#34;&gt;&lt;/i&gt;
+            &lt;i ng-if=&#34;mobileMap&#34; class=&#34;fa fa-map&#34;&gt;&lt;/i&gt;
+          &lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/button&gt;
+      &lt;div
+        id=&#34;map&#34;
+        ng-class=&#34;{&#39;is-visible&#39;: mobileMap}&#34;
+        ods-color-gradient=&#34;countgradient&#34;
+        ods-color-gradient-context=&#34;ctx&#34;
+        ods-color-gradient-x=&#34;name&#34;
+        ods-color-gradient-serie=&#34;SUM(counts)&#34;
+        ods-color-gradient-high=&#34;#142E7B&#34;
+        ods-color-gradient-low=&#34;#00C7B1&#34;
+        ods-color-gradient-nb-classes=&#34;10&#34;
+        ods-color-gradient-pow-exponent=&#34;0.1&#34;
+      &gt;
+        &lt;ods-map
+          scroll-wheel-zoom=&#34;true&#34;
+          location=&#34;12,47.36755,0.64888&#34;
+          toolbar-drawing=&#34;false&#34;
+          toolbar-fullscreen=&#34;false&#34;
+          toolbar-geolocation=&#34;false&#34;
+          display-control=&#34;false&#34;
+          display-control-single-layer=&#34;false&#34;
+        &gt;
+          &lt;ods-map-layer-group&gt;
+            &lt;ods-map-layer
+              context=&#34;sites&#34;
+              display=&#34;categories&#34;
+              expresion=&#34;name&#34;
+              color-categories=&#34;countgradient[&#39;colors&#39;]&#34;
+              color-categories-other=&#34;rgb(207, 207, 207)&#34;
+              color-by-field=&#34;name&#34;
+              picto=&#34;ods-circle&#34;
+              size=&#34;3&#34;
+              show-marker=&#34;false&#34;
+              refine-on-click-context=&#34;[ctx,refinedsites]&#34;
+              refine-on-click-ctx-map-field=&#34;name&#34;
+              refine-on-click-ctx-context-field=&#34;name&#34;
+              refine-on-click-ctx-replace-refine=&#34;true&#34;
+              refine-on-click-refinedsites-map-field=&#34;name&#34;
+              refine-on-click-refinedsites-context-field=&#34;name&#34;
+              refine-on-click-refinedsites-replace-refine=&#34;true&#34;
+            &gt;&lt;/ods-map-layer&gt;
+          &lt;/ods-map-layer-group&gt;
+          &lt;ods-map-layer
+            context=&#34;refinedsites&#34;
+            show-if=&#34;ctx.parameters[&#39;refine.name&#39;]&#34;
+            color=&#34;#142E7B&#34;
+            tooltip-disabled=&#34;true&#34;
+          &gt;
+          &lt;/ods-map-layer&gt;
+        &lt;/ods-map&gt;
+        &lt;div id=&#34;map-legend&#34; ng-if=&#34;!ctx.parameters[&#39;refine.name&#39;]&#34;&gt;
+          &lt;ods-legend
+            title=&#34;Nombre de passages&#34;
+            color-gradient=&#34;countgradient&#34;
+            display=&#34;steps&#34;
+            decimal-precision=&#34;0&#34;
+          &gt;&lt;/ods-legend&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div id=&#34;chart-header&#34; class=&#34;level is-size-3&#34;&gt;
+        &lt;span&gt;Nombre total de passages comptés&lt;/span&gt;
+        &lt;span class=&#34;text-icon&#34; ng-if=&#34;ctx.parameters[&#39;refine.name&#39;]&#34;&gt;
+          &lt;span&gt;{{ ctx.parameters[&#39;refine.name&#39;] }}&lt;/span&gt;
+          &lt;button
+            class=&#34;button icon-cta&#34;
+            ng-click=&#34;ctx.parameters[&#39;refine.name&#39;] = undefined; refinedsites.parameters[&#39;refine.name&#39;] = undefined&#34;
+          &gt;
+            &lt;span class=&#34;icon&#34;&gt;&lt;i class=&#34;fa fa-times&#34;&gt;&lt;/i&gt;&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id=&#34;charts&#34;&gt;
+      &lt;div id=&#34;ranking&#34; ng-class=&#34;{&#39;is-hidden&#39;: ctx.parameters[&#39;refine.name&#39;]}&#34;&gt;
+        &lt;ods-chart
+          class=&#34;hide-x-grid hide-y&#34;
+          style=&#34;height: {{ 40 * sites.dataset.metas.records_count }}px&#34;
+          labels-x-length=&#34;30&#34;
+          single-y-axis=&#34;true&#34;
+        &gt;
+          &lt;ods-chart-query
+            context=&#34;ctx&#34;
+            field-x=&#34;name&#34;
+            display-legend=&#34;false&#34;
+            sort=&#34;serie1-1&#34;
+          &gt;
+            &lt;ods-chart-serie
+              chart-type=&#34;bar&#34;
+              expression-y=&#34;counts&#34;
+              function-y=&#34;SUM&#34;
+              color=&#34;#142E7B&#34;
+              refine-on-click-context=&#34;ctx,refinedsites&#34;
+              refine-on-click-ctx-context-field=&#34;name&#34;
+              refine-on-click-refinedsites-context-field=&#34;name&#34;
+              display-values=&#34;true&#34;
+            &gt;&lt;/ods-chart-serie&gt;
+          &lt;/ods-chart-query&gt;
+        &lt;/ods-chart&gt;
+      &lt;/div&gt;
+      &lt;div
+        id=&#34;details&#34;
+        ng-class=&#34;{&#39;is-hidden&#39;: !ctx.parameters[&#39;refine.name&#39;] || map}&#34;
+        ng-if=&#34;ctx.parameters[&#39;refine.name&#39;]&#34;
+      &gt;
+        &lt;ods-chart
+          timescale=&#34;day&#34;
+          single-y-axis=&#34;true&#34;
+          align-month=&#34;true&#34;
+          display-legend=&#34;false&#34;
+        &gt;
+          &lt;ods-chart-query
+            context=&#34;ctx&#34;
+            field-x=&#34;date&#34;
+            maxpoints=&#34;0&#34;
+            timescale=&#34;day&#34;
+          &gt;
+            &lt;ods-chart-serie
+              chart-type=&#34;spline&#34;
+              expression-y=&#34;counts&#34;
+              function-y=&#34;SUM&#34;
+              color=&#34;#142E7B&#34;
+            &gt;&lt;/ods-chart-serie&gt;
+          &lt;/ods-chart-query&gt;
+        &lt;/ods-chart&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+"
+                 role="tabpanel">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context
+  context=&#34;sites, refinedsites&#34;
+  sites-dataset=&#34;sites-eco-compteur-tours-metropole&#34;
+  sites-domain=&#34;eco-compteur-odsapps&#34;
+  refinedsites-dataset=&#34;sites-eco-compteur-tours-metropole&#34;
+  refinedsites-domain=&#34;eco-compteur-odsapps&#34;
+&gt;
+  {{ refinedsites.parameters[&#39;refine.name&#39;] = ctx.parameters[&#39;refine.name&#39;];
+  &#39;&#39;}}
+  &lt;div class=&#34;container&#34; ng-init=&#34;mobileMap = false&#34;&gt;
+    &lt;div id=&#34;map-and-legend&#34;&gt;
+      &lt;button
+        class=&#34;button is-hidden-desktop&#34;
+        id=&#34;map-button&#34;
+        ng-click=&#34;mobileMap = !mobileMap&#34;
+      &gt;
+        &lt;span class=&#34;icon-text&#34;&gt;
+          &lt;span&gt;Carte&lt;/span&gt;
+          &lt;span class=&#34;icon&#34;&gt;
+            &lt;i ng-if=&#34;!mobileMap&#34; class=&#34;fa fa-map&#34;&gt;&lt;/i&gt;
+            &lt;i ng-if=&#34;mobileMap&#34; class=&#34;fa fa-map&#34;&gt;&lt;/i&gt;
+          &lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/button&gt;
+      &lt;div
+        id=&#34;map&#34;
+        ng-class=&#34;{&#39;is-visible&#39;: mobileMap}&#34;
+        ods-color-gradient=&#34;countgradient&#34;
+        ods-color-gradient-context=&#34;ctx&#34;
+        ods-color-gradient-x=&#34;name&#34;
+        ods-color-gradient-serie=&#34;SUM(counts)&#34;
+        ods-color-gradient-high=&#34;#142E7B&#34;
+        ods-color-gradient-low=&#34;#00C7B1&#34;
+        ods-color-gradient-nb-classes=&#34;10&#34;
+        ods-color-gradient-pow-exponent=&#34;0.1&#34;
+      &gt;
+        &lt;ods-map
+          scroll-wheel-zoom=&#34;true&#34;
+          location=&#34;12,47.36755,0.64888&#34;
+          toolbar-drawing=&#34;false&#34;
+          toolbar-fullscreen=&#34;false&#34;
+          toolbar-geolocation=&#34;false&#34;
+          display-control=&#34;false&#34;
+          display-control-single-layer=&#34;false&#34;
+        &gt;
+          &lt;ods-map-layer-group&gt;
+            &lt;ods-map-layer
+              context=&#34;sites&#34;
+              display=&#34;categories&#34;
+              expresion=&#34;name&#34;
+              color-categories=&#34;countgradient[&#39;colors&#39;]&#34;
+              color-categories-other=&#34;rgb(207, 207, 207)&#34;
+              color-by-field=&#34;name&#34;
+              picto=&#34;ods-circle&#34;
+              size=&#34;3&#34;
+              show-marker=&#34;false&#34;
+              refine-on-click-context=&#34;[ctx,refinedsites]&#34;
+              refine-on-click-ctx-map-field=&#34;name&#34;
+              refine-on-click-ctx-context-field=&#34;name&#34;
+              refine-on-click-ctx-replace-refine=&#34;true&#34;
+              refine-on-click-refinedsites-map-field=&#34;name&#34;
+              refine-on-click-refinedsites-context-field=&#34;name&#34;
+              refine-on-click-refinedsites-replace-refine=&#34;true&#34;
+            &gt;&lt;/ods-map-layer&gt;
+          &lt;/ods-map-layer-group&gt;
+          &lt;ods-map-layer
+            context=&#34;refinedsites&#34;
+            show-if=&#34;ctx.parameters[&#39;refine.name&#39;]&#34;
+            color=&#34;#142E7B&#34;
+            tooltip-disabled=&#34;true&#34;
+          &gt;
+          &lt;/ods-map-layer&gt;
+        &lt;/ods-map&gt;
+        &lt;div id=&#34;map-legend&#34; ng-if=&#34;!ctx.parameters[&#39;refine.name&#39;]&#34;&gt;
+          &lt;ods-legend
+            title=&#34;Nombre de passages&#34;
+            color-gradient=&#34;countgradient&#34;
+            display=&#34;steps&#34;
+            decimal-precision=&#34;0&#34;
+          &gt;&lt;/ods-legend&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      &lt;div id=&#34;chart-header&#34; class=&#34;level is-size-3&#34;&gt;
+        &lt;span&gt;Nombre total de passages comptés&lt;/span&gt;
+        &lt;span class=&#34;text-icon&#34; ng-if=&#34;ctx.parameters[&#39;refine.name&#39;]&#34;&gt;
+          &lt;span&gt;{{ ctx.parameters[&#39;refine.name&#39;] }}&lt;/span&gt;
+          &lt;button
+            class=&#34;button icon-cta&#34;
+            ng-click=&#34;ctx.parameters[&#39;refine.name&#39;] = undefined; refinedsites.parameters[&#39;refine.name&#39;] = undefined&#34;
+          &gt;
+            &lt;span class=&#34;icon&#34;&gt;&lt;i class=&#34;fa fa-times&#34;&gt;&lt;/i&gt;&lt;/span&gt;
+          &lt;/button&gt;
+        &lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div id=&#34;charts&#34;&gt;
+      &lt;div id=&#34;ranking&#34; ng-class=&#34;{&#39;is-hidden&#39;: ctx.parameters[&#39;refine.name&#39;]}&#34;&gt;
+        &lt;ods-chart
+          class=&#34;hide-x-grid hide-y&#34;
+          style=&#34;height: {{ 40 * sites.dataset.metas.records_count }}px&#34;
+          labels-x-length=&#34;30&#34;
+          single-y-axis=&#34;true&#34;
+        &gt;
+          &lt;ods-chart-query
+            context=&#34;ctx&#34;
+            field-x=&#34;name&#34;
+            display-legend=&#34;false&#34;
+            sort=&#34;serie1-1&#34;
+          &gt;
+            &lt;ods-chart-serie
+              chart-type=&#34;bar&#34;
+              expression-y=&#34;counts&#34;
+              function-y=&#34;SUM&#34;
+              color=&#34;#142E7B&#34;
+              refine-on-click-context=&#34;ctx,refinedsites&#34;
+              refine-on-click-ctx-context-field=&#34;name&#34;
+              refine-on-click-refinedsites-context-field=&#34;name&#34;
+              display-values=&#34;true&#34;
+            &gt;&lt;/ods-chart-serie&gt;
+          &lt;/ods-chart-query&gt;
+        &lt;/ods-chart&gt;
+      &lt;/div&gt;
+      &lt;div
+        id=&#34;details&#34;
+        ng-class=&#34;{&#39;is-hidden&#39;: !ctx.parameters[&#39;refine.name&#39;] || map}&#34;
+        ng-if=&#34;ctx.parameters[&#39;refine.name&#39;]&#34;
+      &gt;
+        &lt;ods-chart
+          timescale=&#34;day&#34;
+          single-y-axis=&#34;true&#34;
+          align-month=&#34;true&#34;
+          display-legend=&#34;false&#34;
+        &gt;
+          &lt;ods-chart-query
+            context=&#34;ctx&#34;
+            field-x=&#34;date&#34;
+            maxpoints=&#34;0&#34;
+            timescale=&#34;day&#34;
+          &gt;
+            &lt;ods-chart-serie
+              chart-type=&#34;spline&#34;
+              expression-y=&#34;counts&#34;
+              function-y=&#34;SUM&#34;
+              color=&#34;#142E7B&#34;
+            &gt;&lt;/ods-chart-serie&gt;
+          &lt;/ods-chart-query&gt;
+        &lt;/ods-chart&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/ods-dataset-context&gt;
+</code></pre>
+                </div>
+            </div>
+            
+            <div class="js-tabcontent"
+                 id="code-widget-version-css-content"
+                 data-clipboard="html {
+  font-size: 16px;
+}
+
+/* ODS override */
+.highcharts-axis-labels span {
+  font-size: 13px !important;
+}
+
+.highcharts-point {
+  stroke: transparent !important;
+  rx: 8px;
+  width: 20px;
+}
+
+.highcharts-label text {
+  font-size: 13px !important;
+}
+
+.hide-y .highcharts-yaxis-grid path.highcharts-grid-line,
+.hide-y .highcharts-yaxis-labels text,
+.hide-y .highcharts-yaxis-labels span,
+.hide-y .highcharts-yaxis-labels,
+.hide-y .highcharts-legend,
+.hide-y .highcharts-axis-title {
+  display: none !important;
+}
+
+.hide-x-grid .highcharts-xaxis tspan,
+.hide-x-grid .highcharts-axis.highcharts-xaxis path.highcharts-axis-line,
+.hide-x-grid .highcharts-xaxis-grid path.highcharts-grid-line,
+.hide-x-grid .highcharts-tick {
+  display: none !important;
+}
+
+.leaflet-vectormarker-singleicon {
+  stroke: black;
+}
+
+/* Utilites */
+.is-hidden {
+  visibility: hidden;
+  display: none;
+}
+
+@media screen and (min-width: 993px) {
+  .is-hidden-desktop {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+.is-size-3 {
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 992px) {
+  .is-size-3 {
+    font-size: 1rem;
+  }
+}
+
+.level {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+/* Elements */
+.text-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon {
+  font-size: 1em;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  background-color: #142e7b;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+}
+
+.button:not(:first-child) {
+  margin-left: 0.25em;
+}
+
+.icon-cta {
+  border: none;
+  height: 1.5em;
+  width: 1.5em;
+  background-color: transparent;
+  color: black;
+  padding: 8px;
+}
+
+.icon-cta:hover {
+  background-color: #cbd2db;
+}
+
+/* Layout &amp; Components */
+.container {
+  position: relative;
+  max-width: 992px;
+}
+
+#chart-header {
+  background: white;
+  padding: 8px;
+  border-bottom: 1px solid;
+}
+
+#charts {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 992px) {
+  #charts {
+    height: 100%;
+  }
+
+  #charts.is-hidden {
+    height: 0;
+  }
+}
+
+#details {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 16px 0;
+  opacity: 1;
+  transition: right 200ms 200ms ease-in-out;
+}
+
+#details.is-hidden {
+  right: -100%;
+  opacity: 0;
+  transition: all 200ms 200ms ease-in-out;
+}
+
+#ranking {
+  position: relative;
+  width: 100%;
+  color: #565656;
+}
+
+#ranking p:first-child {
+  border-bottom: 1px solid;
+}
+
+#ranking.is-hidden {
+  left: -100%;
+  opacity: 0;
+}
+
+#map {
+  height: 432px;
+  padding: 16px 0;
+  background: white;
+}
+
+@media screen and (max-width: 992px) {
+  #map {
+    visibility: hidden;
+    height: 0;
+    padding: 0;
+  }
+
+  #map.is-visible {
+    visibility: visible;
+    height: 432px;
+    padding: 16px 0;
+  }
+}
+
+#map-and-legend {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+#map-legend {
+  position: absolute;
+  bottom: 80px;
+  right: 8px;
+  background: white;
+  border: 1px solid #565656;
+  z-index: 10;
+}
+
+@media screen and (max-width: 992px) {
+  #map-legend {
+    width: 100%;
+    right: 0;
+    bottom: 88px;
+    border: none;
+  }
+
+  #map-legend .odswidget-legend__title {
+    font-size: 0.8rem;
+  }
+
+  #map-legend .odswidget-legend__indexes {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #map-legend .odswidget-legend__index-circle {
+    height: 1em;
+    width: 1em;
+  }
+}
+
+#map-button {
+  display: block;
+  margin: 8px 0;
+  width: 100%;
+}
+"
+            >
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>html {
+  font-size: 16px;
+}
+
+/* ODS override */
+.highcharts-axis-labels span {
+  font-size: 13px !important;
+}
+
+.highcharts-point {
+  stroke: transparent !important;
+  rx: 8px;
+  width: 20px;
+}
+
+.highcharts-label text {
+  font-size: 13px !important;
+}
+
+.hide-y .highcharts-yaxis-grid path.highcharts-grid-line,
+.hide-y .highcharts-yaxis-labels text,
+.hide-y .highcharts-yaxis-labels span,
+.hide-y .highcharts-yaxis-labels,
+.hide-y .highcharts-legend,
+.hide-y .highcharts-axis-title {
+  display: none !important;
+}
+
+.hide-x-grid .highcharts-xaxis tspan,
+.hide-x-grid .highcharts-axis.highcharts-xaxis path.highcharts-axis-line,
+.hide-x-grid .highcharts-xaxis-grid path.highcharts-grid-line,
+.hide-x-grid .highcharts-tick {
+  display: none !important;
+}
+
+.leaflet-vectormarker-singleicon {
+  stroke: black;
+}
+
+/* Utilites */
+.is-hidden {
+  visibility: hidden;
+  display: none;
+}
+
+@media screen and (min-width: 993px) {
+  .is-hidden-desktop {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+.is-size-3 {
+  font-size: 1.2rem;
+}
+
+@media screen and (max-width: 992px) {
+  .is-size-3 {
+    font-size: 1rem;
+  }
+}
+
+.level {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+/* Elements */
+.text-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon {
+  font-size: 1em;
+}
+
+.button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  background-color: #142e7b;
+  color: white;
+  border: none;
+  padding: 0.5em 1em;
+}
+
+.button:not(:first-child) {
+  margin-left: 0.25em;
+}
+
+.icon-cta {
+  border: none;
+  height: 1.5em;
+  width: 1.5em;
+  background-color: transparent;
+  color: black;
+  padding: 8px;
+}
+
+.icon-cta:hover {
+  background-color: #cbd2db;
+}
+
+/* Layout &amp; Components */
+.container {
+  position: relative;
+  max-width: 992px;
+}
+
+#chart-header {
+  background: white;
+  padding: 8px;
+  border-bottom: 1px solid;
+}
+
+#charts {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 992px) {
+  #charts {
+    height: 100%;
+  }
+
+  #charts.is-hidden {
+    height: 0;
+  }
+}
+
+#details {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  padding: 16px 0;
+  opacity: 1;
+  transition: right 200ms 200ms ease-in-out;
+}
+
+#details.is-hidden {
+  right: -100%;
+  opacity: 0;
+  transition: all 200ms 200ms ease-in-out;
+}
+
+#ranking {
+  position: relative;
+  width: 100%;
+  color: #565656;
+}
+
+#ranking p:first-child {
+  border-bottom: 1px solid;
+}
+
+#ranking.is-hidden {
+  left: -100%;
+  opacity: 0;
+}
+
+#map {
+  height: 432px;
+  padding: 16px 0;
+  background: white;
+}
+
+@media screen and (max-width: 992px) {
+  #map {
+    visibility: hidden;
+    height: 0;
+    padding: 0;
+  }
+
+  #map.is-visible {
+    visibility: visible;
+    height: 432px;
+    padding: 16px 0;
+  }
+}
+
+#map-and-legend {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+}
+
+#map-legend {
+  position: absolute;
+  bottom: 80px;
+  right: 8px;
+  background: white;
+  border: 1px solid #565656;
+  z-index: 10;
+}
+
+@media screen and (max-width: 992px) {
+  #map-legend {
+    width: 100%;
+    right: 0;
+    bottom: 88px;
+    border: none;
+  }
+
+  #map-legend .odswidget-legend__title {
+    font-size: 0.8rem;
+  }
+
+  #map-legend .odswidget-legend__indexes {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  #map-legend .odswidget-legend__index-circle {
+    height: 1em;
+    width: 1em;
+  }
+}
+
+#map-button {
+  display: block;
+  margin: 8px 0;
+  width: 100%;
+}
+</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+      </div>
+    </article>
+    
+  </div>
+</section>
+
+      </div>
+    </div>
+
+    <footer class="footer">
+    <a href="https://www.opendatasoft.com"
+       class="footer-link"
+       title="Opendatasoft website">
+        <img src="/img/ods-logo.svg"
+             class="footer-logo"
+             alt="Opendatasoft logo"
+        />
+    </a>
+    <span class="footer-copyright">
+        &copy; Copyright 2020
+    </span>
+</footer>
+    
+    
+    
+
+    <script>
+      var process = { env: { NODE_ENV: "production" } };
+    </script>
+    <script
+      type="text/javascript"
+      src="/index.min.dab9f7ba4764dc6713009aa8ec80ace48cbacb02d0b3fd62029c67e06f550354.js"
+      defer
+    ></script>
+  </body>
+</html>
