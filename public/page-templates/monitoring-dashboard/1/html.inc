@@ -240,7 +240,6 @@
                         <ods-map scroll-wheel-zoom="false"
                                  location="5,47.27923,2.94434"
                                  basemap="jawg.light"
-                                 scroll-wheel-zoom="false"
                                  toolbar-geolocation="false"
                                  toolbar-drawing="true"
                                  toolbar-fullscreen="true"
