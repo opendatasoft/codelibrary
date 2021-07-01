@@ -1,6 +1,5 @@
 ---
-title: "Vega-lite presentation"
-date: 2021-06-16T14:46:16+02:00
+title: "Vega-Lite presentation"
 ---
 
 #### Vega-Lite works with a json block that contains the entire description of the chart. It looks like this:

@@ -1,6 +1,7 @@
 ---
-title: "Heatmaps with custom HTML/CSS"
+title: "Heatmaps with CSS Grid"
 date: 2021-06-21T14:46:16+02:00
+description: "Custom heatmaps and bubblemaps made by hand with CSS Grid layout and HTML"
 tags: ["display", "ods-analysis", "aggregation"]
 resources:
 - src: '*/'
@@ -12,9 +13,9 @@ resources:
 
 > Did you see ? [Heatmaps with Vega-lite](/widget-tricks/heatmaps-vegalite) 
 
-For advanced usages, if Vega-lite does not satisfy your needs, you can create heatmaps by hand with only HTML Grid and CSS.
+**If Vega-lite does not satisfy your needs**, for advanced usages, you can create heatmaps by hand with only HTML and CSS Grid.
 
-Keep in mind that , for heatmaps or bubblemaps, you'll need to adapt the display depending on the values, axis, and legends. 
+Keep in mind that, for heatmaps or bubblemaps, you'll need to adapt the display depending on the values, axis, and legends. 
 
 For example, if the aggregation is too large to be displayed in cells, using `ods-tooltip` could be a nice way to display the value while hovering with the cursor.
 Legends might also be a concern as they can overlap if they are too long.

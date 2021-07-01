@@ -1,5 +1,7 @@
 ---
 title: "Heatmap: with dates"
+date: 2021-06-30T14:46:16+02:00
+description: "Heatmaps with Vega-Lite"
 height: 550
 ---
 

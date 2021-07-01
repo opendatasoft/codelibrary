@@ -1,5 +1,7 @@
 ---
 title: "Bubblemaps"
+description: "Bubblemaps with Vega-Lite"
+date: 2021-06-30T14:46:16+02:00
 height: 550
 ---
 
