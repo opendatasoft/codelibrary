@@ -1,5 +1,6 @@
 ---
 title: "Numeric, difference between 2 values"
+description: "Compare 2 numerical values"
 date: 2021-06-08T00:05:01+02:00
 ---
 

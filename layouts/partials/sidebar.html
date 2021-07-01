@@ -46,7 +46,7 @@
           {{ humanize .Name }}
         </a>
         <ul>
-          {{ range .Page.Pages }}
+          {{ range sort .Page.Pages "Title" }}
           <li>
             <a class="{{ if eq $currentPage . }}is-active{{ end }}" href="{{ .RelPermalink }}">
               <div>

@@ -434,6 +434,86 @@
       
       
         <item>
+          <title>Bubblemaps</title>
+          <link>https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-vegalite/#bubblemaps</link>
+          
+            <pubDate>Wed, 30 Jun 2021 14:46:16 +0200</pubDate>
+          
+          
+          <guid>https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-vegalite/#bubblemaps</guid>
+          <description>&lt;p&gt;To switch to a bubblemap:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;set the &lt;code&gt;grid&lt;/code&gt; to false in the config view&lt;/li&gt;
+&lt;li&gt;set the mark type to &lt;code&gt;circle&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;in addition to the &lt;code&gt;color&lt;/code&gt; property, a new mark property is necessary to change the size of the circles: &lt;code&gt;size&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://vega.github.io/vega-lite-v2/docs/encoding.html#mark-prop&#34;&gt;&lt;code&gt;size&lt;/code&gt; mark property documentation here&lt;/a&gt;.
+It&amp;rsquo;s very similar to the color property, it expects an aggregate and field option to be able to size circles depending on your data.
+It also accepts different scale types (quantile, power, log etc&amp;hellip;).&lt;/p&gt;
+</description>
+        </item>
+      
+        <item>
+          <title>Heatmap: with dates</title>
+          <link>https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-vegalite/#heatmap-with-dates</link>
+          
+            <pubDate>Wed, 30 Jun 2021 14:46:16 +0200</pubDate>
+          
+          
+          <guid>https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-vegalite/#heatmap-with-dates</guid>
+          <description>&lt;p&gt;Scales can get additional properties like the scheme. All available scale colors (schemes) can be found in the &lt;a href=&#34;https://vega.github.io/vega/docs/schemes/#scheme-properties&#34;&gt;scheme documentation&lt;/a&gt;.&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;&#39;color&#39;: 
+    &#39;scale&#39;: {
+        &#39;scheme&#39;: &#39;blueorange&#39;,
+        ...
+    },
+    ...
+&lt;/code&gt;&lt;/pre&gt;</description>
+        </item>
+      
+    
+      
+      
+        <item>
+          <title>Heatmap with dynamic color scale</title>
+          <link>https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-custom/#heatmap-with-dynamic-color-scale</link>
+          
+            <pubDate>Wed, 30 Jun 2021 14:46:16 +0200</pubDate>
+          
+          
+          <guid>https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-custom/#heatmap-with-dynamic-color-scale</guid>
+          <description>&lt;p&gt;Custom heatmaps or bubblemaps are made of a CSS grid, an &lt;code&gt;ods-adv-analysis&lt;/code&gt; and several computations to get the colors and the axis.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;ods-adv-analysis&lt;/code&gt; returns the list of values for each axis. You need to adapt the axis &lt;code&gt;id&lt;/code&gt; in &lt;code&gt;toObject&lt;/code&gt; filter.&lt;/li&gt;
+&lt;li&gt;The min and max of all aggregation are computed to get the boundaries and will be useful for colors computations.&lt;/li&gt;
+&lt;li&gt;To display the grid, three computations are needed: the x-axis value positions, the y-axis value positions and the color values.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Colors are RGB codes, computed of the aggregation value within the range of all values. Low and high colors values are set into &lt;code&gt;variables&lt;/code&gt; object at the beginning of the code.&lt;/p&gt;
+&lt;p&gt;The toggle button, and the legend are independent of the grid and can be removed.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: It&amp;rsquo;s much easier to deal with dates with Vega-Lite as it can split by day, day of the week, month with the labels and the correct ordering. We then strongly advice to go for &lt;a href=&#34;https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-vegalite&#34;&gt;Vega-Lite heatmaps&lt;/a&gt; in that case.&lt;/p&gt;
+&lt;/blockquote&gt;
+</description>
+        </item>
+      
+        <item>
+          <title>Heatmap with static scale</title>
+          <link>https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-custom/#heatmap-with-static-scale</link>
+          
+            <pubDate>Wed, 30 Jun 2021 14:46:16 +0200</pubDate>
+          
+          
+          <guid>https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-custom/#heatmap-with-static-scale</guid>
+          <description>&lt;p&gt;The colors are static, and set in the &lt;code&gt;ng-class&lt;/code&gt; of the cell, with a simple condition and static thresholds.
+The code is therefore much simpler than dynamic RGB computation.&lt;/p&gt;
+&lt;p&gt;But keep in mind that if the order of size of the aggregation changes, you&amp;rsquo;ll then need to adapt your thresholds, and therefore the page.&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+      
+        <item>
           <title>Simple usage, list records !</title>
           <link>https://codelibrary.opendatasoft.com/widget-tricks/ods-results/#simple-usage-list-records-</link>
           
