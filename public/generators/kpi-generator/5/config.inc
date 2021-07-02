@@ -1,7 +1,7 @@
      ng-init="
       kpis = [
     {
-        'title':'habitants en 2012',
+        'title':'habitants in 2012',
 
         'dataset_id':'resume-statistique-communes-departements-et-regions-france-2012-2013-2014',
 
@@ -20,7 +20,7 @@
         'valref_aggregation_function':'SUM',
         'valref_aggregation_expression':'population_en_2007',
         'valref_aggregation_unit':'%',
-        'valref_prefix':'compared to 2007. They were',
+        'valref_prefix':'compared to 2007. There were',
         'valref_suffix':'habitants.'
     },
     {
@@ -42,8 +42,8 @@
         'valref_aggregation_function':'SUM',
         'valref_aggregation_expression':'population_en_2012',
         'valref_aggregation_unit':'%',
-        'valref_prefix':'compared to France population and it\'s ',
-        'valref_suffix':'habitants'
+        'valref_prefix':'compared to ',
+        'valref_suffix':'habitants in France'
     }
 ];
 

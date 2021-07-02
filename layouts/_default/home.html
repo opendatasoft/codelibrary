@@ -47,7 +47,11 @@
                         </li>
                     </ul>
                 </h5>
-                {{ .Content | replaceRE "<p>" "<p class=\"subtitle\">" | safeHTML | truncate 100 }}
+                {{- if .Description -}}
+                    {{ .Description | truncate 100 }}
+                {{- else -}}
+                    {{ .Content | replaceRE "<p>" "<p class=\"subtitle\">" | safeHTML | truncate 100 }}
+                {{- end -}}
             </div>
             {{ end }}
         {{ end }}
