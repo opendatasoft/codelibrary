@@ -1,122 +1,154 @@
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css">
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css"
+/>
 
 <!-- ODS Platform CSS - must be hosted on static : WIP -->
-<link rel="stylesheet" href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css">
-<link rel="stylesheet" href="https://codelibrary.opendatasoft.com/css/theme.css">
+<link
+  rel="stylesheet"
+  href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css"
+/>
+<link
+  rel="stylesheet"
+  href="https://codelibrary.opendatasoft.com/css/theme.css"
+/>
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js"></script>
 <script src="//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js"></script>
-<script type="text/javascript" src="https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js"></script>
+<script
+  type="text/javascript"
+  src="https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js"
+></script>
 
-<script type="text/javascript" src="https://codelibrary.opendatasoft.com/js/platform-filters.js"></script>
-<script type="text/javascript" src="https://codelibrary.opendatasoft.com/js/ods-catalog-card.js"></script>
-
-<script type="text/javascript">
-    const sourceMonitoringInterceptor = ($q) => {
-        return {
-            request: (config) => {
-                if (config.params)
-                    if (config.params.source)
-                        delete config.params.source;
-
-                config.url = config.url.replace("ods-api-monitoring", "monitoring-copy");
-                return config;
-            }
-        }
-    }
-
-    angular.module('ods-widgets').config(function (ODSWidgetsConfigProvider, $httpProvider) {
-        ODSWidgetsConfigProvider.setConfig({
-            "defaultDomain": "https://userclub.opendatasoft.com/",
-            "basemaps": [
-                {
-                    "provider": "jawg.light",
-                    "label": "Jawg Light",
-                    "jawg_apikey": "opendatasoft-community"
-                },
-                {
-                    "provider": "jawg.streets",
-                    "label": "Jawg Streets",
-                    "jawg_apikey": "opendatasoft-community",
-                    "id": "streets"
-                }
-            ],
-            "themes": {
-                'default': {
-                    'url': '/img/ods.svg'
-                },
-                'Santé': {
-                    'url': 'https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg',
-                    'color': '#1446A0'
-                },
-                'Culture, Patrimoine': {
-                    'url': 'https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg',
-                    'color': '#1446A0'
-                },
-                'Éducation, Formation, Recherche, Enseignement': {
-                    'url': 'https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg',
-                    'color': '#1446A0'
-                },
-                'Environment': {
-                    'url': 'https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg',
-                    'color': '#1446A0'
-                },
-                'Transports, Déplacements': {
-                    'url': 'https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg',
-                    'color': '#1446A0'
-                },
-                'Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement': {
-                    'url': 'https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg',
-                    'color': '#1446A0'
-                },
-                'Économie, Business, PME, Développement économique, Emploi': {
-                    'url': 'https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg',
-                    'color': '#1446A0'
-                },
-                'Administration, Gouvernement, Finances publiques, Citoyenneté': {
-                    'url': 'https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg',
-                    'color': '#1446A0'
-                },
-                'Justice, Sécurité, Police, Crime': {
-                    'url': 'https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg',
-                    'color': '#1446A0'
-                },
-                'Sport, Loisirs': {
-                    'url': 'https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg',
-                    'color': '#1446A0'
-                },
-                'Hébergement, Restauration': {
-                    'url': 'https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg',
-                    'color': '#1446A0'
-                },
-                'Services, Social': {
-                    'url': 'https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg',
-                    'color': '#1446A0'
-                },
-                'Checklist': {
-                    'url': 'https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg',
-                    'color': '#1446A0'
-                },
-                'Usages': {
-                    'url': 'https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg',
-                    'color': '#1446A0'
-                }
-            },
-            "mapPrependAttribution": "Jawg apikey NOT suitable for production"
-        });
-        $httpProvider.interceptors.push(sourceMonitoringInterceptor);
-    });
-</script>
+<script
+  type="text/javascript"
+  src="https://codelibrary.opendatasoft.com/js/platform-filters.js"
+></script>
+<script
+  type="text/javascript"
+  src="https://codelibrary.opendatasoft.com/js/ods-catalog-card.js"
+></script>
 
 <script type="text/javascript">
-    document.addEventListener("DOMContentLoaded", function () {
-        document.querySelectorAll('a[href="#"]').forEach((el) => {
-            el.addEventListener('click', (event) => {
-                event.preventDefault();
-            });
-        })
+  const sourceMonitoringInterceptor = $q => {
+    return {
+      request: config => {
+        if (config.params)
+          if (config.params.source) delete config.params.source;
+
+        config.url = config.url.replace(
+          "ods-api-monitoring",
+          "monitoring-copy"
+        );
+        return config;
+      }
+    };
+  };
+
+  angular
+    .module("ods-widgets")
+    .config(function(ODSWidgetsConfigProvider, $httpProvider) {
+      ODSWidgetsConfigProvider.setConfig({
+        defaultDomain: "https://userclub.opendatasoft.com/",
+        basemaps: [
+          {
+            provider: "jawg.light",
+            label: "Jawg Light",
+            jawg_apikey: "opendatasoft-community"
+          },
+          {
+            provider: "jawg.streets",
+            label: "Jawg Streets",
+            jawg_apikey: "opendatasoft-community",
+            id: "streets"
+          }
+        ],
+        themes: {
+          default: {
+            url: "/img/ods.svg"
+          },
+          Santé: {
+            url:
+              "https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg",
+            color: "#1446A0"
+          },
+          "Culture, Patrimoine": {
+            url:
+              "https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg",
+            color: "#1446A0"
+          },
+          "Éducation, Formation, Recherche, Enseignement": {
+            url:
+              "https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg",
+            color: "#1446A0"
+          },
+          Environment: {
+            url:
+              "https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg",
+            color: "#1446A0"
+          },
+          "Transports, Déplacements": {
+            url:
+              "https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg",
+            color: "#1446A0"
+          },
+          "Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement": {
+            url:
+              "https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg",
+            color: "#1446A0"
+          },
+          "Économie, Business, PME, Développement économique, Emploi": {
+            url:
+              "https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg",
+            color: "#1446A0"
+          },
+          "Administration, Gouvernement, Finances publiques, Citoyenneté": {
+            url:
+              "https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg",
+            color: "#1446A0"
+          },
+          "Justice, Sécurité, Police, Crime": {
+            url:
+              "https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg",
+            color: "#1446A0"
+          },
+          "Sport, Loisirs": {
+            url:
+              "https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg",
+            color: "#1446A0"
+          },
+          "Hébergement, Restauration": {
+            url:
+              "https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg",
+            color: "#1446A0"
+          },
+          "Services, Social": {
+            url:
+              "https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg",
+            color: "#1446A0"
+          },
+          Checklist: {
+            url:
+              "https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg",
+            color: "#1446A0"
+          },
+          Usages: {
+            url:
+              "https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg",
+            color: "#1446A0"
+          }
+        },
+        mapPrependAttribution: "Jawg apikey NOT suitable for production"
+      });
+      $httpProvider.interceptors.push(sourceMonitoringInterceptor);
     });
 </script>
