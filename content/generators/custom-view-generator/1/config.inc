@@ -1,9 +1,4 @@
-     ng-init="  filters = [
-              {'id':'language','multiple':true},
-              {'id':'country','multiple':true},
-              {'id':'purpose','multiple':true}
-              ];
-              fieldDate = '';
+     ng-init="fieldDate = '';
               resetFiltersButton = true;
               resetFiltersButtonLabel = 'Supprimer tous les filtres';
               fieldDefaultRangeStartsNow = true;
@@ -24,3 +19,9 @@
               'function': 'COUNT'
               }
               ];
+
+              filters = [
+                        {'id':'language','multiple':true},
+                        {'id':'country','multiple':true},
+                        {'id':'purpose','multiple':true}
+                        ];
