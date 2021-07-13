@@ -15,6 +15,7 @@
               {'id':'filterid','multiple':true},
               {'id':'filterid2','multiple':false}
          ]
+    IMPORTANT: for a custom view, filters are only available when the view is embeded; In /explore view, custom view filters are hidden, as they are already available in left sidebar.
     -->
     <!-- resetFiltersButton (boolean) : add a reset filters button after filters block -->
     <!-- resetFiltersButtonLabel (Label of the button) : test to display when a filter is selected
