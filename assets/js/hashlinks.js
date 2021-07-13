@@ -1,5 +1,4 @@
 const blockLinks = links => {
-  console.log("found links", links);
   links.forEach(link => {
     link.addEventListener("click", e => e.preventDefault());
   });
