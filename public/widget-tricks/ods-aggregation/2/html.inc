@@ -1,22 +1,40 @@
-<div class="row">
-    <div class="col-sm-offset-4 col-sm-4">
-        <ods-dataset-context context="ushospitals"
-                             ushospitals-domain="userclub"
-                             ushospitals-dataset="us-hospitals"
-                             ushospitals-parameters="{'refine.city':'Houston'}">
+<ods-dataset-context context="observationsynop"
+                     observationsynop-dataset="observation-synop"
+                     observationsynop-domain="userclub">
+
+    <div class="row">
+        <div class="col-sm-offset-2 col-sm-4">
             <!-- KPI box component -->
             <div class="kpi-card">
-                <i class="kpi-icon fa fa-hospital-o" aria-hidden="true"></i>
+                <i class="kpi-icon fa fa-thermometer-empty" aria-hidden="true"></i>
                 <p class="kpi-title"
-                    ods-aggregation="count"
-                    ods-aggregation-context="ushospitals"
-                    ods-aggregation-function="COUNT">
-                    {{ count | number }}
+                   ods-aggregation="maxtemp"
+                   ods-aggregation-context="observationsynop"
+                   ods-aggregation-function="MAX"
+                   ods-aggregation-expression="tc">
+                    {{ maxtemp | number : 1 }}
                 </p>
                 <p class="kpi-description">
-                    Number of hospitals in Houston, TX
+                    Max temperature (°C)
                 </p>
             </div>
-        </ods-dataset-context>
+        </div>
+        <div class="col-sm-4">
+            <!-- KPI box component -->
+            <div class="kpi-card">
+                <i class="kpi-icon fa fa-tint" aria-hidden="true"></i>
+                <p class="kpi-title"
+                   ods-aggregation="avghumidity"
+                   ods-aggregation-context="observationsynop"
+                   ods-aggregation-function="AVG"
+                   ods-aggregation-expression="u">
+                    {{ avghumidity | number : 1}}
+                </p>
+                <p class="kpi-description">
+                    Average humidity (%)
+                </p>
+            </div>
+        </div>
     </div>
-</div>
+
+</ods-dataset-context>
