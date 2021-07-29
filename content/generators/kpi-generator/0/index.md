@@ -11,6 +11,13 @@ date: 2021-06-08T00:05:01+02:00
 Dataset setting :
 - `dataset_id`
 
+Dataset filter (simple way, with 1 refine) :
+- `dataset_refine_key`: a facet field,
+- `dataset_refine_value`: a value, 
+  
+Dataset filters (advanced way, with 1 parameters object) :
+- `dataset_advanced_refine_parameters` : an object with escaped quotes, ie: `{\'q\':\'some text query\', \'refine.field\':\'value'\}`
+
 Value settings, to setup the aggregation :
 - `aggregation_function`: can be SUM, AVG, MIN, MAX, STD, COUNT
 - `aggregation_expression`: a numerical field id
