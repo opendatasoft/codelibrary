@@ -2,7 +2,7 @@
 title: "ods-color-gradient + ods-map : a choropleth alternative"
 description: "This widget computes a gradient of colors based on a numerical aggregation. It's mainly used to color the shapes of a map for analytics purposes."
 tags: ["display", "aggregation", "geo"]
-height: 500
+height: 560
 resources:
 - src: '*/'
   name: folder-:counter
@@ -20,3 +20,5 @@ For example: inhabitant dataset of a country can be rendered by region, departem
 
 
 **How it works:** the technique is to aggregate the data with the ods-color-gradient to obtain the color gradient as a color object. Then feed an ods-map with this color object.
+
+[More technical and mathematical information on ods-color-gradient algorithm here](https://observablehq.com/@fpassaniti/ods-color-gradient-algorithm-explained) 

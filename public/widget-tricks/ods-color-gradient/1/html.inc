@@ -11,6 +11,7 @@
          ods-color-gradient-high="rgb(20, 33, 96)"
          ods-color-gradient-low="rgb(180, 197, 241)">
 
+        <h2>Color departments by number of carpool location</h2>
         <div class="map-container">
             <ods-map>
                 <ods-map-layer context="dep"
