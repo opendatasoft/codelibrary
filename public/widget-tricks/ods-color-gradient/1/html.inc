@@ -1,6 +1,8 @@
+<!-- "dep" context is the official geo-referential from Opendatasoft Data Network -->
 <ods-dataset-context context="dep,carpool"
-                     dep-dataset="departements-et-collectivites-doutre-mer-france"
-                     dep-domain="userclub"
+                     dep-dataset="georef-france-departement"
+                     dep-parameters="{'q':'dep_code <= 95'}"
+                     dep-domain="public"
                      carpool-dataset="base-nationale-des-lieux-de-covoiturage-en-france"
                      carpool-domain="userclub">
 
