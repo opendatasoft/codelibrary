@@ -8,7 +8,7 @@ _[IcoFont.com](https://www.icofont.com/) - 2100+ free icons to spice up your cre
 
 **Install guide:**
 
-- Get the full library font here: [icofont.woff2](https://userclub.opendatasoft.com/assets/theme_font/icofont.woff2) 
+- Get the full library font here: [icofont.woff2](https://static.opendatasoft.com/fonts/icofont/icofont.woff2) 
 - Upload it to your portal assets, in `backoffice -> assets -> fonts` (En Français : `Backoffice -> ressources -> police de caractères`)
 - Copy the CSS into your portal theme, in `backoffice -> look & feel -> theme -> stylesheet` (En Français : `Backoffice -> Apparence -> Thème -> Feuille de style`)
 - Make live (save and apply your theme)

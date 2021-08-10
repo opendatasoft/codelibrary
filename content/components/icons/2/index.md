@@ -8,7 +8,7 @@ _[Bootstrap Icons](https://icons.getbootstrap.com/) - Free, high quality, open s
 
 **Install guide:**
 
-- Get the full library font here: [bootstrap-icons.woff2](https://userclub.opendatasoft.com/assets/theme_font/bootstrap-icons.woff2) 
+- Get the full library font here: [bootstrap-icons.woff2](https://static.opendatasoft.com/fonts/bootstrap-icons/bootstrap-icons.woff2) 
 - Upload it to your portal assets, in `backoffice -> assets -> fonts` (En Français : `Backoffice -> ressources -> police de caractères`)
 - Copy the CSS into your portal theme, in `backoffice -> look & feel -> theme -> stylesheet` (En Français : `Backoffice -> Apparence -> Thème -> Feuille de style`)
 - Make live (save and apply your theme)
