@@ -5,9 +5,17 @@ height: 200
 
 A non-exhaustive list of SVG icon libraries free to use :
 
+- [Remix Icon](https://remixicon.com/)
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
 - [Google Fonts Icons](https://fonts.google.com/icons?selected=Material+Icons)
 - [Feather icons](https://feathericons.com/)
+
+**Usage for Remix Icon and Boostrap icons**:
+
+As Bootstrap and Remix are the only one to propose to copy to clipboard the SVG code directly from the interface,
+you just need to choose your icon, click on the "Copy to clipboard" button for Boostrap, or "Copy SVG" for Remix.
+You are then ready to go.
+
 
 **Usage for Google icons, Feather icons and others:**
 
@@ -16,10 +24,6 @@ A non-exhaustive list of SVG icon libraries free to use :
 - Copy the code
 - Paste it wherever you want in your HTML
 
-**Usage for Boostrap icons**:
-
-As Bootstrap Icons is the only one to propose to directly copy to clipboard the SVG code directly from the interface, 
-you just need to choose your icon, click on the Copy to clipboard button in the "Copy HTML" section. You are then ready to go. 
 
 > Pros: Inlining SVG is optimal is you use few icons in your pages, 
 > and therefore you will only load what is really necessary

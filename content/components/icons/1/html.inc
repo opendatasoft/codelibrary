@@ -1,6 +1,4 @@
-<a target="_blank" href="https://www.icofont.com/examples">Examples here</a>
-<br/>
-<a target="_blank" href="https://www.icofont.com/icons">Find all available icons here !</a>
+<a target="_blank" href="https://remixicon.com/">Find all available icons here !</a>
 
-<i class="icofont-alarm"></i>
-<i class="icofont-alarm" style="font-size: 2rem; color: cornflowerblue;"></i>
+<i class="ri-alarm-fill"></i>
+<i class="ri-alarm-line" style="font-size: 2rem; color: cornflowerblue;"></i>

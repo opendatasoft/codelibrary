@@ -16,5 +16,5 @@ In this example:
 - a sprite (collection) of 2 icons is declared in the HTML
 - each icon has a viewport, but don't necessarily have a size
 - then, in my page, I can "load" the desired icon by using the symbol ID with a `<use>` tag and a `hrel` attribute.
-- on each `svg/use` tag I can set a specific style, to change de size, the stroke color etc...
+- on each `svg/use` tag I can set a specific style, to change the size, the stroke color etc...
 - I can also apply (with CSS) a transform property, to rotate or even animate my icons.
