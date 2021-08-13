@@ -1,6 +1,8 @@
      ng-init="domain = 'discovery.opendatasoft.com';
                 datasetid = 'oeuvres-de-johannes-vermeer';
 
+                sort = 'surface';
+
                 filters = [
                 {'id':'technique','multiple':true},
                 {'id':'collection','multiple':true},

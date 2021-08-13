@@ -1,6 +1,8 @@
      ng-init="domain = 'parisdata.opendatasoft.com';
                 datasetid = 'que-faire-a-paris-';
 
+                sort = '-date_start';
+
                 filters = [
                 {'id':'category','multiple':true},
                 {'id':'tags','multiple':true},
@@ -10,10 +12,18 @@
                 fieldDate = 'date_start';
                 resetFiltersButton = true;
                 resetFiltersButtonLabel = 'Supprimer tous les filtres';
-                fieldDefaultRangeStartsNow = true;
+                fieldDefaultRangeStartsNow = false;
 
                 view = 'cards';
-                fieldsList = ['address_name','address_street','address_city','category'];
+                fieldsList = [
+                                  {'field':'address_name'},
+                                  {'field':'address_street'},
+                                  {'field':'address_city'},
+                                  {'field':'conditionversement'},
+                                  {'field':'category'},
+                                  {'field':'date_start','format':'date'},
+                                  {'field':'date_end','format':'date'}
+                              ];
                 fieldLink = 'url';
                 fieldLinkLabel = 'Plus d\'informations';
 

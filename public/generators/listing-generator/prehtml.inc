@@ -1,3 +1,10 @@
+<!-- V2.2 :
+    - Add 'sort' param
+    - Add advanced fields list config feature
+    Fields can now be a list of object, that provides the field id, the format, and some options.
+    See the documentation for more details.
+    - No icon displayed by default for KPIs
+  -->
 <!-- V2.1 :
     - Add ods-select and multiple choice option for filters
     - Add clear all filter button when one filter is applied
