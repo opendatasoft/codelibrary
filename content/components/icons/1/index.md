@@ -8,16 +8,14 @@ _[https://remixicon.com](https://remixicon.com) - Simply Delightful Icon System_
 
 **Install guide:**
 
-- Get the full library font here: [remixicon.woff2](https://static.opendatasoft.com/fonts/remixicon/remixicon.woff2) 
-- Upload it to your portal assets, in `backoffice -> assets -> fonts` (En Français : `Backoffice -> ressources -> police de caractères`)
-- Copy the CSS into your portal theme, in `backoffice -> look & feel -> theme -> stylesheet` (En Français : `Backoffice -> Apparence -> Thème -> Feuille de style`)
+- Copy the CSS into your portal theme (in `backoffice -> look & feel -> theme -> stylesheet`, en Français : `Backoffice -> Apparence -> Thème -> Feuille de style`)
 - Make live (save and apply your theme)
 - Finally, simply use icons into your pages
 
 **Usage:**
 
 In your HTML, on `i` tag, set the class to `ri-` followed by the name of the icon.
-For example, for the `alarm`, try:
+For example, for the `alarm-fill` and `alarm-line` icons, try:
 - `<i class="ri-alarm-fill"></i>`
 - `<i class="ri-alarm-line" style="font-size: 2rem; color: cornflowerblue;"></i>`
     

@@ -8,16 +8,14 @@ _[IcoFont.com](https://www.icofont.com/) - 2100+ free icons to spice up your cre
 
 **Install guide:**
 
-- Get the full library font here: [icofont.woff2](https://static.opendatasoft.com/fonts/icofont/icofont.woff2) 
-- Upload it to your portal assets, in `backoffice -> assets -> fonts` (En Français : `Backoffice -> ressources -> police de caractères`)
-- Copy the CSS into your portal theme, in `backoffice -> look & feel -> theme -> stylesheet` (En Français : `Backoffice -> Apparence -> Thème -> Feuille de style`)
+- Copy the CSS into your portal theme (in `backoffice -> look & feel -> theme -> stylesheet`, en Français : `Backoffice -> Apparence -> Thème -> Feuille de style`)
 - Make live (save and apply your theme)
 - Finally, simply use icons into your pages
 
 **Usage:**
 
 In your HTML, on `i` tag, set the class to `icofont-` followed by the name of the icon.
-For example, for the `alarm`, try:
+For example, for the `alarm` icon, try:
 - `<i class="icofont-alarm"></i>`
 - `<i class="icofont-alarm" style="font-size: 2rem; color: cornflowerblue;"></i>`
     

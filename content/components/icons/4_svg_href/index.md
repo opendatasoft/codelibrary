@@ -18,3 +18,8 @@ In this example:
 - then, in my page, I can "load" the desired icon by using the symbol ID with a `<use>` tag and a `hrel` attribute.
 - on each `svg/use` tag I can set a specific style, to change the size, the stroke color etc...
 - I can also apply (with CSS) a transform property, to rotate or even animate my icons.
+
+
+> Pros: Optimal, lightweight, custom made
+
+> Cons: Complex to create and use, require advanced CSS and SVG skills

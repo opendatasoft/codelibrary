@@ -12,7 +12,7 @@ A non-exhaustive list of SVG icon libraries free to use :
 
 **Usage for Remix Icon and Boostrap icons**:
 
-As Bootstrap and Remix are the only one to propose to copy to clipboard the SVG code directly from the interface,
+As Bootstrap and Remix propose to copy to clipboard the SVG code directly from the interface,
 you just need to choose your icon, click on the "Copy to clipboard" button for Boostrap, or "Copy SVG" for Remix.
 You are then ready to go.
 
@@ -29,7 +29,9 @@ You are then ready to go.
 > and therefore you will only load what is really necessary
 > (you won't load an heavy icon font to only use 0.1% of it)
 
-> Cons: You'll need to write additional CSS to size your icons and align them correctly in your layouts
+> Pros: You take benefit of SVG format in general: better scaling, better accessibility possibilities, can handle complex and even multicolor icons. 
 
-> Cons: Reusing several times the same icon will be tedious as you'll need to duplicate the SVG code several times
+> Cons: Sizing and positioning can require more advanced CSS skills than simple icon fonts that behave like text characters.
+
+> Cons: Reusing several times the same icon will be tedious as you'll need to duplicate the SVG code several times. In that case, see the next example for SVG Sprites
 
