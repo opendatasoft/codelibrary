@@ -1,35 +1,40 @@
 :root {
-    --secondary-color: #142E7B;
+    --left-color: #142E7B;
+    --right-color: #ffcc00;
 }
 
-/* Pyramide des ages*/
+/* Age pyramid */
 .pyramid-line {
     display: flex;
     justify-content: space-between;
     width: 100%;
     margin: auto;
 }
-.pyramid-middle-yob {
+
+.pyramid-middle {
     font-weight: 500;
     width: 230px;
     text-align: center;
 }
 
 .pyramid-side {
-    width: 100%;
+    width: 74%;
     margin: 0px 10px;
     text-align: center;
     display: flex;
     align-items: center;
 } 
+
 .pyramid-side-left {
-    color: var(--highlight);
+    color: var(--left-color);
     flex-direction: row-reverse;
 }
+
 .pyramid-side-right {
-    color: var(--secondary-color);
+    color: var(--right-color);
     flex-direction: row;
 }
+
 .pyramid-side-value {
     width: 60px;
 }
@@ -39,28 +44,25 @@ div.fond_bar{
     height: 15px;
     border-radius: 1000px;
 }
+
 div.bar{
     border-radius: 1000px;
     height: 15px;
 }
+
 .pyramid-side-left div.bar { 
-    background-color : var(--highlight);
+    background-color : var(--left-color);
     float: right;
 }
+
 .pyramid-side-right div.bar { 
-    background-color : var(--secondary-color);
+    background-color : var(--right-color);
 }
 
 .pyramid-value {
-    font-size: 10px;
-    text-align: end;
+    font-size: 12px;
     padding: 0px 5px;
-}
-
-.pyramid-value {
-    font-size: 10px;
-    padding: 0px 5px;
-        color: #000;
+    width: 13%;
 }
 
 .left {
@@ -71,11 +73,12 @@ div.bar{
     text-align: end;
 }
 
-/* SWITCH */
+/* SWITCH BUTTON */
 
 .pyramid-switch {
     display: flex;
     align-items: baseline;
+    margin-top: 13px;
 }
 .pyramid-switch .switch {
     margin-left: 6px;
