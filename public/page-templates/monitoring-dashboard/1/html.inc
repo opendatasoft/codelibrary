@@ -57,7 +57,7 @@
                         <h2 class="title">
                             Portal's activity.
                         </h2>
-                        <p class="subtitle">Count of daily API calls from {{ startDate|date:longDate }} to {{ endDate|date:longDate }}. See full                      <a href="/explore/dataset/ods-api-monitoring/?source=monitoring&disjunctive.dataset_id"> activity log.</a>
+                        <p class="subtitle">Count of daily API calls from {{ startDate|date:longDate }} to {{ endDate|date:longDate }}. See full <a href="/explore/dataset/ods-api-monitoring/?source=monitoring&disjunctive.dataset_id"> activity log.</a>
                         </p>
 
                         <ods-chart timescale="day" single-y-axis="true" align-month="true">
@@ -79,9 +79,25 @@
                                 Number of exports
                             </h2>
                             <p class="subtitle">Daily number of full dataset download, in any format.</p>
-                            <ods-chart timescale="day" single-y-axis="true" align-month="true">
-                                <ods-chart-query context="download" field-x="timestamp" maxpoints="0" timescale="day">
-                                    <ods-chart-serie expression-y="size_res" chart-type="areaspline" function-y="COUNT" color="#26ADFF" label-y="Count exports" scientific-display="true" display-values="true">
+                            <ods-chart timescale="day"
+                              single-y-axis="true"
+                              align-month="true"
+                              label-x="Automated download?">
+                                <ods-chart-query context="download"
+                                                  field-x="timestamp"
+                                                  maxpoints="0"
+                                                  timescale="day"
+                                                  stacked="normal"
+                                                  series-breakdown="bot"
+                                                  display-legend="true">
+                                    <ods-chart-serie expression-y="size_res"
+                                      chart-type="areaspline"
+                                      function-y="COUNT"
+                                      color="#26ADFF"
+                                      label-y="Count exports"
+                                      scientific-display="true"
+                                      display-values="true"
+                                      display-stack-values="true">
                                     </ods-chart-serie>
                                 </ods-chart-query>
                             </ods-chart>
