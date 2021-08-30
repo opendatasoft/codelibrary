@@ -82,22 +82,21 @@
                             <ods-chart timescale="day"
                               single-y-axis="true"
                               align-month="true"
-                              label-x="Automated download?">
+                              label-x="Automated downloa (bot)?">
                                 <ods-chart-query context="download"
                                                   field-x="timestamp"
                                                   maxpoints="0"
                                                   timescale="day"
-                                                  stacked="normal"
                                                   series-breakdown="bot"
+                                                  category-colors="{'TRUE':'#26ADFF', 'FALSE':'#142E7B'}"
                                                   display-legend="true">
                                     <ods-chart-serie expression-y="size_res"
-                                      chart-type="areaspline"
+                                      chart-type="spline"
+                                      colors="'range-custom'"
                                       function-y="COUNT"
-                                      color="#26ADFF"
                                       label-y="Count exports"
                                       scientific-display="true"
-                                      display-values="true"
-                                      display-stack-values="true">
+                                      display-values="true">
                                     </ods-chart-serie>
                                 </ods-chart-query>
                             </ods-chart>
