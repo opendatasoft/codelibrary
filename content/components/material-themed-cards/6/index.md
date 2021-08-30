@@ -1,5 +1,5 @@
 ---
-title: "Full dashboard"
+title: "Full dashboard with multiple primary colors"
 date: 2021-06-09T10:39:16+02:00
 ---
 
