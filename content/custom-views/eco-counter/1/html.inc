@@ -7,13 +7,13 @@
                  ods-adv-analysis="daytotal"
                  ods-adv-analysis-context="ctx"
                  ods-adv-analysis-select="sum(counts) as total"
-                 ods-adv-analysis-where="date >= now(days=-7, months=-2)"
-                 ods-adv-analysis-group-by="date_format(date, 'dd/MM/YYYY') as x"
+                 ods-adv-analysis-where="date >= now(days=-7)"
+                 ods-adv-analysis-group-by="date_format(date, 'YYYY-MM-dd') as x"
                  >
                 <div class="card-head"></div>
                 <div class="card-body has-text-center">
                     <p class="title is-1 has-text-primary">
-                        {{ daytotal[0].total | number:0  }}
+                        {{ daytotal[5].total | number:0  }}
                     </p>
                     <p class="subtitle is-2">
                         bikes counted yesterday
@@ -27,12 +27,12 @@
                      >
                     <p class="has-text-center">
                         <span class="is-success has-text-bold" ng-if="(daytotal[0].total - daytotal[6].total)/daytotal[0].total >= 0">
-                            ▲ {{ (daytotal[0].total - daytotal[6].total)/daytotal[0].total | number:1 }} %
+                            ▲ {{ (daytotal[6].total - daytotal[0].total)/daytotal[6].total | number:1 }} %
                         </span>
                         <span class="is-danger has-text-bold" ng-if="(daytotal[0].total - daytotal[6].total)/daytotal[0].total < 0">
-                            ▼ {{ (daytotal[0].total - daytotal[6].total)/daytotal[0].total | number:1 }} %
+                            ▼ {{ (daytotal[6].total - daytotal[0].total)/daytotal[6].total | number:1 }} %
                         </span>
-                        compared to last {{ daytotal[0].x | momentadd:day:-1 | moment:'dddd'  }}
+                        compared to last {{ daytotal[6].x | moment:'dddd' }}
                     </p>
                 </div>
             </div>
@@ -328,7 +328,6 @@
             <h2 class="title is-2">Sensors details</h2>
             <ods-map
                      scroll-wheel-zoom="false"
-                     location="12,47.36755,0.64888"
                      basemap="jawg.dark"
                      >
                 <ods-map-layer
@@ -336,33 +335,45 @@
                                display="aggregation"
                                hover-field="name"
                                expression="counts"
-                               function="sum"
-                               color-scale="Blues"
+                               function="avg"
+                               color-scale="BuGn"
                                size="5"
                                opacity="1.0"
                                >
                     <h3 class="title is-3">{{ record.fields.name }}</h3>
                     <ods-dataset-context
                                          context="sites"
-                                         sites-domain="eco-compteur-odsapps"
-                                         sites-dataset="sites-eco-compteur-tours-metropole"
+                                         sites-dataset="eco-counter-sites"
                                          sites-parameters="{'refine.name': record.fields.name}"
                                          >
-                        <p class="is-size-4"
-                           ods-adv-analysis="rate"
-                           ods-adv-analysis-context="ctx"
-                           ods-adv-analysis-select="avg(counts) as rate"
-                           ods-adv-analysis-where="name like '{{ record.fields.name}}'"
+                        <div class="is-size-4"
+                             ods-adv-analysis="rate"
+                             ods-adv-analysis-context="ctx"
+                             ods-adv-analysis-select="avg(counts) as rate"
+                             ods-adv-analysis-where="id like '{{ record.fields.id}}'"
 
-                           ods-results="site"
-                           ods-results-context="sites"
-                           ods-results-max="1"
-                           >
+                             ods-results="site"
+                             ods-results-context="sites"
+                             ods-results-max="1"
+                             >
                             <span ng-if="!rate"><ods-spinner /></span>
-                            <span ng-if="rate">Installed on <strong>{{ site[0].fields.installation_date | date:longdate }}</strong></span>
-                            <span ng-if="rate"><strong>{{ (rate[0].rate * 60)/site[0].fields.interval | number:2 }}</strong> bikes per hour on average</span>
-                        </p>
-                        <ods-media-gallery context="sites" ods-auto-resize="true"></ods-media-gallery>
+                            <p ng-if="rate">Installed on <strong>{{ site[0].fields.installation_date | date:longdate }}</strong></p>
+                            <p ng-if="rate"><strong>{{ (rate[0].rate * 60)/site[0].fields.interval | number:2 }}</strong> bikes per hour on average</p>
+                            <div class="pictures">
+                                <figure class="image"
+                                        ng-if="site[0].fields.urlphoto1">
+                                    <img src="{{ site[0].fields.urlphoto1 }}" width="200">
+                                </figure>
+                                <figure class="image"
+                                        ng-if="site[0].fields.urlphoto2">
+                                    <img src="{{ site[0].fields.urlphoto2 }}" width="200">
+                                </figure>
+                                <figure class="image"
+                                        ng-if="site[0].fields.urlphoto3">
+                                    <img src="{{ site[0].fields.urlphoto3 }}" width="200">
+                                </figure>
+                            </div>
+                        </div>
                     </ods-dataset-context>
                 </ods-map-layer>
             </ods-map>

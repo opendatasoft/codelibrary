@@ -7,7 +7,10 @@
 {{ if (and .Params.domainid .Params.datasetid) }}
     {{ $openctx := printf "%s%s%s%s%s" "<ods-dataset-context context=\"ctx\"\n ctx-dataset=\"" .Params.datasetid "\"\n ctx-domain=\"" .Params.domainid "\">\n" }}
     {{ $closectx := "</ods-dataset-context>\n" }}
-    {{ $html = printf "%s%s%s%s%s%s%s" "<div ng-app=\"ods-widgets\">\n" $openctx "\n" $htmlcontent "\n" $closectx "</div>" }}
+    {{
+      $html = printf "%s%s%s%s%s%s%s" "<div ng-app=\"ods-widgets\">\n" $openctx "\n" $htmlcontent "\n" $closectx "</div>"
+      | replaceRE "%%(.*?)%%" `{{index .Params.quickfill $1}}`
+    }}
 {{ else }}
     {{ $html = printf "%s%s%s" "<div ng-app=\"ods-widgets\">\n" $htmlcontent "</div>" }}
 {{ end }}
@@ -33,6 +36,7 @@
 <div class="ods-content">
     <div class="box-live-example"
       style="height: {{ or .Params.height .Parent.Params.height | default 800 }}px;">
+      {{ index .Params.quickfill "primary" }}
       <iframe id="iframe-{{ .Title | anchorize }}"
               width="100%" height="100%"
               src="about:blank"
