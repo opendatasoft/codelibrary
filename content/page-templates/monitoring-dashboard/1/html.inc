@@ -82,7 +82,7 @@
                             <ods-chart timescale="day"
                               single-y-axis="true"
                               align-month="true"
-                              label-x="Automated downloa (bot)?">
+                              label-x="Automated download (bot)?">
                                 <ods-chart-query context="download"
                                                   field-x="timestamp"
                                                   maxpoints="0"
