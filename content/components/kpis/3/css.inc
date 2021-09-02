@@ -8,7 +8,6 @@
 ========================================================================== */
 .kpi-card {
     background-color: var(--boxes-background);
-    height: 100%;
     padding: 39px;
     border-radius: 4px;
     margin-bottom: 20px;
@@ -71,9 +70,8 @@
 }
 
 .card-flip {
-    position: relative;
-    height: 100%;
-    width: 100%;
+    display: flex;
+    align-items: stretch;
     -webkit-transition: -webkit-transform 0.2s;
     transition: -webkit-transform 0.2s;
     -o-transition: transform 0.2s;
@@ -90,15 +88,12 @@
 .card-face {
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    height: 100%;
     width: 100%;
+    margin-right: -100%;
     margin-bottom: 0; /* remove kpi-card margin bottom */
 }
 
 .card-face-back {
-    position: absolute;
-    top: 0;
-    left: 0;
     -webkit-transform: rotateY(180deg);
     transform: rotateY(180deg);
     -webkit-box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14),
