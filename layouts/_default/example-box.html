@@ -125,10 +125,9 @@
             {{ if gt (len $css) 0 }}
             <div class="js-tabcontent"
                  id="code-{{ .Title | anchorize }}-css-content"
-                 data-clipboard="{{ $css }}"
-            >
+                 data-clipboard="{{ $css }}">
                 <div class="highlight">
-                    <pre class="language-css" data-lang="css"><code>{{ $css }}</code></pre>
+                    <pre class="{{ if not .Params.avoidCSSHighlight }}language-css{{ end }}" data-lang="css"><code>{{ $css }}</code></pre>
                 </div>
             </div>
             {{ end }}

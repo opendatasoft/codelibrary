@@ -169,6 +169,12 @@
           </a>
         </li>
         
+        <li>
+          <a href="#sub-aggregation-on-adv-analysis">
+            Sub-aggregation on adv-analysis
+          </a>
+        </li>
+        
       </ul>
     </div>
   </div>
@@ -183,6 +189,9 @@
           Home
         </a>
       </li>
+      
+      
+      
       
       
       
@@ -468,7 +477,7 @@
                 
                 
                 <span class="tag pill is-size-7 is-rounded is-info">
-                  1
+                  2
                 </span>
                 
               </div>
@@ -501,10 +510,6 @@
                 ods-chart: CSS Hacks
                 
                 
-                <span class="tag pill is-size-7 is-rounded is-info">
-                  1
-                </span>
-                
               </div>
             </a>
           </li>
@@ -524,10 +529,6 @@
               <div>
                 ods-color-gradient &#43; ods-map : a choropleth alternative
                 
-                
-                <span class="tag pill is-size-7 is-rounded is-info">
-                  4
-                </span>
                 
               </div>
             </a>
@@ -1286,8 +1287,7 @@
         margin-left: 50px;
         margin-top: 0;
     }
-}"
-            >
+}">
                 <div class="highlight">
                     <pre class="language-css" data-lang="css"><code>.range-slider-ctn {
     display: flex;
@@ -1341,6 +1341,576 @@
       </div>
     </article>
     
+    <article class="block">
+      <h2 class="title is-2" id="sub-aggregation-on-adv-analysis">
+        Sub-aggregation on adv-analysis 
+        <span class="tag is-rounded is-info">New</span>
+        
+        <a class="is-link anchor" href="#sub-aggregation-on-adv-analysis">
+          <span class="icon">
+            <img src="/img/fas-link.svg" />
+          </span>
+        </a>
+      </h2>
+      <div class="content">
+        <p>The <code>ods-adv-analysis</code> widget can be use in conjonction with <code>ods-subaggregation</code>. To do so, the field on which to perform the aggregation (&lsquo;x-axis&rsquo; or &lsquo;expression&rsquo; in other widgets) has to be name <code>x</code>.</p>
+<p>In the exemple below we use this technique to perform a daily average of an hourly timeserie. <code>ods-adv-analysis</code> is used to group records by day over the last 7 days and then <code>ods-subaggregation</code> is used to make the average of those results.</p>
+
+      </div>
+      
+      <div class="box">
+        
+
+
+
+
+
+
+    
+
+
+
+
+<div class="codepen">
+    <form id="form-sub-aggregation-on-adv-analysis"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+                 "title": "New Pen!",
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "editors": 110,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003csection class=\&#34;row\&#34;\u003e\n  \u003cdiv class=\&#34;col-md-4\&#34;\u003e\n    \u003cods-dataset-context context=\&#34;bikecount\&#34; bikecount-dataset=\&#34;comptage-velo-donnees-compteurs-syndicat-des-mobilites-de-touraine\&#34;\u003e\n      \u003cdiv class=\&#34;card\&#34;\n           ng-if=\&#34;!ctx.parameters[&#39;refine.date&#39;]\&#34;\n           ods-adv-analysis=\&#34;daytotal\&#34;\n           ods-adv-analysis-context=\&#34;bikecount\&#34;\n           ods-adv-analysis-select=\&#34;sum(counts) as total\&#34;\n           ods-adv-analysis-where=\&#34;date \u003e= now(days=-7)\&#34;\n           ods-adv-analysis-group-by=\&#34;date_format(date, &#39;YYYY-MM-dd&#39;) as x\&#34;\n           \u003e\n          \u003cdiv class=\&#34;card-head\&#34;\u003e\u003c/div\u003e\n          \u003cdiv class=\&#34;card-body\&#34;\n                ods-subaggregation=\&#34;daytotal\&#34;\n                ods-subaggregation-serie-weekavg=\&#34;MEAN(total)\&#34;\u003e\n              \u003cp class=\&#34;title is-1 has-text-primary\&#34;\u003e\n                  {{ results[0].weekavg }}\n              \u003c/p\u003e\n              \u003cp class=\&#34;subtitle is-2\&#34;\u003e\n                  bikes counted per day on average last week.\n              \u003c/p\u003e\n          \u003c/div\u003e\n          \u003cdiv class=\&#34;card-footer\&#34;\u003e\n          \u003c/div\u003e\n      \u003c/div\u003e\n    \u003c/ods-dataset-context\u003e\n  \u003c/div\u003e\n\u003c/section\u003e\n\u003c/div\u003e&#34;,
+                 "css": &#34;/* Elements */\nsection.row {\n    padding: 13px;\n    margin-bottom: 64px;\n}\n.title {\n    font-weight: 700;\n    margin-bottom: 1em;\n}\n\n.subtitle {\n    font-weight: 400;\n    margin-top: -1em;\n}\n\n.title .subtitle {\n    justify-self: flex-start;\n}\n\n.title.is-1 {\n    font-size: 2.3125rem;\n}\n\n.title.is-2,\n.subtitle.is-2 {\n    font-size:  1.4375rem;\n}\n\n.title.is-3,\n.subtitle.is-3 {\n    font-size: 1.25rem;\n}\n\n/* Components */\n.card {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    justify-content: space-between;\n    min-width: 200px;\n    height: 100%;\n    padding: 13px;\n    border-radius: 6px;\n    border: 1px solid #CBD2DB;\n}\n\n.card-head,\n.card-footer {\n    flex: 0 1 48px;\n}\n\n.card-body {\n    flex-grow: 1;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center;\n    width: 100%;\n}\n&#34;
+               }'>
+    </form>
+</div>
+<div class="ods-content">
+    <div class="box-live-example"
+      style="height: 800px;">
+      <iframe id="iframe-sub-aggregation-on-adv-analysis"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+                <head>&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;
+/&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;
+/&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;
+&gt;&lt;/script&gt;
+
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;
+&gt;&lt;/script&gt;
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;
+&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+  const sourceMonitoringInterceptor = $q =&gt; {
+    return {
+      request: config =&gt; {
+        if (config.params)
+          if (config.params.source) delete config.params.source;
+
+        config.url = config.url.replace(
+          &#34;ods-api-monitoring&#34;,
+          &#34;monitoring-copy&#34;
+        );
+        return config;
+      }
+    };
+  };
+
+  angular
+    .module(&#34;ods-widgets&#34;)
+    .config(function(ODSWidgetsConfigProvider, $httpProvider) {
+      ODSWidgetsConfigProvider.setConfig({
+        defaultDomain: &#34;https://userclub.opendatasoft.com/&#34;,
+        basemaps: [
+          {
+            provider: &#34;jawg.light&#34;,
+            label: &#34;Jawg Light&#34;,
+            jawg_apikey: &#34;opendatasoft-community&#34;
+          },
+          {
+            provider: &#34;jawg.streets&#34;,
+            label: &#34;Jawg Streets&#34;,
+            jawg_apikey: &#34;opendatasoft-community&#34;,
+            id: &#34;streets&#34;
+          }
+        ],
+        themes: {
+          default: {
+            url: &#34;/img/ods.svg&#34;
+          },
+          Santé: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Culture, Patrimoine&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Éducation, Formation, Recherche, Enseignement&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Environment: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Transports, Déplacements&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Économie, Business, PME, Développement économique, Emploi&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Administration, Gouvernement, Finances publiques, Citoyenneté&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Justice, Sécurité, Police, Crime&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Sport, Loisirs&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Hébergement, Restauration&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Services, Social&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Checklist: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Usages: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#34;,
+            color: &#34;#1446A0&#34;
+          }
+        },
+        mapPrependAttribution: &#34;Jawg apikey NOT suitable for production&#34;
+      });
+      $httpProvider.interceptors.push(sourceMonitoringInterceptor);
+    });
+&lt;/script&gt;
+</head>
+                <base href='https://userclub.opendatasoft.com/'>
+                <body>
+                <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
+&lt;section class=&#34;row&#34;&gt;
+  &lt;div class=&#34;col-md-4&#34;&gt;
+    &lt;ods-dataset-context context=&#34;bikecount&#34; bikecount-dataset=&#34;comptage-velo-donnees-compteurs-syndicat-des-mobilites-de-touraine&#34;&gt;
+      &lt;div class=&#34;card&#34;
+           ng-if=&#34;!ctx.parameters[&#39;refine.date&#39;]&#34;
+           ods-adv-analysis=&#34;daytotal&#34;
+           ods-adv-analysis-context=&#34;bikecount&#34;
+           ods-adv-analysis-select=&#34;sum(counts) as total&#34;
+           ods-adv-analysis-where=&#34;date &gt;= now(days=-7)&#34;
+           ods-adv-analysis-group-by=&#34;date_format(date, &#39;YYYY-MM-dd&#39;) as x&#34;
+           &gt;
+          &lt;div class=&#34;card-head&#34;&gt;&lt;/div&gt;
+          &lt;div class=&#34;card-body&#34;
+                ods-subaggregation=&#34;daytotal&#34;
+                ods-subaggregation-serie-weekavg=&#34;MEAN(total)&#34;&gt;
+              &lt;p class=&#34;title is-1 has-text-primary&#34;&gt;
+                  {{ results[0].weekavg }}
+              &lt;/p&gt;
+              &lt;p class=&#34;subtitle is-2&#34;&gt;
+                  bikes counted per day on average last week.
+              &lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class=&#34;card-footer&#34;&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/ods-dataset-context&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;/div&gt;</div>
+                <style type='text/css'>
+                    /* Elements */
+section.row {
+    padding: 13px;
+    margin-bottom: 64px;
+}
+.title {
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+.subtitle {
+    font-weight: 400;
+    margin-top: -1em;
+}
+
+.title .subtitle {
+    justify-self: flex-start;
+}
+
+.title.is-1 {
+    font-size: 2.3125rem;
+}
+
+.title.is-2,
+.subtitle.is-2 {
+    font-size:  1.4375rem;
+}
+
+.title.is-3,
+.subtitle.is-3 {
+    font-size: 1.25rem;
+}
+
+/* Components */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 200px;
+    height: 100%;
+    padding: 13px;
+    border-radius: 6px;
+    border: 1px solid #CBD2DB;
+}
+
+.card-head,
+.card-footer {
+    flex: 0 1 48px;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+                </style>
+                </body>
+              ">
+      </iframe>
+      <div class="show-code buttons has-addons">
+          <button class="button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-sub-aggregation-on-adv-analysis').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    <div class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
+            <div class="level-left">
+                <div class="level-item">
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-sub-aggregation-on-adv-analysis-html-content"
+                        >
+                          HTML
+                        </a>
+                        
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-sub-aggregation-on-adv-analysis-css-content"
+                        >
+                          CSS
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
+            </div>
+        </nav>
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-sub-aggregation-on-adv-analysis-html-content"
+                 data-clipboard="&lt;section class=&#34;row&#34;&gt;
+  &lt;div class=&#34;col-md-4&#34;&gt;
+    &lt;ods-dataset-context context=&#34;bikecount&#34; bikecount-dataset=&#34;comptage-velo-donnees-compteurs-syndicat-des-mobilites-de-touraine&#34;&gt;
+      &lt;div class=&#34;card&#34;
+           ng-if=&#34;!ctx.parameters[&#39;refine.date&#39;]&#34;
+           ods-adv-analysis=&#34;daytotal&#34;
+           ods-adv-analysis-context=&#34;bikecount&#34;
+           ods-adv-analysis-select=&#34;sum(counts) as total&#34;
+           ods-adv-analysis-where=&#34;date &gt;= now(days=-7)&#34;
+           ods-adv-analysis-group-by=&#34;date_format(date, &#39;YYYY-MM-dd&#39;) as x&#34;
+           &gt;
+          &lt;div class=&#34;card-head&#34;&gt;&lt;/div&gt;
+          &lt;div class=&#34;card-body&#34;
+                ods-subaggregation=&#34;daytotal&#34;
+                ods-subaggregation-serie-weekavg=&#34;MEAN(total)&#34;&gt;
+              &lt;p class=&#34;title is-1 has-text-primary&#34;&gt;
+                  {{ results[0].weekavg }}
+              &lt;/p&gt;
+              &lt;p class=&#34;subtitle is-2&#34;&gt;
+                  bikes counted per day on average last week.
+              &lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class=&#34;card-footer&#34;&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/ods-dataset-context&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+"
+                 role="tabpanel">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;section class=&#34;row&#34;&gt;
+  &lt;div class=&#34;col-md-4&#34;&gt;
+    &lt;ods-dataset-context context=&#34;bikecount&#34; bikecount-dataset=&#34;comptage-velo-donnees-compteurs-syndicat-des-mobilites-de-touraine&#34;&gt;
+      &lt;div class=&#34;card&#34;
+           ng-if=&#34;!ctx.parameters[&#39;refine.date&#39;]&#34;
+           ods-adv-analysis=&#34;daytotal&#34;
+           ods-adv-analysis-context=&#34;bikecount&#34;
+           ods-adv-analysis-select=&#34;sum(counts) as total&#34;
+           ods-adv-analysis-where=&#34;date &gt;= now(days=-7)&#34;
+           ods-adv-analysis-group-by=&#34;date_format(date, &#39;YYYY-MM-dd&#39;) as x&#34;
+           &gt;
+          &lt;div class=&#34;card-head&#34;&gt;&lt;/div&gt;
+          &lt;div class=&#34;card-body&#34;
+                ods-subaggregation=&#34;daytotal&#34;
+                ods-subaggregation-serie-weekavg=&#34;MEAN(total)&#34;&gt;
+              &lt;p class=&#34;title is-1 has-text-primary&#34;&gt;
+                  {{ results[0].weekavg }}
+              &lt;/p&gt;
+              &lt;p class=&#34;subtitle is-2&#34;&gt;
+                  bikes counted per day on average last week.
+              &lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class=&#34;card-footer&#34;&gt;
+          &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/ods-dataset-context&gt;
+  &lt;/div&gt;
+&lt;/section&gt;
+</code></pre>
+                </div>
+            </div>
+            
+            <div class="js-tabcontent"
+                 id="code-sub-aggregation-on-adv-analysis-css-content"
+                 data-clipboard="/* Elements */
+section.row {
+    padding: 13px;
+    margin-bottom: 64px;
+}
+.title {
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+.subtitle {
+    font-weight: 400;
+    margin-top: -1em;
+}
+
+.title .subtitle {
+    justify-self: flex-start;
+}
+
+.title.is-1 {
+    font-size: 2.3125rem;
+}
+
+.title.is-2,
+.subtitle.is-2 {
+    font-size:  1.4375rem;
+}
+
+.title.is-3,
+.subtitle.is-3 {
+    font-size: 1.25rem;
+}
+
+/* Components */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 200px;
+    height: 100%;
+    padding: 13px;
+    border-radius: 6px;
+    border: 1px solid #CBD2DB;
+}
+
+.card-head,
+.card-footer {
+    flex: 0 1 48px;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>/* Elements */
+section.row {
+    padding: 13px;
+    margin-bottom: 64px;
+}
+.title {
+    font-weight: 700;
+    margin-bottom: 1em;
+}
+
+.subtitle {
+    font-weight: 400;
+    margin-top: -1em;
+}
+
+.title .subtitle {
+    justify-self: flex-start;
+}
+
+.title.is-1 {
+    font-size: 2.3125rem;
+}
+
+.title.is-2,
+.subtitle.is-2 {
+    font-size:  1.4375rem;
+}
+
+.title.is-3,
+.subtitle.is-3 {
+    font-size: 1.25rem;
+}
+
+/* Components */
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 200px;
+    height: 100%;
+    padding: 13px;
+    border-radius: 6px;
+    border: 1px solid #CBD2DB;
+}
+
+.card-head,
+.card-footer {
+    flex: 0 1 48px;
+}
+
+.card-body {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+      </div>
+    </article>
+    
   </div>
 </section>
 
@@ -1369,7 +1939,7 @@
     </script>
     <script
       type="text/javascript"
-      src="/index.min.d986e12cb7cbc909e8709adbae4f4f150c07f0a07b6e439f91f5b639c68888b4.js"
+      src="/index.min.41a0b740435101dbd6098d0ea4b23b1e8342e67f62ab209d186b7c77fc0ce1de.js"
       defer
     ></script>
   </body>

@@ -11,6 +11,9 @@
     <!-- datasetid (Dataset ID) : Must contain the ID of the dataset
      ex: 'oeuvres-de-johannes-vermeer'
     -->
+    <!-- sort : a sort parameter
+     ex: '-date'
+    -->
 
     <!-- ### FILTERS SETTINGS ### -->
     <!-- filters (Filters) : List of object that contains the IDs to generate the filters pannel.
@@ -35,8 +38,26 @@
     <!-- ### LIST VIEW SETTINGS ### -->
     <!-- view (List view type) : Type of the view to list results, can be 'table' or 'cards'
     -->
-    <!-- fieldsList (List configuration) : Set the list of field IDs
-     ex: ['title','category','genre','date']
+    <!-- fieldsList (List configuration) : Set the list of fields
+    Simple mode :
+        Can be an array of field IDs
+        ex: ['title','category','genre','date']
+
+    Advanced mode :
+        Can be an array of object.
+        Each object describe the field format and provide optional options.
+        field: the ID of te field
+        format: is optional, can be 'date' or 'number'
+        options: is optional,
+            - it can have a 'precision' and 'unit' for 'number' format
+            - it can have a 'dateFormat' for 'date' format
+         ex: [
+                  {'field':'address'},
+                  {'field':'city'},
+                  {'field':'price', 'format':'number', 'options': {'precision':1, 'unit':'$'}},
+                  {'field':'date_start','format':'date'},
+                  {'field':'date_end','format':'date', 'options': {'dateFormat':'longDate'}}
+             ];
     -->
     <!-- fieldLink (Link to an external resource) : If available, the field ID of some external resource as a web URL
      ex: 'link'
@@ -103,9 +124,9 @@
 
 
     <ods-dataset-context context="ctx,ctxdate"
-                         ctx-domain="{{ domain }}"
+                         ctx-domain="{{ domain }}"
                          ctx-dataset="{{ datasetid }}"
-                         ctxdate-domain="{{ domain }}"
+                         ctxdate-domain="{{ domain }}"
                          ctxdate-dataset="{{ datasetid }}"
                          ctxdate-parameters=customParameters>
         <!-- Private datasets can be accessed by adding an API Key.
@@ -113,6 +134,10 @@
               where XXX is your apikey :
                 ctx-apikey="XXX"
             -->
+
+        <span ng-if="sort">
+            {{ctx.parameters['sort'] = sort;''}}
+        </span>
 
         <span ng-if="fieldDefaultRangeStartsNow">
             {{ctxdate.parameters={'q.date': fieldDate + '&gt;#now()'};''}}
@@ -241,7 +266,8 @@
                      ods-aggregation-context="ctx"
                      ods-aggregation-function="{{ kpi.function }}"
                      ods-aggregation-expression="{{ kpi.expression }}">
-                    <i class="kpi-icon fa fa-{{ kpi.faicon || 'gitlab' }}" aria-hidden="true"></i>
+                    <i ng-if="kpi.faicon"
+                       class="kpi-icon fa fa-{{ kpi.faicon }}" aria-hidden="true"></i>
                     <p class="kpi-title">
                         {{ (agg || 0) | number : (kpi.precision || 0) }}
                         <span ng-if="kpi.unit" class="kpi-unit">{{ kpi.unit }}</span>
@@ -263,16 +289,36 @@
                        ods-results-max="20">
                     <thead>
                     <tr>
-                        <th ng-repeat="field in fieldsList">{{ ctxfields[field] }}</th>
+                        <th ng-if="!fieldsList[0].field"
+                            ng-repeat="field in fieldsList">{{ ctxfields[field] }}</th>
+                        <th ng-if="fieldsList[0].field"
+                            ng-repeat="fieldconfig in fieldsList">{{ ctxfields[fieldconfig.field] }}</th>
                         <th ng-if="fieldLink"></th>
                     </tr>
                     </thead>
                     <tbody>
                     <tr ng-repeat="item in items">
-                        <td ng-repeat="field in fieldsList"
+                        <td ng-if="!fieldsList[0].field"
+                            ng-repeat="field in fieldsList"
                             style="max-width: calc(100vw / {{ fieldsList.length }});"
-                            title="{{ item.fields[field] }}">
+                            title="{{ ctxfields[field] }}">
                             {{ item.fields[field] }}
+                        </td>
+                        <td ng-if="fieldsList[0].field"
+                            ng-repeat="fieldconfig in fieldsList"
+                            style="max-width: calc(100vw / {{ fieldsList.length }});"
+                            title="{{ ctxfields[fieldconfig.field] }}">
+                            <span ng-switch="fieldconfig.format">
+                                <span ng-switch-when="number">
+                                    {{ item.fields[fieldconfig.field] | number : (fieldconfig.options.precision || 0) }} {{ fieldconfig.options.unit }}
+                                </span>
+                                <span ng-switch-when="date">
+                                    {{ item.fields[fieldconfig.field] | date : (fieldconfig.options.dateFormat || 'mediumDate') }}
+                                </span>
+                                <span ng-switch-default>
+                                    {{ item.fields[fieldconfig.field] }}
+                                </span>
+                            </span>
                         </td>
                         <td ng-if="fieldLink">
                             <!-- if fieldLink is a json and contains the 'id' key, it means that the link points to a file hosted on ODS platform and can be downloaded. If it's an external link, the other link tag is used -->
@@ -285,20 +331,20 @@
                             </a>
 
                             <!-- fieldLink is used here
-                                        For more advanced scenario, you can send the user to :
+                                For more advanced scenario, you can send the user to :
 
-                                        - the dataset table filtered with the fieldLink value, through a text query
-                                        href="/explore/dataset/{{ datasetid }}/table?q={{ item.fields[fieldLink] }}"
+                                - the dataset table filtered with the fieldLink value, through a text query
+                                href="/explore/dataset/{{ datasetid }}/table?q={{ item.fields[fieldLink] }}"
 
-                                        - the dataset table filtered with the fieldLink value, through a refine on the field
-                                        href="/explore/dataset/{{ datasetid }}/table?refine.{{ fieldLink }}={{ item.fields[fieldLink] }}"
+                                - the dataset table filtered with the fieldLink value, through a refine on the field
+                                href="/explore/dataset/{{ datasetid }}/table?refine.{{ fieldLink }}={{ item.fields[fieldLink] }}"
 
-                                        - a page using url-sync=true setting :
-                                        href="/pages/yourpage/?refine.{{ fieldLink }}={{ item.fields[fieldLink] }}"
-                                        -->
+                                - a page using url-sync=true setting :
+                                href="/pages/yourpage/?refine.{{ fieldLink }}={{ item.fields[fieldLink] }}"
+                                -->
 
                             <a ng-if="!item.fields[fieldLink].id"
-                               href="{{ item.fields[fieldLink] }}"
+                               href="{{ item.fields[fieldLink] }}"
                                target="_blank"
                                title="{{ fieldLinkLabel }}"
                                class="table-dropdown-button">
@@ -316,7 +362,7 @@
             <div class="row row-equal-height"
                  ods-results="items"
                  ods-results-context="ctx"
-                 ods-results-max="{{ 8 * itemsPerRow }}">
+                 ods-results-max="{{ 8 * itemsPerRow }}">
                 <div ng-repeat="item in items"
                      class="{{ 'col-md-' + (12/itemsPerRow) }} margin-bottom-20">
                     <div class="content-card"
@@ -330,9 +376,26 @@
                                 {{ item.fields[cardTitle] }}
                             </h2>
                             <div class="content-card-fields">
-                                <dl>
+                                <!-- If fieldsList is an array of fields ID -->
+                                <dl ng-if="!fieldsList[0].field">
                                     <dt ng-repeat-start="field in fieldsList">{{ ctxfields[field] }}</dt>
                                     <dd ng-repeat-end>{{ item.fields[field] }}</dd>
+                                </dl>
+                                <!-- If fieldsList is an object (advanced settings of fields) -->
+                                <dl ng-if="fieldsList[0].field">
+                                    <dt ng-repeat-start="fieldconfig in fieldsList">{{ ctxfields[fieldconfig.field] }}</dt>
+                                    <dd ng-switch="fieldconfig.format"
+                                        ng-repeat-end>
+                                        <span ng-switch-when="number">
+                                            {{ item.fields[fieldconfig.field] | number : (fieldconfig.options.precision || 0) }} {{ fieldconfig.options.unit }}
+                                        </span>
+                                        <span ng-switch-when="date">
+                                            {{ item.fields[fieldconfig.field] | date : (fieldconfig.options.dateFormat || 'mediumDate') }}
+                                        </span>
+                                        <span ng-switch-default>
+                                            {{ item.fields[fieldconfig.field] }}
+                                        </span>
+                                    </dd>
                                 </dl>
                             </div>
                             <div ng-if="fieldLink" class="text-center">
@@ -345,17 +408,17 @@
                                 </a>
 
                                 <!-- fieldLink is used here
-                                            For more advanced scenario, you can send the user to :
+                                For more advanced scenario, you can send the user to :
 
-                                            - the dataset table filtered with the fieldLink value, through a text query
-                                            href="/explore/dataset/{{ datasetid }}/table?q={{ item.fields[fieldLink] }}"
+                                - the dataset table filtered with the fieldLink value, through a text query
+                                href="/explore/dataset/{{ datasetid }}/table?q={{ item.fields[fieldLink] }}"
 
-                                            - the dataset table filtered with the fieldLink value, through a refine on the field
-                                            href="/explore/dataset/{{ datasetid }}/table?refine.{{ fieldLink }}={{ item.fields[fieldLink] }}"
+                                - the dataset table filtered with the fieldLink value, through a refine on the field
+                                href="/explore/dataset/{{ datasetid }}/table?refine.{{ fieldLink }}={{ item.fields[fieldLink] }}"
 
-                                            - a page using url-sync=true setting :
-                                            href="/pages/yourpage/?refine.{{ fieldLink }}={{ item.fields[fieldLink] }}"
-                                            -->
+                                - a page using url-sync=true setting :
+                                href="/pages/yourpage/?refine.{{ fieldLink }}={{ item.fields[fieldLink] }}"
+                                -->
                                 <a ng-if="!item.fields[fieldLink].id" href="{{ item.fields[fieldLink] }}"
                                    target="_blank"
                                    class="content-card-button">
