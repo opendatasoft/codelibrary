@@ -2,8 +2,9 @@
     --left-color: #142E7B;
     --right-color: #ffcc00;
 }
-
+/***************/
 /* Age pyramid */
+/***************/
 .pyramid-line {
     display: flex;
     justify-content: space-between;
@@ -13,12 +14,14 @@
 
 .pyramid-middle {
     font-weight: 500;
-    width: 230px;
+    flex: 1;
+    min-width: 70px;
     text-align: center;
+    white-space: nowrap;
 }
 
 .pyramid-side {
-    width: 74%;
+    flex: 3;
     margin: 0px 10px;
     text-align: center;
     display: flex;
@@ -62,7 +65,7 @@ div.bar{
 .pyramid-value {
     font-size: 12px;
     padding: 0px 5px;
-    width: 13%;
+    flex: 1;
 }
 
 .left {
@@ -73,8 +76,12 @@ div.bar{
     text-align: end;
 }
 
-/* SWITCH BUTTON */
 
+
+
+
+
+/* Optional : SWITCH BUTTON */
 .pyramid-switch {
     display: flex;
     align-items: baseline;
@@ -147,10 +154,8 @@ div.bar{
     padding-right: .4rem;
 }
 
-
 /* "On" state
    ========================== */
-
 .switch-input:checked + .switch-button {
     /* background and border when in "on" state */
     background-color: var(--links);
@@ -172,7 +177,6 @@ div.bar{
 
 /* Checkbox in disabled state
    ========================== */
-
 .switch-input[type="checkbox"]:disabled + .switch-button {
     opacity: 0.6;
     cursor: not-allowed;
