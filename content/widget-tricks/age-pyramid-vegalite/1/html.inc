@@ -3,14 +3,12 @@
     context="ctx"
     ctx-dataset="population-par-age-et-par-sexe-2006-a-2016-donnees-insee"
     ctx-parameters="{'refine.annee':'2016'}"
-    ctx-domain="issy-les-moulineaux"
-  >
+    ctx-domain="issy-les-moulineaux">
     <div
       ods-adv-analysis="myData"
       ods-adv-analysis-context="ctx"
       ods-adv-analysis-select="sum(nombre) as count"
-      ods-adv-analysis-group-by="age, sexe"
-    >
+      ods-adv-analysis-group-by="age, sexe">
       <ods-vega-lite-chart
         spec="{
                                                  '$schema': 'https://vega.github.io/schema/vega-lite/v2.json',
@@ -95,8 +93,7 @@
                                                  }
                                                  }],
                                                  }"
-        values-data="myData"
-      >
+        values-data="myData">
       </ods-vega-lite-chart>
     </div>
   </ods-dataset-context>
