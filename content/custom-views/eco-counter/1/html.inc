@@ -254,7 +254,7 @@
                                            'field': 'count',
                                            'aggregate': 'sum',
                                            'type': 'quantitative',
-                                           'scale': { 'range': ['#F5FBFA', '#E7F8F5', '#D0F0EB', '#81DBCD', '#00C7B1'] }
+                                           'scale': { 'range': ['#F5FBFA', '#E7F8F5', '#D0F0EB', '#81DBCD', '%%primary%%'] }
                                            }
                                            }
                                            }"
@@ -272,7 +272,7 @@
                         <ods-chart display-legend="false">
                             <ods-chart-query context="ctx" field-x="date" timescale="month">
                                 <ods-chart-serie
-                                                 color="#00C7B1"
+                                                 color="%%primary%%"
                                                  chart-type="spline"
                                                  expression-y="counts"
                                                  function-y="AVG"
@@ -343,7 +343,7 @@
                     <h3 class="title is-3">{{ record.fields.name }}</h3>
                     <ods-dataset-context
                                          context="sites"
-                                         sites-dataset="eco-counter-sites"
+                                         sites-dataset="eco-counter-sites0"
                                          sites-parameters="{'refine.name': record.fields.name}"
                                          >
                         <div class="is-size-4"

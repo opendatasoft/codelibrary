@@ -1,16 +1,19 @@
 {{ $htmlcontent := path.Join .File.Dir "html.inc" | readFile }}
-{{ $css := path.Join .File.Dir "css.inc" | readFile }}
+{{ $csscontent := path.Join .File.Dir "css.inc" | readFile }}
 {{ $head := "/layouts/partials/includes.html" | readFile }}
 
 {{ $html := "" }}
+{{ $css := $csscontent }}
 
 {{ if (and .Params.domainid .Params.datasetid) }}
     {{ $openctx := printf "%s%s%s%s%s" "<ods-dataset-context context=\"ctx\"\n ctx-dataset=\"" .Params.datasetid "\"\n ctx-domain=\"" .Params.domainid "\">\n" }}
     {{ $closectx := "</ods-dataset-context>\n" }}
-    {{
-      $html = printf "%s%s%s%s%s%s%s" "<div ng-app=\"ods-widgets\">\n" $openctx "\n" $htmlcontent "\n" $closectx "</div>"
-      | replaceRE "%%(.*?)%%" `{{index .Params.quickfill $1}}`
-    }}
+    {{ $html = printf "%s%s%s%s%s%s%s" "<div ng-app=\"ods-widgets\">\n" $openctx "\n" $htmlcontent "\n" $closectx "</div>" }}
+    {{ range $label, $default := .Params.quickfill  }}
+      {{ $re := (print "%%" $label "%%")}}
+      {{ $html = replaceRE $re $default $html }}
+      {{ $css = replaceRE $re $default $css }}
+    {{ end }}
 {{ else }}
     {{ $html = printf "%s%s%s" "<div ng-app=\"ods-widgets\">\n" $htmlcontent "</div>" }}
 {{ end }}
@@ -36,7 +39,6 @@
 <div class="ods-content">
     <div class="box-live-example"
       style="height: {{ or .Params.height .Parent.Params.height | default 800 }}px;">
-      {{ index .Params.quickfill "primary" }}
       <iframe id="iframe-{{ .Title | anchorize }}"
               width="100%" height="100%"
               src="about:blank"
@@ -91,6 +93,9 @@
                     </div>
                 </div>
             </div>
+            {{ with .Params.quickfill }}
+              {{ partial "quickfill-form.html" .}}
+            {{ end }}
             <div class="level-right">
                 <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
                   data-tooltip="Copy to clipboard"
@@ -128,10 +133,10 @@
             {{ if gt (len $css) 0 }}
             <div class="js-tabcontent"
                  id="code-{{ .Title | anchorize }}-css-content"
-                 data-clipboard="{{ $css }}"
+                 data-clipboard="{{ $csscontent }}"
             >
                 <div class="highlight">
-                    <pre class="language-css" data-lang="css"><code>{{ $css }}</code></pre>
+                    <pre class="language-css" data-lang="css"><code>{{ $csscontent }}</code></pre>
                 </div>
             </div>
             {{ end }}

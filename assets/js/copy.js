@@ -4,9 +4,12 @@
 // 1. https://tomspencer.dev/blog/2018/09/14/adding-click-to-copy-buttons-to-a-hugo-powered-blog/
 // 2. https://www.dannyguo.com/blog/how-to-add-copy-to-clipboard-buttons-to-code-blocks-in-hugo/
 import * as clipboard from 'clipboard-polyfill';
+import quickFill from './quick-fill.js';
 
 const addCCtoColor = (color) => {
-  const clipContent = color.querySelector('code').innerText;
+  const code = color.querySelector('code').innerText;
+  const { filledCode: clipContent } = quickFill({ code });
+
   color.addEventListener('click', async (event) => {
     await clipboard.writeText(clipContent);
     color.classList.add('is-success');
@@ -22,7 +25,9 @@ const addCCtoColor = (color) => {
 const addCCToCode = (codeBox, copyButton, copiedButton) => {
   copyButton.addEventListener('click', async (event) => {
     const activeTab = codeBox.querySelector('.js-tabcontent.is-active');
-    const clipContent = activeTab.dataset.clipboard;
+    const code = activeTab.dataset.clipboard;
+    const { filledCode: clipContent } = quickFill({ code });
+
     if (clipContent) {
       await clipboard.writeText(clipContent);
       copyButton.blur();

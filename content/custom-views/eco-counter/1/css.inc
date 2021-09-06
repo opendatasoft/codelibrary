@@ -1,80 +1,80 @@
 :root {
-  --primary: #00C7B1;
-  --card-text: black;
-  --body-text: black;
-  --surface: white;
+    --primary: %%primary%%;
+    --card-text: black;
+    --body-text: black;
+    --surface: white;
 }
 
 /* Grid system conversion to flexbox */
 .row > *:first-child {
-  margin-left: 0;
+    margin-left: 0;
 }
 
 .row > *:last-child {
-  margin-right: 0;
+    margin-right: 0;
 }
 
 .row {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 @media screen and (max-width: 992px) {
-  .row {
-    flex-direction: column;
-  }
+    .row {
+        flex-direction: column;
+    }
 
-  .row > *:not(:last-child) {
-    margin-bottom: 16px;
-  }
+    .row > *:not(:last-child) {
+        margin-bottom: 16px;
+    }
 }
 
 /* Override for minimal chart */
 
 .row > *:first-child {
-  margin-left: 0;
+    margin-left: 0;
 }
 
 .row > *:last-child {
-  margin-right: 0;
+    margin-right: 0;
 }
 
 .row {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 @media screen and (max-width: 992px) {
-  .row {
-    flex-direction: column;
-  }
+    .row {
+        flex-direction: column;
+    }
 
-  .row > *:not(:last-child) {
-    margin-bottom: 16px;
-  }
+    .row > *:not(:last-child) {
+        margin-bottom: 16px;
+    }
 }
 
 .highcharts-halo {
-  fill: var(--primary) !important;
+    fill: var(--primary) !important;
 }
 
 .highcharts-root > * {
-  width: 100%;
+    width: 100%;
 }
 
 .highcharts-text-outline {
-  display: none;
+    display: none;
 }
 
 .highcharts-data-label text tspan {
-  fill: var(--card-text);
+    fill: var(--card-text);
 }
 
 .hide-y .highcharts-yaxis-grid path.highcharts-grid-line,
 .hide-y .highcharts-yaxis-labels text,
 .hide-y .highcharts-yaxis-labels span {
-  display: none !important;
+    display: none !important;
 }
 
 .hide-x .highcharts-xaxis-labels text,
@@ -83,105 +83,105 @@
 .hide-x .highcharts-axis.highcharts-xaxis path.highcharts-axis-line,
 .hide-x .highcharts-xaxis-grid path.highcharts-grid-line,
 .hide-x .highcharts-tick {
-  display: none !important;
+    display: none !important;
 }
 
 .hide-x-grid .highcharts-xaxis tspan,
 .hide-x-grid .highcharts-axis.highcharts-xaxis path.highcharts-axis-line,
 .hide-x-grid .highcharts-xaxis-grid path.highcharts-grid-line,
 .hide-x-grid .highcharts-tick {
-  display: none !important;
+    display: none !important;
 }
 
 .y-values .highcharts-data-label:not(:first-child):not(:last-child) {
-  display: none;
+    display: none;
 }
 
 .y-values .highcharts-data-label:first-child,
 .y-values .highcharts-data-label:last-child {
-  opacity: 1;
-  visibility: inherit; /* force the last child to be visible, as it can be hidden by highchart */
+    opacity: 1;
+    visibility: inherit; /* force the last child to be visible, as it can be hidden by highchart */
 }
 
 .mini-card .odswidget-charts {
-  margin: 0 -12px;
+    margin: 0 -12px;
 }
 
 .mini-card rect.highcharts-background {
-  fill: transparent !important;
+    fill: transparent !important;
 }
 
 .mini-card text {
-  fill: var(--card-text) !important;
-  font-size: 13px !important;
+    fill: var(--card-text) !important;
+    font-size: 13px !important;
 }
 
 .mini-card .highcharts-grid-line {
-  stroke: var(--primary) !important;
-  stroke-dasharray: 2 2;
+    stroke: var(--primary) !important;
+    stroke-dasharray: 2 2;
 }
 
 .mini-card .highcharts-graph {
-  stroke: var(--primary) !important;
+    stroke: var(--primary) !important;
 }
 
 .mini-card .highcharts-area {
-  fill: transparent !important;
+    fill: transparent !important;
 }
 
 .mini-card .highcharts-legend {
-  display: none;
+    display: none;
 }
 
 .mini-card .highcharts-markers path {
-  fill: var(--primary) !important;
+    fill: var(--primary) !important;
 }
 
 .mini-card .highcharts-label-box:not(.highcharts-shadow) {
-  stroke: var(--primary) !important;
+    stroke: var(--primary) !important;
 }
 
 .mini-card .highcharts-tooltip-container {
-  background: var(--background);
-  color: var(--body-text);
+    background: var(--background);
+    color: var(--body-text);
 }
 
 .mini-card .highcharts-label span {
-  color: var(--card-text) !important;
+    color: var(--card-text) !important;
 }
 
 .mini-card .ods-highcharts__tooltip span {
-  color: var(--primary) !important;
+    color: var(--primary) !important;
 }
 
 .mini-card .highcharts-point {
-  fill: var(--primary) !important;
-  stroke: transparent !important;
-  rx: 8px;
+    fill: var(--primary) !important;
+    stroke: transparent !important;
+    rx: 8px;
 }
 
 .mini-card .highcharts-grid-line:not(:first-child):not(:last-child),
 .mini-card .highcharts-yaxis-labels text:not(:first-child):not(:last-child) {
-  display: none;
+    display: none;
 }
 
 .mini-card .highcharts-xaxis-labels span {
-  color: var(--card-text) !important;
-  font-size: 13px !important;;
+    color: var(--card-text) !important;
+    font-size: 13px !important;;
 }
 
 /* Tooltpis override */
 .odswidget-map-tooltip__scroll-control {
-  display: none;
+    display: none;
 }
 
 .odswidget-map-tooltip__limited-results-warning {
-  display: none;
+    display: none;
 }
 
 .odswidget .odswidget-media-gallery {
-  height: auto !important;
-  overflow-y: visible;
+    height: auto !important;
+    overflow-y: visible;
 }
 
 /* Tab pills override */
@@ -228,28 +228,28 @@
 }
 
 .highcharts-yaxis-grid {
-  stroke-dasharray: 4 2;
+    stroke-dasharray: 4 2;
 }
 
 .highcharts-axis-title {
-  display: none;
+    display: none;
 }
 
 /* Utilities */
 .has-background-light {
-  background-color: #F2F3F8;
+    background-color: #F2F3F8;
 }
 
 .has-text-primary {
-  color: var(--primary);
+    color: var(--primary);
 }
 
 .has-text-center {
-  text-align: center;
+    text-align: center;
 }
 
 .is-size-4 {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 .is-success {
@@ -262,78 +262,89 @@
 
 /* Elements */
 section.row {
-  padding: 13px;
-  margin-bottom: 64px;
+    padding: 13px;
+    margin-bottom: 64px;
 }
 .title {
-  font-weight: 700;
-  margin-bottom: 1em;
+    font-weight: 700;
+    margin-bottom: 1em;
 }
 
 .subtitle {
-  font-weight: 400;
-  margin-top: -1em;
+    font-weight: 400;
+    margin-top: -1em;
 }
 
 .title .subtitle {
-  justify-self: flex-start;
+    justify-self: flex-start;
 }
 
 .title.is-1 {
-  font-size: 2.3125rem;
+    font-size: 2.3125rem;
 }
 
 .title.is-2,
 .subtitle.is-2 {
-  font-size:  1.4375rem;
+    font-size:  1.4375rem;
 }
 
 .title.is-3,
 .subtitle.is-3 {
-  font-size: 1.25rem;
+    font-size: 1.25rem;
+}
+
+figure.image {
+    margin: 0;
+    max-height:300px;
+    max-width: 220px;
+}
+
+.image img {
+    height: 100%;
+    width: 100%;
 }
 
 /* Components */
 .chart-container {
-  padding: 13px;
+    padding: 13px;
 }
 
 .chart-container:not(:last-child) {
-  margin-right: 26px;
+    margin-right: 26px;
 }
 
 .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  min-width: 200px;
-  height: 100%;
-  padding: 13px;
-  border-radius: 6px;
-  background: var(--surface);
-  color: var(--card-text);
-  border: 1px solid #CBD2DB;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-width: 200px;
+    height: 100%;
+    padding: 13px;
+    border-radius: 6px;
+    background: var(--surface);
+    color: var(--card-text);
+    border: 1px solid #CBD2DB;
 }
 
 .card-head,
 .card-footer {
-  flex: 0 1 48px;
+    flex: 0 1 48px;
 }
 
 .card-body {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
 }
 
 .card.mini-chart {
-  align-items: unset;
+    align-items: unset;
 }
 
 .card .mini-card .chartplaceholder {
-  height: 280px;
-  width: 100%;
+    height: 280px;
+    width: 100%;
 }

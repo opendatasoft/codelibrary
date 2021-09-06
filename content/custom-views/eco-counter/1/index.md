@@ -2,7 +2,7 @@
 title: "Widget version"
 date: 2021-06-30T11:18:25+02:00
 domainid: "eco-compteur-odsapps"
-datasetid: "donnees-eco-compteur-tours-metropole"
+datasetid: "eco-counter-data"
 quickfill:
   primary: "#00C7B1"
 ---
