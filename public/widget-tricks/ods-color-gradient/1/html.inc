@@ -1,6 +1,8 @@
+<!-- "dep" context is the official geo-referential from Opendatasoft Data Network -->
 <ods-dataset-context context="dep,carpool"
-                     dep-dataset="departements-et-collectivites-doutre-mer-france"
-                     dep-domain="userclub"
+                     dep-dataset="georef-france-departement"
+                     dep-parameters="{'q':'dep_code <= 95'}"
+                     dep-domain="public"
                      carpool-dataset="base-nationale-des-lieux-de-covoiturage-en-france"
                      carpool-domain="userclub">
 
@@ -11,6 +13,7 @@
          ods-color-gradient-high="rgb(20, 33, 96)"
          ods-color-gradient-low="rgb(180, 197, 241)">
 
+        <h2>Color departments by number of carpool location</h2>
         <div class="map-container">
             <ods-map>
                 <ods-map-layer context="dep"

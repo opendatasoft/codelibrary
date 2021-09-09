@@ -1,3 +1,3 @@
 ---
-title: "Color departments by number of carpool location"
+title: "Simple usage with legend on top of the map"
 ---

@@ -1,5 +1,4 @@
 ---
-title: "A simple ods-aggregation results"
+title: "An ods-aggregation results with a function on a field"
 ---
 
-The same aggregation but this time on a **filtered** dataset

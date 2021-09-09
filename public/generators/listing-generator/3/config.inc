@@ -1,5 +1,7 @@
      ng-init="domain = 'userclub.opendatasoft.com';
-                              datasetid = 'deliberations-du-conseil-municipal-dissy-les-moulineaux';
+                        datasetid = 'deliberations-du-conseil-municipal-dissy-les-moulineaux';
+
+                sort = '';
 
                 filters = [
                 {'id':'mandature','multiple':true},

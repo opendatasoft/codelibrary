@@ -3,9 +3,6 @@
 :root {
     --secondary-color: black;
 }
-main {
-    margin: 6rem 0 3em 0;
-}
 
 @media screen and (min-width: 992px) {
     .row-equal-height {

@@ -15,13 +15,13 @@
                 <strong>View : </strong>
                 <label class="switch">
                     <input ng-model="view"
-                            ng-true-value="'map'" 
-                            ng-false-value="'table'" 
-                            ng-checked="view == 'map'"
-                            class="switch-input"
-                            type="checkbox">
+                           ng-true-value="'map'"
+                           ng-false-value="'table'"
+                           ng-checked="view == 'map'"
+                           class="switch-input"
+                           type="checkbox">
                     <div class="switch-button">
-                        <span class="switch-button-left">TABLE</span> 
+                        <span class="switch-button-left">TABLE</span>
                         <span class="switch-button-right">MAP</span>
                     </div>
                 </label>
@@ -30,13 +30,11 @@
         <div class="col-sm-9">
             <ods-dataset-context context="countoursgeographiques"
                                  countoursgeographiques-dataset="contours-geographiques-simplifies-des-nouvelles-regions-metropole"
-                                 countoursgeographiques-domain="public"
+                                 countoursgeographiques-domain="userclub"
                                  countoursgeographiques-parameters="{}">
                 <div ng-if="view == 'map'">
                     <ods-map context="countoursgeographiques"
-                            scroll-wheel-zoom="false"
-                            location="6,47.13742,3.69141"
-                            basemap="jawg.streets"></ods-map>
+                             scroll-wheel-zoom="false"></ods-map>
                 </div>
                 <div ng-if="view == 'table'">
                     <ods-table context="countoursgeographiques"></ods-table>
