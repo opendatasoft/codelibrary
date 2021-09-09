@@ -7,11 +7,28 @@ resources:
     name: folder-:counter
 ---
 
-This custom view is a plug and play add-on for data from the eco-counter extractor. You will need to up set up two datasets (either via URL or file upload), with the following configuration:
+This custom view is a plug and play add-on for data from the eco-counter extractor. It can be copy-pasted in your [visualization tab](https://help.opendatasoft.com/platform/en/publishing_data/07_configuring_visualizations/06_configuring_custom_view/custom.html#configuring-the-custom-view).
 
-- Eco-counter sites: with **eco-counter-sites** as source type (which will do automatically sort and format everything).
-- Eco-counter data: with **eco-counter** as source type and `hour` as timestep in the options. Then add a join processor with the _eco-counter-sites_ dataset with `id` as local and remote key and `name` as return field. 
+You will need to up set up two datasets (either via URL or file upload), with the following name and configuration:
 
-![processor setup](processor.png)
+### Eco-counter sites 
+* name: `eco-counter-sites` *(if you change the name of this dataset, you have to change it in the code for eco-counter data custom view as well, in the tooltip section.)*
+* source type: **eco-counter-sites**
 
-The view can then be copy-pasted in your [visualization tab](https://help.opendatasoft.com/platform/en/publishing_data/07_configuring_visualizations/06_configuring_custom_view/custom.html#configuring-the-custom-view).
+For each picture:
+* Split text
+    - Field: `Photos`
+    - Séparator: `/`
+    - Output field : `photo1` (or photo2, photo3)
+* Expression
+    - `=(photo1 != ""?"[https://www.eco-visio.net/Photos/](https://www.eco-visio.net/Photos/)" & id & "/" & photo1:"")` (or photo2, photo3)
+    - Output field : `urlphoto1` (or urlphoto2, urlphoto3)
+
+{{< setup-images src="sites-processor-all.png,sites-processor-expression.png,sites-processor-split.png" caption="Sites processor" >}}
+
+### Eco-counter data 
+* name: `eco-counter-data` *(if you change the name of this dataset, you have to change it in the code for eco-counter sites custom view as well, in the tooltip section.)*
+* source type: _eco-counter_, _hour_ as _timestep_ in the options.
+* **Join** processor with the _eco-counter-sites_ dataset, `id` as local and remote key and `name` as return field.
+
+{{< setup-images src="data-processor.png" caption="Data processor" >}}

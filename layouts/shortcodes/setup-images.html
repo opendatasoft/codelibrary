@@ -1,0 +1,15 @@
+{{ $src := .Get "src" }}
+{{ $srcarr := split $src "," }}
+{{ $srcarr }}
+<figure>
+  <picture class="setup-images">
+    {{ range $srcarr }}
+    <img src="{{ . }}">
+    {{ end }}
+  </picture>
+  {{ with (.Get "caption") }}
+  <figcaption>
+    {{ .}}
+  </figcaption>
+  {{ end }}
+</figure>
