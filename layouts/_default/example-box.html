@@ -18,8 +18,6 @@
     {{ $html = printf "%s%s%s" "<div ng-app=\"ods-widgets\">\n" $htmlcontent "</div>" }}
 {{ end }}
 
-<!-- {{ partial "live-code" (dict "context" . "html" $html "css" $css "head" $head) }} -->
-
 <div class="codepen">
     <form id="form-{{ .Title | anchorize}}"
           action="https://codepen.io/pen/define"
@@ -94,10 +92,10 @@
                     </div>
                 </div>
             </div>
-            {{ with .Params.quickfill }}
-              {{ partial "quickfill-form.html" .}}
-            {{ end }}
             <div class="level-right">
+              {{ with .Params.quickfill }}
+                {{ partial "quickfill-form.html" . }}
+              {{ else }}
                 <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
                   data-tooltip="Copy to clipboard"
                   aria-role="button"
@@ -120,6 +118,7 @@
                     </svg>
                   </figure>
                 </button>
+              {{ end }}
             </div>
         </nav>
         <div class="tab-content">

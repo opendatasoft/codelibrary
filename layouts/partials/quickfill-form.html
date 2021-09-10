@@ -1,6 +1,44 @@
-{{ range $label, $default := . }}
 <div class="quickfill">
-  <label>{{ $label }}</label>
-  <input data-default="{{ $default }}" data-label="{{ $label }}" placeholder="{{ $default }}" type="text">
+  <div class="inputs">
+    {{ range $label, $default := . }}
+    <div class="field is-horizontal">
+      <div class="field-label">
+        <label class="label">{{ $label }}</label>
+      </div>
+      <div class="field-body">
+        <p class="control">
+          <input
+          class="input is-primary"
+          data-default="{{ $default }}"
+          data-label="{{ $label }}"
+          placeholder="{{ $default }}"
+          type="text"
+          />
+        </p>
+      </div>
+    </div>
+    {{ end }}
+  </div>
+  <button class="copy-to-cc button is-primary is-rounded has-tooltip-left"
+    data-tooltip="Copy to clipboard"
+    aria-role="button"
+    title="Edit on CodePen, open a new tab"
+  >
+    <span class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+        <use xlink:href="#copy"></use>
+      </svg>
+    </span>
+  </button>
+  <button class="copied-to-cc button is-success is-rounded has-tooltip-left is-hidden"
+    data-tooltip="Copied"
+    aria-role="button"
+    title="Copied"
+  >
+    <figure class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+        <use xlink:href="#check"></use>
+      </svg>
+    </figure>
+  </button>
 </div>
-{{ end }}

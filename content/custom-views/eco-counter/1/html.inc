@@ -360,7 +360,7 @@
                     <h3 class="title is-3">{{ record.fields.name }}</h3>
                     <ods-dataset-context
                                          context="sites"
-                                         sites-dataset="eco-counter-sites"
+                                         sites-dataset="%%sites-dataset%%"
                                          sites-parameters="{'refine.name': record.fields.name}"
                                          >
                         <div class="is-size-4"
