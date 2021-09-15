@@ -15,17 +15,15 @@ Run
 hugo server -D
 ```
 
-Deploy on GH Pages (if you pushed to a remote)
-```shell script
-hugo
-git subtree push --prefix public origin gh-pages
-```
-
 Update Algolia index (see .env)
 ```shell script
 npm run algolia
 ```
 
+Build everything and submit a PR on github (require [gh CLI](https://cli.github.com/) to be installed) : 
+```shell script
+npm run submit 'My PR title'
+```
 ### Add new Content
 Using content archetype to create pages will automatically add date and title.
 
