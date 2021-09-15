@@ -251,121 +251,14 @@ The transform applied to value is of the type &lt;code&gt;y = x^k&lt;/code&gt; w
     
       
       
-        <item>
-          <title>Bubblemaps</title>
-          <link>https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-vegalite/#bubblemaps</link>
-          
-            <pubDate>Wed, 30 Jun 2021 14:46:16 +0200</pubDate>
-          
-          
-          <guid>https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-vegalite/#bubblemaps</guid>
-          <description>&lt;p&gt;To switch to a bubblemap:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;set the &lt;code&gt;grid&lt;/code&gt; to false in the config view&lt;/li&gt;
-&lt;li&gt;set the mark type to &lt;code&gt;circle&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;in addition to the &lt;code&gt;color&lt;/code&gt; property, a new mark property is necessary to change the size of the circles: &lt;code&gt;size&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://vega.github.io/vega-lite-v2/docs/encoding.html#mark-prop&#34;&gt;&lt;code&gt;size&lt;/code&gt; mark property documentation here&lt;/a&gt;.
-It&amp;rsquo;s very similar to the color property, it expects an aggregate and field option to be able to size circles depending on your data.
-It also accepts different scale types (quantile, power, log etc&amp;hellip;).&lt;/p&gt;
-</description>
-        </item>
+    
       
-        <item>
-          <title>Heatmap: with linear scale</title>
-          <link>https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-vegalite/#heatmap-with-linear-scale</link>
-          
-            <pubDate>Wed, 30 Jun 2021 14:46:16 +0200</pubDate>
-          
-          
-          <guid>https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-vegalite/#heatmap-with-linear-scale</guid>
-          <description>&lt;p&gt;The default scale is linear. It can get additional properties like the scheme. All available scale colors (schemes) can be found in the &lt;a href=&#34;https://vega.github.io/vega/docs/schemes/#scheme-properties&#34;&gt;scheme documentation&lt;/a&gt;.&lt;/p&gt;
-&lt;pre&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;&#39;color&#39;: 
-    &#39;scale&#39;: {
-        &#39;scheme&#39;: &#39;blueorange&#39;,
-        ...
-    },
-    ...
-&lt;/code&gt;&lt;/pre&gt;</description>
-        </item>
       
     
       
       
-        <item>
-          <title>Heatmap with dynamic color scale</title>
-          <link>https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-custom/#heatmap-with-dynamic-color-scale</link>
-          
-            <pubDate>Wed, 30 Jun 2021 14:46:16 +0200</pubDate>
-          
-          
-          <guid>https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-custom/#heatmap-with-dynamic-color-scale</guid>
-          <description>&lt;p&gt;Custom heatmaps or bubblemaps are made of a CSS grid, an &lt;code&gt;ods-adv-analysis&lt;/code&gt; and several computations to get the colors and the axis.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;ods-adv-analysis&lt;/code&gt; returns the list of values for each axis. You need to adapt the axis &lt;code&gt;id&lt;/code&gt; in &lt;code&gt;toObject&lt;/code&gt; filter.&lt;/li&gt;
-&lt;li&gt;The min and max of all aggregation are computed to get the boundaries and will be useful for colors computations.&lt;/li&gt;
-&lt;li&gt;To display the grid, three computations are needed: the x-axis value positions, the y-axis value positions and the color values.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Colors are RGB codes, computed of the aggregation value within the range of all values. Low and high colors values are set into &lt;code&gt;variables&lt;/code&gt; object at the beginning of the code.&lt;/p&gt;
-&lt;p&gt;The toggle button, and the legend are independent of the grid and can be removed.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Note: It&amp;rsquo;s much easier to deal with dates with Vega-Lite as it can split by day, day of the week, month with the labels and the correct ordering. We then strongly advice to go for &lt;a href=&#34;https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-vegalite&#34;&gt;Vega-Lite heatmaps&lt;/a&gt; in that case.&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-        </item>
-      
-        <item>
-          <title>Heatmap with static scale</title>
-          <link>https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-custom/#heatmap-with-static-scale</link>
-          
-            <pubDate>Wed, 30 Jun 2021 14:46:16 +0200</pubDate>
-          
-          
-          <guid>https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-custom/#heatmap-with-static-scale</guid>
-          <description>&lt;p&gt;The colors are static, and set in the &lt;code&gt;ng-class&lt;/code&gt; of the cell, with a simple condition and static thresholds.
-The code is therefore much simpler than dynamic RGB computation.&lt;/p&gt;
-&lt;p&gt;But keep in mind that if the order of size of the aggregation changes, you&amp;rsquo;ll then need to adapt your thresholds, and therefore the page.&lt;/p&gt;
-</description>
-        </item>
-      
     
       
-      
-        <item>
-          <title>Simple usage, list records !</title>
-          <link>https://codelibrary.opendatasoft.com/widget-tricks/ods-results/#simple-usage-list-records-</link>
-          
-            <pubDate>Mon, 21 Jun 2021 20:03:38 +0200</pubDate>
-          
-          
-          <guid>https://codelibrary.opendatasoft.com/widget-tricks/ods-results/#simple-usage-list-records-</guid>
-          <description>&lt;p&gt;&lt;strong&gt;ods-results&lt;/strong&gt; returns an array: the list of records. Records are objects, and all the metas are accessible through the &lt;code&gt;fields&lt;/code&gt; key.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ng-repeat&lt;/code&gt; directive loop over each record and &amp;ldquo;print&amp;rdquo; the HTML for each record. For more advanced usage, please refer to the &lt;a href=&#34;https://docs.angularjs.org/api/ng/directive/ngRepeat#!&#34;&gt;AngularJs ng-repeat documentation here&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;This first simple resource lists districts in Brussels, Belgium.&lt;/p&gt;
-</description>
-        </item>
-      
-    
-      
-      
-        <item>
-          <title>Based on click - for default headers</title>
-          <link>https://codelibrary.opendatasoft.com/portal-themes/dropdown-menu/#based-on-click---for-default-headers</link>
-          
-            <pubDate>Wed, 23 Jun 2021 20:57:00 +0200</pubDate>
-          
-          
-          <guid>https://codelibrary.opendatasoft.com/portal-themes/dropdown-menu/#based-on-click---for-default-headers</guid>
-          <description>&lt;p&gt;&lt;strong&gt;How to use it&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Copy the content of the &lt;code&gt;HEADER&lt;/code&gt; tab.&lt;/li&gt;
-&lt;li&gt;Paste it in &lt;code&gt;https://yourdomain.opendatasoft.com/backoffice/customization/theme/#header&lt;/code&gt;  instead of &lt;code&gt;##menu##&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Copy the content of the &lt;code&gt;STYLESHEET&lt;/code&gt; tab.&lt;/li&gt;
-&lt;li&gt;Paste it in &lt;code&gt;https://yourdomain.opendatasoft.com/backoffice/customization/theme/#stylesheet&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Replace the links and titles of the items menu in the &lt;code&gt;HEADER&lt;/code&gt; tab.&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-        </item>
       
     
       
@@ -386,6 +279,66 @@ It&amp;rsquo;s usefull but can quickly overload the chart and displaying only a 
 &lt;li&gt;On the right, 1 out of 3 values are displayed (see the CSS code for explanations)&lt;/li&gt;
 &lt;/ul&gt;
 </description>
+        </item>
+      
+    
+      
+      
+        <item>
+          <title>Get the oldest (min) and newest (max) date in a field</title>
+          <link>https://codelibrary.opendatasoft.com/widget-tricks/ods-adv-analysis/#get-the-oldest-min-and-newest-max-date-in-a-field</link>
+          
+            <pubDate>Thu, 12 Aug 2021 10:00:00 +0200</pubDate>
+          
+          
+          <guid>https://codelibrary.opendatasoft.com/widget-tricks/ods-adv-analysis/#get-the-oldest-min-and-newest-max-date-in-a-field</guid>
+          <description>&lt;p&gt;&lt;code&gt;min&lt;/code&gt; and &lt;code&gt;max&lt;/code&gt; function can also work on date format field. It&amp;rsquo;s very useful to get the date range covered by the dataset on a specific field.&lt;/p&gt;
+&lt;p&gt;It can for example be used to initialise an &lt;code&gt;ods-date-range-slider&lt;/code&gt; with the correct bounds.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsDateRangeSlider&#34;&gt;ods-date-range-slider documentation&lt;/a&gt;&lt;/p&gt;
+</description>
+        </item>
+      
+    
+      
+      
+        <item>
+          <title>Example with the state of North Carolina, USA</title>
+          <link>https://codelibrary.opendatasoft.com/widget-tricks/age-pyramid-custom/#example-with-the-state-of-north-carolina-usa</link>
+          
+            <pubDate>Fri, 20 Aug 2021 18:02:27 +0200</pubDate>
+          
+          
+          <guid>https://codelibrary.opendatasoft.com/widget-tricks/age-pyramid-custom/#example-with-the-state-of-north-carolina-usa</guid>
+          <description></description>
+        </item>
+      
+    
+      
+      
+        <item>
+          <title>Example with the city of Issy-les-Moulineaux, France</title>
+          <link>https://codelibrary.opendatasoft.com/widget-tricks/age-pyramid-vegalite/#example-with-the-city-of-issy-les-moulineaux-france</link>
+          
+            <pubDate>Fri, 20 Aug 2021 18:02:27 +0200</pubDate>
+          
+          
+          <guid>https://codelibrary.opendatasoft.com/widget-tricks/age-pyramid-vegalite/#example-with-the-city-of-issy-les-moulineaux-france</guid>
+          <description>&lt;p&gt;You first have to setup your &lt;code&gt;ods-adv-analysis&lt;/code&gt; by entering the right fields names for the &lt;code&gt;select&lt;/code&gt; and &lt;code&gt;group-by&lt;/code&gt; parameters.&lt;/p&gt;
+&lt;p&gt;Then, the &lt;code&gt;ods-vega-lite-chart&lt;/code&gt; is divided in 2 parts, one for each side (Male/Female usually). For each side, you have to fill in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;the filter: the gender informations (field and title)&lt;/li&gt;
+&lt;li&gt;the y axis: the age field&lt;/li&gt;
+&lt;li&gt;the x axis: the population informations (field and title)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;You can also customize the color for both sides in the &lt;code&gt;color&lt;/code&gt; property:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;&#39;color&#39;: 
+    ...
+    &#39;scale&#39;: {
+        &#39;range&#39;: [&#39;#006699&#39;,&#39;#ff5050&#39;],
+    ...
+    },
+    ...
+&lt;/code&gt;&lt;/pre&gt;</description>
         </item>
       
     
