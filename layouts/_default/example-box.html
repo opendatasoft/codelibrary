@@ -93,35 +93,28 @@
                 </div>
             </div>
             <div class="level-right">
-                <div class="level-item">
-                  {{ with .Params.quickfill }}
-                    {{ partial "quickfill-form.html" . }}
-                  {{ end }}
-                </div>
-                <div class="level-item">
-                  <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
-                    data-tooltip="Copy to clipboard"
-                    aria-role="button"
-                    title="Edit on CodePen, open a new tab"
-                  >
+              <div class="level-item">
+                {{ with .Params.quickfill }}
+                  {{ partial "quickfill-form.html" . }}
+                {{ else }}
+                  <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left" data-tooltip="Copy to clipboard"
+                    aria-role="button" title="Edit on CodePen, open a new tab">
                     <span class="icon">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
                         <use xlink:href="#copy"></use>
                       </svg>
                     </span>
                   </button>
-                  <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
-                    data-tooltip="Copied"
-                    aria-role="button"
-                    title="Copied"
-                  >
+                  <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden" data-tooltip="Copied"
+                    aria-role="button" title="Copied">
                     <figure class="icon">
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
                         <use xlink:href="#check"></use>
                       </svg>
                     </figure>
                   </button>
-                </div>
+                {{ end }}
+              </div>
             </div>
         </nav>
         <div class="tab-content">

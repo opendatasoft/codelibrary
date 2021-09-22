@@ -68,7 +68,20 @@ const initCC = (codeBox) => {
   addCCToCode(codeBox, copyButton, copiedButton)
 }
 
+const initDropdownToggles = () => {
+  const dropdowns = document.querySelectorAll('.dropdown');
+  dropdowns && dropdowns.forEach((dropdown) => {
+    const trigger = dropdown.querySelector('.dropdown-trigger button');
+
+    trigger && trigger.addEventListener('click', () => {
+      console.log('clic');
+      dropdown.classList.toggle('is-active');
+    });
+  });
+}
+
 export default () => {
+    initDropdownToggles();
     const codeBoxes = document.querySelectorAll('.box-code');
     codeBoxes.forEach(codeBox => initCC(codeBox));
 }

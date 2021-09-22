@@ -1,22 +1,55 @@
-<div class="quickfill">
-  {{ range $label, $default := . }}
-  <div class="field is-horizontal">
-    <div class="field-label is-normal">
-      <label class="label">{{ $label }}</label>
-    </div>
-    <div class="field-body">
-      <div class="field">
-        <p class="control">
-          <input
-            class="input is-primary"
-            data-default="{{ $default }}"
-            data-label="{{ $label }}"
-            type="text"
-            placeholder="{{ $default }}"
-          />
-        </p>
+<div class="dropdown is-right">
+  <div class="dropdown-trigger">
+    <button class="button is-primary is-outlined is-rounded has-tooltip-left" data-tooltip="Copy to clipboard"
+      aria-role="button" title="Edit on CodePen, open a new tab" aria-haspopup="true" aria-controls="dropdown-menu">
+      <span class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+          <use xlink:href="#copy"></use>
+        </svg>
+      </span>
+    </button>
+    <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden" data-tooltip="Copied"
+      aria-role="button" title="Copied">
+      <figure class="icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+          <use xlink:href="#check"></use>
+        </svg>
+      </figure>
+    </button>
+  </div>
+  <div class="dropdown-menu" id="dropdown-menu" role="menu">
+    <div class="dropdown-content">
+      <div class="dropdown-item">
+        {{ range $label, $default := . }}
+          <div class="field is-horizontal">
+            <div class="field-label">
+              <label class="label">{{ $label }}</label>
+            </div>
+            <div class="field-body">
+              <div class="field">
+                <p class="control">
+                  <input class="input is-primary" data-default="{{ $default }}" data-label="{{ $label }}" type="text"
+                    value="{{ $default }}" />
+                </p>
+              </div>
+            </div>
+          </div>
+        {{ end }}
+        <div class="field is-horizontal">
+          <div class="field-label">
+            <!-- Left empty for spacing -->
+          </div>
+          <div class="field-body">
+            <div class="field">
+              <div class="control">
+                <button class="button copy-to-cc is-primary">
+                  Copy with these values
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  {{ end }}
 </div>
