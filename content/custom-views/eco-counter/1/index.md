@@ -6,6 +6,7 @@ datasetid: "eco-counter-data"
 quickfill:
   primary: "#00C7B1"
   sites-dataset: "eco-counter-sites"
+  gradient: '"#F5FBFA", "#E7F8F5", "#D0F0EB", "#81DBCD", "#00C7B1"'
 ---
 
-This version is made with basic and documented widgets options only. It should be fairly easy to modify the options should you need to—although it is ready to work as is.
+Custom view for the `data` dataset. To quickly generate a color gradient from your primary color, you can use https://maketintsandshades.com/ with any number of steps you like.

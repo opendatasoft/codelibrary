@@ -271,7 +271,7 @@
                                            "title": "Moyenne horaire du nombre de passages",
                                            "field": "count",
                                            "type": "quantitative",
-                                           "scale": { "range": ["#F5FBFA", "#E7F8F5", "#D0F0EB", "#81DBCD", "#00C7B1"] }
+                                           "scale": { "range": [%%gradient%%] }
                                            }
                                            }
                                            }'
