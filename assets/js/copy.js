@@ -26,7 +26,7 @@ const addCCToCode = (codeBox, copyButton, copiedButton) => {
   copyButton.addEventListener('click', async (event) => {
     const activeTab = codeBox.querySelector('.js-tabcontent.is-active');
     const code = activeTab.dataset.clipboard;
-    const { filledCode: clipContent } = quickFill({ code });
+    const { filledCode: clipContent } = quickFill({ code, box: codeBox });
 
     if (clipContent) {
       await clipboard.writeText(clipContent);
@@ -74,7 +74,6 @@ const initDropdownToggles = () => {
     const trigger = dropdown.querySelector('button.dropdown-trigger');
 
     trigger && trigger.addEventListener('click', () => {
-      console.log('clic');
       dropdown.classList.toggle('is-active');
     });
   });
