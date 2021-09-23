@@ -17,15 +17,15 @@ const addCCtoColor = (color) => {
   })
 
   color.addEventListener('mouseleave', (event) => {
-      color.classList.remove('is-success');
-      color.dataset.tooltip = 'Copy color to clipboard';
+    color.classList.remove('is-success');
+    color.dataset.tooltip = 'Copy color to clipboard';
   })
 }
 
 const addCCToCode = (codeBox, copyButton, copiedButton) => {
   copyButton.addEventListener('click', async (event) => {
     const activeTab = codeBox.querySelector('.js-tabcontent.is-active');
-    const code = activeTab.dataset.clipboard;
+    const code = activeTab.dataset.clipboard;
     const { filledCode: clipContent } = quickFill({ code });
 
     if (clipContent) {
@@ -51,7 +51,7 @@ const hideCopyIfColors = (copyButton, colorsTab) => {
       : copyButton.classList.remove('is-hidden')
   })
 
-  observer.observe(colorsTab, { attributeFilter: ['class'] })
+  observer.observe(colorsTab, { attributeFilter: ['class'] })
 }
 
 const initCC = (codeBox) => {
@@ -61,7 +61,7 @@ const initCC = (codeBox) => {
 
   if (colorsTab) {
     hideCopyIfColors(copyButton, colorsTab);
-    const colorNodes =  colorsTab.querySelectorAll('.color')
+    const colorNodes = colorsTab.querySelectorAll('.color')
     colorNodes.forEach(addCCtoColor);
   }
 
@@ -71,7 +71,7 @@ const initCC = (codeBox) => {
 const initDropdownToggles = () => {
   const dropdowns = document.querySelectorAll('.dropdown');
   dropdowns && dropdowns.forEach((dropdown) => {
-    const trigger = dropdown.querySelector('.dropdown-trigger button');
+    const trigger = dropdown.querySelector('button.dropdown-trigger');
 
     trigger && trigger.addEventListener('click', () => {
       console.log('clic');
@@ -81,7 +81,7 @@ const initDropdownToggles = () => {
 }
 
 export default () => {
-    initDropdownToggles();
-    const codeBoxes = document.querySelectorAll('.box-code');
-    codeBoxes.forEach(codeBox => initCC(codeBox));
+  initDropdownToggles();
+  const codeBoxes = document.querySelectorAll('.box-code');
+  codeBoxes.forEach(codeBox => initCC(codeBox));
 }
