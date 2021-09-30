@@ -398,10 +398,6 @@
                 Age Pyramid with custom HTML/CSS
                 
                 
-                <span class="tag pill is-size-7 is-rounded is-info">
-                  1
-                </span>
-                
               </div>
             </a>
           </li>
@@ -411,10 +407,6 @@
               <div>
                 Age Pyramid with Vega-Lite
                 
-                
-                <span class="tag pill is-size-7 is-rounded is-info">
-                  1
-                </span>
                 
               </div>
             </a>
@@ -770,6 +762,8 @@
 
 
 
+
+
     
 
 
@@ -1050,8 +1044,13 @@
                 </body>
               ">
       </iframe>
-      <div class="show-code buttons has-addons">
-          <button class="button is-light">
+      <div class="buttons has-addons">
+          
+              <button class="show-schema button is-light">
+                  <span>Show data schema</span>
+              </button>
+          
+          <button class="show-code button is-light">
             <span>Show code</span>
           </button>
           <button class="button is-light"
@@ -1069,6 +1068,36 @@
           </button>
       </div>
     </div>
+    
+        <div class="box-schema is-hidden">
+            <div class="content">
+                <p><strong>Dataset in use:</strong> <code>uranium-production</code> <a href="https://userclub.opendatasoft.com/explore/dataset/uranium-production/table/">(See it on userclub domain)</a></p>
+<p><strong>Fields in use:</strong></p>
+<table>
+<thead>
+<tr>
+<th>tonnes_of_uranium (integer)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>24575</td>
+</tr>
+<tr>
+<td>3032</td>
+</tr>
+<tr>
+<td>2475</td>
+</tr>
+<tr>
+<td>3432</td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+        </div>
+    
     <div class="box-code js-tabs is-hidden">
         <nav class="level is-mobile">
             <div class="level-left">
@@ -1340,6 +1369,8 @@
       
       <div class="box">
         
+
+
 
 
 
@@ -1631,8 +1662,9 @@
                 </body>
               ">
       </iframe>
-      <div class="show-code buttons has-addons">
-          <button class="button is-light">
+      <div class="buttons has-addons">
+          
+          <button class="show-code button is-light">
             <span>Show code</span>
           </button>
           <button class="button is-light"
@@ -1650,6 +1682,7 @@
           </button>
       </div>
     </div>
+    
     <div class="box-code js-tabs is-hidden">
         <nav class="level is-mobile">
             <div class="level-left">
@@ -1930,6 +1963,8 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
 
 
 
+
+
     
 
 
@@ -1946,7 +1981,7 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
                  "title": "New Pen!",
                  "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
-                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;uraniumproduction,uraniumproductionfrance\&#34;\n                     uraniumproduction-dataset=\&#34;uranium-production\&#34;\n                     uraniumproduction-domain=\&#34;userclub\&#34;\n                     uraniumproductionfrance-dataset=\&#34;uranium-production\&#34;\n                     uraniumproductionfrance-domain=\&#34;userclub\&#34;\n                     uraniumproductionfrance-parameters=\&#34;{&#39;refine.country&#39;:&#39;Kazakhstan&#39;}\&#34;\u003e\n    \u003cdiv ods-aggregation=\&#34;sum,sumkazakhstan\&#34;\n         ods-aggregation-sum-context=\&#34;uraniumproduction\&#34;\n         ods-aggregation-sum-function=\&#34;SUM\&#34;\n         ods-aggregation-sum-expression=\&#34;tonnes_of_uranium\&#34;\n         ods-aggregation-sumkazakhstan-context=\&#34;uraniumproductionfrance\&#34;\n         ods-aggregation-sumkazakhstan-function=\&#34;SUM\&#34;\n         ods-aggregation-sumkazakhstan-expression=\&#34;tonnes_of_uranium\&#34;\u003e\n        \u003cdiv class=\&#34;row row-equal-height\&#34;\u003e\n            \u003cdiv class=\&#34;col-sm-offset-4 col-sm-4\&#34;\u003e\n                \u003c!-- KPI box component --\u003e\n                \u003cdiv class=\&#34;kpi-card kpi-animated\&#34;\u003e\n                    \u003cods-gauge display-mode=\&#34;circle\&#34; value=\&#34;sumkazakhstan\&#34; max=\&#34;sum\&#34;\u003e\n                    \u003c/ods-gauge\u003e\n                    \u003cp class=\&#34;kpi-description\&#34;\u003e% of Uranium production in Kazakhstan\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;uraniumproduction,uraniumproductionkazakhstan\&#34;\n                     uraniumproduction-dataset=\&#34;uranium-production\&#34;\n                     uraniumproduction-domain=\&#34;userclub\&#34;\n                     uraniumproductionkazakhstan-dataset=\&#34;uranium-production\&#34;\n                     uraniumproductionkazakhstan-domain=\&#34;userclub\&#34;\n                     uraniumproductionkazakhstan-parameters=\&#34;{&#39;refine.country&#39;:&#39;Kazakhstan&#39;}\&#34;\u003e\n    \u003cdiv ods-aggregation=\&#34;sum,sumkazakhstan\&#34;\n         ods-aggregation-sum-context=\&#34;uraniumproduction\&#34;\n         ods-aggregation-sum-function=\&#34;SUM\&#34;\n         ods-aggregation-sum-expression=\&#34;tonnes_of_uranium\&#34;\n         ods-aggregation-sumkazakhstan-context=\&#34;uraniumproductionkazakhstan\&#34;\n         ods-aggregation-sumkazakhstan-function=\&#34;SUM\&#34;\n         ods-aggregation-sumkazakhstan-expression=\&#34;tonnes_of_uranium\&#34;\u003e\n        \u003cdiv class=\&#34;row row-equal-height\&#34;\u003e\n            \u003cdiv class=\&#34;col-sm-offset-4 col-sm-4\&#34;\u003e\n                \u003c!-- KPI box component --\u003e\n                \u003cdiv class=\&#34;kpi-card kpi-animated\&#34;\u003e\n                    \u003cods-gauge display-mode=\&#34;circle\&#34; value=\&#34;sumkazakhstan\&#34; max=\&#34;sum\&#34;\u003e\n                    \u003c/ods-gauge\u003e\n                    \u003cp class=\&#34;kpi-description\&#34;\u003e% of Uranium production in Kazakhstan\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
                  "css": &#34;/* Variables \u0026 Shared classes\n========================================================================== */\n.row-equal-height {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-wrap: wrap;\n    flex-wrap: wrap;\n    margin-bottom: 20px;\n}\n\n/* Fix for early content wrapping in Safari*/\n.row-equal-height:before,\n.row-equal-height:after {\n    content: normal;\n}\n\n/* KPI Card\n========================================================================== */\n.kpi-card {\n    background-color: var(--boxes-background);\n    height: 100%;\n    padding: 39px;\n    border-radius: 4px;\n    margin-bottom: 20px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -ms-flex-direction: column;\n    flex-direction: column;\n    -webkit-box-align: center;\n    -ms-flex-align: center;\n    align-items: center;\n    text-align: center;\n    -webkit-box-pack: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    text-align: center;\n}\n\n.kpi-icon {\n    color: var(--highlight);\n    color: var(--secondary-color);\n    font-size: 4rem;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n\n.kpi-title {\n    font-weight: normal;\n    color: var(--highlight);\n    font-size: 3.2rem;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n\n.kpi-description {\n    color: var(--text);\n    font-size: 1rem;\n    line-height: 1.5;\n    font-weight: normal;\n    margin-top: 0;\n    margin-bottom: 0;\n    max-width: 100%;\n}\n\n/* Hide the ods-timer button\n========================================================================== */\n.ods-button.ods-widget-timer-controller {\n    display: none;\n}\n\n/* ODS-Gauge\n========================================================================== */\n.odswidget-gauge--circle .odswidget-gauge__svg {\n    -webkit-transform: rotate(\n            -90deg\n    );\n    transform: rotate(\n            -90deg\n    );\n    height: 100%;\n}\n\n.kpi-animated .odswidget-gauge__svg-filler {\n    fill: none;\n    stroke-width: 8px;\n    stroke: var(--highlight);\n    -webkit-transition: stroke-dasharray 2.5s;\n    transition: stroke-dasharray 2.5s;\n}\n\n.odswidget-gauge {\n    display: flex;\n    height: 100%;\n    width: 100%;\n}&#34;
                }'>
     </form>
@@ -2116,17 +2151,17 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
                 <base href='https://userclub.opendatasoft.com/'>
                 <body>
                 <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
-&lt;ods-dataset-context context=&#34;uraniumproduction,uraniumproductionfrance&#34;
+&lt;ods-dataset-context context=&#34;uraniumproduction,uraniumproductionkazakhstan&#34;
                      uraniumproduction-dataset=&#34;uranium-production&#34;
                      uraniumproduction-domain=&#34;userclub&#34;
-                     uraniumproductionfrance-dataset=&#34;uranium-production&#34;
-                     uraniumproductionfrance-domain=&#34;userclub&#34;
-                     uraniumproductionfrance-parameters=&#34;{&#39;refine.country&#39;:&#39;Kazakhstan&#39;}&#34;&gt;
+                     uraniumproductionkazakhstan-dataset=&#34;uranium-production&#34;
+                     uraniumproductionkazakhstan-domain=&#34;userclub&#34;
+                     uraniumproductionkazakhstan-parameters=&#34;{&#39;refine.country&#39;:&#39;Kazakhstan&#39;}&#34;&gt;
     &lt;div ods-aggregation=&#34;sum,sumkazakhstan&#34;
          ods-aggregation-sum-context=&#34;uraniumproduction&#34;
          ods-aggregation-sum-function=&#34;SUM&#34;
          ods-aggregation-sum-expression=&#34;tonnes_of_uranium&#34;
-         ods-aggregation-sumkazakhstan-context=&#34;uraniumproductionfrance&#34;
+         ods-aggregation-sumkazakhstan-context=&#34;uraniumproductionkazakhstan&#34;
          ods-aggregation-sumkazakhstan-function=&#34;SUM&#34;
          ods-aggregation-sumkazakhstan-expression=&#34;tonnes_of_uranium&#34;&gt;
         &lt;div class=&#34;row row-equal-height&#34;&gt;
@@ -2248,8 +2283,9 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
                 </body>
               ">
       </iframe>
-      <div class="show-code buttons has-addons">
-          <button class="button is-light">
+      <div class="buttons has-addons">
+          
+          <button class="show-code button is-light">
             <span>Show code</span>
           </button>
           <button class="button is-light"
@@ -2267,6 +2303,7 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
           </button>
       </div>
     </div>
+    
     <div class="box-code js-tabs is-hidden">
         <nav class="level is-mobile">
             <div class="level-left">
@@ -2317,17 +2354,17 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
         <div class="tab-content">
             <div class="js-tabcontent"
                  id="code-animated-kpi-with-a-gauge-html-content"
-                 data-clipboard="&lt;ods-dataset-context context=&#34;uraniumproduction,uraniumproductionfrance&#34;
+                 data-clipboard="&lt;ods-dataset-context context=&#34;uraniumproduction,uraniumproductionkazakhstan&#34;
                      uraniumproduction-dataset=&#34;uranium-production&#34;
                      uraniumproduction-domain=&#34;userclub&#34;
-                     uraniumproductionfrance-dataset=&#34;uranium-production&#34;
-                     uraniumproductionfrance-domain=&#34;userclub&#34;
-                     uraniumproductionfrance-parameters=&#34;{&#39;refine.country&#39;:&#39;Kazakhstan&#39;}&#34;&gt;
+                     uraniumproductionkazakhstan-dataset=&#34;uranium-production&#34;
+                     uraniumproductionkazakhstan-domain=&#34;userclub&#34;
+                     uraniumproductionkazakhstan-parameters=&#34;{&#39;refine.country&#39;:&#39;Kazakhstan&#39;}&#34;&gt;
     &lt;div ods-aggregation=&#34;sum,sumkazakhstan&#34;
          ods-aggregation-sum-context=&#34;uraniumproduction&#34;
          ods-aggregation-sum-function=&#34;SUM&#34;
          ods-aggregation-sum-expression=&#34;tonnes_of_uranium&#34;
-         ods-aggregation-sumkazakhstan-context=&#34;uraniumproductionfrance&#34;
+         ods-aggregation-sumkazakhstan-context=&#34;uraniumproductionkazakhstan&#34;
          ods-aggregation-sumkazakhstan-function=&#34;SUM&#34;
          ods-aggregation-sumkazakhstan-expression=&#34;tonnes_of_uranium&#34;&gt;
         &lt;div class=&#34;row row-equal-height&#34;&gt;
@@ -2345,17 +2382,17 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
 "
                  role="tabpanel">
                 <div class="highlight">
-                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;uraniumproduction,uraniumproductionfrance&#34;
+                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;uraniumproduction,uraniumproductionkazakhstan&#34;
                      uraniumproduction-dataset=&#34;uranium-production&#34;
                      uraniumproduction-domain=&#34;userclub&#34;
-                     uraniumproductionfrance-dataset=&#34;uranium-production&#34;
-                     uraniumproductionfrance-domain=&#34;userclub&#34;
-                     uraniumproductionfrance-parameters=&#34;{&#39;refine.country&#39;:&#39;Kazakhstan&#39;}&#34;&gt;
+                     uraniumproductionkazakhstan-dataset=&#34;uranium-production&#34;
+                     uraniumproductionkazakhstan-domain=&#34;userclub&#34;
+                     uraniumproductionkazakhstan-parameters=&#34;{&#39;refine.country&#39;:&#39;Kazakhstan&#39;}&#34;&gt;
     &lt;div ods-aggregation=&#34;sum,sumkazakhstan&#34;
          ods-aggregation-sum-context=&#34;uraniumproduction&#34;
          ods-aggregation-sum-function=&#34;SUM&#34;
          ods-aggregation-sum-expression=&#34;tonnes_of_uranium&#34;
-         ods-aggregation-sumkazakhstan-context=&#34;uraniumproductionfrance&#34;
+         ods-aggregation-sumkazakhstan-context=&#34;uraniumproductionkazakhstan&#34;
          ods-aggregation-sumkazakhstan-function=&#34;SUM&#34;
          ods-aggregation-sumkazakhstan-expression=&#34;tonnes_of_uranium&#34;&gt;
         &lt;div class=&#34;row row-equal-height&#34;&gt;
@@ -2615,6 +2652,8 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
       
       <div class="box">
         
+
+
 
 
 
@@ -2957,8 +2996,9 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
                 </body>
               ">
       </iframe>
-      <div class="show-code buttons has-addons">
-          <button class="button is-light">
+      <div class="buttons has-addons">
+          
+          <button class="show-code button is-light">
             <span>Show code</span>
           </button>
           <button class="button is-light"
@@ -2976,6 +3016,7 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
           </button>
       </div>
     </div>
+    
     <div class="box-code js-tabs is-hidden">
         <nav class="level is-mobile">
             <div class="level-left">
@@ -3362,7 +3403,7 @@ The percentage is computed with 2 <code>ods-aggregation</code> : one for value, 
     </script>
     <script
       type="text/javascript"
-      src="/index.min.d30b4e091b03b9b948f9422fe91ec6a1eb6e7075aa3265ccd39602e623634a6a.js"
+      src="/index.min.48353312cc7982f31d5da834f1c8e3e81b6c30ee482d4763dd0b2bdc8951fbe2.js"
       defer
     ></script>
   </body>

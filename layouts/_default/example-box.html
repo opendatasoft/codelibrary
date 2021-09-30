@@ -1,3 +1,5 @@
+{{ $schema := path.Join .File.Dir "schema.md" }}
+
 {{ $htmlcontent := path.Join .File.Dir "html.inc" | readFile }}
 {{ $css := path.Join .File.Dir "css.inc" | readFile }}
 {{ $head := "/layouts/partials/includes.html" | readFile }}
@@ -47,8 +49,13 @@
                 </body>
               ">
       </iframe>
-      <div class="show-code buttons has-addons">
-          <button class="button is-light">
+      <div class="buttons has-addons">
+          {{ if (fileExists $schema) }}
+              <button class="show-schema button is-light">
+                  <span>Show data schema</span>
+              </button>
+          {{ end }}
+          <button class="show-code button is-light">
             <span>Show code</span>
           </button>
           <button class="button is-light"
@@ -66,6 +73,13 @@
           </button>
       </div>
     </div>
+    {{ if (fileExists $schema) }}
+        <div class="box-schema is-hidden">
+            <div class="content">
+                {{ $schema | readFile | markdownify }}
+            </div>
+        </div>
+    {{ end }}
     <div class="box-code js-tabs is-hidden">
         <nav class="level is-mobile">
             <div class="level-left">
