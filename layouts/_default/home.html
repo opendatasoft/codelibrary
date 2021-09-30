@@ -31,8 +31,8 @@
                 <figure class="image is-16x16 mx-1"><img src="/img/rss.svg" alt="rss"></figure>
             </a>
         </h3>
-        {{ range .Site.RegularPages }}
-            {{ range where .Page.Resources ".Date" "ge" (now.AddDate 0 -2 0) }}
+        {{ range first 10 .Site.RegularPages }}
+            {{ range where .Page.Resources ".Date" "ge" (now.AddDate -1 0 0) }}
             <div class="block">
                 <h5 class="title is-5 is-flex breadcrumb">
                     <ul>
