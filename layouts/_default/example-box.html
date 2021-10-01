@@ -51,11 +51,13 @@
       </iframe>
       <div class="buttons has-addons">
           {{ if (fileExists $schema) }}
-              <button class="show-schema button is-light">
+              <button id="tab-show-schema" aria-controls="panel-show-schema"
+                      class="show-schema button is-light" >
                   <span>Show data schema</span>
               </button>
           {{ end }}
-          <button class="show-code button is-light">
+          <button id="tab-show-code" aria-controls="panel-show-code"
+                  class="show-code button is-light">
             <span>Show code</span>
           </button>
           <button class="button is-light"
@@ -74,13 +76,15 @@
       </div>
     </div>
     {{ if (fileExists $schema) }}
-        <div class="box-schema is-hidden">
+        <div id="panel-show-schema" aria-labelledby="tab-show-schema" aria-hidden
+             class="box-schema is-hidden">
             <div class="content">
                 {{ $schema | readFile | markdownify }}
             </div>
         </div>
     {{ end }}
-    <div class="box-code js-tabs is-hidden">
+    <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
+         class="box-code js-tabs is-hidden">
         <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">

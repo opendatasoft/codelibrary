@@ -6,7 +6,9 @@ const addToggleButton = (box, name) => {
 
   button.addEventListener("click", () => {
     content.classList.toggle("is-hidden");
+    content.toggleAttribute("aria-hidden");
     button.classList.toggle("is-active");
+    button.toggleAttribute("aria-selected");
   });
 };
 
