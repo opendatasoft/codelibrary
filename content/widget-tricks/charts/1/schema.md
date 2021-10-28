@@ -7,7 +7,7 @@
 |Long Term Care Hospital|60|
 |Rehabilitation Hospital|120|
 
-**Field in use in `super-bowl` [(See it on public domain)](https://public.opendatasoft.com/explore/dataset/super-bowl/table/)**
+**Field in use in `super-bowl` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/super-bowl/table/)**
 
 | date (date) | winning_pts (integer) | losing_pts (integer) |
 |------|------|------|
@@ -16,7 +16,7 @@
 |2008/05/31|13|9|
 |2001/12/01|23|17|
 
-**Field in use in `consumer-price-index-all-urban-consumers` [(See it on discovery domain)](https://discovery.opendatasoft.com/explore/dataset/consumer-price-index-all-urban-consumers/table/)**
+**Field in use in `consumer-price-index-all-urban-consumers` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/consumer-price-index-all-urban-consumers/table/)**
 
 | area_name (text) | item_name (text) | date (date) | value (integer) |
 |------|------|------|------|
@@ -25,7 +25,7 @@
 |South urban|All items less energy|1998|1 291|
 |Midwest - Size Class A|Rice, pasta, cornmeal|2000|123 020|
 
-**Field in use in `ensemble-des-equipements-sportifs-dile-de-france-en-2016` [(See it on discovery domain)](https://discovery.opendatasoft.com/explore/dataset/ensemble-des-equipements-sportifs-dile-de-france-en-2016/table/)**
+**Field in use in `ensemble-des-equipements-sportifs-dile-de-france-en-2016` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/ensemble-des-equipements-sportifs-dile-de-france-en-2016/table/)**
 
 | eqt_fam (text) |
 |------|
