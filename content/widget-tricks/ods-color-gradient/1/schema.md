@@ -1,4 +1,4 @@
-**Fields in use in :** `departements-et-collectivites-doutre-mer-france` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/"departements-et-collectivites-doutre-mer-france/table/)
+**Fields in use in :** `departements-et-collectivites-doutre-mer-france` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/departements-et-collectivites-doutre-mer-france/table/)
 
 | dep_code (text) | 
 |---|

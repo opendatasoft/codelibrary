@@ -1,4 +1,4 @@
-**Fields in use in `georef-france-departement` [(See it on public domain)](https://public.opendatasoft.com/explore/dataset/georef-france-departement/table/)** 
+**Fields in use in `departements-et-collectivites-doutre-mer-france` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/departements-et-collectivites-doutre-mer-france/table/)** 
 
 | dep_code (text) | geo_shape (geo_shape) |
 |------|-----|
