@@ -4,7 +4,9 @@
                          ctx-dataset="evenements-publics-openagenda"
                          ctx-parameters="{'sort':'-date_start'}"
                          ctxdate-dataset="evenements-publics-openagenda"
-                         ctxdate-parameters="{'q':'date_start:[2007 TO #now(years=+3)]'}">
+                         ctxdate-parameters="{'q':'date_start:[2007 TO #now(years=+3)]'}"
+                         ctx-domain="userclub"
+                         ctxdate-domain="userclub">
 
         <div class="range-slider-ctn"
              ng-init="bounds = {'min':undefined, 'max':undefined, 'minselection':undefined, 'maxselection':undefined}">
