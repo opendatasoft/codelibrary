@@ -1,7 +1,7 @@
 <ods-dataset-context context="rapworldpublic,opendatasoftofficespublic,shanghaiworlduniversityrankingpublic"
                      rapworldpublic-dataset="rapworld"
                      rapworldpublic-domain="userclub"
-                     rapworldpublic-parameters="{'q':'NOT #null(bio_deathdate)'}"
+                     rapworldpublic-parameters="{'q':'NOT #null(deathdate)'}"
                      opendatasoftofficespublic-dataset="opendatasoft-offices"
                      opendatasoftofficespublic-domain="userclub"
                      shanghaiworlduniversityrankingpublic-dataset="shanghai-world-university-ranking"
