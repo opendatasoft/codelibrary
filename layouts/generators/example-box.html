@@ -15,7 +15,7 @@
 
 {{ $head := "/layouts/partials/includes.html" | readFile }}
 
-<!-- {{ partial "live-code" (dict "context" . "html" $html "css" $css "head" $head)}} -->
+{{ $schema := path.Join .File.Dir "schema.md" }}
 
 <div class="codepen">
     <form id="form-{{ .Title | anchorize}}"
@@ -50,6 +50,13 @@
               ">
       </iframe>
       <div class="buttons has-addons">
+          {{ if (fileExists $schema) }}
+          <button id="tab-show-schema" aria-controls="panel-show-schema"
+                  class="show-schema button is-light"
+                  title="Show the data schema of the dataset used in this resource">
+              <span>See fields in use</span>
+          </button>
+          {{ end }}
           <button id="tab-show-code" aria-controls="panel-show-code"
                   class="show-code button is-light">
               <span>Show code</span>
@@ -69,6 +76,14 @@
           </button>
       </div>
     </div>
+    {{ if (fileExists $schema) }}
+    <div id="panel-show-schema" aria-labelledby="tab-show-schema" aria-hidden
+         class="box-schema is-hidden">
+        <div class="content">
+            {{ $schema | readFile | markdownify }}
+        </div>
+    </div>
+    {{ end }}
     <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
          class="box-code js-tabs is-hidden">
         <nav class="level is-mobile">

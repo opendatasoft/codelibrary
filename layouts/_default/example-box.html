@@ -1,5 +1,3 @@
-{{ $schema := path.Join .File.Dir "schema.md" }}
-
 {{ $htmlcontent := path.Join .File.Dir "html.inc" | readFile }}
 {{ $css := path.Join .File.Dir "css.inc" | readFile }}
 {{ $head := "/layouts/partials/includes.html" | readFile }}
@@ -14,7 +12,7 @@
     {{ $html = printf "%s%s%s" "<div ng-app=\"ods-widgets\">\n" $htmlcontent "</div>" }}
 {{ end }}
 
-<!-- {{ partial "live-code" (dict "context" . "html" $html "css" $css "head" $head) }} -->
+{{ $schema := path.Join .File.Dir "schema.md" }}
 
 <div class="codepen">
     <form id="form-{{ .Title | anchorize}}"
@@ -52,8 +50,9 @@
       <div class="buttons has-addons">
           {{ if (fileExists $schema) }}
               <button id="tab-show-schema" aria-controls="panel-show-schema"
-                      class="show-schema button is-light" >
-                  <span>Show data schema</span>
+                      class="show-schema button is-light"
+                      title="Show the data schema of the dataset used in this resource">
+                  <span>See fields in use</span>
               </button>
           {{ end }}
           <button id="tab-show-code" aria-controls="panel-show-code"

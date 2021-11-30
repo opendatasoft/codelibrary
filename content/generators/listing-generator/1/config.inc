@@ -1,4 +1,4 @@
-     ng-init="domain = 'discovery.opendatasoft.com';
+     ng-init="domain = 'userclub.opendatasoft.com';
                 datasetid = 'oeuvres-de-johannes-vermeer';
 
                 sort = 'surface';
