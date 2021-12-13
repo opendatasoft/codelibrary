@@ -18,12 +18,21 @@
         </div>
         <div class="col-md-8 dashboard">
 
-            <ods-map no-refit="true" display-control="false" search-box="false" toolbar-fullscreen="true" toolbar-geolocation="true" basemap="jawg.streets" location="10,40.70795,-73.97688" scroll-wheel-zoom="false">
+            <ods-map no-refit="true" display-control="false" search-box="false" toolbar-fullscreen="true"
+                     toolbar-geolocation="true" basemap="jawg.streets" location="10,40.70795,-73.97688"
+                     scroll-wheel-zoom="false">
                 <ods-map-layer-group>
-                    <ods-map-layer context="stops" color="#6A79B0" picto="ods-bus" show-marker="true" display="auto" shape-opacity="0.5" point-opacity="1" border-color="#FFFFFF" border-opacity="1" border-size="1" border-pattern="solid" caption="false" title="Stations du réseau urbain" size="2" size-min="3" size-max="5" size-function="linear" show-if="stations"></ods-map-layer>
+                    <ods-map-layer context="stops" color="#6A79B0" picto="ods-bus" show-marker="true" display="auto"
+                                   shape-opacity="0.5" point-opacity="1" border-color="#FFFFFF" border-opacity="1"
+                                   border-size="1" border-pattern="solid" caption="false"
+                                   title="Stations du réseau urbain" size="2" size-min="3" size-max="5"
+                                   size-function="linear" show-if="stations"></ods-map-layer>
                 </ods-map-layer-group>
                 <ods-map-layer-group>
-                    <ods-map-layer context="lines" color-by-field="route_color" picto="ods-circle" show-marker="true" display="categories" shape-opacity="0.5" point-opacity="1" border-color="#FFFFFF" border-opacity="1" border-size="1" border-pattern="solid" caption="false" title="Lignes du réseau urbain" size="1"></ods-map-layer>
+                    <ods-map-layer context="lines" color-by-field="route_color" picto="ods-circle" show-marker="true"
+                                   display="categories" shape-opacity="0.5" point-opacity="1" border-color="#FFFFFF"
+                                   border-opacity="1" border-size="1" border-pattern="solid" caption="false"
+                                   title="Lignes du réseau urbain" size="1"></ods-map-layer>
                 </ods-map-layer-group>
             </ods-map>
         </div>
@@ -39,7 +48,7 @@
                 <span class="switch-button"></span>
             </label>
 
-            <hr />
+            <hr/>
 
             <div class="clearfilters"
                  ng-class="{'active': lines.parameters['refine.filename'].length > 0 ||
@@ -103,7 +112,7 @@
                 <h3>
                     Route name <i>(filter routes only)</i>
                 </h3>
-                
+
                 <!--ods-facet name="route_long_name" disjunctive="true"></ods-facet-->
                 <div ods-facet-results="routelongnames"
                      ods-facet-results-context="lines"

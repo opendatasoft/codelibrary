@@ -3,8 +3,9 @@ title: "Eco-Counter / Eco-Compteur data custom view"
 date: "2021-12-09"
 domainid: "eco-compteur-odsapps"
 datasetid: "eco-counter-data"
-external_url: "https://eco-compteur-odsapps.opendatasoft.com/explore/dataset/eco-counter-data/dashboard/"
 ---
+
+Eco-Counter custom view for Opendatasoft integration: an overall view of your territory through Eco-Counter stations data.
 
 ### Install procedure
 

@@ -1,10 +1,11 @@
-**Dataset in use:** `` [(See it on  domain)](https://.opendatasoft.com/explore/dataset//table/)
+**Dataset in use:** `donnees-relatives-aux-stocks-des-doses-de-vaccins-contre-la-covid-19-departement` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/donnees-relatives-aux-stocks-des-doses-de-vaccins-contre-la-covid-19-departement/table/)
 
-**Fields in use:** 
+**Fields in use:**
 
-|reg_name|dep_name|
+|vaccine_type|dose_number|
 |---|---|
-|Occitanie|Hérault|
-|Nouvelle-Aquitaine|Landes|
-|Centre-Val de Loire|Eure-et-Loir|
-|Grand Est|Haute-Marne|
+|Pfizer|6345|
+|Pfizer|5045|
+|Pfizer|2525|
+|Pfizer|1270|
+
