@@ -16,12 +16,16 @@ function writeDisk(path, content) {
 axios.get(query)
     .then(res => res)
     .then(res => {
+        // console.log(res.data);
         let data = res.data;
         let dataByLine = data.split('\r\n');
         let dataHeaders = dataByLine.shift();
-        let nbHeaders = dataHeaders.match(/;/g).length;
-        let markdownSep = new Array(nbHeaders + 2).join('|---') + '|'
-
+        let nbHeaders = 1;
+        let markdownSep = '|---|';
+        if (dataHeaders.match(/;/g)) {
+            nbHeaders = dataHeaders.match(/;/g).length;
+            markdownSep = new Array(nbHeaders + 2).join('|---') + '|'
+        }
         let markdownHeader = `|${dataHeaders.replaceAll(';', '|')}|`;
         let markdownData = '';
         dataByLine.filter(r => r).forEach((line) => {

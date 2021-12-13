@@ -1,60 +1,71 @@
-<div class="content-card">
-    <div class="row">
-        <div class="col-sm-6">
-            <!-- Replace this widget with your own visualisation -->
-            <ods-dataset-context context="contoursgeographiquessimplifiesdesnouvellesregionsmetropole2"
-             contoursgeographiquessimplifiesdesnouvellesregionsmetropole2-domain="discovery" contoursgeographiquessimplifiesdesnouvellesregionsmetropole2-dataset="contours-geographiques-simplifies-des-nouvelles-regions-metropole2">
-                <ods-map no-refit="true" scroll-wheel-zoom="false" display-legend="false" display-control="false" search-box="false" toolbar-fullscreen="false" toolbar-geolocation="false" location="6,48.4292,2.21924">
-                    <ods-map-layer-group>
-                        <ods-map-layer context="contoursgeographiquessimplifiesdesnouvellesregionsmetropole2" color="#142E7B" picto="ods-circle" show-marker="true" display="auto" function="COUNT" shape-opacity="0.5" point-opacity="1" border-color="#FFFFFF" border-opacity="1" border-size="2" border-pattern="solid" caption="true" title="contours-geographiques-simplifies-des-nouvelles-regions-metropole2" size="4" size-min="3" size-max="5" size-function="linear"></ods-map-layer>
-                    </ods-map-layer-group>
-                </ods-map>
-            </ods-dataset-context>
-        </div>
-        <div class="col-sm-6">
-            <h2 class="content-card-title">
-                French departments
-            </h2>
-            <p class="content-card-description">
-                Cardano could be many technical analysis since Nexo data mining a fundamental analysis.
-            </p>
-            <p class="content-card-description">
-                Ravencoin generates a amazing fish of lots of market cap, and Waves serves many quick anti-money laundering! Solidity allowed lots of fast peer-to-peer network.
-            </p>
-            <!-- Dropdown starts here -->
-            <div class="cl-dropdown"
-                 ng-init="dropdown.open = false">
-                <button ng-click="dropdown.open = !dropdown.open"
-                        ng-class="{'cl-dropdown-button-open': dropdown.open == true}"
-                        id="dropdown-button"
-                        class="cl-dropdown-button"
-                        aria-haspopup="true"
-                        aria-expanded="{{ dropdown.open == true }}">
-                    More info
-                </button>
-                <div class="cl-dropdown-menu"
-                     ng-class="{'cl-dropdown-visible' : dropdown.open == true }"
-                     aria-labelledby="dropdown-button">
-                    <div class="cl-dropdown-title">
-                        Where to?
+<div class="ods-box">
+    <!-- Important here: the disjunctive (multi filter) mode for the facet to still display other values even if one is selected -->
+    <ods-dataset-context context="universities"
+                         universities-domain="public"
+                         universities-dataset="shanghai-world-university-ranking"
+                         universities-parameters="{'disjunctive.country':true}">
+        <div class="row">
+            <div class="col-sm-4"
+                 ods-facet-results="countries"
+                 ods-facet-results-context="universities"
+                 ods-facet-results-facet-name="country"
+                 ods-facet-results-sort="alphanum">
+                <h3>
+                    Select a country to view universities
+                </h3>
+                <!-- Dropdown starts here -->
+                <div class="cl-dropdown"
+                     ng-init="dropdown.open = ''">
+                    <button ng-click="dropdown.open = (dropdown.open == 'country' ? '' : 'country');"
+                            ng-class="{'cl-dropdown-button-active': universities.parameters['refine.country'],
+                                      'cl-dropdown-button-open': dropdown.open == 'country'}"
+                            id="dropdown-button"
+                            class="cl-dropdown-button"
+                            aria-haspopup="true"
+                            aria-expanded="{{ dropdown.open == 'country' }}">
+                        {{ (!universities.parameters['refine.country'] ? 'Country' : universities.parameters['refine.country'] | capitalize) }}
+                    </button>
+                    <div class="cl-dropdown-menu"
+                         ng-class="{'cl-dropdown-visible' : dropdown.open == 'country' }"
+                         aria-labelledby="dropdown-button">
+                        <div class="cl-dropdown-title">
+                            Country
+                        </div>
+                        <ul class="cl-dropdown-items">
+                            <li class="cl-dropdown-item">
+                                <label class="cl-dropdown-label">
+                                    <input ng-model="universities.parameters['refine.country']"
+                                           ng-value="All"
+                                           name="country"
+                                           type="radio"
+                                           class="cl-dropdown-input" />
+                                    All countries
+                                </label>
+                            </li>
+                            <li ng-repeat="country in countries"
+                                class="cl-dropdown-item">
+                                <label class="cl-dropdown-label">
+                                    <input ng-model="universities.parameters['refine.country']"
+                                           ng-value="country.path"
+                                           name="country"
+                                           class="cl-dropdown-input"
+                                           type="radio" />
+                                    {{ country.path | capitalize }}
+                                </label>
+                            </li>
+                        </ul>
+                        {{universities.parameters['refine.country'] = (universities.parameters['refine.country'] == 'All' ? undefined : universities.parameters['refine.country']); ''}}
                     </div>
-                    <div class="cl-dropdown-items">
-                        <a class="cl-dropdown-item" href="#" ng-click="">
-                            See dataset
-                        </a>
-                        <a class="cl-dropdown-item" href="#" ng-click="">
-                            Create map
-                        </a>
-                        <a class="cl-dropdown-item" href="#" ng-click="">
-                            Create graph
-                        </a>
-                    </div>
+                    <div class="cl-dropdown-backdrop"
+                         ng-click="dropdown.open = ''"
+                         ng-show="dropdown.open != ''"></div>
                 </div>
-                <div class="cl-dropdown-backdrop"
-                     ng-click="dropdown.open = ''"
-                     ng-show="dropdown.open != ''"></div>
+                <!-- Dropdown ends here -->
             </div>
-            <!-- Dropdown ends here -->
+            <div class="col-sm-8">
+                <ods-map context="universities"></ods-map>
+                <ods-table context="universities"></ods-table>
+            </div>
         </div>
-    </div>
+    </ods-dataset-context>
 </div>

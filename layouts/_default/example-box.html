@@ -12,6 +12,18 @@
     {{ $html = printf "%s%s%s" "<div ng-app=\"ods-widgets\">\n" $htmlcontent "</div>" }}
 {{ end }}
 
+{{ $baseurl := "" }}
+{{ if .Params.domainid }}
+    {{ $baseurl = .Params.domainid }}
+{{ else }}
+    {{ $baseurl = "userclub" }}
+{{ end }}
+
+{{ $defaultDomain := "" }}
+{{ if .Params.domainid }}
+    {{ $defaultDomain = printf "%s%s%s" "<script type=\"text/javascript\"> angular.module(\"ods-widgets\").config(function(ODSWidgetsConfigProvider, $httpProvider) { ODSWidgetsConfigProvider.setConfig({defaultDomain: \"https://" .Params.domainid ".opendatasoft.com/\"}) }) </script>" }}
+{{ end }}
+
 {{ $schema := path.Join .File.Dir "schema.md" }}
 
 <div class="codepen">
@@ -37,8 +49,11 @@
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
-                <head>{{ $head }}</head>
-                <base href='https://userclub.opendatasoft.com/'>
+                <head>
+                    {{ $head }}
+                    {{ $defaultDomain }}
+                </head>
+                <base href='https://{{ $baseurl }}.opendatasoft.com/'>
                 <body>
                 <div ng-app='ods-widgets'>{{ $html }}</div>
                 <style type='text/css'>
