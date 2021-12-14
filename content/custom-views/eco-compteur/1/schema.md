@@ -2,7 +2,7 @@
 
 **Fields in use:**
 
-|name|date|counts|
+|name|date (datetime)|counts (numeric)|
 |---|---|---|
 |Savonniéres|2021-06-21T07:00:00+00:00|1|
 |Pont d'Arcole #1|2017-04-12T16:00:00+00:00|18|
@@ -13,7 +13,7 @@
 
 **Fields in use:**
 
-|name|user_type|sens|installation_date|photourl|photo|
+|name|user_type|sens|installation_date (date)|photourl|photo (file)|
 |---|---|---|---|---|---|
 |Pont de Fil|undefined|No direction distinction|2016-06-30|https://filer.eco-counter-tools.com/file/b7/7d63cb2a9b9986334c81393be68c09c2b1e0ed6fb4a07002c5a3188a78a715b7/14673104006170.jpg|https://eco-compteur-odsapps.opendatasoft.com/api/v2/catalog/datasets/eco-counter-sites/files/2d285c480a5a00392c3c2adc90cf2380|
 |Pont Sanitas OUEST|bicycle|No direction distinction|2018-06-25|https://filer.eco-counter-tools.com/file/ec/fc9ad4754577a9e8391a50ab6dcfa966f1892a326f49457ce5c3b80efaf02dec/15314760980470.jpg|https://eco-compteur-odsapps.opendatasoft.com/api/v2/catalog/datasets/eco-counter-sites/files/c225c95895bc3233dc9729bdc781d178|

@@ -2,7 +2,7 @@
 
 **Fields in use:** 
 
-| year (date) | university_name (text) | total_score(integer) |
+| year (date) | university_name | total_score(integer) |
 |---|---|---|
 |2016|Harvard University|100|
 |2005|Cornell University|54.6|

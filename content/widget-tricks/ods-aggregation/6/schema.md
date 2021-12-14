@@ -2,7 +2,7 @@
 
 **Fields in use:** 
 
-| beds (integer)|
+| beds (numeric)|
 |---|
 |132|
 |31|

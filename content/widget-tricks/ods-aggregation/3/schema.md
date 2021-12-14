@@ -2,7 +2,7 @@
 
 **Fields in use:** 
 
-| helipad (text)|
+| helipad|
 |---|
 |Y|
 |N|

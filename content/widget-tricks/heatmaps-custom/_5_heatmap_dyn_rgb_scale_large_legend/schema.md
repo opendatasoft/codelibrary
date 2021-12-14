@@ -2,7 +2,7 @@
 
 **Fields in use:** 
 
-| reg_name (text) | spot_size (integer)| spot_type (text) |
+| reg_name | spot_size (numeric)| spot_type |
 |---|---|---|
 |Centre-Val de Loire|100|Aire de covoiturage|
 |Occitanie|5|Parking|

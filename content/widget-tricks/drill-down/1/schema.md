@@ -2,7 +2,7 @@
 
 **Fields in use:** 
 
-| country (text) | total_score (integer) | university_name (text) | 
+| country | total_score (numeric) | university_name | 
 |---|---|---|
 |United States|100|Harvard University|
 |United Kingdom|72,6|University of Cambridge|

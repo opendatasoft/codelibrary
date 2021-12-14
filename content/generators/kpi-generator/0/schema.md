@@ -2,7 +2,7 @@
 
 **Fields in use:**
 
-|vaccine_type|dose_number|
+|vaccine_type|dose_number (numeric)|
 |---|---|
 |Pfizer|6345|
 |Pfizer|5045|

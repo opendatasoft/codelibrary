@@ -2,7 +2,7 @@
 
 **Fields in use:** 
 
-| age (text) | sexe (text) | nombre (integer) |
+| age | sexe | nombre (numeric) |
 |---|---|---|
 |15-29 ans|Femmes|2 929|
 |30-44 ans|Hommes|1 000|

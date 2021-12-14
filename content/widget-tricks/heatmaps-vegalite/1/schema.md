@@ -2,7 +2,7 @@
 
 **Fields in use:** 
 
-| date (datetime) | sum_counts (integer)|
+| date (datetime) | sum_counts (numeric)|
 |---|---|
 |2020-10-01T04:00:00+02:00|70|
 |2021-01-30T06:00:00+02:00|15|

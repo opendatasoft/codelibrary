@@ -2,7 +2,7 @@
 
 **Fields in use:**
 
-|day_intcare_new|date|
+|day_intcare_new (numeric)|date (date)|
 |---|---|
 |0|2021-05-18|
 |8|2021-05-18|

@@ -2,7 +2,7 @@
 
 **Fields in use:**
 
-|coordonnees_geo (geo_point) |name|hasclosed|city|
+|coordonnees_geo (geo_point)|name|hasclosed|city|
 |---|---|---|---|
 |34.67429180,135.50417380|Naminohana Records|no|Osaka|
 |-12.05070340,-77.03952410|Disqueria|no|Lima|

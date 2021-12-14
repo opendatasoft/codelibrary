@@ -2,7 +2,7 @@
 
 **Fields in use:**
 
-|country|world_rank_int|university_name|
+|country|world_rank_int (numeric)|university_name|
 |---|---|---|
 |United Kingdom|70|University of Bristol|
 |United States|72|University of Florida|

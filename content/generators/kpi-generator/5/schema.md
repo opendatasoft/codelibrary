@@ -2,7 +2,7 @@
 
 **Fields in use:**
 
-|population_en_2012|population_en_2007|
+|population_en_2012 (numeric)|population_en_2007 (numeric)|
 |---|---|
 |2794.0|2760.0|
 |2063.0|2071.0|
@@ -13,7 +13,7 @@
 
 **Fields in use:**
 
-|inhab|
+|inhab (numeric)|
 |---|
 |219|
 |58|

@@ -4,7 +4,6 @@
                 sort = '-date_start';
 
                 filters = [
-                {'id':'category','multiple':true},
                 {'id':'tags','multiple':true},
                 {'id':'access_type','multiple':false},
                 {'id':'price_type','multiple':false}
@@ -20,7 +19,6 @@
                                   {'field':'address_street'},
                                   {'field':'address_city'},
                                   {'field':'conditionversement'},
-                                  {'field':'category'},
                                   {'field':'date_start','format':'date'},
                                   {'field':'date_end','format':'date'}
                               ];

@@ -2,7 +2,7 @@
 
 **Fields in use:** 
 
-| university_name (text) | pub (decimal)| 
+| university_name | pub (decimal)| 
 |---|---|
 |Harvard University|100|
 |University of Cambridge|70.9|

@@ -277,10 +277,15 @@
       
       
       
+      
+      
+      
       <li>
         <a href="/custom-views/"
         class="sidebar-subtitle">
         Custom views
+        
+        <span class="tag pill is-size-7 is-rounded is-info">1</span>
         
       </a>
     </li>
@@ -766,9 +771,15 @@
 
 
 
+    
+
+
 
 
     
+
+
+
 
 
 
@@ -782,9 +793,9 @@
                name="data"
                value='{
                  "title": "New Pen!",
-                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
-                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003c!-- \&#34;dep\&#34; context is the official geo-referential from Opendatasoft Data Network --\u003e\n\u003cods-dataset-context context=\&#34;dep,carpool\&#34;\n                     dep-dataset=\&#34;georef-france-departement\&#34;\n                     dep-parameters=\&#34;{&#39;q&#39;:&#39;dep_code \u003c= 95&#39;}\&#34;\n                     dep-domain=\&#34;public\&#34;\n                     carpool-dataset=\&#34;base-nationale-des-lieux-de-covoiturage-en-france\&#34;\n                     carpool-domain=\&#34;userclub\&#34;\u003e\n\n    \u003cdiv ods-color-gradient=\&#34;colorgradient\&#34;\n         ods-color-gradient-context=\&#34;carpool\&#34;\n         ods-color-gradient-x=\&#34;dep_code\&#34;\n         ods-color-gradient-serie=\&#34;COUNT()\&#34;\n         ods-color-gradient-high=\&#34;rgb(20, 33, 96)\&#34;\n         ods-color-gradient-low=\&#34;rgb(180, 197, 241)\&#34;\u003e\n\n        \u003ch2\u003eColor departments by number of carpool location\u003c/h2\u003e\n        \u003cdiv class=\&#34;map-container\&#34;\u003e\n            \u003cods-map\u003e\n                \u003cods-map-layer context=\&#34;dep\&#34;\n                               color-categories=\&#34;colorgradient[&#39;colors&#39;]\&#34;\n                               color-by-field=\&#34;dep_code\&#34;\n                               color-categories-other=\&#34;lightgrey\&#34;\n                               display=\&#34;categories\&#34;\n                               shape-opacity=\&#34;0.95\&#34;\n                               title=\&#34;# of carpool parking\&#34;\u003e\n                \u003c/ods-map-layer\u003e\n            \u003c/ods-map\u003e\n\n            \u003cods-legend title=\&#34;# of carpool parking\&#34;\n                        color-gradient=\&#34;colorgradient\&#34;\n                        display=\&#34;linear\&#34;\n                        no-value-color=\&#34;lightgrey\&#34;\n                        decimal-precision=\&#34;0\&#34;\u003e\u003c/ods-legend\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003c!-- \&#34;dep\&#34; context is the official geo-referential from Opendatasoft Data Network --\u003e\n\u003cods-dataset-context context=\&#34;dep,carpool\&#34;\n                     dep-dataset=\&#34;departements-et-collectivites-doutre-mer-france\&#34;\n                     dep-domain=\&#34;userclub\&#34;\n                     carpool-dataset=\&#34;base-nationale-des-lieux-de-covoiturage-en-france\&#34;\n                     carpool-domain=\&#34;userclub\&#34;\u003e\n\n    \u003cdiv ods-color-gradient=\&#34;colorgradient\&#34;\n         ods-color-gradient-context=\&#34;carpool\&#34;\n         ods-color-gradient-x=\&#34;dep_code\&#34;\n         ods-color-gradient-serie=\&#34;COUNT()\&#34;\n         ods-color-gradient-high=\&#34;rgb(20, 33, 96)\&#34;\n         ods-color-gradient-low=\&#34;rgb(180, 197, 241)\&#34;\u003e\n\n        \u003ch2\u003eColor departments by number of carpool location\u003c/h2\u003e\n        \u003cdiv class=\&#34;map-container\&#34;\u003e\n            \u003cods-map\u003e\n                \u003cods-map-layer context=\&#34;dep\&#34;\n                               color-categories=\&#34;colorgradient[&#39;colors&#39;]\&#34;\n                               color-by-field=\&#34;dep_code\&#34;\n                               color-categories-other=\&#34;lightgrey\&#34;\n                               display=\&#34;categories\&#34;\n                               shape-opacity=\&#34;0.95\&#34;\n                               title=\&#34;# of carpool parking\&#34;\u003e\n                \u003c/ods-map-layer\u003e\n            \u003c/ods-map\u003e\n\n            \u003cods-legend title=\&#34;# of carpool parking\&#34;\n                        color-gradient=\&#34;colorgradient\&#34;\n                        display=\&#34;linear\&#34;\n                        no-value-color=\&#34;lightgrey\&#34;\n                        decimal-precision=\&#34;0\&#34;\u003e\u003c/ods-legend\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
                  "css": &#34;.map-container {\n    position: relative;\n}\n\n.odswidget.odswidget-legend {\n    position: absolute;\n    top: 20px;\n    left: 57px;\n}&#34;
                }'>
     </form>
@@ -796,7 +807,8 @@
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
-                <head>&lt;link
+                <head>
+                    &lt;link
   rel=&#34;stylesheet&#34;
   href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
 /&gt;
@@ -840,6 +852,7 @@
   const sourceMonitoringInterceptor = $q =&gt; {
     return {
       request: config =&gt; {
+        console.log(config.url);
         if (config.params)
           if (config.params.source) delete config.params.source;
 
@@ -950,15 +963,16 @@
       $httpProvider.interceptors.push(sourceMonitoringInterceptor);
     });
 &lt;/script&gt;
-</head>
+
+                    
+                </head>
                 <base href='https://userclub.opendatasoft.com/'>
                 <body>
                 <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
 &lt;!-- &#34;dep&#34; context is the official geo-referential from Opendatasoft Data Network --&gt;
 &lt;ods-dataset-context context=&#34;dep,carpool&#34;
-                     dep-dataset=&#34;georef-france-departement&#34;
-                     dep-parameters=&#34;{&#39;q&#39;:&#39;dep_code &lt;= 95&#39;}&#34;
-                     dep-domain=&#34;public&#34;
+                     dep-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
+                     dep-domain=&#34;userclub&#34;
                      carpool-dataset=&#34;base-nationale-des-lieux-de-covoiturage-en-france&#34;
                      carpool-domain=&#34;userclub&#34;&gt;
 
@@ -1008,6 +1022,12 @@
       </iframe>
       <div class="buttons has-addons">
           
+              <button id="tab-show-schema" aria-controls="panel-show-schema"
+                      class="show-schema button is-light"
+                      title="Show the data schema of the dataset used in this resource">
+                  <span>See fields in use</span>
+              </button>
+          
           <button id="tab-show-code" aria-controls="panel-show-code"
                   class="show-code button is-light">
             <span>Show code</span>
@@ -1027,6 +1047,57 @@
           </button>
       </div>
     </div>
+    
+        <div id="panel-show-schema" aria-labelledby="tab-show-schema" aria-hidden
+             class="box-schema is-hidden">
+            <div class="content">
+                <p><strong>Fields in use in :</strong> <code>departements-et-collectivites-doutre-mer-france</code> <a href="https://userclub.opendatasoft.com/explore/dataset/departements-et-collectivites-doutre-mer-france/table/">(See it on userclub domain)</a></p>
+<table>
+<thead>
+<tr>
+<th>dep_code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>74</td>
+</tr>
+<tr>
+<td>01</td>
+</tr>
+<tr>
+<td>44</td>
+</tr>
+<tr>
+<td>46</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fields in use in :</strong> <code>base-nationale-des-lieux-de-covoiturage-en-france</code> <a href="https://userclub.opendatasoft.com/explore/dataset/base-nationale-des-lieux-de-covoiturage-en-france/table/">(See it on userclub domain)</a></p>
+<table>
+<thead>
+<tr>
+<th>dep_code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>74</td>
+</tr>
+<tr>
+<td>01</td>
+</tr>
+<tr>
+<td>44</td>
+</tr>
+<tr>
+<td>46</td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+        </div>
     
     <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
          class="box-code js-tabs is-hidden">
@@ -1081,9 +1152,8 @@
                  id="code-simple-usage-with-legend-on-top-of-the-map-html-content"
                  data-clipboard="&lt;!-- &#34;dep&#34; context is the official geo-referential from Opendatasoft Data Network --&gt;
 &lt;ods-dataset-context context=&#34;dep,carpool&#34;
-                     dep-dataset=&#34;georef-france-departement&#34;
-                     dep-parameters=&#34;{&#39;q&#39;:&#39;dep_code &lt;= 95&#39;}&#34;
-                     dep-domain=&#34;public&#34;
+                     dep-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
+                     dep-domain=&#34;userclub&#34;
                      carpool-dataset=&#34;base-nationale-des-lieux-de-covoiturage-en-france&#34;
                      carpool-domain=&#34;userclub&#34;&gt;
 
@@ -1121,9 +1191,8 @@
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;!-- &#34;dep&#34; context is the official geo-referential from Opendatasoft Data Network --&gt;
 &lt;ods-dataset-context context=&#34;dep,carpool&#34;
-                     dep-dataset=&#34;georef-france-departement&#34;
-                     dep-parameters=&#34;{&#39;q&#39;:&#39;dep_code &lt;= 95&#39;}&#34;
-                     dep-domain=&#34;public&#34;
+                     dep-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
+                     dep-domain=&#34;userclub&#34;
                      carpool-dataset=&#34;base-nationale-des-lieux-de-covoiturage-en-france&#34;
                      carpool-domain=&#34;userclub&#34;&gt;
 
@@ -1220,9 +1289,15 @@ The transform applied to value is of the type <code>y = x^k</code> where <code>k
 
 
 
+    
+
+
 
 
     
+
+
+
 
 
 
@@ -1236,9 +1311,9 @@ The transform applied to value is of the type <code>y = x^k</code> where <code>k
                name="data"
                value='{
                  "title": "New Pen!",
-                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
-                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003c!-- \&#34;dep\&#34; context is the official geo-referential from Opendatasoft Data Network --\u003e\n\u003cods-dataset-context context=\&#34;dep,carpool\&#34;\n                     dep-dataset=\&#34;georef-france-departement\&#34;\n                     dep-parameters=\&#34;{&#39;q&#39;:&#39;dep_code \u003c= 95&#39;}\&#34;\n                     dep-domain=\&#34;public\&#34;\n                     carpool-dataset=\&#34;base-nationale-des-lieux-de-covoiturage-en-france\&#34;\n                     carpool-domain=\&#34;userclub\&#34;\u003e\n    \u003cdiv class=\&#34;row\&#34;\u003e\n        \u003cdiv class=\&#34;col-sm-6\&#34;\u003e\n            \u003cdiv ods-color-gradient=\&#34;colorgradientsoften\&#34;\n                 ods-color-gradient-context=\&#34;carpool\&#34;\n                 ods-color-gradient-x=\&#34;dep_code\&#34;\n                 ods-color-gradient-serie=\&#34;COUNT()\&#34;\n                 ods-color-gradient-pow-exponent=\&#34;0.3\&#34;\u003e\n\n                \u003cdiv class=\&#34;map-container\&#34;\u003e\n                    \u003ch2\u003ePower exponent at 0.3 : soften higher values\u003c/h2\u003e\n                    \u003ch3\u003eEquivalent to log scale\u003c/h3\u003e\n                    \u003cods-map\u003e\n                        \u003cods-map-layer context=\&#34;dep\&#34;\n                                       color-categories=\&#34;colorgradientsoften[&#39;colors&#39;]\&#34;\n                                       color-by-field=\&#34;dep_code\&#34;\n                                       color-categories-other=\&#34;lightgrey\&#34;\n                                       display=\&#34;categories\&#34;\n                                       shape-opacity=\&#34;0.95\&#34;\n                                       title=\&#34;# of carpool parking\&#34;\u003e\n                        \u003c/ods-map-layer\u003e\n                    \u003c/ods-map\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;col-sm-6\&#34;\u003e\n            \u003cdiv ods-color-gradient=\&#34;colorgradientemphasize\&#34;\n                 ods-color-gradient-context=\&#34;carpool\&#34;\n                 ods-color-gradient-x=\&#34;dep_code\&#34;\n                 ods-color-gradient-serie=\&#34;COUNT()\&#34;\n                 ods-color-gradient-pow-exponent=\&#34;2\&#34;\u003e\n\n                \u003cdiv class=\&#34;map-container\&#34;\u003e\n                    \u003ch2\u003ePower exponent at 2 : emphasize higher values\u003c/h2\u003e\n                    \u003ch3\u003eEquivalent to square scale\u003c/h3\u003e\n                    \u003cods-map\u003e\n                        \u003cods-map-layer context=\&#34;dep\&#34;\n                                       color-categories=\&#34;colorgradientemphasize[&#39;colors&#39;]\&#34;\n                                       color-by-field=\&#34;dep_code\&#34;\n                                       color-categories-other=\&#34;lightgrey\&#34;\n                                       display=\&#34;categories\&#34;\n                                       shape-opacity=\&#34;0.95\&#34;\n                                       title=\&#34;# of carpool parking\&#34;\u003e\n                        \u003c/ods-map-layer\u003e\n                    \u003c/ods-map\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003c!-- \&#34;dep\&#34; context is the official geo-referential from Opendatasoft Data Network --\u003e\n\u003cods-dataset-context context=\&#34;dep,carpool\&#34;\n                     dep-dataset=\&#34;departements-et-collectivites-doutre-mer-france\&#34;\n                     dep-domain=\&#34;userclub\&#34;\n                     carpool-dataset=\&#34;base-nationale-des-lieux-de-covoiturage-en-france\&#34;\n                     carpool-domain=\&#34;userclub\&#34;\u003e\n    \u003cdiv class=\&#34;row\&#34;\u003e\n        \u003cdiv class=\&#34;col-sm-6\&#34;\u003e\n            \u003cdiv ods-color-gradient=\&#34;colorgradientsoften\&#34;\n                 ods-color-gradient-context=\&#34;carpool\&#34;\n                 ods-color-gradient-x=\&#34;dep_code\&#34;\n                 ods-color-gradient-serie=\&#34;COUNT()\&#34;\n                 ods-color-gradient-pow-exponent=\&#34;0.3\&#34;\u003e\n\n                \u003cdiv class=\&#34;map-container\&#34;\u003e\n                    \u003ch2\u003ePower exponent at 0.3 : soften higher values\u003c/h2\u003e\n                    \u003ch3\u003eEquivalent to log scale\u003c/h3\u003e\n                    \u003cods-map\u003e\n                        \u003cods-map-layer context=\&#34;dep\&#34;\n                                       color-categories=\&#34;colorgradientsoften[&#39;colors&#39;]\&#34;\n                                       color-by-field=\&#34;dep_code\&#34;\n                                       color-categories-other=\&#34;lightgrey\&#34;\n                                       display=\&#34;categories\&#34;\n                                       shape-opacity=\&#34;0.95\&#34;\n                                       title=\&#34;# of carpool parking\&#34;\u003e\n                        \u003c/ods-map-layer\u003e\n                    \u003c/ods-map\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;col-sm-6\&#34;\u003e\n            \u003cdiv ods-color-gradient=\&#34;colorgradientemphasize\&#34;\n                 ods-color-gradient-context=\&#34;carpool\&#34;\n                 ods-color-gradient-x=\&#34;dep_code\&#34;\n                 ods-color-gradient-serie=\&#34;COUNT()\&#34;\n                 ods-color-gradient-pow-exponent=\&#34;2\&#34;\u003e\n\n                \u003cdiv class=\&#34;map-container\&#34;\u003e\n                    \u003ch2\u003ePower exponent at 2 : emphasize higher values\u003c/h2\u003e\n                    \u003ch3\u003eEquivalent to square scale\u003c/h3\u003e\n                    \u003cods-map\u003e\n                        \u003cods-map-layer context=\&#34;dep\&#34;\n                                       color-categories=\&#34;colorgradientemphasize[&#39;colors&#39;]\&#34;\n                                       color-by-field=\&#34;dep_code\&#34;\n                                       color-categories-other=\&#34;lightgrey\&#34;\n                                       display=\&#34;categories\&#34;\n                                       shape-opacity=\&#34;0.95\&#34;\n                                       title=\&#34;# of carpool parking\&#34;\u003e\n                        \u003c/ods-map-layer\u003e\n                    \u003c/ods-map\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
                  "css": &#34;&#34;
                }'>
     </form>
@@ -1250,7 +1325,8 @@ The transform applied to value is of the type <code>y = x^k</code> where <code>k
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
-                <head>&lt;link
+                <head>
+                    &lt;link
   rel=&#34;stylesheet&#34;
   href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
 /&gt;
@@ -1294,6 +1370,7 @@ The transform applied to value is of the type <code>y = x^k</code> where <code>k
   const sourceMonitoringInterceptor = $q =&gt; {
     return {
       request: config =&gt; {
+        console.log(config.url);
         if (config.params)
           if (config.params.source) delete config.params.source;
 
@@ -1404,15 +1481,16 @@ The transform applied to value is of the type <code>y = x^k</code> where <code>k
       $httpProvider.interceptors.push(sourceMonitoringInterceptor);
     });
 &lt;/script&gt;
-</head>
+
+                    
+                </head>
                 <base href='https://userclub.opendatasoft.com/'>
                 <body>
                 <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
 &lt;!-- &#34;dep&#34; context is the official geo-referential from Opendatasoft Data Network --&gt;
 &lt;ods-dataset-context context=&#34;dep,carpool&#34;
-                     dep-dataset=&#34;georef-france-departement&#34;
-                     dep-parameters=&#34;{&#39;q&#39;:&#39;dep_code &lt;= 95&#39;}&#34;
-                     dep-domain=&#34;public&#34;
+                     dep-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
+                     dep-domain=&#34;userclub&#34;
                      carpool-dataset=&#34;base-nationale-des-lieux-de-covoiturage-en-france&#34;
                      carpool-domain=&#34;userclub&#34;&gt;
     &lt;div class=&#34;row&#34;&gt;
@@ -1473,6 +1551,12 @@ The transform applied to value is of the type <code>y = x^k</code> where <code>k
       </iframe>
       <div class="buttons has-addons">
           
+              <button id="tab-show-schema" aria-controls="panel-show-schema"
+                      class="show-schema button is-light"
+                      title="Show the data schema of the dataset used in this resource">
+                  <span>See fields in use</span>
+              </button>
+          
           <button id="tab-show-code" aria-controls="panel-show-code"
                   class="show-code button is-light">
             <span>Show code</span>
@@ -1492,6 +1576,57 @@ The transform applied to value is of the type <code>y = x^k</code> where <code>k
           </button>
       </div>
     </div>
+    
+        <div id="panel-show-schema" aria-labelledby="tab-show-schema" aria-hidden
+             class="box-schema is-hidden">
+            <div class="content">
+                <p><strong>Fields in use in :</strong> <code>departements-et-collectivites-doutre-mer-france</code> <a href="https://userclub.opendatasoft.com/explore/dataset/departements-et-collectivites-doutre-mer-france/table/">(See it on userclub domain)</a></p>
+<table>
+<thead>
+<tr>
+<th>dep_code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>74</td>
+</tr>
+<tr>
+<td>01</td>
+</tr>
+<tr>
+<td>44</td>
+</tr>
+<tr>
+<td>46</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fields in use in :</strong> <code>base-nationale-des-lieux-de-covoiturage-en-france</code> <a href="https://userclub.opendatasoft.com/explore/dataset/base-nationale-des-lieux-de-covoiturage-en-france/table/">(See it on userclub domain)</a></p>
+<table>
+<thead>
+<tr>
+<th>dep_code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>74</td>
+</tr>
+<tr>
+<td>01</td>
+</tr>
+<tr>
+<td>44</td>
+</tr>
+<tr>
+<td>46</td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+        </div>
     
     <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
          class="box-code js-tabs is-hidden">
@@ -1539,9 +1674,8 @@ The transform applied to value is of the type <code>y = x^k</code> where <code>k
                  id="code-ods-color-gradient-power-exponent-html-content"
                  data-clipboard="&lt;!-- &#34;dep&#34; context is the official geo-referential from Opendatasoft Data Network --&gt;
 &lt;ods-dataset-context context=&#34;dep,carpool&#34;
-                     dep-dataset=&#34;georef-france-departement&#34;
-                     dep-parameters=&#34;{&#39;q&#39;:&#39;dep_code &lt;= 95&#39;}&#34;
-                     dep-domain=&#34;public&#34;
+                     dep-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
+                     dep-domain=&#34;userclub&#34;
                      carpool-dataset=&#34;base-nationale-des-lieux-de-covoiturage-en-france&#34;
                      carpool-domain=&#34;userclub&#34;&gt;
     &lt;div class=&#34;row&#34;&gt;
@@ -1598,9 +1732,8 @@ The transform applied to value is of the type <code>y = x^k</code> where <code>k
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;!-- &#34;dep&#34; context is the official geo-referential from Opendatasoft Data Network --&gt;
 &lt;ods-dataset-context context=&#34;dep,carpool&#34;
-                     dep-dataset=&#34;georef-france-departement&#34;
-                     dep-parameters=&#34;{&#39;q&#39;:&#39;dep_code &lt;= 95&#39;}&#34;
-                     dep-domain=&#34;public&#34;
+                     dep-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
+                     dep-domain=&#34;userclub&#34;
                      carpool-dataset=&#34;base-nationale-des-lieux-de-covoiturage-en-france&#34;
                      carpool-domain=&#34;userclub&#34;&gt;
     &lt;div class=&#34;row&#34;&gt;
@@ -1692,9 +1825,15 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
 
 
 
+    
+
+
 
 
     
+
+
+
 
 
 
@@ -1708,9 +1847,9 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
                name="data"
                value='{
                  "title": "New Pen!",
-                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
-                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003c!-- \&#34;dep\&#34; context is the official geo-referential from Opendatasoft Data Network --\u003e\n\u003cods-dataset-context context=\&#34;dep,carpool\&#34;\n                     dep-dataset=\&#34;georef-france-departement\&#34;\n                     dep-parameters=\&#34;{&#39;q&#39;:&#39;dep_code \u003c= 95&#39;}\&#34;\n                     dep-domain=\&#34;public\&#34;\n                     carpool-dataset=\&#34;base-nationale-des-lieux-de-covoiturage-en-france\&#34;\n                     carpool-domain=\&#34;userclub\&#34;\u003e\n    \u003cdiv class=\&#34;row\&#34;\u003e\n        \u003cdiv class=\&#34;col-sm-6\&#34;\u003e\n            \u003cdiv ods-color-gradient=\&#34;colorgradientleft\&#34;\n                 ods-color-gradient-context=\&#34;carpool\&#34;\n                 ods-color-gradient-x=\&#34;dep_code\&#34;\n                 ods-color-gradient-serie=\&#34;COUNT()\&#34;\n                 ods-color-gradient-nb-classes=\&#34;2\&#34;\u003e\n\n                \u003cdiv class=\&#34;map-container\&#34;\u003e\n                    \u003ch2\u003eNb classes = 2\u003c/h2\u003e\n                    \u003ch3\u003eSplit values into 2 groups, and therefore 2 colors\u003c/h3\u003e\n                    \u003cods-map\u003e\n                        \u003cods-map-layer context=\&#34;dep\&#34;\n                                       color-categories=\&#34;colorgradientleft[&#39;colors&#39;]\&#34;\n                                       color-by-field=\&#34;dep_code\&#34;\n                                       color-categories-other=\&#34;lightgrey\&#34;\n                                       display=\&#34;categories\&#34;\n                                       shape-opacity=\&#34;0.95\&#34;\n                                       title=\&#34;# of carpool parking\&#34;\u003e\n                        \u003c/ods-map-layer\u003e\n                    \u003c/ods-map\u003e\n\n                    \u003cods-legend title=\&#34;# of carpool parking\&#34;\n                                color-gradient=\&#34;colorgradientleft\&#34;\n                                display=\&#34;steps\&#34;\n                                no-value-color=\&#34;lightgrey\&#34;\n                                decimal-precision=\&#34;0\&#34;\u003e\u003c/ods-legend\u003e\n                    \n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;col-sm-6\&#34;\u003e\n            \u003cdiv ods-color-gradient=\&#34;colorgradientright\&#34;\n                 ods-color-gradient-context=\&#34;carpool\&#34;\n                 ods-color-gradient-x=\&#34;dep_code\&#34;\n                 ods-color-gradient-serie=\&#34;COUNT()\&#34;\n                 ods-color-gradient-nb-classes=\&#34;8\&#34;\u003e\n\n                \u003cdiv class=\&#34;map-container\&#34;\u003e\n                    \u003ch2\u003eNb classes = 8\u003c/h2\u003e\n                    \u003ch3\u003eSplit values into 8 groups, and therefore 8 colors\u003c/h3\u003e\n                    \u003cods-map\u003e\n                        \u003cods-map-layer context=\&#34;dep\&#34;\n                                       color-categories=\&#34;colorgradientright[&#39;colors&#39;]\&#34;\n                                       color-by-field=\&#34;dep_code\&#34;\n                                       color-categories-other=\&#34;lightgrey\&#34;\n                                       display=\&#34;categories\&#34;\n                                       shape-opacity=\&#34;0.95\&#34;\n                                       title=\&#34;# of carpool parking\&#34;\u003e\n                        \u003c/ods-map-layer\u003e\n                    \u003c/ods-map\u003e\n\n\n                    \u003cods-legend title=\&#34;# of carpool parking\&#34;\n                                color-gradient=\&#34;colorgradientright\&#34;\n                                display=\&#34;steps\&#34;\n                                no-value-color=\&#34;lightgrey\&#34;\n                                decimal-precision=\&#34;0\&#34;\u003e\u003c/ods-legend\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003c!-- \&#34;dep\&#34; context is the official geo-referential from Opendatasoft Data Network --\u003e\n\u003cods-dataset-context context=\&#34;dep,carpool\&#34;\n                     dep-dataset=\&#34;departements-et-collectivites-doutre-mer-france\&#34;\n                     dep-domain=\&#34;userclub\&#34;\n                     carpool-dataset=\&#34;base-nationale-des-lieux-de-covoiturage-en-france\&#34;\n                     carpool-domain=\&#34;userclub\&#34;\u003e\n    \u003cdiv class=\&#34;row\&#34;\u003e\n        \u003cdiv class=\&#34;col-sm-6\&#34;\u003e\n            \u003cdiv ods-color-gradient=\&#34;colorgradientleft\&#34;\n                 ods-color-gradient-context=\&#34;carpool\&#34;\n                 ods-color-gradient-x=\&#34;dep_code\&#34;\n                 ods-color-gradient-serie=\&#34;COUNT()\&#34;\n                 ods-color-gradient-nb-classes=\&#34;2\&#34;\u003e\n\n                \u003cdiv class=\&#34;map-container\&#34;\u003e\n                    \u003ch2\u003eNb classes = 2\u003c/h2\u003e\n                    \u003ch3\u003eSplit values into 2 groups, and therefore 2 colors\u003c/h3\u003e\n                    \u003cods-map\u003e\n                        \u003cods-map-layer context=\&#34;dep\&#34;\n                                       color-categories=\&#34;colorgradientleft[&#39;colors&#39;]\&#34;\n                                       color-by-field=\&#34;dep_code\&#34;\n                                       color-categories-other=\&#34;lightgrey\&#34;\n                                       display=\&#34;categories\&#34;\n                                       shape-opacity=\&#34;0.95\&#34;\n                                       title=\&#34;# of carpool parking\&#34;\u003e\n                        \u003c/ods-map-layer\u003e\n                    \u003c/ods-map\u003e\n\n                    \u003cods-legend title=\&#34;# of carpool parking\&#34;\n                                color-gradient=\&#34;colorgradientleft\&#34;\n                                display=\&#34;steps\&#34;\n                                no-value-color=\&#34;lightgrey\&#34;\n                                decimal-precision=\&#34;0\&#34;\u003e\u003c/ods-legend\u003e\n                    \n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;col-sm-6\&#34;\u003e\n            \u003cdiv ods-color-gradient=\&#34;colorgradientright\&#34;\n                 ods-color-gradient-context=\&#34;carpool\&#34;\n                 ods-color-gradient-x=\&#34;dep_code\&#34;\n                 ods-color-gradient-serie=\&#34;COUNT()\&#34;\n                 ods-color-gradient-nb-classes=\&#34;8\&#34;\u003e\n\n                \u003cdiv class=\&#34;map-container\&#34;\u003e\n                    \u003ch2\u003eNb classes = 8\u003c/h2\u003e\n                    \u003ch3\u003eSplit values into 8 groups, and therefore 8 colors\u003c/h3\u003e\n                    \u003cods-map\u003e\n                        \u003cods-map-layer context=\&#34;dep\&#34;\n                                       color-categories=\&#34;colorgradientright[&#39;colors&#39;]\&#34;\n                                       color-by-field=\&#34;dep_code\&#34;\n                                       color-categories-other=\&#34;lightgrey\&#34;\n                                       display=\&#34;categories\&#34;\n                                       shape-opacity=\&#34;0.95\&#34;\n                                       title=\&#34;# of carpool parking\&#34;\u003e\n                        \u003c/ods-map-layer\u003e\n                    \u003c/ods-map\u003e\n\n\n                    \u003cods-legend title=\&#34;# of carpool parking\&#34;\n                                color-gradient=\&#34;colorgradientright\&#34;\n                                display=\&#34;steps\&#34;\n                                no-value-color=\&#34;lightgrey\&#34;\n                                decimal-precision=\&#34;0\&#34;\u003e\u003c/ods-legend\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
                  "css": &#34;&#34;
                }'>
     </form>
@@ -1722,7 +1861,8 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
-                <head>&lt;link
+                <head>
+                    &lt;link
   rel=&#34;stylesheet&#34;
   href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
 /&gt;
@@ -1766,6 +1906,7 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
   const sourceMonitoringInterceptor = $q =&gt; {
     return {
       request: config =&gt; {
+        console.log(config.url);
         if (config.params)
           if (config.params.source) delete config.params.source;
 
@@ -1876,15 +2017,16 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
       $httpProvider.interceptors.push(sourceMonitoringInterceptor);
     });
 &lt;/script&gt;
-</head>
+
+                    
+                </head>
                 <base href='https://userclub.opendatasoft.com/'>
                 <body>
                 <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
 &lt;!-- &#34;dep&#34; context is the official geo-referential from Opendatasoft Data Network --&gt;
 &lt;ods-dataset-context context=&#34;dep,carpool&#34;
-                     dep-dataset=&#34;georef-france-departement&#34;
-                     dep-parameters=&#34;{&#39;q&#39;:&#39;dep_code &lt;= 95&#39;}&#34;
-                     dep-domain=&#34;public&#34;
+                     dep-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
+                     dep-domain=&#34;userclub&#34;
                      carpool-dataset=&#34;base-nationale-des-lieux-de-covoiturage-en-france&#34;
                      carpool-domain=&#34;userclub&#34;&gt;
     &lt;div class=&#34;row&#34;&gt;
@@ -1959,6 +2101,12 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
       </iframe>
       <div class="buttons has-addons">
           
+              <button id="tab-show-schema" aria-controls="panel-show-schema"
+                      class="show-schema button is-light"
+                      title="Show the data schema of the dataset used in this resource">
+                  <span>See fields in use</span>
+              </button>
+          
           <button id="tab-show-code" aria-controls="panel-show-code"
                   class="show-code button is-light">
             <span>Show code</span>
@@ -1978,6 +2126,57 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
           </button>
       </div>
     </div>
+    
+        <div id="panel-show-schema" aria-labelledby="tab-show-schema" aria-hidden
+             class="box-schema is-hidden">
+            <div class="content">
+                <p><strong>Fields in use in :</strong> <code>departements-et-collectivites-doutre-mer-france</code> <a href="https://userclub.opendatasoft.com/explore/dataset/departements-et-collectivites-doutre-mer-france/table/">(See it on userclub domain)</a></p>
+<table>
+<thead>
+<tr>
+<th>dep_code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>74</td>
+</tr>
+<tr>
+<td>01</td>
+</tr>
+<tr>
+<td>44</td>
+</tr>
+<tr>
+<td>46</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fields in use in :</strong> <code>base-nationale-des-lieux-de-covoiturage-en-france</code> <a href="https://userclub.opendatasoft.com/explore/dataset/base-nationale-des-lieux-de-covoiturage-en-france/table/">(See it on userclub domain)</a></p>
+<table>
+<thead>
+<tr>
+<th>dep_code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>74</td>
+</tr>
+<tr>
+<td>01</td>
+</tr>
+<tr>
+<td>44</td>
+</tr>
+<tr>
+<td>46</td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+        </div>
     
     <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
          class="box-code js-tabs is-hidden">
@@ -2025,9 +2224,8 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
                  id="code-ods-color-gradient-number-of-classes-html-content"
                  data-clipboard="&lt;!-- &#34;dep&#34; context is the official geo-referential from Opendatasoft Data Network --&gt;
 &lt;ods-dataset-context context=&#34;dep,carpool&#34;
-                     dep-dataset=&#34;georef-france-departement&#34;
-                     dep-parameters=&#34;{&#39;q&#39;:&#39;dep_code &lt;= 95&#39;}&#34;
-                     dep-domain=&#34;public&#34;
+                     dep-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
+                     dep-domain=&#34;userclub&#34;
                      carpool-dataset=&#34;base-nationale-des-lieux-de-covoiturage-en-france&#34;
                      carpool-domain=&#34;userclub&#34;&gt;
     &lt;div class=&#34;row&#34;&gt;
@@ -2098,9 +2296,8 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;!-- &#34;dep&#34; context is the official geo-referential from Opendatasoft Data Network --&gt;
 &lt;ods-dataset-context context=&#34;dep,carpool&#34;
-                     dep-dataset=&#34;georef-france-departement&#34;
-                     dep-parameters=&#34;{&#39;q&#39;:&#39;dep_code &lt;= 95&#39;}&#34;
-                     dep-domain=&#34;public&#34;
+                     dep-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
+                     dep-domain=&#34;userclub&#34;
                      carpool-dataset=&#34;base-nationale-des-lieux-de-covoiturage-en-france&#34;
                      carpool-domain=&#34;userclub&#34;&gt;
     &lt;div class=&#34;row&#34;&gt;
@@ -2202,9 +2399,15 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
 
 
 
+    
+
+
 
 
     
+
+
+
 
 
 
@@ -2218,9 +2421,9 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
                name="data"
                value='{
                  "title": "New Pen!",
-                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
-                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003c!-- \&#34;dep\&#34; context is the official geo-referential from Opendatasoft Data Network --\u003e\n\u003cods-dataset-context context=\&#34;dep,carpool\&#34;\n                     dep-dataset=\&#34;georef-france-departement\&#34;\n                     dep-parameters=\&#34;{&#39;q&#39;:&#39;dep_code \u003c= 95&#39;}\&#34;\n                     dep-domain=\&#34;public\&#34;\n                     carpool-dataset=\&#34;base-nationale-des-lieux-de-covoiturage-en-france\&#34;\n                     carpool-domain=\&#34;userclub\&#34;\u003e\n    \u003cdiv class=\&#34;row\&#34;\u003e\n        \u003cdiv class=\&#34;col-sm-6\&#34;\u003e\n            \u003cdiv ods-color-gradient=\&#34;colorgradientleft\&#34;\n                 ods-color-gradient-context=\&#34;carpool\&#34;\n                 ods-color-gradient-x=\&#34;dep_code\&#34;\n                 ods-color-gradient-serie=\&#34;COUNT()\&#34;\u003e\n\n                \u003cdiv class=\&#34;map-container\&#34;\u003e\n                    \u003ch2\u003eNo class, linear scale\u003c/h2\u003e\n                    \u003cods-map\u003e\n                        \u003cods-map-layer context=\&#34;dep\&#34;\n                                       color-categories=\&#34;colorgradientleft[&#39;colors&#39;]\&#34;\n                                       color-by-field=\&#34;dep_code\&#34;\n                                       color-categories-other=\&#34;lightgrey\&#34;\n                                       display=\&#34;categories\&#34;\n                                       shape-opacity=\&#34;0.95\&#34;\n                                       title=\&#34;# of carpool parking\&#34;\u003e\n                        \u003c/ods-map-layer\u003e\n                    \u003c/ods-map\u003e\n\n                    \u003cods-legend title=\&#34;display=linear (default value)\&#34;\n                                color-gradient=\&#34;colorgradientleft\&#34;\n                                no-value-color=\&#34;lightgrey\&#34;\n                                decimal-precision=\&#34;0\&#34;\u003e\u003c/ods-legend\u003e\n                    \n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;col-sm-6\&#34;\u003e\n            \u003cdiv ods-color-gradient=\&#34;colorgradientright\&#34;\n                 ods-color-gradient-context=\&#34;carpool\&#34;\n                 ods-color-gradient-x=\&#34;dep_code\&#34;\n                 ods-color-gradient-serie=\&#34;COUNT()\&#34;\n                 ods-color-gradient-nb-classes=\&#34;3\&#34;\u003e\n\n                \u003cdiv class=\&#34;map-container\&#34;\u003e\n                    \u003ch2\u003e3 classes, linear scale\u003c/h2\u003e\n                    \u003cods-map\u003e\n                        \u003cods-map-layer context=\&#34;dep\&#34;\n                                       color-categories=\&#34;colorgradientright[&#39;colors&#39;]\&#34;\n                                       color-by-field=\&#34;dep_code\&#34;\n                                       color-categories-other=\&#34;lightgrey\&#34;\n                                       display=\&#34;categories\&#34;\n                                       shape-opacity=\&#34;0.95\&#34;\n                                       title=\&#34;# of carpool parking\&#34;\u003e\n                        \u003c/ods-map-layer\u003e\n                    \u003c/ods-map\u003e\n\n\n                    \u003cods-legend title=\&#34;display=steps\&#34;\n                                color-gradient=\&#34;colorgradientright\&#34;\n                                display=\&#34;steps\&#34;\n                                no-value-color=\&#34;lightgrey\&#34;\n                                decimal-precision=\&#34;0\&#34;\u003e\u003c/ods-legend\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003c!-- \&#34;dep\&#34; context is the official geo-referential from Opendatasoft Data Network --\u003e\n\u003cods-dataset-context context=\&#34;dep,carpool\&#34;\n                     dep-dataset=\&#34;departements-et-collectivites-doutre-mer-france\&#34;\n                     dep-domain=\&#34;userclub\&#34;\n                     carpool-dataset=\&#34;base-nationale-des-lieux-de-covoiturage-en-france\&#34;\n                     carpool-domain=\&#34;userclub\&#34;\u003e\n    \u003cdiv class=\&#34;row\&#34;\u003e\n        \u003cdiv class=\&#34;col-sm-6\&#34;\u003e\n            \u003cdiv ods-color-gradient=\&#34;colorgradientleft\&#34;\n                 ods-color-gradient-context=\&#34;carpool\&#34;\n                 ods-color-gradient-x=\&#34;dep_code\&#34;\n                 ods-color-gradient-serie=\&#34;COUNT()\&#34;\u003e\n\n                \u003cdiv class=\&#34;map-container\&#34;\u003e\n                    \u003ch2\u003eNo class, linear scale\u003c/h2\u003e\n                    \u003cods-map\u003e\n                        \u003cods-map-layer context=\&#34;dep\&#34;\n                                       color-categories=\&#34;colorgradientleft[&#39;colors&#39;]\&#34;\n                                       color-by-field=\&#34;dep_code\&#34;\n                                       color-categories-other=\&#34;lightgrey\&#34;\n                                       display=\&#34;categories\&#34;\n                                       shape-opacity=\&#34;0.95\&#34;\n                                       title=\&#34;# of carpool parking\&#34;\u003e\n                        \u003c/ods-map-layer\u003e\n                    \u003c/ods-map\u003e\n\n                    \u003cods-legend title=\&#34;display=linear (default value)\&#34;\n                                color-gradient=\&#34;colorgradientleft\&#34;\n                                no-value-color=\&#34;lightgrey\&#34;\n                                decimal-precision=\&#34;0\&#34;\u003e\u003c/ods-legend\u003e\n                    \n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;col-sm-6\&#34;\u003e\n            \u003cdiv ods-color-gradient=\&#34;colorgradientright\&#34;\n                 ods-color-gradient-context=\&#34;carpool\&#34;\n                 ods-color-gradient-x=\&#34;dep_code\&#34;\n                 ods-color-gradient-serie=\&#34;COUNT()\&#34;\n                 ods-color-gradient-nb-classes=\&#34;3\&#34;\u003e\n\n                \u003cdiv class=\&#34;map-container\&#34;\u003e\n                    \u003ch2\u003e3 classes, linear scale\u003c/h2\u003e\n                    \u003cods-map\u003e\n                        \u003cods-map-layer context=\&#34;dep\&#34;\n                                       color-categories=\&#34;colorgradientright[&#39;colors&#39;]\&#34;\n                                       color-by-field=\&#34;dep_code\&#34;\n                                       color-categories-other=\&#34;lightgrey\&#34;\n                                       display=\&#34;categories\&#34;\n                                       shape-opacity=\&#34;0.95\&#34;\n                                       title=\&#34;# of carpool parking\&#34;\u003e\n                        \u003c/ods-map-layer\u003e\n                    \u003c/ods-map\u003e\n\n\n                    \u003cods-legend title=\&#34;display=steps\&#34;\n                                color-gradient=\&#34;colorgradientright\&#34;\n                                display=\&#34;steps\&#34;\n                                no-value-color=\&#34;lightgrey\&#34;\n                                decimal-precision=\&#34;0\&#34;\u003e\u003c/ods-legend\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
                  "css": &#34;&#34;
                }'>
     </form>
@@ -2232,7 +2435,8 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
-                <head>&lt;link
+                <head>
+                    &lt;link
   rel=&#34;stylesheet&#34;
   href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
 /&gt;
@@ -2276,6 +2480,7 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
   const sourceMonitoringInterceptor = $q =&gt; {
     return {
       request: config =&gt; {
+        console.log(config.url);
         if (config.params)
           if (config.params.source) delete config.params.source;
 
@@ -2386,15 +2591,16 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
       $httpProvider.interceptors.push(sourceMonitoringInterceptor);
     });
 &lt;/script&gt;
-</head>
+
+                    
+                </head>
                 <base href='https://userclub.opendatasoft.com/'>
                 <body>
                 <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
 &lt;!-- &#34;dep&#34; context is the official geo-referential from Opendatasoft Data Network --&gt;
 &lt;ods-dataset-context context=&#34;dep,carpool&#34;
-                     dep-dataset=&#34;georef-france-departement&#34;
-                     dep-parameters=&#34;{&#39;q&#39;:&#39;dep_code &lt;= 95&#39;}&#34;
-                     dep-domain=&#34;public&#34;
+                     dep-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
+                     dep-domain=&#34;userclub&#34;
                      carpool-dataset=&#34;base-nationale-des-lieux-de-covoiturage-en-france&#34;
                      carpool-domain=&#34;userclub&#34;&gt;
     &lt;div class=&#34;row&#34;&gt;
@@ -2465,6 +2671,12 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
       </iframe>
       <div class="buttons has-addons">
           
+              <button id="tab-show-schema" aria-controls="panel-show-schema"
+                      class="show-schema button is-light"
+                      title="Show the data schema of the dataset used in this resource">
+                  <span>See fields in use</span>
+              </button>
+          
           <button id="tab-show-code" aria-controls="panel-show-code"
                   class="show-code button is-light">
             <span>Show code</span>
@@ -2484,6 +2696,57 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
           </button>
       </div>
     </div>
+    
+        <div id="panel-show-schema" aria-labelledby="tab-show-schema" aria-hidden
+             class="box-schema is-hidden">
+            <div class="content">
+                <p><strong>Fields in use in :</strong> <code>departements-et-collectivites-doutre-mer-france</code> <a href="https://userclub.opendatasoft.com/explore/dataset/departements-et-collectivites-doutre-mer-france/table/">(See it on userclub domain)</a></p>
+<table>
+<thead>
+<tr>
+<th>dep_code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>74</td>
+</tr>
+<tr>
+<td>01</td>
+</tr>
+<tr>
+<td>44</td>
+</tr>
+<tr>
+<td>46</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Fields in use in :</strong> <code>base-nationale-des-lieux-de-covoiturage-en-france</code> <a href="https://userclub.opendatasoft.com/explore/dataset/base-nationale-des-lieux-de-covoiturage-en-france/table/">(See it on userclub domain)</a></p>
+<table>
+<thead>
+<tr>
+<th>dep_code</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>74</td>
+</tr>
+<tr>
+<td>01</td>
+</tr>
+<tr>
+<td>44</td>
+</tr>
+<tr>
+<td>46</td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+        </div>
     
     <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
          class="box-code js-tabs is-hidden">
@@ -2531,9 +2794,8 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
                  id="code-ods-legend-display-mode-html-content"
                  data-clipboard="&lt;!-- &#34;dep&#34; context is the official geo-referential from Opendatasoft Data Network --&gt;
 &lt;ods-dataset-context context=&#34;dep,carpool&#34;
-                     dep-dataset=&#34;georef-france-departement&#34;
-                     dep-parameters=&#34;{&#39;q&#39;:&#39;dep_code &lt;= 95&#39;}&#34;
-                     dep-domain=&#34;public&#34;
+                     dep-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
+                     dep-domain=&#34;userclub&#34;
                      carpool-dataset=&#34;base-nationale-des-lieux-de-covoiturage-en-france&#34;
                      carpool-domain=&#34;userclub&#34;&gt;
     &lt;div class=&#34;row&#34;&gt;
@@ -2600,9 +2862,8 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;!-- &#34;dep&#34; context is the official geo-referential from Opendatasoft Data Network --&gt;
 &lt;ods-dataset-context context=&#34;dep,carpool&#34;
-                     dep-dataset=&#34;georef-france-departement&#34;
-                     dep-parameters=&#34;{&#39;q&#39;:&#39;dep_code &lt;= 95&#39;}&#34;
-                     dep-domain=&#34;public&#34;
+                     dep-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
+                     dep-domain=&#34;userclub&#34;
                      carpool-dataset=&#34;base-nationale-des-lieux-de-covoiturage-en-france&#34;
                      carpool-domain=&#34;userclub&#34;&gt;
     &lt;div class=&#34;row&#34;&gt;
@@ -2697,9 +2958,15 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
 
 
 
+    
+
+
 
 
     
+
+
+
 
 
 
@@ -2713,9 +2980,9 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
                name="data"
                value='{
                  "title": "New Pen!",
-                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
-                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003c!-- \&#34;dep\&#34; context is the official geo-referential from Opendatasoft Data Network --\u003e\n\u003cods-dataset-context context=\&#34;dep,carpool\&#34;\n                     dep-dataset=\&#34;georef-france-departement\&#34;\n                     dep-parameters=\&#34;{&#39;q&#39;:&#39;dep_code \u003c= 95&#39;}\&#34;\n                     dep-domain=\&#34;public\&#34;\n                     carpool-dataset=\&#34;base-nationale-des-lieux-de-covoiturage-en-france\&#34;\n                     carpool-domain=\&#34;userclub\&#34;\u003e\n\n    \u003cdiv ods-color-gradient=\&#34;colorgradient\&#34;\n         ods-color-gradient-context=\&#34;carpool\&#34;\n         ods-color-gradient-x=\&#34;dep_code\&#34;\n         ods-color-gradient-serie=\&#34;COUNT()\&#34;\n         ods-color-gradient-nb-classes=\&#34;5\&#34;\n         ods-color-gradient-pow-exponent=\&#34;0.3\&#34;\n         ods-color-gradient-high=\&#34;rgb(20, 33, 96)\&#34;\n         ods-color-gradient-low=\&#34;rgb(180, 197, 241)\&#34;\u003e\n\n        \u003ch2\u003eNb classes : 5, pow scale (exponent = 0.3)\u003c/h2\u003e\n\n        \u003c!-- map-container has a relative position, mandatory for absolute positioned legend --\u003e\n        \u003cdiv class=\&#34;map-container\&#34;\u003e\n            \u003cods-map\u003e\n                \u003cods-map-layer context=\&#34;dep\&#34;\n                               color-categories=\&#34;colorgradient[&#39;colors&#39;]\&#34;\n                               color-by-field=\&#34;dep_code\&#34;\n                               color-categories-other=\&#34;lightgrey\&#34;\n                               display=\&#34;categories\&#34;\n                               shape-opacity=\&#34;0.95\&#34;\n                               title=\&#34;# of carpool parking\&#34;\u003e\n                \u003c/ods-map-layer\u003e\n            \u003c/ods-map\u003e\n\n            \u003c!-- Absolute position, MUST be in the map-container --\u003e\n            \u003cods-legend class=\&#34;legend-horizontal-absolute-pos\&#34;\n                        title=\&#34;width:fit, horizontal, position:absolute\&#34;\n                        color-gradient=\&#34;colorgradient\&#34;\n                        display=\&#34;steps\&#34;\n                        no-value-color=\&#34;lightgrey\&#34;\n                        decimal-precision=\&#34;0\&#34;\u003e\u003c/ods-legend\u003e\n\n            \u003c!-- Absolute position, MUST be in the map-container --\u003e\n            \u003cods-legend class=\&#34;legend-default-absolute-pos\&#34;\n                        title=\&#34;width:fit, position:absolute\&#34;\n                        color-gradient=\&#34;colorgradient\&#34;\n                        display=\&#34;steps\&#34;\n                        no-value-color=\&#34;lightgrey\&#34;\n                        decimal-precision=\&#34;0\&#34;\u003e\u003c/ods-legend\u003e\n        \u003c/div\u003e\n\n        \u003c!-- Can be anywhere, no need to be inside the map-container --\u003e\n        \u003cods-legend class=\&#34;legend-horizontal\&#34;\n                    title=\&#34;width:100%, horizontal\&#34;\n                    color-gradient=\&#34;colorgradient\&#34;\n                    display=\&#34;steps\&#34;\n                    no-value-color=\&#34;lightgrey\&#34;\n                    decimal-precision=\&#34;0\&#34;\u003e\u003c/ods-legend\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003c!-- \&#34;dep\&#34; context is the official geo-referential from Opendatasoft Data Network --\u003e\n\u003cods-dataset-context context=\&#34;dep,carpool\&#34;\n                     dep-dataset=\&#34;departements-et-collectivites-doutre-mer-france\&#34;\n                     dep-domain=\&#34;userclub\&#34;\n                     carpool-dataset=\&#34;base-nationale-des-lieux-de-covoiturage-en-france\&#34;\n                     carpool-domain=\&#34;userclub\&#34;\u003e\n\n    \u003cdiv ods-color-gradient=\&#34;colorgradient\&#34;\n         ods-color-gradient-context=\&#34;carpool\&#34;\n         ods-color-gradient-x=\&#34;dep_code\&#34;\n         ods-color-gradient-serie=\&#34;COUNT()\&#34;\n         ods-color-gradient-nb-classes=\&#34;5\&#34;\n         ods-color-gradient-pow-exponent=\&#34;0.3\&#34;\n         ods-color-gradient-high=\&#34;rgb(20, 33, 96)\&#34;\n         ods-color-gradient-low=\&#34;rgb(180, 197, 241)\&#34;\u003e\n\n        \u003ch2\u003eNb classes : 5, pow scale (exponent = 0.3)\u003c/h2\u003e\n\n        \u003c!-- map-container has a relative position, mandatory for absolute positioned legend --\u003e\n        \u003cdiv class=\&#34;map-container\&#34;\u003e\n            \u003cods-map\u003e\n                \u003cods-map-layer context=\&#34;dep\&#34;\n                               color-categories=\&#34;colorgradient[&#39;colors&#39;]\&#34;\n                               color-by-field=\&#34;dep_code\&#34;\n                               color-categories-other=\&#34;lightgrey\&#34;\n                               display=\&#34;categories\&#34;\n                               shape-opacity=\&#34;0.95\&#34;\n                               title=\&#34;# of carpool parking\&#34;\u003e\n                \u003c/ods-map-layer\u003e\n            \u003c/ods-map\u003e\n\n            \u003c!-- Absolute position, MUST be in the map-container --\u003e\n            \u003cods-legend class=\&#34;legend-horizontal-absolute-pos\&#34;\n                        title=\&#34;width:fit, horizontal, position:absolute\&#34;\n                        color-gradient=\&#34;colorgradient\&#34;\n                        display=\&#34;steps\&#34;\n                        no-value-color=\&#34;lightgrey\&#34;\n                        decimal-precision=\&#34;0\&#34;\u003e\u003c/ods-legend\u003e\n\n            \u003c!-- Absolute position, MUST be in the map-container --\u003e\n            \u003cods-legend class=\&#34;legend-default-absolute-pos\&#34;\n                        title=\&#34;width:fit, position:absolute\&#34;\n                        color-gradient=\&#34;colorgradient\&#34;\n                        display=\&#34;steps\&#34;\n                        no-value-color=\&#34;lightgrey\&#34;\n                        decimal-precision=\&#34;0\&#34;\u003e\u003c/ods-legend\u003e\n        \u003c/div\u003e\n\n        \u003c!-- Can be anywhere, no need to be inside the map-container --\u003e\n        \u003cods-legend class=\&#34;legend-horizontal\&#34;\n                    title=\&#34;width:100%, horizontal\&#34;\n                    color-gradient=\&#34;colorgradient\&#34;\n                    display=\&#34;steps\&#34;\n                    no-value-color=\&#34;lightgrey\&#34;\n                    decimal-precision=\&#34;0\&#34;\u003e\u003c/ods-legend\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
                  "css": &#34;/* ODS LEGEND HORIZONTAL */\n.legend-horizontal {\n    width: 100%;\n    border: 1px solid #cbd2db;\n    border-radius: 6px;\n    margin: 13px 0;\n}\n\n.legend-horizontal ul.odswidget-legend__indexes.odswidget-legend__steps_style {\n    flex-direction: row;\n    justify-content: space-between;\n    flex-wrap: wrap;\n}\n\n.legend-horizontal .odswidget-legend__title {\n    text-align: center;\n}\n\n\n\n/* ODS LEGEND / ABSOLUTE POSITION */\n.map-container {\n    position: relative;\n}\n\n.legend-default-absolute-pos {\n    position: absolute;\n    top: 20px;\n    left: 57px;\n    background-color: rgba(255,255,255,0.9);\n}\n\n\n\n/* ODS LEGEND HORIZONTAL / ABSOLUTE POSITION */\n.map-container {\n    position: relative;\n}\n\n.legend-horizontal-absolute-pos {\n    position: absolute;\n    /* change bottom to top to set the position relative to the top of the map-container instead of the bottom */\n    bottom: 24px; /* value might change depending on the map size and specially if there is elements below the map, in the map-container */\n    right: 10px; /* pulled to the right, can be changed to left, to pull the other side */\n    background-color: rgba(255,255,255,0.9);\n    margin-left: 20px; /* for small devices, keep a margin on the left if pulled right */\n}\n\n.legend-horizontal-absolute-pos ul.odswidget-legend__indexes.odswidget-legend__steps_style {\n    flex-direction: row;\n    justify-content: space-between;\n    flex-wrap: wrap;\n}\n\n.legend-horizontal-absolute-pos .odswidget-legend__title {\n    text-align: center;\n}&#34;
                }'>
     </form>
@@ -2727,7 +2994,8 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
-                <head>&lt;link
+                <head>
+                    &lt;link
   rel=&#34;stylesheet&#34;
   href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
 /&gt;
@@ -2771,6 +3039,7 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
   const sourceMonitoringInterceptor = $q =&gt; {
     return {
       request: config =&gt; {
+        console.log(config.url);
         if (config.params)
           if (config.params.source) delete config.params.source;
 
@@ -2881,15 +3150,16 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
       $httpProvider.interceptors.push(sourceMonitoringInterceptor);
     });
 &lt;/script&gt;
-</head>
+
+                    
+                </head>
                 <base href='https://userclub.opendatasoft.com/'>
                 <body>
                 <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
 &lt;!-- &#34;dep&#34; context is the official geo-referential from Opendatasoft Data Network --&gt;
 &lt;ods-dataset-context context=&#34;dep,carpool&#34;
-                     dep-dataset=&#34;georef-france-departement&#34;
-                     dep-parameters=&#34;{&#39;q&#39;:&#39;dep_code &lt;= 95&#39;}&#34;
-                     dep-domain=&#34;public&#34;
+                     dep-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
+                     dep-domain=&#34;userclub&#34;
                      carpool-dataset=&#34;base-nationale-des-lieux-de-covoiturage-en-france&#34;
                      carpool-domain=&#34;userclub&#34;&gt;
 
@@ -3009,8 +3279,9 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
       <div class="buttons has-addons">
           
               <button id="tab-show-schema" aria-controls="panel-show-schema"
-                      class="show-schema button is-light" >
-                  <span>Show data schema</span>
+                      class="show-schema button is-light"
+                      title="Show the data schema of the dataset used in this resource">
+                  <span>See fields in use</span>
               </button>
           
           <button id="tab-show-code" aria-controls="panel-show-code"
@@ -3036,11 +3307,11 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
         <div id="panel-show-schema" aria-labelledby="tab-show-schema" aria-hidden
              class="box-schema is-hidden">
             <div class="content">
-                <p><strong>Fields in use in <code>georef-france-departement</code> <a href="https://public.opendatasoft.com/explore/dataset/georef-france-departement/table/">(See it on public domain)</a></strong></p>
+                <p><strong>Fields in use in <code>departements-et-collectivites-doutre-mer-france</code> <a href="https://userclub.opendatasoft.com/explore/dataset/departements-et-collectivites-doutre-mer-france/table/">(See it on userclub domain)</a></strong></p>
 <table>
 <thead>
 <tr>
-<th>dep_code (text)</th>
+<th>dep_code</th>
 <th>geo_shape (geo_shape)</th>
 </tr>
 </thead>
@@ -3067,7 +3338,7 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
 <table>
 <thead>
 <tr>
-<th>dep_code (text)</th>
+<th>dep_code</th>
 </tr>
 </thead>
 <tbody>
@@ -3142,9 +3413,8 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
                  id="code-ods-legend-css-tricks-html-content"
                  data-clipboard="&lt;!-- &#34;dep&#34; context is the official geo-referential from Opendatasoft Data Network --&gt;
 &lt;ods-dataset-context context=&#34;dep,carpool&#34;
-                     dep-dataset=&#34;georef-france-departement&#34;
-                     dep-parameters=&#34;{&#39;q&#39;:&#39;dep_code &lt;= 95&#39;}&#34;
-                     dep-domain=&#34;public&#34;
+                     dep-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
+                     dep-domain=&#34;userclub&#34;
                      carpool-dataset=&#34;base-nationale-des-lieux-de-covoiturage-en-france&#34;
                      carpool-domain=&#34;userclub&#34;&gt;
 
@@ -3203,9 +3473,8 @@ If not defined, colors will then NOT be grouped, and the corresponding legend wi
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;!-- &#34;dep&#34; context is the official geo-referential from Opendatasoft Data Network --&gt;
 &lt;ods-dataset-context context=&#34;dep,carpool&#34;
-                     dep-dataset=&#34;georef-france-departement&#34;
-                     dep-parameters=&#34;{&#39;q&#39;:&#39;dep_code &lt;= 95&#39;}&#34;
-                     dep-domain=&#34;public&#34;
+                     dep-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
+                     dep-domain=&#34;userclub&#34;
                      carpool-dataset=&#34;base-nationale-des-lieux-de-covoiturage-en-france&#34;
                      carpool-domain=&#34;userclub&#34;&gt;
 

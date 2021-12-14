@@ -4,7 +4,7 @@ Get it on your domain by replacing `{{domainid}}` by your domainid in the follow
 
 **Fields in use:** 
 
-| timestamp (datetime) | nhits (integer)|
+| timestamp (datetime) | nhits (numeric)|
 |---|---|
 |2021-10-01T04:00:00+02:00|582|
 |2021-10-30T06:00:00+02:00|24,389|

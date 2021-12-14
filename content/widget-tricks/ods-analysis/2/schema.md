@@ -2,7 +2,7 @@
 
 **Fields in use:** 
 
-| nom_officiel_commune_arrondissement_municipal (text) | population_totale (integer)|
+| nom_officiel_commune_arrondissement_municipal | population_totale (numeric)|
 |---|---|
 |Toulouse|491.942|
 |Nice|343.889|

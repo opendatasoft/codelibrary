@@ -2,7 +2,7 @@
 
 **Fields in use:** 
 
-| age (text) | sex (text) | value (integer) |
+| age | sex | value (numeric) |
 |---|---|---|
 |18-24|Male|22 929|
 |25-44|Female|12 000|

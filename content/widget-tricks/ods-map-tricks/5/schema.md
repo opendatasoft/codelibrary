@@ -2,7 +2,7 @@
 
 **Fields in use:** 
 
-| geo_point (geo_point_2d)| id (text) | name (text) | type (text) | address (text) | city (text) | population (integer)| source (text) |
+| geo_point (geo_point_2d)| id | name | type | address | city | population (numeric)| source |
 |---|---|---|---|---|---|---|---|
 |[34.69553069,-82.98721979]|0002129672|GUNDERSEN LUTH MED CTR|General Acute Care Hospital|1910 SOUTH AVE|La Crosse|325| https://www.dhs.wisconsin.gov/bqaconsumer/healthcare/HospitalCty.pdf|
 |[40.673121466,-75.365457125]|0002122345|Florida Hospital Wauchula|General Acute Care Hospital|533 W Carlton St|Wauchula|25|http://www.fgdl.org/metadataexplorer/explorer.jsp|
