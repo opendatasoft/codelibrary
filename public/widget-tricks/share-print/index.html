@@ -259,10 +259,15 @@
       
       
       
+      
+      
+      
       <li>
         <a href="/custom-views/"
         class="sidebar-subtitle">
         Custom views
+        
+        <span class="tag pill is-size-7 is-rounded is-info">1</span>
         
       </a>
     </li>
@@ -742,9 +747,15 @@
 
 
 
+    
+
+
 
 
     
+
+
+
 
 
 
@@ -758,7 +769,7 @@
                name="data"
                value='{
                  "title": "New Pen!",
-                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
                  "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;container\&#34;\u003e\n    \u003cods-dataset-context context=\&#34;ctx\&#34;\n                         ctx-dataset=\&#34;record-stores\&#34;\n                         ctx-domain=\&#34;userclub\&#34;\n                         ctx-urlsync=\&#34;true\&#34;\u003e\n        \u003cdiv class=\&#34;row ods-box\&#34;\u003e\n            \u003ch3\u003e\n                Share by copying this link :\n            \u003c/h3\u003e\n            \u003ch3 class=\&#34;red-box\&#34;\u003e\n                Filter and have a look to your browser URL ! It&#39;s synced !\n            \u003c/h3\u003e\n            \u003ch4\u003e\n                \u003ca href=\&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}\&#34;\n                   target=\&#34;_blank\&#34;\u003ehttps://userclub.opendatasoft.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}\u003c/a\u003e\n            \u003c/h4\u003e\n            \u003ch3\u003e\n                Share through social network or by email:\n            \u003c/h3\u003e\n            \u003cdiv class=\&#34;boutons\&#34; style=\&#34;font-size: 1.6rem;\&#34;\u003e\n                \u003ca href=\&#34;https://twitter.com/intent/tweet?text=Opendatasoft Page Test;url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--twitter\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-twitter ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--facebook\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-facebook ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;https://plus.google.com/share?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--google-plus\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-google-plus ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\u0026amp;mini=true\u0026amp;title=Opendatasoft Page Test;source=Opendatasoft\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--linkedin\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-linkedin ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;mailto:?subject=Opendatasoft Page Test\u0026amp;body=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--mail\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-envelope ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;row ods-box\&#34;\u003e\n            \u003ch3\u003e\n                A dashboard : Music record store in the world\n            \u003c/h3\u003e\n            \u003cdiv class=\&#34;col-md-3 ods-box\&#34;\u003e\n                \u003cods-text-search context=\&#34;ctx\&#34; placeholder=\&#34;disc, records, music...\&#34;\u003e\u003c/ods-text-search\u003e\n                \u003cods-filter-summary context=\&#34;ctx\&#34;\u003e\u003c/ods-filter-summary\u003e\n                \u003cods-facets context=\&#34;ctx\&#34;\u003e\u003c/ods-facets\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;col-md-9 ods-box\&#34;\u003e\n                \u003cods-map\u003e\n                    \u003cods-map-layer context=\&#34;ctx\&#34;\u003e\n                        \u003cdiv\u003e\n                            \u003ch3\u003e\n                                {{ record.fields.name }}\n                            \u003c/h3\u003e\n                            \u003cp style=\&#34;font-style:italic; color:grey; font-weight:300\&#34;\u003e\n                                {{ record.fields.address }}\n                            \u003c/p\u003e\n                            \u003cdiv style=\&#34;line-height: 0px;\&#34;\u003e\n                                \u003cp\u003e\n                                    \u003cspan style=\&#34;font-style:italic;\&#34;\u003eHas closed \u003c/span\u003e\u003cb style=\&#34;font-size:1.2em\&#34;\u003e{{ record.fields.hasclosed }}\u003c/b\u003e\n                                \u003c/p\u003e\n                            \u003c/div\u003e\n                            \u003ca style=\&#34;color: #1e0c33; font-weight: 600; font-size: 1.1em;\&#34;\n                               href=\&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint-card?q=city:%22{{ record.fields.city }}%22 AND name:%22{{ record.fields.name }}%22\&#34;\n                               target=\&#34;_blank\&#34;\u003eGo to the store card\u003c/a\u003e\n                        \u003c/div\u003e\n                    \u003c/ods-map-layer\u003e\n                \u003c/ods-map\u003e\n                \u003cdiv class=\&#34;ods-box\&#34;\u003e\n                    \u003cods-table context=\&#34;ctx\&#34;\u003e\u003c/ods-table\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\n\u003c/div\u003e&#34;,
                  "css": &#34;.boutons {\n    margin-left: 30px;\n}\n.red-box {\n    float: right;\n    border: 2px solid darkred;\n    color: darkred;\n    padding: 20px;\n    background-color: #ffe8e8;\n}\n&#34;
@@ -772,7 +783,8 @@
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
-                <head>&lt;link
+                <head>
+                    &lt;link
   rel=&#34;stylesheet&#34;
   href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
 /&gt;
@@ -816,6 +828,7 @@
   const sourceMonitoringInterceptor = $q =&gt; {
     return {
       request: config =&gt; {
+        console.log(config.url);
         if (config.params)
           if (config.params.source) delete config.params.source;
 
@@ -926,7 +939,9 @@
       $httpProvider.interceptors.push(sourceMonitoringInterceptor);
     });
 &lt;/script&gt;
-</head>
+
+                    
+                </head>
                 <base href='https://userclub.opendatasoft.com/'>
                 <body>
                 <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
@@ -1033,6 +1048,12 @@
       </iframe>
       <div class="buttons has-addons">
           
+              <button id="tab-show-schema" aria-controls="panel-show-schema"
+                      class="show-schema button is-light"
+                      title="Show the data schema of the dataset used in this resource">
+                  <span>See fields in use</span>
+              </button>
+          
           <button id="tab-show-code" aria-controls="panel-show-code"
                   class="show-code button is-light">
             <span>Show code</span>
@@ -1052,6 +1073,51 @@
           </button>
       </div>
     </div>
+    
+        <div id="panel-show-schema" aria-labelledby="tab-show-schema" aria-hidden
+             class="box-schema is-hidden">
+            <div class="content">
+                <p><strong>Dataset in use:</strong> <code>record-stores</code> <a href="https://userclub.opendatasoft.com/explore/dataset/record-stores/table/">(See it on userclub domain)</a></p>
+<p><strong>Fields in use:</strong></p>
+<table>
+<thead>
+<tr>
+<th>coordonnees_geo (geo_point)</th>
+<th>name</th>
+<th>hasclosed</th>
+<th>city</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>34.67429180,135.50417380</td>
+<td>Naminohana Records</td>
+<td>no</td>
+<td>Osaka</td>
+</tr>
+<tr>
+<td>-12.05070340,-77.03952410</td>
+<td>Disqueria</td>
+<td>no</td>
+<td>Lima</td>
+</tr>
+<tr>
+<td>50.06394440,19.93641400</td>
+<td>Music Corner Sp. o.o.</td>
+<td>no</td>
+<td>Kraków</td>
+</tr>
+<tr>
+<td>-25.77143478,28.23460960</td>
+<td>Musica</td>
+<td>no</td>
+<td>Pretoria</td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+        </div>
     
     <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
          class="box-code js-tabs is-hidden">
@@ -1336,9 +1402,15 @@
 
 
 
+    
+
+
 
 
     
+
+
+
 
 
 
@@ -1352,7 +1424,7 @@
                name="data"
                value='{
                  "title": "New Pen!",
-                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
                  "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;ods-box card\&#34;\u003e\n    \u003ch2\u003e\n        Record store card \u003cspan style=\&#34;font-size:0.7em; color:darkred; margin-left:40px\&#34;\u003ePrint it (Ctrl/Cmd&#43;P) or just share the link !\u003c/span\u003e\n    \u003c/h2\u003e\n    \u003cods-dataset-context context=\&#34;ctx\&#34;\n                         ctx-dataset=\&#34;record-stores\&#34;\n                         ctx-urlsync=\&#34;true\&#34;\u003e\n        \u003cdiv ng-repeat=\&#34;item in items\&#34; ods-results=\&#34;items\&#34; ods-results-context=\&#34;ctx\&#34; ods-results-max=\&#34;1\&#34;\u003e\n            \u003cul class=\&#34;field-list\&#34;\u003e\n                \u003cli class=\&#34;field\&#34; ng-repeat=\&#34;field in ctx.dataset.fields\&#34;\u003e\n                    \u003cp class=\&#34;label\&#34;\u003e\n                        {{ field.label }}\n                    \u003c/p\u003e\n                    \u003cp class=\&#34;value\&#34;\u003e\n                        {{ item.fields[field.name] }}\n                    \u003c/p\u003e\n                \u003c/li\u003e\n            \u003c/ul\u003e\n        \u003c/div\u003e\n        \u003cods-map context=\&#34;ctx\&#34;\u003e\u003c/ods-map\u003e\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\n\u003c/div\u003e&#34;,
                  "css": &#34;.card {\n    width: 700px;\n    margin-left: auto;\n    margin-right: auto;\n}\n.field-list {\n    list-style-type: none;\n    display: grid;\n}\n.field {\n    display: inline-flex;\n    line-height: 18px;\n    margin-bottom: 4px;\n}\n.label {\n    width: 175px;\n    color: black;\n    font-weight: 500;\n}\n.value {\n    width: 400px;\n    border: 1px solid black;\n    border-radius: 5px;\n    padding: 2px 0px 0px 5px;\n    line-height: 25px;\n    background-color: #f0f0f0;\n}\n@media print {\n    header, footer {\n        display: none;\n    }\n}\n      &#34;
@@ -1366,7 +1438,8 @@
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
-                <head>&lt;link
+                <head>
+                    &lt;link
   rel=&#34;stylesheet&#34;
   href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
 /&gt;
@@ -1410,6 +1483,7 @@
   const sourceMonitoringInterceptor = $q =&gt; {
     return {
       request: config =&gt; {
+        console.log(config.url);
         if (config.params)
           if (config.params.source) delete config.params.source;
 
@@ -1520,7 +1594,9 @@
       $httpProvider.interceptors.push(sourceMonitoringInterceptor);
     });
 &lt;/script&gt;
-</head>
+
+                    
+                </head>
                 <base href='https://userclub.opendatasoft.com/'>
                 <body>
                 <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
@@ -1587,6 +1663,12 @@
       </iframe>
       <div class="buttons has-addons">
           
+              <button id="tab-show-schema" aria-controls="panel-show-schema"
+                      class="show-schema button is-light"
+                      title="Show the data schema of the dataset used in this resource">
+                  <span>See fields in use</span>
+              </button>
+          
           <button id="tab-show-code" aria-controls="panel-show-code"
                   class="show-code button is-light">
             <span>Show code</span>
@@ -1606,6 +1688,86 @@
           </button>
       </div>
     </div>
+    
+        <div id="panel-show-schema" aria-labelledby="tab-show-schema" aria-hidden
+             class="box-schema is-hidden">
+            <div class="content">
+                <p><strong>Dataset in use:</strong> <code>record-stores</code> <a href="https://userclub.opendatasoft.com/explore/dataset/record-stores/table/">(See it on userclub domain)</a></p>
+<p><strong>Fields in use:</strong></p>
+<table>
+<thead>
+<tr>
+<th>coordonnees_geo (geo_point)</th>
+<th>name</th>
+<th>hasclosed</th>
+<th>city</th>
+<th>countrycode</th>
+<th>state</th>
+<th>latitude</th>
+<th>longitude</th>
+<th>supporter</th>
+<th>placeidh</th>
+<th>rate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>34.67429180,135.50417380</td>
+<td>Naminohana Records</td>
+<td>no</td>
+<td>Osaka</td>
+<td>JP</td>
+<td></td>
+<td>34.67429180</td>
+<td>135.50417380</td>
+<td>0</td>
+<td>f63363a2c9f10f3ac7adcfb31f6db486</td>
+<td></td>
+</tr>
+<tr>
+<td>-12.05070340,-77.03952410</td>
+<td>Disqueria</td>
+<td>no</td>
+<td>Lima</td>
+<td>PE</td>
+<td></td>
+<td>-12.05070340</td>
+<td>-12.05070340</td>
+<td>0</td>
+<td>06157739f6792af80068e9913152590a</td>
+<td></td>
+</tr>
+<tr>
+<td>50.06394440,19.93641400</td>
+<td>Music Corner Sp. o.o.</td>
+<td>no</td>
+<td>Kraków</td>
+<td>PL</td>
+<td></td>
+<td>50.06394440</td>
+<td>19.93641400</td>
+<td>0</td>
+<td>c43ef6c5b6a3dcc6368aec9e41e0625f</td>
+<td></td>
+</tr>
+<tr>
+<td>-25.77143478,28.23460960</td>
+<td>Musica</td>
+<td>no</td>
+<td>Pretoria</td>
+<td>ZA</td>
+<td></td>
+<td>-25.77143478</td>
+<td>28.23460960</td>
+<td>0</td>
+<td>26b2ce9808bcf3b531996fdd2914bd40</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+        </div>
     
     <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
          class="box-code js-tabs is-hidden">

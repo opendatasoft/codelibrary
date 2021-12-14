@@ -1019,5 +1019,70 @@ It&amp;rsquo;s usefull but can quickly overload the chart and displaying only a 
         </item>
       
     
+      
+      
+        <item>
+          <title>Eco-Counter / Eco-Compteur data custom view</title>
+          <link>https://codelibrary.opendatasoft.com/custom-views/eco-compteur/#eco-counter--eco-compteur-data-custom-view</link>
+          
+            <pubDate>Thu, 09 Dec 2021 00:00:00 +0000</pubDate>
+          
+          
+          <guid>https://codelibrary.opendatasoft.com/custom-views/eco-compteur/#eco-counter--eco-compteur-data-custom-view</guid>
+          <description>&lt;p&gt;Eco-Counter custom view for Opendatasoft integration: an overall view of your territory through Eco-Counter stations data.&lt;/p&gt;
+&lt;h3 class=&#34;title&#34; id=&#34;install-procedure&#34;&gt;
+  Install procedure
+  
+&lt;/h3&gt;
+&lt;p&gt;Two datasets are required :&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;eco-counter-data&lt;/strong&gt; : from &lt;code&gt;Eco Counter Data&lt;/code&gt; connector&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;eco-counter-sites&lt;/strong&gt; : from &lt;code&gt;Eco Counter Sites&lt;/code&gt; connector&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 class=&#34;title&#34; id=&#34;eco-counter-sites-processing-&#34;&gt;
+  eco-counter-sites processing :
+  
+&lt;/h5&gt;
+&lt;p&gt;Get the first photo URL, copy the field, get the photo from the URL&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Split text:
+&lt;ul&gt;
+&lt;li&gt;field: &lt;code&gt;photos&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;separator: &lt;code&gt;/https://&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;index: &lt;code&gt;1&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;output: &lt;code&gt;photourl&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;Copy a field:
+&lt;ul&gt;
+&lt;li&gt;field: &lt;code&gt;photourl&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;new field: &lt;code&gt;photo&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;File:
+&lt;ul&gt;
+&lt;li&gt;field: &lt;code&gt;photo&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h5 class=&#34;title&#34; id=&#34;eco-counter-data-processing-&#34;&gt;
+  eco-counter-data processing :
+  
+&lt;/h5&gt;
+&lt;p&gt;Get additional metadata from counters&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Join datasets:
+&lt;ul&gt;
+&lt;li&gt;dataset: &lt;code&gt;eco-counter-sites&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;local key: &lt;code&gt;id&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;remote key: &lt;code&gt;id&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;output fields: &lt;code&gt;name, coordinates, user_type, sens, interval&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        </item>
+      
+    
   </channel>
 </rss>

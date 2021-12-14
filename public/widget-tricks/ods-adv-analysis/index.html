@@ -259,10 +259,15 @@
       
       
       
+      
+      
+      
       <li>
         <a href="/custom-views/"
         class="sidebar-subtitle">
         Custom views
+        
+        <span class="tag pill is-size-7 is-rounded is-info">1</span>
         
       </a>
     </li>
@@ -718,7 +723,7 @@
     <h1 class="title is-1">Widget Tricks - ods-adv-analysis</h1>
     <div class="content">
       <p>The <code>ods-adv-analysis</code> widget exposes the results of an aggregation function over a context.
-It uses the <a href="https://help.opendatasoft.com/apis/ods-search-v2/#search-api-v2">ODS Search API v2</a> and its <a href="https://help.opendatasoft.com/apis/ods-search-v2/#odsql">ODSQL language</a>.</p>
+It uses the <a href="https://help.opendatasoft.com/apis/ods-explore-v2/">ODS Explore API V2</a> and its <a href="https://help.opendatasoft.com/apis/ods-explore-v2/#section/Opendatasoft-Query-Language-(ODSQL)">ODSQL language</a>.</p>
 <p><a href="https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsAdvAnalysis">ods-adv-analysis documentation</a></p>
 
     </div>
@@ -726,8 +731,6 @@ It uses the <a href="https://help.opendatasoft.com/apis/ods-search-v2/#search-ap
     <article class="block">
       <h2 class="title is-2" id="get-the-oldest-min-and-newest-max-date-in-a-field">
         Get the oldest (min) and newest (max) date in a field 
-        <span class="tag is-rounded is-info">New</span>
-        
         <a class="is-link anchor" href="#get-the-oldest-min-and-newest-max-date-in-a-field">
           <span class="icon">
             <img src="/img/fas-link.svg" />
@@ -749,9 +752,15 @@ It uses the <a href="https://help.opendatasoft.com/apis/ods-search-v2/#search-ap
 
 
 
+    
+
+
 
 
     
+
+
+
 
 
 
@@ -765,7 +774,7 @@ It uses the <a href="https://help.opendatasoft.com/apis/ods-search-v2/#search-ap
                name="data"
                value='{
                  "title": "New Pen!",
-                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
                  "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;container\&#34;\u003e\n    \u003ch2\u003eSimple example to get and display the min and max of a date\u003c/h2\u003e\n    \u003cods-dataset-context context=\&#34;stats\&#34;\n                 stats-dataset=\&#34;ods-api-monitoring\&#34;\n                 stats-source=\&#34;monitoring\&#34;\u003e\n        \u003cdiv ods-adv-analysis=\&#34;dateanalysis\&#34;\n             ods-adv-analysis-context=\&#34;stats\&#34;\n             ods-adv-analysis-select=\&#34;min(timestamp) as mindate, max(timestamp) as maxdate\&#34;\u003e\n            \u003ch3\u003eods-adv-analysis result:\u003c/h3\u003e\n            \u003cdiv class=\&#34;row\&#34;\u003e\n                \u003cdiv class=\&#34;col-sm-4\&#34;\u003e\n                    \u003cp\u003eMin timestamp: {{ dateanalysis[0].mindate | date : &#39;medium&#39; }}\u003c/p\u003e\n                    \u003cp\u003eMax timestamp: {{ dateanalysis[0].maxdate | date : &#39;medium&#39; }}\u003c/p\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;col-sm-8\&#34;\u003e\n                    \u003cpre style=\&#34;margin:0\&#34;\u003e\u003ccode\u003e{{ dateanalysis }}\u003c/code\u003e\u003c/pre\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/ods-dataset-context\u003e\n\n    \u003cbr/\u003e\n\n    \u003ch2\u003eUseful example with an ods-date-range-slider\u003c/h2\u003e\n    \u003cods-dataset-context context=\&#34;stats,getdate\&#34;\n                         stats-dataset=\&#34;ods-api-monitoring\&#34;\n                         stats-source=\&#34;monitoring\&#34;\n                         getdate-dataset=\&#34;ods-api-monitoring\&#34;\n                         getdate-source=\&#34;monitoring\&#34;\u003e\n\n        \u003cdiv class=\&#34;range-slider-ctn\&#34;\n             ng-init=\&#34;bounds = {&#39;min&#39;:undefined, &#39;max&#39;:undefined, &#39;minselection&#39;:undefined, &#39;maxselection&#39;:undefined}\&#34;\u003e\n\n            \u003c!--\n                Get the date range\n            --\u003e\n            \u003cdiv ods-adv-analysis=\&#34;dateanalysis\&#34;\n                 ods-adv-analysis-context=\&#34;getdate\&#34;\n                 ods-adv-analysis-select=\&#34;min(timestamp) as mindate, max(timestamp) as maxdate\&#34;\u003e\n                \u003c!-- Process the min and max to get the correct format --\u003e\n                {{ bounds.min = (dateanalysis[0].mindate | moment : &#39;YYYY-MM-DD&#39;) ; &#39;&#39; }}\n                {{ bounds.max = (dateanalysis[0].maxdate | moment : &#39;YYYY-MM-DD&#39;) ; &#39;&#39; }}\n            \u003c/div\u003e\n\n            \u003c!-- Init the date slider when min and max are ready --\u003e\n            \u003cods-date-range-slider ng-if=\&#34;bounds.min \u0026\u0026 bounds.max\&#34;\n                                   context=\&#34;stats\&#34;\n                                   initial-from=\&#34;{{ bounds.min }}\&#34;\n                                   initial-to=\&#34;{{ bounds.max }}\&#34;\n                                   start-bound=\&#34;bounds.min\&#34;\n                                   end-bound=\&#34;bounds.max\&#34;\n                                   date-field=\&#34;timestamp\&#34;\n                                   precision=\&#34;day\&#34;\n                                   from=\&#34;bounds.minselection\&#34;\n                                   to=\&#34;bounds.maxselection\&#34;\u003e\n            \u003c/ods-date-range-slider\u003e\n\n            \u003c!-- Resetting the range by setting widget \&#34;from\&#34; and \&#34;to\&#34; to the min/max bounds computed with ods-adv-analysis --\u003e\n            \u003cdiv ng-if=\&#34;bounds.min \u0026\u0026 bounds.max\&#34;\n                 class=\&#34;range-slider-reset-button\&#34;\n                 ng-class=\&#34;{&#39;range-slider-reset-button-disabled&#39;:\n                             bounds.minselection == bounds.min \u0026\u0026 bounds.maxselection == bounds.max}\&#34;\n                 ng-click=\&#34;bounds.minselection = bounds.min;\n                           bounds.maxselection = bounds.max\&#34;\u003e\n                The entire period \u003ci class=\&#34;fa fa-arrows-h\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n\n        \u003cods-table context=\&#34;stats\&#34;\u003e\u003c/ods-table\u003e\n\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
                  "css": &#34;.range-slider-ctn {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    margin: 13px 26px 32px 26px;\n}\n\n.odswidget-date-range-slider {\n    width: 100%;\n}\n\n.range-slider-reset-button {\n    margin-left: 0;\n    margin-top: 13px;\n    white-space: nowrap;\n    font-size: 12px;\n    padding: 3px 6px;\n    line-height: 0;\n    background-color: #e1e4e9;\n    border-radius: 4px;\n}\n\n.range-slider-reset-button:not(.range-slider-reset-button-disabled):hover {\n    opacity: 0.65;\n}\n\n.range-slider-reset-button-disabled {\n    opacity: 0.5;\n    pointer-event: none;\n    text-decoration: none;\n}\n\n@media screen and (min-width: 500px) {\n    .range-slider-ctn {\n        flex-direction: row;\n    }\n\n    .range-slider-reset-button {\n        margin-left: 50px;\n        margin-top: 0;\n    }\n}&#34;
@@ -779,7 +788,8 @@ It uses the <a href="https://help.opendatasoft.com/apis/ods-search-v2/#search-ap
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
-                <head>&lt;link
+                <head>
+                    &lt;link
   rel=&#34;stylesheet&#34;
   href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
 /&gt;
@@ -823,6 +833,7 @@ It uses the <a href="https://help.opendatasoft.com/apis/ods-search-v2/#search-ap
   const sourceMonitoringInterceptor = $q =&gt; {
     return {
       request: config =&gt; {
+        console.log(config.url);
         if (config.params)
           if (config.params.source) delete config.params.source;
 
@@ -933,7 +944,9 @@ It uses the <a href="https://help.opendatasoft.com/apis/ods-search-v2/#search-ap
       $httpProvider.interceptors.push(sourceMonitoringInterceptor);
     });
 &lt;/script&gt;
-</head>
+
+                    
+                </head>
                 <base href='https://userclub.opendatasoft.com/'>
                 <body>
                 <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
@@ -1058,6 +1071,12 @@ It uses the <a href="https://help.opendatasoft.com/apis/ods-search-v2/#search-ap
       </iframe>
       <div class="buttons has-addons">
           
+              <button id="tab-show-schema" aria-controls="panel-show-schema"
+                      class="show-schema button is-light"
+                      title="Show the data schema of the dataset used in this resource">
+                  <span>See fields in use</span>
+              </button>
+          
           <button id="tab-show-code" aria-controls="panel-show-code"
                   class="show-code button is-light">
             <span>Show code</span>
@@ -1077,6 +1096,37 @@ It uses the <a href="https://help.opendatasoft.com/apis/ods-search-v2/#search-ap
           </button>
       </div>
     </div>
+    
+        <div id="panel-show-schema" aria-labelledby="tab-show-schema" aria-hidden
+             class="box-schema is-hidden">
+            <div class="content">
+                <p><strong>Dataset in use:</strong> <code>ods-api-monitoring</code>.</p>
+<p>Get it on your domain by replacing <code>{{domainid}}</code> by your domainid in the following url: <code>https://{{domainid}}.opendatasoft.com/explore/dataset/ods-api-monitoring/table/?source=monitoring&amp;refine.domain_id={{domainid}}</code></p>
+<p><strong>Fields in use:</strong></p>
+<table>
+<thead>
+<tr>
+<th>timestamp (datetime)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2021-10-01T04:00:00+02:00</td>
+</tr>
+<tr>
+<td>2021-10-30T06:00:00+02:00</td>
+</tr>
+<tr>
+<td>2021-10-01T13:00:00+02:00</td>
+</tr>
+<tr>
+<td>2021-10-22T22:00:00+02:00</td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+        </div>
     
     <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
          class="box-code js-tabs is-hidden">
@@ -1404,9 +1454,15 @@ It uses the <a href="https://help.opendatasoft.com/apis/ods-search-v2/#search-ap
 
 
 
+    
+
+
 
 
     
+
+
+
 
 
 
@@ -1420,7 +1476,7 @@ It uses the <a href="https://help.opendatasoft.com/apis/ods-search-v2/#search-ap
                name="data"
                value='{
                  "title": "New Pen!",
-                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
                  "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;ctx\&#34;\n                     ctx-dataset=\&#34;ods-api-monitoring\&#34;\n                     ctx-source=\&#34;monitoring\&#34;\u003e\n    \u003cdiv ods-adv-analysis=\&#34;analysis\&#34;\n         ods-adv-analysis-context=\&#34;ctx\&#34;\n         ods-adv-analysis-select=\&#34;sum(nhits) as total\&#34;\n         ods-adv-analysis-where=\&#34;timestamp \u003e now(days=-7)\&#34;\n         ods-adv-analysis-group-by=\&#34;date_format(timestamp, &#39;YYYY-MM-dd&#39;) as date\&#34;\u003e\n\n        \u003ch3\u003eHow many hits per day on Userclub domain, this past week ?\u003c/h3\u003e\n        \u003cul\u003e\n            \u003cli ng-repeat=\&#34;item in analysis\&#34;\u003e\n                \u003cstrong\u003e{{ item.total | number }} hits\u003c/strong\u003e on {{ item.date | date }}\n            \u003c/li\u003e\n        \u003c/ul\u003e\n\n        \u003ch3\u003eAverage number of hits on Userclub domain, this past week\u003c/h3\u003e\n        \u003cdiv ods-subaggregation=\&#34;analysis\&#34;\n             ods-subaggregation-serie-dayavg=\&#34;MEAN(total)\&#34;\u003e\n            An average of \u003cstrong\u003e{{ results[0].dayavg | number:0 }} hits\u003c/strong\u003e per day\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
                  "css": &#34;&#34;
@@ -1434,7 +1490,8 @@ It uses the <a href="https://help.opendatasoft.com/apis/ods-search-v2/#search-ap
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
-                <head>&lt;link
+                <head>
+                    &lt;link
   rel=&#34;stylesheet&#34;
   href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
 /&gt;
@@ -1478,6 +1535,7 @@ It uses the <a href="https://help.opendatasoft.com/apis/ods-search-v2/#search-ap
   const sourceMonitoringInterceptor = $q =&gt; {
     return {
       request: config =&gt; {
+        console.log(config.url);
         if (config.params)
           if (config.params.source) delete config.params.source;
 
@@ -1588,7 +1646,9 @@ It uses the <a href="https://help.opendatasoft.com/apis/ods-search-v2/#search-ap
       $httpProvider.interceptors.push(sourceMonitoringInterceptor);
     });
 &lt;/script&gt;
-</head>
+
+                    
+                </head>
                 <base href='https://userclub.opendatasoft.com/'>
                 <body>
                 <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
@@ -1624,6 +1684,12 @@ It uses the <a href="https://help.opendatasoft.com/apis/ods-search-v2/#search-ap
       </iframe>
       <div class="buttons has-addons">
           
+              <button id="tab-show-schema" aria-controls="panel-show-schema"
+                      class="show-schema button is-light"
+                      title="Show the data schema of the dataset used in this resource">
+                  <span>See fields in use</span>
+              </button>
+          
           <button id="tab-show-code" aria-controls="panel-show-code"
                   class="show-code button is-light">
             <span>Show code</span>
@@ -1643,6 +1709,42 @@ It uses the <a href="https://help.opendatasoft.com/apis/ods-search-v2/#search-ap
           </button>
       </div>
     </div>
+    
+        <div id="panel-show-schema" aria-labelledby="tab-show-schema" aria-hidden
+             class="box-schema is-hidden">
+            <div class="content">
+                <p><strong>Dataset in use:</strong> <code>ods-api-monitoring</code>.</p>
+<p>Get it on your domain by replacing <code>{{domainid}}</code> by your domainid in the following url: <code>https://{{domainid}}.opendatasoft.com/explore/dataset/ods-api-monitoring/table/?source=monitoring&amp;refine.domain_id={{domainid}}</code></p>
+<p><strong>Fields in use:</strong></p>
+<table>
+<thead>
+<tr>
+<th>timestamp (datetime)</th>
+<th>nhits (numeric)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2021-10-01T04:00:00+02:00</td>
+<td>582</td>
+</tr>
+<tr>
+<td>2021-10-30T06:00:00+02:00</td>
+<td>24,389</td>
+</tr>
+<tr>
+<td>2021-10-01T13:00:00+02:00</td>
+<td>1,233</td>
+</tr>
+<tr>
+<td>2021-10-22T22:00:00+02:00</td>
+<td>734</td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+        </div>
     
     <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
          class="box-code js-tabs is-hidden">

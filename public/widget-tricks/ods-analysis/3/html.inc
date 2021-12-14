@@ -1,6 +1,6 @@
 <ods-dataset-context context="shanghai"
                      shanghai-dataset="shanghai-world-university-ranking"
-                     shanghai-domain="public">
+                     shanghai-domain="userclub">
     <div class="row">
         <div class="col-md-6">
             <h3>
@@ -32,7 +32,7 @@
         <div class="col-md-6">
             <ods-dataset-context context="shanghai"
                                  shanghai-dataset="shanghai-world-university-ranking"
-                                 shanghai-domain="public">
+                                 shanghai-domain="userclub">
                 <div ods-analysis="analysisminmax"
                      ods-analysis-context="shanghai"
                      ods-analysis-max="0"
