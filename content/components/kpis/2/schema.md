@@ -7,7 +7,7 @@ none: count function
 
 **Fields in use:**
 
-|u|
+|u (numeric)|
 |---|
 |100|
 |69|

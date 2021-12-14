@@ -2,7 +2,7 @@
 
 **Fields in use:** 
 
-| tonnes_of_uranium (integer) |
+| tonnes_of_uranium (numeric) |
 |---|
 |24575|
 |3032|

@@ -2,7 +2,7 @@
 
 **Fields in use:** 
 
-| date_inscribed (date) | extension (integer)| region (text) |
+| date_inscribed (date) | extension (numeric)| region |
 |---|---|---|
 |2019|0|Europe and North America|
 |2018|1|Asia and the Pacific|

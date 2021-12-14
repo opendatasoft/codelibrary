@@ -2,7 +2,7 @@
 
 **Fields in use:** 
 
-| dep_name (text) | 
+| dep_name | 
 |---|
 |Eure-et-Loir|
 |Finistère|

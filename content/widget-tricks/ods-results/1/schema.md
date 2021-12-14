@@ -2,7 +2,7 @@
 
 **Fields in use:** 
 
-| commune (text) | sector_fr (text) | inhab (integer) | inh_km2 (decimal) | 
+| commune | sector_fr | inhab (numeric) | inh_km2 (decimal) | 
 |---|---|---|---|
 |BRUXELLES|EM. DELVA (RUE)|7,521|1.53|
 |BRUXELLES|ANNEESSENS (PLACE) |7,066|2.95|

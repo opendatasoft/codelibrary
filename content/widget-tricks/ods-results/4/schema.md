@@ -2,7 +2,7 @@
 
 **Fields in use:** 
 
-| equipements (text) | description (text) | exercices (date) | cout_pour_la_ville_en_euros (decimal) | adresse (text) | localisation (geo_point)|
+| equipements | description | exercices (date) | cout_pour_la_ville_en_euros (decimal) | adresse | localisation (geo_point)|
 |---|---|---|---|---|---|
 |Parc Municipal des Sports|Etudes préalables à une restructuration complète du bâtiment.|2014|8,682|5 avenue Jean Bouin|[34.69553069,-82.98721979]|
 |Le Temps des Cerises|Construction d'une structure de proximité proposant des expérimentations ludiques...|2014|313,536|90-98 promenade du Verger|[40.673121466,-75.365457125]|

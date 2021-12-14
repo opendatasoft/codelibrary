@@ -2,7 +2,7 @@
 
 **Fields in use:**
 
-|fecha|nuevos_positivos|casos_confirmados|altas|fallecimientos|provincia|codigo_ine|
+|fecha (date)|nuevos_positivos (numeric)|casos_confirmados (numeric)|altas|fallecimientos|provincia|codigo_ine|
 |---|---|---|---|---|---|---|
 |2021-12-13|66|18896|2040|398|Ávila|5019|
 |2021-12-13|161|55934|5097|816|Burgos|9059|

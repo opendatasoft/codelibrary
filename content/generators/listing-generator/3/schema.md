@@ -2,7 +2,7 @@
 
 **Fields in use:** 
 
-|mandature                 |matiere        |objet                                              |vote             |ndeg_deliberation|pdf_dcm        |vote_adopte                                               |
+|mandature                 |matiere        |objet                                              |vote             |ndeg_deliberation|pdf_dcm        |vote_adopte (numeric)                                           |
 |--------------------------|---------------|---------------------------------------------------|-----------------|-----------------|---------------|----------------------------------------------------------|
 |2014-2020                 |EDUCATION      |Lancement d’une procédure adaptée relative à l’organisation d’activités périscolaires|Adopté à l’unanimité|5.0              |https://userclub.opendatasoft.com/api/v2/catalog/datasets/deliberations-du-conseil-municipal-dissy-les-moulineaux/files/17f69f4aa25f032862c78ff5bd9ad455|1                                                         |
 |2014-2020                 |Associations sportives|Approbation d’un avenant n°3 au marché de maîtrise d’œuvre pour la construction de la piscine du Fort|Adopté à l’unanimité|7.0              |https://userclub.opendatasoft.com/api/v2/catalog/datasets/deliberations-du-conseil-municipal-dissy-les-moulineaux/files/e56c7ad1934b19d0ea54b70298b47f71|1                                                         |

@@ -9,6 +9,6 @@ resources:
 ---
 
 The `ods-adv-analysis` widget exposes the results of an aggregation function over a context.
-It uses the [ODS Search API v2](https://help.opendatasoft.com/apis/ods-search-v2/#search-api-v2) and its [ODSQL language](https://help.opendatasoft.com/apis/ods-search-v2/#odsql).
+It uses the [ODS Explore API V2](https://help.opendatasoft.com/apis/ods-explore-v2/) and its [ODSQL language](https://help.opendatasoft.com/apis/ods-explore-v2/#section/Opendatasoft-Query-Language-(ODSQL)).
 
 [ods-adv-analysis documentation](https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsAdvAnalysis)

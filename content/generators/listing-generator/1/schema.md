@@ -2,7 +2,7 @@
 
 **Fields in use:** 
 
-|titre                     |technique      |collection                                         |genre            |format      |date           |wikipedia                                                 |image                                                                                                                       |surface            |
+|titre                     |technique      |collection                                         |genre            |format      |date           |wikipedia                                                 |image                                                                                                                       |surface (numeric)  |
 |--------------------------|---------------|---------------------------------------------------|-----------------|------------|---------------|----------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------|-------------------|
 |L'Entremetteuse           |huile sur toile|Staatliche Kunstsammlungen,                        |Peinture de genre|143 × 130   |1656 (daté)    |https://fr.wikipedia.org/wiki/L%27Entremetteuse           |https://userclub.opendatasoft.com/api/v2/catalog/datasets/oeuvres-de-johannes-vermeer/files/99fe5e94a3f8ae37ebcec59fd3f82e5b|1.859              |
 |La Laitière               |huile sur toile|Rijksmuseum                                        |Peinture de genre|45,45 × 40,6|1658-1661 (ca.)|https://fr.wikipedia.org/wiki/La_Laiti%C3%A8re            |https://userclub.opendatasoft.com/api/v2/catalog/datasets/oeuvres-de-johannes-vermeer/files/21603ba25218d3fdd671fa03f130dcdf|0.18452700000000002|

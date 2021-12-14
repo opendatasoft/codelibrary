@@ -1,6 +1,6 @@
 **Fields in use in `us-hospitals` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/us-hospitals/table/)** 
 
-| type (text) | beds (integer) |
+| type | beds (numeric) |
 |------|-----|
 |General Acute Care Hospital|24|
 |Psychiatric Hospital|435|
@@ -9,7 +9,7 @@
 
 **Field in use in `super-bowl` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/super-bowl/table/)**
 
-| date (date) | winning_pts (integer) | losing_pts (integer) |
+| date (date) | winning_pts (numeric) | losing_pts (numeric) |
 |------|------|------|
 |2020/02/10|31|12|
 |2019/09/12|34|30|
@@ -18,7 +18,7 @@
 
 **Field in use in `consumer-price-index-all-urban-consumers` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/consumer-price-index-all-urban-consumers/table/)**
 
-| area_name (text) | item_name (text) | date (date) | value (integer) |
+| area_name | item_name | date (date) | value (numeric) |
 |------|------|------|------|
 |U.S. city average|Energy services|2017|120 000|
 |Northeast urban - Size Class A|Admissions|2014|84 583|
@@ -27,7 +27,7 @@
 
 **Field in use in `ensemble-des-equipements-sportifs-dile-de-france-en-2016` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/ensemble-des-equipements-sportifs-dile-de-france-en-2016/table/)**
 
-| eqt_fam (text) |
+| eqt_fam |
 |------|
 |Plateau EPS|
 |Salle multisports|

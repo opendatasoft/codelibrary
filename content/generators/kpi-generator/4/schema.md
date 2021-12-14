@@ -2,7 +2,7 @@
 
 **Fields in use:**
 
-|vaccine_type|dose_number|date|
+|vaccine_type|dose_number (numeric)|date (date)|
 |---|---|---|
 |Pfizer|6345|2021-01-22|
 |Pfizer|5045|2021-01-22|
@@ -13,7 +13,7 @@
 
 **Fields in use:**
 
-|nb_tests|nb_pos|date|
+|nb_tests (numeric)|nb_pos (numeric)|date (date)|
 |---|---|---|
 |162|15|2021-02-05|
 |177|13|2021-02-10|
@@ -24,7 +24,7 @@
 
 **Fields in use:**
 
-|day_death_new|day_intcare_new|date|
+|day_death_new (numeric)|day_intcare_new (numeric)|date (date)|
 |---|---|---|
 |0|1|2021-05-18|
 |2|1|2021-05-18|

@@ -2,7 +2,7 @@
 
 **Fields in use:** 
 
-| tonnes_of_uranium (integer) | country (text) |
+| tonnes_of_uranium (numeric) | country |
 |---|---|
 |24575|Kazakhstan|
 |3032|Niger|

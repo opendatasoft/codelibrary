@@ -2,7 +2,7 @@
 
 **Fields in use:** 
 
-| name (text)                               | address (text)            | state (text) | city (text)       | type (text)                   | beds (integer)    | website (text)                                                                    |
+| name                               | address            | state | city       | type                   | beds (numeric)    | website                                                                    |
 |-------------------------------------------|---------------------------|-------|-------------------|-------------------------------|-------------------|-----------------------------------------------------------------------------------|
 | Mercy Hospital Clermont                   | 3000 Hospital Drive       | JA | Batavia           | General Acute Care Hospital   | 119               | http://www.e-mercy.com                                                            |
 | Roanoke Valley Center For Sight, L.L.C.   | 438 W. Main Street        | UT | Salem             | General Acute Care Hospital   | 2                 | N/A                                                                               |

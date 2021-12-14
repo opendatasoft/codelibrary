@@ -2,7 +2,7 @@
 
 **Fields in use:** 
 
-| date_inscribed (date) | extension (integer)|
+| date_inscribed (date) | extension (numeric)|
 |---|---|
 |2019|0|
 |2018|1|

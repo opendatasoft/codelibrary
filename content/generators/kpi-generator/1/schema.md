@@ -2,7 +2,7 @@
 
 **Fields in use:**
 
-|dose_number|date|
+|dose_number (numeric)|date (date)|
 |---|---|
 |6345|2021-01-22|
 |5045|2021-01-22|
@@ -13,7 +13,7 @@
 
 **Fields in use:**
 
-|nb_pos|date|
+|nb_pos (numeric)|date (date)|
 |---|---|
 |15|2021-02-05|
 |13|2021-02-10|

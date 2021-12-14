@@ -1,6 +1,6 @@
 <ods-dataset-context context="ctx"
                      ctx-dataset="liste-des-departements-metropole-dom"
-                     ctx-domain="discovery">
+                     ctx-domain="userclub">
     <div ods-color-gradient="analysis"
          ods-color-gradient-context="ctx"
          ods-color-gradient-x="code_texte"

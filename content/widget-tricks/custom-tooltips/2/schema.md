@@ -2,7 +2,7 @@
 
 **Fields in use:** 
 
-| geo_point (geo_point_2d) | name (text) | address (text) | city (text) | type (text) | date_creat (datetime) | trauma (text) | helipad (text) | population (integer) | website (text) |
+| geo_point (geo_point_2d) | name | address | city | type | date_creat (datetime) | trauma | helipad | population (numeric) | website |
 |---|---|---|---|---|---|---|---|---|---|
 |[34.69553069,-82.98721979]|Mercy Hospital Clermont                   | 3000 Hospital Drive|Batavia|General Acute Care Hospital|2013-03-08T01:00:00+01:00|Not Available|Y|291|http://www.e-mercy.com  |
 |[30.61153069,-12.98721933]|Roanoke Valley Center For Sight, L.L.C.   | 438 W. Main Street |Salem|PGeneral Acute Care Hospital|2012-08-31T01:00:00+01:00|I|N|123|N/A |

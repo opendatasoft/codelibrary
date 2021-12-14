@@ -1,8 +1,8 @@
 <div class="container">
     <ods-dataset-context context="kreis,lander"
-                         lander-dataset="georef-germany-land@public"
-                         lander-parameters="{'fields':'lan_name,lan_code'}"
-                         kreis-dataset="georef-germany-kreis@public">
+                         lander-dataset="laender-germany"
+                         lander-parameters="{'fields':'land_name,land_code'}"
+                         kreis-dataset="kreise-germany">
         <div ods-results="landerlist"
              ods-results-context="lander"
              ods-results-max="500">
@@ -10,12 +10,12 @@
                 Display the name, refine with the code
             </h3>
             <ods-select options="landerlist"
-                        selected-values="kreis.parameters['refine.lan_code']"
-                        label-modifier="fields.lan_name"
-                        value-modifier="fields.lan_code"
+                        selected-values="kreis.parameters['refine.land_code']"
+                        label-modifier="fields.land_name"
+                        value-modifier="fields.land_code"
                         placeholder="Select a Lander"></ods-select>
             <h4>
-                Selected Lander code (used to refine the map context) : {{ kreis.parameters['refine.lan_code'] }}
+                Selected Lander code (used to refine the map context) : {{ kreis.parameters['refine.land_code'] }}
             </h4>
             <ods-map no-refit="true" scroll-wheel-zoom="false" basemap="jawg.sunny" location="6,51.32924,10.45403">
                 <ods-map-layer-group>

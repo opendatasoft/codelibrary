@@ -2,7 +2,7 @@
 
 **Fields in use:** 
 
-| geo_point (geo_point_2d)| type (text) |
+| geo_point (geo_point_2d)| type |
 |---|---|
 |[34.69553069,-82.98721979]|General Acute Care Hospital|
 |[40.673121466,-75.365457125]|General Acute Care Hospital|

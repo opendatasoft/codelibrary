@@ -2,7 +2,7 @@
 
 **Fields in use:**
 
-|location|measurements_sourcename|measurements_parameter|measurements_lastupdated|measurements_value|measurements_sourcename|
+|location|measurements_sourcename|measurements_parameter (numeric)|measurements_lastupdated (datetime)|measurements_value (numeric)|measurements_sourcename|
 |---|---|---|---|---|---|
 |Wien Belgradplatz|EEA Austria|NO2|2016-12-12T09:00:00+00:00|19.0|EEA Austria|
 |Graz Don Bosco|EEA Austria|SO2|2016-12-12T09:00:00+00:00|5.0|EEA Austria|
