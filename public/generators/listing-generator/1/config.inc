@@ -23,17 +23,23 @@
                 imagePosition = 'left';
                 itemsPerRow = '2';
 
+                mapView = false;
+                mapPicto = '';
+                mapPictoColor = '';
+
                 kpis = [
                 {
                 'title': 'Taille moyenne',
-                'function': 'AVG',
-                'expression': 'surface',
+                'select': 'avg(surface)',
                 'precision': 2,
                 'unit': 'm2',
                 'faicon': 'square-o'
                 },
                 {
                 'title': 'Nombre d\'oeuvre référencées',
-                'function': 'COUNT'
+                'select': 'count(*)'
                 }
                 ];
+
+                sourceLinkLabel = 'Accéder aux données source';
+                noResultMsg = 'Aucun résultat';
