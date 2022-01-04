@@ -30,8 +30,15 @@
                 imagePosition = 'top';
                 itemsPerRow = '2';
 
+                mapView = true;
+                mapPicto = 'circle';
+                mapPictoColor = '#EC643C';
+
                 kpis = [{
                 'title': 'Nombre d\'activités',
-                'function': 'COUNT'
+                'select': 'count(*)'
                 }
                 ];
+
+                sourceLinkLabel = 'Accéder aux données source';
+                noResultMsg = 'Aucun résultat';

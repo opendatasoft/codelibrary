@@ -19,18 +19,24 @@
                 fieldLink = 'pdf_dcm';
                 fieldLinkLabel = 'Consulter la délibération';
 
+                mapView = false;
+                mapPicto = '';
+                mapPictoColor = '';
+
                 kpis = [
                 {
                 'title': 'Nombre de délibérations référencées',
-                'function': 'COUNT',
+                'select': 'count(*)',
                 'faicon': 'file-pdf-o'
                 },
                 {
                 'title': 'Votes adoptés',
-                'function': 'SUM',
-                'expression': 'vote_adopte',
+                'select': 'sum(vote_adopte)',
                 'faicon': 'check-square-o'
                 }
                 ];
 
                 itemsPerRow = '3';
+
+                sourceLinkLabel = 'Accéder aux données source';
+                noResultMsg = 'Aucun résultat';
