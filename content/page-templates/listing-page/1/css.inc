@@ -235,17 +235,6 @@ main {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.13);
 }
 
-.content-card-horizontal {
-    display: flex;
-}
-
-.content-card-horizontal .content-card-img {
-    height: auto;
-    flex: 0 0 25%;
-    width: 25%;
-    border-radius: 4px 0 0 4px;
-}
-
 .content-card-img {
     display: block;
     height: 110px;

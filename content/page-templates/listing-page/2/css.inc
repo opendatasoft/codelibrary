@@ -330,30 +330,13 @@ ul {
   border-bottom: 1px solid #DEE5EF;
 }
 
-.result.result-img-horizontal {
-  display: flex;
-}
-
-.result-img-horizontal .result-img {
-  flex: 0 0 35%;
-  width: 35%;
-  height: auto;
-}
-
 .result-img {
-  disaply: block;
+  display: block;
   height: 118px;
-
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-}
-
-.result-img-horizontal .result-content {
-  margin-left: 0.7rem;
-}
-:not(.result-img-horizontal) .result-content {
-  margin-top: 0.7rem;
+  margin-bottom: 5px;
 }
 
 .result-title {

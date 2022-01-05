@@ -1,8 +1,7 @@
 <div class="container">
     <ods-dataset-context context="ctx,ctxdate" ctx-domain="userclub.opendatasoft.com" ctx-dataset="rappel-conso"
         ctxdate-domain="userclub.opendatasoft.com" ctxdate-dataset="rappel-conso"
-        ctx-parameters="{'sort':'-date_de_publication_de_la_fiche','disjunctive.nature_juridique_du_rappel':'true','disjunctive.distributeurs':'true','disjunctive.categorie_de_produit':'true'}"
-        ctx-apikey="2bb80e51458c8d69e7f9c3783a44370d140a13db6fdc5fb1c994483e">
+        ctx-parameters="{'sort':'date_de_publication_de_la_fiche','disjunctive.nature_juridique_du_rappel':'true','disjunctive.distributeurs':'true','disjunctive.categorie_de_produit':'true'}">
         <h1 class="page-title">Rappel conso</h1>
         <p class="page-subtitle">
             Le jeu de données du site rappel-conso comprend la liste des fiches de rappels publiées sur le site
@@ -111,7 +110,7 @@
         <section>
             <div class="row row-equal-height" ods-results="items" ods-results-context="ctx" ods-results-max="12">
                 <div ng-repeat="item in items" class="col-md-6 margin-bottom-20">
-                    <div class="content-card" ng-class="{'content-card-horizontal': imagePosition === 'left' }">
+                    <div class="content-card">
                         <div class="content-card-img"
                             style="{{'background-image: url(https://userclub.opendatasoft.com/explore/dataset/rappel-conso/files/' + item.fields.lien_vers_la_liste_des_images.id + '/300/);' }}">
                         </div>

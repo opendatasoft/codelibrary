@@ -115,8 +115,7 @@
                     ods-results="items"
                     ods-results-context="ctx"
                     ods-results-max="1000"
-                    ng-click="ctx.parameters['refine.legende_revisee'] = (ctx.parameters['refine.legende_revisee']?undefined:item.fields.legende_revisee)"
-                    ng-class="{'result-img-horizontal': imagePosition === 'left' }">
+                    ng-click="ctx.parameters['refine.legende_revisee'] = (ctx.parameters['refine.legende_revisee']?undefined:item.fields.legende_revisee)">
                   <div class="result-img"
                        ng-if="item.fields.photo"
                        style="{{ 'background-image: url(https://opendata.hauts-de-seine.fr/explore/dataset/archives-de-la-planete-paris/files/' + item.fields.photo.id + '/300/);' }}">
