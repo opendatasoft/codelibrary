@@ -1,7 +1,8 @@
 <div class="container">
     <ods-dataset-context context="ctx,ctxdate" ctx-domain="userclub.opendatasoft.com" ctx-dataset="rappel-conso"
         ctxdate-domain="userclub.opendatasoft.com" ctxdate-dataset="rappel-conso"
-        ctx-parameters="{'sort':'-date_de_publication_de_la_fiche','disjunctive.nature_juridique_du_rappel':'true','disjunctive.distributeurs':'true','disjunctive.categorie_de_produit':'true'}">
+        ctx-parameters="{'sort':'-date_de_publication_de_la_fiche','disjunctive.nature_juridique_du_rappel':'true','disjunctive.distributeurs':'true','disjunctive.categorie_de_produit':'true'}"
+        ctx-apikey="2bb80e51458c8d69e7f9c3783a44370d140a13db6fdc5fb1c994483e">
         <h1 class="page-title">Rappel conso</h1>
         <p class="page-subtitle">
             Le jeu de données du site rappel-conso comprend la liste des fiches de rappels publiées sur le site
@@ -11,7 +12,7 @@
             <!-- SEARCH -->
             <div class="search-module">
                 <i class="fa fa-search search-module-icon" aria-hidden="true"></i>
-                <input placeholder="Search" ng-model="ctx.parameters['q']"
+                <input placeholder="Rechercher" ng-model="ctx.parameters['q']"
                     ng-model-options="{ updateOn: 'keyup', debounce: { 'default': 300, 'blur': 0 }}"
                     class="search-module-input" type="text" />
                 <button class="search-module-clear" ng-if="ctx.parameters['q']"
@@ -85,10 +86,10 @@
                 </ods-date-range-slider>
                 <!-- Resetting the range by setting widget "from" and "to" to the min/max bounds computed with ods-analysis -->
                 <div ng-if="bounds.min && bounds.max" class="filter-date-button" ng-class="{'filter-date-button-disabled':
-                    values.periode.minselection == values.periode.min &&
-                    values.periode.maxselection == values.periode.max}"
+                bounds.minselection == bounds.min &&
+                bounds.maxselection == bounds.max}"
                     ng-click="bounds.minselection = bounds.min; bounds.maxselection = bounds.max">
-                    The entire period <i class="fa fa-arrows-h" aria-hidden="true"></i>
+                    Toute la période <i class="fa fa-arrows-h" aria-hidden="true"></i>
                 </div>
             </div>
         </div>
@@ -112,7 +113,7 @@
                 <div ng-repeat="item in items" class="col-md-6 margin-bottom-20">
                     <div class="content-card" ng-class="{'content-card-horizontal': imagePosition === 'left' }">
                         <div class="content-card-img"
-                            style="{{ 'background-image: url(https://userclub.opendatasoft.com/explore/dataset/rappel-conso/files/' + item.fields.lien_vers_la_liste_des_images.id + '/300/);' }}">
+                            style="{{'background-image: url(https://userclub.opendatasoft.com/explore/dataset/rappel-conso/files/' + item.fields.lien_vers_la_liste_des_images.id + '/300/);' }}">
                         </div>
                         <div class="content-card-body">
                             <h2 class="content-card-title text-center">
@@ -150,6 +151,6 @@
             </div>
         </section>
         <a href="https://userclub.opendatasoft.com/explore/dataset/rappel-conso/" target="_blank"
-            class="margin-bottom-20">View data</a>
+            class="margin-bottom-20">Voir les données</a>
     </ods-dataset-context>
 </div>
