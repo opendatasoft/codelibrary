@@ -6,7 +6,7 @@ date: 2022-01-05T12:00:00+02:00
 This template is an alternative to the automated [Listing Generator](https://codelibrary.opendatasoft.com/generators/listing-generator/). It offers more customization possibilities to advanced users who would like to add or remove items to this template, or reuse some blocks on another page.
 
 > This ressource integrates the following widgets:
-> - `ods-select` to create the filters on text fields. [Documentation available here](https://codelibrary.opendatasoft.com/widget-tricks/ods-select/)
-> - `ods-date-range-slider` to create the date selector. [Documentation available here](https://codelibrary.opendatasoft.com/widget-tricks/ods-date-range-slider/)
-> - `ods-aggregation` to create KPI. [Documentation available here](https://codelibrary.opendatasoft.com/widget-tricks/ods-aggregation/)
-> - `ods-results` to list the content of the records from the dataset. [Documentation available here](https://codelibrary.opendatasoft.com/widget-tricks/ods-results/)
+> - `ods-select` to create the filters on text fields. [Resource available here](https://codelibrary.opendatasoft.com/widget-tricks/ods-select/)
+> - `ods-date-range-slider` to create the date selector. [Resource available here](https://codelibrary.opendatasoft.com/widget-tricks/ods-date-range-slider/)
+> - `ods-aggregation` to create KPI. [Resource available here](https://codelibrary.opendatasoft.com/widget-tricks/ods-aggregation/)
+> - `ods-results` to list the content of the records from the dataset. [Resource available here](https://codelibrary.opendatasoft.com/widget-tricks/ods-results/)
