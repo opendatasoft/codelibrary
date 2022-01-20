@@ -1,6 +1,5 @@
 ---
-title: "Simple example"
-height: 550
+title: "Active/unactive style"
 ---
 
-A simple usecase to show how this component can be used in your pages.
+Toggle button to highlight an active or unactive state.
