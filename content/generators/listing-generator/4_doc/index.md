@@ -1,14 +1,13 @@
 ---
 title: Listing Generator documentation
+date: 2022-01-21
 description: Complete list of options for the listing generator resource 
 tags: ["display", "navigation", "list", "map", "aggregation"]
+nocode: true
 ---
 
-
-## Introduction
-
 Welcome to the Listing Generator documentation !
-Find the [code and live examples here](/generators/listing-generator/).
+Find the [code and live examples above](/generators/listing-generator/).
 
 ### Before start, important read
 
@@ -251,32 +250,3 @@ sourceLinkLabel (string) : the label of the 'access to source' link
 ```
 sourceLinkLabel = 'Direct access to the data';
 ```
-
-# Change log
-
-### V3.0
-- The listing generator is now fully compatible for pages, custom views and embeds.
-- Add `mapView` option to activate a map (in `cards` view)
-- Add pagination module for `table` view
-- Add infinite scroll for `cards` view
-- Set a label parameter for the "access to source" link
-- Filters can now have a `placeholder` option, to rename the field label and propose as a placeholder for the select.
-- Field can now have a `label` option, to rename the field label in the view. In `cards` view, the label can be an empty string `''`.
-
-### V2.2
-- Add `sort` param
-- Add an advanced mode for fieldsList
-  Fields can now be a list of object, that provides the field id, the format, and some options.
-  See the documentation for more details.
-- No icon displayed by default for KPIs
-
-### V2.1
-- Add ods-select and multiple choice option for filters
-- Add clear all filter button when one filter is applied
-- responsive display for filters and date button
-- KPI default value to 0 when no data/results to display
-
-### V2.0
-- add a date field that display a date range slider
-- download link knows support files hosted on ODS
-- dynamic title / description / access source link from the context
