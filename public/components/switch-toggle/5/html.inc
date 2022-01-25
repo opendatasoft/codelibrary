@@ -1,45 +1,34 @@
-<div class="content-card"
-     ng-init="view = 'map'">
-    <div class="row">
-        <div class="col-sm-3">
-            <h2 class="content-card-title">
-                France departments
-            </h2>
-            <p class="content-card-description">
-                Cardano could be many technical analysis since Nexo data mining a fundamental analysis.
-            </p>
-            <p class="content-card-description">
-                Ravencoin generates a amazing fish of lots of market cap, and Waves serves many quick anti-money laundering! Solidity allowed lots of fast peer-to-peer network.
-            </p>
-            <div class="switch-container">
-                <strong>View : </strong>
-                <label class="switch">
-                    <input ng-model="view"
-                           ng-true-value="'map'"
-                           ng-false-value="'table'"
-                           ng-checked="view == 'map'"
-                           class="switch-input"
-                           type="checkbox">
-                    <div class="switch-button">
-                        <span class="switch-button-left">TABLE</span>
-                        <span class="switch-button-right">MAP</span>
-                    </div>
-                </label>
-            </div>
-        </div>
-        <div class="col-sm-9">
-            <ods-dataset-context context="countoursgeographiques"
-                                 countoursgeographiques-dataset="contours-geographiques-simplifies-des-nouvelles-regions-metropole"
-                                 countoursgeographiques-domain="userclub"
-                                 countoursgeographiques-parameters="{}">
-                <div ng-if="view == 'map'">
-                    <ods-map context="countoursgeographiques"
-                             scroll-wheel-zoom="false"></ods-map>
-                </div>
-                <div ng-if="view == 'table'">
-                    <ods-table context="countoursgeographiques"></ods-table>
-                </div>
-            </ods-dataset-context>
-        </div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>
+            Flat style {{ flatbutton.active ? 'On' : 'Off' }}
+        </h2>
+        <button ng-click="flatbutton.active = !flatbutton.active"
+                ng-class="{'flat-button-active': flatbutton.active == true}" class="flat-button"
+                aria-expanded="{{ flatbutton.active == true }}">
+            Click me
+        </button>
+    </div>
+
+    <div class="col-md-4">
+        <h2>
+            Press style {{ pressbutton.active ? 'On' : 'Off' }}
+        </h2>
+        <button ng-click="pressbutton.active = !pressbutton.active"
+                ng-class="{'press-button-active': pressbutton.active == true}" class="press-button"
+                aria-expanded="{{ pressbutton.active == true }}">
+            Click me
+        </button>
+    </div>
+
+    <div class="col-md-4">
+        <h2>
+            Gradient and shadow style {{ shadowbutton.active ? 'On' : 'Off' }}
+        </h2>
+        <button ng-click="shadowbutton.active = !shadowbutton.active"
+                ng-class="{'shadow-button-active': shadowbutton.active == true}" class="shadow-button"
+                aria-expanded="{{ shadowbutton.active == true }}">
+            Click me
+        </button>
     </div>
 </div>
