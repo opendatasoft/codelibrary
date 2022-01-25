@@ -3268,14 +3268,14 @@
                  "title": "New Pen!",
                  "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
-                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;row\&#34;\u003e\n    \u003cdiv class=\&#34;col-md-4\&#34;\u003e\n        \u003ch2\u003e\n            Flat style {{ flatbutton.active ? &#39;On&#39; : &#39;Off&#39; }}\n        \u003c/h2\u003e\n        \u003cbutton ng-click=\&#34;flatbutton.active = !flatbutton.active\&#34;\n                ng-class=\&#34;{&#39;flat-button-active&#39;: flatbutton.active == true}\&#34; class=\&#34;flat-button\&#34;\n                aria-expanded=\&#34;{{ flatbutton.active == true }}\&#34;\u003e\n            Click me\n        \u003c/button\u003e\n    \u003c/div\u003e\n\n    \u003cdiv class=\&#34;col-md-4\&#34;\u003e\n        \u003ch2\u003e\n            Press style {{ pressbutton.active ? &#39;On&#39; : &#39;Off&#39; }}\n        \u003c/h2\u003e\n        \u003cbutton ng-click=\&#34;pressbutton.active = !pressbutton.active\&#34;\n                ng-class=\&#34;{&#39;press-button-active&#39;: pressbutton.active == true}\&#34; class=\&#34;press-button\&#34;\n                aria-expanded=\&#34;{{ pressbutton.active == true }}\&#34;\u003e\n            Click me\n        \u003c/button\u003e\n    \u003c/div\u003e\n\n    \u003cdiv class=\&#34;col-md-4\&#34;\u003e\n        \u003ch2\u003e\n            Gradient and shadow style {{ shadowbutton.active ? &#39;On&#39; : &#39;Off&#39; }}\n        \u003c/h2\u003e\n        \u003cbutton ng-click=\&#34;shadowbutton.active = !shadowbutton.active\&#34;\n                ng-class=\&#34;{&#39;shadow-button-active&#39;: shadowbutton.active == true}\&#34; class=\&#34;shadow-button\&#34;\n                aria-expanded=\&#34;{{ shadowbutton.active == true }}\&#34;\u003e\n            Click me\n        \u003c/button\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;row\&#34;\u003e\n    \u003cdiv class=\&#34;col-xs-4\&#34;\u003e\n        \u003ch2\u003e\n            Flat style {{ flatbutton.active ? &#39;On&#39; : &#39;Off&#39; }}\n        \u003c/h2\u003e\n        \u003cbutton ng-click=\&#34;flatbutton.active = !flatbutton.active\&#34;\n                ng-class=\&#34;{&#39;flat-button-active&#39;: flatbutton.active == true}\&#34; class=\&#34;flat-button\&#34;\n                aria-expanded=\&#34;{{ flatbutton.active == true }}\&#34;\u003e\n            Click me\n        \u003c/button\u003e\n    \u003c/div\u003e\n\n    \u003cdiv class=\&#34;col-xs-4\&#34;\u003e\n        \u003ch2\u003e\n            Press style {{ pressbutton.active ? &#39;On&#39; : &#39;Off&#39; }}\n        \u003c/h2\u003e\n        \u003cbutton ng-click=\&#34;pressbutton.active = !pressbutton.active\&#34;\n                ng-class=\&#34;{&#39;press-button-active&#39;: pressbutton.active == true}\&#34; class=\&#34;press-button\&#34;\n                aria-expanded=\&#34;{{ pressbutton.active == true }}\&#34;\u003e\n            Click me\n        \u003c/button\u003e\n    \u003c/div\u003e\n\n    \u003cdiv class=\&#34;col-xs-4\&#34;\u003e\n        \u003ch2\u003e\n            Gradient and shadow style {{ shadowbutton.active ? &#39;On&#39; : &#39;Off&#39; }}\n        \u003c/h2\u003e\n        \u003cbutton ng-click=\&#34;shadowbutton.active = !shadowbutton.active\&#34;\n                ng-class=\&#34;{&#39;shadow-button-active&#39;: shadowbutton.active == true}\&#34; class=\&#34;shadow-button\&#34;\n                aria-expanded=\&#34;{{ shadowbutton.active == true }}\&#34;\u003e\n            Click me\n        \u003c/button\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
                  "css": &#34;/* Flat style\n=============================================================================*/\n.flat-button {\n    font-size: 1rem;\n    color: var(--links);\n    border: 1px solid var(--links);\n    border-radius: 2rem;\n    background: #FFF;\n    padding: .37rem 1rem;\n    margin-right: 6px;\n}\n\n.flat-button:hover {\n    opacity: 0.65;\n}\n\n.flat-button-active {\n    background-color: var(--links);\n    color: #FFF;\n}\n\n/* Press style\n=============================================================================*/\n.press-button {\n    font-size: 1rem;\n    color: var(--links);\n    border: 1px solid var(--links);\n    border-radius: 2rem;\n    background: #FFF;\n    padding: .37rem 1rem;\n    border-bottom-width: 6px;\n}\n\n.press-button:hover {\n    opacity: 0.65;\n}\n\n.press-button-active {\n    margin-top: 3px;\n    border-bottom-width: 3px;\n}\n\n/* Shadow style\n=============================================================================*/\n.shadow-button {\n    font-size: 1rem;\n    background: rgb(0, 136, 204);\n    background: linear-gradient(0deg, rgba(0, 136, 204, 1) 0%, rgba(6, 168, 249, 1) 100%);\n    color: #FFF;\n    border: 1px solid var(--links);\n    border-radius: 2rem;\n    padding: .37rem 1rem;\n}\n\n.shadow-button-active {\n    background-color: rgba(0, 136, 204, 1);\n    box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 0.3) inset;\n    padding-top: .47rem;\n    padding-bottom: .27rem;\n}\n\n\n\n\n&#34;
                }'>
     </form>
 </div>
 <div class="ods-content">
     <div class="box-live-example"
-      style="height: 120px;">
+      style="height: 180px;">
       <iframe id="iframe-activeinactive-style"
               width="100%" height="100%"
               src="about:blank"
@@ -3443,7 +3443,7 @@
                 <body>
                 <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
 &lt;div class=&#34;row&#34;&gt;
-    &lt;div class=&#34;col-md-4&#34;&gt;
+    &lt;div class=&#34;col-xs-4&#34;&gt;
         &lt;h2&gt;
             Flat style {{ flatbutton.active ? &#39;On&#39; : &#39;Off&#39; }}
         &lt;/h2&gt;
@@ -3454,7 +3454,7 @@
         &lt;/button&gt;
     &lt;/div&gt;
 
-    &lt;div class=&#34;col-md-4&#34;&gt;
+    &lt;div class=&#34;col-xs-4&#34;&gt;
         &lt;h2&gt;
             Press style {{ pressbutton.active ? &#39;On&#39; : &#39;Off&#39; }}
         &lt;/h2&gt;
@@ -3465,7 +3465,7 @@
         &lt;/button&gt;
     &lt;/div&gt;
 
-    &lt;div class=&#34;col-md-4&#34;&gt;
+    &lt;div class=&#34;col-xs-4&#34;&gt;
         &lt;h2&gt;
             Gradient and shadow style {{ shadowbutton.active ? &#39;On&#39; : &#39;Off&#39; }}
         &lt;/h2&gt;
@@ -3620,7 +3620,7 @@
             <div class="js-tabcontent"
                  id="code-activeinactive-style-html-content"
                  data-clipboard="&lt;div class=&#34;row&#34;&gt;
-    &lt;div class=&#34;col-md-4&#34;&gt;
+    &lt;div class=&#34;col-xs-4&#34;&gt;
         &lt;h2&gt;
             Flat style {{ flatbutton.active ? &#39;On&#39; : &#39;Off&#39; }}
         &lt;/h2&gt;
@@ -3631,7 +3631,7 @@
         &lt;/button&gt;
     &lt;/div&gt;
 
-    &lt;div class=&#34;col-md-4&#34;&gt;
+    &lt;div class=&#34;col-xs-4&#34;&gt;
         &lt;h2&gt;
             Press style {{ pressbutton.active ? &#39;On&#39; : &#39;Off&#39; }}
         &lt;/h2&gt;
@@ -3642,7 +3642,7 @@
         &lt;/button&gt;
     &lt;/div&gt;
 
-    &lt;div class=&#34;col-md-4&#34;&gt;
+    &lt;div class=&#34;col-xs-4&#34;&gt;
         &lt;h2&gt;
             Gradient and shadow style {{ shadowbutton.active ? &#39;On&#39; : &#39;Off&#39; }}
         &lt;/h2&gt;
@@ -3656,7 +3656,7 @@
                  role="tabpanel">
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;row&#34;&gt;
-    &lt;div class=&#34;col-md-4&#34;&gt;
+    &lt;div class=&#34;col-xs-4&#34;&gt;
         &lt;h2&gt;
             Flat style {{ flatbutton.active ? &#39;On&#39; : &#39;Off&#39; }}
         &lt;/h2&gt;
@@ -3667,7 +3667,7 @@
         &lt;/button&gt;
     &lt;/div&gt;
 
-    &lt;div class=&#34;col-md-4&#34;&gt;
+    &lt;div class=&#34;col-xs-4&#34;&gt;
         &lt;h2&gt;
             Press style {{ pressbutton.active ? &#39;On&#39; : &#39;Off&#39; }}
         &lt;/h2&gt;
@@ -3678,7 +3678,7 @@
         &lt;/button&gt;
     &lt;/div&gt;
 
-    &lt;div class=&#34;col-md-4&#34;&gt;
+    &lt;div class=&#34;col-xs-4&#34;&gt;
         &lt;h2&gt;
             Gradient and shadow style {{ shadowbutton.active ? &#39;On&#39; : &#39;Off&#39; }}
         &lt;/h2&gt;

@@ -1,5 +1,5 @@
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-xs-4">
         <h2>
             Flat style {{ flatbutton.active ? 'On' : 'Off' }}
         </h2>
@@ -10,7 +10,7 @@
         </button>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-xs-4">
         <h2>
             Press style {{ pressbutton.active ? 'On' : 'Off' }}
         </h2>
@@ -21,7 +21,7 @@
         </button>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-xs-4">
         <h2>
             Gradient and shadow style {{ shadowbutton.active ? 'On' : 'Off' }}
         </h2>
