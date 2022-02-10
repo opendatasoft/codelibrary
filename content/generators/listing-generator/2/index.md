@@ -1,5 +1,5 @@
 ---
-title: "Automated listing visualization - another example with date"
+title: "Automated listing visualization - another example with date and map"
 height: 750
 ---
 

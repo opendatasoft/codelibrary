@@ -1,5 +1,6 @@
 ---
 title: Change log
+date: "2022-02-10T00:00:00+01:00"
 description: Change log with version and improvements 
 nocode: true
 ---
@@ -10,7 +11,7 @@ nocode: true
 - Add pagination module for `table` view
 - Add infinite scroll for `cards` view
 - Set a label parameter for the "access to source" link
-- Filters can now have a `placeholder` option, to rename the field label and propose as a placeholder for the select.
+- Filters can now have a `label` option, to rename the field label and propose as a placeholder for the select.
 - Field can now have a `label` option, to rename the field label in the view. In `cards` view, the label can be an empty string `''`.
 
 ### V2.2

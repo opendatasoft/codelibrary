@@ -1,13 +1,13 @@
 ---
 title: Listing Generator documentation
-date: 2022-01-21
+date: "2022-02-10T00:00:00+01:00"
 description: Complete list of options for the listing generator resource 
 tags: ["display", "navigation", "list", "map", "aggregation"]
 nocode: true
 ---
 
 Welcome to the Listing Generator documentation !
-Find the [code and live examples above](/generators/listing-generator/).
+Find the [code and live examples above](#automated-listing-visualization).
 
 ### Before start, important read
 
@@ -76,6 +76,7 @@ List of filter configurations to generate the filters panel.
 Parameters are :
 - id (string) : the ID of the field
 - multiple (boolean) : true or false, to allow the user to select multiple values in the filter
+- label (string) : a custom placeholder instead of the field label
 
 **Note :** The field must be a facet in the dataset  
 **Note :** Alphanumerical sort is applied in the filter view
@@ -83,7 +84,7 @@ Parameters are :
 ```
 filters = [
               {'id':'filterid','multiple':true},
-              {'id':'filterid2','multiple':false}
+              {'id':'filterid2','multiple':false,'label':'ID of the filter'}
            ];
 ```
 

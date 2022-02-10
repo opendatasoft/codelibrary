@@ -1,5 +1,6 @@
 ---
 title: "Listing Generator"
+date: "2022-02-10T00:00:00+01:00"
 description: "Ideal for listing! Edit only a few settings to generate a modern looking visulization that uses ODS components and widgets."
 tags: ["display", "navigation", "list"]
 resources:
