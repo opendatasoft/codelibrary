@@ -1,39 +1,45 @@
      ng-init="domain = 'userclub.opendatasoft.com';
-                datasetid = 'oeuvres-de-johannes-vermeer';
+              datasetid = 'oeuvres-de-johannes-vermeer';
 
-                sort = 'surface';
+              sort = 'surface';
 
-                filters = [
+              filters = [
                 {'id':'technique','multiple':true},
                 {'id':'collection','multiple':true},
                 {'id':'genre','multiple':true}
-                ];
-                fieldDate = '';
-                resetFiltersButton = true;
-                resetFiltersButtonLabel = 'Supprimer tous les filtres';
-                fieldDefaultRangeStartsNow = false;
+              ];
+              fieldDate = '';
+              resetFiltersButton = true;
+              resetFiltersButtonLabel = 'Supprimer tous les filtres';
+              fieldDefaultRangeStartsNow = false;
 
-                view = 'cards';
-                fieldsList = ['titre','collection','genre','format','date'];
-                fieldLink = 'wikipedia';
-                fieldLinkLabel = 'Lire l\'article';
+              view = 'cards';
+              fieldsList = ['titre','collection','genre','format','date'];
+              fieldLink = 'wikipedia';
+              fieldLinkLabel = 'Lire l\'article';
 
-                cardTitle = 'titre';
-                fieldPhoto = 'image';
-                imagePosition = 'left';
-                itemsPerRow = '2';
+              cardTitle = 'titre';
+              fieldPhoto = 'image';
+              imagePosition = 'left';
+              itemsPerRow = '2';
 
-                kpis = [
+              mapView = false;
+              mapPicto = '';
+              mapPictoColor = '';
+
+              kpis = [
                 {
                 'title': 'Taille moyenne',
-                'function': 'AVG',
-                'expression': 'surface',
+                'select': 'avg(surface)',
                 'precision': 2,
                 'unit': 'm2',
                 'faicon': 'square-o'
                 },
                 {
                 'title': 'Nombre d\'oeuvre référencées',
-                'function': 'COUNT'
+                'select': 'count(*)'
                 }
-                ];
+              ];
+
+              sourceLinkLabel = 'Accéder aux données source';
+              noResultMsg = 'Aucun résultat';
