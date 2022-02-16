@@ -58,7 +58,7 @@
             </div>
             <div ods-adv-analysis="communes" ods-adv-analysis-context="ctxcommunes" ods-adv-analysis-select="count(*)"
                  ods-adv-analysis-group-by="code_officiel_commune_arrondissement_municipal,nom_officiel_commune_arrondissement_municipal" ods-adv-analysis-order-by="nom_officiel_commune_arrondissement_municipal" ods-adv-analysis-limit="10000">
-                <ods-select disabled="ctxcommunes.parameters['refine.code_officiel_epci'].length==0"
+                <ods-select disabled="ctxcommunes.parameters['refine.code_officiel_departement'].length==0"
                             selected-values="selected.communes" placeholder="Toutes communes"
                             label-modifier="nom_officiel_commune_arrondissement_municipal"
                             value-modifier="{'code':code_officiel_commune_arrondissement_municipal,'name':nom_officiel_commune_arrondissement_municipal}" 

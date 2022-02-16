@@ -1,5 +1,5 @@
 ---
-title: "Filter by the results of an analysis (via ods-analysis widget)"
+title: "Filter by the results of an analysis (via ods-adv-analysis widget)"
 height: 650
 ---
 
@@ -11,7 +11,7 @@ etc...
 
 Computing the average, maximum, sum of a field to sort de list of proposition in `ods-select`
 
-`ods-analysis` [Code Library resource](https://codelibrary.opendatasoft.com/widget-tricks/ods-analysis/) and [it's documentation](https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsAnalysis).
+`ods-analysis` [Code Library resource](https://codelibrary.opendatasoft.com/widget-tricks/ods-adv-analysis/) and [it's documentation](https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsAdvAnalysis).
 
 > **Note 1:** performing an analysis on a field containing huge quantity of distinct values can alter performances of the page (the browser needs to download the long list of possible values, then it displays and manipulates the list into the widget)
 
