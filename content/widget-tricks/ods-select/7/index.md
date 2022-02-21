@@ -5,3 +5,5 @@ height: 600
 ---
 
 A reuse of `ods-select` to create filters based on a serie of geographical levels.
+
+> **Note:** you will need to create one context for each geographical level, in order to keep the full list of the items after the refine.
