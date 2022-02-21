@@ -16,7 +16,7 @@
                          ctxcommunes-domain="userclub"
                          ctxcommunes-parameters="{'disjunctive.code_officiel_region':true,'disjunctive.code_officiel_departement':true,'disjunctive.code_officiel_epci':true,'disjunctive.code_officiel_commune_arrondissement_municipal':true}">
         <div class="ods-selects">
-            <div ods-adv-analysis="regions" ods-adv-analysis-context="ctxregions" ods-adv-analysis-select="count(*)"
+            <div ods-adv-analysis="regions" ods-adv-analysis-context="ctx" ods-adv-analysis-select="count(*)"
                  ods-adv-analysis-group-by="code_officiel_region,nom_officiel_region" ods-adv-analysis-order-by="nom_officiel_region" ods-adv-analysis-limit="10000">
                 <ods-select selected-values="selected.regions" placeholder="Toutes régions"
                             label-modifier="nom_officiel_region"
@@ -28,7 +28,7 @@
                 {{ctxcommunes.parameters['refine.code_officiel_region'] = ctxepcis.parameters['refine.code_officiel_region'] = ctxdepartements.parameters['refine.code_officiel_region']= ctx.parameters['refine.code_officiel_region']=(selected.regions | toObject:'code' | keys);""}}
             </div>
             <div 
-                 ods-adv-analysis="departements" ods-adv-analysis-context="ctxdepartements" ods-adv-analysis-select="count(*)"
+                 ods-adv-analysis="departements" ods-adv-analysis-context="ctx" ods-adv-analysis-select="count(*)"
                  ods-adv-analysis-group-by="code_officiel_departement,nom_officiel_departement" ods-adv-analysis-order-by="nom_officiel_departement" ods-adv-analysis-limit="10000">
                 <ods-select disabled="ctxdepartements.parameters['refine.code_officiel_region'].length==0"
                             selected-values="selected.departements" placeholder="Tout départements"
@@ -41,7 +41,7 @@
                 {{ctxcommunes.parameters['refine.code_officiel_departement']= ctxepcis.parameters['refine.code_officiel_departement']= ctx.parameters['refine.code_officiel_departement']=(selected.departements | toObject:'code' | keys);""}}
             </div>
             <div 
-                 ods-adv-analysis="epcis" ods-adv-analysis-context="ctxepcis" ods-adv-analysis-select="count(*)"
+                 ods-adv-analysis="epcis" ods-adv-analysis-context="ctx" ods-adv-analysis-select="count(*)"
                  ods-adv-analysis-group-by="code_officiel_epci,nom_officiel_epci" ods-adv-analysis-order-by="nom_officiel_epci" ods-adv-analysis-limit="10000">
                 <ods-select disabled="ctxepcis.parameters['refine.code_officiel_departement'].length==0"
                             selected-values="selected.epcis" placeholder="Tout EPCIs"
@@ -52,11 +52,8 @@
                             is-loading="true"
                             on-change="ctx.parameters['refine.code_officiel_commune_arrondissement_municipal']=ctx.parameters['refine.code_officiel_epci']=ctx.parameters['refine.code_officiel_region']=ctx.parameters['refine.code_officiel_departement'] = []"></ods-select>
                 {{ctxcommunes.parameters['refine.code_officiel_epci'] = ctx.parameters['refine.code_officiel_epci']=(selected.epcis | toObject:'code' | keys);""}}
-
-
-
             </div>
-            <div ods-adv-analysis="communes" ods-adv-analysis-context="ctxcommunes" ods-adv-analysis-select="count(*)"
+            <div ods-adv-analysis="communes" ods-adv-analysis-context="ctx" ods-adv-analysis-select="count(*)"
                  ods-adv-analysis-group-by="code_officiel_commune_arrondissement_municipal,nom_officiel_commune_arrondissement_municipal" ods-adv-analysis-order-by="nom_officiel_commune_arrondissement_municipal" ods-adv-analysis-limit="10000">
                 <ods-select disabled="ctxcommunes.parameters['refine.code_officiel_departement'].length==0"
                             selected-values="selected.communes" placeholder="Toutes communes"
@@ -67,7 +64,6 @@
                             is-loading="true"
                             on-change="ctx.parameters['refine.code_officiel_commune_arrondissement_municipal']=ctx.parameters['refine.code_officiel_epci']=ctx.parameters['refine.code_officiel_region']=ctx.parameters['refine.code_officiel_departement'] = []"></ods-select>
                 {{ctx.parameters['refine.code_officiel_commune_arrondissement_municipal']=(selected.communes | toObject:'code' | keys);""}}
-
             </div>
         </div>
         <div class="ods-box">
@@ -79,6 +75,5 @@
                 </ods-chart-query>
             </ods-chart>
         </div>
-
     </ods-dataset-context>
 </div>
