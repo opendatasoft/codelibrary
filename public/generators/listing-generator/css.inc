@@ -121,6 +121,11 @@
     align-items: center;
     justify-content: center;
 }
+.clear-filters-button {
+    background: none;
+    border: none;
+    color: var(--text);
+}
 .clear-filters-button:hover {
     opacity: 0.65;
 }
@@ -138,6 +143,9 @@
         min-width: 240px;
     }
 }
+.odswidget-select-button:focus:not(.focus-ring) {
+    outline: var(--highlight) 2px solid;
+}
 
 /*********** Filter date ************/
 .filter-date {
@@ -154,6 +162,9 @@
     margin-top: 13px;
     white-space: nowrap;
     text-decoration: underline;
+    color: var(--text);
+    background: none;
+    border: none;
 }
 .filter-date-button:not(.filter-date-button-disabled):hover {
     opacity: 0.65;

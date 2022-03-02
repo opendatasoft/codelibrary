@@ -42,7 +42,7 @@
             {{ localctxfields[field.name] = field.label; '' }}
           </span>
 
-          <div ng-show="!$parent.$parent.$parent.$parent.$parent || blocks">
+          <div ng-if="!$parent.$parent.$parent.$parent.$parent || blocks">
             <span ng-repeat="filter in filters">
             {{ localctx.parameters['refine.' + filter.id] = activeFilters[filter.id] ; '' }}
             </span>
@@ -89,15 +89,14 @@
 
                   <div class="clear-filters"
                        ng-show="(activeFilters | values).join('') || localctx.parameters['geofilter.distance'] || localctx.parameters['geofilter.polygon']">
-                      <div class="clear-filters-button"
-                           role="button"
+                      <button class="clear-filters-button"
                            ng-click="activeFilters = {};
                                      localctx.parameters['geofilter.distance'] = undefined;
                                      localctx.parameters['geofilter.polygon'] = undefined;
                                      localctx.parameters['start'] = undefined">
                           {{ resetFiltersButtonLabel }}
                           <i class="fa fa-times-circle" aria-hidden="true"></i>
-                      </div>
+                      </button>
                   </div>
               </div>
 
@@ -141,7 +140,10 @@
                   </ods-date-range-slider>
 
                   <!-- le click sur toute la période resette la période choisie sur la date min et max -->
-                  <div ng-if="resetFiltersButton && values.periode.min && values.periode.max" class="filter-date-button"
+                  <button ng-if="resetFiltersButton && values.periode.min && values.periode.max"
+                          ng-disabled="values.periode.minselection == values.periode.min &&
+                                       values.periode.maxselection == values.periode.max"
+                       class="filter-date-button"
                        ng-class="{'filter-date-button-disabled':
                                    values.periode.minselection == values.periode.min &&
                                    values.periode.maxselection == values.periode.max}"
@@ -149,7 +151,7 @@
                                  values.periode.maxselection = values.periode.max;
                                  localctx.parameters['start'] = undefined">
                       Toute la période <i class="fa fa-arrows-h" aria-hidden="true"></i>
-                  </div>
+                  </button>
 
               </div>
           </div>
@@ -160,6 +162,7 @@
                    ng-repeat="kpi in kpis">
                   <!-- KPI box component -->
                   <div class="kpi-card"
+                       tabindex="0"
                        ods-adv-analysis="agg"
                        ods-adv-analysis-context="localctx"
                        ods-adv-analysis-select="{{ kpi.select }} as x">
@@ -206,7 +209,8 @@
                       </tr>
                       </thead>
                       <tbody>
-                      <tr ng-repeat="item in items">
+                      <tr tabindex="0"
+                          ng-repeat="item in items">
                           <td ng-if="!fieldsList[0].field"
                               ng-repeat="field in fieldsList"
                               style="max-width: calc(100vw / {{ fieldsList.length }});"
@@ -281,6 +285,7 @@
                                                result-class="{{ 'col-md-' + (12/(mapView?1:itemsPerRow)) }} margin-bottom-20"
                                                no-results-message="{{ noResultMsg }}">
                       <div class="content-card"
+                           tabindex="0"
                            ng-class="{'content-card-horizontal': imagePosition === 'left' }">
                           <div class="content-card-img"
                                ng-if="item.fields[$parent.$parent.$parent.$parent.$parent.fieldPhoto]"

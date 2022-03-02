@@ -14,7 +14,7 @@
               fieldDefaultRangeStartsNow = false;
 
               view = 'cards';
-              fieldsList = ['titre','collection','genre','format','date'];
+              fieldsList = ['collection','genre','format','date'];
               fieldLink = 'wikipedia';
               fieldLinkLabel = 'Lire l\'article';
 
