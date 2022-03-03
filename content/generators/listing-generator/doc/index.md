@@ -27,7 +27,7 @@ A simple page containing a variable declaration into an ng-init directive:
 </div> 
 ```
 
-- `title` is a variable, and `Any text here...` it's value
+- `title` is a variable, and `Any text here...` its value
 
 The value is then between quotes `'`.
 

@@ -6,13 +6,14 @@ nocode: true
 ---
 
 ### V3.0
-- The listing generator is now fully compatible for pages, custom views and embeds.
+- The listing generator is now fully compatible with pages, custom views and embeds: the some code can be copy/pasted from a page to a custom view and vice versa.
 - Add `mapView` option to activate a map (in `cards` view)
 - Add pagination module for `table` view
 - Add infinite scroll for `cards` view
 - Set a label parameter for the "access to source" link
 - Filters can now have a `label` option, to rename the field label and propose as a placeholder for the select.
 - Field can now have a `label` option, to rename the field label in the view. In `cards` view, the label can be an empty string `''`.
+- A KPI bloc now relies fully on Explore API V2. Therefore, they no longer need a `function` and `expression` and will now use a `select` parameter.
 
 ### V2.2
 - Add `sort` param
