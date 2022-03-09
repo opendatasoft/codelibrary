@@ -123,11 +123,11 @@
         (selected.communes | toObject:'code' | keys);
         ""}}
     </div>
-
-    <button ng-if="selected.regions.length > 0 ||
+<div ng-if="selected.regions.length > 0 ||
                        selected.departements.length > 0 ||
                        selected.epcis.length > 0 ||
-                       selected.communes.length > 0"
+                       selected.communes.length > 0">
+    <button class="clear-filters-button"
             ng-click="selected.regions.length = 0;
                           selected.departements.length = 0;
                           selected.epcis.length = 0;
@@ -137,7 +137,8 @@
                           values.communes.length = 0;">
         Reset selection
     </button>
-
+    <i class="fa fa-times-circle" aria-hidden="true"></i>
+    </div>
     <h2>Structure de la population, par CSP et activité, en 2017</h2>
     <ods-chart align-month="true">
         <ods-chart-query context="ctx" field-x="year" maxpoints="0" series-breakdown="variable_label">

@@ -316,6 +316,12 @@ The transform applied to value is of the type &lt;code&gt;y = x^k&lt;/code&gt; w
           
           <guid>https://codelibrary.opendatasoft.com/widget-tricks/ods-select/#drilldown-select-for-geographical-levels</guid>
           <description>&lt;p&gt;A reuse of &lt;code&gt;ods-select&lt;/code&gt; to create filters based on a serie of geographical levels.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;IMPORTANT&lt;/strong&gt;: This example integrates advanced parameters that can be customized:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;disabled&lt;/code&gt; parameter in &lt;code&gt;ods-select&lt;/code&gt;: used to disable the filter if the condition is true. In the example, the filter is disabled when the previous filter is not activated.&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;on-change&lt;/code&gt; parameter in &lt;code&gt;ods-select&lt;/code&gt;: used to clear previous filters on the context &lt;code&gt;ctx&lt;/code&gt; when a new selection is made. In the example, it enables you to select a région, a département, and then switch to another région, without having to clear the filter département.&lt;/li&gt;
+&lt;li&gt;Angular expressions after each &lt;code&gt;ods-select&lt;/code&gt;: used to sync the selection on all the geographical levels. In the example, it enables you to have a list of département filter on the région selected.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; you will need to create one context for each geographical level, in order to keep the full list of the items after the refine.&lt;/p&gt;
 &lt;/blockquote&gt;

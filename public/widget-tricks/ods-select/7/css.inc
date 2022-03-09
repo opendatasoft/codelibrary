@@ -10,3 +10,22 @@
 .odswidget-select {
     min-width: 200px;
 }
+
+/***** Clear filters button *****/
+
+.clear-filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.clear-filters-button {
+  background: none;
+  border: none;
+  color: var(--text);
+}
+
+.clear-filters-button:hover {
+  opacity: 0.65;
+}
