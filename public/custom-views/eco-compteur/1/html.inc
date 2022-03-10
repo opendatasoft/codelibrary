@@ -327,6 +327,9 @@
             'heure':'hour'
             }; ''
             }}
+            <!-- To translate the app, in the few lines above, rename the time scales 'mois', 'jour', 'heure'.
+                Pay attention to not modify the english keywords 'month', 'day', 'hour' as they are API parameters.
+            -->
             <div class="tabs">
                 <div class="tab"
                      ng-repeat="(i,e) in tabs"
@@ -352,19 +355,19 @@
                                                "mark": "rect",
                                                "encoding": {
                                                "y": {
-                                               "title": "Day",
+                                               "title": "Jour",
                                                "field": "day",
                                                "type": "ordinal",
                                                "sort": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday",
                                                "lundi","mardi","mercredi","jeudi","vendredi","samedi","dimanche"],
                                                },
                                                "x": {
-                                               "title": "Hour",
+                                               "title": "Heure",
                                                "field": "hour",
                                                "type": "ordinal",
                                                },
                                                "color": {
-                                               "title": "Hourly average",
+                                               "title": "Moyenne horaire",
                                                "field": "count",
                                                "type": "quantitative",
                                                "scale": { "range": ["#FFFFFF", "#142E7B"] }
@@ -374,7 +377,7 @@
                     </div>
                 </div>
                 <div class="tab-content"
-                     ng-if="values.activetab == 'mois' || values.activetab == 'jour' || values.activetab == 'heure'">
+                     ng-if="(histoscale | keys).indexOf(values.activetab) >= 0">
                     <ods-chart class="no-bg medium-y-values medium-x-values hide-y-legend" display-legend="false">
                         <ods-chart-query context="ctx" field-x="date"
                                          timescale="{{ histoscale[values.activetab] }}">

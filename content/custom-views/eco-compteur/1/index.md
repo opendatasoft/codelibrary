@@ -38,3 +38,4 @@ Get additional metadata from counters
   - remote key: `id`
   - output fields: `name, coordinates, user_type, sens, interval`
   
+Set `name` field as a facet !
