@@ -1,11 +1,11 @@
-**Dataset in use:** `georef-france-commune` [(See it on public domain)](https://public.opendatasoft.com/explore/dataset/georef-france-commune/table/)
+**Dataset in use:** `demographyref-france-pop-active-sexe-activite-commune-millesime` [(See it on public domain)](https://public.opendatasoft.com/explore/dataset/demographyref-france-pop-active-sexe-activite-commune-millesime/table/)
 
 **Fields in use:**
 
-|com_name|com_code|epci_name|dep_name|reg_name|
-|---|---|---|---|---|
-|Aubignosc|04013|CC Jabron-Lure-Vançon-Durance|Alpes-de-Haute-Provence|Provence-Alpes-Côte d'Azur|
-|Mallemoisson|04110|CA Provence-Alpes-Agglomération|Alpes-de-Haute-Provence|Provence-Alpes-Côte d'Azur|
-|Montagnac-Montpezat|04124|CA Durance-Lubéron-Verdon Agglomération|Alpes-de-Haute-Provence|Provence-Alpes-Côte d'Azur|
-|Pontis|04154|CC Serre-Ponçon|Alpes-de-Haute-Provence|Provence-Alpes-Côte d'Azur|
+|com_arm_code|com_arm_name|dep_code|geo_year|variable_label|value|
+|---|---|---|---|---|---|
+|77112|Chevrainvilliers|77|2017|Hommes Chômeurs|0.0|
+|77119|Clos-Fontaine|77|2017|Hommes Actifs ayant un emploi|47.7217741935484|
+|77129|Coulombs-En-Valois|77|2017|Hommes Actifs ayant un emploi|88.919381053595|
+|77131|Coulommiers|77|2017|Hommes Actifs ayant un emploi|2055.885349748551|
 
