@@ -48,7 +48,10 @@
   color: var(--links)
 }
 
-
+/* Results bloc */
+.search-results {
+  min-height: 50px;
+}
 
 /* Display results */
 
@@ -88,6 +91,16 @@
   align-items: center;
   color: #4a4a4a;
   padding: 2px 5px;
+}
+
+/* Clear selection */
+.clear-filters-button {
+    background: none;
+    border: none;
+    color: var(--text);
+}
+.clear-filters-button:hover {
+    opacity: 0.65;
 }
 
 /* Content Card

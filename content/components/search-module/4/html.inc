@@ -1,8 +1,8 @@
 <ods-dataset-context context="ctx"
-                     ctx-dataset="georef-france-commune"
+                     ctx-dataset="demographyref-france-pop-active-sexe-activite-commune-millesime"
                      ctx-domain="public">
-                     <div  ods-results="results"
-                ods-results-context="ctx">
+                     <div  ods-adv-analysis="results" ods-adv-analysis-context="ctx" ods-adv-analysis-select="count(*)"
+    ods-adv-analysis-group-by="com_arm_name,com_arm_code,dep_code">
     <div class="search-module">
         <div class="search-bar">
             <i class="fa fa-search search-bar-icon" aria-hidden="true"></i>
@@ -13,21 +13,21 @@
                    aria-label="search-as-you-type: type some characters to make a search"
                    aria-expanded="{{ variables.recherche != undefined }}"
                    aria-controls="search-results"
-                   placeholder="Search in dataset"
+                   placeholder="Search for a city"
                    ng-model="variables.recherche"
-                   ng-model-options="{ updateOn: 'keyup', debounce: { 'default': 600, 'blur': 0 }}"
-                   ng-change="variables.recherche ? (ctx.parameters['q']= ('#search(com_name,\'' + variables.recherche + '\')' )) : (ctx.parameters['refine.com_code'] = undefined);"
+                   ng-model-options="{ updateOn: 'keyup', debounce: 400}"
+                   ng-change="variables.recherche ? (ctx.parameters['q']= ('#search(com_arm_name,\'' + variables.recherche + '\')' )) : (ctx.parameters['refine.com_arm_code'] = undefined);"
                    class="search-bar-input"
                    type="text"/>
             <button aria-label="Clear search"
                     class="search-bar-clear"
                     ng-if="ctx.parameters['q']"
-                    ng-click="ctx.parameters['q'] = undefined; ctx.parameters['refine.com_code']=undefined; variables.recherche=undefined">
+                    ng-click="ctx.parameters['q'] = undefined; ctx.parameters['refine.com_arm_code']=undefined; variables.recherche=undefined">
                 <i class="fa fa-times-circle" aria-hidden="true"></i>
                 <span class="sr-only">Clear search</span>
             </button>
         </div>
-                {{ctx.parameters['q'] = (variables.recherche.length>0 ? ('#search(com_name,\'' + variables.recherche + '\')' ) : undefined ) ; '' }}        
+                {{ctx.parameters['q'] = (variables.recherche.length>0 ? ('#search(com_arm_name,\'' + variables.recherche + '\')' ) : undefined ) ; '' }}        
         <div class="search-results">
             <span class="sr-only">
                 Search results will be displayed bellow, as a list of external links
@@ -46,11 +46,17 @@
                 <li ng-repeat="(i,item) in results"
                     ng-if="ctx.parameters['q'] && i <= 9"
                     role="listitem">
-                    <div ng-click="ctx.parameters['refine.com_code']=item.fields.com_code">
-                        {{item.fields.com_name }} ({{item.fields.dep_name }}) <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    <div ng-click="ctx.parameters['refine.com_arm_code'] = item.com_arm_code">
+                        {{item.com_arm_name }} ({{item.dep_code }}) <i class="fa fa-map-marker" aria-hidden="true"></i>
                         <span class="sr-only">Filter on the selected city</span>
                     </a>
                 </li>
+                <button class="clear-filters-button"
+                          ng-if="ctx.parameters['refine.com_arm_code']"
+                          ng-click="ctx.parameters['refine.com_arm_code'] = undefined">
+                          Clear selection
+                      <i class="fa fa-times-circle" aria-hidden="true"></i>
+                  </button>
                 <li class="more-than-ten"
                     role="listitem"
                     ng-if="ctx.parameters['q'] && results.length > 10">
@@ -59,29 +65,10 @@
             </ul>
         </div>
     </div>
-    <h2 class="content-card-title" ng-if="!ctx.parameters['refine.com_code']">Search and select a city</h2>
-    <div class="row content-card" ng-if="ctx.parameters['refine.com_code']">     
-    <div class="col-md-5">           
-    <h2 class="content-card-title">
-                    Commune sélectionnée : {{results[0].fields.com_name}}
-                </h2>
-                <div class="content-card-fields">
-                <dl>
-                <dt>  EPCI  </dt>
-                <dd>{{ results[0].fields.epci_name }} </dd>
-                <dt>
-                   Département </dt>
-                   <dd>{{ results[0].fields.dep_name }}
-</dd>
-                <dt>
-                   Région </dt>
-                   <dd>{{ results[0].fields.reg_name }}
-                </dd>
-                </dl>
-                </div>
-                </div>
-                <div class="col-md-7">
-    <ods-map context="ctx" scroll-wheel-zoom="false" basemap="jawg.light"></ods-map>
-                </div>
-                </div>
+    <ods-chart timescale="year" align-month="true">
+        <ods-chart-query context="ctx" field-x="geo_year" maxpoints="0" timescale="year" series-breakdown="variable_label">
+            <ods-chart-serie expression-y="value" chart-type="column" function-y="SUM" label-y="Nombre de personnes" color="Paired" display-values="false" scientific-display="true">
+            </ods-chart-serie>
+        </ods-chart-query>
+    </ods-chart>
 </ods-dataset-context>
