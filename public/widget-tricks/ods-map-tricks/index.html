@@ -193,6 +193,12 @@
           </a>
         </li>
         
+        <li>
+          <a href="#replace-map-tooltip-with-a-refine--see-the-aggregation-">
+            Replace map tooltip with a refine : see the aggregation !
+          </a>
+        </li>
+        
       </ul>
     </div>
   </div>
@@ -629,10 +635,6 @@
               <div>
                 ods-select
                 
-                
-                <span class="tag pill is-size-7 is-rounded is-info">
-                  1
-                </span>
                 
               </div>
             </a>
@@ -4238,6 +4240,971 @@ In this example, modals are simple html blocs, displayed when a refine is active
 }
 .pop-in-list dd {
     margin: 0;
+}
+</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+                </div>
+            
+        </article>
+        
+        <article class="block">
+            <h2 class="title is-2" id="replace-map-tooltip-with-a-refine--see-the-aggregation-">
+                Replace map tooltip with a refine : see the aggregation ! 
+                <a class="is-link anchor" href="#replace-map-tooltip-with-a-refine--see-the-aggregation-">
+            <span class="icon">
+              <img src="/img/fas-link.svg"/>
+            </span>
+                </a>
+            </h2>
+            <div class="content">
+                <p>In this example, in combination with <a href="/widget-tricks/ods-color-gradient/"><code>ods-color-gradient</code> to display a choropleth map</a>, the <code>refineOnClick</code> is used to select a department and activate KPI cards on top of the map.</p>
+<ul>
+<li>the first KPI card displays the aggregation result from <code>ods-color-gradient</code> and display it&rsquo;s value</li>
+<li>the second KPI card get the name of the selected department, through an <code>ods-results</code> on the refined context</li>
+<li>the third KPI card computes a new aggregation with <code>ods-adv-analysis</code></li>
+</ul>
+
+            </div>
+            
+            
+                <div class="box">
+                    
+
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+
+
+
+
+<div class="codepen">
+    <form id="form-replace-map-tooltip-with-a-refine--see-the-aggregation-"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+                 "title": "New Pen!",
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "editors": 110,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;container\&#34;\u003e\n    \u003cods-dataset-context context=\&#34;georef,datactx,refinectx\&#34;\n                         georef-dataset=\&#34;departements-et-collectivites-doutre-mer-france\&#34;\n                         georef-domain=\&#34;userclub\&#34;\n                         refinectx-dataset=\&#34;departements-et-collectivites-doutre-mer-france\&#34;\n                         refinectx-domain=\&#34;userclub\&#34;\n                         datactx-dataset=\&#34;healthref-france-finess\&#34;\n                         datactx-parameters=\&#34;{&#39;refine.libelle_categorie_d_etablissement&#39;:&#39;Pharmacie d\\&#39;Officine&#39;}\&#34;\n                         datactx-domain=\&#34;userclub\&#34;\n                         values={}\u003e\n\n        \u003cdiv ods-color-gradient=\&#34;colorgradient\&#34;\n             ods-color-gradient-context=\&#34;datactx\&#34;\n             ods-color-gradient-x=\&#34;departement\&#34;\n             ods-color-gradient-serie=\&#34;COUNT()\&#34;\u003e\n\n            \u003ch3\u003e\n                Number of pharmacies by department\n            \u003c/h3\u003e\n            \u003cp\u003e\n                Click on a department for more details\n            \u003c/p\u003e\n            \u003cdiv class=\&#34;map-container\&#34;\u003e\n                \u003cods-map basemap=\&#34;streets\&#34; style=\&#34;height:550px\&#34; no-refit=\&#34;true\&#34;\u003e\n                    \u003cods-map-layer context=\&#34;georef\&#34;\n                                   color-categories=\&#34;colorgradient[&#39;colors&#39;]\&#34;\n                                   color-by-field=\&#34;dep_code\&#34;\n                                   color-categories-other=\&#34;lightgrey\&#34;\n                                   display=\&#34;categories\&#34;\n                                   shape-opacity=\&#34;0.95\&#34;\n                                   refine-on-click-context=\&#34;refinectx\&#34;\n                                   refine-on-click-refinectx-replace-refine=\&#34;true\&#34;\n                                   refine-on-click-refinectx-map-field=\&#34;dep_code\&#34;\n                                   refine-on-click-refinectx-context-field=\&#34;dep_code\&#34;\u003e\u003c/ods-map-layer\u003e\n                    \u003cods-map-layer context=\&#34;refinectx\&#34;\n                                   show-if=\&#34;refinectx.parameters[&#39;refine.dep_code&#39;]\&#34;\n                                   color=\&#34;transparent\&#34;\n                                   border-color=\&#34;red\&#34;\n                                   border-opacity=\&#34;1\&#34;\n                                   border-size=\&#34;3\&#34;\u003e\u003c/ods-map-layer\u003e\n                \u003c/ods-map\u003e\n                \u003cdiv ng-if=\&#34;refinectx.parameters[&#39;refine.dep_code&#39;]\&#34;\n                     class=\&#34;kpis\&#34;\u003e\n                    \u003cdiv class=\&#34;box white flat\&#34;\u003e\n                        \u003cdiv class=\&#34;advanced-kpi\&#34;\u003e\n                            \u003cdiv class=\&#34;advanced-kpi--top\&#34;\u003e\n                                \u003ch3 class=\&#34;title\&#34;\u003e\n                                    Aggregation value\n                                \u003c/h3\u003e\n                                \u003cp class=\&#34;description\&#34;\u003e\n                                    used to color the map\n                                \u003c/p\u003e\n                            \u003c/div\u003e\n                            \u003cdiv class=\&#34;advanced-kpi--middle centered\&#34;\u003e\n                                \u003cp class=\&#34;value\&#34;\u003e\n                                    {{ colorgradient[&#39;values&#39;][refinectx.parameters[&#39;refine.dep_code&#39;]] | number }}\n                                \u003c/p\u003e\n                            \u003c/div\u003e\n                            \u003cdiv class=\&#34;advanced-kpi--bottom\&#34;\u003e\n                                Selected key : {{ refinectx.parameters[&#39;refine.dep_code&#39;].join(&#39;&#39;) || refinectx.parameters[&#39;refine.dep_code&#39;] }}\n                            \u003c/div\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n\n                    \u003cdiv class=\&#34;box white flat\&#34;\u003e\n                        \u003cdiv class=\&#34;advanced-kpi\&#34;\u003e\n                            \u003cdiv class=\&#34;advanced-kpi--top\&#34;\u003e\n                                \u003ch3 class=\&#34;title\&#34;\u003e\n                                    Department name\n                                \u003c/h3\u003e\n                                \u003cp class=\&#34;description\&#34;\u003e\n                                    from the filtered geo ref context\n                                \u003c/p\u003e\n                            \u003c/div\u003e\n                            \u003cdiv class=\&#34;advanced-kpi--middle centered\&#34;\u003e\n                                \u003cp class=\&#34;value\&#34;\n                                   ods-results=\&#34;results\&#34;\n                                   ods-results-max=\&#34;1\&#34;\n                                   ods-results-context=\&#34;refinectx\&#34;\u003e\n                                    {{ results[0].fields.dep_name }}\n                                \u003c/p\u003e\n                            \u003c/div\u003e\n                            \u003cdiv class=\&#34;advanced-kpi--bottom\&#34;\u003e\n                                Value from an ods-results\n                            \u003c/div\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n\n                    \u003cdiv class=\&#34;box white flat\&#34;\u003e\n                        \u003cdiv class=\&#34;advanced-kpi\&#34;\u003e\n                            \u003cdiv class=\&#34;advanced-kpi--top\&#34;\n                                 ods-results=\&#34;results\&#34;\n                                 ods-results-max=\&#34;1\&#34;\n                                 ods-results-context=\&#34;refinectx\&#34;\u003e\n                                \u003ch3 class=\&#34;title\&#34;\u003e\n                                    % of pharmacies in France\n                                \u003c/h3\u003e\n                                \u003cp class=\&#34;description\&#34;\u003e\n                                    in {{ results[0].fields.dep_name }}\n                                \u003c/p\u003e\n                            \u003c/div\u003e\n                            \u003cdiv class=\&#34;advanced-kpi--middle centered\&#34;\n                                 ods-adv-analysis=\&#34;dataanalysis\&#34;\n                                 ods-adv-analysis-context=\&#34;datactx\&#34;\n                                 ods-adv-analysis-select=\&#34;count(*) as count\&#34;\u003e\n                                \u003cp class=\&#34;value\&#34;\u003e\n                                    {{ colorgradient[&#39;values&#39;][refinectx.parameters[&#39;refine.dep_code&#39;]] / dataanalysis[0].count * 100 | number : 1 }} %\n                                \u003c/p\u003e\n                            \u003c/div\u003e\n                            \u003cdiv class=\&#34;advanced-kpi--bottom\&#34;\u003e\n                                Aggregation compared with an analysis on the data context\n                            \u003c/div\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\n\u003c/div\u003e&#34;,
+                 "css": &#34;.map-container {\n    position: relative;\n}\n\n.kpis {\n    position: absolute;\n    bottom: 20px;\n    width: 100%;\n    display: flex;\n    justify-content: space-around;\n}\n\n.box {\n    position: relative;\n    padding: 13px;\n    width: 30%;\n    z-index: 10;\n}\n\n.box.white {\n    background-color: white;\n}\n\n.box.flat {\n    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);\n    border-radius: var(--boxes-radius);\n}\n\n.advanced-kpi {\n    height: 100%;\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n}\n\n.advanced-kpi--top .title {\n    font-size: 1.2em;\n    margin: 0;\n}\n\n.advanced-kpi--top .description {\n    margin: 0 auto;\n    color: #565656;\n    font-size: 1em;\n    font-weight: 400;\n}\n\n.advanced-kpi--middle {\n    display: flex;\n    flex-direction: column;\n    margin: 5px 0;\n}\n\n.advanced-kpi--middle.centered {\n    align-items: center;\n}\n\n.advanced-kpi--middle \u003e * {\n    margin: 5px 0;\n}\n\n.advanced-kpi--middle .value {\n    color: var(--highlight);\n    font-weight: 500;\n    font-size: 2rem;\n}\n\n.advanced-kpi--bottom {\n    font-size: 0.8em;\n}\n&#34;
+               }'>
+    </form>
+</div>
+<div class="ods-content">
+    <div class="box-live-example"
+      style="height: 700px;">
+      <iframe id="iframe-replace-map-tooltip-with-a-refine--see-the-aggregation-"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+                <head>
+                    &lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;
+/&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;
+/&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;
+&gt;&lt;/script&gt;
+
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;
+&gt;&lt;/script&gt;
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;
+&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+  const sourceMonitoringInterceptor = $q =&gt; {
+    return {
+      request: config =&gt; {
+        console.log(config.url);
+        if (config.params)
+          if (config.params.source) delete config.params.source;
+
+        config.url = config.url.replace(
+          &#34;ods-api-monitoring&#34;,
+          &#34;monitoring-copy&#34;
+        );
+        return config;
+      }
+    };
+  };
+
+  angular
+    .module(&#34;ods-widgets&#34;)
+    .config(function(ODSWidgetsConfigProvider, $httpProvider) {
+      ODSWidgetsConfigProvider.setConfig({
+        defaultDomain: &#34;https://userclub.opendatasoft.com/&#34;,
+        basemaps: [
+          {
+            provider: &#34;jawg.light&#34;,
+            label: &#34;Jawg Light&#34;,
+            jawg_apikey: &#34;opendatasoft-community&#34;
+          },
+          {
+            provider: &#34;jawg.streets&#34;,
+            label: &#34;Jawg Streets&#34;,
+            jawg_apikey: &#34;opendatasoft-community&#34;,
+            id: &#34;streets&#34;
+          }
+        ],
+        themes: {
+          default: {
+            url: &#34;/img/ods.svg&#34;
+          },
+          Santé: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Culture, Patrimoine&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Éducation, Formation, Recherche, Enseignement&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Environment: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Transports, Déplacements&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Économie, Business, PME, Développement économique, Emploi&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Administration, Gouvernement, Finances publiques, Citoyenneté&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Justice, Sécurité, Police, Crime&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Sport, Loisirs&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Hébergement, Restauration&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Services, Social&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Checklist: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Usages: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#34;,
+            color: &#34;#1446A0&#34;
+          }
+        },
+        mapPrependAttribution: &#34;Jawg apikey NOT suitable for production&#34;
+      });
+      $httpProvider.interceptors.push(sourceMonitoringInterceptor);
+    });
+&lt;/script&gt;
+
+                    
+                </head>
+                <base href='https://userclub.opendatasoft.com/'>
+                <body>
+                <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
+&lt;div class=&#34;container&#34;&gt;
+    &lt;ods-dataset-context context=&#34;georef,datactx,refinectx&#34;
+                         georef-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
+                         georef-domain=&#34;userclub&#34;
+                         refinectx-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
+                         refinectx-domain=&#34;userclub&#34;
+                         datactx-dataset=&#34;healthref-france-finess&#34;
+                         datactx-parameters=&#34;{&#39;refine.libelle_categorie_d_etablissement&#39;:&#39;Pharmacie d\&#39;Officine&#39;}&#34;
+                         datactx-domain=&#34;userclub&#34;
+                         values={}&gt;
+
+        &lt;div ods-color-gradient=&#34;colorgradient&#34;
+             ods-color-gradient-context=&#34;datactx&#34;
+             ods-color-gradient-x=&#34;departement&#34;
+             ods-color-gradient-serie=&#34;COUNT()&#34;&gt;
+
+            &lt;h3&gt;
+                Number of pharmacies by department
+            &lt;/h3&gt;
+            &lt;p&gt;
+                Click on a department for more details
+            &lt;/p&gt;
+            &lt;div class=&#34;map-container&#34;&gt;
+                &lt;ods-map basemap=&#34;streets&#34; style=&#34;height:550px&#34; no-refit=&#34;true&#34;&gt;
+                    &lt;ods-map-layer context=&#34;georef&#34;
+                                   color-categories=&#34;colorgradient[&#39;colors&#39;]&#34;
+                                   color-by-field=&#34;dep_code&#34;
+                                   color-categories-other=&#34;lightgrey&#34;
+                                   display=&#34;categories&#34;
+                                   shape-opacity=&#34;0.95&#34;
+                                   refine-on-click-context=&#34;refinectx&#34;
+                                   refine-on-click-refinectx-replace-refine=&#34;true&#34;
+                                   refine-on-click-refinectx-map-field=&#34;dep_code&#34;
+                                   refine-on-click-refinectx-context-field=&#34;dep_code&#34;&gt;&lt;/ods-map-layer&gt;
+                    &lt;ods-map-layer context=&#34;refinectx&#34;
+                                   show-if=&#34;refinectx.parameters[&#39;refine.dep_code&#39;]&#34;
+                                   color=&#34;transparent&#34;
+                                   border-color=&#34;red&#34;
+                                   border-opacity=&#34;1&#34;
+                                   border-size=&#34;3&#34;&gt;&lt;/ods-map-layer&gt;
+                &lt;/ods-map&gt;
+                &lt;div ng-if=&#34;refinectx.parameters[&#39;refine.dep_code&#39;]&#34;
+                     class=&#34;kpis&#34;&gt;
+                    &lt;div class=&#34;box white flat&#34;&gt;
+                        &lt;div class=&#34;advanced-kpi&#34;&gt;
+                            &lt;div class=&#34;advanced-kpi--top&#34;&gt;
+                                &lt;h3 class=&#34;title&#34;&gt;
+                                    Aggregation value
+                                &lt;/h3&gt;
+                                &lt;p class=&#34;description&#34;&gt;
+                                    used to color the map
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&#34;advanced-kpi--middle centered&#34;&gt;
+                                &lt;p class=&#34;value&#34;&gt;
+                                    {{ colorgradient[&#39;values&#39;][refinectx.parameters[&#39;refine.dep_code&#39;]] | number }}
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&#34;advanced-kpi--bottom&#34;&gt;
+                                Selected key : {{ refinectx.parameters[&#39;refine.dep_code&#39;].join(&#39;&#39;) || refinectx.parameters[&#39;refine.dep_code&#39;] }}
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&#34;box white flat&#34;&gt;
+                        &lt;div class=&#34;advanced-kpi&#34;&gt;
+                            &lt;div class=&#34;advanced-kpi--top&#34;&gt;
+                                &lt;h3 class=&#34;title&#34;&gt;
+                                    Department name
+                                &lt;/h3&gt;
+                                &lt;p class=&#34;description&#34;&gt;
+                                    from the filtered geo ref context
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&#34;advanced-kpi--middle centered&#34;&gt;
+                                &lt;p class=&#34;value&#34;
+                                   ods-results=&#34;results&#34;
+                                   ods-results-max=&#34;1&#34;
+                                   ods-results-context=&#34;refinectx&#34;&gt;
+                                    {{ results[0].fields.dep_name }}
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&#34;advanced-kpi--bottom&#34;&gt;
+                                Value from an ods-results
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&#34;box white flat&#34;&gt;
+                        &lt;div class=&#34;advanced-kpi&#34;&gt;
+                            &lt;div class=&#34;advanced-kpi--top&#34;
+                                 ods-results=&#34;results&#34;
+                                 ods-results-max=&#34;1&#34;
+                                 ods-results-context=&#34;refinectx&#34;&gt;
+                                &lt;h3 class=&#34;title&#34;&gt;
+                                    % of pharmacies in France
+                                &lt;/h3&gt;
+                                &lt;p class=&#34;description&#34;&gt;
+                                    in {{ results[0].fields.dep_name }}
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&#34;advanced-kpi--middle centered&#34;
+                                 ods-adv-analysis=&#34;dataanalysis&#34;
+                                 ods-adv-analysis-context=&#34;datactx&#34;
+                                 ods-adv-analysis-select=&#34;count(*) as count&#34;&gt;
+                                &lt;p class=&#34;value&#34;&gt;
+                                    {{ colorgradient[&#39;values&#39;][refinectx.parameters[&#39;refine.dep_code&#39;]] / dataanalysis[0].count * 100 | number : 1 }} %
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&#34;advanced-kpi--bottom&#34;&gt;
+                                Aggregation compared with an analysis on the data context
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/ods-dataset-context&gt;
+&lt;/div&gt;
+&lt;/div&gt;</div>
+                <style type='text/css'>
+                    .map-container {
+    position: relative;
+}
+
+.kpis {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.box {
+    position: relative;
+    padding: 13px;
+    width: 30%;
+    z-index: 10;
+}
+
+.box.white {
+    background-color: white;
+}
+
+.box.flat {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);
+    border-radius: var(--boxes-radius);
+}
+
+.advanced-kpi {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.advanced-kpi--top .title {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.advanced-kpi--top .description {
+    margin: 0 auto;
+    color: #565656;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.advanced-kpi--middle {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+}
+
+.advanced-kpi--middle.centered {
+    align-items: center;
+}
+
+.advanced-kpi--middle &gt; * {
+    margin: 5px 0;
+}
+
+.advanced-kpi--middle .value {
+    color: var(--highlight);
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.advanced-kpi--bottom {
+    font-size: 0.8em;
+}
+
+                </style>
+                </body>
+              ">
+      </iframe>
+      <div class="buttons has-addons">
+          
+              <button id="tab-show-schema" aria-controls="panel-show-schema"
+                      class="show-schema button is-light"
+                      title="Show the data schema of the dataset used in this resource">
+                  <span>See fields in use</span>
+              </button>
+          
+          <button id="tab-show-code" aria-controls="panel-show-code"
+                  class="show-code button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-replace-map-tooltip-with-a-refine--see-the-aggregation-').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    
+        <div id="panel-show-schema" aria-labelledby="tab-show-schema" aria-hidden
+             class="box-schema is-hidden">
+            <div class="content">
+                <p><strong>Dataset in use:</strong> <code>healthref-france-finess</code> <a href="https://userclub.opendatasoft.com/explore/dataset/healthref-france-finess/table/">(See it on userclub domain)</a></p>
+<p><strong>Fields in use:</strong></p>
+<table>
+<thead>
+<tr>
+<th>libelle_categorie_d_etablissement</th>
+<th>departement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Centre de Jour pour Personnes Agées</td>
+<td>68</td>
+</tr>
+<tr>
+<td>Entreprise adaptée</td>
+<td>68</td>
+</tr>
+<tr>
+<td>Pharmacie d&rsquo;Officine</td>
+<td>68</td>
+</tr>
+<tr>
+<td>Pharmacie d&rsquo;Officine</td>
+<td>68</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Dataset in use:</strong> <code>departements-et-collectivites-doutre-mer-france</code> <a href="https://userclub.opendatasoft.com/explore/dataset/departements-et-collectivites-doutre-mer-france/table/">(See it on userclub domain)</a></p>
+<p><strong>Fields in use:</strong></p>
+<table>
+<thead>
+<tr>
+<th>dep_code</th>
+<th>geo_shape</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>42</td>
+<td>&ldquo;{&ldquo;&ldquo;coordinates&rdquo;&quot;: [[[4.483136621396388, 45.23656983554515], [4.509202633532227, 45.23117302861005], [4.51960803235719</td>
+</tr>
+<tr>
+<td>93</td>
+<td>&ldquo;{&ldquo;&ldquo;coordinates&rdquo;&quot;: [[[2.319887174744136, 48.900459782103866], [2.384530045616338, 48.90214759336665], [2.3976678263491</td>
+</tr>
+<tr>
+<td>50</td>
+<td>&ldquo;{&ldquo;&ldquo;coordinates&rdquo;&quot;: [[[-1.140276171655211, 49.30875558686156], [-1.114128814321206, 49.32691733740976], [-1.118082843973</td>
+</tr>
+<tr>
+<td>58</td>
+<td>&ldquo;{&ldquo;&ldquo;coordinates&rdquo;&quot;: [[[2.874491172560131, 47.52034735555759], [2.888458633258486, 47.50943098546669], [2.90038057308859</td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+        </div>
+    
+    <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
+         class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
+            <div class="level-left">
+                <div class="level-item">
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-replace-map-tooltip-with-a-refine--see-the-aggregation--html-content"
+                        >
+                          HTML
+                        </a>
+                        
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-replace-map-tooltip-with-a-refine--see-the-aggregation--css-content"
+                        >
+                          CSS
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
+            </div>
+        </nav>
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-replace-map-tooltip-with-a-refine--see-the-aggregation--html-content"
+                 data-clipboard="&lt;div class=&#34;container&#34;&gt;
+    &lt;ods-dataset-context context=&#34;georef,datactx,refinectx&#34;
+                         georef-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
+                         georef-domain=&#34;userclub&#34;
+                         refinectx-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
+                         refinectx-domain=&#34;userclub&#34;
+                         datactx-dataset=&#34;healthref-france-finess&#34;
+                         datactx-parameters=&#34;{&#39;refine.libelle_categorie_d_etablissement&#39;:&#39;Pharmacie d\&#39;Officine&#39;}&#34;
+                         datactx-domain=&#34;userclub&#34;
+                         values={}&gt;
+
+        &lt;div ods-color-gradient=&#34;colorgradient&#34;
+             ods-color-gradient-context=&#34;datactx&#34;
+             ods-color-gradient-x=&#34;departement&#34;
+             ods-color-gradient-serie=&#34;COUNT()&#34;&gt;
+
+            &lt;h3&gt;
+                Number of pharmacies by department
+            &lt;/h3&gt;
+            &lt;p&gt;
+                Click on a department for more details
+            &lt;/p&gt;
+            &lt;div class=&#34;map-container&#34;&gt;
+                &lt;ods-map basemap=&#34;streets&#34; style=&#34;height:550px&#34; no-refit=&#34;true&#34;&gt;
+                    &lt;ods-map-layer context=&#34;georef&#34;
+                                   color-categories=&#34;colorgradient[&#39;colors&#39;]&#34;
+                                   color-by-field=&#34;dep_code&#34;
+                                   color-categories-other=&#34;lightgrey&#34;
+                                   display=&#34;categories&#34;
+                                   shape-opacity=&#34;0.95&#34;
+                                   refine-on-click-context=&#34;refinectx&#34;
+                                   refine-on-click-refinectx-replace-refine=&#34;true&#34;
+                                   refine-on-click-refinectx-map-field=&#34;dep_code&#34;
+                                   refine-on-click-refinectx-context-field=&#34;dep_code&#34;&gt;&lt;/ods-map-layer&gt;
+                    &lt;ods-map-layer context=&#34;refinectx&#34;
+                                   show-if=&#34;refinectx.parameters[&#39;refine.dep_code&#39;]&#34;
+                                   color=&#34;transparent&#34;
+                                   border-color=&#34;red&#34;
+                                   border-opacity=&#34;1&#34;
+                                   border-size=&#34;3&#34;&gt;&lt;/ods-map-layer&gt;
+                &lt;/ods-map&gt;
+                &lt;div ng-if=&#34;refinectx.parameters[&#39;refine.dep_code&#39;]&#34;
+                     class=&#34;kpis&#34;&gt;
+                    &lt;div class=&#34;box white flat&#34;&gt;
+                        &lt;div class=&#34;advanced-kpi&#34;&gt;
+                            &lt;div class=&#34;advanced-kpi--top&#34;&gt;
+                                &lt;h3 class=&#34;title&#34;&gt;
+                                    Aggregation value
+                                &lt;/h3&gt;
+                                &lt;p class=&#34;description&#34;&gt;
+                                    used to color the map
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&#34;advanced-kpi--middle centered&#34;&gt;
+                                &lt;p class=&#34;value&#34;&gt;
+                                    {{ colorgradient[&#39;values&#39;][refinectx.parameters[&#39;refine.dep_code&#39;]] | number }}
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&#34;advanced-kpi--bottom&#34;&gt;
+                                Selected key : {{ refinectx.parameters[&#39;refine.dep_code&#39;].join(&#39;&#39;) || refinectx.parameters[&#39;refine.dep_code&#39;] }}
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&#34;box white flat&#34;&gt;
+                        &lt;div class=&#34;advanced-kpi&#34;&gt;
+                            &lt;div class=&#34;advanced-kpi--top&#34;&gt;
+                                &lt;h3 class=&#34;title&#34;&gt;
+                                    Department name
+                                &lt;/h3&gt;
+                                &lt;p class=&#34;description&#34;&gt;
+                                    from the filtered geo ref context
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&#34;advanced-kpi--middle centered&#34;&gt;
+                                &lt;p class=&#34;value&#34;
+                                   ods-results=&#34;results&#34;
+                                   ods-results-max=&#34;1&#34;
+                                   ods-results-context=&#34;refinectx&#34;&gt;
+                                    {{ results[0].fields.dep_name }}
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&#34;advanced-kpi--bottom&#34;&gt;
+                                Value from an ods-results
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&#34;box white flat&#34;&gt;
+                        &lt;div class=&#34;advanced-kpi&#34;&gt;
+                            &lt;div class=&#34;advanced-kpi--top&#34;
+                                 ods-results=&#34;results&#34;
+                                 ods-results-max=&#34;1&#34;
+                                 ods-results-context=&#34;refinectx&#34;&gt;
+                                &lt;h3 class=&#34;title&#34;&gt;
+                                    % of pharmacies in France
+                                &lt;/h3&gt;
+                                &lt;p class=&#34;description&#34;&gt;
+                                    in {{ results[0].fields.dep_name }}
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&#34;advanced-kpi--middle centered&#34;
+                                 ods-adv-analysis=&#34;dataanalysis&#34;
+                                 ods-adv-analysis-context=&#34;datactx&#34;
+                                 ods-adv-analysis-select=&#34;count(*) as count&#34;&gt;
+                                &lt;p class=&#34;value&#34;&gt;
+                                    {{ colorgradient[&#39;values&#39;][refinectx.parameters[&#39;refine.dep_code&#39;]] / dataanalysis[0].count * 100 | number : 1 }} %
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&#34;advanced-kpi--bottom&#34;&gt;
+                                Aggregation compared with an analysis on the data context
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/ods-dataset-context&gt;
+&lt;/div&gt;
+"
+                 role="tabpanel">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;container&#34;&gt;
+    &lt;ods-dataset-context context=&#34;georef,datactx,refinectx&#34;
+                         georef-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
+                         georef-domain=&#34;userclub&#34;
+                         refinectx-dataset=&#34;departements-et-collectivites-doutre-mer-france&#34;
+                         refinectx-domain=&#34;userclub&#34;
+                         datactx-dataset=&#34;healthref-france-finess&#34;
+                         datactx-parameters=&#34;{&#39;refine.libelle_categorie_d_etablissement&#39;:&#39;Pharmacie d\&#39;Officine&#39;}&#34;
+                         datactx-domain=&#34;userclub&#34;
+                         values={}&gt;
+
+        &lt;div ods-color-gradient=&#34;colorgradient&#34;
+             ods-color-gradient-context=&#34;datactx&#34;
+             ods-color-gradient-x=&#34;departement&#34;
+             ods-color-gradient-serie=&#34;COUNT()&#34;&gt;
+
+            &lt;h3&gt;
+                Number of pharmacies by department
+            &lt;/h3&gt;
+            &lt;p&gt;
+                Click on a department for more details
+            &lt;/p&gt;
+            &lt;div class=&#34;map-container&#34;&gt;
+                &lt;ods-map basemap=&#34;streets&#34; style=&#34;height:550px&#34; no-refit=&#34;true&#34;&gt;
+                    &lt;ods-map-layer context=&#34;georef&#34;
+                                   color-categories=&#34;colorgradient[&#39;colors&#39;]&#34;
+                                   color-by-field=&#34;dep_code&#34;
+                                   color-categories-other=&#34;lightgrey&#34;
+                                   display=&#34;categories&#34;
+                                   shape-opacity=&#34;0.95&#34;
+                                   refine-on-click-context=&#34;refinectx&#34;
+                                   refine-on-click-refinectx-replace-refine=&#34;true&#34;
+                                   refine-on-click-refinectx-map-field=&#34;dep_code&#34;
+                                   refine-on-click-refinectx-context-field=&#34;dep_code&#34;&gt;&lt;/ods-map-layer&gt;
+                    &lt;ods-map-layer context=&#34;refinectx&#34;
+                                   show-if=&#34;refinectx.parameters[&#39;refine.dep_code&#39;]&#34;
+                                   color=&#34;transparent&#34;
+                                   border-color=&#34;red&#34;
+                                   border-opacity=&#34;1&#34;
+                                   border-size=&#34;3&#34;&gt;&lt;/ods-map-layer&gt;
+                &lt;/ods-map&gt;
+                &lt;div ng-if=&#34;refinectx.parameters[&#39;refine.dep_code&#39;]&#34;
+                     class=&#34;kpis&#34;&gt;
+                    &lt;div class=&#34;box white flat&#34;&gt;
+                        &lt;div class=&#34;advanced-kpi&#34;&gt;
+                            &lt;div class=&#34;advanced-kpi--top&#34;&gt;
+                                &lt;h3 class=&#34;title&#34;&gt;
+                                    Aggregation value
+                                &lt;/h3&gt;
+                                &lt;p class=&#34;description&#34;&gt;
+                                    used to color the map
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&#34;advanced-kpi--middle centered&#34;&gt;
+                                &lt;p class=&#34;value&#34;&gt;
+                                    {{ colorgradient[&#39;values&#39;][refinectx.parameters[&#39;refine.dep_code&#39;]] | number }}
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&#34;advanced-kpi--bottom&#34;&gt;
+                                Selected key : {{ refinectx.parameters[&#39;refine.dep_code&#39;].join(&#39;&#39;) || refinectx.parameters[&#39;refine.dep_code&#39;] }}
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&#34;box white flat&#34;&gt;
+                        &lt;div class=&#34;advanced-kpi&#34;&gt;
+                            &lt;div class=&#34;advanced-kpi--top&#34;&gt;
+                                &lt;h3 class=&#34;title&#34;&gt;
+                                    Department name
+                                &lt;/h3&gt;
+                                &lt;p class=&#34;description&#34;&gt;
+                                    from the filtered geo ref context
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&#34;advanced-kpi--middle centered&#34;&gt;
+                                &lt;p class=&#34;value&#34;
+                                   ods-results=&#34;results&#34;
+                                   ods-results-max=&#34;1&#34;
+                                   ods-results-context=&#34;refinectx&#34;&gt;
+                                    {{ results[0].fields.dep_name }}
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&#34;advanced-kpi--bottom&#34;&gt;
+                                Value from an ods-results
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+
+                    &lt;div class=&#34;box white flat&#34;&gt;
+                        &lt;div class=&#34;advanced-kpi&#34;&gt;
+                            &lt;div class=&#34;advanced-kpi--top&#34;
+                                 ods-results=&#34;results&#34;
+                                 ods-results-max=&#34;1&#34;
+                                 ods-results-context=&#34;refinectx&#34;&gt;
+                                &lt;h3 class=&#34;title&#34;&gt;
+                                    % of pharmacies in France
+                                &lt;/h3&gt;
+                                &lt;p class=&#34;description&#34;&gt;
+                                    in {{ results[0].fields.dep_name }}
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&#34;advanced-kpi--middle centered&#34;
+                                 ods-adv-analysis=&#34;dataanalysis&#34;
+                                 ods-adv-analysis-context=&#34;datactx&#34;
+                                 ods-adv-analysis-select=&#34;count(*) as count&#34;&gt;
+                                &lt;p class=&#34;value&#34;&gt;
+                                    {{ colorgradient[&#39;values&#39;][refinectx.parameters[&#39;refine.dep_code&#39;]] / dataanalysis[0].count * 100 | number : 1 }} %
+                                &lt;/p&gt;
+                            &lt;/div&gt;
+                            &lt;div class=&#34;advanced-kpi--bottom&#34;&gt;
+                                Aggregation compared with an analysis on the data context
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/ods-dataset-context&gt;
+&lt;/div&gt;
+</code></pre>
+                </div>
+            </div>
+            
+            <div class="js-tabcontent"
+                 id="code-replace-map-tooltip-with-a-refine--see-the-aggregation--css-content"
+                 data-clipboard=".map-container {
+    position: relative;
+}
+
+.kpis {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.box {
+    position: relative;
+    padding: 13px;
+    width: 30%;
+    z-index: 10;
+}
+
+.box.white {
+    background-color: white;
+}
+
+.box.flat {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);
+    border-radius: var(--boxes-radius);
+}
+
+.advanced-kpi {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.advanced-kpi--top .title {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.advanced-kpi--top .description {
+    margin: 0 auto;
+    color: #565656;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.advanced-kpi--middle {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+}
+
+.advanced-kpi--middle.centered {
+    align-items: center;
+}
+
+.advanced-kpi--middle &gt; * {
+    margin: 5px 0;
+}
+
+.advanced-kpi--middle .value {
+    color: var(--highlight);
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.advanced-kpi--bottom {
+    font-size: 0.8em;
+}
+">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>.map-container {
+    position: relative;
+}
+
+.kpis {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.box {
+    position: relative;
+    padding: 13px;
+    width: 30%;
+    z-index: 10;
+}
+
+.box.white {
+    background-color: white;
+}
+
+.box.flat {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16);
+    border-radius: var(--boxes-radius);
+}
+
+.advanced-kpi {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.advanced-kpi--top .title {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.advanced-kpi--top .description {
+    margin: 0 auto;
+    color: #565656;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.advanced-kpi--middle {
+    display: flex;
+    flex-direction: column;
+    margin: 5px 0;
+}
+
+.advanced-kpi--middle.centered {
+    align-items: center;
+}
+
+.advanced-kpi--middle &gt; * {
+    margin: 5px 0;
+}
+
+.advanced-kpi--middle .value {
+    color: var(--highlight);
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.advanced-kpi--bottom {
+    font-size: 0.8em;
 }
 </code></pre>
                 </div>
