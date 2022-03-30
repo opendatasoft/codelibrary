@@ -1,9 +1,11 @@
 ---
 title: "Replace map tooltip with a refine : see the aggregation !"
 height: 700
-date: "2021-02-09"
+date: "2021-03-30"
 ---
 
-In this example, `refineOnClick` will be used to display record details on the side of the map. It's a good alternative to the pop-in version.
+In this example, in combination with `ods-color-gradient` to display a choropleth map, the `refineOnClick` is used to select a department and activate KPI cards on top of the map.
 
-> To  highlight the selected point on the map, the refined context is displayed. To achieve this, the context must be refined by a field that contains an unique name or ID, and therefore this field must be set has a filter/facet on the dataset.
+- the first KPI card displays the aggregation result from `ods-color-gradient` and display it's value
+- the second KPI card get the name of the selected department, through an `ods-results` on the refined context
+- the third KPI card computes a new aggregation with `ods-adv-analysis`
