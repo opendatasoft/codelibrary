@@ -1,10 +1,22 @@
-**Dataset in use:** `us-hospitals` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/us-hospitals/table/)
+**Dataset in use:** `healthref-france-finess` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/healthref-france-finess/table/)
 
-**Fields in use:** 
+**Fields in use:**
 
-| geo_point (geo_point_2d)| id | name | type | address | city | population (numeric)| source |
-|---|---|---|---|---|---|---|---|
-|[34.69553069,-82.98721979]|0002129672|GUNDERSEN LUTH MED CTR|General Acute Care Hospital|1910 SOUTH AVE|La Crosse|325| https://www.dhs.wisconsin.gov/bqaconsumer/healthcare/HospitalCty.pdf|
-|[40.673121466,-75.365457125]|0002122345|Florida Hospital Wauchula|General Acute Care Hospital|533 W Carlton St|Wauchula|25|http://www.fgdl.org/metadataexplorer/explorer.jsp|
-|[38.578735152,-109.563613143]|00029402914|Culberson Hospital|Critical Access|2185 Eisenhower-Farm Market Road|Van Horn|14|http://www.dshs.state.tx.us/chs/hosp/hosp2.shtm|
-|[41.491227149,-112.025755668]|00039104859|Samaritan North Lincoln Hospital|General Acute Care Hospital|3043 Ne 28Th Street|Lincoln City|25|https://data.oregon.gov/dataset/Oregon-Hospitals-Map-2008-09-20/urjx-x2zf|
+|libelle_categorie_d_etablissement|departement|
+|---|---|
+|Centre de Jour pour Personnes Agées|68|
+|Entreprise adaptée|68|
+|Pharmacie d'Officine|68|
+|Pharmacie d'Officine|68|
+
+**Dataset in use:** `departements-et-collectivites-doutre-mer-france` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/departements-et-collectivites-doutre-mer-france/table/)
+
+**Fields in use:**
+
+|dep_code|geo_shape|
+|---|---|
+|42|"{""coordinates"": [[[4.483136621396388, 45.23656983554515], [4.509202633532227, 45.23117302861005], [4.51960803235719|
+|93|"{""coordinates"": [[[2.319887174744136, 48.900459782103866], [2.384530045616338, 48.90214759336665], [2.3976678263491|
+|50|"{""coordinates"": [[[-1.140276171655211, 49.30875558686156], [-1.114128814321206, 49.32691733740976], [-1.118082843973|
+|58|"{""coordinates"": [[[2.874491172560131, 47.52034735555759], [2.888458633258486, 47.50943098546669], [2.90038057308859|
+
