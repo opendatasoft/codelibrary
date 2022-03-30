@@ -2,7 +2,7 @@
 
 **Fields in use:**
 
-|purpose|description_en|reference_url|name_of_the_initiative_en|language|country|
+|purpose|description_en|reference_url|name_of_the_initiative|language|country|
 |---|---|---|---|---|---|
 |Efficiency|This page allows citizens to analyse the region's energy consumption. It's divided into electricity, natural gas and diesel supplies.|https://analisis.datosabiertos.jcyl.es/pages/eren/||Spanish|Spain|
 |Transparency|Map displaying the locations of the various Covid-19 Testing Centers in Jersey City as well as other useful information and how to reach tthem.|https://data.jerseycitynj.gov/pages/covid19-testing-centers/||English|United States of America|

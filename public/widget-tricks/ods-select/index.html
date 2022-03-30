@@ -182,8 +182,8 @@
         </li>
         
         <li>
-          <a href="#filter-by-the-results-of-an-analysis-via-ods-analysis-widget">
-            Filter by the results of an analysis (via ods-analysis widget)
+          <a href="#filter-by-the-results-of-an-analysis-via-ods-adv-analysis-widget">
+            Filter by the results of an analysis (via ods-adv-analysis widget)
           </a>
         </li>
         
@@ -202,6 +202,12 @@
         <li>
           <a href="#simple-inlined-layout">
             Simple inlined layout
+          </a>
+        </li>
+        
+        <li>
+          <a href="#drilldown-select-for-geographical-levels">
+            Drilldown select for geographical levels
           </a>
         </li>
         
@@ -2080,9 +2086,9 @@ h3 {
         </article>
         
         <article class="block">
-            <h2 class="title is-2" id="filter-by-the-results-of-an-analysis-via-ods-analysis-widget">
-                Filter by the results of an analysis (via ods-analysis widget) 
-                <a class="is-link anchor" href="#filter-by-the-results-of-an-analysis-via-ods-analysis-widget">
+            <h2 class="title is-2" id="filter-by-the-results-of-an-analysis-via-ods-adv-analysis-widget">
+                Filter by the results of an analysis (via ods-adv-analysis widget) 
+                <a class="is-link anchor" href="#filter-by-the-results-of-an-analysis-via-ods-adv-analysis-widget">
             <span class="icon">
               <img src="/img/fas-link.svg"/>
             </span>
@@ -2097,9 +2103,9 @@ h3 {
 etc&hellip;</li>
 </ul>
 <p>Computing the average, maximum, sum of a field to sort de list of proposition in <code>ods-select</code></p>
-<p><code>ods-analysis</code> <a href="https://codelibrary.opendatasoft.com/widget-tricks/ods-analysis/">Code Library resource</a> and <a href="https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsAnalysis">it&rsquo;s documentation</a>.</p>
+<p><code>ods-adv-analysis</code> <a href="https://codelibrary.opendatasoft.com/widget-tricks/ods-adv-analysis/">Code Library resource</a> and <a href="https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsAdvAnalysis">it&rsquo;s documentation</a>.</p>
 <blockquote>
-<p><strong>Note 1:</strong> performing an analysis on a field containing huge quantity of distinct values can alter performances of the page (the browser needs to download the long list of possible values, then it displays and manipulates the list into the widget)</p>
+<p><strong>Note 1:</strong> performing an adv-analysis on a field containing huge quantity of distinct values can alter performances of the page (the browser needs to download the long list of possible values, then it displays and manipulates the list into the widget)</p>
 </blockquote>
 <blockquote>
 <p><strong>Note 2:</strong> selecting a value and refining the context will no longer let you choose other values as they will disappear with the selection. (contrary to <code>ods-facets</code> and <code>ods-facet-results</code> that can use the disjunctive mode, ie. multi selection mode). To counter that, we need 2 contexts: 1 to perform the analysis and feed ods-select, 1 to refine and display the chart</p>
@@ -2130,7 +2136,7 @@ etc&hellip;</li>
 
 
 <div class="codepen">
-    <form id="form-filter-by-the-results-of-an-analysis-via-ods-analysis-widget"
+    <form id="form-filter-by-the-results-of-an-analysis-via-ods-adv-analysis-widget"
           action="https://codepen.io/pen/define"
           method="POST"
           target="_blank">
@@ -2140,7 +2146,7 @@ etc&hellip;</li>
                  "title": "New Pen!",
                  "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
-                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;container\&#34;\u003e\n    \u003cods-dataset-context context=\&#34;ctxanalysis,ctxrefine\&#34;\n                         ctxanalysis-dataset=\&#34;shanghai-world-university-ranking\&#34;\n                         ctxanalysis-parameters=\&#34;{&#39;sort&#39;:&#39;world_rank&#39;}\&#34;\n                         ctxrefine-dataset=\&#34;shanghai-world-university-ranking\&#34;\n                         ctxrefine-parameters=\&#34;{&#39;sort&#39;:&#39;world_rank&#39;}\&#34;\u003e\n        \u003cdiv ods-analysis=\&#34;rankings\&#34;\n             ods-analysis-context=\&#34;ctxanalysis\&#34;\n             ods-analysis-x=\&#34;university_name\&#34;\n             ods-analysis-serie-maxscore=\&#34;MAX(world_rank_int)\&#34;\n             ods-analysis-sort=\&#34;-maxscore\&#34;\n             ods-analysis-max=\&#34;100\&#34;\u003e\n            \u003ch3\u003e\n                Select an university in this TOP 100 list (sorted by it&#39;s best ranking overall)\n            \u003c/h3\u003e\n            \u003cods-select options=\&#34;rankings.results\&#34;\n                        selected-values=\&#34;ctxrefine.parameters[&#39;refine.university_name&#39;]\&#34;\n                        label-modifier=\&#34;x &#43; &#39;, Best ranking: &#39; &#43; maxscore\&#34;\n                        value-modifier=\&#34;x\&#34;\n                        placeholder=\&#34;Select an university\&#34;\u003e\u003c/ods-select\u003e\n\n            \u003cdiv ng-if=\&#34;!ctxrefine.parameters[&#39;refine.university_name&#39;][0]\&#34;\u003e\n                \u003ch4\u003eSelect an university to see it&#39;s ranking details over years\u003c/h4\u003e\n            \u003c/div\u003e\n\n            \u003cdiv ng-if=\&#34;ctxrefine.parameters[&#39;refine.university_name&#39;][0]\&#34;\u003e\n                \u003ch4\u003e{{ ctxrefine.parameters[&#39;refine.university_name&#39;][0] }} rankings details, over years\u003c/h4\u003e\n                \u003cods-chart single-y-axis=\&#34;true\&#34; align-month=\&#34;true\&#34;\u003e\n                    \u003cods-chart-query context=\&#34;ctxrefine\&#34; field-x=\&#34;year\&#34; maxpoints=\&#34;100\&#34;\n                                     timescale=\&#34;year\&#34;\u003e\n                        \u003cods-chart-serie expression-y=\&#34;pcp\&#34; chart-type=\&#34;column\&#34; label-y=\&#34;PCP score\&#34; function-y=\&#34;AVG\&#34; color=\&#34;#263891\&#34;\n                                         scientific-display=\&#34;true\&#34;\u003e\n                        \u003c/ods-chart-serie\u003e\n                        \u003cods-chart-serie expression-y=\&#34;alumni\&#34; label-y=\&#34;Alumni score\&#34; chart-type=\&#34;column\&#34; function-y=\&#34;AVG\&#34; color=\&#34;#19630A\&#34;\n                                         scientific-display=\&#34;true\&#34;\u003e\n                        \u003c/ods-chart-serie\u003e\n                        \u003cods-chart-serie expression-y=\&#34;award\&#34; label-y=\&#34;Award score\&#34; chart-type=\&#34;column\&#34; function-y=\&#34;AVG\&#34; color=\&#34;#F7B133\&#34;\n                                         scientific-display=\&#34;true\&#34;\u003e\n                        \u003c/ods-chart-serie\u003e\n                        \u003cods-chart-serie expression-y=\&#34;pub\&#34; label-y=\&#34;Pub score\&#34; chart-type=\&#34;column\&#34; function-y=\&#34;AVG\&#34; color=\&#34;#BA0129\&#34;\n                                         scientific-display=\&#34;true\&#34;\u003e\n                        \u003c/ods-chart-serie\u003e\n                        \u003cods-chart-serie expression-y=\&#34;ns\&#34; label-y=\&#34;NS score\&#34; chart-type=\&#34;column\&#34; function-y=\&#34;AVG\&#34; color=\&#34;#C0C5CC\&#34;\n                                         scientific-display=\&#34;true\&#34;\u003e\n                        \u003c/ods-chart-serie\u003e\n                        \u003cods-chart-serie expression-y=\&#34;hici\&#34; label-y=\&#34;HICI score\&#34; chart-type=\&#34;column\&#34; function-y=\&#34;AVG\&#34; color=\&#34;#000000\&#34;\n                                         scientific-display=\&#34;true\&#34;\u003e\n                        \u003c/ods-chart-serie\u003e\n                    \u003c/ods-chart-query\u003e\n                \u003c/ods-chart\u003e\n\n            \u003c/div\u003e\n\n        \u003c/div\u003e\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\n\u003c/div\u003e&#34;,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;container\&#34;\u003e\n    \u003cods-dataset-context context=\&#34;ctxanalysis,ctxrefine\&#34;\n                         ctxanalysis-dataset=\&#34;shanghai-world-university-ranking\&#34;\n                         ctxanalysis-parameters=\&#34;{&#39;sort&#39;:&#39;world_rank&#39;}\&#34;\n                         ctxrefine-dataset=\&#34;shanghai-world-university-ranking\&#34;\n                         ctxrefine-parameters=\&#34;{&#39;sort&#39;:&#39;world_rank&#39;}\&#34;\u003e\n        \u003cdiv ods-adv-analysis=\&#34;rankings\&#34;\n             ods-adv-analysis-context=\&#34;ctxanalysis\&#34;\n             ods-adv-analysis-group-by=\&#34;university_name\&#34;\n             ods-adv-analysis-select=\&#34;MAX(world_rank_int) as maxscore, university_name\&#34;\n             ods-adv-analysis-order-by=\&#34;maxscore\&#34;\n             ods-adv-analysis-limit=\&#34;100\&#34;\u003e\n            \u003ch3\u003e\n                Select an university in this TOP 100 list (sorted by it&#39;s best ranking overall)\n            \u003c/h3\u003e\n            \u003cods-select options=\&#34;rankings\&#34;\n                        selected-values=\&#34;ctxrefine.parameters[&#39;refine.university_name&#39;]\&#34;\n                        label-modifier=\&#34;university_name &#43; &#39;, Best ranking: &#39; &#43; maxscore\&#34;\n                        value-modifier=\&#34;university_name\&#34;\n                        placeholder=\&#34;Select an university\&#34;\u003e\u003c/ods-select\u003e\n\n            \u003cdiv ng-if=\&#34;!ctxrefine.parameters[&#39;refine.university_name&#39;][0]\&#34;\u003e\n                \u003ch4\u003eSelect an university to see it&#39;s ranking details over years\u003c/h4\u003e\n            \u003c/div\u003e\n\n            \u003cdiv ng-if=\&#34;ctxrefine.parameters[&#39;refine.university_name&#39;][0]\&#34;\u003e\n                \u003ch4\u003e{{ ctxrefine.parameters[&#39;refine.university_name&#39;][0] }} rankings details, over years\u003c/h4\u003e\n                \u003cods-chart single-y-axis=\&#34;true\&#34; align-month=\&#34;true\&#34;\u003e\n                    \u003cods-chart-query context=\&#34;ctxrefine\&#34; field-x=\&#34;year\&#34; maxpoints=\&#34;100\&#34;\n                                     timescale=\&#34;year\&#34;\u003e\n                        \u003cods-chart-serie expression-y=\&#34;pcp\&#34; chart-type=\&#34;column\&#34; label-y=\&#34;PCP score\&#34; function-y=\&#34;AVG\&#34; color=\&#34;#263891\&#34;\n                                         scientific-display=\&#34;true\&#34;\u003e\n                        \u003c/ods-chart-serie\u003e\n                        \u003cods-chart-serie expression-y=\&#34;alumni\&#34; label-y=\&#34;Alumni score\&#34; chart-type=\&#34;column\&#34; function-y=\&#34;AVG\&#34; color=\&#34;#19630A\&#34;\n                                         scientific-display=\&#34;true\&#34;\u003e\n                        \u003c/ods-chart-serie\u003e\n                        \u003cods-chart-serie expression-y=\&#34;award\&#34; label-y=\&#34;Award score\&#34; chart-type=\&#34;column\&#34; function-y=\&#34;AVG\&#34; color=\&#34;#F7B133\&#34;\n                                         scientific-display=\&#34;true\&#34;\u003e\n                        \u003c/ods-chart-serie\u003e\n                        \u003cods-chart-serie expression-y=\&#34;pub\&#34; label-y=\&#34;Pub score\&#34; chart-type=\&#34;column\&#34; function-y=\&#34;AVG\&#34; color=\&#34;#BA0129\&#34;\n                                         scientific-display=\&#34;true\&#34;\u003e\n                        \u003c/ods-chart-serie\u003e\n                        \u003cods-chart-serie expression-y=\&#34;ns\&#34; label-y=\&#34;NS score\&#34; chart-type=\&#34;column\&#34; function-y=\&#34;AVG\&#34; color=\&#34;#C0C5CC\&#34;\n                                         scientific-display=\&#34;true\&#34;\u003e\n                        \u003c/ods-chart-serie\u003e\n                        \u003cods-chart-serie expression-y=\&#34;hici\&#34; label-y=\&#34;HICI score\&#34; chart-type=\&#34;column\&#34; function-y=\&#34;AVG\&#34; color=\&#34;#000000\&#34;\n                                         scientific-display=\&#34;true\&#34;\u003e\n                        \u003c/ods-chart-serie\u003e\n                    \u003c/ods-chart-query\u003e\n                \u003c/ods-chart\u003e\n\n            \u003c/div\u003e\n\n        \u003c/div\u003e\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\n\u003c/div\u003e&#34;,
                  "css": &#34;/** DO NOT COPY **/\n/* the CSS is only for a better reading of the demo */\n.mb {\n    margin-bottom: 30px;\n}\nh3 {\n    height: 60px;\n}\n.odswidget-select {\n    margin-bottom: 25px;\n}&#34;
                }'>
     </form>
@@ -2148,7 +2154,7 @@ etc&hellip;</li>
 <div class="ods-content">
     <div class="box-live-example"
       style="height: 650px;">
-      <iframe id="iframe-filter-by-the-results-of-an-analysis-via-ods-analysis-widget"
+      <iframe id="iframe-filter-by-the-results-of-an-analysis-via-ods-adv-analysis-widget"
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
@@ -2320,19 +2326,19 @@ etc&hellip;</li>
                          ctxanalysis-parameters=&#34;{&#39;sort&#39;:&#39;world_rank&#39;}&#34;
                          ctxrefine-dataset=&#34;shanghai-world-university-ranking&#34;
                          ctxrefine-parameters=&#34;{&#39;sort&#39;:&#39;world_rank&#39;}&#34;&gt;
-        &lt;div ods-analysis=&#34;rankings&#34;
-             ods-analysis-context=&#34;ctxanalysis&#34;
-             ods-analysis-x=&#34;university_name&#34;
-             ods-analysis-serie-maxscore=&#34;MAX(world_rank_int)&#34;
-             ods-analysis-sort=&#34;-maxscore&#34;
-             ods-analysis-max=&#34;100&#34;&gt;
+        &lt;div ods-adv-analysis=&#34;rankings&#34;
+             ods-adv-analysis-context=&#34;ctxanalysis&#34;
+             ods-adv-analysis-group-by=&#34;university_name&#34;
+             ods-adv-analysis-select=&#34;MAX(world_rank_int) as maxscore, university_name&#34;
+             ods-adv-analysis-order-by=&#34;maxscore&#34;
+             ods-adv-analysis-limit=&#34;100&#34;&gt;
             &lt;h3&gt;
                 Select an university in this TOP 100 list (sorted by it&#39;s best ranking overall)
             &lt;/h3&gt;
-            &lt;ods-select options=&#34;rankings.results&#34;
+            &lt;ods-select options=&#34;rankings&#34;
                         selected-values=&#34;ctxrefine.parameters[&#39;refine.university_name&#39;]&#34;
-                        label-modifier=&#34;x &#43; &#39;, Best ranking: &#39; &#43; maxscore&#34;
-                        value-modifier=&#34;x&#34;
+                        label-modifier=&#34;university_name &#43; &#39;, Best ranking: &#39; &#43; maxscore&#34;
+                        value-modifier=&#34;university_name&#34;
                         placeholder=&#34;Select an university&#34;&gt;&lt;/ods-select&gt;
 
             &lt;div ng-if=&#34;!ctxrefine.parameters[&#39;refine.university_name&#39;][0]&#34;&gt;
@@ -2404,7 +2410,7 @@ h3 {
              aria-role="link"
              rel="noopener"
              title="Edit on CodePen, open a new tab"
-             onclick="document.getElementById('form-filter-by-the-results-of-an-analysis-via-ods-analysis-widget').submit()">
+             onclick="document.getElementById('form-filter-by-the-results-of-an-analysis-via-ods-adv-analysis-widget').submit()">
               <span>Edit on Codepen</span>
               <span class="icon is-small">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
@@ -2488,14 +2494,14 @@ h3 {
                     <div class="buttons has-addons js-tablist">
                         <a
                           class="button is-primary is-outlined js-tablist__item js-tablist__link"
-                          href="#code-filter-by-the-results-of-an-analysis-via-ods-analysis-widget-html-content"
+                          href="#code-filter-by-the-results-of-an-analysis-via-ods-adv-analysis-widget-html-content"
                         >
                           HTML
                         </a>
                         
                         <a
                           class="button is-primary is-outlined js-tablist__item js-tablist__link"
-                          href="#code-filter-by-the-results-of-an-analysis-via-ods-analysis-widget-css-content"
+                          href="#code-filter-by-the-results-of-an-analysis-via-ods-adv-analysis-widget-css-content"
                         >
                           CSS
                         </a>
@@ -2530,26 +2536,26 @@ h3 {
         </nav>
         <div class="tab-content">
             <div class="js-tabcontent"
-                 id="code-filter-by-the-results-of-an-analysis-via-ods-analysis-widget-html-content"
+                 id="code-filter-by-the-results-of-an-analysis-via-ods-adv-analysis-widget-html-content"
                  data-clipboard="&lt;div class=&#34;container&#34;&gt;
     &lt;ods-dataset-context context=&#34;ctxanalysis,ctxrefine&#34;
                          ctxanalysis-dataset=&#34;shanghai-world-university-ranking&#34;
                          ctxanalysis-parameters=&#34;{&#39;sort&#39;:&#39;world_rank&#39;}&#34;
                          ctxrefine-dataset=&#34;shanghai-world-university-ranking&#34;
                          ctxrefine-parameters=&#34;{&#39;sort&#39;:&#39;world_rank&#39;}&#34;&gt;
-        &lt;div ods-analysis=&#34;rankings&#34;
-             ods-analysis-context=&#34;ctxanalysis&#34;
-             ods-analysis-x=&#34;university_name&#34;
-             ods-analysis-serie-maxscore=&#34;MAX(world_rank_int)&#34;
-             ods-analysis-sort=&#34;-maxscore&#34;
-             ods-analysis-max=&#34;100&#34;&gt;
+        &lt;div ods-adv-analysis=&#34;rankings&#34;
+             ods-adv-analysis-context=&#34;ctxanalysis&#34;
+             ods-adv-analysis-group-by=&#34;university_name&#34;
+             ods-adv-analysis-select=&#34;MAX(world_rank_int) as maxscore, university_name&#34;
+             ods-adv-analysis-order-by=&#34;maxscore&#34;
+             ods-adv-analysis-limit=&#34;100&#34;&gt;
             &lt;h3&gt;
                 Select an university in this TOP 100 list (sorted by it&#39;s best ranking overall)
             &lt;/h3&gt;
-            &lt;ods-select options=&#34;rankings.results&#34;
+            &lt;ods-select options=&#34;rankings&#34;
                         selected-values=&#34;ctxrefine.parameters[&#39;refine.university_name&#39;]&#34;
-                        label-modifier=&#34;x &#43; &#39;, Best ranking: &#39; &#43; maxscore&#34;
-                        value-modifier=&#34;x&#34;
+                        label-modifier=&#34;university_name &#43; &#39;, Best ranking: &#39; &#43; maxscore&#34;
+                        value-modifier=&#34;university_name&#34;
                         placeholder=&#34;Select an university&#34;&gt;&lt;/ods-select&gt;
 
             &lt;div ng-if=&#34;!ctxrefine.parameters[&#39;refine.university_name&#39;][0]&#34;&gt;
@@ -2596,19 +2602,19 @@ h3 {
                          ctxanalysis-parameters=&#34;{&#39;sort&#39;:&#39;world_rank&#39;}&#34;
                          ctxrefine-dataset=&#34;shanghai-world-university-ranking&#34;
                          ctxrefine-parameters=&#34;{&#39;sort&#39;:&#39;world_rank&#39;}&#34;&gt;
-        &lt;div ods-analysis=&#34;rankings&#34;
-             ods-analysis-context=&#34;ctxanalysis&#34;
-             ods-analysis-x=&#34;university_name&#34;
-             ods-analysis-serie-maxscore=&#34;MAX(world_rank_int)&#34;
-             ods-analysis-sort=&#34;-maxscore&#34;
-             ods-analysis-max=&#34;100&#34;&gt;
+        &lt;div ods-adv-analysis=&#34;rankings&#34;
+             ods-adv-analysis-context=&#34;ctxanalysis&#34;
+             ods-adv-analysis-group-by=&#34;university_name&#34;
+             ods-adv-analysis-select=&#34;MAX(world_rank_int) as maxscore, university_name&#34;
+             ods-adv-analysis-order-by=&#34;maxscore&#34;
+             ods-adv-analysis-limit=&#34;100&#34;&gt;
             &lt;h3&gt;
                 Select an university in this TOP 100 list (sorted by it&#39;s best ranking overall)
             &lt;/h3&gt;
-            &lt;ods-select options=&#34;rankings.results&#34;
+            &lt;ods-select options=&#34;rankings&#34;
                         selected-values=&#34;ctxrefine.parameters[&#39;refine.university_name&#39;]&#34;
-                        label-modifier=&#34;x &#43; &#39;, Best ranking: &#39; &#43; maxscore&#34;
-                        value-modifier=&#34;x&#34;
+                        label-modifier=&#34;university_name &#43; &#39;, Best ranking: &#39; &#43; maxscore&#34;
+                        value-modifier=&#34;university_name&#34;
                         placeholder=&#34;Select an university&#34;&gt;&lt;/ods-select&gt;
 
             &lt;div ng-if=&#34;!ctxrefine.parameters[&#39;refine.university_name&#39;][0]&#34;&gt;
@@ -2651,7 +2657,7 @@ h3 {
             </div>
             
             <div class="js-tabcontent"
-                 id="code-filter-by-the-results-of-an-analysis-via-ods-analysis-widget-css-content"
+                 id="code-filter-by-the-results-of-an-analysis-via-ods-adv-analysis-widget-css-content"
                  data-clipboard="/** DO NOT COPY **/
 /* the CSS is only for a better reading of the demo */
 .mb {
@@ -3991,6 +3997,952 @@ Specially for geographical division (City names, States etc&hellip;)</p>
         To assure a minimum width, set a min-width property here.
      */
     min-width: 200px;
+}</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+                </div>
+            
+        </article>
+        
+        <article class="block">
+            <h2 class="title is-2" id="drilldown-select-for-geographical-levels">
+                Drilldown select for geographical levels 
+                <span class="tag is-rounded is-info">New</span>
+                
+                <a class="is-link anchor" href="#drilldown-select-for-geographical-levels">
+            <span class="icon">
+              <img src="/img/fas-link.svg"/>
+            </span>
+                </a>
+            </h2>
+            <div class="content">
+                <p>A reuse of <code>ods-select</code> to create filters based on a serie of geographical levels.</p>
+<p><strong>IMPORTANT</strong>: This example integrates advanced parameters that can be customized:</p>
+<ul>
+<li><code>disabled</code> parameter in <code>ods-select</code>: used to disable the filter if the condition is true. In the example, the filter is disabled when the previous filter is not activated.</li>
+<li><code>on-change</code> parameter in <code>ods-select</code>: used to clear previous filters on the context <code>ctx</code> when a new selection is made. In the example, it enables you to select a région, a département, and then switch to another région, without having to clear the filter département.</li>
+<li>Angular expressions after each <code>ods-select</code>: used to sync the selection on all the geographical levels. In the example, it enables you to have a list of département filter on the région selected.</li>
+</ul>
+<blockquote>
+<p><strong>Note:</strong> you will need to create one context for each geographical level, in order to keep the full list of the items after the refine.</p>
+</blockquote>
+
+            </div>
+            
+            
+                <div class="box">
+                    
+
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+
+
+
+
+<div class="codepen">
+    <form id="form-drilldown-select-for-geographical-levels"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+                 "title": "New Pen!",
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "editors": 110,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cods-dataset-context context=\&#34;ctx,ctxregions,ctxdepartements,ctxepcis,ctxcommunes\&#34;\n\n                     ctx-dataset=\&#34;demographyref-france-pop-active-sexe-activite-commune-millesime\&#34;\n                     ctx-parameters=\&#34;{&#39;refine.year&#39;:&#39;2017&#39;,&#39;disjunctive.reg_code&#39;:true,&#39;disjunctive.dep_code&#39;:true,&#39;disjunctive.epci_code&#39;:true,&#39;disjunctive.com_arm_code&#39;:true}\&#34;\n                     ctx-domain=\&#34;public\&#34;\n\n                     ctxregions-dataset=\&#34;demographyref-france-pop-active-sexe-activite-commune-millesime\&#34;\n                     ctxregions-domain=\&#34;public\&#34;\n                     ctxregions-parameters=\&#34;{&#39;refine.year&#39;:&#39;2017&#39;,&#39;disjunctive.reg_code&#39;:true,&#39;disjunctive.dep_code&#39;:true,&#39;disjunctive.epci_code&#39;:true,&#39;disjunctive.com_arm_code&#39;:true}\&#34;\n                     ctxdepartements-dataset=\&#34;demographyref-france-pop-active-sexe-activite-commune-millesime\&#34;\n                     ctxdepartements-domain=\&#34;public\&#34;\n                     ctxdepartements-parameters=\&#34;{&#39;refine.year&#39;:&#39;2017&#39;,&#39;disjunctive.reg_code&#39;:true,&#39;disjunctive.dep_code&#39;:true,&#39;disjunctive.epci_code&#39;:true,&#39;disjunctive.com_arm_code&#39;:true}\&#34;\n                     ctxepcis-dataset=\&#34;demographyref-france-pop-active-sexe-activite-commune-millesime\&#34;\n                     ctxepcis-domain=\&#34;public\&#34;\n                     ctxepcis-parameters=\&#34;{&#39;refine.year&#39;:&#39;2017&#39;,&#39;disjunctive.reg_code&#39;:true,&#39;disjunctive.dep_code&#39;:true,&#39;disjunctive.epci_code&#39;:true,&#39;disjunctive.com_arm_code&#39;:true}\&#34;\n                     ctxcommunes-dataset=\&#34;demographyref-france-pop-active-sexe-activite-commune-millesime\&#34;\n                     ctxcommunes-domain=\&#34;public\&#34;\n                     ctxcommunes-parameters=\&#34;{&#39;refine.year&#39;:&#39;2017&#39;,&#39;disjunctive.reg_code&#39;:true,&#39;disjunctive.dep_code&#39;:true,&#39;disjunctive.epci_code&#39;:true,&#39;disjunctive.com_arm_code&#39;:true}\&#34;\n\n                     ng-init=\&#34;values = {};\n                              selected = {}\&#34;\u003e\n\n    \u003cdiv ods-adv-analysis=\&#34;regions\&#34;\n         ods-adv-analysis-context=\&#34;ctxregions\&#34;\n         ods-adv-analysis-select=\&#34;count(*)\&#34;\n         ods-adv-analysis-group-by=\&#34;reg_code,reg_name\&#34;\n         ods-adv-analysis-order-by=\&#34;reg_name\&#34;\n         ods-adv-analysis-limit=\&#34;300\&#34;\u003e\n        {{ values.regions = regions; \&#34;\&#34;}}\n    \u003c/div\u003e\n    \u003cdiv ng-if=\&#34;ctxdepartements.parameters[&#39;refine.reg_code&#39;].length != 0\&#34;\n         ods-adv-analysis=\&#34;departements\&#34;\n         ods-adv-analysis-context=\&#34;ctxdepartements\&#34;\n         ods-adv-analysis-select=\&#34;count(*)\&#34;\n         ods-adv-analysis-group-by=\&#34;dep_code,dep_name\&#34;\n         ods-adv-analysis-order-by=\&#34;dep_name\&#34;\n         ods-adv-analysis-limit=\&#34;300\&#34;\u003e\n        {{ values.departements = departements; \&#34;\&#34; }}\n    \u003c/div\u003e\n    \u003cdiv ng-if=\&#34;ctxepcis.parameters[&#39;refine.dep_code&#39;].length != 0\&#34;\n         ods-adv-analysis=\&#34;epcis\&#34;\n         ods-adv-analysis-context=\&#34;ctxepcis\&#34;\n         ods-adv-analysis-select=\&#34;count(*)\&#34;\n         ods-adv-analysis-group-by=\&#34;epci_code,epci_name\&#34;\n         ods-adv-analysis-order-by=\&#34;epci_name\&#34;\n         ods-adv-analysis-limit=\&#34;300\&#34;\u003e\n        {{ values.epcis = epcis; \&#34;\&#34; }}\n    \u003c/div\u003e\n    \u003cdiv ng-if=\&#34;ctxcommunes.parameters[&#39;refine.epci_code&#39;].length != 0\&#34;\n         ods-adv-analysis=\&#34;communes\&#34;\n         ods-adv-analysis-context=\&#34;ctxcommunes\&#34;\n         ods-adv-analysis-select=\&#34;count(*)\&#34;\n         ods-adv-analysis-group-by=\&#34;com_arm_code,com_arm_name\&#34;\n         ods-adv-analysis-order-by=\&#34;com_arm_name\&#34;\n         ods-adv-analysis-limit=\&#34;300\&#34;\u003e\n        {{ values.communes = communes; \&#34;\&#34; }}\n    \u003c/div\u003e\n\n    \u003cdiv class=\&#34;ods-selects\&#34;\u003e\n        \u003cods-select selected-values=\&#34;selected.regions\&#34; placeholder=\&#34;Toutes régions\&#34;\n                    label-modifier=\&#34;reg_name\&#34;\n                    value-modifier=\&#34;{&#39;code&#39;:reg_code,&#39;name&#39;:reg_name}\&#34;\n                    options=\&#34;values.regions\&#34;\n                    multiple=\&#34;false\&#34;\n                    is-loading=\&#34;true\&#34;\n                    on-change=\&#34;ctx.parameters[&#39;refine.com_arm_code&#39;] =\n                                   ctx.parameters[&#39;refine.epci_code&#39;] =\n                                   ctx.parameters[&#39;refine.reg_code&#39;] =\n                                   ctx.parameters[&#39;refine.dep_code&#39;] = []\&#34;\u003e\u003c/ods-select\u003e\n        {{\n        ctxcommunes.parameters[&#39;refine.reg_code&#39;] =\n        ctxepcis.parameters[&#39;refine.reg_code&#39;] =\n        ctxdepartements.parameters[&#39;refine.reg_code&#39;] =\n        ctx.parameters[&#39;refine.reg_code&#39;] =\n        (selected.regions | toObject:&#39;code&#39; | keys);\n        \&#34;\&#34;}}\n        \u003cods-select disabled=\&#34;ctxdepartements.parameters[&#39;refine.reg_code&#39;].length == 0\&#34;\n                    selected-values=\&#34;selected.departements\&#34; placeholder=\&#34;Tout départements\&#34;\n                    label-modifier=\&#34;dep_name\&#34;\n                    value-modifier=\&#34;{&#39;code&#39;:dep_code,&#39;name&#39;:dep_name}\&#34;\n                    options=\&#34;values.departements\&#34;\n                    multiple=\&#34;false\&#34;\n                    is-loading=\&#34;true\&#34;\n                    on-change=\&#34;ctx.parameters[&#39;refine.com_arm_code&#39;] =\n                                   ctx.parameters[&#39;refine.epci_code&#39;] =\n                                   ctx.parameters[&#39;refine.reg_code&#39;] =\n                                   ctx.parameters[&#39;refine.dep_code&#39;] = []\&#34;\u003e\u003c/ods-select\u003e\n        {{\n        ctxcommunes.parameters[&#39;refine.dep_code&#39;] =\n        ctxepcis.parameters[&#39;refine.dep_code&#39;] =\n        ctx.parameters[&#39;refine.dep_code&#39;] =\n        (selected.departements | toObject:&#39;code&#39; | keys);\n        \&#34;\&#34;}}\n        \u003cods-select disabled=\&#34;ctxepcis.parameters[&#39;refine.dep_code&#39;].length == 0\&#34;\n                    selected-values=\&#34;selected.epcis\&#34; placeholder=\&#34;Tout EPCIs\&#34;\n                    label-modifier=\&#34;epci_name\&#34;\n                    value-modifier=\&#34;{&#39;code&#39;:epci_code,&#39;name&#39;:epci_name}\&#34;\n                    options=\&#34;values.epcis\&#34;\n                    multiple=\&#34;false\&#34;\n                    is-loading=\&#34;true\&#34;\n                    on-change=\&#34;ctx.parameters[&#39;refine.com_arm_code&#39;] =\n                                   ctx.parameters[&#39;refine.epci_code&#39;] =\n                                   ctx.parameters[&#39;refine.reg_code&#39;] =\n                                   ctx.parameters[&#39;refine.dep_code&#39;] = []\&#34;\u003e\u003c/ods-select\u003e\n        {{\n        ctxcommunes.parameters[&#39;refine.epci_code&#39;] =\n        ctx.parameters[&#39;refine.epci_code&#39;] =\n        (selected.epcis | toObject:&#39;code&#39; | keys);\n        \&#34;\&#34;}}\n        \u003cods-select disabled=\&#34;ctxcommunes.parameters[&#39;refine.epci_code&#39;].length == 0\&#34;\n                    selected-values=\&#34;selected.communes\&#34; placeholder=\&#34;Toutes communes\&#34;\n                    label-modifier=\&#34;com_arm_name\&#34;\n                    value-modifier=\&#34;{&#39;code&#39;:com_arm_code,&#39;name&#39;:com_arm_name}\&#34;\n                    options=\&#34;values.communes\&#34;\n                    multiple=\&#34;false\&#34;\n                    is-loading=\&#34;true\&#34;\n                    on-change=\&#34;ctx.parameters[&#39;refine.com_arm_code&#39;] =\n                                   ctx.parameters[&#39;refine.epci_code&#39;] =\n                                   ctx.parameters[&#39;refine.reg_code&#39;] =\n                                   ctx.parameters[&#39;refine.dep_code&#39;] = []\&#34;\u003e\u003c/ods-select\u003e\n        {{\n        ctx.parameters[&#39;refine.com_arm_code&#39;] =\n        (selected.communes | toObject:&#39;code&#39; | keys);\n        \&#34;\&#34;}}\n    \u003c/div\u003e\n\u003cdiv ng-if=\&#34;selected.regions.length \u003e 0 ||\n                       selected.departements.length \u003e 0 ||\n                       selected.epcis.length \u003e 0 ||\n                       selected.communes.length \u003e 0\&#34;\u003e\n    \u003cbutton class=\&#34;clear-filters-button\&#34;\n            ng-click=\&#34;selected.regions.length = 0;\n                          selected.departements.length = 0;\n                          selected.epcis.length = 0;\n                          selected.communes.length = 0;\n                          values.departements.length = 0;\n                          values.epcis.length = 0;\n                          values.communes.length = 0;\&#34;\u003e\n        Reset selection\n    \u003c/button\u003e\n    \u003ci class=\&#34;fa fa-times-circle\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n    \u003c/div\u003e\n    \u003ch2\u003eStructure de la population, par CSP et activité, en 2017\u003c/h2\u003e\n    \u003cods-chart align-month=\&#34;true\&#34;\u003e\n        \u003cods-chart-query context=\&#34;ctx\&#34; field-x=\&#34;year\&#34; maxpoints=\&#34;0\&#34; series-breakdown=\&#34;variable_label\&#34;\u003e\n            \u003cods-chart-serie expression-y=\&#34;value\&#34; color=\&#34;Paired\&#34; chart-type=\&#34;column\&#34;\n                             label-y=\&#34;Nombre de personnes\&#34; function-y=\&#34;SUM\&#34; scientific-display=\&#34;true\&#34;\u003e\n            \u003c/ods-chart-serie\u003e\n        \u003c/ods-chart-query\u003e\n    \u003c/ods-chart\u003e\n\u003c/ods-dataset-context\u003e\n\u003c/div\u003e&#34;,
+                 "css": &#34;/***** Inlined SELECT *****/\n.ods-selects {\n    display: flex;\n    flex-wrap: wrap;\n    align-items: center;\n    gap: 20px;\n    padding: 10px 0px;\n}\n\n.odswidget-select {\n    min-width: 200px;\n}\n\n/***** Clear filters button *****/\n\n.clear-filters {\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  margin-top: 5px;\n}\n\n.clear-filters-button {\n  background: none;\n  border: none;\n  color: var(--text);\n}\n\n.clear-filters-button:hover {\n  opacity: 0.65;\n}&#34;
+               }'>
+    </form>
+</div>
+<div class="ods-content">
+    <div class="box-live-example"
+      style="height: 600px;">
+      <iframe id="iframe-drilldown-select-for-geographical-levels"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+                <head>
+                    &lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;
+/&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;
+/&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;
+&gt;&lt;/script&gt;
+
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;
+&gt;&lt;/script&gt;
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;
+&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+  const sourceMonitoringInterceptor = $q =&gt; {
+    return {
+      request: config =&gt; {
+        console.log(config.url);
+        if (config.params)
+          if (config.params.source) delete config.params.source;
+
+        config.url = config.url.replace(
+          &#34;ods-api-monitoring&#34;,
+          &#34;monitoring-copy&#34;
+        );
+        return config;
+      }
+    };
+  };
+
+  angular
+    .module(&#34;ods-widgets&#34;)
+    .config(function(ODSWidgetsConfigProvider, $httpProvider) {
+      ODSWidgetsConfigProvider.setConfig({
+        defaultDomain: &#34;https://userclub.opendatasoft.com/&#34;,
+        basemaps: [
+          {
+            provider: &#34;jawg.light&#34;,
+            label: &#34;Jawg Light&#34;,
+            jawg_apikey: &#34;opendatasoft-community&#34;
+          },
+          {
+            provider: &#34;jawg.streets&#34;,
+            label: &#34;Jawg Streets&#34;,
+            jawg_apikey: &#34;opendatasoft-community&#34;,
+            id: &#34;streets&#34;
+          }
+        ],
+        themes: {
+          default: {
+            url: &#34;/img/ods.svg&#34;
+          },
+          Santé: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Culture, Patrimoine&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Éducation, Formation, Recherche, Enseignement&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Environment: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Transports, Déplacements&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Économie, Business, PME, Développement économique, Emploi&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Administration, Gouvernement, Finances publiques, Citoyenneté&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Justice, Sécurité, Police, Crime&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Sport, Loisirs&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Hébergement, Restauration&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Services, Social&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Checklist: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Usages: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#34;,
+            color: &#34;#1446A0&#34;
+          }
+        },
+        mapPrependAttribution: &#34;Jawg apikey NOT suitable for production&#34;
+      });
+      $httpProvider.interceptors.push(sourceMonitoringInterceptor);
+    });
+&lt;/script&gt;
+
+                    
+                </head>
+                <base href='https://userclub.opendatasoft.com/'>
+                <body>
+                <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
+&lt;ods-dataset-context context=&#34;ctx,ctxregions,ctxdepartements,ctxepcis,ctxcommunes&#34;
+
+                     ctx-dataset=&#34;demographyref-france-pop-active-sexe-activite-commune-millesime&#34;
+                     ctx-parameters=&#34;{&#39;refine.year&#39;:&#39;2017&#39;,&#39;disjunctive.reg_code&#39;:true,&#39;disjunctive.dep_code&#39;:true,&#39;disjunctive.epci_code&#39;:true,&#39;disjunctive.com_arm_code&#39;:true}&#34;
+                     ctx-domain=&#34;public&#34;
+
+                     ctxregions-dataset=&#34;demographyref-france-pop-active-sexe-activite-commune-millesime&#34;
+                     ctxregions-domain=&#34;public&#34;
+                     ctxregions-parameters=&#34;{&#39;refine.year&#39;:&#39;2017&#39;,&#39;disjunctive.reg_code&#39;:true,&#39;disjunctive.dep_code&#39;:true,&#39;disjunctive.epci_code&#39;:true,&#39;disjunctive.com_arm_code&#39;:true}&#34;
+                     ctxdepartements-dataset=&#34;demographyref-france-pop-active-sexe-activite-commune-millesime&#34;
+                     ctxdepartements-domain=&#34;public&#34;
+                     ctxdepartements-parameters=&#34;{&#39;refine.year&#39;:&#39;2017&#39;,&#39;disjunctive.reg_code&#39;:true,&#39;disjunctive.dep_code&#39;:true,&#39;disjunctive.epci_code&#39;:true,&#39;disjunctive.com_arm_code&#39;:true}&#34;
+                     ctxepcis-dataset=&#34;demographyref-france-pop-active-sexe-activite-commune-millesime&#34;
+                     ctxepcis-domain=&#34;public&#34;
+                     ctxepcis-parameters=&#34;{&#39;refine.year&#39;:&#39;2017&#39;,&#39;disjunctive.reg_code&#39;:true,&#39;disjunctive.dep_code&#39;:true,&#39;disjunctive.epci_code&#39;:true,&#39;disjunctive.com_arm_code&#39;:true}&#34;
+                     ctxcommunes-dataset=&#34;demographyref-france-pop-active-sexe-activite-commune-millesime&#34;
+                     ctxcommunes-domain=&#34;public&#34;
+                     ctxcommunes-parameters=&#34;{&#39;refine.year&#39;:&#39;2017&#39;,&#39;disjunctive.reg_code&#39;:true,&#39;disjunctive.dep_code&#39;:true,&#39;disjunctive.epci_code&#39;:true,&#39;disjunctive.com_arm_code&#39;:true}&#34;
+
+                     ng-init=&#34;values = {};
+                              selected = {}&#34;&gt;
+
+    &lt;div ods-adv-analysis=&#34;regions&#34;
+         ods-adv-analysis-context=&#34;ctxregions&#34;
+         ods-adv-analysis-select=&#34;count(*)&#34;
+         ods-adv-analysis-group-by=&#34;reg_code,reg_name&#34;
+         ods-adv-analysis-order-by=&#34;reg_name&#34;
+         ods-adv-analysis-limit=&#34;300&#34;&gt;
+        {{ values.regions = regions; &#34;&#34;}}
+    &lt;/div&gt;
+    &lt;div ng-if=&#34;ctxdepartements.parameters[&#39;refine.reg_code&#39;].length != 0&#34;
+         ods-adv-analysis=&#34;departements&#34;
+         ods-adv-analysis-context=&#34;ctxdepartements&#34;
+         ods-adv-analysis-select=&#34;count(*)&#34;
+         ods-adv-analysis-group-by=&#34;dep_code,dep_name&#34;
+         ods-adv-analysis-order-by=&#34;dep_name&#34;
+         ods-adv-analysis-limit=&#34;300&#34;&gt;
+        {{ values.departements = departements; &#34;&#34; }}
+    &lt;/div&gt;
+    &lt;div ng-if=&#34;ctxepcis.parameters[&#39;refine.dep_code&#39;].length != 0&#34;
+         ods-adv-analysis=&#34;epcis&#34;
+         ods-adv-analysis-context=&#34;ctxepcis&#34;
+         ods-adv-analysis-select=&#34;count(*)&#34;
+         ods-adv-analysis-group-by=&#34;epci_code,epci_name&#34;
+         ods-adv-analysis-order-by=&#34;epci_name&#34;
+         ods-adv-analysis-limit=&#34;300&#34;&gt;
+        {{ values.epcis = epcis; &#34;&#34; }}
+    &lt;/div&gt;
+    &lt;div ng-if=&#34;ctxcommunes.parameters[&#39;refine.epci_code&#39;].length != 0&#34;
+         ods-adv-analysis=&#34;communes&#34;
+         ods-adv-analysis-context=&#34;ctxcommunes&#34;
+         ods-adv-analysis-select=&#34;count(*)&#34;
+         ods-adv-analysis-group-by=&#34;com_arm_code,com_arm_name&#34;
+         ods-adv-analysis-order-by=&#34;com_arm_name&#34;
+         ods-adv-analysis-limit=&#34;300&#34;&gt;
+        {{ values.communes = communes; &#34;&#34; }}
+    &lt;/div&gt;
+
+    &lt;div class=&#34;ods-selects&#34;&gt;
+        &lt;ods-select selected-values=&#34;selected.regions&#34; placeholder=&#34;Toutes régions&#34;
+                    label-modifier=&#34;reg_name&#34;
+                    value-modifier=&#34;{&#39;code&#39;:reg_code,&#39;name&#39;:reg_name}&#34;
+                    options=&#34;values.regions&#34;
+                    multiple=&#34;false&#34;
+                    is-loading=&#34;true&#34;
+                    on-change=&#34;ctx.parameters[&#39;refine.com_arm_code&#39;] =
+                                   ctx.parameters[&#39;refine.epci_code&#39;] =
+                                   ctx.parameters[&#39;refine.reg_code&#39;] =
+                                   ctx.parameters[&#39;refine.dep_code&#39;] = []&#34;&gt;&lt;/ods-select&gt;
+        {{
+        ctxcommunes.parameters[&#39;refine.reg_code&#39;] =
+        ctxepcis.parameters[&#39;refine.reg_code&#39;] =
+        ctxdepartements.parameters[&#39;refine.reg_code&#39;] =
+        ctx.parameters[&#39;refine.reg_code&#39;] =
+        (selected.regions | toObject:&#39;code&#39; | keys);
+        &#34;&#34;}}
+        &lt;ods-select disabled=&#34;ctxdepartements.parameters[&#39;refine.reg_code&#39;].length == 0&#34;
+                    selected-values=&#34;selected.departements&#34; placeholder=&#34;Tout départements&#34;
+                    label-modifier=&#34;dep_name&#34;
+                    value-modifier=&#34;{&#39;code&#39;:dep_code,&#39;name&#39;:dep_name}&#34;
+                    options=&#34;values.departements&#34;
+                    multiple=&#34;false&#34;
+                    is-loading=&#34;true&#34;
+                    on-change=&#34;ctx.parameters[&#39;refine.com_arm_code&#39;] =
+                                   ctx.parameters[&#39;refine.epci_code&#39;] =
+                                   ctx.parameters[&#39;refine.reg_code&#39;] =
+                                   ctx.parameters[&#39;refine.dep_code&#39;] = []&#34;&gt;&lt;/ods-select&gt;
+        {{
+        ctxcommunes.parameters[&#39;refine.dep_code&#39;] =
+        ctxepcis.parameters[&#39;refine.dep_code&#39;] =
+        ctx.parameters[&#39;refine.dep_code&#39;] =
+        (selected.departements | toObject:&#39;code&#39; | keys);
+        &#34;&#34;}}
+        &lt;ods-select disabled=&#34;ctxepcis.parameters[&#39;refine.dep_code&#39;].length == 0&#34;
+                    selected-values=&#34;selected.epcis&#34; placeholder=&#34;Tout EPCIs&#34;
+                    label-modifier=&#34;epci_name&#34;
+                    value-modifier=&#34;{&#39;code&#39;:epci_code,&#39;name&#39;:epci_name}&#34;
+                    options=&#34;values.epcis&#34;
+                    multiple=&#34;false&#34;
+                    is-loading=&#34;true&#34;
+                    on-change=&#34;ctx.parameters[&#39;refine.com_arm_code&#39;] =
+                                   ctx.parameters[&#39;refine.epci_code&#39;] =
+                                   ctx.parameters[&#39;refine.reg_code&#39;] =
+                                   ctx.parameters[&#39;refine.dep_code&#39;] = []&#34;&gt;&lt;/ods-select&gt;
+        {{
+        ctxcommunes.parameters[&#39;refine.epci_code&#39;] =
+        ctx.parameters[&#39;refine.epci_code&#39;] =
+        (selected.epcis | toObject:&#39;code&#39; | keys);
+        &#34;&#34;}}
+        &lt;ods-select disabled=&#34;ctxcommunes.parameters[&#39;refine.epci_code&#39;].length == 0&#34;
+                    selected-values=&#34;selected.communes&#34; placeholder=&#34;Toutes communes&#34;
+                    label-modifier=&#34;com_arm_name&#34;
+                    value-modifier=&#34;{&#39;code&#39;:com_arm_code,&#39;name&#39;:com_arm_name}&#34;
+                    options=&#34;values.communes&#34;
+                    multiple=&#34;false&#34;
+                    is-loading=&#34;true&#34;
+                    on-change=&#34;ctx.parameters[&#39;refine.com_arm_code&#39;] =
+                                   ctx.parameters[&#39;refine.epci_code&#39;] =
+                                   ctx.parameters[&#39;refine.reg_code&#39;] =
+                                   ctx.parameters[&#39;refine.dep_code&#39;] = []&#34;&gt;&lt;/ods-select&gt;
+        {{
+        ctx.parameters[&#39;refine.com_arm_code&#39;] =
+        (selected.communes | toObject:&#39;code&#39; | keys);
+        &#34;&#34;}}
+    &lt;/div&gt;
+&lt;div ng-if=&#34;selected.regions.length &gt; 0 ||
+                       selected.departements.length &gt; 0 ||
+                       selected.epcis.length &gt; 0 ||
+                       selected.communes.length &gt; 0&#34;&gt;
+    &lt;button class=&#34;clear-filters-button&#34;
+            ng-click=&#34;selected.regions.length = 0;
+                          selected.departements.length = 0;
+                          selected.epcis.length = 0;
+                          selected.communes.length = 0;
+                          values.departements.length = 0;
+                          values.epcis.length = 0;
+                          values.communes.length = 0;&#34;&gt;
+        Reset selection
+    &lt;/button&gt;
+    &lt;i class=&#34;fa fa-times-circle&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;h2&gt;Structure de la population, par CSP et activité, en 2017&lt;/h2&gt;
+    &lt;ods-chart align-month=&#34;true&#34;&gt;
+        &lt;ods-chart-query context=&#34;ctx&#34; field-x=&#34;year&#34; maxpoints=&#34;0&#34; series-breakdown=&#34;variable_label&#34;&gt;
+            &lt;ods-chart-serie expression-y=&#34;value&#34; color=&#34;Paired&#34; chart-type=&#34;column&#34;
+                             label-y=&#34;Nombre de personnes&#34; function-y=&#34;SUM&#34; scientific-display=&#34;true&#34;&gt;
+            &lt;/ods-chart-serie&gt;
+        &lt;/ods-chart-query&gt;
+    &lt;/ods-chart&gt;
+&lt;/ods-dataset-context&gt;
+&lt;/div&gt;</div>
+                <style type='text/css'>
+                    /***** Inlined SELECT *****/
+.ods-selects {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0px;
+}
+
+.odswidget-select {
+    min-width: 200px;
+}
+
+/***** Clear filters button *****/
+
+.clear-filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.clear-filters-button {
+  background: none;
+  border: none;
+  color: var(--text);
+}
+
+.clear-filters-button:hover {
+  opacity: 0.65;
+}
+                </style>
+                </body>
+              ">
+      </iframe>
+      <div class="buttons has-addons">
+          
+              <button id="tab-show-schema" aria-controls="panel-show-schema"
+                      class="show-schema button is-light"
+                      title="Show the data schema of the dataset used in this resource">
+                  <span>See fields in use</span>
+              </button>
+          
+          <button id="tab-show-code" aria-controls="panel-show-code"
+                  class="show-code button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-drilldown-select-for-geographical-levels').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    
+        <div id="panel-show-schema" aria-labelledby="tab-show-schema" aria-hidden
+             class="box-schema is-hidden">
+            <div class="content">
+                <p><strong>Dataset in use:</strong> <code>demographyref-france-pop-active-sexe-activite-commune-millesime</code> <a href="https://userclub.opendatasoft.com/explore/dataset/demographyref-france-pop-active-sexe-activite-commune-millesime/table/">(See it on userclub domain)</a></p>
+<p><strong>Fields in use:</strong></p>
+<table>
+<thead>
+<tr>
+<th>reg_code</th>
+<th>dep_code</th>
+<th>epci_code</th>
+<th>com_arm_code</th>
+<th>reg_name</th>
+<th>dep_name</th>
+<th>epci_name</th>
+<th>com_arm_name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>24</td>
+<td>36</td>
+<td>243600350</td>
+<td>36095</td>
+<td>Centre-Val de Loire</td>
+<td>Indre</td>
+<td>CC de la Châtre et Sainte-Sévère</td>
+<td>Lignerolles</td>
+</tr>
+<tr>
+<td>24</td>
+<td>36</td>
+<td>243600350</td>
+<td>36100</td>
+<td>Centre-Val de Loire</td>
+<td>Indre</td>
+<td>CC de la Châtre et Sainte-Sévère</td>
+<td>Lourouer-Saint-Laurent</td>
+</tr>
+<tr>
+<td>24</td>
+<td>36</td>
+<td>200040558</td>
+<td>36107</td>
+<td>Centre-Val de Loire</td>
+<td>Indre</td>
+<td>CC Écueillé-Valençay</td>
+<td>Lye</td>
+</tr>
+<tr>
+<td>24</td>
+<td>36</td>
+<td>243600327</td>
+<td>36112</td>
+<td>Centre-Val de Loire</td>
+<td>Indre</td>
+<td>CA Châteauroux Métropole</td>
+<td>Mâron</td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+        </div>
+    
+    <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
+         class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
+            <div class="level-left">
+                <div class="level-item">
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-drilldown-select-for-geographical-levels-html-content"
+                        >
+                          HTML
+                        </a>
+                        
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-drilldown-select-for-geographical-levels-css-content"
+                        >
+                          CSS
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
+            </div>
+        </nav>
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-drilldown-select-for-geographical-levels-html-content"
+                 data-clipboard="&lt;ods-dataset-context context=&#34;ctx,ctxregions,ctxdepartements,ctxepcis,ctxcommunes&#34;
+
+                     ctx-dataset=&#34;demographyref-france-pop-active-sexe-activite-commune-millesime&#34;
+                     ctx-parameters=&#34;{&#39;refine.year&#39;:&#39;2017&#39;,&#39;disjunctive.reg_code&#39;:true,&#39;disjunctive.dep_code&#39;:true,&#39;disjunctive.epci_code&#39;:true,&#39;disjunctive.com_arm_code&#39;:true}&#34;
+                     ctx-domain=&#34;public&#34;
+
+                     ctxregions-dataset=&#34;demographyref-france-pop-active-sexe-activite-commune-millesime&#34;
+                     ctxregions-domain=&#34;public&#34;
+                     ctxregions-parameters=&#34;{&#39;refine.year&#39;:&#39;2017&#39;,&#39;disjunctive.reg_code&#39;:true,&#39;disjunctive.dep_code&#39;:true,&#39;disjunctive.epci_code&#39;:true,&#39;disjunctive.com_arm_code&#39;:true}&#34;
+                     ctxdepartements-dataset=&#34;demographyref-france-pop-active-sexe-activite-commune-millesime&#34;
+                     ctxdepartements-domain=&#34;public&#34;
+                     ctxdepartements-parameters=&#34;{&#39;refine.year&#39;:&#39;2017&#39;,&#39;disjunctive.reg_code&#39;:true,&#39;disjunctive.dep_code&#39;:true,&#39;disjunctive.epci_code&#39;:true,&#39;disjunctive.com_arm_code&#39;:true}&#34;
+                     ctxepcis-dataset=&#34;demographyref-france-pop-active-sexe-activite-commune-millesime&#34;
+                     ctxepcis-domain=&#34;public&#34;
+                     ctxepcis-parameters=&#34;{&#39;refine.year&#39;:&#39;2017&#39;,&#39;disjunctive.reg_code&#39;:true,&#39;disjunctive.dep_code&#39;:true,&#39;disjunctive.epci_code&#39;:true,&#39;disjunctive.com_arm_code&#39;:true}&#34;
+                     ctxcommunes-dataset=&#34;demographyref-france-pop-active-sexe-activite-commune-millesime&#34;
+                     ctxcommunes-domain=&#34;public&#34;
+                     ctxcommunes-parameters=&#34;{&#39;refine.year&#39;:&#39;2017&#39;,&#39;disjunctive.reg_code&#39;:true,&#39;disjunctive.dep_code&#39;:true,&#39;disjunctive.epci_code&#39;:true,&#39;disjunctive.com_arm_code&#39;:true}&#34;
+
+                     ng-init=&#34;values = {};
+                              selected = {}&#34;&gt;
+
+    &lt;div ods-adv-analysis=&#34;regions&#34;
+         ods-adv-analysis-context=&#34;ctxregions&#34;
+         ods-adv-analysis-select=&#34;count(*)&#34;
+         ods-adv-analysis-group-by=&#34;reg_code,reg_name&#34;
+         ods-adv-analysis-order-by=&#34;reg_name&#34;
+         ods-adv-analysis-limit=&#34;300&#34;&gt;
+        {{ values.regions = regions; &#34;&#34;}}
+    &lt;/div&gt;
+    &lt;div ng-if=&#34;ctxdepartements.parameters[&#39;refine.reg_code&#39;].length != 0&#34;
+         ods-adv-analysis=&#34;departements&#34;
+         ods-adv-analysis-context=&#34;ctxdepartements&#34;
+         ods-adv-analysis-select=&#34;count(*)&#34;
+         ods-adv-analysis-group-by=&#34;dep_code,dep_name&#34;
+         ods-adv-analysis-order-by=&#34;dep_name&#34;
+         ods-adv-analysis-limit=&#34;300&#34;&gt;
+        {{ values.departements = departements; &#34;&#34; }}
+    &lt;/div&gt;
+    &lt;div ng-if=&#34;ctxepcis.parameters[&#39;refine.dep_code&#39;].length != 0&#34;
+         ods-adv-analysis=&#34;epcis&#34;
+         ods-adv-analysis-context=&#34;ctxepcis&#34;
+         ods-adv-analysis-select=&#34;count(*)&#34;
+         ods-adv-analysis-group-by=&#34;epci_code,epci_name&#34;
+         ods-adv-analysis-order-by=&#34;epci_name&#34;
+         ods-adv-analysis-limit=&#34;300&#34;&gt;
+        {{ values.epcis = epcis; &#34;&#34; }}
+    &lt;/div&gt;
+    &lt;div ng-if=&#34;ctxcommunes.parameters[&#39;refine.epci_code&#39;].length != 0&#34;
+         ods-adv-analysis=&#34;communes&#34;
+         ods-adv-analysis-context=&#34;ctxcommunes&#34;
+         ods-adv-analysis-select=&#34;count(*)&#34;
+         ods-adv-analysis-group-by=&#34;com_arm_code,com_arm_name&#34;
+         ods-adv-analysis-order-by=&#34;com_arm_name&#34;
+         ods-adv-analysis-limit=&#34;300&#34;&gt;
+        {{ values.communes = communes; &#34;&#34; }}
+    &lt;/div&gt;
+
+    &lt;div class=&#34;ods-selects&#34;&gt;
+        &lt;ods-select selected-values=&#34;selected.regions&#34; placeholder=&#34;Toutes régions&#34;
+                    label-modifier=&#34;reg_name&#34;
+                    value-modifier=&#34;{&#39;code&#39;:reg_code,&#39;name&#39;:reg_name}&#34;
+                    options=&#34;values.regions&#34;
+                    multiple=&#34;false&#34;
+                    is-loading=&#34;true&#34;
+                    on-change=&#34;ctx.parameters[&#39;refine.com_arm_code&#39;] =
+                                   ctx.parameters[&#39;refine.epci_code&#39;] =
+                                   ctx.parameters[&#39;refine.reg_code&#39;] =
+                                   ctx.parameters[&#39;refine.dep_code&#39;] = []&#34;&gt;&lt;/ods-select&gt;
+        {{
+        ctxcommunes.parameters[&#39;refine.reg_code&#39;] =
+        ctxepcis.parameters[&#39;refine.reg_code&#39;] =
+        ctxdepartements.parameters[&#39;refine.reg_code&#39;] =
+        ctx.parameters[&#39;refine.reg_code&#39;] =
+        (selected.regions | toObject:&#39;code&#39; | keys);
+        &#34;&#34;}}
+        &lt;ods-select disabled=&#34;ctxdepartements.parameters[&#39;refine.reg_code&#39;].length == 0&#34;
+                    selected-values=&#34;selected.departements&#34; placeholder=&#34;Tout départements&#34;
+                    label-modifier=&#34;dep_name&#34;
+                    value-modifier=&#34;{&#39;code&#39;:dep_code,&#39;name&#39;:dep_name}&#34;
+                    options=&#34;values.departements&#34;
+                    multiple=&#34;false&#34;
+                    is-loading=&#34;true&#34;
+                    on-change=&#34;ctx.parameters[&#39;refine.com_arm_code&#39;] =
+                                   ctx.parameters[&#39;refine.epci_code&#39;] =
+                                   ctx.parameters[&#39;refine.reg_code&#39;] =
+                                   ctx.parameters[&#39;refine.dep_code&#39;] = []&#34;&gt;&lt;/ods-select&gt;
+        {{
+        ctxcommunes.parameters[&#39;refine.dep_code&#39;] =
+        ctxepcis.parameters[&#39;refine.dep_code&#39;] =
+        ctx.parameters[&#39;refine.dep_code&#39;] =
+        (selected.departements | toObject:&#39;code&#39; | keys);
+        &#34;&#34;}}
+        &lt;ods-select disabled=&#34;ctxepcis.parameters[&#39;refine.dep_code&#39;].length == 0&#34;
+                    selected-values=&#34;selected.epcis&#34; placeholder=&#34;Tout EPCIs&#34;
+                    label-modifier=&#34;epci_name&#34;
+                    value-modifier=&#34;{&#39;code&#39;:epci_code,&#39;name&#39;:epci_name}&#34;
+                    options=&#34;values.epcis&#34;
+                    multiple=&#34;false&#34;
+                    is-loading=&#34;true&#34;
+                    on-change=&#34;ctx.parameters[&#39;refine.com_arm_code&#39;] =
+                                   ctx.parameters[&#39;refine.epci_code&#39;] =
+                                   ctx.parameters[&#39;refine.reg_code&#39;] =
+                                   ctx.parameters[&#39;refine.dep_code&#39;] = []&#34;&gt;&lt;/ods-select&gt;
+        {{
+        ctxcommunes.parameters[&#39;refine.epci_code&#39;] =
+        ctx.parameters[&#39;refine.epci_code&#39;] =
+        (selected.epcis | toObject:&#39;code&#39; | keys);
+        &#34;&#34;}}
+        &lt;ods-select disabled=&#34;ctxcommunes.parameters[&#39;refine.epci_code&#39;].length == 0&#34;
+                    selected-values=&#34;selected.communes&#34; placeholder=&#34;Toutes communes&#34;
+                    label-modifier=&#34;com_arm_name&#34;
+                    value-modifier=&#34;{&#39;code&#39;:com_arm_code,&#39;name&#39;:com_arm_name}&#34;
+                    options=&#34;values.communes&#34;
+                    multiple=&#34;false&#34;
+                    is-loading=&#34;true&#34;
+                    on-change=&#34;ctx.parameters[&#39;refine.com_arm_code&#39;] =
+                                   ctx.parameters[&#39;refine.epci_code&#39;] =
+                                   ctx.parameters[&#39;refine.reg_code&#39;] =
+                                   ctx.parameters[&#39;refine.dep_code&#39;] = []&#34;&gt;&lt;/ods-select&gt;
+        {{
+        ctx.parameters[&#39;refine.com_arm_code&#39;] =
+        (selected.communes | toObject:&#39;code&#39; | keys);
+        &#34;&#34;}}
+    &lt;/div&gt;
+&lt;div ng-if=&#34;selected.regions.length &gt; 0 ||
+                       selected.departements.length &gt; 0 ||
+                       selected.epcis.length &gt; 0 ||
+                       selected.communes.length &gt; 0&#34;&gt;
+    &lt;button class=&#34;clear-filters-button&#34;
+            ng-click=&#34;selected.regions.length = 0;
+                          selected.departements.length = 0;
+                          selected.epcis.length = 0;
+                          selected.communes.length = 0;
+                          values.departements.length = 0;
+                          values.epcis.length = 0;
+                          values.communes.length = 0;&#34;&gt;
+        Reset selection
+    &lt;/button&gt;
+    &lt;i class=&#34;fa fa-times-circle&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;h2&gt;Structure de la population, par CSP et activité, en 2017&lt;/h2&gt;
+    &lt;ods-chart align-month=&#34;true&#34;&gt;
+        &lt;ods-chart-query context=&#34;ctx&#34; field-x=&#34;year&#34; maxpoints=&#34;0&#34; series-breakdown=&#34;variable_label&#34;&gt;
+            &lt;ods-chart-serie expression-y=&#34;value&#34; color=&#34;Paired&#34; chart-type=&#34;column&#34;
+                             label-y=&#34;Nombre de personnes&#34; function-y=&#34;SUM&#34; scientific-display=&#34;true&#34;&gt;
+            &lt;/ods-chart-serie&gt;
+        &lt;/ods-chart-query&gt;
+    &lt;/ods-chart&gt;
+&lt;/ods-dataset-context&gt;
+"
+                 role="tabpanel">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;ods-dataset-context context=&#34;ctx,ctxregions,ctxdepartements,ctxepcis,ctxcommunes&#34;
+
+                     ctx-dataset=&#34;demographyref-france-pop-active-sexe-activite-commune-millesime&#34;
+                     ctx-parameters=&#34;{&#39;refine.year&#39;:&#39;2017&#39;,&#39;disjunctive.reg_code&#39;:true,&#39;disjunctive.dep_code&#39;:true,&#39;disjunctive.epci_code&#39;:true,&#39;disjunctive.com_arm_code&#39;:true}&#34;
+                     ctx-domain=&#34;public&#34;
+
+                     ctxregions-dataset=&#34;demographyref-france-pop-active-sexe-activite-commune-millesime&#34;
+                     ctxregions-domain=&#34;public&#34;
+                     ctxregions-parameters=&#34;{&#39;refine.year&#39;:&#39;2017&#39;,&#39;disjunctive.reg_code&#39;:true,&#39;disjunctive.dep_code&#39;:true,&#39;disjunctive.epci_code&#39;:true,&#39;disjunctive.com_arm_code&#39;:true}&#34;
+                     ctxdepartements-dataset=&#34;demographyref-france-pop-active-sexe-activite-commune-millesime&#34;
+                     ctxdepartements-domain=&#34;public&#34;
+                     ctxdepartements-parameters=&#34;{&#39;refine.year&#39;:&#39;2017&#39;,&#39;disjunctive.reg_code&#39;:true,&#39;disjunctive.dep_code&#39;:true,&#39;disjunctive.epci_code&#39;:true,&#39;disjunctive.com_arm_code&#39;:true}&#34;
+                     ctxepcis-dataset=&#34;demographyref-france-pop-active-sexe-activite-commune-millesime&#34;
+                     ctxepcis-domain=&#34;public&#34;
+                     ctxepcis-parameters=&#34;{&#39;refine.year&#39;:&#39;2017&#39;,&#39;disjunctive.reg_code&#39;:true,&#39;disjunctive.dep_code&#39;:true,&#39;disjunctive.epci_code&#39;:true,&#39;disjunctive.com_arm_code&#39;:true}&#34;
+                     ctxcommunes-dataset=&#34;demographyref-france-pop-active-sexe-activite-commune-millesime&#34;
+                     ctxcommunes-domain=&#34;public&#34;
+                     ctxcommunes-parameters=&#34;{&#39;refine.year&#39;:&#39;2017&#39;,&#39;disjunctive.reg_code&#39;:true,&#39;disjunctive.dep_code&#39;:true,&#39;disjunctive.epci_code&#39;:true,&#39;disjunctive.com_arm_code&#39;:true}&#34;
+
+                     ng-init=&#34;values = {};
+                              selected = {}&#34;&gt;
+
+    &lt;div ods-adv-analysis=&#34;regions&#34;
+         ods-adv-analysis-context=&#34;ctxregions&#34;
+         ods-adv-analysis-select=&#34;count(*)&#34;
+         ods-adv-analysis-group-by=&#34;reg_code,reg_name&#34;
+         ods-adv-analysis-order-by=&#34;reg_name&#34;
+         ods-adv-analysis-limit=&#34;300&#34;&gt;
+        {{ values.regions = regions; &#34;&#34;}}
+    &lt;/div&gt;
+    &lt;div ng-if=&#34;ctxdepartements.parameters[&#39;refine.reg_code&#39;].length != 0&#34;
+         ods-adv-analysis=&#34;departements&#34;
+         ods-adv-analysis-context=&#34;ctxdepartements&#34;
+         ods-adv-analysis-select=&#34;count(*)&#34;
+         ods-adv-analysis-group-by=&#34;dep_code,dep_name&#34;
+         ods-adv-analysis-order-by=&#34;dep_name&#34;
+         ods-adv-analysis-limit=&#34;300&#34;&gt;
+        {{ values.departements = departements; &#34;&#34; }}
+    &lt;/div&gt;
+    &lt;div ng-if=&#34;ctxepcis.parameters[&#39;refine.dep_code&#39;].length != 0&#34;
+         ods-adv-analysis=&#34;epcis&#34;
+         ods-adv-analysis-context=&#34;ctxepcis&#34;
+         ods-adv-analysis-select=&#34;count(*)&#34;
+         ods-adv-analysis-group-by=&#34;epci_code,epci_name&#34;
+         ods-adv-analysis-order-by=&#34;epci_name&#34;
+         ods-adv-analysis-limit=&#34;300&#34;&gt;
+        {{ values.epcis = epcis; &#34;&#34; }}
+    &lt;/div&gt;
+    &lt;div ng-if=&#34;ctxcommunes.parameters[&#39;refine.epci_code&#39;].length != 0&#34;
+         ods-adv-analysis=&#34;communes&#34;
+         ods-adv-analysis-context=&#34;ctxcommunes&#34;
+         ods-adv-analysis-select=&#34;count(*)&#34;
+         ods-adv-analysis-group-by=&#34;com_arm_code,com_arm_name&#34;
+         ods-adv-analysis-order-by=&#34;com_arm_name&#34;
+         ods-adv-analysis-limit=&#34;300&#34;&gt;
+        {{ values.communes = communes; &#34;&#34; }}
+    &lt;/div&gt;
+
+    &lt;div class=&#34;ods-selects&#34;&gt;
+        &lt;ods-select selected-values=&#34;selected.regions&#34; placeholder=&#34;Toutes régions&#34;
+                    label-modifier=&#34;reg_name&#34;
+                    value-modifier=&#34;{&#39;code&#39;:reg_code,&#39;name&#39;:reg_name}&#34;
+                    options=&#34;values.regions&#34;
+                    multiple=&#34;false&#34;
+                    is-loading=&#34;true&#34;
+                    on-change=&#34;ctx.parameters[&#39;refine.com_arm_code&#39;] =
+                                   ctx.parameters[&#39;refine.epci_code&#39;] =
+                                   ctx.parameters[&#39;refine.reg_code&#39;] =
+                                   ctx.parameters[&#39;refine.dep_code&#39;] = []&#34;&gt;&lt;/ods-select&gt;
+        {{
+        ctxcommunes.parameters[&#39;refine.reg_code&#39;] =
+        ctxepcis.parameters[&#39;refine.reg_code&#39;] =
+        ctxdepartements.parameters[&#39;refine.reg_code&#39;] =
+        ctx.parameters[&#39;refine.reg_code&#39;] =
+        (selected.regions | toObject:&#39;code&#39; | keys);
+        &#34;&#34;}}
+        &lt;ods-select disabled=&#34;ctxdepartements.parameters[&#39;refine.reg_code&#39;].length == 0&#34;
+                    selected-values=&#34;selected.departements&#34; placeholder=&#34;Tout départements&#34;
+                    label-modifier=&#34;dep_name&#34;
+                    value-modifier=&#34;{&#39;code&#39;:dep_code,&#39;name&#39;:dep_name}&#34;
+                    options=&#34;values.departements&#34;
+                    multiple=&#34;false&#34;
+                    is-loading=&#34;true&#34;
+                    on-change=&#34;ctx.parameters[&#39;refine.com_arm_code&#39;] =
+                                   ctx.parameters[&#39;refine.epci_code&#39;] =
+                                   ctx.parameters[&#39;refine.reg_code&#39;] =
+                                   ctx.parameters[&#39;refine.dep_code&#39;] = []&#34;&gt;&lt;/ods-select&gt;
+        {{
+        ctxcommunes.parameters[&#39;refine.dep_code&#39;] =
+        ctxepcis.parameters[&#39;refine.dep_code&#39;] =
+        ctx.parameters[&#39;refine.dep_code&#39;] =
+        (selected.departements | toObject:&#39;code&#39; | keys);
+        &#34;&#34;}}
+        &lt;ods-select disabled=&#34;ctxepcis.parameters[&#39;refine.dep_code&#39;].length == 0&#34;
+                    selected-values=&#34;selected.epcis&#34; placeholder=&#34;Tout EPCIs&#34;
+                    label-modifier=&#34;epci_name&#34;
+                    value-modifier=&#34;{&#39;code&#39;:epci_code,&#39;name&#39;:epci_name}&#34;
+                    options=&#34;values.epcis&#34;
+                    multiple=&#34;false&#34;
+                    is-loading=&#34;true&#34;
+                    on-change=&#34;ctx.parameters[&#39;refine.com_arm_code&#39;] =
+                                   ctx.parameters[&#39;refine.epci_code&#39;] =
+                                   ctx.parameters[&#39;refine.reg_code&#39;] =
+                                   ctx.parameters[&#39;refine.dep_code&#39;] = []&#34;&gt;&lt;/ods-select&gt;
+        {{
+        ctxcommunes.parameters[&#39;refine.epci_code&#39;] =
+        ctx.parameters[&#39;refine.epci_code&#39;] =
+        (selected.epcis | toObject:&#39;code&#39; | keys);
+        &#34;&#34;}}
+        &lt;ods-select disabled=&#34;ctxcommunes.parameters[&#39;refine.epci_code&#39;].length == 0&#34;
+                    selected-values=&#34;selected.communes&#34; placeholder=&#34;Toutes communes&#34;
+                    label-modifier=&#34;com_arm_name&#34;
+                    value-modifier=&#34;{&#39;code&#39;:com_arm_code,&#39;name&#39;:com_arm_name}&#34;
+                    options=&#34;values.communes&#34;
+                    multiple=&#34;false&#34;
+                    is-loading=&#34;true&#34;
+                    on-change=&#34;ctx.parameters[&#39;refine.com_arm_code&#39;] =
+                                   ctx.parameters[&#39;refine.epci_code&#39;] =
+                                   ctx.parameters[&#39;refine.reg_code&#39;] =
+                                   ctx.parameters[&#39;refine.dep_code&#39;] = []&#34;&gt;&lt;/ods-select&gt;
+        {{
+        ctx.parameters[&#39;refine.com_arm_code&#39;] =
+        (selected.communes | toObject:&#39;code&#39; | keys);
+        &#34;&#34;}}
+    &lt;/div&gt;
+&lt;div ng-if=&#34;selected.regions.length &gt; 0 ||
+                       selected.departements.length &gt; 0 ||
+                       selected.epcis.length &gt; 0 ||
+                       selected.communes.length &gt; 0&#34;&gt;
+    &lt;button class=&#34;clear-filters-button&#34;
+            ng-click=&#34;selected.regions.length = 0;
+                          selected.departements.length = 0;
+                          selected.epcis.length = 0;
+                          selected.communes.length = 0;
+                          values.departements.length = 0;
+                          values.epcis.length = 0;
+                          values.communes.length = 0;&#34;&gt;
+        Reset selection
+    &lt;/button&gt;
+    &lt;i class=&#34;fa fa-times-circle&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+    &lt;/div&gt;
+    &lt;h2&gt;Structure de la population, par CSP et activité, en 2017&lt;/h2&gt;
+    &lt;ods-chart align-month=&#34;true&#34;&gt;
+        &lt;ods-chart-query context=&#34;ctx&#34; field-x=&#34;year&#34; maxpoints=&#34;0&#34; series-breakdown=&#34;variable_label&#34;&gt;
+            &lt;ods-chart-serie expression-y=&#34;value&#34; color=&#34;Paired&#34; chart-type=&#34;column&#34;
+                             label-y=&#34;Nombre de personnes&#34; function-y=&#34;SUM&#34; scientific-display=&#34;true&#34;&gt;
+            &lt;/ods-chart-serie&gt;
+        &lt;/ods-chart-query&gt;
+    &lt;/ods-chart&gt;
+&lt;/ods-dataset-context&gt;
+</code></pre>
+                </div>
+            </div>
+            
+            <div class="js-tabcontent"
+                 id="code-drilldown-select-for-geographical-levels-css-content"
+                 data-clipboard="/***** Inlined SELECT *****/
+.ods-selects {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0px;
+}
+
+.odswidget-select {
+    min-width: 200px;
+}
+
+/***** Clear filters button *****/
+
+.clear-filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.clear-filters-button {
+  background: none;
+  border: none;
+  color: var(--text);
+}
+
+.clear-filters-button:hover {
+  opacity: 0.65;
+}">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>/***** Inlined SELECT *****/
+.ods-selects {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+    padding: 10px 0px;
+}
+
+.odswidget-select {
+    min-width: 200px;
+}
+
+/***** Clear filters button *****/
+
+.clear-filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.clear-filters-button {
+  background: none;
+  border: none;
+  color: var(--text);
+}
+
+.clear-filters-button:hover {
+  opacity: 0.65;
 }</code></pre>
                 </div>
             </div>
