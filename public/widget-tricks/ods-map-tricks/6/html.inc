@@ -1,12 +1,11 @@
 <div class="container">
-    <ods-dataset-context context="georef,georeffiltered,datactx,refinectx"
+    <ods-dataset-context context="georef,datactx,refinectx"
                          georef-dataset="departements-et-collectivites-doutre-mer-france"
                          georef-domain="userclub"
                          refinectx-dataset="departements-et-collectivites-doutre-mer-france"
                          refinectx-domain="userclub"
-
                          datactx-dataset="healthref-france-finess"
-                         datactx--parameters="{'refine.libelle_categorie_d_etablissement':'Pharmacie d\'Officine'}"
+                         datactx-parameters="{'refine.libelle_categorie_d_etablissement':'Pharmacie d\'Officine'}"
                          datactx-domain="userclub"
                          values={}>
 
@@ -115,5 +114,6 @@
                     </div>
                 </div>
             </div>
+        </div>
     </ods-dataset-context>
 </div>
