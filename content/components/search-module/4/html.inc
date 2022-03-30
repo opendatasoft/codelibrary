@@ -23,7 +23,7 @@
                        aria-controls="search-results"
                        placeholder="Search for a city"
                        ng-model="variables.recherche"
-                       ng-model-options="{ updateOn: 'keyup', debounce: 400}"
+                       ng-model-options="{ updateOn: 'keyup', debounce: 400 }"
                        ng-change="variables.recherche ? (search.parameters['q'] = ('#search(com_arm_name,\'' + variables.recherche + '\')' )) : (ctx.parameters['refine.com_arm_code'] = undefined);"
                        class="search-bar-input"
                        type="text"/>
