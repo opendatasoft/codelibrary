@@ -1,7 +1,7 @@
 ---
 title: "Replace map tooltip with a refine : see the aggregation !"
 height: 700
-date: "2021-03-30"
+date: "2022-03-30"
 ---
 
 In this example, in combination with [`ods-color-gradient` to display a choropleth map](/widget-tricks/ods-color-gradient/), the `refineOnClick` is used to select a department and activate KPI cards on top of the map.
