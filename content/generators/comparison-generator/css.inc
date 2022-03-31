@@ -40,6 +40,8 @@
     content: normal;
   }
 }
+
+
 .page-title {
   font-size: 3rem;
   font-weight: bold;
@@ -64,6 +66,7 @@
     justify-content: center;
   }
 }
+
 /* Filters
 ========================================================================== */
 .ods-selects {

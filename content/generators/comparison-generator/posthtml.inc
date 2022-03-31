@@ -23,7 +23,7 @@
      ex: 'multiFields'
     -->
 
-        <!-- defaultLevel: the title you want to display when no filter is selected -->
+    <!-- defaultLevel: the title you want to display when no filter is selected -->
 
 
     <!-- ### FILTERS SETTINGS ### -->
