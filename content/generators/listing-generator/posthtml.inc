@@ -286,7 +286,7 @@
                                                no-results-message="{{ noResultMsg }}">
                       <div class="content-card"
                            tabindex="0"
-                           ng-class="{'content-card-horizontal': imagePosition === 'left' }">
+                           ng-class="{'content-card-horizontal': $parent.$parent.$parent.$parent.$parent.imagePosition === 'left' }">
                           <div class="content-card-img"
                                ng-if="item.fields[$parent.$parent.$parent.$parent.$parent.fieldPhoto]"
                                style="{{ 'background-image: url(https://' + $parent.$parent.$parent.$parent.$parent.domain + '/explore/dataset/' + $parent.$parent.$parent.$parent.$parent.datasetid + '/files/' + item.fields[$parent.$parent.$parent.$parent.$parent.fieldPhoto].id + '/300/);' }}">
