@@ -1,7 +1,6 @@
 <div class="row">
     <div class="col-md-4">
-        <a href="#"
-           class="access-card">
+        <a href="#" class="access-card">
             <div class="access-card-img">
             </div>
             <div class="access-card-content">

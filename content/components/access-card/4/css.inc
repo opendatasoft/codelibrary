@@ -28,6 +28,7 @@
     padding: 13px 26px;
     width: 94%;
 }
+
 .access-card-pretitle {
     text-transform: uppercase;
     color: var(--secondary-color);
@@ -36,11 +37,13 @@
     margin: 0px;
     font-size: 12px;
 }
+
 .access-card-title {
     font-weight: 400;
     margin: 10px 0px;
     font-size: 22px;
 }
+
 .access-card-subtitle {
     font-size: 16px;
     font-weight: 400;
