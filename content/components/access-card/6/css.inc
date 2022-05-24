@@ -52,7 +52,7 @@
 .access-card-subtitle {
     font-size: 16px;
     font-weight: 400;
-    margin: 0px 0px 10px 0px;
+    margin: 0px;
 }
 
 .access-card-content p {

@@ -5,7 +5,6 @@
 .access-card {
     border-radius: 10px;
     background-color: var(--boxes-background);
-    padding: 10px 0px;
     box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);
     transition: all 0.3s;
     position: relative;
