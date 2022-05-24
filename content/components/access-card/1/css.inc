@@ -2,10 +2,6 @@
     --secondary-color: #142e7b;
 }
 
-.access-card-link {
-    color: var(--text);
-}
-
 .access-card-bg {
     background-image: url("https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg");
     background-repeat: no-repeat;
@@ -15,10 +11,12 @@
     height: 600px;
     box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);
     transition: all 0.3s;
+    color: var(--text);
+    display: block;
 }
 
 .access-card-bg:hover {
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.50);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
 }
 
 .access-card {
@@ -82,7 +80,6 @@
     transition: all 0.3s;
 }
 
-.access-card:hover .access-card-button i{
+.access-card:hover .access-card-button i {
     transform: translateX(5px);
 }
-

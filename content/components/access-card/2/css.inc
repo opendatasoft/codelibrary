@@ -2,14 +2,6 @@
     --secondary-color: #142e7b;
 }
 
-.access-card-link {
-    color: var(--text);
-}
-
-.access-card-link:hover {
-    text-decoration: none;
-}
-
 .access-card {
     border-radius: 10px;
     background-color: var(--boxes-background);
@@ -18,10 +10,13 @@
     transition: all 0.3s;
     position: relative;
     height: 100%;
+    color: var(--text);
+    display: block;
 }
 
 .access-card:hover {
     box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
 }
 
 .access-card-top {
@@ -81,6 +76,6 @@
     transition: all 0.3s;
 }
 
-.access-card:hover .access-card-button i{
+.access-card:hover .access-card-button i {
     transform: translateX(5px);
 }

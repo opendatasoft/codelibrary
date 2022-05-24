@@ -2,14 +2,6 @@
     --secondary-color: #142e7b;
 }
 
-.access-card-link {
-    color: var(--text);
-}
-
-.access-card-link:hover {
-    text-decoration: none;
-}
-
 .access-card {
     border-radius: 10px;
     background-color: #fff;
@@ -17,10 +9,13 @@
     background-color: var(--boxes-background);
     box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);
     transition: all 0.3s;
+    display: block;
+    color: var(--text);
 }
 
 .access-card:hover {
     box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
 }
 
 .access-card-img {
@@ -38,8 +33,8 @@
 
 .access-card-pretitle {
     text-transform: uppercase;
-    color: #535C29;
-    background-color: #DBE0C1;
+    color: #535c29;
+    background-color: #dbe0c1;
     border-radius: 3px;
     font-weight: 400;
     margin: 0px;
