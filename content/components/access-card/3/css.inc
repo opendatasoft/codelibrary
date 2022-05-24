@@ -1,5 +1,5 @@
 :root {
-    --secondary-color: #142E7B;
+    --secondary-color: #142e7b;
 }
 
 .access-card-link {
@@ -15,6 +15,12 @@
     background-color: #fff;
     height: 100%;
     background-color: var(--boxes-background);
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);
+    transition: all 0.3s;
+}
+
+.access-card:hover {
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.5);
 }
 
 .access-card-img {
@@ -22,20 +28,26 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    height: 240px;
+    height: 250px;
+    position: relative;
 }
 
 .access-card-content {
-    padding: 20px;
+    padding: 26px;
 }
 
 .access-card-pretitle {
     text-transform: uppercase;
-    color: var(--secondary-color);
-    opacity: 0.7;
+    color: #535C29;
+    background-color: #DBE0C1;
+    border-radius: 3px;
     font-weight: 400;
     margin: 0px;
     font-size: 12px;
+    position: absolute;
+    bottom: 15px;
+    left: 26px;
+    padding: 5px;
 }
 
 .access-card-title {
@@ -57,7 +69,7 @@
 .access-card-button {
     display: flex;
     justify-content: center;
-    padding: 10px 0px;
+    margin-top: 20px;
 }
 
 .access-card-button:hover {
@@ -67,7 +79,8 @@
 .access-card-button-content {
     background-color: var(--secondary-color);
     text-align: center;
-    color: #FFF;
+    color: #fff;
     border-radius: 24px;
-    padding: 5px 15px;
+    padding: 10px 20px;
+    width: fit-content;
 }

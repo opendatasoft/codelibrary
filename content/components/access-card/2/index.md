@@ -1,4 +1,4 @@
 ---
 title: "With description and image in the middle"
-height: 650
+height: 750
 ---

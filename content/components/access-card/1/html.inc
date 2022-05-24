@@ -18,7 +18,9 @@
                         <p>Support : Portail opendata</p>
                         <p>Développement : Direction du Numérique - Orléans Métropole</p>
                     </div>
+                    <div class="access-card-button">
                         <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                    </div>
                 </div>
             </div>
         </a>
