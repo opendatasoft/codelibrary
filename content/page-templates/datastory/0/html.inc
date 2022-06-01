@@ -20,7 +20,7 @@
                                          evenementspublicsopenagenda-domain="userclub"
                                          evenementspublicsopenagenda-dataset="evenements-publics-openagenda"
                                          evenementspublicsopenagenda-parameters="{'disjunctive.tags':true,'disjunctive.placename':true,'disjunctive.city':true}">
-                        <ods-chart class="no-bg hide-y-gridline hide-y-values hide-x-legend medium-x-values"
+                        <ods-chart class="no-bg hide-y-gridline hide-y-values hide-x-legend medium-x-values one-out-of-5-values"
                                    single-y-axis="true" step="10000" scientific-display="true" display-legend="false"
                                    labels-x-length="20" align-month="false">
                             <ods-chart-query context="evenementspublicsopenagenda" field-x="department" maxpoints="20"

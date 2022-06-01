@@ -61,10 +61,10 @@ section {
     height: 400px;
 }
 
-g.highcharts-label.highcharts-data-label {
+.one-out-of-5-values g.highcharts-label.highcharts-data-label {
     display: none;
 }
-g.highcharts-label.highcharts-data-label:first-child, g.highcharts-label.highcharts-data-label:nth-child(5n) {
+.one-out-of-5-values g.highcharts-label.highcharts-data-label:first-child, g.highcharts-label.highcharts-data-label:nth-child(5n) {
     display: inherit;
 }
 
