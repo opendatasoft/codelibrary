@@ -1,4 +1,4 @@
 ---
 title: With description and image on top
-height: 670
+height: 700
 ---

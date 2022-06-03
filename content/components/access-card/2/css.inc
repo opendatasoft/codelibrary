@@ -11,6 +11,7 @@
     height: 100%;
     color: var(--text);
     display: block;
+    margin-bottom: 20px;
 }
 
 .access-card:hover {

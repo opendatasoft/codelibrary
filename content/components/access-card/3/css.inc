@@ -11,6 +11,7 @@
     transition: all 0.3s;
     display: block;
     color: var(--text);
+    margin-bottom: 20px;
 }
 
 .access-card:hover {

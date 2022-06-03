@@ -12,6 +12,7 @@
     color: var(--secondary-color);
     transition: all 0.3s;
     display: block;
+    margin-bottom: 20px;
 }
 
 .access-card:hover {

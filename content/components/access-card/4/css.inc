@@ -12,6 +12,7 @@
     height: 100%;
     justify-content: center;
     padding-bottom: 15px;
+    margin-bottom: 20px;
 }
 .access-card-bg:hover {
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
