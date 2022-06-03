@@ -3,28 +3,27 @@
 }
 
 .access-card-bg {
-    background-image: url("https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 6px;
-    position: relative;
-    height: 600px;
     box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);
     transition: all 0.3s;
     color: var(--text);
-    display: block;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    padding-bottom: 15px;
 }
 
 .access-card-bg:hover {
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
 }
 
 .access-card {
     border-radius: 10px;
     background-color: #fff;
-    margin: 0% 3%;
-    position: absolute;
-    bottom: 3%;
+    margin-top: 200px;
     padding: 26px;
     width: 94%;
 }

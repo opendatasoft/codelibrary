@@ -1,6 +1,7 @@
 <div class="row">
     <div class="col-md-4">
-        <a href="#" class="access-card-bg">
+        <a href="#" class="access-card-bg"
+           style="background-image: url('https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg')">
             <div class="access-card">
                 <h3 class="access-card-pretitle">Éphémère</h3>
                 <h2 class="access-card-title">Opération jardins éphémères</h2>

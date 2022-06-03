@@ -1,4 +1,4 @@
 ---
 title: "With description and full height background image"
-height: 670
+height: 700
 ---

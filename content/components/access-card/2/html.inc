@@ -10,7 +10,8 @@
                     Liste et carte des jardins éphémères 2021
                 </h4>
             </div>
-            <div class="access-card-img">
+            <div class="access-card-img"
+                 style="background-image: url('https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg')">
             </div>
             <div class="access-card-description">
                 <p>Politique publique : Biodiversité</p>

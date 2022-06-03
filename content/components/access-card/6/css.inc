@@ -20,7 +20,6 @@
 }
 
 .access-card-img {
-    background-image: url("https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
