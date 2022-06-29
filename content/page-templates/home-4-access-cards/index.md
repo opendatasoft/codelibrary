@@ -11,7 +11,7 @@ This home page integrates the first version of the [component Access cards](http
 The access cards are inserted in a grid container, so that all the cards have the same height.
 
 **Tips**
-- You can use another version of the access cards by replacing the HTML between the comments `<!--START ACCESS CARD -->` and `<!--END ACCESS CARD -->` and the CSS between `/*==== ACCESS CARD ====*/` and `/*==== Homepage Styles ====*/`
+- You can use another version of the access cards by replacing the HTML between the comments `<!--Start Access Card -->` and `<!--End Access Card -->` and the CSS between `/*==== Access Cards ====*/` and `/*==== Homepage Styles ====*/`
 - You can change the background image in the HTML file
 - You can change the arrow icon with another icon from [the Fontawesome Library](https://fontawesome.com/v4.7.0/icons/)
 

@@ -75,7 +75,7 @@
     </section>
     <section class="container">
         <div class="access-cards-container">
-            <!-- START ACCESS CARD 1 -->
+            <!-- Start Access Card 1 -->
             <a href="#"
                class="access-card-bg"
                style="background-image: url('https://discovery.opendatasoft.com/assets/theme_image/mobility-bg.jpg');">
@@ -97,8 +97,8 @@
                     </div>
                 </div>
             </a>
-            <!-- END ACCESS CARD 1 -->
-            <!-- START ACCESS CARD 2 -->
+            <!-- End Access Card 1 -->
+            <!-- Start Access Card 2 -->
             <a href="#"
                class="access-card-bg"
                style="background-image: url('https://discovery.opendatasoft.com/assets/theme_image/gastronomy-bg.jpg');">
@@ -120,8 +120,8 @@
                     </div>
                 </div>
             </a>
-            <!-- END ACCESS CARD 2 -->
-            <!-- START ACCESS CARD 3 -->
+            <!-- End Access Card 2 -->
+            <!-- Start Access Card 3 -->
             <a href="#"
                class="access-card-bg"
                style="background-image: url('https://discovery.opendatasoft.com/assets/theme_image/culture-bg.jpg');">
@@ -143,7 +143,7 @@
                     </div>
                 </div>
             </a>
-            <!-- END ACCESS CARD 3 -->
+            <!-- End Access Card 3 -->
         </div>
     </section>
     <section class="container">
