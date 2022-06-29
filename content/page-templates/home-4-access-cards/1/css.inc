@@ -353,7 +353,7 @@
 }
 
 /* ========================================================================== 
-ACCESS CARDS 
+ACCESS CARDS CONTAINER
  ========================================================================== */
 .access-cards-container {
   margin-bottom: 20px;
@@ -361,6 +361,10 @@ ACCESS CARDS
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 40px;
 }
+
+/* ========================================================================== 
+ACCESS CARDS 
+ ========================================================================== */
 
 .access-card-bg {
     background-repeat: no-repeat;
