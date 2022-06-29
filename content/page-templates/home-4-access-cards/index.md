@@ -12,6 +12,6 @@ The access cards are inserted in a grid container, so that all the cards have th
 
 **Tips**
 - You can use another version of the access cards by replacing the HTML between the comments `<!--Start Access Card -->` and `<!--End Access Card -->` and the CSS between `/*==== Access Cards ====*/` and `/*==== Homepage Styles ====*/`
-- You can change the background image in the HTML file
-- You can change the arrow icon with another icon from [the Fontawesome Library](https://fontawesome.com/v4.7.0/icons/)
+- You can change the background image of the access cards in the HTML file
+- You can change the arrow icon of the access card with another icon from [the Fontawesome Library](https://fontawesome.com/v4.7.0/icons/)
 
