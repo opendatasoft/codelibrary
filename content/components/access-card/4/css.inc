@@ -1,6 +1,7 @@
 :root {
     --secondary-color: #142e7b;
 }
+
 .access-card-bg {
     background-repeat: no-repeat;
     background-size: cover;
@@ -11,20 +12,22 @@
     display: flex;
     height: 100%;
     justify-content: center;
-    padding-bottom: 15px;
     margin-bottom: 20px;
 }
+
 .access-card-bg:hover {
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
     text-decoration: none;
 }
+
 .access-card {
     border-radius: 10px;
     background-color: #fff;
-    margin-top: 200px;
+    margin: 200px 26px 26px;
     padding: 26px;
-    width: 94%;
+    width: 100%;
 }
+
 .access-card-pretitle {
     text-transform: uppercase;
     color: var(--secondary-color);
@@ -33,24 +36,29 @@
     margin: 0px;
     font-size: 12px;
 }
+
 .access-card-title {
     font-weight: 400;
     margin: 10px 0px;
     font-size: 22px;
 }
+
 .access-card-subtitle {
     font-size: 16px;
     font-weight: 400;
     margin: 0px 0px 20px 0px;
 }
+
 .access-card-button {
     display: flex;
     justify-content: center;
     margin-top: 20px;
 }
+
 .access-card-button:hover {
     opacity: 0.7;
 }
+
 .access-card-button-content {
     background-color: var(--secondary-color);
     text-align: center;
