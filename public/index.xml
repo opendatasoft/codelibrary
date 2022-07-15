@@ -93,6 +93,9 @@
     
       
       
+    
+      
+      
         <item>
           <title>ods-color-gradient: Number of classes</title>
           <link>https://codelibrary.opendatasoft.com/widget-tricks/ods-color-gradient/#ods-color-gradient-number-of-classes</link>
@@ -233,149 +236,17 @@ The transform applied to value is of the type &lt;code&gt;y = x^k&lt;/code&gt; w
     
       
       
-        <item>
-          <title>Full dashboard</title>
-          <link>https://codelibrary.opendatasoft.com/components/material-themed-cards/#full-dashboard</link>
-          
-            <pubDate>Wed, 09 Jun 2021 10:39:16 +0200</pubDate>
-          
-          
-          <guid>https://codelibrary.opendatasoft.com/components/material-themed-cards/#full-dashboard</guid>
-          <description>&lt;p&gt;This is a reproduction of the &lt;a href=&#34;https://codelibrary.opendatasoft.com/page-templates/monitoring-dashboard&#34;&gt;monitoring dashboard&lt;/a&gt; using the above components.&lt;/p&gt;
-</description>
-        </item>
+    
       
-        <item>
-          <title>Full dashboard with multiple primary colors</title>
-          <link>https://codelibrary.opendatasoft.com/components/material-themed-cards/#full-dashboard-with-multiple-primary-colors</link>
-          
-            <pubDate>Wed, 09 Jun 2021 10:39:16 +0200</pubDate>
-          
-          
-          <guid>https://codelibrary.opendatasoft.com/components/material-themed-cards/#full-dashboard-with-multiple-primary-colors</guid>
-          <description>&lt;p&gt;You can use multiple color theme on the same page by adding classes that redefines the same color variables as in &lt;code&gt;:root&lt;/code&gt; (&lt;code&gt; --primary-hue, --primary-saturation&lt;/code&gt; etc.)
-. In this example, we add the following css class: &lt;code&gt;is-info&lt;/code&gt;, &lt;code&gt;is-warning&lt;/code&gt;, &lt;code&gt;is-success&lt;/code&gt;. Then we apply them on &lt;code&gt;&amp;lt;section class=&amp;quot;row is-XXX&amp;quot;&amp;gt;…&amp;lt;/section&amp;gt;&lt;/code&gt; to give specific colors to sections.&lt;/p&gt;
-</description>
-        </item>
       
     
       
       
-        <item>
-          <title>Bubblemaps</title>
-          <link>https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-vegalite/#bubblemaps</link>
-          
-            <pubDate>Wed, 30 Jun 2021 14:46:16 +0200</pubDate>
-          
-          
-          <guid>https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-vegalite/#bubblemaps</guid>
-          <description>&lt;p&gt;To switch to a bubblemap:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;set the &lt;code&gt;grid&lt;/code&gt; to false in the config view&lt;/li&gt;
-&lt;li&gt;set the mark type to &lt;code&gt;circle&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;in addition to the &lt;code&gt;color&lt;/code&gt; property, a new mark property is necessary to change the size of the circles: &lt;code&gt;size&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;a href=&#34;https://vega.github.io/vega-lite-v2/docs/encoding.html#mark-prop&#34;&gt;&lt;code&gt;size&lt;/code&gt; mark property documentation here&lt;/a&gt;.
-It&amp;rsquo;s very similar to the color property, it expects an aggregate and field option to be able to size circles depending on your data.
-It also accepts different scale types (quantile, power, log etc&amp;hellip;).&lt;/p&gt;
-</description>
-        </item>
-      
-        <item>
-          <title>Heatmap: with linear scale</title>
-          <link>https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-vegalite/#heatmap-with-linear-scale</link>
-          
-            <pubDate>Wed, 30 Jun 2021 14:46:16 +0200</pubDate>
-          
-          
-          <guid>https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-vegalite/#heatmap-with-linear-scale</guid>
-          <description>&lt;p&gt;The default scale is linear. It can get additional properties like the scheme. All available scale colors (schemes) can be found in the &lt;a href=&#34;https://vega.github.io/vega/docs/schemes/#scheme-properties&#34;&gt;scheme documentation&lt;/a&gt;.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code class=&#34;language-json5&#34; data-lang=&#34;json5&#34;&gt;&#39;color&#39;: 
-    &#39;scale&#39;: {
-        &#39;scheme&#39;: &#39;blueorange&#39;,
-        ...
-    },
-    ...
-&lt;/code&gt;&lt;/pre&gt;</description>
-        </item>
-      
     
       
       
-        <item>
-          <title>Heatmap with dynamic color scale</title>
-          <link>https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-custom/#heatmap-with-dynamic-color-scale</link>
-          
-            <pubDate>Wed, 30 Jun 2021 14:46:16 +0200</pubDate>
-          
-          
-          <guid>https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-custom/#heatmap-with-dynamic-color-scale</guid>
-          <description>&lt;p&gt;Custom heatmaps or bubblemaps are made of a CSS grid, an &lt;code&gt;ods-adv-analysis&lt;/code&gt; and several computations to get the colors and the axis.&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;ods-adv-analysis&lt;/code&gt; returns the list of values for each axis. You need to adapt the axis &lt;code&gt;id&lt;/code&gt; in &lt;code&gt;toObject&lt;/code&gt; filter.&lt;/li&gt;
-&lt;li&gt;The min and max of all aggregation are computed to get the boundaries and will be useful for colors computations.&lt;/li&gt;
-&lt;li&gt;To display the grid, three computations are needed: the x-axis value positions, the y-axis value positions and the color values.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Colors are RGB codes, computed of the aggregation value within the range of all values. Low and high colors values are set into &lt;code&gt;variables&lt;/code&gt; object at the beginning of the code.&lt;/p&gt;
-&lt;p&gt;The toggle button, and the legend are independent of the grid and can be removed.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Note: It&amp;rsquo;s much easier to deal with dates with Vega-Lite as it can split by day, day of the week, month with the labels and the correct ordering. We then strongly advice to go for &lt;a href=&#34;https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-vegalite&#34;&gt;Vega-Lite heatmaps&lt;/a&gt; in that case.&lt;/p&gt;
-&lt;/blockquote&gt;
-</description>
-        </item>
-      
-        <item>
-          <title>Heatmap with static scale</title>
-          <link>https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-custom/#heatmap-with-static-scale</link>
-          
-            <pubDate>Wed, 30 Jun 2021 14:46:16 +0200</pubDate>
-          
-          
-          <guid>https://codelibrary.opendatasoft.com/widget-tricks/heatmaps-custom/#heatmap-with-static-scale</guid>
-          <description>&lt;p&gt;The colors are static, and set in the &lt;code&gt;ng-class&lt;/code&gt; of the cell, with a simple condition and static thresholds.
-The code is therefore much simpler than dynamic RGB computation.&lt;/p&gt;
-&lt;p&gt;But keep in mind that if the order of size of the aggregation changes, you&amp;rsquo;ll then need to adapt your thresholds, and therefore the page.&lt;/p&gt;
-</description>
-        </item>
-      
     
       
-      
-        <item>
-          <title>Simple usage, list records !</title>
-          <link>https://codelibrary.opendatasoft.com/widget-tricks/ods-results/#simple-usage-list-records-</link>
-          
-            <pubDate>Mon, 21 Jun 2021 20:03:38 +0200</pubDate>
-          
-          
-          <guid>https://codelibrary.opendatasoft.com/widget-tricks/ods-results/#simple-usage-list-records-</guid>
-          <description>&lt;p&gt;&lt;strong&gt;ods-results&lt;/strong&gt; returns an array: the list of records. Records are objects, and all the metas are accessible through the &lt;code&gt;fields&lt;/code&gt; key.&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ng-repeat&lt;/code&gt; directive loop over each record and &amp;ldquo;print&amp;rdquo; the HTML for each record. For more advanced usage, please refer to the &lt;a href=&#34;https://docs.angularjs.org/api/ng/directive/ngRepeat#!&#34;&gt;AngularJs ng-repeat documentation here&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;This first simple resource lists districts in Brussels, Belgium.&lt;/p&gt;
-</description>
-        </item>
-      
-    
-      
-      
-        <item>
-          <title>Based on click - for default headers</title>
-          <link>https://codelibrary.opendatasoft.com/portal-themes/dropdown-menu/#based-on-click---for-default-headers</link>
-          
-            <pubDate>Wed, 23 Jun 2021 20:57:00 +0200</pubDate>
-          
-          
-          <guid>https://codelibrary.opendatasoft.com/portal-themes/dropdown-menu/#based-on-click---for-default-headers</guid>
-          <description>&lt;p&gt;&lt;strong&gt;How to use it&lt;/strong&gt;&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Copy the content of the &lt;code&gt;HEADER&lt;/code&gt; tab.&lt;/li&gt;
-&lt;li&gt;Paste it in &lt;code&gt;https://yourdomain.opendatasoft.com/backoffice/customization/theme/#header&lt;/code&gt;  instead of &lt;code&gt;##menu##&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Copy the content of the &lt;code&gt;STYLESHEET&lt;/code&gt; tab.&lt;/li&gt;
-&lt;li&gt;Paste it in &lt;code&gt;https://yourdomain.opendatasoft.com/backoffice/customization/theme/#stylesheet&lt;/code&gt;.&lt;/li&gt;
-&lt;li&gt;Replace the links and titles of the items menu in the &lt;code&gt;HEADER&lt;/code&gt; tab.&lt;/li&gt;
-&lt;/ol&gt;
-</description>
-        </item>
       
     
       

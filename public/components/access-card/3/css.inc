@@ -12,6 +12,10 @@
     display: block;
     color: var(--text);
     margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .access-card:hover {
@@ -65,7 +69,7 @@
 .access-card-button {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin: 0px 26px 26px;
 }
 
 .access-card-button:hover {
