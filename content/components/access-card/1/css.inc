@@ -12,7 +12,6 @@
     display: flex;
     height: 100%;
     justify-content: center;
-    padding-bottom: 15px;
     margin-bottom: 20px;
 }
 
@@ -24,9 +23,13 @@
 .access-card {
     border-radius: 10px;
     background-color: #fff;
-    margin-top: 200px;
+    margin: 200px 26px 26px;
     padding: 26px;
-    width: 94%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .access-card-pretitle {

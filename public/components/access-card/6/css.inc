@@ -13,6 +13,10 @@
     transition: all 0.3s;
     display: block;
     margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .access-card:hover {
