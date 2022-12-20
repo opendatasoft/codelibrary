@@ -20,3 +20,36 @@
         </ods-dataset-context>
     </div>
 </div>
+<ods-dataset-context context="observationsynop"
+                     observationsynop-dataset="observation-synop"
+                     observationsynop-domain="userclub">
+    <div class="row"
+         ods-adv-analysis="analysis"
+         ods-adv-analysis-context="observationsynop"
+         ods-adv-analysis-select="avg(u) as humidity, max(ff) as wind">
+        <div class="col-sm-offset-2 col-sm-4">
+            <!-- KPI box component -->
+            <div class="kpi-card">
+                <i class="kpi-icon fa fa-tint" aria-hidden="true"></i>
+                <p class="kpi-title">
+                    {{ analysis[0].humidity | number : 1}}
+                </p>
+                <p class="kpi-description">
+                    Average humidity (%)
+                </p>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <!-- KPI box component -->
+            <div class="kpi-card">
+                <i class="kpi-icon fa fa-flag" aria-hidden="true"></i>
+                <p class="kpi-title">
+                    {{ analysis[0].wind | number : 1}}
+                </p>
+                <p class="kpi-description">
+                    Max wind speed (m/s)
+                </p>
+            </div>
+        </div>
+    </div>
+</ods-dataset-context>
