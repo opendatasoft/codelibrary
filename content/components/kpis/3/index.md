@@ -1,6 +1,6 @@
 ---
 title: " An ods-adv-analysis example"
-height: "600"
+height: "700"
 ---
 
 Use `ods-adv-analysis` widget working with ODS Explore API V2 to display advanced calculations on your pages.
