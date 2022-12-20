@@ -7,9 +7,9 @@
             <div class="kpi-card">
                 <i class="kpi-icon fa fa-hospital-o" aria-hidden="true"></i>
                 <p class="kpi-title"
-                   ods-aggregation="count"
-                   ods-aggregation-context="ushospitals"
-                   ods-aggregation-function="COUNT">
+                   ods-adv-analysis="count"
+                   ods-adv-analysis-context="ushospitals"
+                   ods-adv-analysis-select="count">
                     {{ count | number }}
                 </p>
                 <p class="kpi-description">
