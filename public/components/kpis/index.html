@@ -195,6 +195,12 @@
         </li>
         
         <li>
+          <a href="#an-ods-adv-analysis-example">
+             An ods-adv-analysis example
+          </a>
+        </li>
+        
+        <li>
           <a href="#flip-kpi">
             Flip KPI
           </a>
@@ -2052,6 +2058,783 @@ none: count function</p>
             
             <div class="js-tabcontent"
                  id="code-an-ods-aggregation-example-css-content"
+                 data-clipboard="/* Variables &amp; Shared classes
+========================================================================== */
+:root {
+    --secondary-color: #142E7B;
+}
+.row-equal-height {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+/* Fix for early content wrapping in Safari*/
+.row-equal-height:before,
+.row-equal-height:after {
+    content: normal;
+}
+/* KPI Card
+========================================================================== */
+.kpi-card {
+    background-color: var(--boxes-background);
+    height: 100%;
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+.kpi-icon {
+    color: var(--highlight);
+    color: var(--secondary-color);
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+.kpi-title {
+    font-weight: normal;
+    color: var(--highlight);
+    font-size: 3.2rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+.kpi-description {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 100%;
+}
+.kpi-description-detail {
+    opacity: 0.9;
+    font-style: italic;
+    font-size: 0.9em;
+    margin-top: 0.8em;
+}
+">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>/* Variables &amp; Shared classes
+========================================================================== */
+:root {
+    --secondary-color: #142E7B;
+}
+.row-equal-height {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+/* Fix for early content wrapping in Safari*/
+.row-equal-height:before,
+.row-equal-height:after {
+    content: normal;
+}
+/* KPI Card
+========================================================================== */
+.kpi-card {
+    background-color: var(--boxes-background);
+    height: 100%;
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+.kpi-icon {
+    color: var(--highlight);
+    color: var(--secondary-color);
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+.kpi-title {
+    font-weight: normal;
+    color: var(--highlight);
+    font-size: 3.2rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+.kpi-description {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 100%;
+}
+.kpi-description-detail {
+    opacity: 0.9;
+    font-style: italic;
+    font-size: 0.9em;
+    margin-top: 0.8em;
+}
+</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+                </div>
+            
+        </article>
+        
+        <article class="block">
+            <h2 class="title is-2" id="an-ods-adv-analysis-example">
+                An ods-adv-analysis example 
+                <a class="is-link anchor" href="#an-ods-adv-analysis-example">
+            <span class="icon">
+              <img src="/img/fas-link.svg"/>
+            </span>
+                </a>
+            </h2>
+            <div class="content">
+                <p>Use <code>ods-adv-analysis</code> widget working with ODS Explore API V2 to display advanced calculations on your pages.
+In the <code>select</code> parameter, you can enter an advanced query to make, following the <a href="https://help.opendatasoft.com/apis/ods-explore-v2/#section/Opendatasoft-Query-Language-(ODSQL)/Select-clause">ODSQL select clause</a>.</p>
+<p>For more information about how to compute metrics and use the other parameters of <code>ods-adv-analysis</code>, see <a href="https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsAdvAnalysis">ods-adv-analysis documentation</a>.</p>
+<p>In the exemple, on the first row, we display the percentage of positive tests of Covid-19 in Auvergne-Rhône-Alpes; and on the second row, we display simple aggregations all made in one request through  <code>ods-adv-analysis</code>.</p>
+
+            </div>
+            
+            
+                <div class="box">
+                    
+
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+
+
+
+
+<div class="codepen">
+    <form id="form-an-ods-adv-analysis-example"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+                 "title": "New Pen!",
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "editors": 110,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;row\&#34;\u003e\n    \u003cdiv class=\&#34;col-sm-offset-4 col-sm-4\&#34;\u003e\n        \u003cods-dataset-context context=\&#34;stattests\&#34;\n                             stattests-domain=\&#34;userclub\&#34;\n                             stattests-dataset=\&#34;donnees-relatives-aux-resultats-des-tests-virologiques-covid-19-france\&#34;\u003e\n            \u003c!-- KPI box component --\u003e\n            \u003cdiv class=\&#34;kpi-card\&#34;\u003e\n                \u003ci class=\&#34;kpi-icon fa fa-hospital-o\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003cp class=\&#34;kpi-title\&#34;\n                   ods-adv-analysis=\&#34;analysis\&#34;\n                   ods-adv-analysis-context=\&#34;stattests\&#34;\n                   ods-adv-analysis-select=\&#34;sum(nb_pos)/sum(nb_tests)*100 as percentage\&#34;\n                   ods-adv-analysis-where=\&#34;reg_name LIKE &#39;Auvergne-Rhône-Alpes&#39;\&#34;\u003e\n                    {{ analysis[0].percentage | number : 2 }}%\n                \u003c/p\u003e\n                \u003cp class=\&#34;kpi-description\&#34;\u003e\n                    Number of positive tests in Auvergne-Rhône-Alples\n                \u003c/p\u003e\n            \u003c/div\u003e\n        \u003c/ods-dataset-context\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\n\u003cods-dataset-context context=\&#34;observationsynop\&#34;\n                     observationsynop-dataset=\&#34;observation-synop\&#34;\n                     observationsynop-domain=\&#34;userclub\&#34;\u003e\n    \u003cdiv class=\&#34;row\&#34;\n         ods-adv-analysis=\&#34;analysis\&#34;\n         ods-adv-analysis-context=\&#34;observationsynop\&#34;\n         ods-adv-analysis-select=\&#34;avg(u) as humidity, max(ff) as wind\&#34;\u003e\n        \u003cdiv class=\&#34;col-sm-offset-2 col-sm-4\&#34;\u003e\n            \u003c!-- KPI box component --\u003e\n            \u003cdiv class=\&#34;kpi-card\&#34;\u003e\n                \u003ci class=\&#34;kpi-icon fa fa-tint\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003cp class=\&#34;kpi-title\&#34;\u003e\n                    {{ analysis[0].humidity | number : 1}}\n                \u003c/p\u003e\n                \u003cp class=\&#34;kpi-description\&#34;\u003e\n                    Average humidity (%)\n                \u003c/p\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;col-sm-4\&#34;\u003e\n            \u003c!-- KPI box component --\u003e\n            \u003cdiv class=\&#34;kpi-card\&#34;\u003e\n                \u003ci class=\&#34;kpi-icon fa fa-flag\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003cp class=\&#34;kpi-title\&#34;\u003e\n                    {{ analysis[0].wind | number : 1}}\n                \u003c/p\u003e\n                \u003cp class=\&#34;kpi-description\&#34;\u003e\n                    Max wind speed (m/s)\n                \u003c/p\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/ods-dataset-context\u003e\u003c/div\u003e&#34;,
+                 "css": &#34;/* Variables \u0026 Shared classes\n========================================================================== */\n:root {\n    --secondary-color: #142E7B;\n}\n.row-equal-height {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -ms-flex-wrap: wrap;\n    flex-wrap: wrap;\n    margin-bottom: 20px;\n}\n/* Fix for early content wrapping in Safari*/\n.row-equal-height:before,\n.row-equal-height:after {\n    content: normal;\n}\n/* KPI Card\n========================================================================== */\n.kpi-card {\n    background-color: var(--boxes-background);\n    height: 100%;\n    padding: 39px;\n    border-radius: 4px;\n    margin-bottom: 20px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -ms-flex-direction: column;\n    flex-direction: column;\n    -webkit-box-align: center;\n    -ms-flex-align: center;\n    align-items: center;\n    text-align: center;\n    -webkit-box-pack: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    text-align: center;\n}\n.kpi-icon {\n    color: var(--highlight);\n    color: var(--secondary-color);\n    font-size: 4rem;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n.kpi-title {\n    font-weight: normal;\n    color: var(--highlight);\n    font-size: 3.2rem;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n.kpi-description {\n    color: var(--text);\n    font-size: 1rem;\n    line-height: 1.5;\n    font-weight: normal;\n    margin-top: 0;\n    margin-bottom: 0;\n    max-width: 100%;\n}\n.kpi-description-detail {\n    opacity: 0.9;\n    font-style: italic;\n    font-size: 0.9em;\n    margin-top: 0.8em;\n}\n&#34;
+               }'>
+    </form>
+</div>
+<div class="ods-content">
+    <div class="box-live-example"
+      style="height: 700px;">
+      <iframe id="iframe-an-ods-adv-analysis-example"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+                <head>
+                    &lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;
+/&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;
+/&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;
+&gt;&lt;/script&gt;
+
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;
+&gt;&lt;/script&gt;
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;
+&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+  const sourceMonitoringInterceptor = $q =&gt; {
+    return {
+      request: config =&gt; {
+        console.log(config.url);
+        if (config.params)
+          if (config.params.source) delete config.params.source;
+
+        config.url = config.url.replace(
+          &#34;ods-api-monitoring&#34;,
+          &#34;monitoring-copy&#34;
+        );
+        return config;
+      }
+    };
+  };
+
+  angular
+    .module(&#34;ods-widgets&#34;)
+    .config(function(ODSWidgetsConfigProvider, $httpProvider) {
+      ODSWidgetsConfigProvider.setConfig({
+        defaultDomain: &#34;https://userclub.opendatasoft.com/&#34;,
+        basemaps: [
+          {
+            provider: &#34;jawg.light&#34;,
+            label: &#34;Jawg Light&#34;,
+            jawg_apikey: &#34;opendatasoft-community&#34;
+          },
+          {
+            provider: &#34;jawg.streets&#34;,
+            label: &#34;Jawg Streets&#34;,
+            jawg_apikey: &#34;opendatasoft-community&#34;,
+            id: &#34;streets&#34;
+          }
+        ],
+        themes: {
+          default: {
+            url: &#34;/img/ods.svg&#34;
+          },
+          Santé: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Culture, Patrimoine&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Éducation, Formation, Recherche, Enseignement&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Environment: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Transports, Déplacements&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Économie, Business, PME, Développement économique, Emploi&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Administration, Gouvernement, Finances publiques, Citoyenneté&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Justice, Sécurité, Police, Crime&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Sport, Loisirs&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Hébergement, Restauration&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Services, Social&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Checklist: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Usages: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#34;,
+            color: &#34;#1446A0&#34;
+          }
+        },
+        mapPrependAttribution: &#34;Jawg apikey NOT suitable for production&#34;
+      });
+      $httpProvider.interceptors.push(sourceMonitoringInterceptor);
+    });
+&lt;/script&gt;
+
+                    
+                </head>
+                <base href='https://userclub.opendatasoft.com/'>
+                <body>
+                <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
+&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-sm-offset-4 col-sm-4&#34;&gt;
+        &lt;ods-dataset-context context=&#34;stattests&#34;
+                             stattests-domain=&#34;userclub&#34;
+                             stattests-dataset=&#34;donnees-relatives-aux-resultats-des-tests-virologiques-covid-19-france&#34;&gt;
+            &lt;!-- KPI box component --&gt;
+            &lt;div class=&#34;kpi-card&#34;&gt;
+                &lt;i class=&#34;kpi-icon fa fa-hospital-o&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;p class=&#34;kpi-title&#34;
+                   ods-adv-analysis=&#34;analysis&#34;
+                   ods-adv-analysis-context=&#34;stattests&#34;
+                   ods-adv-analysis-select=&#34;sum(nb_pos)/sum(nb_tests)*100 as percentage&#34;
+                   ods-adv-analysis-where=&#34;reg_name LIKE &#39;Auvergne-Rhône-Alpes&#39;&#34;&gt;
+                    {{ analysis[0].percentage | number : 2 }}%
+                &lt;/p&gt;
+                &lt;p class=&#34;kpi-description&#34;&gt;
+                    Number of positive tests in Auvergne-Rhône-Alples
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/ods-dataset-context&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;ods-dataset-context context=&#34;observationsynop&#34;
+                     observationsynop-dataset=&#34;observation-synop&#34;
+                     observationsynop-domain=&#34;userclub&#34;&gt;
+    &lt;div class=&#34;row&#34;
+         ods-adv-analysis=&#34;analysis&#34;
+         ods-adv-analysis-context=&#34;observationsynop&#34;
+         ods-adv-analysis-select=&#34;avg(u) as humidity, max(ff) as wind&#34;&gt;
+        &lt;div class=&#34;col-sm-offset-2 col-sm-4&#34;&gt;
+            &lt;!-- KPI box component --&gt;
+            &lt;div class=&#34;kpi-card&#34;&gt;
+                &lt;i class=&#34;kpi-icon fa fa-tint&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;p class=&#34;kpi-title&#34;&gt;
+                    {{ analysis[0].humidity | number : 1}}
+                &lt;/p&gt;
+                &lt;p class=&#34;kpi-description&#34;&gt;
+                    Average humidity (%)
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-sm-4&#34;&gt;
+            &lt;!-- KPI box component --&gt;
+            &lt;div class=&#34;kpi-card&#34;&gt;
+                &lt;i class=&#34;kpi-icon fa fa-flag&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;p class=&#34;kpi-title&#34;&gt;
+                    {{ analysis[0].wind | number : 1}}
+                &lt;/p&gt;
+                &lt;p class=&#34;kpi-description&#34;&gt;
+                    Max wind speed (m/s)
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;&lt;/div&gt;</div>
+                <style type='text/css'>
+                    /* Variables &amp; Shared classes
+========================================================================== */
+:root {
+    --secondary-color: #142E7B;
+}
+.row-equal-height {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+/* Fix for early content wrapping in Safari*/
+.row-equal-height:before,
+.row-equal-height:after {
+    content: normal;
+}
+/* KPI Card
+========================================================================== */
+.kpi-card {
+    background-color: var(--boxes-background);
+    height: 100%;
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+.kpi-icon {
+    color: var(--highlight);
+    color: var(--secondary-color);
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+.kpi-title {
+    font-weight: normal;
+    color: var(--highlight);
+    font-size: 3.2rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+.kpi-description {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 100%;
+}
+.kpi-description-detail {
+    opacity: 0.9;
+    font-style: italic;
+    font-size: 0.9em;
+    margin-top: 0.8em;
+}
+
+                </style>
+                </body>
+              ">
+      </iframe>
+      <div class="buttons has-addons">
+          
+              <button id="tab-show-schema" aria-controls="panel-show-schema"
+                      class="show-schema button is-light"
+                      title="Show the data schema of the dataset used in this resource">
+                  <span>See fields in use</span>
+              </button>
+          
+          <button id="tab-show-code" aria-controls="panel-show-code"
+                  class="show-code button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-an-ods-adv-analysis-example').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    
+        <div id="panel-show-schema" aria-labelledby="tab-show-schema" aria-hidden
+             class="box-schema is-hidden">
+            <div class="content">
+                <p><strong>Dataset in use:</strong> <code>donnees-relatives-aux-resultats-des-tests-virologiques-covid-19-france</code> <a href="https://userclub.opendatasoft.com/explore/dataset/donnees-relatives-aux-resultats-des-tests-virologiques-covid-19-france/table/">(See it on userclub domain)</a></p>
+<p><strong>Fields in use:</strong></p>
+<table>
+<thead>
+<tr>
+<th>nb_pos (numeric)</th>
+<th>nb_tests (numeric)</th>
+<th>reg_name (text)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100</td>
+<td>390</td>
+<td>Auvergne-Rhône-Alpes</td>
+</tr>
+<tr>
+<td>69</td>
+<td>120</td>
+<td>Occitanie</td>
+</tr>
+<tr>
+<td>87</td>
+<td>93</td>
+<td>Normandie</td>
+</tr>
+<tr>
+<td>73</td>
+<td>240</td>
+<td>Occitanie</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Dataset in use:</strong> <code>observation-synop</code> <a href="https://userclub.opendatasoft.com/explore/dataset/observation-synop/table/">(See it on userclub domain)</a></p>
+<p><strong>Fields in use:</strong></p>
+<table>
+<thead>
+<tr>
+<th>u (numeric)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100</td>
+</tr>
+<tr>
+<td>69</td>
+</tr>
+<tr>
+<td>87</td>
+</tr>
+<tr>
+<td>73</td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+        </div>
+    
+    <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
+         class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
+            <div class="level-left">
+                <div class="level-item">
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-an-ods-adv-analysis-example-html-content"
+                        >
+                          HTML
+                        </a>
+                        
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-an-ods-adv-analysis-example-css-content"
+                        >
+                          CSS
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
+            </div>
+        </nav>
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-an-ods-adv-analysis-example-html-content"
+                 data-clipboard="&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-sm-offset-4 col-sm-4&#34;&gt;
+        &lt;ods-dataset-context context=&#34;stattests&#34;
+                             stattests-domain=&#34;userclub&#34;
+                             stattests-dataset=&#34;donnees-relatives-aux-resultats-des-tests-virologiques-covid-19-france&#34;&gt;
+            &lt;!-- KPI box component --&gt;
+            &lt;div class=&#34;kpi-card&#34;&gt;
+                &lt;i class=&#34;kpi-icon fa fa-hospital-o&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;p class=&#34;kpi-title&#34;
+                   ods-adv-analysis=&#34;analysis&#34;
+                   ods-adv-analysis-context=&#34;stattests&#34;
+                   ods-adv-analysis-select=&#34;sum(nb_pos)/sum(nb_tests)*100 as percentage&#34;
+                   ods-adv-analysis-where=&#34;reg_name LIKE &#39;Auvergne-Rhône-Alpes&#39;&#34;&gt;
+                    {{ analysis[0].percentage | number : 2 }}%
+                &lt;/p&gt;
+                &lt;p class=&#34;kpi-description&#34;&gt;
+                    Number of positive tests in Auvergne-Rhône-Alples
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/ods-dataset-context&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;ods-dataset-context context=&#34;observationsynop&#34;
+                     observationsynop-dataset=&#34;observation-synop&#34;
+                     observationsynop-domain=&#34;userclub&#34;&gt;
+    &lt;div class=&#34;row&#34;
+         ods-adv-analysis=&#34;analysis&#34;
+         ods-adv-analysis-context=&#34;observationsynop&#34;
+         ods-adv-analysis-select=&#34;avg(u) as humidity, max(ff) as wind&#34;&gt;
+        &lt;div class=&#34;col-sm-offset-2 col-sm-4&#34;&gt;
+            &lt;!-- KPI box component --&gt;
+            &lt;div class=&#34;kpi-card&#34;&gt;
+                &lt;i class=&#34;kpi-icon fa fa-tint&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;p class=&#34;kpi-title&#34;&gt;
+                    {{ analysis[0].humidity | number : 1}}
+                &lt;/p&gt;
+                &lt;p class=&#34;kpi-description&#34;&gt;
+                    Average humidity (%)
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-sm-4&#34;&gt;
+            &lt;!-- KPI box component --&gt;
+            &lt;div class=&#34;kpi-card&#34;&gt;
+                &lt;i class=&#34;kpi-icon fa fa-flag&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;p class=&#34;kpi-title&#34;&gt;
+                    {{ analysis[0].wind | number : 1}}
+                &lt;/p&gt;
+                &lt;p class=&#34;kpi-description&#34;&gt;
+                    Max wind speed (m/s)
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;"
+                 role="tabpanel">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-sm-offset-4 col-sm-4&#34;&gt;
+        &lt;ods-dataset-context context=&#34;stattests&#34;
+                             stattests-domain=&#34;userclub&#34;
+                             stattests-dataset=&#34;donnees-relatives-aux-resultats-des-tests-virologiques-covid-19-france&#34;&gt;
+            &lt;!-- KPI box component --&gt;
+            &lt;div class=&#34;kpi-card&#34;&gt;
+                &lt;i class=&#34;kpi-icon fa fa-hospital-o&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;p class=&#34;kpi-title&#34;
+                   ods-adv-analysis=&#34;analysis&#34;
+                   ods-adv-analysis-context=&#34;stattests&#34;
+                   ods-adv-analysis-select=&#34;sum(nb_pos)/sum(nb_tests)*100 as percentage&#34;
+                   ods-adv-analysis-where=&#34;reg_name LIKE &#39;Auvergne-Rhône-Alpes&#39;&#34;&gt;
+                    {{ analysis[0].percentage | number : 2 }}%
+                &lt;/p&gt;
+                &lt;p class=&#34;kpi-description&#34;&gt;
+                    Number of positive tests in Auvergne-Rhône-Alples
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/ods-dataset-context&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;ods-dataset-context context=&#34;observationsynop&#34;
+                     observationsynop-dataset=&#34;observation-synop&#34;
+                     observationsynop-domain=&#34;userclub&#34;&gt;
+    &lt;div class=&#34;row&#34;
+         ods-adv-analysis=&#34;analysis&#34;
+         ods-adv-analysis-context=&#34;observationsynop&#34;
+         ods-adv-analysis-select=&#34;avg(u) as humidity, max(ff) as wind&#34;&gt;
+        &lt;div class=&#34;col-sm-offset-2 col-sm-4&#34;&gt;
+            &lt;!-- KPI box component --&gt;
+            &lt;div class=&#34;kpi-card&#34;&gt;
+                &lt;i class=&#34;kpi-icon fa fa-tint&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;p class=&#34;kpi-title&#34;&gt;
+                    {{ analysis[0].humidity | number : 1}}
+                &lt;/p&gt;
+                &lt;p class=&#34;kpi-description&#34;&gt;
+                    Average humidity (%)
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class=&#34;col-sm-4&#34;&gt;
+            &lt;!-- KPI box component --&gt;
+            &lt;div class=&#34;kpi-card&#34;&gt;
+                &lt;i class=&#34;kpi-icon fa fa-flag&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;p class=&#34;kpi-title&#34;&gt;
+                    {{ analysis[0].wind | number : 1}}
+                &lt;/p&gt;
+                &lt;p class=&#34;kpi-description&#34;&gt;
+                    Max wind speed (m/s)
+                &lt;/p&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/ods-dataset-context&gt;</code></pre>
+                </div>
+            </div>
+            
+            <div class="js-tabcontent"
+                 id="code-an-ods-adv-analysis-example-css-content"
                  data-clipboard="/* Variables &amp; Shared classes
 ========================================================================== */
 :root {
