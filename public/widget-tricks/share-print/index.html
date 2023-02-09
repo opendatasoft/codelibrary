@@ -39,9 +39,9 @@
 
     
     <link rel="stylesheet" type="text/css" href="/scss/main.css" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="shortcut icon" href="/favicon.ico" />
+    
+    
+    <link rel="shortcut icon" href="/ods-favicon.ico" />
   </head>
 
   <body>
@@ -97,8 +97,12 @@
 
     <div class="ods-header__nav">
         <a class="ods-header__nav-item-link"
-           href="https://help.opendatasoft.com/platform/en/">
+           href="https://userguide.opendatasoft.com/">
             User guide
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://academy.opendatasoft.com/page/homepage">
+            Academy
         </a>
         <a class="ods-header__nav-item-link is-active"
            href="https://codelibrary.opendatasoft.com">
@@ -111,10 +115,6 @@
         <a class="ods-header__nav-item-link"
            href="https://help.opendatasoft.com/en/apis/">
             APIs
-        </a>
-        <a class="ods-header__nav-item-link"
-           href="https://academy.opendatasoft.com/page/homepage">
-            Academy
         </a>
         <a class="ods-header__nav-item-link"
            href="https://changes.opendatasoft.com/en">
@@ -132,8 +132,12 @@
     </button>
     <div class="navbar-menu" id="helphubNavbar">
         <a class="ods-header__nav-item-link"
-           href="https://help.opendatasoft.com/platform/en/">
+           href="https://userguide.opendatasoft.com/">
             User guide
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://academy.opendatasoft.com/page/homepage">
+            Academy
         </a>
         <a class="ods-header__nav-item-link is-active"
            href="https://codelibrary.opendatasoft.com">
@@ -146,10 +150,6 @@
         <a class="ods-header__nav-item-link"
            href="https://help.opendatasoft.com/en/apis/">
             APIs
-        </a>
-        <a class="ods-header__nav-item-link"
-           href="https://academy.opendatasoft.com/page/homepage">
-            Academy
         </a>
         <a class="ods-header__nav-item-link"
            href="https://changes.opendatasoft.com/en">
@@ -809,7 +809,7 @@
                  "title": "New Pen!",
                  "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
-                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;container\&#34;\u003e\n    \u003cods-dataset-context context=\&#34;ctx\&#34;\n                         ctx-dataset=\&#34;record-stores\&#34;\n                         ctx-domain=\&#34;userclub\&#34;\n                         ctx-urlsync=\&#34;true\&#34;\u003e\n        \u003cdiv class=\&#34;row ods-box\&#34;\u003e\n            \u003ch3\u003e\n                Share by copying this link :\n            \u003c/h3\u003e\n            \u003ch3 class=\&#34;red-box\&#34;\u003e\n                Filter and have a look to your browser URL ! It&#39;s synced !\n            \u003c/h3\u003e\n            \u003ch4\u003e\n                \u003ca href=\&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}\&#34;\n                   target=\&#34;_blank\&#34;\u003ehttps://userclub.opendatasoft.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}\u003c/a\u003e\n            \u003c/h4\u003e\n            \u003ch3\u003e\n                Share through social network or by email:\n            \u003c/h3\u003e\n            \u003cdiv class=\&#34;boutons\&#34; style=\&#34;font-size: 1.6rem;\&#34;\u003e\n                \u003ca href=\&#34;https://twitter.com/intent/tweet?text=Opendatasoft Page Test;url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--twitter\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-twitter ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--facebook\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-facebook ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;https://plus.google.com/share?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--google-plus\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-google-plus ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\u0026amp;mini=true\u0026amp;title=Opendatasoft Page Test;source=Opendatasoft\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--linkedin\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-linkedin ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;mailto:?subject=Opendatasoft Page Test\u0026amp;body=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--mail\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-envelope ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;row ods-box\&#34;\u003e\n            \u003ch3\u003e\n                A dashboard : Music record store in the world\n            \u003c/h3\u003e\n            \u003cdiv class=\&#34;col-md-3 ods-box\&#34;\u003e\n                \u003cods-text-search context=\&#34;ctx\&#34; placeholder=\&#34;disc, records, music...\&#34;\u003e\u003c/ods-text-search\u003e\n                \u003cods-filter-summary context=\&#34;ctx\&#34;\u003e\u003c/ods-filter-summary\u003e\n                \u003cods-facets context=\&#34;ctx\&#34;\u003e\u003c/ods-facets\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;col-md-9 ods-box\&#34;\u003e\n                \u003cods-map\u003e\n                    \u003cods-map-layer context=\&#34;ctx\&#34;\u003e\n                        \u003cdiv\u003e\n                            \u003ch3\u003e\n                                {{ record.fields.name }}\n                            \u003c/h3\u003e\n                            \u003cp style=\&#34;font-style:italic; color:grey; font-weight:300\&#34;\u003e\n                                {{ record.fields.address }}\n                            \u003c/p\u003e\n                            \u003cdiv style=\&#34;line-height: 0px;\&#34;\u003e\n                                \u003cp\u003e\n                                    \u003cspan style=\&#34;font-style:italic;\&#34;\u003eHas closed \u003c/span\u003e\u003cb style=\&#34;font-size:1.2em\&#34;\u003e{{ record.fields.hasclosed }}\u003c/b\u003e\n                                \u003c/p\u003e\n                            \u003c/div\u003e\n                            \u003ca style=\&#34;color: #1e0c33; font-weight: 600; font-size: 1.1em;\&#34;\n                               href=\&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint-card?q=city:%22{{ record.fields.city }}%22 AND name:%22{{ record.fields.name }}%22\&#34;\n                               target=\&#34;_blank\&#34;\u003eGo to the store card\u003c/a\u003e\n                        \u003c/div\u003e\n                    \u003c/ods-map-layer\u003e\n                \u003c/ods-map\u003e\n                \u003cdiv class=\&#34;ods-box\&#34;\u003e\n                    \u003cods-table context=\&#34;ctx\&#34;\u003e\u003c/ods-table\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\n\u003c/div\u003e&#34;,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;container\&#34;\u003e\n    \u003cods-dataset-context context=\&#34;ctx\&#34;\n                         ctx-dataset=\&#34;les-eruptions-volcaniques-dans-le-monde\&#34;\n                         ctx-domain=\&#34;userclub\&#34;\n                         ctx-urlsync=\&#34;true\&#34;\u003e\n        \u003cdiv class=\&#34;row ods-box\&#34;\u003e\n            \u003ch3\u003e\n                Share by copying this link :\n            \u003c/h3\u003e\n            \u003ch3 class=\&#34;red-box\&#34;\u003e\n                Filter and have a look to your browser URL ! It&#39;s synced !\n            \u003c/h3\u003e\n            \u003ch4\u003e\n                \u003ca href=\&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}\&#34;\n                   target=\&#34;_blank\&#34;\u003ehttps://userclub.opendatasoft.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}\u003c/a\u003e\n            \u003c/h4\u003e\n            \u003ch3\u003e\n                Share through social network or by email:\n            \u003c/h3\u003e\n            \u003cdiv class=\&#34;boutons\&#34; style=\&#34;font-size: 1.6rem;\&#34;\u003e\n                \u003ca href=\&#34;https://twitter.com/intent/tweet?text=Opendatasoft Page Test;url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--twitter\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-twitter ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--facebook\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-facebook ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;https://plus.google.com/share?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--google-plus\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-google-plus ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\u0026amp;mini=true\u0026amp;title=Opendatasoft Page Test;source=Opendatasoft\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--linkedin\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-linkedin ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;mailto:?subject=Opendatasoft Page Test\u0026amp;body=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--mail\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-envelope ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;row ods-box\&#34;\u003e\n            \u003ch3\u003e\n                A dashboard : Global earthquakes\n            \u003c/h3\u003e\n            \u003cdiv class=\&#34;col-md-3 ods-box\&#34;\u003e\n                \u003cods-text-search context=\&#34;ctx\&#34; placeholder=\&#34;country, type, status...\&#34;\u003e\u003c/ods-text-search\u003e\n                \u003cods-filter-summary context=\&#34;ctx\&#34;\u003e\u003c/ods-filter-summary\u003e\n                \u003cods-facets context=\&#34;ctx\&#34;\u003e\u003c/ods-facets\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;col-md-9 ods-box\&#34;\u003e\n                \u003cods-map\u003e\n                    \u003cods-map-layer context=\&#34;ctx\&#34;\u003e\n                        \u003cdiv\u003e\n                            \u003ch3\u003e\n                                {{ record.fields.volcano_name }}\n                            \u003c/h3\u003e\n                            \u003cp style=\&#34;font-style:italic; color:grey; font-weight:300\&#34;\u003e\n                                {{ record.fields.country }}\n                            \u003c/p\u003e\n                            \u003cp\u003eType: {{record.fields.volcano_type}}\u003c/p\u003e\n                            \u003cp\u003eStatus: {{record.fields.status}}\u003c/p\u003e\n                            \u003cdiv style=\&#34;line-height: 0px;\&#34;\u003e\n                                \u003cp\u003e\n                                    \u003cspan style=\&#34;font-style:italic;\&#34;\u003eHas tsunami \u003c/span\u003e\u003cb\n                                       style=\&#34;font-size:1.2em\&#34;\u003e{{ record.fields.flag_tsunami }}\u003c/b\u003e\n                                \u003c/p\u003e\n                                \u003cp\u003e\n                                    \u003cspan style=\&#34;font-style:italic;\&#34;\u003eHas earthquakes \u003c/span\u003e\u003cb\n                                       style=\&#34;font-size:1.2em\&#34;\u003e{{ record.fields.flag_earthquake }}\u003c/b\u003e\n                                \u003c/p\u003e\n                            \u003c/div\u003e\n                            \u003ca style=\&#34;color: #1e0c33; font-weight: 600; font-size: 1.1em;\&#34;\n                               href=\&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint-card?q=country:%22{{ record.fields.country }}%22 AND volcano_name:%22{{ record.fields.volcano_name }}%22\&#34;\n                               target=\&#34;_blank\&#34;\u003eGo to the volcano card\u003c/a\u003e\n                        \u003c/div\u003e\n                    \u003c/ods-map-layer\u003e\n                \u003c/ods-map\u003e\n                \u003cdiv class=\&#34;ods-box\&#34;\u003e\n                    \u003cods-table context=\&#34;ctx\&#34;\u003e\u003c/ods-table\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
                  "css": &#34;.boutons {\n    margin-left: 30px;\n}\n.red-box {\n    float: right;\n    border: 2px solid darkred;\n    color: darkred;\n    padding: 20px;\n    background-color: #ffe8e8;\n}\n&#34;
                }'>
     </form>
@@ -985,7 +985,7 @@
                 <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
 &lt;div class=&#34;container&#34;&gt;
     &lt;ods-dataset-context context=&#34;ctx&#34;
-                         ctx-dataset=&#34;record-stores&#34;
+                         ctx-dataset=&#34;les-eruptions-volcaniques-dans-le-monde&#34;
                          ctx-domain=&#34;userclub&#34;
                          ctx-urlsync=&#34;true&#34;&gt;
         &lt;div class=&#34;row ods-box&#34;&gt;
@@ -1032,10 +1032,10 @@
         &lt;/div&gt;
         &lt;div class=&#34;row ods-box&#34;&gt;
             &lt;h3&gt;
-                A dashboard : Music record store in the world
+                A dashboard : Global earthquakes
             &lt;/h3&gt;
             &lt;div class=&#34;col-md-3 ods-box&#34;&gt;
-                &lt;ods-text-search context=&#34;ctx&#34; placeholder=&#34;disc, records, music...&#34;&gt;&lt;/ods-text-search&gt;
+                &lt;ods-text-search context=&#34;ctx&#34; placeholder=&#34;country, type, status...&#34;&gt;&lt;/ods-text-search&gt;
                 &lt;ods-filter-summary context=&#34;ctx&#34;&gt;&lt;/ods-filter-summary&gt;
                 &lt;ods-facets context=&#34;ctx&#34;&gt;&lt;/ods-facets&gt;
             &lt;/div&gt;
@@ -1044,19 +1044,26 @@
                     &lt;ods-map-layer context=&#34;ctx&#34;&gt;
                         &lt;div&gt;
                             &lt;h3&gt;
-                                {{ record.fields.name }}
+                                {{ record.fields.volcano_name }}
                             &lt;/h3&gt;
                             &lt;p style=&#34;font-style:italic; color:grey; font-weight:300&#34;&gt;
-                                {{ record.fields.address }}
+                                {{ record.fields.country }}
                             &lt;/p&gt;
+                            &lt;p&gt;Type: {{record.fields.volcano_type}}&lt;/p&gt;
+                            &lt;p&gt;Status: {{record.fields.status}}&lt;/p&gt;
                             &lt;div style=&#34;line-height: 0px;&#34;&gt;
                                 &lt;p&gt;
-                                    &lt;span style=&#34;font-style:italic;&#34;&gt;Has closed &lt;/span&gt;&lt;b style=&#34;font-size:1.2em&#34;&gt;{{ record.fields.hasclosed }}&lt;/b&gt;
+                                    &lt;span style=&#34;font-style:italic;&#34;&gt;Has tsunami &lt;/span&gt;&lt;b
+                                       style=&#34;font-size:1.2em&#34;&gt;{{ record.fields.flag_tsunami }}&lt;/b&gt;
+                                &lt;/p&gt;
+                                &lt;p&gt;
+                                    &lt;span style=&#34;font-style:italic;&#34;&gt;Has earthquakes &lt;/span&gt;&lt;b
+                                       style=&#34;font-size:1.2em&#34;&gt;{{ record.fields.flag_earthquake }}&lt;/b&gt;
                                 &lt;/p&gt;
                             &lt;/div&gt;
                             &lt;a style=&#34;color: #1e0c33; font-weight: 600; font-size: 1.1em;&#34;
-                               href=&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint-card?q=city:%22{{ record.fields.city }}%22 AND name:%22{{ record.fields.name }}%22&#34;
-                               target=&#34;_blank&#34;&gt;Go to the store card&lt;/a&gt;
+                               href=&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint-card?q=country:%22{{ record.fields.country }}%22 AND volcano_name:%22{{ record.fields.volcano_name }}%22&#34;
+                               target=&#34;_blank&#34;&gt;Go to the volcano card&lt;/a&gt;
                         &lt;/div&gt;
                     &lt;/ods-map-layer&gt;
                 &lt;/ods-map&gt;
@@ -1066,8 +1073,7 @@
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/ods-dataset-context&gt;
-&lt;/div&gt;
-&lt;/div&gt;</div>
+&lt;/div&gt;&lt;/div&gt;</div>
                 <style type='text/css'>
                     .boutons {
     margin-left: 30px;
@@ -1210,7 +1216,7 @@
                  id="code-browse-search-filter-then-share-or-print-html-content"
                  data-clipboard="&lt;div class=&#34;container&#34;&gt;
     &lt;ods-dataset-context context=&#34;ctx&#34;
-                         ctx-dataset=&#34;record-stores&#34;
+                         ctx-dataset=&#34;les-eruptions-volcaniques-dans-le-monde&#34;
                          ctx-domain=&#34;userclub&#34;
                          ctx-urlsync=&#34;true&#34;&gt;
         &lt;div class=&#34;row ods-box&#34;&gt;
@@ -1257,10 +1263,10 @@
         &lt;/div&gt;
         &lt;div class=&#34;row ods-box&#34;&gt;
             &lt;h3&gt;
-                A dashboard : Music record store in the world
+                A dashboard : Global earthquakes
             &lt;/h3&gt;
             &lt;div class=&#34;col-md-3 ods-box&#34;&gt;
-                &lt;ods-text-search context=&#34;ctx&#34; placeholder=&#34;disc, records, music...&#34;&gt;&lt;/ods-text-search&gt;
+                &lt;ods-text-search context=&#34;ctx&#34; placeholder=&#34;country, type, status...&#34;&gt;&lt;/ods-text-search&gt;
                 &lt;ods-filter-summary context=&#34;ctx&#34;&gt;&lt;/ods-filter-summary&gt;
                 &lt;ods-facets context=&#34;ctx&#34;&gt;&lt;/ods-facets&gt;
             &lt;/div&gt;
@@ -1269,19 +1275,26 @@
                     &lt;ods-map-layer context=&#34;ctx&#34;&gt;
                         &lt;div&gt;
                             &lt;h3&gt;
-                                {{ record.fields.name }}
+                                {{ record.fields.volcano_name }}
                             &lt;/h3&gt;
                             &lt;p style=&#34;font-style:italic; color:grey; font-weight:300&#34;&gt;
-                                {{ record.fields.address }}
+                                {{ record.fields.country }}
                             &lt;/p&gt;
+                            &lt;p&gt;Type: {{record.fields.volcano_type}}&lt;/p&gt;
+                            &lt;p&gt;Status: {{record.fields.status}}&lt;/p&gt;
                             &lt;div style=&#34;line-height: 0px;&#34;&gt;
                                 &lt;p&gt;
-                                    &lt;span style=&#34;font-style:italic;&#34;&gt;Has closed &lt;/span&gt;&lt;b style=&#34;font-size:1.2em&#34;&gt;{{ record.fields.hasclosed }}&lt;/b&gt;
+                                    &lt;span style=&#34;font-style:italic;&#34;&gt;Has tsunami &lt;/span&gt;&lt;b
+                                       style=&#34;font-size:1.2em&#34;&gt;{{ record.fields.flag_tsunami }}&lt;/b&gt;
+                                &lt;/p&gt;
+                                &lt;p&gt;
+                                    &lt;span style=&#34;font-style:italic;&#34;&gt;Has earthquakes &lt;/span&gt;&lt;b
+                                       style=&#34;font-size:1.2em&#34;&gt;{{ record.fields.flag_earthquake }}&lt;/b&gt;
                                 &lt;/p&gt;
                             &lt;/div&gt;
                             &lt;a style=&#34;color: #1e0c33; font-weight: 600; font-size: 1.1em;&#34;
-                               href=&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint-card?q=city:%22{{ record.fields.city }}%22 AND name:%22{{ record.fields.name }}%22&#34;
-                               target=&#34;_blank&#34;&gt;Go to the store card&lt;/a&gt;
+                               href=&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint-card?q=country:%22{{ record.fields.country }}%22 AND volcano_name:%22{{ record.fields.volcano_name }}%22&#34;
+                               target=&#34;_blank&#34;&gt;Go to the volcano card&lt;/a&gt;
                         &lt;/div&gt;
                     &lt;/ods-map-layer&gt;
                 &lt;/ods-map&gt;
@@ -1291,13 +1304,12 @@
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/ods-dataset-context&gt;
-&lt;/div&gt;
-"
+&lt;/div&gt;"
                  role="tabpanel">
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;container&#34;&gt;
     &lt;ods-dataset-context context=&#34;ctx&#34;
-                         ctx-dataset=&#34;record-stores&#34;
+                         ctx-dataset=&#34;les-eruptions-volcaniques-dans-le-monde&#34;
                          ctx-domain=&#34;userclub&#34;
                          ctx-urlsync=&#34;true&#34;&gt;
         &lt;div class=&#34;row ods-box&#34;&gt;
@@ -1344,10 +1356,10 @@
         &lt;/div&gt;
         &lt;div class=&#34;row ods-box&#34;&gt;
             &lt;h3&gt;
-                A dashboard : Music record store in the world
+                A dashboard : Global earthquakes
             &lt;/h3&gt;
             &lt;div class=&#34;col-md-3 ods-box&#34;&gt;
-                &lt;ods-text-search context=&#34;ctx&#34; placeholder=&#34;disc, records, music...&#34;&gt;&lt;/ods-text-search&gt;
+                &lt;ods-text-search context=&#34;ctx&#34; placeholder=&#34;country, type, status...&#34;&gt;&lt;/ods-text-search&gt;
                 &lt;ods-filter-summary context=&#34;ctx&#34;&gt;&lt;/ods-filter-summary&gt;
                 &lt;ods-facets context=&#34;ctx&#34;&gt;&lt;/ods-facets&gt;
             &lt;/div&gt;
@@ -1356,19 +1368,26 @@
                     &lt;ods-map-layer context=&#34;ctx&#34;&gt;
                         &lt;div&gt;
                             &lt;h3&gt;
-                                {{ record.fields.name }}
+                                {{ record.fields.volcano_name }}
                             &lt;/h3&gt;
                             &lt;p style=&#34;font-style:italic; color:grey; font-weight:300&#34;&gt;
-                                {{ record.fields.address }}
+                                {{ record.fields.country }}
                             &lt;/p&gt;
+                            &lt;p&gt;Type: {{record.fields.volcano_type}}&lt;/p&gt;
+                            &lt;p&gt;Status: {{record.fields.status}}&lt;/p&gt;
                             &lt;div style=&#34;line-height: 0px;&#34;&gt;
                                 &lt;p&gt;
-                                    &lt;span style=&#34;font-style:italic;&#34;&gt;Has closed &lt;/span&gt;&lt;b style=&#34;font-size:1.2em&#34;&gt;{{ record.fields.hasclosed }}&lt;/b&gt;
+                                    &lt;span style=&#34;font-style:italic;&#34;&gt;Has tsunami &lt;/span&gt;&lt;b
+                                       style=&#34;font-size:1.2em&#34;&gt;{{ record.fields.flag_tsunami }}&lt;/b&gt;
+                                &lt;/p&gt;
+                                &lt;p&gt;
+                                    &lt;span style=&#34;font-style:italic;&#34;&gt;Has earthquakes &lt;/span&gt;&lt;b
+                                       style=&#34;font-size:1.2em&#34;&gt;{{ record.fields.flag_earthquake }}&lt;/b&gt;
                                 &lt;/p&gt;
                             &lt;/div&gt;
                             &lt;a style=&#34;color: #1e0c33; font-weight: 600; font-size: 1.1em;&#34;
-                               href=&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint-card?q=city:%22{{ record.fields.city }}%22 AND name:%22{{ record.fields.name }}%22&#34;
-                               target=&#34;_blank&#34;&gt;Go to the store card&lt;/a&gt;
+                               href=&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint-card?q=country:%22{{ record.fields.country }}%22 AND volcano_name:%22{{ record.fields.volcano_name }}%22&#34;
+                               target=&#34;_blank&#34;&gt;Go to the volcano card&lt;/a&gt;
                         &lt;/div&gt;
                     &lt;/ods-map-layer&gt;
                 &lt;/ods-map&gt;
@@ -1378,8 +1397,7 @@
             &lt;/div&gt;
         &lt;/div&gt;
     &lt;/ods-dataset-context&gt;
-&lt;/div&gt;
-</code></pre>
+&lt;/div&gt;</code></pre>
                 </div>
             </div>
             
@@ -1466,7 +1484,7 @@
                  "title": "New Pen!",
                  "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
-                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;ods-box card\&#34;\u003e\n    \u003ch2\u003e\n        Record store card \u003cspan style=\&#34;font-size:0.7em; color:darkred; margin-left:40px\&#34;\u003ePrint it (Ctrl/Cmd&#43;P) or just share the link !\u003c/span\u003e\n    \u003c/h2\u003e\n    \u003cods-dataset-context context=\&#34;ctx\&#34;\n                         ctx-dataset=\&#34;record-stores\&#34;\n                         ctx-urlsync=\&#34;true\&#34;\u003e\n        \u003cdiv ng-repeat=\&#34;item in items\&#34; ods-results=\&#34;items\&#34; ods-results-context=\&#34;ctx\&#34; ods-results-max=\&#34;1\&#34;\u003e\n            \u003cul class=\&#34;field-list\&#34;\u003e\n                \u003cli class=\&#34;field\&#34; ng-repeat=\&#34;field in ctx.dataset.fields\&#34;\u003e\n                    \u003cp class=\&#34;label\&#34;\u003e\n                        {{ field.label }}\n                    \u003c/p\u003e\n                    \u003cp class=\&#34;value\&#34;\u003e\n                        {{ item.fields[field.name] }}\n                    \u003c/p\u003e\n                \u003c/li\u003e\n            \u003c/ul\u003e\n        \u003c/div\u003e\n        \u003cods-map context=\&#34;ctx\&#34;\u003e\u003c/ods-map\u003e\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\n\u003c/div\u003e&#34;,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;ods-box card\&#34;\u003e\n    \u003ch2\u003e\n        Record store card\n        \u003cspan style=\&#34;font-size: 0.7em; color: darkred; margin-left: 40px\&#34;\u003ePrint it (Ctrl/Cmd&#43;P) or just share the link\n            !\u003c/span\u003e\n    \u003c/h2\u003e\n    \u003cods-dataset-context\n                         context=\&#34;ctx\&#34;\n                         ctx-dataset=\&#34;les-eruptions-volcaniques-dans-le-monde\&#34;\n                         ctx-urlsync=\&#34;true\&#34;\u003e\n        \u003cdiv\n             ng-repeat=\&#34;item in items\&#34;\n             ods-results=\&#34;items\&#34;\n             ods-results-context=\&#34;ctx\&#34;\n             ods-results-max=\&#34;1\&#34;\u003e\n            \u003cul class=\&#34;field-list\&#34;\u003e\n                \u003cli class=\&#34;field\&#34; ng-repeat=\&#34;field in ctx.dataset.fields\&#34;\u003e\n                    \u003cp class=\&#34;label\&#34;\u003e{{ field.volcano_name }}\u003c/p\u003e\n                    \u003cp class=\&#34;value\&#34;\u003e{{ item.fields[field.name] }}\u003c/p\u003e\n                \u003c/li\u003e\n            \u003c/ul\u003e\n        \u003c/div\u003e\n        \u003cods-map context=\&#34;ctx\&#34;\u003e\u003c/ods-map\u003e\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
                  "css": &#34;.card {\n    width: 700px;\n    margin-left: auto;\n    margin-right: auto;\n}\n.field-list {\n    list-style-type: none;\n    display: grid;\n}\n.field {\n    display: inline-flex;\n    line-height: 18px;\n    margin-bottom: 4px;\n}\n.label {\n    width: 175px;\n    color: black;\n    font-weight: 500;\n}\n.value {\n    width: 400px;\n    border: 1px solid black;\n    border-radius: 5px;\n    padding: 2px 0px 0px 5px;\n    line-height: 25px;\n    background-color: #f0f0f0;\n}\n@media print {\n    header, footer {\n        display: none;\n    }\n}\n      &#34;
                }'>
     </form>
@@ -1642,27 +1660,29 @@
                 <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
 &lt;div class=&#34;ods-box card&#34;&gt;
     &lt;h2&gt;
-        Record store card &lt;span style=&#34;font-size:0.7em; color:darkred; margin-left:40px&#34;&gt;Print it (Ctrl/Cmd&#43;P) or just share the link !&lt;/span&gt;
+        Record store card
+        &lt;span style=&#34;font-size: 0.7em; color: darkred; margin-left: 40px&#34;&gt;Print it (Ctrl/Cmd&#43;P) or just share the link
+            !&lt;/span&gt;
     &lt;/h2&gt;
-    &lt;ods-dataset-context context=&#34;ctx&#34;
-                         ctx-dataset=&#34;record-stores&#34;
+    &lt;ods-dataset-context
+                         context=&#34;ctx&#34;
+                         ctx-dataset=&#34;les-eruptions-volcaniques-dans-le-monde&#34;
                          ctx-urlsync=&#34;true&#34;&gt;
-        &lt;div ng-repeat=&#34;item in items&#34; ods-results=&#34;items&#34; ods-results-context=&#34;ctx&#34; ods-results-max=&#34;1&#34;&gt;
+        &lt;div
+             ng-repeat=&#34;item in items&#34;
+             ods-results=&#34;items&#34;
+             ods-results-context=&#34;ctx&#34;
+             ods-results-max=&#34;1&#34;&gt;
             &lt;ul class=&#34;field-list&#34;&gt;
                 &lt;li class=&#34;field&#34; ng-repeat=&#34;field in ctx.dataset.fields&#34;&gt;
-                    &lt;p class=&#34;label&#34;&gt;
-                        {{ field.label }}
-                    &lt;/p&gt;
-                    &lt;p class=&#34;value&#34;&gt;
-                        {{ item.fields[field.name] }}
-                    &lt;/p&gt;
+                    &lt;p class=&#34;label&#34;&gt;{{ field.volcano_name }}&lt;/p&gt;
+                    &lt;p class=&#34;value&#34;&gt;{{ item.fields[field.name] }}&lt;/p&gt;
                 &lt;/li&gt;
             &lt;/ul&gt;
         &lt;/div&gt;
         &lt;ods-map context=&#34;ctx&#34;&gt;&lt;/ods-map&gt;
     &lt;/ods-dataset-context&gt;
-&lt;/div&gt;
-&lt;/div&gt;</div>
+&lt;/div&gt;&lt;/div&gt;</div>
                 <style type='text/css'>
                     .card {
     width: 700px;
@@ -1862,52 +1882,56 @@
                  id="code-card-with-print-style-html-content"
                  data-clipboard="&lt;div class=&#34;ods-box card&#34;&gt;
     &lt;h2&gt;
-        Record store card &lt;span style=&#34;font-size:0.7em; color:darkred; margin-left:40px&#34;&gt;Print it (Ctrl/Cmd&#43;P) or just share the link !&lt;/span&gt;
+        Record store card
+        &lt;span style=&#34;font-size: 0.7em; color: darkred; margin-left: 40px&#34;&gt;Print it (Ctrl/Cmd&#43;P) or just share the link
+            !&lt;/span&gt;
     &lt;/h2&gt;
-    &lt;ods-dataset-context context=&#34;ctx&#34;
-                         ctx-dataset=&#34;record-stores&#34;
+    &lt;ods-dataset-context
+                         context=&#34;ctx&#34;
+                         ctx-dataset=&#34;les-eruptions-volcaniques-dans-le-monde&#34;
                          ctx-urlsync=&#34;true&#34;&gt;
-        &lt;div ng-repeat=&#34;item in items&#34; ods-results=&#34;items&#34; ods-results-context=&#34;ctx&#34; ods-results-max=&#34;1&#34;&gt;
+        &lt;div
+             ng-repeat=&#34;item in items&#34;
+             ods-results=&#34;items&#34;
+             ods-results-context=&#34;ctx&#34;
+             ods-results-max=&#34;1&#34;&gt;
             &lt;ul class=&#34;field-list&#34;&gt;
                 &lt;li class=&#34;field&#34; ng-repeat=&#34;field in ctx.dataset.fields&#34;&gt;
-                    &lt;p class=&#34;label&#34;&gt;
-                        {{ field.label }}
-                    &lt;/p&gt;
-                    &lt;p class=&#34;value&#34;&gt;
-                        {{ item.fields[field.name] }}
-                    &lt;/p&gt;
+                    &lt;p class=&#34;label&#34;&gt;{{ field.volcano_name }}&lt;/p&gt;
+                    &lt;p class=&#34;value&#34;&gt;{{ item.fields[field.name] }}&lt;/p&gt;
                 &lt;/li&gt;
             &lt;/ul&gt;
         &lt;/div&gt;
         &lt;ods-map context=&#34;ctx&#34;&gt;&lt;/ods-map&gt;
     &lt;/ods-dataset-context&gt;
-&lt;/div&gt;
-"
+&lt;/div&gt;"
                  role="tabpanel">
                 <div class="highlight">
                     <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;ods-box card&#34;&gt;
     &lt;h2&gt;
-        Record store card &lt;span style=&#34;font-size:0.7em; color:darkred; margin-left:40px&#34;&gt;Print it (Ctrl/Cmd&#43;P) or just share the link !&lt;/span&gt;
+        Record store card
+        &lt;span style=&#34;font-size: 0.7em; color: darkred; margin-left: 40px&#34;&gt;Print it (Ctrl/Cmd&#43;P) or just share the link
+            !&lt;/span&gt;
     &lt;/h2&gt;
-    &lt;ods-dataset-context context=&#34;ctx&#34;
-                         ctx-dataset=&#34;record-stores&#34;
+    &lt;ods-dataset-context
+                         context=&#34;ctx&#34;
+                         ctx-dataset=&#34;les-eruptions-volcaniques-dans-le-monde&#34;
                          ctx-urlsync=&#34;true&#34;&gt;
-        &lt;div ng-repeat=&#34;item in items&#34; ods-results=&#34;items&#34; ods-results-context=&#34;ctx&#34; ods-results-max=&#34;1&#34;&gt;
+        &lt;div
+             ng-repeat=&#34;item in items&#34;
+             ods-results=&#34;items&#34;
+             ods-results-context=&#34;ctx&#34;
+             ods-results-max=&#34;1&#34;&gt;
             &lt;ul class=&#34;field-list&#34;&gt;
                 &lt;li class=&#34;field&#34; ng-repeat=&#34;field in ctx.dataset.fields&#34;&gt;
-                    &lt;p class=&#34;label&#34;&gt;
-                        {{ field.label }}
-                    &lt;/p&gt;
-                    &lt;p class=&#34;value&#34;&gt;
-                        {{ item.fields[field.name] }}
-                    &lt;/p&gt;
+                    &lt;p class=&#34;label&#34;&gt;{{ field.volcano_name }}&lt;/p&gt;
+                    &lt;p class=&#34;value&#34;&gt;{{ item.fields[field.name] }}&lt;/p&gt;
                 &lt;/li&gt;
             &lt;/ul&gt;
         &lt;/div&gt;
         &lt;ods-map context=&#34;ctx&#34;&gt;&lt;/ods-map&gt;
     &lt;/ods-dataset-context&gt;
-&lt;/div&gt;
-</code></pre>
+&lt;/div&gt;</code></pre>
                 </div>
             </div>
             
@@ -2019,7 +2043,7 @@
     </script>
     <script
       type="text/javascript"
-      src="/index.min.79f95ac0c5f804431feb615d882ccd72301607008a5a6724a6bb192688fbc0ea.js"
+      src="/index.min.74a25f16f7afdecec13e30f9213231fc17c3a57e51c51b7847f29a9d1f8a8037.js"
       defer
     ></script>
   </body>

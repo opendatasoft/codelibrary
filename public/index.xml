@@ -198,128 +198,11 @@
     
       
       
-        <item>
-          <title>Eco-Counter / Eco-Compteur data custom view</title>
-          <link>https://codelibrary.opendatasoft.com/custom-views/eco-compteur/#eco-counter--eco-compteur-data-custom-view</link>
-          
-            <pubDate>Thu, 09 Dec 2021 00:00:00 +0000</pubDate>
-          
-          
-          <guid>https://codelibrary.opendatasoft.com/custom-views/eco-compteur/#eco-counter--eco-compteur-data-custom-view</guid>
-          <description>&lt;p&gt;Eco-Counter custom view for Opendatasoft integration: an overall view of your territory through Eco-Counter stations data.&lt;/p&gt;
-&lt;h3 class=&#34;title&#34; id=&#34;install-procedure&#34;&gt;
-  Install procedure
-  
-&lt;/h3&gt;
-&lt;p&gt;Two datasets are required :&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;eco-counter-data&lt;/strong&gt; : from &lt;code&gt;Eco Counter Data&lt;/code&gt; connector&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;eco-counter-sites&lt;/strong&gt; : from &lt;code&gt;Eco Counter Sites&lt;/code&gt; connector&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h5 class=&#34;title&#34; id=&#34;eco-counter-sites-processing-&#34;&gt;
-  eco-counter-sites processing :
-  
-&lt;/h5&gt;
-&lt;p&gt;Get the first photo URL, copy the field, get the photo from the URL&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Split text:
-&lt;ul&gt;
-&lt;li&gt;field: &lt;code&gt;photos&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;separator: &lt;code&gt;/https://&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;index: &lt;code&gt;1&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;output: &lt;code&gt;photourl&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;Copy a field:
-&lt;ul&gt;
-&lt;li&gt;field: &lt;code&gt;photourl&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;new field: &lt;code&gt;photo&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;File:
-&lt;ul&gt;
-&lt;li&gt;field: &lt;code&gt;photo&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h5 class=&#34;title&#34; id=&#34;eco-counter-data-processing-&#34;&gt;
-  eco-counter-data processing :
-  
-&lt;/h5&gt;
-&lt;p&gt;Get additional metadata from counters&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Join datasets:
-&lt;ul&gt;
-&lt;li&gt;dataset: &lt;code&gt;eco-counter-sites&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;local key: &lt;code&gt;id&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;remote key: &lt;code&gt;id&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;output fields: &lt;code&gt;name, coordinates, user_type, sens, interval&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Set &lt;code&gt;name&lt;/code&gt; field as a facet !&lt;/p&gt;
-</description>
-        </item>
-      
     
       
       
-        <item>
-          <title>Listing page</title>
-          <link>https://codelibrary.opendatasoft.com/page-templates/listing-page/#listing-page</link>
-          
-            <pubDate>Wed, 05 Jan 2022 12:00:00 +0200</pubDate>
-          
-          
-          <guid>https://codelibrary.opendatasoft.com/page-templates/listing-page/#listing-page</guid>
-          <description>&lt;p&gt;This template is an alternative to the automated &lt;a href=&#34;https://codelibrary.opendatasoft.com/generators/listing-generator/&#34;&gt;Listing Generator&lt;/a&gt;. It offers more customization possibilities to advanced users who would like to add or remove items to this template, or reuse some blocks on another page.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;This ressource integrates the following widgets:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;ods-select&lt;/code&gt; to create the filters on text fields. &lt;a href=&#34;https://codelibrary.opendatasoft.com/widget-tricks/ods-select/&#34;&gt;Resource available here&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ods-date-range-slider&lt;/code&gt; to create the date selector. &lt;a href=&#34;https://codelibrary.opendatasoft.com/widget-tricks/ods-date-range-slider/&#34;&gt;Resource available here&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ods-aggregation&lt;/code&gt; to create KPI. &lt;a href=&#34;https://codelibrary.opendatasoft.com/widget-tricks/ods-aggregation/&#34;&gt;Resource available here&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ods-results&lt;/code&gt; to list the content of the records from the dataset. &lt;a href=&#34;https://codelibrary.opendatasoft.com/widget-tricks/ods-results/&#34;&gt;Resource available here&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-</description>
-        </item>
-      
-        <item>
-          <title>Map listing page</title>
-          <link>https://codelibrary.opendatasoft.com/page-templates/listing-page/#map-listing-page</link>
-          
-            <pubDate>Wed, 05 Jan 2022 12:00:00 +0200</pubDate>
-          
-          
-          <guid>https://codelibrary.opendatasoft.com/page-templates/listing-page/#map-listing-page</guid>
-          <description>&lt;p&gt;This template is an alternative to the automated &lt;a href=&#34;https://codelibrary.opendatasoft.com/generators/map-listing/&#34;&gt;Map Listing Generator&lt;/a&gt;. It offers more customization possibilities to advanced users who would like to add or remove items to this template, or reuse some blocks on another page.&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;This ressource integrates the following widgets:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;code&gt;ods-select&lt;/code&gt; to create the filters on text fields. &lt;a href=&#34;https://codelibrary.opendatasoft.com/widget-tricks/ods-select/&#34;&gt;Resource available here&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ods-aggregation&lt;/code&gt; to create KPI. &lt;a href=&#34;https://codelibrary.opendatasoft.com/widget-tricks/ods-aggregation/&#34;&gt;Resource available here&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ods-results&lt;/code&gt; to list the content of the records from the dataset. &lt;a href=&#34;https://codelibrary.opendatasoft.com/widget-tricks/ods-results/&#34;&gt;Resource available here&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;ods-results&lt;/code&gt; to display the records on a map. &lt;a href=&#34;https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsMap&#34;&gt;Widget documentation available here&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-</description>
-        </item>
-      
     
       
-      
-        <item>
-          <title>Active/inactive style</title>
-          <link>https://codelibrary.opendatasoft.com/components/switch-toggle/#activeinactive-style</link>
-          
-            <pubDate>Tue, 25 Jan 2022 00:00:00 +0000</pubDate>
-          
-          
-          <guid>https://codelibrary.opendatasoft.com/components/switch-toggle/#activeinactive-style</guid>
-          <description>&lt;p&gt;Toggle button to highlight an active or inactive state.&lt;/p&gt;
-</description>
-        </item>
       
     
       
@@ -400,13 +283,13 @@ Settings set within the page. You&amp;rsquo;ll therefore need to pay attention t
   
 &lt;/h4&gt;
 &lt;p&gt;A simple page containing a variable declaration into an ng-init directive:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ng-init&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;title = &amp;#39;Any text here...&amp;#39;;
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;              anotherVar = &amp;#39;other value&amp;#39;;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    {{ title }} &lt;span class=&#34;c&#34;&gt;&amp;lt;!-- output: Any text here... --&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-html&#34; data-lang=&#34;html&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt; &lt;span class=&#34;na&#34;&gt;ng-init&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;title = &amp;#39;Any text here...&amp;#39;;
+&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;              anotherVar = &amp;#39;other value&amp;#39;;&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+    {{ title }} &lt;span class=&#34;c&#34;&gt;&amp;lt;!-- output: Any text here... --&amp;gt;&lt;/span&gt;
+  &lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;h1&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;
+&lt;span class=&#34;p&#34;&gt;&amp;lt;/&lt;/span&gt;&lt;span class=&#34;nt&#34;&gt;div&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt; 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;ul&gt;
 &lt;li&gt;&lt;code&gt;title&lt;/code&gt; is a variable, and &lt;code&gt;Any text here...&lt;/code&gt; its value&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The value is then between quotes &lt;code&gt;&#39;&lt;/code&gt;.&lt;/p&gt;
@@ -414,9 +297,9 @@ Settings set within the page. You&amp;rsquo;ll therefore need to pay attention t
 &lt;p&gt;A common error is omitting to escape (protect) apostrophes with a leading backslash (ie &lt;code&gt;\&#39;&lt;/code&gt;).&lt;br&gt;
 Apostrophes are used to declare keys and values in object, and therefore are reserved characters. This is the reason why they MUST be escaped.&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;wrongVariable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;I&amp;#39;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ll&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;be&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;freed&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;apostrophes&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// This leads to an error !!!
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nx&#34;&gt;correctVariable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;I\&amp;#39;ll be freed from apostrophes&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// Ok !
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 class=&#34;title&#34; id=&#34;general-settings&#34;&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;nx&#34;&gt;wrongVariable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;I&amp;#39;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;ll&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;be&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;freed&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;apostrophes&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// This leads to an error !!!
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-javascript&#34; data-lang=&#34;javascript&#34;&gt;&lt;span class=&#34;nx&#34;&gt;correctVariable&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;I\&amp;#39;ll be freed from apostrophes&amp;#39;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt; &lt;span class=&#34;c1&#34;&gt;// Ok !
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 class=&#34;title&#34; id=&#34;general-settings&#34;&gt;
   General settings
   
     &lt;a class=&#34;is-link&#34; href=&#34;#general-settings&#34;&gt;
@@ -429,19 +312,19 @@ Apostrophes are used to declare keys and values in object, and therefore are res
   
 &lt;/h4&gt;
 &lt;p&gt;Domain URL (string) : Must contain the URL of the domain where the dataset is published.&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;domain = &amp;#39;userclub.opendatasoft.com&amp;#39;;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;domain = &#39;userclub.opendatasoft.com&#39;;
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 class=&#34;title&#34; id=&#34;datasetid&#34;&gt;
   &lt;code&gt;datasetid&lt;/code&gt;
   
 &lt;/h4&gt;
 &lt;p&gt;Dataset ID (string) : Must contain the ID of the dataset&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;datasetid = &amp;#39;oeuvres-de-johannes-vermeer&amp;#39;;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;datasetid = &#39;oeuvres-de-johannes-vermeer&#39;;
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 class=&#34;title&#34; id=&#34;sort&#34;&gt;
   &lt;code&gt;sort&lt;/code&gt;
   
 &lt;/h4&gt;
 &lt;p&gt;Sort (string) : a sort parameter&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sort = &amp;#39;-date&amp;#39;;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sort = &#39;-date&#39;;
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;Note:&lt;/strong&gt; The field must be sortable (numeric,date,facet or sortable text field)&lt;/p&gt;
 &lt;h2 class=&#34;title&#34; id=&#34;filters-settings&#34;&gt;
   Filters settings
@@ -465,8 +348,8 @@ Parameters are :&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;Note :&lt;/strong&gt; The field must be a facet in the dataset&lt;br&gt;
 &lt;strong&gt;Note :&lt;/strong&gt; Alphanumerical sort is applied in the filter view&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;filters = [
-              {&amp;#39;id&amp;#39;:&amp;#39;filterid&amp;#39;,&amp;#39;multiple&amp;#39;:true},
-              {&amp;#39;id&amp;#39;:&amp;#39;filterid2&amp;#39;,&amp;#39;multiple&amp;#39;:false,&amp;#39;label&amp;#39;:&amp;#39;ID of the filter&amp;#39;}
+              {&#39;id&#39;:&#39;filterid&#39;,&#39;multiple&#39;:true},
+              {&#39;id&#39;:&#39;filterid2&#39;,&#39;multiple&#39;:false,&#39;label&#39;:&#39;ID of the filter&#39;}
            ];
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 class=&#34;title&#34; id=&#34;resetfiltersbutton&#34;&gt;
   &lt;code&gt;resetFiltersButton&lt;/code&gt;
@@ -479,7 +362,7 @@ Parameters are :&lt;/p&gt;
   
 &lt;/h4&gt;
 &lt;p&gt;resetFiltersButtonLabel (string) : label of the reset filters button&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;resetFiltersButtonLabel = &amp;#39;Clear all filters&amp;#39;;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;resetFiltersButtonLabel = &#39;Clear all filters&#39;;
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 class=&#34;title&#34; id=&#34;date-settings&#34;&gt;
   Date settings
   
@@ -493,7 +376,7 @@ Parameters are :&lt;/p&gt;
   
 &lt;/h4&gt;
 &lt;p&gt;fieldDate (string) : a date field to display a date-range-slider&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;fieldDate = &amp;#39;date&amp;#39;;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;fieldDate = &#39;date&#39;;
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 class=&#34;title&#34; id=&#34;resetfiltersbutton-1&#34;&gt;
   &lt;code&gt;resetFiltersButton&lt;/code&gt;
   
@@ -523,13 +406,13 @@ Parameters are :&lt;/p&gt;
   
 &lt;/h4&gt;
 &lt;p&gt;view (string) : Type of the view to list results, can be &lt;code&gt;table&lt;/code&gt; or &lt;code&gt;cards&lt;/code&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;view = &amp;#39;cards&amp;#39;;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;view = &#39;cards&#39;;
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 class=&#34;title&#34; id=&#34;noresultmsg-only-available-if-view-is-set-to-cards&#34;&gt;
   &lt;code&gt;noResultMsg&lt;/code&gt; (only available if &lt;code&gt;view&lt;/code&gt; is set to &lt;code&gt;cards&lt;/code&gt;)
   
 &lt;/h4&gt;
 &lt;p&gt;noResultMsg (string) : the message to display if no results&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;noResultMsg = &amp;#39;No more results.&amp;#39;;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;noResultMsg = &#39;No more results.&#39;;
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 class=&#34;title&#34; id=&#34;fieldslist&#34;&gt;
   &lt;code&gt;fieldsList&lt;/code&gt;
   
@@ -539,7 +422,7 @@ Parameters are :&lt;/p&gt;
   Simple mode : can be an array of field IDs
   
 &lt;/h5&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;fieldsList = [&amp;#39;title&amp;#39;,&amp;#39;category&amp;#39;,&amp;#39;genre&amp;#39;,&amp;#39;date&amp;#39;];
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;fieldsList = [&#39;title&#39;,&#39;category&#39;,&#39;genre&#39;,&#39;date&#39;];
 &lt;/code&gt;&lt;/pre&gt;&lt;h5 class=&#34;title&#34; id=&#34;advanced-mode--can-be-an-array-of-object&#34;&gt;
   Advanced mode : can be an array of object.
   
@@ -547,7 +430,7 @@ Parameters are :&lt;/p&gt;
 &lt;p&gt;Each object describes the field format and provide optional options.&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;code&gt;field&lt;/code&gt; (string) : mandatory, the ID of te field&lt;/li&gt;
-&lt;li&gt;&lt;code&gt;format&lt;/code&gt; (string) : optional, can be &amp;lsquo;date&amp;rsquo; or &amp;rsquo;number&amp;rsquo;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;format&lt;/code&gt; (string) : optional, can be &amp;lsquo;date&amp;rsquo; or &amp;lsquo;number&amp;rsquo;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;options&lt;/code&gt; (string) : optional, format options
 &lt;ul&gt;
 &lt;li&gt;for &lt;code&gt;number&lt;/code&gt; format :
@@ -572,48 +455,48 @@ Parameters are :&lt;/p&gt;
 &lt;/li&gt;
 &lt;/ul&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;fieldsList = [
-                {&amp;#39;field&amp;#39;:&amp;#39;address&amp;#39;},
-                {&amp;#39;field&amp;#39;:&amp;#39;city&amp;#39;},
-                {&amp;#39;field&amp;#39;:&amp;#39;price&amp;#39;, &amp;#39;format&amp;#39;:&amp;#39;number&amp;#39;, &amp;#39;options&amp;#39;: {&amp;#39;precision&amp;#39;:1, &amp;#39;unit&amp;#39;:&amp;#39;$&amp;#39;}},
-                {&amp;#39;field&amp;#39;:&amp;#39;date_start&amp;#39;,&amp;#39;format&amp;#39;:&amp;#39;date&amp;#39;},
-                {&amp;#39;field&amp;#39;:&amp;#39;date_end&amp;#39;,&amp;#39;format&amp;#39;:&amp;#39;date&amp;#39;, &amp;#39;options&amp;#39;: {&amp;#39;dateFormat&amp;#39;:&amp;#39;longDate&amp;#39;}}
+                {&#39;field&#39;:&#39;address&#39;},
+                {&#39;field&#39;:&#39;city&#39;},
+                {&#39;field&#39;:&#39;price&#39;, &#39;format&#39;:&#39;number&#39;, &#39;options&#39;: {&#39;precision&#39;:1, &#39;unit&#39;:&#39;$&#39;}},
+                {&#39;field&#39;:&#39;date_start&#39;,&#39;format&#39;:&#39;date&#39;},
+                {&#39;field&#39;:&#39;date_end&#39;,&#39;format&#39;:&#39;date&#39;, &#39;options&#39;: {&#39;dateFormat&#39;:&#39;longDate&#39;}}
               ];
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 class=&#34;title&#34; id=&#34;fieldlink&#34;&gt;
   &lt;code&gt;fieldLink&lt;/code&gt;
   
 &lt;/h4&gt;
 &lt;p&gt;fieldLink (string) : the field ID of external resource as a web URL&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;link = &amp;#39;urlfield&amp;#39;;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;link = &#39;urlfield&#39;;
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 class=&#34;title&#34; id=&#34;fieldlinklabel&#34;&gt;
   &lt;code&gt;fieldLinkLabel&lt;/code&gt;
   
 &lt;/h4&gt;
 &lt;p&gt;fieldLinkLabel (string) : Label of the external resource link&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;fieldLinkLabel = &amp;#39;Read more here&amp;#39;;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;fieldLinkLabel = &#39;Read more here&#39;;
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 class=&#34;title&#34; id=&#34;cardtitle-only-available-if-view-is-set-to-cards&#34;&gt;
   &lt;code&gt;cardTitle&lt;/code&gt; (only available if &lt;code&gt;view&lt;/code&gt; is set to &lt;code&gt;cards&lt;/code&gt;)
   
 &lt;/h4&gt;
 &lt;p&gt;cardTitle (string) : id of the field used as a title of the card&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cardTitle = &amp;#39;title&amp;#39;;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;cardTitle = &#39;title&#39;;
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 class=&#34;title&#34; id=&#34;fieldphoto-only-available-if-view-is-set-to-cards&#34;&gt;
   &lt;code&gt;fieldPhoto&lt;/code&gt; (only available if &lt;code&gt;view&lt;/code&gt; is set to &lt;code&gt;cards&lt;/code&gt;)
   
 &lt;/h4&gt;
 &lt;p&gt;fieldPhoto (string) : (Field id of the image field if any)&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;fieldPhoto = &amp;#39;image&amp;#39;;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;fieldPhoto = &#39;image&#39;;
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 class=&#34;title&#34; id=&#34;imageposition-only-available-if-view-is-set-to-cards&#34;&gt;
   &lt;code&gt;imagePosition&lt;/code&gt; (only available if &lt;code&gt;view&lt;/code&gt; is set to &lt;code&gt;cards&lt;/code&gt;)
   
 &lt;/h4&gt;
-&lt;p&gt;imagePosition (string) : (Image position) : Image position in the card, can be &amp;rsquo;top&amp;rsquo; or &amp;rsquo;left&#39;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;imagePosition = &amp;#39;left&amp;#39;;
+&lt;p&gt;imagePosition (string) : (Image position) : Image position in the card, can be &amp;lsquo;top&amp;rsquo; or &amp;lsquo;left&amp;rsquo;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;imagePosition = &#39;left&#39;;
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 class=&#34;title&#34; id=&#34;itemsperrow&#34;&gt;
   &lt;code&gt;itemsPerRow&lt;/code&gt;
   
 &lt;/h4&gt;
 &lt;p&gt;itemsPerRow (string) : number of columns in the cards and KPI layout, must be a 12 multiple (1, 2, 3, 4, 6 or 12).&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;itemsPerRow = &amp;#39;3&amp;#39;;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;itemsPerRow = &#39;3&#39;;
 &lt;/code&gt;&lt;/pre&gt;&lt;h2 class=&#34;title&#34; id=&#34;kpi-settings&#34;&gt;
   KPI Settings
   
@@ -635,15 +518,15 @@ Available options are :&lt;/p&gt;
 &lt;p&gt;&lt;a href=&#34;https://fontawesome.com/v4.7.0/icons/&#34;&gt;Please see all available Fontawesome icons here&lt;/a&gt;&lt;/p&gt;
 &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;kpis = [
             {
-                &amp;#39;title&amp;#39;: &amp;#39;Taille moyenne&amp;#39;,
-                &amp;#39;select&amp;#39;: &amp;#39;avg(surface),
-                &amp;#39;precision&amp;#39;: 2,
-                &amp;#39;unit&amp;#39;: &amp;#39;m2&amp;#39;,
-                &amp;#39;faicon&amp;#39;: &amp;#39;square-o&amp;#39;
+                &#39;title&#39;: &#39;Taille moyenne&#39;,
+                &#39;select&#39;: &#39;avg(surface),
+                &#39;precision&#39;: 2,
+                &#39;unit&#39;: &#39;m2&#39;,
+                &#39;faicon&#39;: &#39;square-o&#39;
             },
             {
-                &amp;#39;title&amp;#39;: &amp;#39;Nombre d\&amp;#39;oeuvre référencées&amp;#39;,
-                &amp;#39;select&amp;#39;: &amp;#39;count(*)&amp;#39;
+                &#39;title&#39;: &#39;Nombre d\&#39;oeuvre référencées&#39;,
+                &#39;select&#39;: &#39;count(*)&#39;
             }
          ];
 &lt;/code&gt;&lt;/pre&gt;&lt;h4 class=&#34;title&#34; id=&#34;sourcelinklabel&#34;&gt;
@@ -651,7 +534,7 @@ Available options are :&lt;/p&gt;
   
 &lt;/h4&gt;
 &lt;p&gt;sourceLinkLabel (string) : the label of the &amp;lsquo;access to source&amp;rsquo; link&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sourceLinkLabel = &amp;#39;Direct access to the data&amp;#39;;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;sourceLinkLabel = &#39;Direct access to the data&#39;;
 &lt;/code&gt;&lt;/pre&gt;</description>
         </item>
       

@@ -1,6 +1,6 @@
 <div class="container">
     <ods-dataset-context context="ctx"
-                         ctx-dataset="record-stores"
+                         ctx-dataset="les-eruptions-volcaniques-dans-le-monde"
                          ctx-domain="userclub"
                          ctx-urlsync="true">
         <div class="row ods-box">
@@ -47,10 +47,10 @@
         </div>
         <div class="row ods-box">
             <h3>
-                A dashboard : Music record store in the world
+                A dashboard : Global earthquakes
             </h3>
             <div class="col-md-3 ods-box">
-                <ods-text-search context="ctx" placeholder="disc, records, music..."></ods-text-search>
+                <ods-text-search context="ctx" placeholder="country, type, status..."></ods-text-search>
                 <ods-filter-summary context="ctx"></ods-filter-summary>
                 <ods-facets context="ctx"></ods-facets>
             </div>
@@ -59,19 +59,26 @@
                     <ods-map-layer context="ctx">
                         <div>
                             <h3>
-                                {{ record.fields.name }}
+                                {{ record.fields.volcano_name }}
                             </h3>
                             <p style="font-style:italic; color:grey; font-weight:300">
-                                {{ record.fields.address }}
+                                {{ record.fields.country }}
                             </p>
+                            <p>Type: {{record.fields.volcano_type}}</p>
+                            <p>Status: {{record.fields.status}}</p>
                             <div style="line-height: 0px;">
                                 <p>
-                                    <span style="font-style:italic;">Has closed </span><b style="font-size:1.2em">{{ record.fields.hasclosed }}</b>
+                                    <span style="font-style:italic;">Has tsunami </span><b
+                                       style="font-size:1.2em">{{ record.fields.flag_tsunami }}</b>
+                                </p>
+                                <p>
+                                    <span style="font-style:italic;">Has earthquakes </span><b
+                                       style="font-size:1.2em">{{ record.fields.flag_earthquake }}</b>
                                 </p>
                             </div>
                             <a style="color: #1e0c33; font-weight: 600; font-size: 1.1em;"
-                               href="https://userclub.opendatasoft.com/pages/widgettrick-shareandprint-card?q=city:%22{{ record.fields.city }}%22 AND name:%22{{ record.fields.name }}%22"
-                               target="_blank">Go to the store card</a>
+                               href="https://userclub.opendatasoft.com/pages/widgettrick-shareandprint-card?q=country:%22{{ record.fields.country }}%22 AND volcano_name:%22{{ record.fields.volcano_name }}%22"
+                               target="_blank">Go to the volcano card</a>
                         </div>
                     </ods-map-layer>
                 </ods-map>
