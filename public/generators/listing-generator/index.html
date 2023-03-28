@@ -13029,13 +13029,13 @@ Settings set within the page. You&rsquo;ll therefore need to pay attention to th
   
 </h4>
 <p>A simple page containing a variable declaration into an ng-init directive:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">ng-init</span><span class="o">=</span><span class="s">&#34;title = &#39;Any text here...&#39;;
-</span></span></span><span class="line"><span class="cl"><span class="s">              anotherVar = &#39;other value&#39;;&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    {{ title }} <span class="c">&lt;!-- output: Any text here... --&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span> 
-</span></span></code></pre></div><ul>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">ng-init</span><span class="o">=</span><span class="s">&#34;title = &#39;Any text here...&#39;;
+</span><span class="s">              anotherVar = &#39;other value&#39;;&#34;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>
+    {{ title }} <span class="c">&lt;!-- output: Any text here... --&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span> 
+</code></pre></div><ul>
 <li><code>title</code> is a variable, and <code>Any text here...</code> its value</li>
 </ul>
 <p>The value is then between quotes <code>'</code>.</p>
@@ -13043,9 +13043,9 @@ Settings set within the page. You&rsquo;ll therefore need to pay attention to th
 <p>A common error is omitting to escape (protect) apostrophes with a leading backslash (ie <code>\'</code>).<br>
 Apostrophes are used to declare keys and values in object, and therefore are reserved characters. This is the reason why they MUST be escaped.</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">wrongVariable</span> <span class="o">=</span> <span class="s1">&#39;I&#39;</span><span class="nx">ll</span> <span class="nx">be</span> <span class="nx">freed</span> <span class="nx">from</span> <span class="nx">apostrophes</span><span class="err">&#39;</span><span class="p">;</span> <span class="c1">// This leads to an error !!!
-</span></span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">correctVariable</span> <span class="o">=</span> <span class="s1">&#39;I\&#39;ll be freed from apostrophes&#39;</span><span class="p">;</span> <span class="c1">// Ok !
-</span></span></span></code></pre></div><h2 class="title" id="general-settings">
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">wrongVariable</span> <span class="o">=</span> <span class="s1">&#39;I&#39;</span><span class="nx">ll</span> <span class="nx">be</span> <span class="nx">freed</span> <span class="nx">from</span> <span class="nx">apostrophes</span><span class="err">&#39;</span><span class="p">;</span> <span class="c1">// This leads to an error !!!
+</span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">correctVariable</span> <span class="o">=</span> <span class="s1">&#39;I\&#39;ll be freed from apostrophes&#39;</span><span class="p">;</span> <span class="c1">// Ok !
+</span></code></pre></div><h2 class="title" id="general-settings">
   General settings
   
     <a class="is-link" href="#general-settings">
@@ -13058,19 +13058,19 @@ Apostrophes are used to declare keys and values in object, and therefore are res
   
 </h4>
 <p>Domain URL (string) : Must contain the URL of the domain where the dataset is published.</p>
-<pre tabindex="0"><code>domain = &#39;userclub.opendatasoft.com&#39;;
+<pre tabindex="0"><code>domain = 'userclub.opendatasoft.com';
 </code></pre><h4 class="title" id="datasetid">
   <code>datasetid</code>
   
 </h4>
 <p>Dataset ID (string) : Must contain the ID of the dataset</p>
-<pre tabindex="0"><code>datasetid = &#39;oeuvres-de-johannes-vermeer&#39;;
+<pre tabindex="0"><code>datasetid = 'oeuvres-de-johannes-vermeer';
 </code></pre><h4 class="title" id="sort">
   <code>sort</code>
   
 </h4>
 <p>Sort (string) : a sort parameter</p>
-<pre tabindex="0"><code>sort = &#39;-date&#39;;
+<pre tabindex="0"><code>sort = '-date';
 </code></pre><p><strong>Note:</strong> The field must be sortable (numeric,date,facet or sortable text field)</p>
 <h2 class="title" id="filters-settings">
   Filters settings
@@ -13094,8 +13094,8 @@ Parameters are :</p>
 <p><strong>Note :</strong> The field must be a facet in the dataset<br>
 <strong>Note :</strong> Alphanumerical sort is applied in the filter view</p>
 <pre tabindex="0"><code>filters = [
-              {&#39;id&#39;:&#39;filterid&#39;,&#39;multiple&#39;:true},
-              {&#39;id&#39;:&#39;filterid2&#39;,&#39;multiple&#39;:false,&#39;label&#39;:&#39;ID of the filter&#39;}
+              {'id':'filterid','multiple':true},
+              {'id':'filterid2','multiple':false,'label':'ID of the filter'}
            ];
 </code></pre><h4 class="title" id="resetfiltersbutton">
   <code>resetFiltersButton</code>
@@ -13108,7 +13108,7 @@ Parameters are :</p>
   
 </h4>
 <p>resetFiltersButtonLabel (string) : label of the reset filters button</p>
-<pre tabindex="0"><code>resetFiltersButtonLabel = &#39;Clear all filters&#39;;
+<pre tabindex="0"><code>resetFiltersButtonLabel = 'Clear all filters';
 </code></pre><h2 class="title" id="date-settings">
   Date settings
   
@@ -13122,7 +13122,7 @@ Parameters are :</p>
   
 </h4>
 <p>fieldDate (string) : a date field to display a date-range-slider</p>
-<pre tabindex="0"><code>fieldDate = &#39;date&#39;;
+<pre tabindex="0"><code>fieldDate = 'date';
 </code></pre><h4 class="title" id="resetfiltersbutton-1">
   <code>resetFiltersButton</code>
   
@@ -13152,13 +13152,13 @@ Parameters are :</p>
   
 </h4>
 <p>view (string) : Type of the view to list results, can be <code>table</code> or <code>cards</code></p>
-<pre tabindex="0"><code>view = &#39;cards&#39;;
+<pre tabindex="0"><code>view = 'cards';
 </code></pre><h4 class="title" id="noresultmsg-only-available-if-view-is-set-to-cards">
   <code>noResultMsg</code> (only available if <code>view</code> is set to <code>cards</code>)
   
 </h4>
 <p>noResultMsg (string) : the message to display if no results</p>
-<pre tabindex="0"><code>noResultMsg = &#39;No more results.&#39;;
+<pre tabindex="0"><code>noResultMsg = 'No more results.';
 </code></pre><h4 class="title" id="fieldslist">
   <code>fieldsList</code>
   
@@ -13168,7 +13168,7 @@ Parameters are :</p>
   Simple mode : can be an array of field IDs
   
 </h5>
-<pre tabindex="0"><code>fieldsList = [&#39;title&#39;,&#39;category&#39;,&#39;genre&#39;,&#39;date&#39;];
+<pre tabindex="0"><code>fieldsList = ['title','category','genre','date'];
 </code></pre><h5 class="title" id="advanced-mode--can-be-an-array-of-object">
   Advanced mode : can be an array of object.
   
@@ -13176,7 +13176,7 @@ Parameters are :</p>
 <p>Each object describes the field format and provide optional options.</p>
 <ul>
 <li><code>field</code> (string) : mandatory, the ID of te field</li>
-<li><code>format</code> (string) : optional, can be &lsquo;date&rsquo; or &rsquo;number&rsquo;</li>
+<li><code>format</code> (string) : optional, can be &lsquo;date&rsquo; or &lsquo;number&rsquo;</li>
 <li><code>options</code> (string) : optional, format options
 <ul>
 <li>for <code>number</code> format :
@@ -13201,48 +13201,48 @@ Parameters are :</p>
 </li>
 </ul>
 <pre tabindex="0"><code>fieldsList = [
-                {&#39;field&#39;:&#39;address&#39;},
-                {&#39;field&#39;:&#39;city&#39;},
-                {&#39;field&#39;:&#39;price&#39;, &#39;format&#39;:&#39;number&#39;, &#39;options&#39;: {&#39;precision&#39;:1, &#39;unit&#39;:&#39;$&#39;}},
-                {&#39;field&#39;:&#39;date_start&#39;,&#39;format&#39;:&#39;date&#39;},
-                {&#39;field&#39;:&#39;date_end&#39;,&#39;format&#39;:&#39;date&#39;, &#39;options&#39;: {&#39;dateFormat&#39;:&#39;longDate&#39;}}
+                {'field':'address'},
+                {'field':'city'},
+                {'field':'price', 'format':'number', 'options': {'precision':1, 'unit':'$'}},
+                {'field':'date_start','format':'date'},
+                {'field':'date_end','format':'date', 'options': {'dateFormat':'longDate'}}
               ];
 </code></pre><h4 class="title" id="fieldlink">
   <code>fieldLink</code>
   
 </h4>
 <p>fieldLink (string) : the field ID of external resource as a web URL</p>
-<pre tabindex="0"><code>link = &#39;urlfield&#39;;
+<pre tabindex="0"><code>link = 'urlfield';
 </code></pre><h4 class="title" id="fieldlinklabel">
   <code>fieldLinkLabel</code>
   
 </h4>
 <p>fieldLinkLabel (string) : Label of the external resource link</p>
-<pre tabindex="0"><code>fieldLinkLabel = &#39;Read more here&#39;;
+<pre tabindex="0"><code>fieldLinkLabel = 'Read more here';
 </code></pre><h4 class="title" id="cardtitle-only-available-if-view-is-set-to-cards">
   <code>cardTitle</code> (only available if <code>view</code> is set to <code>cards</code>)
   
 </h4>
 <p>cardTitle (string) : id of the field used as a title of the card</p>
-<pre tabindex="0"><code>cardTitle = &#39;title&#39;;
+<pre tabindex="0"><code>cardTitle = 'title';
 </code></pre><h4 class="title" id="fieldphoto-only-available-if-view-is-set-to-cards">
   <code>fieldPhoto</code> (only available if <code>view</code> is set to <code>cards</code>)
   
 </h4>
 <p>fieldPhoto (string) : (Field id of the image field if any)</p>
-<pre tabindex="0"><code>fieldPhoto = &#39;image&#39;;
+<pre tabindex="0"><code>fieldPhoto = 'image';
 </code></pre><h4 class="title" id="imageposition-only-available-if-view-is-set-to-cards">
   <code>imagePosition</code> (only available if <code>view</code> is set to <code>cards</code>)
   
 </h4>
-<p>imagePosition (string) : (Image position) : Image position in the card, can be &rsquo;top&rsquo; or &rsquo;left'</p>
-<pre tabindex="0"><code>imagePosition = &#39;left&#39;;
+<p>imagePosition (string) : (Image position) : Image position in the card, can be &lsquo;top&rsquo; or &lsquo;left&rsquo;</p>
+<pre tabindex="0"><code>imagePosition = 'left';
 </code></pre><h4 class="title" id="itemsperrow">
   <code>itemsPerRow</code>
   
 </h4>
 <p>itemsPerRow (string) : number of columns in the cards and KPI layout, must be a 12 multiple (1, 2, 3, 4, 6 or 12).</p>
-<pre tabindex="0"><code>itemsPerRow = &#39;3&#39;;
+<pre tabindex="0"><code>itemsPerRow = '3';
 </code></pre><h2 class="title" id="kpi-settings">
   KPI Settings
   
@@ -13264,15 +13264,15 @@ Available options are :</p>
 <p><a href="https://fontawesome.com/v4.7.0/icons/">Please see all available Fontawesome icons here</a></p>
 <pre tabindex="0"><code>kpis = [
             {
-                &#39;title&#39;: &#39;Taille moyenne&#39;,
-                &#39;select&#39;: &#39;avg(surface),
-                &#39;precision&#39;: 2,
-                &#39;unit&#39;: &#39;m2&#39;,
-                &#39;faicon&#39;: &#39;square-o&#39;
+                'title': 'Taille moyenne',
+                'select': 'avg(surface),
+                'precision': 2,
+                'unit': 'm2',
+                'faicon': 'square-o'
             },
             {
-                &#39;title&#39;: &#39;Nombre d\&#39;oeuvre référencées&#39;,
-                &#39;select&#39;: &#39;count(*)&#39;
+                'title': 'Nombre d\'oeuvre référencées',
+                'select': 'count(*)'
             }
          ];
 </code></pre><h4 class="title" id="sourcelinklabel">
@@ -13280,7 +13280,7 @@ Available options are :</p>
   
 </h4>
 <p>sourceLinkLabel (string) : the label of the &lsquo;access to source&rsquo; link</p>
-<pre tabindex="0"><code>sourceLinkLabel = &#39;Direct access to the data&#39;;
+<pre tabindex="0"><code>sourceLinkLabel = 'Direct access to the data';
 </code></pre>
             </div>
             
@@ -13375,7 +13375,7 @@ See the documentation for more details.</li>
     </script>
     <script
       type="text/javascript"
-      src="/index.min.79f95ac0c5f804431feb615d882ccd72301607008a5a6724a6bb192688fbc0ea.js"
+      src="/index.min.74a25f16f7afdecec13e30f9213231fc17c3a57e51c51b7847f29a9d1f8a8037.js"
       defer
     ></script>
   </body>

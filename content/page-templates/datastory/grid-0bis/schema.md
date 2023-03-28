@@ -2,7 +2,7 @@
 
 **Fields in use:**
 
-|department|region|date_start (date)|
+|location_department|location_region|firstdate_begin (date)|
 |---|---|---|
 |||2020-05-12|
 |Loiret|Centre-Val de Loire|2020-09-20|
