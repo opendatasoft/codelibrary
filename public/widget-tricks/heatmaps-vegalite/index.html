@@ -39,9 +39,9 @@
 
     
     <link rel="stylesheet" type="text/css" href="/scss/main.css" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="shortcut icon" href="/favicon.ico" />
+    
+    
+    <link rel="shortcut icon" href="/ods-favicon.ico" />
   </head>
 
   <body>
@@ -73,69 +73,88 @@
 
     </div>
 
-    <nav class="navbar is-fixed-top"
+    <nav class="ods-header navbar is-fixed-top"
      role="navigation"
      aria-label="Main navigation">
-    <div class="navbar-brand">
-        <button class="navbar-burger burger"
-                type="button"
-                data-target="sidebarNavbar"
-                aria-controls="sidebarNavbar"
-                aria-expanded="false"
-                aria-label="Main menu">
-            Menu
-        </button>
-        <a class="navbar-item"
-           href="/"
-           title="Back to the homepage">
-            <img src="/img/ods-logo-helphub.svg"
-                 alt="Helphub Logo"/>
+
+   <button type="button"
+           class="menu-button navbar-burger burger"
+           id="nav-button"
+           data-target="sidebarNavbar"
+           aria-controls="sidebarNavbar"
+           aria-expanded="false"
+           aria-label="Main menu">
+        <img class="ods-header__menu-toggle__openlogo" src="/img/menu-fill.svg" alt="Open documentation menu">
+    </button>
+
+    <a class="ods-header-logo ods-header-logo-link"
+       href="https://help.opendatasoft.com/">
+        <img src="/img/ods-logo-noir.svg" alt="Opendatasoft logo">
+        <span class="ods-header__brandname">
+           Help Center
+        </span>
+    </a>
+
+    <div class="ods-header__nav">
+        <a class="ods-header__nav-item-link"
+           href="https://userguide.opendatasoft.com/">
+            User guide
         </a>
-        <button class="navbar-burger burger"
-                type="button"
-                data-target="helphubNavbar"
-                aria-controls="helphubNavbar"
-                aria-expanded="false"
-                aria-label="Help Hub Menu">
-            Help Hub
-        </button>
+        <a class="ods-header__nav-item-link"
+           href="https://academy.opendatasoft.com/page/homepage">
+            Academy
+        </a>
+        <a class="ods-header__nav-item-link is-active"
+           href="https://codelibrary.opendatasoft.com">
+            Code Library
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://help.opendatasoft.com/widgets/">
+            Widgets
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://help.opendatasoft.com/en/apis/">
+            APIs
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://changes.opendatasoft.com/en">
+            Release Notes
+        </a>
     </div>
-    <div class="navbar-menu"
-         id="helphubNavbar">
-        <div class="navbar-start">
-            <a class="navbar-item"
-               href="https://help.opendatasoft.com/">
-                Help Hub
-            </a>
-            <a class="navbar-item"
-               href="https://help.opendatasoft.com/platform/en/">
-                User guide
-            </a>
-            <a class="navbar-item is-active"
-               href="https://codelibrary.opendatasoft.com">
-                Code Library
-            </a>
-            <a class="navbar-item"
-               href="https://help.opendatasoft.com/faq-glossary/en/">
-                FAQ
-            </a>
-            <a class="navbar-item"
-               href="https://help.opendatasoft.com/widgets/">
-                Widgets
-            </a>
-            <a class="navbar-item"
-               href="https://help.opendatasoft.com/en/apis/">
-                APIs
-            </a>
-            <a class="navbar-item"
-               href="https://academy.opendatasoft.com/page/homepage">
-                Academy
-            </a>
-            <a class="navbar-item"
-               href="https://documentation-resources.opendatasoft.com/pages/release-notes/?headless=true">
-                Release Notes
-            </a>
-        </div>
+    <button type="button"
+            class="menu-button navbar-burger burger"
+            id="nav-button"
+            data-target="helphubNavbar"
+            aria-controls="helphubNavbar"
+            aria-expanded="false"
+            aria-label="Main menu">
+        <img class="ods-header__menu-toggle__openlogo" src="/img/apps-custo.svg" alt="Open documentation menu">
+    </button>
+    <div class="navbar-menu" id="helphubNavbar">
+        <a class="ods-header__nav-item-link"
+           href="https://userguide.opendatasoft.com/">
+            User guide
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://academy.opendatasoft.com/page/homepage">
+            Academy
+        </a>
+        <a class="ods-header__nav-item-link is-active"
+           href="https://codelibrary.opendatasoft.com">
+            Code Library
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://help.opendatasoft.com/widgets/">
+            Widgets
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://help.opendatasoft.com/en/apis/">
+            APIs
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://changes.opendatasoft.com/en">
+            Release Notes
+        </a>
     </div>
 </nav>
 
@@ -253,6 +272,12 @@
       
       
       
+      
+      
+      
+      
+      
+      
       <li>
         <a href="/components/"
         class="sidebar-subtitle">
@@ -274,6 +299,9 @@
       
       
       
+      
+      
+      
       <li>
         <a href="/custom-views/"
         class="sidebar-subtitle">
@@ -283,6 +311,9 @@
     </li>
     
     
+      
+      
+      
       
       
       
@@ -355,10 +386,21 @@
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
       <li>
         <a href="/page-templates/"
         class="sidebar-subtitle">
         Page templates
+        
+        <span class="tag pill is-size-7 is-rounded is-info">2</span>
         
       </a>
     </li>
@@ -394,6 +436,26 @@
           Widget tricks
         </a>
         <ul>
+          
+          <li>
+            <a class="" href="/widget-tricks/age-pyramid-custom/">
+              <div>
+                Age Pyramid with custom HTML/CSS
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/widget-tricks/age-pyramid-vegalite/">
+              <div>
+                Age Pyramid with Vega-Lite
+                
+                
+              </div>
+            </a>
+          </li>
           
           <li>
             <a class="" href="/widget-tricks/animation/">
@@ -486,6 +548,16 @@
           </li>
           
           <li>
+            <a class="" href="/widget-tricks/ods-adv-analysis/">
+              <div>
+                ods-adv-analysis
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
             <a class="" href="/widget-tricks/ods-aggregation/">
               <div>
                 ods-aggregation
@@ -511,10 +583,6 @@
                 ods-chart: CSS Hacks
                 
                 
-                <span class="tag pill is-size-7 is-rounded is-info">
-                  1
-                </span>
-                
               </div>
             </a>
           </li>
@@ -534,10 +602,6 @@
               <div>
                 ods-color-gradient &#43; ods-map : a choropleth alternative
                 
-                
-                <span class="tag pill is-size-7 is-rounded is-info">
-                  4
-                </span>
                 
               </div>
             </a>
@@ -614,20 +678,6 @@
           </li>
           
           <li>
-            <a class="" href="/widget-tricks/ods-table-fixed-col/">
-              <div>
-                ods-table: Fixed column
-                
-                
-                <span class="tag pill is-size-7 is-rounded is-info">
-                  1
-                </span>
-                
-              </div>
-            </a>
-          </li>
-          
-          <li>
             <a class="" href="/widget-tricks/share-print/">
               <div>
                 Share and print
@@ -659,6 +709,10 @@
     
     <a class="tag" href="/tags/aggregation/">
       aggregation
+    </a>
+    
+    <a class="tag" href="/tags/card/">
+      card
     </a>
     
     <a class="tag" href="/tags/chart/">
@@ -693,6 +747,10 @@
       navigation
     </a>
     
+    <a class="tag" href="/tags/ods-adv-analysis/">
+      ods-adv-analysis
+    </a>
+    
     <a class="tag" href="/tags/ods-aggregation/">
       ods-aggregation
     </a>
@@ -705,6 +763,14 @@
       ods-maps
     </a>
     
+    <a class="tag" href="/tags/ods-subaggregation/">
+      ods-subaggregation
+    </a>
+    
+    <a class="tag" href="/tags/redirection/">
+      redirection
+    </a>
+    
   </div>
 </div>
 </aside>
@@ -713,10 +779,10 @@
       <div class="column codelibrary-content">
         
 <section class="section resources">
-  <div class="container is-max-widescreen">
-    <h1 class="title is-1">Widget Tricks - Heatmaps with Vega-Lite</h1>
-    <div class="content">
-      <p><strong>Vega-Lite</strong> is a high-level grammar of interactive graphics. It provides a concise, declarative JSON syntax to create an expressive range of visualizations for data analysis and presentation.</p>
+    <div class="container is-max-widescreen">
+        <h1 class="title is-1">Widget Tricks - Heatmaps with Vega-Lite</h1>
+        <div class="content">
+            <p><strong>Vega-Lite</strong> is a high-level grammar of interactive graphics. It provides a concise, declarative JSON syntax to create an expressive range of visualizations for data analysis and presentation.</p>
 <p><a href="https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsVegaLiteChart">ods-vega-lite-chart</a> widget, in combinaison with <code>ods-adv-analysis</code> to get the data, allows adding Vega-Lite charts into your pages.</p>
 <p>This first resource is an introduction and pre-requisite to understand key concepts of Vega-Lite within ODS.</p>
 <blockquote>
@@ -724,23 +790,23 @@
 <a href="https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsAdvAnalysis">Documentation available here</a></p>
 </blockquote>
 
-    </div>
-    
-    <article class="block">
-      <h2 class="title is-2" id="vega-lite-presentation">
-        Vega-Lite presentation 
-        <a class="is-link anchor" href="#vega-lite-presentation">
-          <span class="icon">
-            <img src="/img/fas-link.svg" />
-          </span>
-        </a>
-      </h2>
-      <div class="content">
-        <h4 class="title" id="vega-lite-works-with-a-json-block-that-contains-the-entire-description-of-the-chart-it-looks-like-this">
+        </div>
+        
+        <article class="block">
+            <h2 class="title is-2" id="vega-lite-presentation">
+                Vega-Lite presentation 
+                <a class="is-link anchor" href="#vega-lite-presentation">
+            <span class="icon">
+              <img src="/img/fas-link.svg"/>
+            </span>
+                </a>
+            </h2>
+            <div class="content">
+                <h4 class="title" id="vega-lite-works-with-a-json-block-that-contains-the-entire-description-of-the-chart-it-looks-like-this">
   Vega-Lite works with a json block that contains the entire description of the chart. It looks like this:
   
 </h4>
-<pre><code>{
+<pre tabindex="0"><code>{
     '$schema': 'https://vega.github.io/schema/vega-lite/v2.json',
     'data': {
         'name': 'data'
@@ -768,7 +834,7 @@
   
 </h4>
 <p>An example of minimal encoding for an heatmap :</p>
-<pre><code>'encoding': {
+<pre tabindex="0"><code>'encoding': {
         'y': {
             'field': 'date',
             'timeUnit': 'month',
@@ -805,7 +871,7 @@ See other <a href="https://vega.github.io/vega-lite-v2/docs/type.html">encoding 
   Global configuration
   
 </h4>
-<pre><code>'config': {
+<pre tabindex="0"><code>'config': {
         'view': {
             'stroke': 'transparent',
             'strokeWidth': 0
@@ -823,10 +889,11 @@ Here <code>grid: true</code> set a grid canvas with X and Y lines.
 <code>domain: false</code> remove the baseline between the visualization and the axis legends.
 <a href="https://vega.github.io/vega-lite-v2/docs/config.html">See the documentation for more personalization</a></p>
 
-      </div>
-      
-      <div class="box">
-        
+            </div>
+            
+            
+                <div class="box">
+                    
 
 
 
@@ -834,6 +901,14 @@ Here <code>grid: true</code> set a grid canvas with X and Y lines.
 
 
     
+
+
+
+
+    
+
+
+
 
 
 
@@ -847,7 +922,7 @@ Here <code>grid: true</code> set a grid canvas with X and Y lines.
                name="data"
                value='{
                  "title": "New Pen!",
-                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
                  "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;container\&#34;\u003e\n    \u003ch3\u003eAll together\u003c/h3\u003e\n    \u003cdiv class=\&#34;row\&#34;\u003e\n        \u003cdiv class=\&#34;col-md-5\&#34;\u003e\n        \u003cpre\u003e\u003ccode\u003e{\n    &#39;$schema&#39;: &#39;https://vega.github.io/schema/vega-lite/v2.json&#39;,\n    &#39;data&#39;: {\n        &#39;name&#39;: &#39;data&#39;\n    },\n    &#39;height&#39;: 300,\n    &#39;mark&#39;: &#39;rect&#39;,\n    &#39;encoding&#39;: {\n        &#39;y&#39;: {\n            &#39;field&#39;: &#39;date&#39;,\n            &#39;timeUnit&#39;: &#39;month&#39;,\n            &#39;type&#39;: &#39;ordinal&#39;,\n        },\n        &#39;x&#39;: {\n            &#39;field&#39;: &#39;date&#39;,\n            &#39;timeUnit&#39;: &#39;date&#39;,\n            &#39;type&#39;: &#39;ordinal&#39;,\n        },\n        &#39;color&#39;: {\n            &#39;field&#39;: &#39;count&#39;,\n            &#39;aggregate&#39;: &#39;sum&#39;,\n            &#39;type&#39;: &#39;quantitative&#39;\n        }\n    }\n}\u003c/code\u003e\u003c/pre\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;col-md-7\&#34;\u003e\n            \u003cods-dataset-context context=\&#34;datum\&#34;\n                                 datum-dataset=\&#34;comptage-velo-donnees-compteurs\&#34;\u003e\n                \u003ch4\u003eCounting of cyclists by month and day. Analysis of the trend.\u003c/h4\u003e\n                \u003cdiv ods-adv-analysis=\&#34;myData\&#34;\n                     ods-adv-analysis-context=\&#34;datum\&#34;\n                     ods-adv-analysis-select=\&#34;sum(sum_counts) as count\&#34;\n                     ods-adv-analysis-group-by=\&#34;date_format(date,&#39;YYYY-MM-dd&#39;) as date\&#34;\u003e\n                    \u003cods-vega-lite-chart spec=\&#34;{\n    &#39;$schema&#39;: &#39;https://vega.github.io/schema/vega-lite/v2.json&#39;,\n    &#39;data&#39;: {\n        &#39;name&#39;: &#39;data&#39;\n    },\n    &#39;height&#39;: 300,\n    &#39;mark&#39;: &#39;rect&#39;,\n    &#39;encoding&#39;: {\n        &#39;y&#39;: {\n            &#39;field&#39;: &#39;date&#39;,\n            &#39;timeUnit&#39;: &#39;month&#39;,\n            &#39;type&#39;: &#39;ordinal&#39;,\n        },\n        &#39;x&#39;: {\n            &#39;field&#39;: &#39;date&#39;,\n            &#39;timeUnit&#39;: &#39;date&#39;,\n            &#39;type&#39;: &#39;ordinal&#39;,\n        },\n        &#39;color&#39;: {\n            &#39;field&#39;: &#39;count&#39;,\n            &#39;aggregate&#39;: &#39;sum&#39;,\n            &#39;type&#39;: &#39;quantitative&#39;\n        }\n    }\n}\&#34;\n                                         values-data=\&#34;myData\&#34;\u003e\u003c/ods-vega-lite-chart\u003e\n                \u003c/div\u003e\n            \u003c/ods-dataset-context\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n    \u003ch3\u003eWith optional config, titles and custom scale colors\u003c/h3\u003e\n    \u003cdiv class=\&#34;row\&#34;\u003e\n        \u003cdiv class=\&#34;col-md-5\&#34;\u003e\n        \u003cpre\u003e\u003ccode\u003e{\n    &#39;$schema&#39;: &#39;https://vega.github.io/schema/vega-lite/v2.json&#39;,\n    &#39;data&#39;: {\n        &#39;name&#39;: &#39;data&#39;\n    },\n    &#39;height&#39;: 300,\n    &#39;config&#39;: {\n        &#39;view&#39;: {\n            &#39;stroke&#39;: &#39;transparent&#39;,\n            &#39;strokeWidth&#39;: 0\n        },\n        &#39;axis&#39;: {\n            &#39;grid&#39;: true,\n            &#39;domain&#39;: false,\n            &#39;labelFontSize&#39;:14,\n            &#39;labelFont&#39;:&#39;Roboto, Helvetica, Arial, sans-serif&#39;\n        }\n    },\n    &#39;mark&#39;: &#39;rect&#39;,\n    &#39;encoding&#39;: {\n        &#39;y&#39;: {\n            &#39;field&#39;: &#39;date&#39;,\n            &#39;timeUnit&#39;: &#39;month&#39;,\n            &#39;type&#39;: &#39;ordinal&#39;,\n            &#39;title&#39;: &#39;Month&#39;\n        },\n        &#39;x&#39;: {\n            &#39;field&#39;: &#39;date&#39;,\n            &#39;timeUnit&#39;: &#39;date&#39;,\n            &#39;type&#39;: &#39;ordinal&#39;,\n            &#39;title&#39;: &#39;Day&#39;\n        },\n        &#39;color&#39;: {\n            &#39;title&#39;: &#39;Nombre de passages&#39;,\n            &#39;field&#39;: &#39;count&#39;,\n            &#39;aggregate&#39;: &#39;sum&#39;,\n            &#39;type&#39;: &#39;quantitative&#39;,\n            &#39;scale&#39;: {\n                &#39;scheme&#39;: &#39;yellowgreenblue&#39;,\n            },\n            &#39;legend&#39;: {\n                &#39;title&#39;: null\n            }\n        }\n    }\n}\u003c/code\u003e\u003c/pre\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;col-md-7\&#34;\u003e\n            \u003cods-dataset-context context=\&#34;datum\&#34;\n                                 datum-dataset=\&#34;comptage-velo-donnees-compteurs\&#34;\u003e\n                \u003ch4\u003eCounting of cyclists by month and day. Analysis of the trend.\u003c/h4\u003e\n                \u003cdiv ods-adv-analysis=\&#34;myData\&#34;\n                     ods-adv-analysis-context=\&#34;datum\&#34;\n                     ods-adv-analysis-select=\&#34;sum(sum_counts) as count\&#34;\n                     ods-adv-analysis-group-by=\&#34;date_format(date,&#39;YYYY-MM-dd&#39;) as date\&#34;\u003e\n                    \u003cods-vega-lite-chart spec=\&#34;{\n    &#39;$schema&#39;: &#39;https://vega.github.io/schema/vega-lite/v2.json&#39;,\n    &#39;data&#39;: {\n        &#39;name&#39;: &#39;data&#39;\n    },\n    &#39;height&#39;: 300,\n    &#39;config&#39;: {\n        &#39;view&#39;: {\n            &#39;stroke&#39;: &#39;transparent&#39;,\n            &#39;strokeWidth&#39;: 0\n        },\n        &#39;axis&#39;: {\n            &#39;grid&#39;: true,\n            &#39;domain&#39;: false,\n            &#39;labelFontSize&#39;:14,\n            &#39;labelFont&#39;:&#39;Roboto, Helvetica, Arial, sans-serif&#39;\n        }\n    },\n    &#39;mark&#39;: &#39;rect&#39;,\n    &#39;encoding&#39;: {\n        &#39;y&#39;: {\n            &#39;field&#39;: &#39;date&#39;,\n            &#39;timeUnit&#39;: &#39;month&#39;,\n            &#39;type&#39;: &#39;ordinal&#39;,\n            &#39;title&#39;: &#39;Month&#39;,\n            &#39;format&#39;: &#39;%e&#39;\n        },\n        &#39;x&#39;: {\n            &#39;field&#39;: &#39;date&#39;,\n            &#39;timeUnit&#39;: &#39;date&#39;,\n            &#39;type&#39;: &#39;ordinal&#39;,\n            &#39;title&#39;: &#39;Day&#39;\n        },\n        &#39;color&#39;: {\n            &#39;title&#39;: &#39;Number of cyclists&#39;,\n            &#39;field&#39;: &#39;count&#39;,\n            &#39;aggregate&#39;: &#39;sum&#39;,\n            &#39;type&#39;: &#39;quantitative&#39;,\n            &#39;scale&#39;: {\n                &#39;scheme&#39;: &#39;purples&#39;,\n            },\n            &#39;legend&#39;: {\n                &#39;title&#39;: null\n            }\n        }\n    }\n}\&#34;\n                                         values-data=\&#34;myData\&#34;\u003e\u003c/ods-vega-lite-chart\u003e\n                \u003c/div\u003e\n            \u003c/ods-dataset-context\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
                  "css": &#34;&#34;
@@ -861,7 +936,8 @@ Here <code>grid: true</code> set a grid canvas with X and Y lines.
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
-                <head>&lt;link
+                <head>
+                    &lt;link
   rel=&#34;stylesheet&#34;
   href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
 /&gt;
@@ -905,6 +981,7 @@ Here <code>grid: true</code> set a grid canvas with X and Y lines.
   const sourceMonitoringInterceptor = $q =&gt; {
     return {
       request: config =&gt; {
+        console.log(config.url);
         if (config.params)
           if (config.params.source) delete config.params.source;
 
@@ -1015,7 +1092,9 @@ Here <code>grid: true</code> set a grid canvas with X and Y lines.
       $httpProvider.interceptors.push(sourceMonitoringInterceptor);
     });
 &lt;/script&gt;
-</head>
+
+                    
+                </head>
                 <base href='https://userclub.opendatasoft.com/'>
                 <body>
                 <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
@@ -1204,8 +1283,16 @@ Here <code>grid: true</code> set a grid canvas with X and Y lines.
                 </body>
               ">
       </iframe>
-      <div class="show-code buttons has-addons">
-          <button class="button is-light">
+      <div class="buttons has-addons">
+          
+              <button id="tab-show-schema" aria-controls="panel-show-schema"
+                      class="show-schema button is-light"
+                      title="Show the data schema of the dataset used in this resource">
+                  <span>See fields in use</span>
+              </button>
+          
+          <button id="tab-show-code" aria-controls="panel-show-code"
+                  class="show-code button is-light">
             <span>Show code</span>
           </button>
           <button class="button is-light"
@@ -1223,7 +1310,44 @@ Here <code>grid: true</code> set a grid canvas with X and Y lines.
           </button>
       </div>
     </div>
-    <div class="box-code js-tabs is-hidden">
+    
+        <div id="panel-show-schema" aria-labelledby="tab-show-schema" aria-hidden
+             class="box-schema is-hidden">
+            <div class="content">
+                <p><strong>Dataset in use:</strong> <code>comptage-velo-donnees-compteurs</code> <a href="https://userclub.opendatasoft.com/explore/dataset/comptage-velo-donnees-compteurs/table/">(See it on userclub domain)</a></p>
+<p><strong>Fields in use:</strong></p>
+<table>
+<thead>
+<tr>
+<th>date (datetime)</th>
+<th>sum_counts (numeric)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2020-10-01T04:00:00+02:00</td>
+<td>70</td>
+</tr>
+<tr>
+<td>2021-01-30T06:00:00+02:00</td>
+<td>15</td>
+</tr>
+<tr>
+<td>2020-12-01T13:00:00+02:00</td>
+<td>22</td>
+</tr>
+<tr>
+<td>2021-04-22T22:00:00+02:00</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+        </div>
+    
+    <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
+         class="box-code js-tabs is-hidden">
         <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
@@ -1633,33 +1757,33 @@ Here <code>grid: true</code> set a grid canvas with X and Y lines.
     </div>
 </div>
 
-      </div>
-    </article>
-    
-    <article class="block">
-      <h2 class="title is-2" id="heatmap-with-linear-scale">
-        Heatmap: with linear scale 
-        <span class="tag is-rounded is-info">New</span>
+                </div>
+            
+        </article>
         
-        <a class="is-link anchor" href="#heatmap-with-linear-scale">
-          <span class="icon">
-            <img src="/img/fas-link.svg" />
-          </span>
-        </a>
-      </h2>
-      <div class="content">
-        <p>The default scale is linear. It can get additional properties like the scheme. All available scale colors (schemes) can be found in the <a href="https://vega.github.io/vega/docs/schemes/#scheme-properties">scheme documentation</a>.</p>
-<pre><code class="language-json5" data-lang="json5">'color': 
+        <article class="block">
+            <h2 class="title is-2" id="heatmap-with-linear-scale">
+                Heatmap: with linear scale 
+                <a class="is-link anchor" href="#heatmap-with-linear-scale">
+            <span class="icon">
+              <img src="/img/fas-link.svg"/>
+            </span>
+                </a>
+            </h2>
+            <div class="content">
+                <p>The default scale is linear. It can get additional properties like the scheme. All available scale colors (schemes) can be found in the <a href="https://vega.github.io/vega/docs/schemes/#scheme-properties">scheme documentation</a>.</p>
+<pre tabindex="0"><code class="language-json5" data-lang="json5">'color': 
     'scale': {
         'scheme': 'blueorange',
         ...
     },
     ...
 </code></pre>
-      </div>
-      
-      <div class="box">
-        
+            </div>
+            
+            
+                <div class="box">
+                    
 
 
 
@@ -1667,6 +1791,14 @@ Here <code>grid: true</code> set a grid canvas with X and Y lines.
 
 
     
+
+
+
+
+    
+
+
+
 
 
 
@@ -1680,7 +1812,7 @@ Here <code>grid: true</code> set a grid canvas with X and Y lines.
                name="data"
                value='{
                  "title": "New Pen!",
-                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
                  "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;container\&#34;\u003e\n    \u003cods-dataset-context context=\&#34;datum\&#34;\n                         datum-dataset=\&#34;observation-synop\&#34;\u003e\n        \u003cdiv ods-adv-analysis=\&#34;myData\&#34;\n             ods-adv-analysis-context=\&#34;datum\&#34;\n             ods-adv-analysis-select=\&#34;avg(t) as count\&#34;\n             ods-adv-analysis-group-by=\&#34;date_format(date,&#39;YYYY-MM-dd&#39;) as date\&#34;\u003e\n\n            \u003cdiv class=\&#34;row\&#34;\u003e\n                \u003cdiv class=\&#34;col-md-6\&#34;\u003e\n                    \u003cp\u003e\n                        Years by months, default (linear) scale, blueorange color scheme, mean temperature\n                    \u003c/p\u003e\n                    \u003cods-vega-lite-chart spec=\&#34;{\n&#39;$schema&#39;: &#39;https://vega.github.io/schema/vega-lite/v2.json&#39;,\n&#39;data&#39;: {\n    &#39;name&#39;: &#39;data&#39;\n},\n&#39;height&#39;: 400,\n&#39;config&#39;: {\n    &#39;view&#39;: {\n        &#39;stroke&#39;: &#39;transparent&#39;,\n        &#39;strokeWidth&#39;: 0,\n        &#39;binSpacing&#39;: 2,\n    },\n    &#39;axis&#39;: {\n        &#39;grid&#39;: true,\n        &#39;domain&#39;: false,\n        &#39;labelFontSize&#39;:14,\n        &#39;labelFont&#39;:&#39;Roboto, Helvetica, Arial, sans-serif&#39;\n    }\n},\n&#39;mark&#39;: {\n    &#39;type&#39;: &#39;rect&#39;,\n    &#39;binSpacing&#39;: 5,\n},\n&#39;encoding&#39;: {\n    &#39;y&#39;: {\n        &#39;field&#39;: &#39;date&#39;,\n        &#39;timeUnit&#39;: &#39;year&#39;,\n        &#39;type&#39;: &#39;ordinal&#39;,\n        &#39;title&#39;: &#39;Year&#39;\n    },\n    &#39;x&#39;: {\n        &#39;field&#39;: &#39;date&#39;,\n        &#39;timeUnit&#39;: &#39;month&#39;,\n        &#39;type&#39;: &#39;ordinal&#39;,\n        &#39;title&#39;: &#39;Month&#39;,\n        &#39;axis&#39;: {\n           &#39;labelAngle&#39;: 290\n        }\n    },\n    &#39;color&#39;: {\n        &#39;title&#39;: &#39;Average temperature (K)&#39;,\n        &#39;field&#39;: &#39;count&#39;,\n        &#39;aggregate&#39;: &#39;mean&#39;,\n        &#39;type&#39;: &#39;quantitative&#39;,\n        scale: {\n            &#39;scheme&#39;: &#39;blueorange&#39;\n        },\n        &#39;legend&#39;: {\n            &#39;format&#39;:&#39;.0f&#39;,\n            &#39;title&#39;: null\n        }\n    }\n}\n}\&#34;\n                                         values-data=\&#34;myData\&#34;\u003e\u003c/ods-vega-lite-chart\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;col-md-6\&#34;\u003e\n                    \u003cp\u003e\n                        Months by days, default (linear) scale, mean temperature\n                    \u003c/p\u003e\n                    \u003cods-vega-lite-chart spec=\&#34;{\n&#39;$schema&#39;: &#39;https://vega.github.io/schema/vega-lite/v2.json&#39;,\n&#39;data&#39;: {\n    &#39;name&#39;: &#39;data&#39;\n},\n&#39;height&#39;: 400,\n&#39;config&#39;: {\n    &#39;view&#39;: {\n        &#39;stroke&#39;: &#39;transparent&#39;,\n        &#39;strokeWidth&#39;: 0\n    },\n    &#39;axis&#39;: {\n        &#39;grid&#39;: true,\n        &#39;domain&#39;: false,\n        &#39;labelFontSize&#39;:14,\n        &#39;labelFont&#39;:&#39;Roboto, Helvetica, Arial, sans-serif&#39;\n    }\n},\n&#39;mark&#39;: {\n    &#39;type&#39;: &#39;rect&#39;\n},\n&#39;encoding&#39;: {\n    &#39;y&#39;: {\n        &#39;field&#39;: &#39;date&#39;,\n        &#39;timeUnit&#39;: &#39;month&#39;,\n        &#39;type&#39;: &#39;ordinal&#39;,\n        &#39;title&#39;: &#39;Month&#39;\n    },\n    &#39;x&#39;: {\n        &#39;field&#39;: &#39;date&#39;,\n        &#39;timeUnit&#39;: &#39;date&#39;,\n        &#39;type&#39;: &#39;ordinal&#39;,\n        &#39;title&#39;: &#39;Day&#39;,\n        &#39;axis&#39;: {\n           &#39;labelAngle&#39;: 290\n        }\n    },\n    &#39;color&#39;: {\n        &#39;title&#39;: &#39;Average temperature (K)&#39;,\n        &#39;field&#39;: &#39;count&#39;,\n        &#39;aggregate&#39;: &#39;mean&#39;,\n        &#39;type&#39;: &#39;quantitative&#39;,\n        &#39;legend&#39;: {\n            &#39;format&#39;:&#39;.0f&#39;,\n            &#39;title&#39;: null\n        }\n    }\n}\n}\&#34;\n                                         values-data=\&#34;myData\&#34;\u003e\u003c/ods-vega-lite-chart\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
                  "css": &#34;&#34;
@@ -1694,7 +1826,8 @@ Here <code>grid: true</code> set a grid canvas with X and Y lines.
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
-                <head>&lt;link
+                <head>
+                    &lt;link
   rel=&#34;stylesheet&#34;
   href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
 /&gt;
@@ -1738,6 +1871,7 @@ Here <code>grid: true</code> set a grid canvas with X and Y lines.
   const sourceMonitoringInterceptor = $q =&gt; {
     return {
       request: config =&gt; {
+        console.log(config.url);
         if (config.params)
           if (config.params.source) delete config.params.source;
 
@@ -1848,7 +1982,9 @@ Here <code>grid: true</code> set a grid canvas with X and Y lines.
       $httpProvider.interceptors.push(sourceMonitoringInterceptor);
     });
 &lt;/script&gt;
-</head>
+
+                    
+                </head>
                 <base href='https://userclub.opendatasoft.com/'>
                 <body>
                 <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
@@ -1986,8 +2122,16 @@ Here <code>grid: true</code> set a grid canvas with X and Y lines.
                 </body>
               ">
       </iframe>
-      <div class="show-code buttons has-addons">
-          <button class="button is-light">
+      <div class="buttons has-addons">
+          
+              <button id="tab-show-schema" aria-controls="panel-show-schema"
+                      class="show-schema button is-light"
+                      title="Show the data schema of the dataset used in this resource">
+                  <span>See fields in use</span>
+              </button>
+          
+          <button id="tab-show-code" aria-controls="panel-show-code"
+                  class="show-code button is-light">
             <span>Show code</span>
           </button>
           <button class="button is-light"
@@ -2005,7 +2149,44 @@ Here <code>grid: true</code> set a grid canvas with X and Y lines.
           </button>
       </div>
     </div>
-    <div class="box-code js-tabs is-hidden">
+    
+        <div id="panel-show-schema" aria-labelledby="tab-show-schema" aria-hidden
+             class="box-schema is-hidden">
+            <div class="content">
+                <p><strong>Dataset in use:</strong> <code>observation-synop</code> <a href="https://userclub.opendatasoft.com/explore/dataset/observation-synop/table/">(See it on userclub domain)</a></p>
+<p><strong>Fields in use:</strong></p>
+<table>
+<thead>
+<tr>
+<th>date (datetime)</th>
+<th>t (numeric)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2020-10-01T19:00:00+02:00</td>
+<td>286.45</td>
+</tr>
+<tr>
+<td>2021-01-30T16:00:00+02:00</td>
+<td>303.45</td>
+</tr>
+<tr>
+<td>2020-12-01T13:00:00+02:00</td>
+<td>238.75</td>
+</tr>
+<tr>
+<td>2021-04-22T10:00:00+02:00</td>
+<td>340.85</td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+        </div>
+    
+    <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
+         class="box-code js-tabs is-hidden">
         <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
@@ -2313,31 +2494,33 @@ Here <code>grid: true</code> set a grid canvas with X and Y lines.
     </div>
 </div>
 
-      </div>
-    </article>
-    
-    <article class="block">
-      <h2 class="title is-2" id="heatmap-with-quantile-scale">
-        Heatmap: with quantile scale 
-        <a class="is-link anchor" href="#heatmap-with-quantile-scale">
-          <span class="icon">
-            <img src="/img/fas-link.svg" />
-          </span>
-        </a>
-      </h2>
-      <div class="content">
-        <p>Quantile scale is a type of scale that can be set in the color property.</p>
-<pre><code class="language-json5" data-lang="json5">'color': 
+                </div>
+            
+        </article>
+        
+        <article class="block">
+            <h2 class="title is-2" id="heatmap-with-quantile-scale">
+                Heatmap: with quantile scale 
+                <a class="is-link anchor" href="#heatmap-with-quantile-scale">
+            <span class="icon">
+              <img src="/img/fas-link.svg"/>
+            </span>
+                </a>
+            </h2>
+            <div class="content">
+                <p>Quantile scale is a type of scale that can be set in the color property.</p>
+<pre tabindex="0"><code class="language-json5" data-lang="json5">'color': 
     'scale': {
         'type': 'quantile',
         ...
     },
     ...
 </code></pre>
-      </div>
-      
-      <div class="box">
-        
+            </div>
+            
+            
+                <div class="box">
+                    
 
 
 
@@ -2345,6 +2528,14 @@ Here <code>grid: true</code> set a grid canvas with X and Y lines.
 
 
     
+
+
+
+
+    
+
+
+
 
 
 
@@ -2358,7 +2549,7 @@ Here <code>grid: true</code> set a grid canvas with X and Y lines.
                name="data"
                value='{
                  "title": "New Pen!",
-                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
                  "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;container\&#34;\u003e\n    \u003cods-dataset-context context=\&#34;datum\&#34;\n                         datum-dataset=\&#34;observation-synop\&#34;\u003e\n        \u003cdiv ods-adv-analysis=\&#34;myData\&#34;\n             ods-adv-analysis-context=\&#34;datum\&#34;\n             ods-adv-analysis-select=\&#34;avg(t) as count\&#34;\n             ods-adv-analysis-group-by=\&#34;date_format(date,&#39;YYYY-MM-dd&#39;) as date\&#34;\u003e\n            \u003cods-vega-lite-chart spec=\&#34;{\n&#39;$schema&#39;: &#39;https://vega.github.io/schema/vega-lite/v2.json&#39;,\n&#39;data&#39;: {\n    &#39;name&#39;: &#39;data&#39;\n},\n&#39;height&#39;: 400,\n&#39;config&#39;: {\n    &#39;view&#39;: {\n        &#39;stroke&#39;: &#39;transparent&#39;,\n        &#39;strokeWidth&#39;: 0\n    },\n    &#39;axis&#39;: {\n        &#39;grid&#39;: true,\n        &#39;domain&#39;: false,\n        &#39;labelFontSize&#39;:14,\n        &#39;labelFont&#39;:&#39;Roboto, Helvetica, Arial, sans-serif&#39;\n    }\n},\n&#39;mark&#39;: {\n    &#39;type&#39;: &#39;rect&#39;\n},\n&#39;encoding&#39;: {\n    &#39;y&#39;: {\n        &#39;field&#39;: &#39;date&#39;,\n        &#39;timeUnit&#39;: &#39;month&#39;,\n        &#39;type&#39;: &#39;ordinal&#39;,\n        &#39;title&#39;: &#39;Month&#39;\n    },\n    &#39;x&#39;: {\n        &#39;field&#39;: &#39;date&#39;,\n        &#39;timeUnit&#39;: &#39;date&#39;,\n        &#39;type&#39;: &#39;ordinal&#39;,\n        &#39;title&#39;: &#39;Day&#39;,\n        &#39;axis&#39;: {\n           &#39;labelAngle&#39;: 290\n        }\n    },\n    &#39;color&#39;: {\n        &#39;title&#39;: &#39;Average temperature (K)&#39;,\n        &#39;field&#39;: &#39;count&#39;,\n        &#39;aggregate&#39;: &#39;mean&#39;,\n        &#39;type&#39;: &#39;quantitative&#39;,\n        scale: {\n            &#39;type&#39;: &#39;quantile&#39;,\n            &#39;scheme&#39;: &#39;Oranges&#39;\n        },\n        &#39;legend&#39;: {\n            &#39;format&#39;:&#39;.0f&#39;,\n            &#39;title&#39;: null\n        }\n    }\n}\n}\&#34;\n                                 values-data=\&#34;myData\&#34;\u003e\u003c/ods-vega-lite-chart\u003e\n        \u003c/div\u003e\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
                  "css": &#34;&#34;
@@ -2372,7 +2563,8 @@ Here <code>grid: true</code> set a grid canvas with X and Y lines.
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
-                <head>&lt;link
+                <head>
+                    &lt;link
   rel=&#34;stylesheet&#34;
   href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
 /&gt;
@@ -2416,6 +2608,7 @@ Here <code>grid: true</code> set a grid canvas with X and Y lines.
   const sourceMonitoringInterceptor = $q =&gt; {
     return {
       request: config =&gt; {
+        console.log(config.url);
         if (config.params)
           if (config.params.source) delete config.params.source;
 
@@ -2526,7 +2719,9 @@ Here <code>grid: true</code> set a grid canvas with X and Y lines.
       $httpProvider.interceptors.push(sourceMonitoringInterceptor);
     });
 &lt;/script&gt;
-</head>
+
+                    
+                </head>
                 <base href='https://userclub.opendatasoft.com/'>
                 <body>
                 <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
@@ -2600,8 +2795,16 @@ Here <code>grid: true</code> set a grid canvas with X and Y lines.
                 </body>
               ">
       </iframe>
-      <div class="show-code buttons has-addons">
-          <button class="button is-light">
+      <div class="buttons has-addons">
+          
+              <button id="tab-show-schema" aria-controls="panel-show-schema"
+                      class="show-schema button is-light"
+                      title="Show the data schema of the dataset used in this resource">
+                  <span>See fields in use</span>
+              </button>
+          
+          <button id="tab-show-code" aria-controls="panel-show-code"
+                  class="show-code button is-light">
             <span>Show code</span>
           </button>
           <button class="button is-light"
@@ -2619,7 +2822,44 @@ Here <code>grid: true</code> set a grid canvas with X and Y lines.
           </button>
       </div>
     </div>
-    <div class="box-code js-tabs is-hidden">
+    
+        <div id="panel-show-schema" aria-labelledby="tab-show-schema" aria-hidden
+             class="box-schema is-hidden">
+            <div class="content">
+                <p><strong>Dataset in use:</strong> <code>observation-synop</code> <a href="https://userclub.opendatasoft.com/explore/dataset/observation-synop/table/">(See it on userclub domain)</a></p>
+<p><strong>Fields in use:</strong></p>
+<table>
+<thead>
+<tr>
+<th>date (datetime)</th>
+<th>t (numeric)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2020-10-01T19:00:00+02:00</td>
+<td>286.45</td>
+</tr>
+<tr>
+<td>2021-01-30T16:00:00+02:00</td>
+<td>303.45</td>
+</tr>
+<tr>
+<td>2020-12-01T13:00:00+02:00</td>
+<td>238.75</td>
+</tr>
+<tr>
+<td>2021-04-22T10:00:00+02:00</td>
+<td>340.85</td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+        </div>
+    
+    <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
+         class="box-code js-tabs is-hidden">
         <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
@@ -2799,22 +3039,21 @@ Here <code>grid: true</code> set a grid canvas with X and Y lines.
     </div>
 </div>
 
-      </div>
-    </article>
-    
-    <article class="block">
-      <h2 class="title is-2" id="bubblemaps">
-        Bubblemaps 
-        <span class="tag is-rounded is-info">New</span>
+                </div>
+            
+        </article>
         
-        <a class="is-link anchor" href="#bubblemaps">
-          <span class="icon">
-            <img src="/img/fas-link.svg" />
-          </span>
-        </a>
-      </h2>
-      <div class="content">
-        <p>To switch to a bubblemap:</p>
+        <article class="block">
+            <h2 class="title is-2" id="bubblemaps">
+                Bubblemaps 
+                <a class="is-link anchor" href="#bubblemaps">
+            <span class="icon">
+              <img src="/img/fas-link.svg"/>
+            </span>
+                </a>
+            </h2>
+            <div class="content">
+                <p>To switch to a bubblemap:</p>
 <ul>
 <li>set the <code>grid</code> to false in the config view</li>
 <li>set the mark type to <code>circle</code></li>
@@ -2824,10 +3063,11 @@ Here <code>grid: true</code> set a grid canvas with X and Y lines.
 It&rsquo;s very similar to the color property, it expects an aggregate and field option to be able to size circles depending on your data.
 It also accepts different scale types (quantile, power, log etc&hellip;).</p>
 
-      </div>
-      
-      <div class="box">
-        
+            </div>
+            
+            
+                <div class="box">
+                    
 
 
 
@@ -2835,6 +3075,14 @@ It also accepts different scale types (quantile, power, log etc&hellip;).</p>
 
 
     
+
+
+
+
+    
+
+
+
 
 
 
@@ -2848,7 +3096,7 @@ It also accepts different scale types (quantile, power, log etc&hellip;).</p>
                name="data"
                value='{
                  "title": "New Pen!",
-                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
                  "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;container\&#34;\u003e\n    \u003cods-dataset-context context=\&#34;datum\&#34;\n                         datum-dataset=\&#34;comptage-velo-donnees-compteurs\&#34;\u003e\n        \u003cdiv ods-adv-analysis=\&#34;myData\&#34;\n             ods-adv-analysis-context=\&#34;datum\&#34;\n             ods-adv-analysis-select=\&#34;sum(sum_counts) as count\&#34;\n             ods-adv-analysis-group-by=\&#34;date_format(date,&#39;YYYY-MM-dd&#39;) as date\&#34;\u003e\n            \u003cdiv class=\&#34;row\&#34;\u003e\n                \u003cdiv class=\&#34;col-md-5\&#34;\u003e\n                    \u003cods-vega-lite-chart spec=\&#34;{\n&#39;$schema&#39;: &#39;https://vega.github.io/schema/vega-lite/v2.json&#39;,\n&#39;data&#39;: {\n    &#39;name&#39;: &#39;data&#39;\n},\n&#39;height&#39;: 400,\n&#39;config&#39;: {\n    &#39;view&#39;: {\n        &#39;stroke&#39;: &#39;transparent&#39;,\n        &#39;strokeWidth&#39;: 0\n    },\n    &#39;axis&#39;: {\n        &#39;grid&#39;: false,\n        &#39;domain&#39;: false,\n        &#39;labelFontSize&#39;:14,\n        &#39;labelFont&#39;:&#39;Roboto, Helvetica, Arial, sans-serif&#39;\n    }\n},\n&#39;mark&#39;: {\n    &#39;type&#39;: &#39;circle&#39;,\n    &#39;opacity&#39;: 0.8,\n    &#39;stroke&#39;: &#39;black&#39;,\n    &#39;strokeWidth&#39;: 1\n},\n&#39;encoding&#39;: {\n    &#39;y&#39;: {\n        &#39;field&#39;: &#39;date&#39;,\n        &#39;timeUnit&#39;: &#39;month&#39;,\n        &#39;type&#39;: &#39;ordinal&#39;,\n        &#39;title&#39;: &#39;Month&#39;\n    },\n    &#39;x&#39;: {\n        &#39;field&#39;: &#39;date&#39;,\n        &#39;timeUnit&#39;: &#39;day&#39;,\n        &#39;type&#39;: &#39;ordinal&#39;,\n        &#39;title&#39;: &#39;Day of the week&#39;,\n        &#39;sort&#39;: [&#39;mon&#39;, &#39;tue&#39;, &#39;wed&#39;, &#39;thu&#39;, &#39;fri&#39;, &#39;sat&#39;, &#39;sun&#39;],\n        &#39;axis&#39;: {\n           &#39;labelAngle&#39;: 280\n        }\n    },\n    &#39;color&#39;: {\n        &#39;title&#39;: &#39;Bicycle count&#39;,\n        &#39;field&#39;: &#39;count&#39;,\n        &#39;aggregate&#39;: &#39;sum&#39;,\n        &#39;type&#39;: &#39;quantitative&#39;,\n        &#39;legend&#39;: {\n            &#39;title&#39;: null\n        }\n    },\n    &#39;size&#39;: {\n        &#39;title&#39;: &#39;Bicycle count&#39;,\n        &#39;field&#39;: &#39;count&#39;,\n        &#39;aggregate&#39;: &#39;sum&#39;,\n        &#39;type&#39;: &#39;quantitative&#39;,\n        &#39;legend&#39;: {\n            &#39;title&#39;: null\n        }\n    }\n}\n}\&#34;\n                                         values-data=\&#34;myData\&#34;\u003e\u003c/ods-vega-lite-chart\u003e\n                    \u003cp\u003eIn \u003ccode\u003eencoding\u003c/code\u003e, \u003ccode\u003ex\u003c/code\u003e is \u003ccode\u003etimeUnit: day\u003c/code\u003e, and has a new property\n                        \u003ccode\u003esort\u003c/code\u003e, to force the week to start from Monday (instead of Sunday by default)\u003c/p\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;col-md-7\&#34;\u003e\n                    \u003cods-vega-lite-chart spec=\&#34;{\n&#39;$schema&#39;: &#39;https://vega.github.io/schema/vega-lite/v2.json&#39;,\n&#39;data&#39;: {\n    &#39;name&#39;: &#39;data&#39;\n},\n&#39;height&#39;: 400,\n&#39;config&#39;: {\n    &#39;view&#39;: {\n        &#39;stroke&#39;: &#39;transparent&#39;,\n        &#39;strokeWidth&#39;: 0\n    },\n    &#39;axis&#39;: {\n        &#39;grid&#39;: false,\n        &#39;domain&#39;: false,\n        &#39;labelFontSize&#39;:14,\n        &#39;labelFont&#39;:&#39;Roboto, Helvetica, Arial, sans-serif&#39;\n    }\n},\n&#39;mark&#39;: {\n    &#39;type&#39;: &#39;circle&#39;,\n    &#39;opacity&#39;: 0.8,\n    &#39;stroke&#39;: &#39;black&#39;,\n    &#39;strokeWidth&#39;: 1\n},\n&#39;encoding&#39;: {\n    &#39;y&#39;: {\n        &#39;field&#39;: &#39;date&#39;,\n        &#39;timeUnit&#39;: &#39;month&#39;,\n        &#39;type&#39;: &#39;ordinal&#39;,\n        &#39;title&#39;: &#39;Month&#39;\n    },\n    &#39;x&#39;: {\n        &#39;field&#39;: &#39;date&#39;,\n        &#39;timeUnit&#39;: &#39;date&#39;,\n        &#39;type&#39;: &#39;ordinal&#39;,\n        &#39;title&#39;: &#39;Day&#39;,\n        &#39;axis&#39;: {\n           &#39;labelAngle&#39;: 290\n        }\n    },\n    &#39;color&#39;: {\n        &#39;title&#39;: &#39;Bicycle count&#39;,\n        &#39;field&#39;: &#39;count&#39;,\n        &#39;aggregate&#39;: &#39;sum&#39;,\n        &#39;type&#39;: &#39;quantitative&#39;,\n        &#39;scale&#39;: {\n            &#39;scheme&#39;: &#39;blueorange&#39;\n        },\n        &#39;legend&#39;: {\n            &#39;title&#39;: null\n        }\n    },\n    &#39;size&#39;: {\n        &#39;title&#39;: &#39;Bicycle count&#39;,\n        &#39;field&#39;: &#39;count&#39;,\n        &#39;aggregate&#39;: &#39;sum&#39;,\n        &#39;type&#39;: &#39;quantitative&#39;,\n        &#39;legend&#39;: {\n            &#39;title&#39;: null\n        }\n    }\n}\n}\&#34;\n                                         values-data=\&#34;myData\&#34;\u003e\u003c/ods-vega-lite-chart\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
                  "css": &#34;&#34;
@@ -2862,7 +3110,8 @@ It also accepts different scale types (quantile, power, log etc&hellip;).</p>
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
-                <head>&lt;link
+                <head>
+                    &lt;link
   rel=&#34;stylesheet&#34;
   href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
 /&gt;
@@ -2906,6 +3155,7 @@ It also accepts different scale types (quantile, power, log etc&hellip;).</p>
   const sourceMonitoringInterceptor = $q =&gt; {
     return {
       request: config =&gt; {
+        console.log(config.url);
         if (config.params)
           if (config.params.source) delete config.params.source;
 
@@ -3016,7 +3266,9 @@ It also accepts different scale types (quantile, power, log etc&hellip;).</p>
       $httpProvider.interceptors.push(sourceMonitoringInterceptor);
     });
 &lt;/script&gt;
-</head>
+
+                    
+                </head>
                 <base href='https://userclub.opendatasoft.com/'>
                 <body>
                 <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
@@ -3170,8 +3422,16 @@ It also accepts different scale types (quantile, power, log etc&hellip;).</p>
                 </body>
               ">
       </iframe>
-      <div class="show-code buttons has-addons">
-          <button class="button is-light">
+      <div class="buttons has-addons">
+          
+              <button id="tab-show-schema" aria-controls="panel-show-schema"
+                      class="show-schema button is-light"
+                      title="Show the data schema of the dataset used in this resource">
+                  <span>See fields in use</span>
+              </button>
+          
+          <button id="tab-show-code" aria-controls="panel-show-code"
+                  class="show-code button is-light">
             <span>Show code</span>
           </button>
           <button class="button is-light"
@@ -3189,7 +3449,44 @@ It also accepts different scale types (quantile, power, log etc&hellip;).</p>
           </button>
       </div>
     </div>
-    <div class="box-code js-tabs is-hidden">
+    
+        <div id="panel-show-schema" aria-labelledby="tab-show-schema" aria-hidden
+             class="box-schema is-hidden">
+            <div class="content">
+                <p><strong>Dataset in use:</strong> <code>comptage-velo-donnees-compteurs</code> <a href="https://userclub.opendatasoft.com/explore/dataset/comptage-velo-donnees-compteurs/table/">(See it on userclub domain)</a></p>
+<p><strong>Fields in use:</strong></p>
+<table>
+<thead>
+<tr>
+<th>date (datetime)</th>
+<th>sum_counts (numeric)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2020-10-01T04:00:00+02:00</td>
+<td>70</td>
+</tr>
+<tr>
+<td>2021-01-30T06:00:00+02:00</td>
+<td>15</td>
+</tr>
+<tr>
+<td>2020-12-01T13:00:00+02:00</td>
+<td>22</td>
+</tr>
+<tr>
+<td>2021-04-22T22:00:00+02:00</td>
+<td>3</td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+        </div>
+    
+    <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
+         class="box-code js-tabs is-hidden">
         <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
@@ -3529,25 +3826,27 @@ It also accepts different scale types (quantile, power, log etc&hellip;).</p>
     </div>
 </div>
 
-      </div>
-    </article>
-    
-    <article class="block">
-      <h2 class="title is-2" id="with-text-axis">
-        With text axis 
-        <a class="is-link anchor" href="#with-text-axis">
-          <span class="icon">
-            <img src="/img/fas-link.svg" />
-          </span>
-        </a>
-      </h2>
-      <div class="content">
-        <p>Axis can be from any type. It only needs to be set as a facet and part of the ods-adv-analysis.</p>
-
-      </div>
-      
-      <div class="box">
+                </div>
+            
+        </article>
         
+        <article class="block">
+            <h2 class="title is-2" id="with-text-axis">
+                With text axis 
+                <a class="is-link anchor" href="#with-text-axis">
+            <span class="icon">
+              <img src="/img/fas-link.svg"/>
+            </span>
+                </a>
+            </h2>
+            <div class="content">
+                <p>Axis can be from any type. It only needs to be set as a facet and part of the ods-adv-analysis.</p>
+
+            </div>
+            
+            
+                <div class="box">
+                    
 
 
 
@@ -3555,6 +3854,14 @@ It also accepts different scale types (quantile, power, log etc&hellip;).</p>
 
 
     
+
+
+
+
+    
+
+
+
 
 
 
@@ -3568,7 +3875,7 @@ It also accepts different scale types (quantile, power, log etc&hellip;).</p>
                name="data"
                value='{
                  "title": "New Pen!",
-                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
                  "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;container\&#34;\u003e\n    \u003cods-dataset-context context=\&#34;datum\&#34;\n                         datum-dataset=\&#34;observation-synop\&#34;\u003e\n        \u003cdiv ods-adv-analysis=\&#34;myData\&#34;\n             ods-adv-analysis-context=\&#34;datum\&#34;\n             ods-adv-analysis-select=\&#34;avg(t) as count\&#34;\n             ods-adv-analysis-group-by=\&#34;year(date) as year, nom_reg\&#34;\u003e\n            \u003cods-vega-lite-chart spec=\&#34;{\n&#39;$schema&#39;: &#39;https://vega.github.io/schema/vega-lite/v2.json&#39;,\n&#39;data&#39;: {\n    &#39;name&#39;: &#39;data&#39;\n},\n&#39;height&#39;: 400,\n&#39;config&#39;: {\n    &#39;view&#39;: {\n        &#39;stroke&#39;: &#39;transparent&#39;,\n        &#39;strokeWidth&#39;: 0\n    },\n    &#39;axis&#39;: {\n        &#39;grid&#39;: true,\n        &#39;domain&#39;: false,\n        &#39;labelFontSize&#39;:14,\n        &#39;labelFont&#39;:&#39;Roboto, Helvetica, Arial, sans-serif&#39;\n    }\n},\n&#39;mark&#39;: {\n    &#39;type&#39;: &#39;rect&#39;\n},\n&#39;encoding&#39;: {\n    &#39;x&#39;: {\n        &#39;field&#39;: &#39;year&#39;,\n        &#39;type&#39;: &#39;ordinal&#39;,\n        &#39;title&#39;: &#39;Year&#39;,\n        &#39;axis&#39;: {\n           &#39;labelAngle&#39;: 290\n        }\n    },\n    &#39;y&#39;: {\n        &#39;field&#39;: &#39;nom_reg&#39;,\n        &#39;type&#39;: &#39;ordinal&#39;,\n        &#39;title&#39;: &#39;Region name&#39;,\n    },\n    &#39;color&#39;: {\n        &#39;title&#39;: &#39;Average temperature (K)&#39;,\n        &#39;field&#39;: &#39;count&#39;,\n        &#39;aggregate&#39;: &#39;mean&#39;,\n        &#39;type&#39;: &#39;quantitative&#39;,\n        scale: {\n            &#39;scheme&#39;: &#39;blueorange&#39;\n        },\n        &#39;legend&#39;: {\n            &#39;format&#39;:&#39;.0f&#39;,\n            &#39;title&#39;: null\n        }\n    }\n}\n}\&#34;\n                                 values-data=\&#34;myData\&#34;\u003e\u003c/ods-vega-lite-chart\u003e\n            \u003cp\u003e\n                Here,\n                \u003ccode\u003eods-adv-analysis\u003c/code\u003e returns the year only (and not the complete date). Therefore, Vega-lite considers it as text and not as a date.\n            \u003c/p\u003e\n        \u003c/div\u003e\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
                  "css": &#34;&#34;
@@ -3582,7 +3889,8 @@ It also accepts different scale types (quantile, power, log etc&hellip;).</p>
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
-                <head>&lt;link
+                <head>
+                    &lt;link
   rel=&#34;stylesheet&#34;
   href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
 /&gt;
@@ -3626,6 +3934,7 @@ It also accepts different scale types (quantile, power, log etc&hellip;).</p>
   const sourceMonitoringInterceptor = $q =&gt; {
     return {
       request: config =&gt; {
+        console.log(config.url);
         if (config.params)
           if (config.params.source) delete config.params.source;
 
@@ -3736,7 +4045,9 @@ It also accepts different scale types (quantile, power, log etc&hellip;).</p>
       $httpProvider.interceptors.push(sourceMonitoringInterceptor);
     });
 &lt;/script&gt;
-</head>
+
+                    
+                </head>
                 <base href='https://userclub.opendatasoft.com/'>
                 <body>
                 <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
@@ -3811,8 +4122,16 @@ It also accepts different scale types (quantile, power, log etc&hellip;).</p>
                 </body>
               ">
       </iframe>
-      <div class="show-code buttons has-addons">
-          <button class="button is-light">
+      <div class="buttons has-addons">
+          
+              <button id="tab-show-schema" aria-controls="panel-show-schema"
+                      class="show-schema button is-light"
+                      title="Show the data schema of the dataset used in this resource">
+                  <span>See fields in use</span>
+              </button>
+          
+          <button id="tab-show-code" aria-controls="panel-show-code"
+                  class="show-code button is-light">
             <span>Show code</span>
           </button>
           <button class="button is-light"
@@ -3830,7 +4149,49 @@ It also accepts different scale types (quantile, power, log etc&hellip;).</p>
           </button>
       </div>
     </div>
-    <div class="box-code js-tabs is-hidden">
+    
+        <div id="panel-show-schema" aria-labelledby="tab-show-schema" aria-hidden
+             class="box-schema is-hidden">
+            <div class="content">
+                <p><strong>Dataset in use:</strong> <code>observation-synop</code> <a href="https://userclub.opendatasoft.com/explore/dataset/observation-synop/table/">(See it on userclub domain)</a></p>
+<p><strong>Fields in use:</strong></p>
+<table>
+<thead>
+<tr>
+<th>date (datetime)</th>
+<th>t (numeric)</th>
+<th>nom_reg</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2020-10-01T19:00:00+02:00</td>
+<td>286.45</td>
+<td>Bretagne</td>
+</tr>
+<tr>
+<td>2021-01-30T16:00:00+02:00</td>
+<td>303.45</td>
+<td>Occitanie</td>
+</tr>
+<tr>
+<td>2020-12-01T13:00:00+02:00</td>
+<td>238.75</td>
+<td>La Réunion</td>
+</tr>
+<tr>
+<td>2021-04-22T10:00:00+02:00</td>
+<td>340.85</td>
+<td>Corse</td>
+</tr>
+</tbody>
+</table>
+
+            </div>
+        </div>
+    
+    <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
+         class="box-code js-tabs is-hidden">
         <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
@@ -4012,10 +4373,11 @@ It also accepts different scale types (quantile, power, log etc&hellip;).</p>
     </div>
 </div>
 
-      </div>
-    </article>
-    
-  </div>
+                </div>
+            
+        </article>
+        
+    </div>
 </section>
 
       </div>
@@ -4043,7 +4405,7 @@ It also accepts different scale types (quantile, power, log etc&hellip;).</p>
     </script>
     <script
       type="text/javascript"
-      src="/index.min.d986e12cb7cbc909e8709adbae4f4f150c07f0a07b6e439f91f5b639c68888b4.js"
+      src="/index.min.74a25f16f7afdecec13e30f9213231fc17c3a57e51c51b7847f29a9d1f8a8037.js"
       defer
     ></script>
   </body>

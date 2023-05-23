@@ -7,3 +7,6 @@ resources:
 - src: '*/'
   name: folder-:counter
 ---
+
+> **!! WARNING !!** This ressource is deprecated ! Please use `ods-select` instead.
+> [Documentation available here](https://codelibrary.opendatasoft.com/widget-tricks/ods-select/)

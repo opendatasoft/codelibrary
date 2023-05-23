@@ -5,7 +5,7 @@ domainid: "userclub"
 datasetid: "domaindatasets"
 ---
 
-This custom view will help you create an overview of all the datasets on your domain. See the [user guide](https://help.opendatasoft.com/platform/fr/publishing_data/04_configuring_a_source/connectors/dataset_of_datasets.html#creation) to set up this special dataset.
+This custom view will help you create an overview of all the datasets on your domain. See the [user guide](https://help.opendatasoft.com/platform/en/publishing_data/01_creating_a_dataset/connectors/dataset_of_datasets.html) to set up this special dataset.
 
 For this view to properly function, you need to activate these options on the extractor:
 

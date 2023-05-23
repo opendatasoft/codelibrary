@@ -1,5 +1,5 @@
 ---
-title: "The complete exemple - France with overseas regions, departments and cities + text hover paths"
+title: "The complete example - France with overseas regions, departments and cities + text hover paths"
 date: 2020-08-24T15:57:58+02:00
 ---
 

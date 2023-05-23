@@ -39,9 +39,9 @@
 
     
     <link rel="stylesheet" type="text/css" href="/scss/main.css" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="shortcut icon" href="/favicon.ico" />
+    
+    
+    <link rel="shortcut icon" href="/ods-favicon.ico" />
   </head>
 
   <body>
@@ -73,69 +73,88 @@
 
     </div>
 
-    <nav class="navbar is-fixed-top"
+    <nav class="ods-header navbar is-fixed-top"
      role="navigation"
      aria-label="Main navigation">
-    <div class="navbar-brand">
-        <button class="navbar-burger burger"
-                type="button"
-                data-target="sidebarNavbar"
-                aria-controls="sidebarNavbar"
-                aria-expanded="false"
-                aria-label="Main menu">
-            Menu
-        </button>
-        <a class="navbar-item"
-           href="/"
-           title="Back to the homepage">
-            <img src="/img/ods-logo-helphub.svg"
-                 alt="Helphub Logo"/>
+
+   <button type="button"
+           class="menu-button navbar-burger burger"
+           id="nav-button"
+           data-target="sidebarNavbar"
+           aria-controls="sidebarNavbar"
+           aria-expanded="false"
+           aria-label="Main menu">
+        <img class="ods-header__menu-toggle__openlogo" src="/img/menu-fill.svg" alt="Open documentation menu">
+    </button>
+
+    <a class="ods-header-logo ods-header-logo-link"
+       href="https://help.opendatasoft.com/">
+        <img src="/img/ods-logo-noir.svg" alt="Opendatasoft logo">
+        <span class="ods-header__brandname">
+           Help Center
+        </span>
+    </a>
+
+    <div class="ods-header__nav">
+        <a class="ods-header__nav-item-link"
+           href="https://userguide.opendatasoft.com/">
+            User guide
         </a>
-        <button class="navbar-burger burger"
-                type="button"
-                data-target="helphubNavbar"
-                aria-controls="helphubNavbar"
-                aria-expanded="false"
-                aria-label="Help Hub Menu">
-            Help Hub
-        </button>
+        <a class="ods-header__nav-item-link"
+           href="https://academy.opendatasoft.com/page/homepage">
+            Academy
+        </a>
+        <a class="ods-header__nav-item-link is-active"
+           href="https://codelibrary.opendatasoft.com">
+            Code Library
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://help.opendatasoft.com/widgets/">
+            Widgets
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://help.opendatasoft.com/en/apis/">
+            APIs
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://changes.opendatasoft.com/en">
+            Release Notes
+        </a>
     </div>
-    <div class="navbar-menu"
-         id="helphubNavbar">
-        <div class="navbar-start">
-            <a class="navbar-item"
-               href="https://help.opendatasoft.com/">
-                Help Hub
-            </a>
-            <a class="navbar-item"
-               href="https://help.opendatasoft.com/platform/en/">
-                User guide
-            </a>
-            <a class="navbar-item is-active"
-               href="https://codelibrary.opendatasoft.com">
-                Code Library
-            </a>
-            <a class="navbar-item"
-               href="https://help.opendatasoft.com/faq-glossary/en/">
-                FAQ
-            </a>
-            <a class="navbar-item"
-               href="https://help.opendatasoft.com/widgets/">
-                Widgets
-            </a>
-            <a class="navbar-item"
-               href="https://help.opendatasoft.com/en/apis/">
-                APIs
-            </a>
-            <a class="navbar-item"
-               href="https://academy.opendatasoft.com/page/homepage">
-                Academy
-            </a>
-            <a class="navbar-item"
-               href="https://documentation-resources.opendatasoft.com/pages/release-notes/?headless=true">
-                Release Notes
-            </a>
-        </div>
+    <button type="button"
+            class="menu-button navbar-burger burger"
+            id="nav-button"
+            data-target="helphubNavbar"
+            aria-controls="helphubNavbar"
+            aria-expanded="false"
+            aria-label="Main menu">
+        <img class="ods-header__menu-toggle__openlogo" src="/img/apps-custo.svg" alt="Open documentation menu">
+    </button>
+    <div class="navbar-menu" id="helphubNavbar">
+        <a class="ods-header__nav-item-link"
+           href="https://userguide.opendatasoft.com/">
+            User guide
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://academy.opendatasoft.com/page/homepage">
+            Academy
+        </a>
+        <a class="ods-header__nav-item-link is-active"
+           href="https://codelibrary.opendatasoft.com">
+            Code Library
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://help.opendatasoft.com/widgets/">
+            Widgets
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://help.opendatasoft.com/en/apis/">
+            APIs
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://changes.opendatasoft.com/en">
+            Release Notes
+        </a>
     </div>
 </nav>
 
@@ -209,6 +228,12 @@
       
       
       
+      
+      
+      
+      
+      
+      
       <li>
         <a href="/components/"
         class="sidebar-subtitle">
@@ -230,6 +255,9 @@
       
       
       
+      
+      
+      
       <li>
         <a href="/custom-views/"
         class="sidebar-subtitle">
@@ -239,6 +267,9 @@
     </li>
     
     
+      
+      
+      
       
       
       
@@ -311,10 +342,21 @@
       
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
       <li>
         <a href="/page-templates/"
         class="sidebar-subtitle">
         Page templates
+        
+        <span class="tag pill is-size-7 is-rounded is-info">2</span>
         
       </a>
     </li>
@@ -419,12 +461,16 @@
       
       
       
+      
+      
+      
+      
+      
+      
       <li>
         <a href="/widget-tricks/"
         class="sidebar-subtitle">
         Widget tricks
-        
-        <span class="tag pill is-size-7 is-rounded is-info">6</span>
         
       </a>
     </li>
@@ -438,6 +484,10 @@
     
     <a class="tag" href="/tags/aggregation/">
       aggregation
+    </a>
+    
+    <a class="tag" href="/tags/card/">
+      card
     </a>
     
     <a class="tag" href="/tags/chart/">
@@ -472,6 +522,10 @@
       navigation
     </a>
     
+    <a class="tag" href="/tags/ods-adv-analysis/">
+      ods-adv-analysis
+    </a>
+    
     <a class="tag" href="/tags/ods-aggregation/">
       ods-aggregation
     </a>
@@ -482,6 +536,14 @@
     
     <a class="tag" href="/tags/ods-maps/">
       ods-maps
+    </a>
+    
+    <a class="tag" href="/tags/ods-subaggregation/">
+      ods-subaggregation
+    </a>
+    
+    <a class="tag" href="/tags/redirection/">
+      redirection
     </a>
     
   </div>
@@ -501,15 +563,142 @@
 </section>
 <section class="list-results">
   
+  <a href="/generators/comparison-generator/" class="card card-list" title="Comparison Generator">
+    <div class="card-content">
+      <h3 class="title">
+        Comparison Generator
+        
+        
+      </h3>
+      <p class="subtitle">
+        This generator builds a comparison dashboard. Edit a few settings and compare 2 values, such as territories or categories, from one dataset.
+        
+      </p>
+      <div class="tags">
+        
+        <div class="tag">
+          display
+        </div>
+        
+        <div class="tag">
+          navigation
+        </div>
+        
+        <div class="tag">
+          filter
+        </div>
+        
+        <div class="tag">
+          chart
+        </div>
+        
+      </div>
+    </div>
+  </a>
+  
+  <a href="/custom-views/eco-compteur/" class="card card-list" title="Eco-Counter / Eco-Compteur">
+    <div class="card-content">
+      <h3 class="title">
+        Eco-Counter / Eco-Compteur
+        
+        
+      </h3>
+      <p class="subtitle">
+        Eco-Counter custom view for Opendatasoft integration: an overall view of your territory through Eco-Counter stations data.
+        
+      </p>
+      <div class="tags">
+        
+        <div class="tag">
+          aggregation
+        </div>
+        
+        <div class="tag">
+          chart
+        </div>
+        
+        <div class="tag">
+          ods-adv-analysis
+        </div>
+        
+      </div>
+    </div>
+  </a>
+  
+  <a href="/widget-tricks/age-pyramid-custom/" class="card card-list" title="Age Pyramid with custom HTML/CSS">
+    <div class="card-content">
+      <h3 class="title">
+        Age Pyramid with custom HTML/CSS
+        
+        
+      </h3>
+      <p class="subtitle">
+        Create an age pyramid to present the repartition of the population in your area, with custom HTML and CSS.
+3 parameters must be declared in the code:
+ agefield : the id of the age field in your dataset genderfield : the id of the gender field in your dataset valuefield : the id of the value field in your dataset  Then, you can customize the colors of the bars in the CSS file, with the 2 variables:
+      </p>
+      <div class="tags">
+        
+        <div class="tag">
+          display
+        </div>
+        
+        <div class="tag">
+          chart
+        </div>
+        
+        <div class="tag">
+          ods-adv-analysis
+        </div>
+        
+        <div class="tag">
+          ods-aggregation
+        </div>
+        
+        <div class="tag">
+          ods-subaggregation
+        </div>
+        
+      </div>
+    </div>
+  </a>
+  
+  <a href="/widget-tricks/age-pyramid-vegalite/" class="card card-list" title="Age Pyramid with Vega-Lite">
+    <div class="card-content">
+      <h3 class="title">
+        Age Pyramid with Vega-Lite
+        
+        
+      </h3>
+      <p class="subtitle">
+        Create an age pyramid to present the repartition of the population in your area, with Vega-Lite.
+Vega-Lite is a high-level grammar of interactive graphics. It provides a concise, declarative JSON syntax to create an expressive range of visualizations for data analysis and presentation.
+ods-vega-lite-chart widget, in combinaison with ods-adv-analysis to get the data, allows adding Vega-Lite charts into your pages.
+To learn more about Vega-Lite charts in ODS pages, read the Vega-Lite presentation.
+      </p>
+      <div class="tags">
+        
+        <div class="tag">
+          display
+        </div>
+        
+        <div class="tag">
+          chart
+        </div>
+        
+        <div class="tag">
+          ods-adv-analysis
+        </div>
+        
+      </div>
+    </div>
+  </a>
+  
   <a href="/widget-tricks/ods-chart-css-hacks/" class="card card-list" title="ods-chart: CSS Hacks">
     <div class="card-content">
       <h3 class="title">
         ods-chart: CSS Hacks
         
-        
-        <span class="tag pill is-size-7 is-rounded is-info">
-          1
-        </span>
         
       </h3>
       <p class="subtitle">
@@ -563,7 +752,7 @@
         
       </h3>
       <p class="subtitle">
-        Animate your data-visualisation (KPIs, Gauge).
+        Animate your data-visualisation (KPIs, Gauge) with ods-timer.
         
       </p>
       <div class="tags">
@@ -698,7 +887,7 @@
     </script>
     <script
       type="text/javascript"
-      src="/index.min.d986e12cb7cbc909e8709adbae4f4f150c07f0a07b6e439f91f5b639c68888b4.js"
+      src="/index.min.74a25f16f7afdecec13e30f9213231fc17c3a57e51c51b7847f29a9d1f8a8037.js"
       defer
     ></script>
   </body>

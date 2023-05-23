@@ -1,6 +1,7 @@
 ---
-title: "Simple example"
-height: 550
+title: "Active/inactive style"
+date: 2022-01-25
+height: 180
 ---
 
-A simple usecase to show how this component can be used in your pages.
+Toggle button to highlight an active or inactive state.

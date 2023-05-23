@@ -39,9 +39,9 @@
 
     
     <link rel="stylesheet" type="text/css" href="/scss/main.css" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="shortcut icon" href="/favicon.ico" />
+    
+    
+    <link rel="shortcut icon" href="/ods-favicon.ico" />
   </head>
 
   <body>
@@ -73,69 +73,88 @@
 
     </div>
 
-    <nav class="navbar is-fixed-top"
+    <nav class="ods-header navbar is-fixed-top"
      role="navigation"
      aria-label="Main navigation">
-    <div class="navbar-brand">
-        <button class="navbar-burger burger"
-                type="button"
-                data-target="sidebarNavbar"
-                aria-controls="sidebarNavbar"
-                aria-expanded="false"
-                aria-label="Main menu">
-            Menu
-        </button>
-        <a class="navbar-item"
-           href="/"
-           title="Back to the homepage">
-            <img src="/img/ods-logo-helphub.svg"
-                 alt="Helphub Logo"/>
+
+   <button type="button"
+           class="menu-button navbar-burger burger"
+           id="nav-button"
+           data-target="sidebarNavbar"
+           aria-controls="sidebarNavbar"
+           aria-expanded="false"
+           aria-label="Main menu">
+        <img class="ods-header__menu-toggle__openlogo" src="/img/menu-fill.svg" alt="Open documentation menu">
+    </button>
+
+    <a class="ods-header-logo ods-header-logo-link"
+       href="https://help.opendatasoft.com/">
+        <img src="/img/ods-logo-noir.svg" alt="Opendatasoft logo">
+        <span class="ods-header__brandname">
+           Help Center
+        </span>
+    </a>
+
+    <div class="ods-header__nav">
+        <a class="ods-header__nav-item-link"
+           href="https://userguide.opendatasoft.com/">
+            User guide
         </a>
-        <button class="navbar-burger burger"
-                type="button"
-                data-target="helphubNavbar"
-                aria-controls="helphubNavbar"
-                aria-expanded="false"
-                aria-label="Help Hub Menu">
-            Help Hub
-        </button>
+        <a class="ods-header__nav-item-link"
+           href="https://academy.opendatasoft.com/page/homepage">
+            Academy
+        </a>
+        <a class="ods-header__nav-item-link is-active"
+           href="https://codelibrary.opendatasoft.com">
+            Code Library
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://help.opendatasoft.com/widgets/">
+            Widgets
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://help.opendatasoft.com/en/apis/">
+            APIs
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://changes.opendatasoft.com/en">
+            Release Notes
+        </a>
     </div>
-    <div class="navbar-menu"
-         id="helphubNavbar">
-        <div class="navbar-start">
-            <a class="navbar-item"
-               href="https://help.opendatasoft.com/">
-                Help Hub
-            </a>
-            <a class="navbar-item"
-               href="https://help.opendatasoft.com/platform/en/">
-                User guide
-            </a>
-            <a class="navbar-item is-active"
-               href="https://codelibrary.opendatasoft.com">
-                Code Library
-            </a>
-            <a class="navbar-item"
-               href="https://help.opendatasoft.com/faq-glossary/en/">
-                FAQ
-            </a>
-            <a class="navbar-item"
-               href="https://help.opendatasoft.com/widgets/">
-                Widgets
-            </a>
-            <a class="navbar-item"
-               href="https://help.opendatasoft.com/en/apis/">
-                APIs
-            </a>
-            <a class="navbar-item"
-               href="https://academy.opendatasoft.com/page/homepage">
-                Academy
-            </a>
-            <a class="navbar-item"
-               href="https://documentation-resources.opendatasoft.com/pages/release-notes/?headless=true">
-                Release Notes
-            </a>
-        </div>
+    <button type="button"
+            class="menu-button navbar-burger burger"
+            id="nav-button"
+            data-target="helphubNavbar"
+            aria-controls="helphubNavbar"
+            aria-expanded="false"
+            aria-label="Main menu">
+        <img class="ods-header__menu-toggle__openlogo" src="/img/apps-custo.svg" alt="Open documentation menu">
+    </button>
+    <div class="navbar-menu" id="helphubNavbar">
+        <a class="ods-header__nav-item-link"
+           href="https://userguide.opendatasoft.com/">
+            User guide
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://academy.opendatasoft.com/page/homepage">
+            Academy
+        </a>
+        <a class="ods-header__nav-item-link is-active"
+           href="https://codelibrary.opendatasoft.com">
+            Code Library
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://help.opendatasoft.com/widgets/">
+            Widgets
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://help.opendatasoft.com/en/apis/">
+            APIs
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://changes.opendatasoft.com/en">
+            Release Notes
+        </a>
     </div>
 </nav>
 
@@ -209,6 +228,12 @@
       
       
       
+      
+      
+      
+      
+      
+      
       <li>
         <a href="/components/"
         class="sidebar-subtitle">
@@ -230,6 +255,9 @@
       
       
       
+      
+      
+      
       <li>
         <a href="/custom-views/"
         class="sidebar-subtitle">
@@ -239,6 +267,9 @@
     </li>
     
     
+      
+      
+      
       
       
       
@@ -314,6 +345,20 @@
           </li>
           
           <li>
+            <a class="" href="/page-templates/dataviz-gallery/">
+              <div>
+                Dataviz gallery page
+                
+                
+                <span class="tag pill is-size-7 is-rounded is-info">
+                  2
+                </span>
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
             <a class="" href="/page-templates/fullscreen-map/">
               <div>
                 Fullscreen map with filters
@@ -347,6 +392,26 @@
             <a class="" href="/page-templates/home-3/">
               <div>
                 Home page 3
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/page-templates/home-4-access-cards/">
+              <div>
+                Home page 4 with access cards
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/page-templates/listing-page/">
+              <div>
+                Listing page
                 
                 
               </div>
@@ -516,12 +581,16 @@
       
       
       
+      
+      
+      
+      
+      
+      
       <li>
         <a href="/widget-tricks/"
         class="sidebar-subtitle">
         Widget tricks
-        
-        <span class="tag pill is-size-7 is-rounded is-info">6</span>
         
       </a>
     </li>
@@ -535,6 +604,10 @@
     
     <a class="tag" href="/tags/aggregation/">
       aggregation
+    </a>
+    
+    <a class="tag" href="/tags/card/">
+      card
     </a>
     
     <a class="tag" href="/tags/chart/">
@@ -569,6 +642,10 @@
       navigation
     </a>
     
+    <a class="tag" href="/tags/ods-adv-analysis/">
+      ods-adv-analysis
+    </a>
+    
     <a class="tag" href="/tags/ods-aggregation/">
       ods-aggregation
     </a>
@@ -579,6 +656,14 @@
     
     <a class="tag" href="/tags/ods-maps/">
       ods-maps
+    </a>
+    
+    <a class="tag" href="/tags/ods-subaggregation/">
+      ods-subaggregation
+    </a>
+    
+    <a class="tag" href="/tags/redirection/">
+      redirection
     </a>
     
   </div>
@@ -597,6 +682,56 @@
   </h2>
 </section>
 <section class="list-results">
+  
+  <a href="/page-templates/dataviz-gallery/" class="card card-list" title="Dataviz gallery page">
+    <div class="card-content">
+      <h3 class="title">
+        Dataviz gallery page
+        
+        
+        <span class="tag pill is-size-7 is-rounded is-info">
+          2
+        </span>
+        
+      </h3>
+      <p class="subtitle">
+        A page template to display data visualizations on your portal.
+        
+      </p>
+      <div class="tags">
+        
+        <div class="tag">
+          display
+        </div>
+        
+      </div>
+    </div>
+  </a>
+  
+  <a href="/page-templates/listing-page/" class="card card-list" title="Listing page">
+    <div class="card-content">
+      <h3 class="title">
+        Listing page
+        
+        
+      </h3>
+      <p class="subtitle">
+        A template version of the listing generator, for the users who want to add more customization to the automated version.
+        
+      </p>
+      <div class="tags">
+        
+        <div class="tag">
+          display
+        </div>
+        
+        <div class="tag">
+          list
+        </div>
+        
+      </div>
+    </div>
+  </a>
   
   <a href="/page-templates/ods-layout-over-ride/" class="card card-list" title="ODS Layout over-ride">
     <div class="card-content">
@@ -693,8 +828,8 @@ A framework is a set of CSS classes to set into the HTML to easily develop nice 
         
       </h3>
       <p class="subtitle">
-        This dashboard presents the main informations from the monitoring dataset. See the full documentation about the monitoring dataset. See themed versions of this dashboard here.
-Note: Since monitoring data are private, we use a dummy dataset in these exemple.
+        This dashboard presents the main figures from the monitoring dataset. See the full documentation about the monitoring dataset. See themed versions of this dashboard here.
+Note: Since monitoring data are private, we use a dummy dataset in this example.
       </p>
       <div class="tags">
         
@@ -839,6 +974,31 @@ Note: Since monitoring data are private, we use a dummy dataset in these exemple
     </div>
   </a>
   
+  <a href="/page-templates/home-4-access-cards/" class="card card-list" title="Home page 4 with access cards">
+    <div class="card-content">
+      <h3 class="title">
+        Home page 4 with access cards
+        
+        
+      </h3>
+      <p class="subtitle">
+        A home page for your Opendatasoft portal, with access cards
+        
+      </p>
+      <div class="tags">
+        
+        <div class="tag">
+          display
+        </div>
+        
+        <div class="tag">
+          navigation
+        </div>
+        
+      </div>
+    </div>
+  </a>
+  
   <a href="/page-templates/map-refine/" class="card card-list" title="Map &amp; Refine">
     <div class="card-content">
       <h3 class="title">
@@ -966,7 +1126,7 @@ Note: Since monitoring data are private, we use a dummy dataset in these exemple
     </script>
     <script
       type="text/javascript"
-      src="/index.min.d986e12cb7cbc909e8709adbae4f4f150c07f0a07b6e439f91f5b639c68888b4.js"
+      src="/index.min.74a25f16f7afdecec13e30f9213231fc17c3a57e51c51b7847f29a9d1f8a8037.js"
       defer
     ></script>
   </body>
