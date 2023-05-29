@@ -1,32 +1,39 @@
-<ods-dataset-context context="stattests,observationsynop"
-                     stattests-domain="userclub"
-                     stattests-dataset="donnees-relatives-aux-resultats-des-tests-virologiques-covid-19-france"
-                     observationsynop-dataset="observation-synop"
-                     observationsynop-domain="userclub">
+<ods-dataset-context context="synop"
+                     synop-domain="userclub"
+                     synop-dataset="observation-synop"
+                     synop-parameters="{'disjunctive.nom_reg':true, 'disjunctive.nom_dept':true}">
     <section class="header">
         <div class="container">
             <div class="heading">
-                <h1 class="title">Titre du dashboard</h1>
+                <h1 class="title">Observation météorologique historiques en France (SYNOP)
+                </h1>
                 <p class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam atque
-                    commodi cupiditate, deserunt dolores dolorum ducimus ea fugiat non
-                    quidem repellat soluta voluptate voluptatem. Illo illum maxime nemo
-                    officia velit.
+                    Focus sur les températures observées depuis 2010.
                 </p>
                 Filtrer par :
                 <div class="shared-width-ods-selects">
-                    <ods-select
-                                selected-values="choice"
-                                options="['objects','things','stuff']"
-                                placeholder="pick what you want"></ods-select>
-                    <ods-select
-                                selected-values="place"
-                                options="['car','home']"
-                                placeholder="pick a place"></ods-select>
-                    <ods-select
-                                selected-values="long"
-                                options="['2018','2019','2020','2021', 'let see how it behaves with small screens.']"
-                                placeholder="very long content here, even too long for mobile display"></ods-select>
+                    <div ods-facet-results="reglist"
+                         ods-facet-results-facet-name="nom_reg"
+                         ods-facet-results-context="synop"
+                         ods-facet-results-sort="alphanum">
+                        <ods-select options="reglist"
+                                    selected-values="synop.parameters['refine.nom_reg']"
+                                    label-modifier="name"
+                                    value-modifier="name"
+                                    placeholder="Sélectionnez une région"></ods-select>
+
+                    </div>
+                    <div ods-facet-results="deplist"
+                         ods-facet-results-facet-name="nom_dept"
+                         ods-facet-results-context="synop"
+                         ods-facet-results-sort="alphanum">
+                        <ods-select options="deplist"
+                                    selected-values="synop.parameters['refine.nom_dept']"
+                                    label-modifier="name"
+                                    value-modifier="name"
+                                    placeholder="Sélectionnez un département"></ods-select>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -35,41 +42,39 @@
         <div class="container">
             <div class="kpi-container"
                  ods-adv-analysis="analysis"
-                 ods-adv-analysis-context="observationsynop"
-                 ods-adv-analysis-select="avg(u) as humidity, max(ff) as wind">
+                 ods-adv-analysis-context="synop"
+                 ods-adv-analysis-select="min(tc) as temperature, max(tc) as maxtemp, avg(tc) as tempmoyenne">
                 <!-- KPI box component -->
                 <div class="viz-card kpi-card">
                     <i class="kpi-icon fa fa-hospital-o" aria-hidden="true"></i>
-                    <p class="kpi-title"
-                       ods-adv-analysis="analysis"
-                       ods-adv-analysis-context="stattests"
-                       ods-adv-analysis-select="sum(nb_pos)/sum(nb_tests)*100 as percentage"
-                       ods-adv-analysis-where="reg_name LIKE 'Auvergne-Rhône-Alpes'">
-                        {{ analysis[0].percentage | number : 2 }}%
+                    <p class="kpi-title">
+                        {{ analysis[0].temperature | number : 2 }}°C
                     </p>
                     <p class="kpi-description">
-                        Number of positive tests in Auvergne-Rhône-Alples
+                        Température minimale observée
+                    </p>
+                </div>
+                                <!-- KPI box component -->
+                <div class="viz-card kpi-card">
+                    <i class="kpi-icon fa fa-flag" aria-hidden="true"></i>
+                    <p class="kpi-title">
+                        {{ analysis[0].tempmoyenne | number : 2}} °C
+                    </p>
+                    <p class="kpi-description">
+                        Température moyenne observée 
                     </p>
                 </div>
                 <!-- KPI box component -->
                 <div class="viz-card kpi-card">
                     <i class="kpi-icon fa fa-tint" aria-hidden="true"></i>
                     <p class="kpi-title">
-                        {{ analysis[0].humidity | number : 1}}
+                        {{ analysis[0].maxtemp | number : 2}} °C
                     </p>
                     <p class="kpi-description">
-                        Average humidity (%)
+                        Température maximale observée
                     </p>
                 </div>
-                <div class="viz-card kpi-card">
-                    <i class="kpi-icon fa fa-flag" aria-hidden="true"></i>
-                    <p class="kpi-title">
-                        {{ analysis[0].wind | number : 1}}
-                    </p>
-                    <p class="kpi-description">
-                        Max wind speed (m/s)
-                    </p>
-                </div>
+              
             </div>
         </div>
     </section>
@@ -79,35 +84,29 @@
                 <div class="col-md-7">
                     <div class="viz-card content-card">
                         <h2 class="content-card-title">
-                            Title Map #1
+                            Température maximale sur 12 heures (°C) 
                         </h2>
-                        <ods-dataset-context context="ctx"
-                                             ctx-domain="userclub"
-                                             ctx-dataset="base-nationale-des-lieux-de-covoiturage-en-france"
-                                             ctx-parameters="{'refine.reg_name':'Pays de la Loire'}">
-                            <ods-map context="ctx" scroll-wheel-zoom="false" basemap="jawg.streets"></ods-map>
-
-                        </ods-dataset-context>
+                            <ods-map no-refit="false" scroll-wheel-zoom="false" basemap="jawg.light" 
+                            location="5,46.54375,2.41699" max-zoom="10">
+                                <ods-map-layer-group>
+                                    <ods-map-layer context="synop" color-gradient="{'1':'#FF2A0F','0.25':'#F7EB0C','0.5':'#F9B50D','0.75':'#FF7007'}" picto="ods-circle" show-marker="true" display="heatmap"radius="4" function="AVG" expression="tx12c" shape-opacity="0.5" point-opacity="1" border-color="#FFFFFF" border-opacity="1" border-size="1" border-pattern="solid" size-function="linear"></ods-map-layer>
+                                </ods-map-layer-group>
+                            </ods-map>
+                        
                     </div>
                 </div>
                 <div class="col-md-5">
                     <div class="viz-card content-card">
                         <h2 class="content-card-title">
-                            Title Chart #1
+                           Communes les plus chaudes
                         </h2>
-                        <ods-dataset-context context="ctx"
-                                             ctx-domain="userclub"
-                                             ctx-dataset="base-nationale-des-lieux-de-covoiturage-en-france"
-                                             ctx-parameters="{'timezone':'Europe/Berlin'}">
-                            <ods-chart single-y-axis="true" scientific-display="true" labels-x-length="20"
-                                       align-month="true">
-                                <ods-chart-query context="ctx" field-x="reg_name" maxpoints="0" sort="serie1-1">
-                                    <ods-chart-serie expression-y="spot_size" chart-type="bar" function-y="SUM"
-                                                     color="#EC643C" scientific-display="true">
+                            <ods-chart single-y-axis="true" scientific-display="false" labels-x-length="20" align-month="true">
+                                <ods-chart-query context="synop" field-x="libgeo" maxpoints="10" sort="serie1-1">
+                                    <ods-chart-serie expression-y="tc" chart-type="bar" function-y="AVG" label-y="Température moyenne (°C)" color="#FF515A" scientific-display="true">
                                     </ods-chart-serie>
                                 </ods-chart-query>
                             </ods-chart>
-                        </ods-dataset-context>
+                        
                     </div>
                 </div>
             </div>
@@ -115,42 +114,29 @@
                 <div class="col-md-6">
                     <div class="viz-card content-card">
                         <h2 class="content-card-title">
-                            Title Chart #1
+                            Évolution des précipitations
                         </h2>
-                        <ods-dataset-context context="ctx"
-                                             ctx-domain="userclub"
-                                             ctx-dataset="base-nationale-des-lieux-de-covoiturage-en-france"
-                                             ctx-parameters="{'timezone':'Europe/Berlin'}">
-                            <ods-chart single-y-axis="true" scientific-display="true" labels-x-length="20"
-                                       align-month="true">
-                                <ods-chart-query context="ctx" field-x="reg_name" maxpoints="0" sort="serie1-1">
-                                    <ods-chart-serie expression-y="spot_size" chart-type="bar" function-y="SUM"
-                                                     color="#EC643C" scientific-display="true">
+                            <ods-chart timescale="year" single-y-axis="true" scientific-display="false" labels-x-length="20" align-month="true">
+                                <ods-chart-query context="synop" field-x="date" maxpoints="10" timescale="day" sort="serie1-1">
+                                    <ods-chart-serie expression-y="rr24" chart-type="areaspline" function-y="AVG" color="#1B6698" scientific-display="true"
+                                    label-y="Précipitations moyennes dans les dernières 24h">
                                     </ods-chart-serie>
                                 </ods-chart-query>
                             </ods-chart>
-                        </ods-dataset-context>
-                    </div>
+                                                                    </div>
                 </div>
                 <div class="col-md-6">
                     <div class="viz-card content-card">
                         <h2 class="content-card-title">
-                            Title Chart #1
+                           Évolution des températures moyennes (°C)
                         </h2>
-                        <ods-dataset-context context="ctx"
-                                             ctx-domain="userclub"
-                                             ctx-dataset="base-nationale-des-lieux-de-covoiturage-en-france"
-                                             ctx-parameters="{'timezone':'Europe/Berlin'}">
-                            <ods-chart single-y-axis="true" scientific-display="true" labels-x-length="20"
-                                       align-month="true">
-                                <ods-chart-query context="ctx" field-x="reg_name" maxpoints="0" sort="serie1-1">
-                                    <ods-chart-serie expression-y="spot_size" chart-type="bar" function-y="SUM"
-                                                     color="#EC643C" scientific-display="true">
+                            <ods-chart scientific-display="false" align-month="true">
+                                <ods-chart-query context="synop" field-x="date" maxpoints="0" timescale="day">
+                                    <ods-chart-serie expression-y="tc" chart-type="column" function-y="AVG" color="#FF515A" scientific-display="true" label-y="Température moyenne (°C)">
                                     </ods-chart-serie>
                                 </ods-chart-query>
                             </ods-chart>
-                        </ods-dataset-context>
-                    </div>
+                                            </div>
                 </div>
             </div>
         </div>

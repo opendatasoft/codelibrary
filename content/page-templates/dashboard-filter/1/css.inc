@@ -45,7 +45,7 @@ section {
     align-items: center;
 }
 
-.shared-width-ods-selects > .odswidget-select {
+.shared-width-ods-selects > div >.odswidget-select {
     margin: 3px 6px 3px 0px;
     flex: 1;
     /*
