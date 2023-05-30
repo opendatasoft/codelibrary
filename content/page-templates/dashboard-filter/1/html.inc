@@ -124,17 +124,13 @@
                         <h2 class="content-card-title">
                             Évolution des précipitations
                         </h2>
-                        <ods-chart timescale="year" single-y-axis="true" scientific-display="false" labels-x-length="20"
-                                   align-month="true">
-                            <ods-chart-query context="synop" field-x="date" maxpoints="10" timescale="day"
-                                             sort="serie1-1">
-                                <ods-chart-serie expression-y="rr24" chart-type="areaspline" function-y="AVG"
-                                                 color="#1B6698" scientific-display="true"
-                                                 label-y="Précipitations moyennes dans les dernières 24h">
-                                </ods-chart-serie>
-                            </ods-chart-query>
-                        </ods-chart>
-                    </div>
+                            <ods-chart scientific-display="false" align-month="true">
+                                <ods-chart-query context="synop" field-x="date" maxpoints="0" timescale="month">
+                                    <ods-chart-serie expression-y="rr24" chart-type="areaspline" function-y="AVG" color="#1B6698" scientific-display="true"  label-y="Précipitations moyennes dans les 24 dernières heures">
+                                    </ods-chart-serie>
+                                </ods-chart-query>
+                            </ods-chart>
+                                            </div>
                 </div>
                 <div class="col-md-6">
                     <div class="viz-card content-card">
@@ -142,7 +138,7 @@
                             Évolution des températures moyennes (°C)
                         </h2>
                         <ods-chart scientific-display="false" align-month="true">
-                            <ods-chart-query context="synop" field-x="date" maxpoints="0" timescale="day">
+                            <ods-chart-query context="synop" field-x="date" maxpoints="0" timescale="month">
                                 <ods-chart-serie expression-y="tc" chart-type="column" function-y="AVG" color="#FF515A"
                                                  scientific-display="true" label-y="Température moyenne (°C)">
                                 </ods-chart-serie>
