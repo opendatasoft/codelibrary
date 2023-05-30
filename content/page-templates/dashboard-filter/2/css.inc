@@ -134,7 +134,7 @@ section {
 	line-height: 1.5;
 	font-weight: normal;
 	margin-top: 0;
-	margin-bottom: 13px;
+	margin-bottom: 0px;
 	max-width: 100%;
 }
 .content-card-description {
@@ -186,4 +186,11 @@ section {
 	background-color: var(--secondary-color);
 	color: #FFFFFF;
 	text-decoration: none;
+}
+
+/* Charts
+   ========================================================================== */
+
+rect.highcharts-background {
+    fill: transparent !important;
 }

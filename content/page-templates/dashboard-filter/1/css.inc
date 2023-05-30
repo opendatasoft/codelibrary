@@ -187,3 +187,10 @@ section {
 	color: #FFFFFF;
 	text-decoration: none;
 }
+
+/* Charts
+   ========================================================================== */
+
+rect.highcharts-background {
+    fill: transparent !important;
+}

@@ -46,7 +46,7 @@
                  ods-adv-analysis-select="min(tc) as temperature, max(tc) as maxtemp, avg(tc) as tempmoyenne">
                 <!-- KPI box component -->
                 <div class="viz-card kpi-card">
-                    <i class="kpi-icon fa fa-hospital-o" aria-hidden="true"></i>
+                    <i class="kpi-icon fa fa-thermometer-empty" aria-hidden="true"></i>
                     <p class="kpi-title">
                         {{ analysis[0].temperature | number : 2 }}°C
                     </p>
@@ -54,19 +54,19 @@
                         Température minimale observée
                     </p>
                 </div>
-                                <!-- KPI box component -->
+                <!-- KPI box component -->
                 <div class="viz-card kpi-card">
-                    <i class="kpi-icon fa fa-flag" aria-hidden="true"></i>
+                    <i class="kpi-icon fa fa-thermometer-half" aria-hidden="true"></i>
                     <p class="kpi-title">
                         {{ analysis[0].tempmoyenne | number : 2}} °C
                     </p>
                     <p class="kpi-description">
-                        Température moyenne observée 
+                        Température moyenne observée
                     </p>
                 </div>
                 <!-- KPI box component -->
                 <div class="viz-card kpi-card">
-                    <i class="kpi-icon fa fa-tint" aria-hidden="true"></i>
+                    <i class="kpi-icon fa fa-thermometer-full" aria-hidden="true"></i>
                     <p class="kpi-title">
                         {{ analysis[0].maxtemp | number : 2}} °C
                     </p>
@@ -74,7 +74,7 @@
                         Température maximale observée
                     </p>
                 </div>
-              
+
             </div>
         </div>
     </section>
@@ -84,29 +84,37 @@
                 <div class="col-md-7">
                     <div class="viz-card content-card">
                         <h2 class="content-card-title">
-                            Température maximale sur 12 heures (°C) 
+                            Température maximale sur 12 heures (°C)
                         </h2>
-                            <ods-map no-refit="false" scroll-wheel-zoom="false" basemap="jawg.light" 
-                            location="5,46.54375,2.41699" max-zoom="10">
-                                <ods-map-layer-group>
-                                    <ods-map-layer context="synop" color-gradient="{'1':'#FF2A0F','0.25':'#F7EB0C','0.5':'#F9B50D','0.75':'#FF7007'}" picto="ods-circle" show-marker="true" display="heatmap"radius="4" function="AVG" expression="tx12c" shape-opacity="0.5" point-opacity="1" border-color="#FFFFFF" border-opacity="1" border-size="1" border-pattern="solid" size-function="linear"></ods-map-layer>
-                                </ods-map-layer-group>
-                            </ods-map>
-                        
+                        <ods-map no-refit="false" scroll-wheel-zoom="false" basemap="jawg.light"
+                                 location="5,46.54375,2.41699" max-zoom="10">
+                            <ods-map-layer-group>
+                                <ods-map-layer context="synop"
+                                               color-gradient="{'1':'#FF2A0F','0.25':'#F7EB0C','0.5':'#F9B50D','0.75':'#FF7007'}"
+                                               picto="ods-circle" show-marker="true" display="heatmap" radius="4"
+                                               function="AVG" expression="tx12c" shape-opacity="0.5" point-opacity="1"
+                                               border-color="#FFFFFF" border-opacity="1" border-size="1"
+                                               border-pattern="solid" size-function="linear"></ods-map-layer>
+                            </ods-map-layer-group>
+                        </ods-map>
+
                     </div>
                 </div>
                 <div class="col-md-5">
                     <div class="viz-card content-card">
                         <h2 class="content-card-title">
-                           Communes les plus chaudes
+                            Communes les plus chaudes
                         </h2>
-                            <ods-chart single-y-axis="true" scientific-display="false" labels-x-length="20" align-month="true">
-                                <ods-chart-query context="synop" field-x="libgeo" maxpoints="10" sort="serie1-1">
-                                    <ods-chart-serie expression-y="tc" chart-type="bar" function-y="AVG" label-y="Température moyenne (°C)" color="#FF515A" scientific-display="true">
-                                    </ods-chart-serie>
-                                </ods-chart-query>
-                            </ods-chart>
-                        
+                        <ods-chart single-y-axis="true" scientific-display="false" labels-x-length="20"
+                                   align-month="true">
+                            <ods-chart-query context="synop" field-x="libgeo" maxpoints="10" sort="serie1-1">
+                                <ods-chart-serie expression-y="tc" chart-type="bar" function-y="AVG"
+                                                 label-y="Température moyenne (°C)" color="#FF515A"
+                                                 scientific-display="true">
+                                </ods-chart-serie>
+                            </ods-chart-query>
+                        </ods-chart>
+
                     </div>
                 </div>
             </div>
@@ -116,27 +124,31 @@
                         <h2 class="content-card-title">
                             Évolution des précipitations
                         </h2>
-                            <ods-chart timescale="year" single-y-axis="true" scientific-display="false" labels-x-length="20" align-month="true">
-                                <ods-chart-query context="synop" field-x="date" maxpoints="10" timescale="day" sort="serie1-1">
-                                    <ods-chart-serie expression-y="rr24" chart-type="areaspline" function-y="AVG" color="#1B6698" scientific-display="true"
-                                    label-y="Précipitations moyennes dans les dernières 24h">
-                                    </ods-chart-serie>
-                                </ods-chart-query>
-                            </ods-chart>
-                                                                    </div>
+                        <ods-chart timescale="year" single-y-axis="true" scientific-display="false" labels-x-length="20"
+                                   align-month="true">
+                            <ods-chart-query context="synop" field-x="date" maxpoints="10" timescale="day"
+                                             sort="serie1-1">
+                                <ods-chart-serie expression-y="rr24" chart-type="areaspline" function-y="AVG"
+                                                 color="#1B6698" scientific-display="true"
+                                                 label-y="Précipitations moyennes dans les dernières 24h">
+                                </ods-chart-serie>
+                            </ods-chart-query>
+                        </ods-chart>
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <div class="viz-card content-card">
                         <h2 class="content-card-title">
-                           Évolution des températures moyennes (°C)
+                            Évolution des températures moyennes (°C)
                         </h2>
-                            <ods-chart scientific-display="false" align-month="true">
-                                <ods-chart-query context="synop" field-x="date" maxpoints="0" timescale="day">
-                                    <ods-chart-serie expression-y="tc" chart-type="column" function-y="AVG" color="#FF515A" scientific-display="true" label-y="Température moyenne (°C)">
-                                    </ods-chart-serie>
-                                </ods-chart-query>
-                            </ods-chart>
-                                            </div>
+                        <ods-chart scientific-display="false" align-month="true">
+                            <ods-chart-query context="synop" field-x="date" maxpoints="0" timescale="day">
+                                <ods-chart-serie expression-y="tc" chart-type="column" function-y="AVG" color="#FF515A"
+                                                 scientific-display="true" label-y="Température moyenne (°C)">
+                                </ods-chart-serie>
+                            </ods-chart-query>
+                        </ods-chart>
+                    </div>
                 </div>
             </div>
         </div>
