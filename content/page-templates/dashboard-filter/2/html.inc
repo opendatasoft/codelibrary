@@ -100,7 +100,7 @@ ctxregions.parameters['refine.dep_code'] =
                      ods-adv-analysis="analysis"
                      ods-adv-analysis-context="healthref"
                      ods-adv-analysis-select="count(*) as count">
-                    <i class="kpi-icon fa fa-handshake-o" aria-hidden="true"></i>
+                    <i class="kpi-icon fa fa-hospital-o" aria-hidden="true"></i>
                     <p class="kpi-title">
                         {{ analysis[0].count | number : 0 }}
                     </p>
@@ -113,7 +113,7 @@ ctxregions.parameters['refine.dep_code'] =
                      ods-adv-analysis="analysis"
                      ods-adv-analysis-context="medecins"
                      ods-adv-analysis-select="count(distinct nom) as count">
-                    <i class="kpi-icon fa fa-handshake-o" aria-hidden="true"></i>
+                     <i class="kpi-icon fa fa-user-md" aria-hidden="true"></i>
                     <p class="kpi-title">
                         {{ analysis[0].count | number : 0 }}
                     </p>
