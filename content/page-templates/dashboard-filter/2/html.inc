@@ -15,6 +15,7 @@
                      ng-init="values = {};
                               selected = {}">
 
+    <!-- Création de la liste des départements et régions pour les filtres -->
     <div ods-adv-analysis="regions"
          ods-adv-analysis-context="ctxregions"
          ods-adv-analysis-select="count(*)"
@@ -32,6 +33,7 @@
         {{ values.departements = departements; "" }}
     </div>
 
+    <!-- Bloc filtres -->
     <section class="header">
         <div class="container">
             <div class="heading">
@@ -88,6 +90,8 @@ ctxregions.parameters['refine.dep_code'] =
             </div>
         </div>
     </section>
+
+    <!-- Bloc KPI-->
     <section>
         <div class="container">
             <div class="kpi-container">
@@ -120,6 +124,8 @@ ctxregions.parameters['refine.dep_code'] =
             </div>
         </div>
     </section>
+
+    <!-- Bloc visualisations -->
     <section>
         <div class="container">
             <div class="row">
@@ -157,13 +163,14 @@ ctxregions.parameters['refine.dep_code'] =
                         <h2 class="content-card-title">
                             Montant général constaté
                         </h2>
-                            <ods-chart display-legend="false" scientific-display="false" align-month="true">
-                                <ods-chart-query context="medecins" field-x="libelle_profession" maxpoints="10" sort="serie1-1">
-                                    <ods-chart-serie expression-y="column_19" chart-type="column" function-y="AVG" color="#FF515A" scientific-display="true" label-y="Moyenne en €">
-                                    </ods-chart-serie>
-                                </ods-chart-query>
-                            </ods-chart>
-                        
+                        <ods-chart display-legend="false" scientific-display="false" align-month="true">
+                            <ods-chart-query context="medecins" field-x="libelle_profession" maxpoints="10"
+                                             sort="serie1-1">
+                                <ods-chart-serie expression-y="column_19" chart-type="column" function-y="AVG"
+                                                 color="#FF515A" scientific-display="true" label-y="Moyenne en €">
+                                </ods-chart-serie>
+                            </ods-chart-query>
+                        </ods-chart>
                     </div>
                 </div>
                 <div class="col-md-5">
@@ -174,7 +181,8 @@ ctxregions.parameters['refine.dep_code'] =
                         <ods-chart display-legend="false" scientific-display="false" align-month="true">
                             <ods-chart-query context="healthref" field-x="libcategetab" maxpoints="10" sort="serie1-1">
                                 <ods-chart-serie expression-y="numvoie" chart-type="column" function-y="COUNT"
-                                                 color="#F98C44" scientific-display="true" label-y="Nombre d'établissements">
+                                                 color="#F98C44" scientific-display="true"
+                                                 label-y="Nombre d'établissements">
                                 </ods-chart-serie>
                             </ods-chart-query>
                         </ods-chart>
