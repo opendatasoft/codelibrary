@@ -2,6 +2,7 @@
                      synop-domain="userclub"
                      synop-dataset="observation-synop"
                      synop-parameters="{'disjunctive.nom_reg':true, 'disjunctive.nom_dept':true}">
+    <!-- Bloc header + filtres -->
     <section class="header">
         <div class="container">
             <div class="heading">
@@ -21,7 +22,6 @@
                                     label-modifier="name"
                                     value-modifier="name"
                                     placeholder="Sélectionnez une région"></ods-select>
-
                     </div>
                     <div ods-facet-results="deplist"
                          ods-facet-results-facet-name="nom_dept"
@@ -32,12 +32,12 @@
                                     label-modifier="name"
                                     value-modifier="name"
                                     placeholder="Sélectionnez un département"></ods-select>
-
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <!-- Bloc KPI -->
     <section>
         <div class="container">
             <div class="kpi-container"
@@ -74,10 +74,10 @@
                         Température maximale observée
                     </p>
                 </div>
-
             </div>
         </div>
     </section>
+    <!-- Bloc visualisations -->
     <section>
         <div class="container">
             <div class="row">
@@ -97,7 +97,6 @@
                                                border-pattern="solid" size-function="linear"></ods-map-layer>
                             </ods-map-layer-group>
                         </ods-map>
-
                     </div>
                 </div>
                 <div class="col-md-5">
@@ -114,7 +113,6 @@
                                 </ods-chart-serie>
                             </ods-chart-query>
                         </ods-chart>
-
                     </div>
                 </div>
             </div>
@@ -124,13 +122,15 @@
                         <h2 class="content-card-title">
                             Évolution des précipitations
                         </h2>
-                            <ods-chart scientific-display="false" align-month="true">
-                                <ods-chart-query context="synop" field-x="date" maxpoints="0" timescale="month">
-                                    <ods-chart-serie expression-y="rr24" chart-type="areaspline" function-y="AVG" color="#1B6698" scientific-display="true"  label-y="Précipitations moyennes dans les 24 dernières heures">
-                                    </ods-chart-serie>
-                                </ods-chart-query>
-                            </ods-chart>
-                                            </div>
+                        <ods-chart scientific-display="false" align-month="true">
+                            <ods-chart-query context="synop" field-x="date" maxpoints="0" timescale="month">
+                                <ods-chart-serie expression-y="rr24" chart-type="areaspline" function-y="AVG"
+                                                 color="#1B6698" scientific-display="true"
+                                                 label-y="Précipitations moyennes dans les 24 dernières heures">
+                                </ods-chart-serie>
+                            </ods-chart-query>
+                        </ods-chart>
+                    </div>
                 </div>
                 <div class="col-md-6">
                     <div class="viz-card content-card">
