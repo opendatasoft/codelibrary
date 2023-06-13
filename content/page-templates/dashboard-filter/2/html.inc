@@ -77,17 +77,10 @@ ctxregions.parameters['refine.dep_code'] =
 ""}}
                 </div>
                 <div ng-if="selected.regions.length > 0 ||
-                    selected.departements.length > 0 ||
-                    selected.epcis.length > 0 ||
-                    selected.communes.length > 0">
+                    selected.departements.length > 0 ">
                     <button class="clear-filters-button"
                             ng-click="selected.regions.length = 0;
-                       selected.departements.length = 0;
-                       selected.epcis.length = 0;
-                       selected.communes.length = 0;
-                       values.departements.length = 0;
-                       values.epcis.length = 0;
-                       values.communes.length = 0;">
+                       selected.departements.length = 0;">
                         Reset selection
                         <i class="fa fa-times-circle" aria-hidden="true"></i>
                     </button>
@@ -115,7 +108,7 @@ ctxregions.parameters['refine.dep_code'] =
                 <div class="viz-card kpi-card"
                      ods-adv-analysis="analysis"
                      ods-adv-analysis-context="medecins"
-                     ods-adv-analysis-select="count(*) as count">
+                     ods-adv-analysis-select="count(distinct nom) as count">
                     <i class="kpi-icon fa fa-handshake-o" aria-hidden="true"></i>
                     <p class="kpi-title">
                         {{ analysis[0].count | number : 0 }}
@@ -159,31 +152,29 @@ ctxregions.parameters['refine.dep_code'] =
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-5">
-                    <div class="viz-card content-card">
-                        <h2 class="content-card-title">
-                            Top 10 des professions
-                        </h2>
-                        <ods-chart display-legend="false" scientific-display="false" align-month="true">
-                            <ods-chart-query context="medecins" field-x="libelle_profession" maxpoints="10"
-                                             sort="serie1-1">
-                                <ods-chart-serie expression-y="column_11" chart-type="column" function-y="COUNT"
-                                                 color="#BA0129" scientific-display="true">
-                                </ods-chart-serie>
-                            </ods-chart-query>
-                        </ods-chart>
-
-                    </div>
-                </div>
                 <div class="col-md-7">
                     <div class="viz-card content-card">
                         <h2 class="content-card-title">
-                            Top 10 catégorie d'établissement
+                            Montant général constaté
+                        </h2>
+                            <ods-chart display-legend="false" scientific-display="false" align-month="true">
+                                <ods-chart-query context="medecins" field-x="libelle_profession" maxpoints="10" sort="serie1-1">
+                                    <ods-chart-serie expression-y="column_19" chart-type="column" function-y="AVG" color="#FF515A" scientific-display="true" label-y="Moyenne en €">
+                                    </ods-chart-serie>
+                                </ods-chart-query>
+                            </ods-chart>
+                        
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="viz-card content-card">
+                        <h2 class="content-card-title">
+                            Top 10 des catégories d'établissement
                         </h2>
                         <ods-chart display-legend="false" scientific-display="false" align-month="true">
                             <ods-chart-query context="healthref" field-x="libcategetab" maxpoints="10" sort="serie1-1">
                                 <ods-chart-serie expression-y="numvoie" chart-type="column" function-y="COUNT"
-                                                 color="#F98C44" scientific-display="true">
+                                                 color="#F98C44" scientific-display="true" label-y="Nombre d'établissements">
                                 </ods-chart-serie>
                             </ods-chart-query>
                         </ods-chart>

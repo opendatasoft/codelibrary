@@ -150,24 +150,10 @@ section {
 	line-height: 1.5;
 	font-weight: normal;
 	margin-top: 0;
-	margin-bottom: 0px;
-	max-width: 100%;
-}
-.content-card-description {
-	color: var(--text);
-	font-size: 1rem;
-	line-height: 1.5;
-	font-weight: normal;
-	margin-top: 0;
 	margin-bottom: 26px;
 	max-width: 100%;
 }
-.content-card-icon {
-	color: var(--highlight);
-	font-size: 2rem;
-	margin-bottom: 13px;
-	max-width: 100%;
-}
+
 .content-card-link {
 	color: var(--links);
 	font-weight: bold;
