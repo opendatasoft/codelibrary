@@ -1,72 +1,127 @@
-<ods-dataset-context context="popsexeactivite,popcspactivite"
-                     popsexeactivite-domain="public"
-                     popsexeactivite-dataset="demographyref-france-pop-active-sexe-activite-commune-millesime"
-                     popsexeactivite-parameters="{'disjunctive.reg_name':true, 'disjunctive.dep_name':true}"
-                     popcspactivite-domain="public"
-                     popcspactivite-dataset="demographyref-france-pop-active-csp-activite-commune-millesime"
-                     popcspactivite-parameters="{'disjunctive.reg_name':true, 'disjunctive.dep_name':true}">
+<ods-dataset-context context="healthref,medecins,ctxregions,ctxdepartements"
+                     healthref-domain="public"
+                     healthref-dataset="healthref-france-finess"
+                     healthref-parameters="{'disjunctive.reg_code':true, 'disjunctive.dep_code':true}"
+                     medecins-domain="public"
+                     medecins-dataset="medecins"
+                     medecins-parameters="{'disjunctive.insee_reg':true, 'disjunctive.insee_dep':true}"
+                     ctxregions-dataset="demographyref-france-pop-active-sexe-activite-commune-millesime"
+                     ctxregions-domain="public"
+                     ctxregions-parameters="{'refine.year':'2017','disjunctive.reg_code':true,'disjunctive.dep_code':true,'disjunctive.epci_code':true,'disjunctive.com_arm_code':true}"
+                     ctxdepartements-dataset="demographyref-france-pop-active-sexe-activite-commune-millesime"
+                     ctxdepartements-domain="public"
+                     ctxdepartements-parameters="{'refine.year':'2017','disjunctive.reg_code':true,'disjunctive.dep_code':true,'disjunctive.epci_code':true,'disjunctive.com_arm_code':true}"
+
+                     ng-init="values = {};
+                              selected = {}">
+
+    <div ods-adv-analysis="regions"
+         ods-adv-analysis-context="ctxregions"
+         ods-adv-analysis-select="count(*)"
+         ods-adv-analysis-group-by="reg_code,reg_name"
+         ods-adv-analysis-order-by="reg_name"
+         ods-adv-analysis-limit="300">
+        {{ values.regions = regions; ""}}
+    </div>
+    <div ods-adv-analysis="departements"
+         ods-adv-analysis-context="ctxdepartements"
+         ods-adv-analysis-select="count(*)"
+         ods-adv-analysis-group-by="dep_code,dep_name"
+         ods-adv-analysis-order-by="dep_name"
+         ods-adv-analysis-limit="300">
+        {{ values.departements = departements; "" }}
+    </div>
+
     <section class="header">
         <div class="container">
             <div class="heading">
-                <h1 class="title">Structure de la population active en France
+                <h1 class="title">Offre de santé en France
                 </h1>
                 <p class="description">
-                    Données observées entre 1968 et 2019, par sexe, CSP et activité. 
+                    Données des établissements du domaine sanitaire et social et de l'annuaire Santé
                 </p>
                 Filtrer par :
-                <div class="shared-width-ods-selects">
-                    <div ods-facet-results="reglist"
-                         ods-facet-results-facet-name="reg_name"
-                         ods-facet-results-context="popsexeactivite"
-                         ods-facet-results-sort="alphanum">
-                        <ods-select options="reglist"
-                                    selected-values="popsexeactivite.parameters['refine.reg_name']"
-                                    label-modifier="name"
-                                    value-modifier="name"
-                                    placeholder="Sélectionnez une région"></ods-select>
-                        {{popcspactivite.parameters['refine.reg_name'] = popsexeactivite.parameters['refine.reg_name'] ; ""}}
-                    </div>
-                    <div ods-facet-results="deplist"
-                         ods-facet-results-facet-name="dep_name"
-                         ods-facet-results-context="popsexeactivite"
-                         ods-facet-results-sort="alphanum">
-                        <ods-select options="deplist"
-                                    selected-values="popsexeactivite.parameters['refine.dep_name']"
-                                    label-modifier="name"
-                                    value-modifier="name"
-                                    placeholder="Sélectionnez un département"></ods-select>
-                        {{popcspactivite.parameters['refine.dep_name'] = popsexeactivite.parameters['refine.dep_name'] ; ""}}
-                    </div>
+                <div class="ods-selects">
+
+                    <ods-select selected-values="selected.regions" placeholder="Toutes régions"
+                                label-modifier="reg_name"
+                                value-modifier="{'code':reg_code,'name':reg_name}"
+                                options="values.regions"
+                                multiple="false"
+                                on-change="
+                                healthref.parameters['refine.reg_code'] =
+                                healthref.parameters['refine.dep_code'] = []">
+                    </ods-select>
+
+                    {{
+        medecins.parameters['refine.insee_reg'] =
+        healthref.parameters['refine.reg_code'] =
+        ctxdepartements.parameters['refine.reg_code'] =
+        (selected.regions | toObject:'code' | keys);
+        ""}}
+                    <ods-select selected-values="selected.departements" placeholder="Tous départements"
+                                label-modifier="dep_name"
+                                value-modifier="{'code':dep_code,'name':dep_name}"
+                                options="values.departements"
+                                multiple="false"
+                                on-change="
+                                healthref.parameters['refine.reg_code'] =
+                                healthref.parameters['refine.dep_code'] = []">
+                    </ods-select>
+
+                    {{
+medecins.parameters['refine.insee_dep'] =
+healthref.parameters['refine.dep_code'] =
+ctxregions.parameters['refine.dep_code'] =
+(selected.departements | toObject:'code' | keys);
+""}}
+                </div>
+                <div ng-if="selected.regions.length > 0 ||
+                    selected.departements.length > 0 ||
+                    selected.epcis.length > 0 ||
+                    selected.communes.length > 0">
+                    <button class="clear-filters-button"
+                            ng-click="selected.regions.length = 0;
+                       selected.departements.length = 0;
+                       selected.epcis.length = 0;
+                       selected.communes.length = 0;
+                       values.departements.length = 0;
+                       values.epcis.length = 0;
+                       values.communes.length = 0;">
+                        Reset selection
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </button>
                 </div>
             </div>
         </div>
     </section>
     <section>
         <div class="container">
-            <div class="kpi-container"
-                 ods-adv-analysis="analysis"
-                 ods-adv-analysis-context="popsexeactivite"
-                 ods-adv-analysis-select="sum(value) as sum"
-                 ods-adv-analysis-group-by="variable_label as sexe">
-                 {{analysisfiltered = (analysis | toObject : 'sexe') ; ""}} 
+            <div class="kpi-container">
                 <!-- KPI box component -->
-                <div class="viz-card kpi-card">
+                <div class="viz-card kpi-card"
+                     ods-adv-analysis="analysis"
+                     ods-adv-analysis-context="healthref"
+                     ods-adv-analysis-select="count(*) as count">
                     <i class="kpi-icon fa fa-handshake-o" aria-hidden="true"></i>
                     <p class="kpi-title">
-                        {{ analysisfiltered['Femmes Actifs ayant un emploi'].sum | number : 0 }}
+                        {{ analysis[0].count | number : 0 }}
                     </p>
                     <p class="kpi-description">
-                        Femmes actives ayant un emploi
+                        Établissements du domaine sanitaire et social
                     </p>
                 </div>
                 <!-- KPI box component -->
-                <div class="viz-card kpi-card">
+                <div class="viz-card kpi-card"
+                     ods-adv-analysis="analysis"
+                     ods-adv-analysis-context="medecins"
+                     ods-adv-analysis-select="count(*) as count">
                     <i class="kpi-icon fa fa-handshake-o" aria-hidden="true"></i>
                     <p class="kpi-title">
-                        {{ analysisfiltered['Hommes Actifs ayant un emploi'].sum | number : 0 }}
+                        {{ analysis[0].count | number : 0 }}
                     </p>
                     <p class="kpi-description">
-                        Hommes actifs ayant un emploi
+                        Professionnels de santé
                     </p>
                 </div>
             </div>
@@ -75,36 +130,63 @@
     <section>
         <div class="container">
             <div class="row">
+                <div class="col-md-12">
+                    <div class="viz-card content-card">
+                        <h2 class="content-card-title">
+                            Localisation des établissements et professionnels de santé
+                        </h2>
+                        <ods-map no-refit="false" scroll-wheel-zoom="false" basemap="jawg.light">
+                            <ods-map-layer-group>
+                                <ods-map-layer context="medecins" color="#BA0129" picto="ods-circle" show-marker="true"
+                                               display="auto" shape-opacity="0.5" point-opacity="1"
+                                               border-color="#FFFFFF" border-opacity="1" border-size="1"
+                                               border-pattern="solid" caption="true" caption-picto-color="#E5E5E5"
+                                               size="4" size-min="3" size-max="5"
+                                               size-function="linear"></ods-map-layer>
+                            </ods-map-layer-group>
+                            <ods-map-layer-group>
+                                <ods-map-layer context="healthref" color="#F98C44" picto="ods-circle" show-marker="true"
+                                               display="auto" shape-opacity="0.5" point-opacity="1"
+                                               border-color="#FFFFFF" border-opacity="1" border-size="1"
+                                               border-pattern="solid" caption="true"
+                                               title="Etablissements du domaine sanitaire et social en France"
+                                               description="Liste des établissements du domaine sanitaire et social."
+                                               size="4" size-min="3" size-max="5"
+                                               size-function="linear"></ods-map-layer>
+                            </ods-map-layer-group>
+                        </ods-map>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-md-5">
                     <div class="viz-card content-card">
                         <h2 class="content-card-title">
-                           Évolution de la structure de la population
+                            Top 10 des professions
                         </h2>
-                        <p>par sexe et activité</p>
-                            <ods-chart scientific-display="false" align-month="true">
-                                <ods-chart-query context="popsexeactivite" field-x="year" maxpoints="0" stacked="normal" series-breakdown="variable_label" category-colors="{'Femmes Actifs ayant un emploi':'#00737C','Femmes Chômeurs':'#19630A','Hommes Actifs ayant un emploi':'#F7B133','Hommes Chômeurs':'#F7AB83'}">
-                                    <ods-chart-serie expression-y="value" chart-type="column" function-y="SUM" color="range-Accent" scientific-display="true" label-y="Nombre de personnes">
-                                    </ods-chart-serie>
-                                </ods-chart-query>
-                            </ods-chart>
-                        
-                        
-                        
+                        <ods-chart display-legend="false" scientific-display="false" align-month="true">
+                            <ods-chart-query context="medecins" field-x="libelle_profession" maxpoints="10"
+                                             sort="serie1-1">
+                                <ods-chart-serie expression-y="column_11" chart-type="column" function-y="COUNT"
+                                                 color="#BA0129" scientific-display="true">
+                                </ods-chart-serie>
+                            </ods-chart-query>
+                        </ods-chart>
 
                     </div>
                 </div>
                 <div class="col-md-7">
                     <div class="viz-card content-card">
                         <h2 class="content-card-title">
-                            Top des activités
+                            Top 10 catégorie d'établissement
                         </h2>
-                        <p>par CSP et activité</p>
-                            <ods-chart single-y-axis="true" scientific-display="false" labels-x-length="22" align-month="true">
-                                <ods-chart-query context="popcspactivite" field-x="variable_label" maxpoints="0" sort="serie1-1">
-                                    <ods-chart-serie expression-y="value" chart-type="bar" function-y="SUM" label-y="Nombre de personnes" color="#FF515A" scientific-display="true">
-                                    </ods-chart-serie>
-                                </ods-chart-query>
-                            </ods-chart>      
+                        <ods-chart display-legend="false" scientific-display="false" align-month="true">
+                            <ods-chart-query context="healthref" field-x="libcategetab" maxpoints="10" sort="serie1-1">
+                                <ods-chart-serie expression-y="numvoie" chart-type="column" function-y="COUNT"
+                                                 color="#F98C44" scientific-display="true">
+                                </ods-chart-serie>
+                            </ods-chart-query>
+                        </ods-chart>
                     </div>
                 </div>
             </div>
