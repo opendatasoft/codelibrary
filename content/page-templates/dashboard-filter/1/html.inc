@@ -34,6 +34,15 @@
                                     placeholder="Sélectionnez un département"></ods-select>
                     </div>
                 </div>
+                <div ng-if="synop.parameters['refine.nom_dept'].length>0 ||
+                    synop.parameters['refine.nom_reg'].length>0 ">
+                    <button class="clear-filters-button"
+                            ng-click="synop.parameters['refine.nom_dept'] = undefined;
+                       synop.parameters['refine.nom_reg'] = undefined;">
+                        Effacer la sélection
+                        <i class="fa fa-times-circle" aria-hidden="true"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </section>

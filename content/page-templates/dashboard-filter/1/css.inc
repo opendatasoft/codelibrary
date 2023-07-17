@@ -45,7 +45,7 @@ section {
     align-items: center;
 }
 
-.shared-width-ods-selects > div >.odswidget-select {
+.shared-width-ods-selects > div > .odswidget-select {
     margin: 3px 6px 3px 0px;
     flex: 1;
     /*
@@ -54,6 +54,24 @@ section {
     min-width: 200px;
 }
 
+/***** Clear filters button *****/
+
+.clear-filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.clear-filters-button {
+    background: none;
+    border: none;
+    color: var(--text);
+}
+
+.clear-filters-button:hover {
+    opacity: 0.65;
+}
 
 /* VIZ */
 
@@ -115,77 +133,30 @@ section {
     margin-bottom: 0;
     max-width: 100%;
 }
-.kpi-description-detail {
-    opacity: 0.9;
-    font-style: italic;
-    font-size: 0.9em;
-    margin-top: 0.8em;
-}
 
 /* Content Card
    ========================================================================== */
-   .content-card {
-	padding: 26px;
-	margin-bottom: 20px;
+.content-card {
+    padding: 26px;
+    margin-bottom: 20px;
 }
 .content-card-title {
-	color: var(--titles);
-	font-size: 1.2rem;
-	line-height: 1.5;
-	font-weight: normal;
-	margin-top: 0;
-	margin-bottom: 13px;
-	max-width: 100%;
+    color: var(--titles);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
 }
 .content-card-description {
-	color: var(--text);
-	font-size: 1rem;
-	line-height: 1.5;
-	font-weight: normal;
-	margin-top: 0;
-	margin-bottom: 26px;
-	max-width: 100%;
-}
-.content-card-icon {
-	color: var(--highlight);
-	font-size: 2rem;
-	margin-bottom: 13px;
-	max-width: 100%;
-}
-.content-card-link {
-	color: var(--links);
-	font-weight: bold;
-	-webkit-transition: all .2s;
-	-o-transition: all .2s;
-	transition: all .2s;
-	opacity: 1;
-	max-width: 100%;
-}
-.content-card-link:hover {
-	opacity: .7;
-	text-decoration: none;
-}
-.content-card-button {
-	color: var(--highlight); /* Color for IE */
-	color: var(--secondary-color);
-	border: 1px solid var(--highlight); /* Border color for IE because it doesn't support CSS variables. */
-	border: 1px solid var(--secondary-color);
-    background: transparent;
-	display: inline-block;
-	text-align: center;
-	font-size: .867rem;
-    border-radius: 4px;
-    padding: .5rem 1.15rem;
-    text-decoration: none;
-    -webkit-transition: all .2s;
-    -o-transition: all .2s;
-    transition: all .2s;
-}
-.content-card-button:hover {
-	background-color: var(--highlight); /* Color for IE */
-	background-color: var(--secondary-color);
-	color: #FFFFFF;
-	text-decoration: none;
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 26px;
+    max-width: 100%;
 }
 
 /* Charts

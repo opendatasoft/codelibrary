@@ -5,12 +5,12 @@
                      medecins-domain="public"
                      medecins-dataset="medecins"
                      medecins-parameters="{'disjunctive.insee_reg':true, 'disjunctive.insee_dep':true}"
-                     ctxregions-dataset="demographyref-france-pop-active-sexe-activite-commune-millesime"
+                     ctxregions-dataset="healthref-france-finess"
                      ctxregions-domain="public"
-                     ctxregions-parameters="{'refine.year':'2017','disjunctive.reg_code':true,'disjunctive.dep_code':true,'disjunctive.epci_code':true,'disjunctive.com_arm_code':true}"
-                     ctxdepartements-dataset="demographyref-france-pop-active-sexe-activite-commune-millesime"
+                     ctxregions-parameters="{'disjunctive.reg_code':true}"
+                     ctxdepartements-dataset="healthref-france-finess"
                      ctxdepartements-domain="public"
-                     ctxdepartements-parameters="{'refine.year':'2017','disjunctive.reg_code':true,'disjunctive.dep_code':true,'disjunctive.epci_code':true,'disjunctive.com_arm_code':true}"
+                     ctxdepartements-parameters="{'disjunctive.reg_code':true,'disjunctive.dep_code':true}"
 
                      ng-init="values = {};
                               selected = {}">
@@ -45,7 +45,8 @@
                 Filtrer par :
                 <div class="ods-selects">
 
-                    <ods-select selected-values="selected.regions" placeholder="Toutes régions"
+                    <ods-select selected-values="selected.regions"
+                                placeholder="Toutes régions"
                                 label-modifier="reg_name"
                                 value-modifier="{'code':reg_code,'name':reg_name}"
                                 options="values.regions"
@@ -61,7 +62,8 @@
         ctxdepartements.parameters['refine.reg_code'] =
         (selected.regions | toObject:'code' | keys);
         ""}}
-                    <ods-select selected-values="selected.departements" placeholder="Tous départements"
+                    <ods-select selected-values="selected.departements"
+                                placeholder="Tous départements"
                                 label-modifier="dep_name"
                                 value-modifier="{'code':dep_code,'name':dep_name}"
                                 options="values.departements"
@@ -83,7 +85,7 @@ ctxregions.parameters['refine.dep_code'] =
                     <button class="clear-filters-button"
                             ng-click="selected.regions.length = 0;
                        selected.departements.length = 0;">
-                        Reset selection
+                        Effacer la sélection
                         <i class="fa fa-times-circle" aria-hidden="true"></i>
                     </button>
                 </div>
@@ -113,7 +115,7 @@ ctxregions.parameters['refine.dep_code'] =
                      ods-adv-analysis="analysis"
                      ods-adv-analysis-context="medecins"
                      ods-adv-analysis-select="count(distinct nom) as count">
-                     <i class="kpi-icon fa fa-user-md" aria-hidden="true"></i>
+                    <i class="kpi-icon fa fa-user-md" aria-hidden="true"></i>
                     <p class="kpi-title">
                         {{ analysis[0].count | number : 0 }}
                     </p>
