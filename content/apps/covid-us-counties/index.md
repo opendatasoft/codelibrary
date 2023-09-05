@@ -32,8 +32,6 @@ This page aggregates a number of indicators, with key figures, maps, tables etc.
 
 ## Get the App
 
-Get the code on [Github](https://github.com/opendatasoft/odsapps-perfkpi)
-
-See it live [here](https://perfkpi-odsapps.opendatasoft.com/)
+Get the code on [Github](https://github.com/opendatasoft/ods-cookbook/tree/master/dashboard/covid-us)
 
 Contact us to learn how we can accompany you in implementing this connection with the Waze API.
