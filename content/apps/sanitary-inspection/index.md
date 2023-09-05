@@ -17,7 +17,7 @@ The General Directorate of Food (DGAL) carries out thousands of health inspectio
 
 **The service**
 
-Alim'Confiance is a mobile and desktop web app, connected to the Ministry of Agriculture’s data platform, operated by OpenDataSoft. It is from there that the app retrieves daily results of new inspections. The app offers a cartographic visualization of all the inspected establishments and makes it possible to filter them by types (glacier, cheesemonger, collective catering, etc.) and by their level of hygiene (from "very satisfactory" to "needs urgent changes"). As the results need to be as legible and explicit as possible, a gradual system of smileys has been chosen.
+Alim'Confiance is a mobile and desktop web app, connected to the Ministry of Agriculture’s data platform, operated by Opendatasoft. It is from there that the app retrieves daily results of new inspections. The app offers a cartographic visualization of all the inspected establishments and makes it possible to filter them by types (glacier, cheesemonger, collective catering, etc.) and by their level of hygiene (from "very satisfactory" to "needs urgent changes"). As the results need to be as legible and explicit as possible, a gradual system of smileys has been chosen.
 
 **The ODS Advantage: a poster to print by the restaurant’s owner.** Each inspected establishment is indicated by a pin on the inspection map. By clicking on the marker, a tooltip appears and gives access to a small card that the restaurant owner can print, in the manner of "homemade" banners used by some restaurants on their menu. The information contained in this printable form is generated automatically and informs the consumer about the level of hygiene, the date and the period of validity of its inspection.
 

@@ -17,11 +17,11 @@ You are a reuser of a number of datasets or several data portals, whether your o
 
 **The service**
 
-To push alerts to data consumers, the OpenDataSoft platform integrated the tool Zapier, directly connected to our API. Zapier allows you to program notifications linked to the life cycle of the data you follow. You can choose to receive these alerts via different media: email, text message, Slack, etc.
+To push alerts to data consumers, the Opendatasoft platform integrated the tool Zapier, directly connected to our API. Zapier allows you to program notifications linked to the life cycle of the data you follow. You can choose to receive these alerts via different media: email, text message, Slack, etc.
 
 **The Use Case**
 
-Citilog, a world leader in road traffic monitoring and surveillance, manages the data collected from its cameras through the OpenDataSoft platform. To help with their regular operations and improve their maintenance, the company has set up Zapier alerts in the event of an anomaly, and when a camera is being repaired.
+Citilog, a world leader in road traffic monitoring and surveillance, manages the data collected from its cameras through the Opendatasoft platform. To help with their regular operations and improve their maintenance, the company has set up Zapier alerts in the event of an anomaly, and when a camera is being repaired.
 
 ![Zapier demo home page](https://odsplus.opendatasoft.com/api/v2/catalog/datasets/ods-plus-content-en/files/adfbb294e0b7f2daae068e854452c276)
 
