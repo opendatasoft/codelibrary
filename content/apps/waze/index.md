@@ -1,13 +1,11 @@
 ---
-title: "App - Waze"
-description: "Traffic Diagnostic with Waze"
+title: "Traffic Diagnostic with Waze"
+description: "Enrich your own data with traffic data and observe in real-time the state of traffic across your territory"
 tags: []
 hubspotFormId: 54303c2e-0e50-4acf-ad7e-361fb6498df0
 hubspotPortalId: 2041226
 hubspotCampaignId: 7011p000000ybQYAAY
 ---
-
-# Traffic Diagnostic with Waze 
 
 **Enrich your own data with traffic data and observe in real-time the state of traffic across your territory**
 
@@ -36,13 +34,12 @@ The European Metropolis of Lille (MEL) controls its traffic thanks to traffic se
 
 ![Trends and side-by-side comparison](https://odsplus.opendatasoft.com/api/v2/catalog/datasets/ods-plus-content-en/files/d3935cf2ce6578deca41d6aa6da64893)
 
-
 ## Requirements
 
 - An Opendatasoft platform
 - Be affiliated with the Waze Connected Citizens Program
 
-## Code
+## Get the App
 
 The entire application can be found on [Github](https://github.com/opendatasoft/odsapps-waze)
 
