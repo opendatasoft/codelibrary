@@ -24,9 +24,11 @@ import { connectSearchBox } from 'instantsearch.js/es/connectors'`)}}),bg=j,X={}
                                 <p class="hit-summary">
                                     ${a.print}
                                 </p>
+                                ${a._highlightResult.tags?`
                                 <span class="hit-tags">
                                         Tags: ${a._highlightResult.tags.map(a=>`${a.value}`).join(", ")}
                                 </span>
+                                `:``}
                             </div>
                         </a>
                       `).join("")}
