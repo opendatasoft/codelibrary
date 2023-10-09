@@ -42,7 +42,7 @@
 
             <div>
                 <label for="ft_search_objet_query">
-                    Rechercher dans le champ objet : {{ boamp.parameters['q.objet'] = values.search_objet ? '#search(objet, \"' + values.search_objet + '\")' : undefined }}
+                    Rechercher dans le champ objet : {{ boamp.parameters['q.objet'] = values.search_objet ? '#search(objet, \"' + values.search_objet + '\")' : '' }}
                 </label>
                 <input type="text"
                        id="ft_search_objet_query"
@@ -53,27 +53,20 @@
             </div>
 
             <fieldset ng-if="boamp.parameters">
-                <legend>Type marché : {{ boamp.parameters['refine.type_marche_facette'] }}</legend>
+                <legend>Critères : {{ boamp.parameters['refine.criteres'] }}</legend>
                 <label for="checkbox-service">
-                    Service
+                    Environnementaux
                     <input type="checkbox" id="checkbox-service"
                            ods-toggle-model="boamp.parameters"
-                           ods-toggle-key="refine.type_marche_facette"
-                           ods-toggle-value="Service" />
+                           ods-toggle-key="refine.criteres"
+                           ods-toggle-value="environnementaux" />
                 </label>
                 <label for="checkbox-travaux">
-                    Travaux
+                    Sociaux
                     <input type="checkbox" id="checkbox-travaux"
                            ods-toggle-model="boamp.parameters"
-                           ods-toggle-key="refine.type_marche_facette"
-                           ods-toggle-value="Travaux" />
-                </label>
-                <label for="checkbox-fournitures">
-                    Fournitures
-                    <input type="checkbox" id="checkbox-fournitures"
-                           ods-toggle-model="boamp.parameters"
-                           ods-toggle-key="refine.type_marche_facette"
-                           ods-toggle-value="Fournitures" />
+                           ods-toggle-key="refine.criteres"
+                           ods-toggle-value="sociaux" />
                 </label>
             </fieldset>
 
@@ -101,7 +94,7 @@
                 <!-- calcul des query string sur date pivot du jour pour les recherches lié à l'état de l'avis -->
                 {{ values.statut_avis == 0 ? boamp.parameters['q.etat_avis'] = '(NOT #null(datelimitereponse) AND datelimitereponse>="' + datedujour + '") OR (#null(datelimitereponse) AND datefindiffusion>="' + datedujour + '")' : '' ; '' }}
                 {{ values.statut_avis == 1 ? boamp.parameters['q.etat_avis'] = '(NOT #null(datelimitereponse) AND datelimitereponse<"' + datedujour + '") OR (#null(datelimitereponse) AND datefindiffusion<"' + datedujour + '")' : '' ; '' }}
-                {{ values.statut_avis == 2 ? boamp.parameters['q.etat_avis'] = null : '' ; '' }}
+                {{ values.statut_avis == 2 ? boamp.parameters['q.etat_avis'] = '' : '' ; '' }}
             </fieldset>
 
             <div ng-if="values.motcles">
@@ -120,7 +113,7 @@
 
             <div>
                 <label for="idweb_input_search">
-                    Référence de l’avis (exemple : 21-145897) : {{ boamp.parameters['q.idweb'] = values.idweb ? '#search(idweb, \"' + values.idweb + '\")' : undefined }}
+                    Référence de l’avis (exemple : 21-145897) : {{ boamp.parameters['q.idweb'] = values.idweb ? '#search(idweb, \"' + values.idweb + '\")' : '' }}
                 </label>
                 <input type="text"
                        id="idweb_input_search"

@@ -3,7 +3,6 @@ title: "Advanced search"
 description: "A template to take advantage of AngularJs ng-model directives on HTML forms to develop advanced search pages."
 date: 2023-08-09
 tags: ["search"]
-draft: true
 resources:
 - src: '*/'
   name: folder-:counter
