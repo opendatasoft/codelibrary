@@ -17,7 +17,7 @@ Whether you are a community or a company, your goal is to provide an ever higher
 
 **The service**
 
-Opendatasoft allows you to build a dashboard of performance indicators related to datasets published on your portal. The use of such a tool offers you:
+Opendatasoft allows you to build a dashboard of [performance indicators](https://www.opendatasoft.com/en/glossary/kpi-key-performance-indicator/) related to datasets published on your portal. The use of such a tool offers you:
 
 - an understanding of essential metrics to track your achievements, all in one place.
 - the guarantee that your indicators will always be up to date because synchronized with the datasets of your portal.
