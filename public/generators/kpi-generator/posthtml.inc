@@ -285,7 +285,7 @@ item.strings.debutdelanneeprecedente = (item.values.debutdelannee | momentadd : 
     <div ng-switch-when="SM/SM-1">
         {{
         item.values.filtren = "[" + item.values.nowdumoisprecedent + " TO " + item.values.date + "]";
-        item.values.filtrenmoinsun = "[" + item.values.nowdumoisprecedentprecedent + " TO " + item.values.nowdumoisprecedent + "[";
+        item.values.filtrenmoinsun = "[" + item.values.nowdumoisprecedentprecedent + " TO " + item.values.nowdumoisprecedent + "]";
 
         item.strings.filtrenstart =  item.strings.nowdumoisprecedent;
         item.strings.filtrenend =  item.strings.date;
@@ -346,10 +346,15 @@ item.strings.debutdelanneeprecedente = (item.values.debutdelannee | momentadd : 
                                                      kpidatectxnmoinsun-dataset="{{item.valref_dataset_id}}">
                                     <!-- Apply filters to date kpi contexts from configuration -->
                                     <span ng-if="!item.dataset_advanced_refine_parameters">{{ kpidatectxn.parameters['refine.' + item.dataset_refine_key] = item.dataset_refine_value ; '' }}</span>
-                                    <span ng-if="item.dataset_advanced_refine_parameters">{{ kpidatectxn.parameters = (item.dataset_advanced_refine_parameters.replaceAll('\'','"') | fromjson) ; '' }}</span>
+                                    <span ng-if="item.dataset_advanced_refine_parameters"
+                                          ng-repeat="key in (item.dataset_advanced_refine_parameters | keys)">
+                                        {{ kpidatectxn.parameters[key] = item.dataset_advanced_refine_parameters[key]; '' }}
+                                    </span>
                                     <span ng-if="!item.valref_dataset_advanced_refine_parameters">{{ kpidatectxnmoinsun.parameters['refine.' + item.valref_dataset_refine_key] = item.valref_dataset_refine_value ; '' }}</span>
-                                    <span ng-if="item.valref_dataset_advanced_refine_parameters">{{ kpidatectxnmoinsun.parameters = (item.valref_dataset_advanced_refine_parameters.replaceAll('\'','"') | fromjson) ; '' }}</span>
-
+                                    <span ng-if="item.valref_dataset_advanced_refine_parameters"
+                                          ng-repeat="key in (item.valref_dataset_advanced_refine_parameters | keys)">
+                                        {{ kpidatectxnmoinsun.parameters[key] = item.valref_dataset_advanced_refine_parameters[key]; '' }}
+                                    </span>
                                     <!-- Then apply filter from computed date ranges -->
                                     {{ kpidatectxn.parameters['q.date'] = item.date_field_id + ':' + item.values.filtren ; '' }}
                                     {{ kpidatectxnmoinsun.parameters['q.date'] = item.date_field_id + ':' + item.values.filtrenmoinsun ; '' }}

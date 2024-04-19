@@ -52,7 +52,7 @@
 
 
 
-/* Side detail as an exemple, you should remove this part and do you own
+/* Side detail as an example, you should remove this part and do you own
 ========================================================================== */
 .pop-in-header {
     margin-bottom: 20px;

@@ -4,7 +4,7 @@
     <ods-simple-tabs>
         <ods-simple-tab label="Velib" 
                         fontawesome-class="bicycle"
-                        keep-content="true">
+                        keep-content="false">
             <p>
                 L’objectif du service Vélib’ Métropole est de faciliter le développement de nouvelles mobilités sur le territoire francilien, en complément de l’offre de transport existante.
             </p>

@@ -1,6 +1,6 @@
 <ods-dataset-context context="ctx"
                        ctx-dataset="shanghai-world-university-ranking"
-                       ctx-domain="public">
+                       ctx-domain="userclub">
       <h3>
           Classement de Shanghai des universités - moyenne du score par ans
       </h3>

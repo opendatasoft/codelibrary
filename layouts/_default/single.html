@@ -1,36 +1,38 @@
 {{ define "title" }} {{ .Title }} &ndash; {{ .Site.Title }} {{ end }}
 {{ define "main"}}
 <section class="section resources">
-  <div class="container is-max-widescreen">
-    <h1 class="title is-1">{{ .CurrentSection.Title }} - {{ .Title }}</h1>
-    <div class="content">
-      {{ .Content }}
-    </div>
-    {{ range sort (.Page.Resources.Match "*/index.md") "Name" }}
-    <article class="block">
-      <h2 class="title is-2" id="{{ .Title | anchorize }}">
-        {{ .Title | markdownify }} {{ if ge .Date (now.AddDate 0 -2 0) }}
-        <span class="tag is-rounded is-info">New</span>
+    <div class="container is-max-widescreen">
+        <h1 class="title is-1">{{ .CurrentSection.Title }} - {{ .Title }}</h1>
+        <div class="content">
+            {{ .Content }}
+        </div>
+        {{ range sort (.Page.Resources.Match "*/index.md") "Name" }}
+        <article class="block">
+            <h2 class="title is-2" id="{{ .Title | anchorize }}">
+                {{ .Title | markdownify }} {{ if ge .Date (now.AddDate 0 -2 0) }}
+                <span class="tag is-rounded is-info">New</span>
+                {{ end }}
+                <a class="is-link anchor" href="#{{ .Title | anchorize | safeURL }}">
+            <span class="icon">
+              <img src="/img/fas-link.svg"/>
+            </span>
+                </a>
+            </h2>
+            <div class="content">
+                {{ .Content }}
+            </div>
+            {{ with .Param "external_url" }}
+            <p class="subtitle">
+                <a target="_blank" href="{{ . }}">See it live!</a>
+            </p>
+            {{ end }}
+            {{ if (not (.Param "nocode")) }}
+                <div class="box">
+                    {{ .Render "example-box" }}
+                </div>
+            {{ end }}
+        </article>
         {{ end }}
-        <a class="is-link anchor" href="#{{ .Title | anchorize | safeURL }}">
-          <span class="icon">
-            <img src="/img/fas-link.svg" />
-          </span>
-        </a>
-      </h2>
-      <div class="content">
-        {{ .Content }}
-      </div>
-      {{ with .Param "external_url" }}
-      <p class="subtitle">
-        <a target="_blank" href="{{ . }}">See it live!</a>
-      </p>
-      {{ end }}
-      <div class="box">
-        {{ .Render "example-box" }}
-      </div>
-    </article>
-    {{ end }}
-  </div>
+    </div>
 </section>
 {{ end }}

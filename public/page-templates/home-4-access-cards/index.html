@@ -1,0 +1,3691 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+       Home page 4 with access cards &ndash; Codelibrary 
+    </title>
+
+    
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-41201218-21"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-41201218-21");
+    </script>
+
+    
+    
+
+    
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css"
+      integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8="
+      crossorigin="anonymous"
+    />
+
+    
+    <link rel="stylesheet" type="text/css" href="/scss/main.css" />
+    
+    
+    <link rel="shortcut icon" href="/ods-favicon.ico" />
+  </head>
+
+  <body>
+    <div class="is-hidden">
+      <svg>
+  <defs>
+    <g id="link-2">
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+    </g>
+
+    <g id="check">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </g>
+
+    <g id="copy">
+      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+    </g>
+
+    <g id="external">
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+      <polyline points="15 3 21 3 21 9"></polyline>
+      <line x1="10" y1="14" x2="21" y2="3"></line>
+    </g>
+
+  </defs>
+</svg>
+
+    </div>
+
+    <nav class="ods-header navbar is-fixed-top"
+     role="navigation"
+     aria-label="Main navigation">
+
+   <button type="button"
+           class="menu-button navbar-burger burger"
+           id="nav-button"
+           data-target="sidebarNavbar"
+           aria-controls="sidebarNavbar"
+           aria-expanded="false"
+           aria-label="Main menu">
+        <img class="ods-header__menu-toggle__openlogo" src="/img/menu-fill.svg" alt="Open documentation menu">
+    </button>
+
+    <a class="ods-header-logo ods-header-logo-link"
+       href="https://help.opendatasoft.com/">
+        <img src="/img/ods-logo-noir.svg" alt="Opendatasoft logo">
+        <span class="ods-header__brandname">
+           Help Center
+        </span>
+    </a>
+
+    <div class="ods-header__nav">
+        <a class="ods-header__nav-item-link"
+           href="https://userguide.opendatasoft.com/">
+            User guide
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://academy.opendatasoft.com/page/homepage">
+            Academy
+        </a>
+        <a class="ods-header__nav-item-link is-active"
+           href="https://codelibrary.opendatasoft.com">
+            Code Library
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://help.opendatasoft.com/widgets/">
+            Widgets
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://help.opendatasoft.com/en/apis/">
+            APIs
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://changes.opendatasoft.com/en">
+            Release Notes
+        </a>
+    </div>
+    <button type="button"
+            class="menu-button navbar-burger burger"
+            id="nav-button"
+            data-target="helphubNavbar"
+            aria-controls="helphubNavbar"
+            aria-expanded="false"
+            aria-label="Main menu">
+        <img class="ods-header__menu-toggle__openlogo" src="/img/apps-custo.svg" alt="Open documentation menu">
+    </button>
+    <div class="navbar-menu" id="helphubNavbar">
+        <a class="ods-header__nav-item-link"
+           href="https://userguide.opendatasoft.com/">
+            User guide
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://academy.opendatasoft.com/page/homepage">
+            Academy
+        </a>
+        <a class="ods-header__nav-item-link is-active"
+           href="https://codelibrary.opendatasoft.com">
+            Code Library
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://help.opendatasoft.com/widgets/">
+            Widgets
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://help.opendatasoft.com/en/apis/">
+            APIs
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://changes.opendatasoft.com/en">
+            Release Notes
+        </a>
+    </div>
+</nav>
+
+
+    <div class="columns is-desktop codelibrary mb-0">
+      <div class="column is-narrow pb-0">
+        <div class="sidebar-search is-hidden-touch">
+  <div class="block search-wrapper">
+    <div id="algolia-box"></div>
+    <div class="search-results-wrapper">
+      <div id="algolia-results"></div>
+    </div>
+  </div>
+</div>
+<aside class="sidebar"
+       id="sidebarNavbar">
+  
+  <div class="sidebar-header">
+    <div class="block">
+      <ul class="menu-list">
+        <p class="menu-label">On this page</p>
+        <li>
+          <a href="#">
+            Top
+          </a>
+        </li>
+        
+        <li>
+          <a href="#preview">
+            Preview
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+  
+  <div class="sidebar-body">
+    
+    
+    <ul class="menu-list">
+      <li>
+        <a class="sidebar-subtitle"
+          href="https://codelibrary.opendatasoft.com">
+          Home
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/apps/"
+        class="sidebar-subtitle">
+        Apps
+        
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/components/"
+        class="sidebar-subtitle">
+        Components
+        
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/custom-views/"
+        class="sidebar-subtitle">
+        Custom views
+        
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/generators/"
+        class="sidebar-subtitle">
+        Generators
+        
+      </a>
+    </li>
+    
+    
+      
+      <li>
+        <a class="sidebar-subtitle " href="/page-templates/">
+          Page templates
+        </a>
+        <ul>
+          
+          <li>
+            <a class="" href="/page-templates/css-grid-framework/">
+              <div>
+                CSS Grid Framework
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/page-templates/dashboard/">
+              <div>
+                Dashboard
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/page-templates/dashboard-layouts/">
+              <div>
+                Dashboard layouts
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/page-templates/dashboard-filter/">
+              <div>
+                Dashboard with filters
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/page-templates/datastory/">
+              <div>
+                Data Story
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/page-templates/dataviz-gallery/">
+              <div>
+                Dataviz gallery page
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/page-templates/fullscreen-map/">
+              <div>
+                Fullscreen map with filters
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/page-templates/home-1/">
+              <div>
+                Home page 1
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/page-templates/home-2/">
+              <div>
+                Home page 2
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/page-templates/home-3/">
+              <div>
+                Home page 3
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="is-active" href="/page-templates/home-4-access-cards/">
+              <div>
+                Home page 4 with access cards
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/page-templates/listing-page/">
+              <div>
+                Listing page
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/page-templates/map-refine/">
+              <div>
+                Map &amp; Refine
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/page-templates/monitoring-dashboard/">
+              <div>
+                Monitoring Dashboard
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/page-templates/observatory/">
+              <div>
+                Observatory
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/page-templates/ods-layout-over-ride/">
+              <div>
+                ODS Layout over-ride
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/page-templates/regional-covid/">
+              <div>
+                Regional COVID-19 Dashboard
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/page-templates/timeline/">
+              <div>
+                Timeline
+                
+                
+              </div>
+            </a>
+          </li>
+          
+        </ul>
+      </li>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/portal-themes/"
+        class="sidebar-subtitle">
+        Portal themes
+        
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/widget-tricks/"
+        class="sidebar-subtitle">
+        Widget tricks
+        
+      </a>
+    </li>
+    
+    
+  </ul>
+  <p class="menu-label">
+    Tags
+  </p>
+  <div class="tags">
+    
+    <a class="tag" href="/tags/aggregation/">
+      aggregation
+    </a>
+    
+    <a class="tag" href="/tags/card/">
+      card
+    </a>
+    
+    <a class="tag" href="/tags/chart/">
+      chart
+    </a>
+    
+    <a class="tag" href="/tags/date/">
+      date
+    </a>
+    
+    <a class="tag" href="/tags/display/">
+      display
+    </a>
+    
+    <a class="tag" href="/tags/filter/">
+      filter
+    </a>
+    
+    <a class="tag" href="/tags/geo/">
+      geo
+    </a>
+    
+    <a class="tag" href="/tags/list/">
+      list
+    </a>
+    
+    <a class="tag" href="/tags/map/">
+      map
+    </a>
+    
+    <a class="tag" href="/tags/navigation/">
+      navigation
+    </a>
+    
+    <a class="tag" href="/tags/ods-adv-analysis/">
+      ods-adv-analysis
+    </a>
+    
+    <a class="tag" href="/tags/ods-aggregation/">
+      ods-aggregation
+    </a>
+    
+    <a class="tag" href="/tags/ods-analysis/">
+      ods-analysis
+    </a>
+    
+    <a class="tag" href="/tags/ods-maps/">
+      ods-maps
+    </a>
+    
+    <a class="tag" href="/tags/ods-subaggregation/">
+      ods-subaggregation
+    </a>
+    
+    <a class="tag" href="/tags/redirection/">
+      redirection
+    </a>
+    
+  </div>
+</div>
+</aside>
+
+      </div>
+      <div class="column codelibrary-content">
+        
+<section class="section resources">
+    <div class="container is-max-widescreen">
+        <h1 class="title is-1">Page Templates - Home page 4 with access cards</h1>
+        <div class="content">
+            <p>This home page integrates the first version of the <a href="https://codelibrary.opendatasoft.com/components/access-card/">component Access cards</a> to highlight redirections to other pages.
+The access cards are inserted in a grid container, so that all the cards have the same height.</p>
+<p><strong>Tips</strong></p>
+<ul>
+<li>You can use another version of the access cards by replacing the HTML between the comments <code>&lt;!--Start Access Card --&gt;</code> and <code>&lt;!--End Access Card --&gt;</code> and the CSS between <code>/*==== Access Cards ====*/</code> and <code>/*==== Homepage Styles ====*/</code></li>
+<li>You can change the background image of the access cards in the HTML file</li>
+<li>You can change the arrow icon of the access card with another icon from <a href="https://fontawesome.com/v4.7.0/icons/">the Fontawesome Library</a></li>
+</ul>
+
+        </div>
+        
+        <article class="block">
+            <h2 class="title is-2" id="preview">
+                Preview 
+                <a class="is-link anchor" href="#preview">
+            <span class="icon">
+              <img src="/img/fas-link.svg"/>
+            </span>
+                </a>
+            </h2>
+            <div class="content">
+                
+            </div>
+            
+            
+                <div class="box">
+                    
+
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+
+
+
+
+<div class="codepen">
+    <form id="form-preview"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+                 "title": "New Pen!",
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "editors": 110,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003c!--\n     The \u003cods-catalog-context\u003e allows other widgets in this page to access the catalog of datasets in this platform.\n     Check the ods-widgets documentation to learn more about ods-catalog-context.\n--\u003e\n\u003cods-catalog-context context=\&#34;catalog\&#34;\u003e\n    \u003c!-- Header Image\n      Check the .home-header class to change the background image\n    --\u003e\n    \u003csection class=\&#34;home-header\&#34;\u003e\u003c/section\u003e\n    \u003c!-- Welcome card and KPI cards --\u003e\n    \u003csection class=\&#34;container\&#34;\u003e\n        \u003cdiv class=\&#34;row row-equal-height\&#34;\u003e\n            \u003cdiv class=\&#34;col-md-4\&#34;\u003e\n                \u003cdiv class=\&#34;welcome-card\&#34;\u003e\n                    \u003ch1 class=\&#34;welcome-card-title\&#34;\u003e\n                        Welcome to\n                        \u003cbr /\u003e\n                        Portal Name\n                    \u003c/h1\u003e\n                    \u003cp class=\&#34;welcome-card-description\&#34;\u003e\n                        Lorem ipsum dolor amet kombucha try-hard biodiesel XOXO scenester\n                        subway tile. Etsy selvage shaman master cleanse activated charcoal.\n                        Celiac hella wayfarers glossier palo santo pork belly. Vape twee\n                        stumptown normcore. Occupy fingerstache listicle etsy.\n                    \u003c/p\u003e\n                    \u003ca href=\&#34;/explore/\&#34; class=\&#34;welcome-card-link\&#34;\u003e\n                        Explore catalog\n                        \u003ci class=\&#34;fa fa-long-arrow-right fa-fw\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                    \u003c/a\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;col-md-4\&#34;\u003e\n                \u003c!-- KPI box component --\u003e\n                \u003cdiv class=\&#34;kpi-card\&#34;\u003e\n                    \u003ci class=\&#34;kpi-icon fa fa-gitlab\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                    \u003cp class=\&#34;kpi-title\&#34;\u003e5,983\u003c/p\u003e\n                    \u003cp class=\&#34;kpi-description\&#34;\u003e\n                        Dignissim suspendisse in est ante in nibh nisl tincidunt eget\n                    \u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;col-md-4\&#34;\u003e\n                \u003c!-- KPI box component --\u003e\n                \u003cdiv class=\&#34;kpi-card\&#34;\u003e\n                    \u003ci class=\&#34;kpi-icon fa fa-houzz\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                    \u003cp class=\&#34;kpi-title\&#34;\u003e18.3k\u003c/p\u003e\n                    \u003cp class=\&#34;kpi-description\&#34;\u003e\n                        Quam vulputate dignissim suspendisse in est ante in nibh. Faucibus\n                        nisl tincidunt eget nullam non nisi est sit amet\n                    \u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/section\u003e\n    \u003c!-- Catalog Search Box --\u003e\n    \u003csection class=\&#34;container\&#34;\u003e\n        \u003c!-- Search box card --\u003e\n        \u003cdiv class=\&#34;search-card\&#34;\u003e\n            \u003ch2 class=\&#34;search-card-title\&#34;\u003eWhat data are you looking for?\u003c/h2\u003e\n            \u003cdiv class=\&#34;search-card-container\&#34;\u003e\n                \u003cods-searchbox\n                        class=\&#34;search-card-searchbox\&#34;\n                        form-id=\&#34;search-form\&#34;\n                        translate=\&#34;placeholder\&#34;\n                        placeholder=\&#34;Search for a dataset\&#34;\u003e\n                \u003c/ods-searchbox\u003e\n                \u003cbutton\n                        type=\&#34;submit\&#34;\n                        form=\&#34;search-form\&#34;\n                        class=\&#34;search-card-submit-button\&#34;\u003e\n                    Search\n                \u003c/button\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/section\u003e\n    \u003csection class=\&#34;container\&#34;\u003e\n        \u003cdiv class=\&#34;access-cards-container\&#34;\u003e\n            \u003c!-- Start Access Card 1 --\u003e\n            \u003ca href=\&#34;#\&#34;\n               class=\&#34;access-card-bg\&#34;\n               style=\&#34;background-image: url(&#39;https://discovery.opendatasoft.com/assets/theme_image/mobility-bg.jpg&#39;);\&#34;\u003e\n                \u003cdiv class=\&#34;access-card\&#34;\u003e\n                    \u003cdiv class=\&#34;access-card-content\&#34;\u003e\n                        \u003ch3 class=\&#34;access-card-pretitle\&#34;\u003eMobility\u003c/h3\u003e\n                        \u003ch2 class=\&#34;access-card-title\&#34;\u003eMap of the bike stations\u003c/h2\u003e\n                        \u003ch4 class=\&#34;access-card-subtitle\&#34;\u003e\n                            Quam vulputate dignissim suspendisse in est ante in nibh. Faucibus nisl tincidunt eget nullam non nisi est sit amet.\n                        \u003c/h4\u003e\n                        \u003cdiv class=\&#34;access-card-description\&#34;\u003e\n                            \u003ch4\u003eCategories\u003c/h4\u003e\n                            \u003cp\u003eTitle category #1 : XXXX\u003c/p\u003e\n                            \u003cp\u003eTitle category #2 : XXXX\u003c/p\u003e\n                            \u003cp\u003eTitle category #3 : XXXX\u003c/p\u003e\n                            \u003cp\u003eTitle category #4 : XXXX\u003c/p\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;access-card-button\&#34;\u003e\n                        \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/a\u003e\n            \u003c!-- End Access Card 1 --\u003e\n            \u003c!-- Start Access Card 2 --\u003e\n            \u003ca href=\&#34;#\&#34;\n               class=\&#34;access-card-bg\&#34;\n               style=\&#34;background-image: url(&#39;https://discovery.opendatasoft.com/assets/theme_image/gastronomy-bg.jpg&#39;);\&#34;\u003e\n                \u003cdiv class=\&#34;access-card\&#34;\u003e\n                    \u003cdiv class=\&#34;access-card-content\&#34;\u003e\n                        \u003ch3 class=\&#34;access-card-pretitle\&#34;\u003eGastronomy\u003c/h3\u003e\n                        \u003ch2 class=\&#34;access-card-title\&#34;\u003eRestaurant of the month\u003c/h2\u003e\n                        \u003ch4 class=\&#34;access-card-subtitle\&#34;\u003e\n                            Massa id neque aliquam vestibulum. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate.\n                        \u003c/h4\u003e\n                        \u003cdiv class=\&#34;access-card-description\&#34;\u003e\n                            \u003ch4\u003eCategorie\u003c/h4\u003e\n                        \u003c/div\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;access-card-button\&#34;\u003e\n                        \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/a\u003e\n            \u003c!-- End Access Card 2 --\u003e\n            \u003c!-- Start Access Card 3 --\u003e\n            \u003ca href=\&#34;#\&#34;\n               class=\&#34;access-card-bg\&#34;\n               style=\&#34;background-image: url(&#39;https://discovery.opendatasoft.com/assets/theme_image/culture-bg.jpg&#39;);\&#34;\u003e\n                \u003cdiv class=\&#34;access-card\&#34;\u003e\n                    \u003cdiv class=\&#34;access-card-content\&#34;\u003e\n                        \u003ch3 class=\&#34;access-card-pretitle\&#34;\u003eCulture\u003c/h3\u003e\n                        \u003ch2 class=\&#34;access-card-title\&#34;\u003eOpened libraries\u003c/h2\u003e\n                        \u003ch4 class=\&#34;access-card-subtitle\&#34;\u003e\n                            Integer malesuada nunc vel risus commodo viverra maecenas. Sem et tortor consequat id porta.\n                        \u003c/h4\u003e\n                    \u003c/div\u003e\n                    \u003cdiv class=\&#34;access-card-button\&#34;\u003e\n                        \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/a\u003e\n            \u003c!-- End Access Card 3 --\u003e\n        \u003c/div\u003e\n    \u003c/section\u003e\n    \u003csection class=\&#34;container\&#34;\u003e\n        \u003cdiv class=\&#34;row\&#34;\u003e\n            \u003cdiv class=\&#34;col-md-4\&#34;\u003e\n                \u003c!-- Most Popular Datasets --\u003e\n                \u003ch2 class=\&#34;home-subtitle\&#34;\u003eMost popular data\u003c/h2\u003e\n                \u003cods-most-popular-datasets\n                        context=\&#34;catalog\&#34;\u003e\u003c/ods-most-popular-datasets\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;col-md-4\&#34;\u003e\n                \u003c!-- Last modified datasets --\u003e\n                \u003ch2 class=\&#34;home-subtitle\&#34;\u003eLast updated data\u003c/h2\u003e\n                \u003cods-last-datasets-feed context=\&#34;catalog\&#34;\u003e\u003c/ods-last-datasets-feed\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;col-md-4\&#34;\u003e\n                \u003c!-- Twitter feed --\u003e\n                \u003ch2 class=\&#34;home-subtitle\&#34;\u003eOn twitter\u003c/h2\u003e\n                \u003cdiv class=\&#34;twitter-timeline-container\&#34;\u003e\n                    \u003c!-- To change the Twitter profile to display go to https://publish.twitter.com/# --\u003e\n                    \u003ca\n                            class=\&#34;twitter-timeline\&#34;\n                            data-height=\&#34;392\&#34;\n                            href=\&#34;https://twitter.com/Opendatasoft?ref_src=twsrc%5Etfw\&#34;\u003eTweets by Opendatasoft\u003c/a\u003e\n                    \u003cscript\n                            async\n                            src=\&#34;https://platform.twitter.com/widgets.js\&#34;\n                            charset=\&#34;utf-8\&#34;\u003e\u003c/script\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/section\u003e\n\u003c/ods-catalog-context\u003e\u003c/div\u003e&#34;,
+                 "css": &#34;/* ==========================================================================\n   Cards\n   ========================================================================== */\n/**\n * Styling for the different types of cards:\n * - Colored Card\n * - Content card\n * - Search box card\n * - KPI card\n * - Image card\n */\n/* Variables \u0026 Shared classes\n   ========================================================================== */\n:root {\n    --secondary-color: #142E7B;\n}\n\n.text-center {\n    text-align: center;\n}\n\n.centered-card {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -ms-flex-direction: column;\n    flex-direction: column;\n    -webkit-box-align: center;\n    -ms-flex-align: center;\n    align-items: center;\n    -webkit-box-pack: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n}\n\n/* Colored Card (Basic card)\n   ========================================================================== */\n.color-card {\n    background-color: var(--links); /* Background color for IE */\n    background-color: var(--secondary-color);\n    color: #FFFFFF;\n    text-align: center;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -ms-flex-direction: column;\n    flex-direction: column;\n    -webkit-box-align: center;\n    -ms-flex-align: center;\n    align-items: center;\n    -webkit-box-pack: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    padding: 39px;\n    border-radius: 4px;\n    margin-bottom: 20px;\n    height: 100%;\n    text-decoration: none;\n    -webkit-transition: all .2s;\n    -o-transition: all .2s;\n    transition: all .2s;\n}\n\n.color-card:hover,\n.color-card:focus {\n    text-decoration: none;\n    -webkit-transform: scale(1.02);\n    -ms-transform: scale(1.02);\n    transform: scale(1.02);\n    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);\n    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);\n}\n\n.color-card-icon {\n    font-size: 2rem;\n    margin-bottom: 13px;\n}\n\n.color-card-picto {\n    width: auto;\n    height: 56px;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n\n.color-card-title {\n    color: inherit;\n    font-size: 1.2rem;\n    line-height: 1.5;\n    font-weight: normal;\n    margin-top: 0;\n    margin-bottom: 0;\n    max-width: 100%;\n}\n\n.color-card-description {\n    font-size: 1rem;\n    line-height: 1.5;\n    font-weight: normal;\n    color: inherit;\n    margin-top: 13px;\n    margin-bottom: 26px;\n    max-width: 100%;\n}\n\n.color-card-link {\n    color: inherit;\n    font-weight: bold;\n    margin-top: auto;\n    max-width: 100%;\n}\n\n/* Content Card\n   ========================================================================== */\n.content-card {\n    background-color: var(--boxes-background);\n    padding: 26px;\n    border-radius: 4px;\n    margin-bottom: 20px;\n    height: 100%;\n}\n\n.content-card-title {\n    color: var(--titles);\n    font-size: 1.2rem;\n    line-height: 1.5;\n    font-weight: normal;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n\n.content-card-description {\n    color: var(--text);\n    font-size: 1rem;\n    line-height: 1.5;\n    font-weight: normal;\n    margin-top: 0;\n    margin-bottom: 26px;\n    max-width: 100%;\n}\n\n.content-card-icon {\n    color: var(--highlight);\n    font-size: 2rem;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n\n.content-card-link {\n    color: var(--links);\n    font-weight: bold;\n    -webkit-transition: all .2s;\n    -o-transition: all .2s;\n    transition: all .2s;\n    opacity: 1;\n    max-width: 100%;\n}\n\n.content-card-link:hover {\n    opacity: .7;\n    text-decoration: none;\n}\n\n.content-card-button {\n    color: var(--highlight); /* Color for IE */\n    color: var(--secondary-color);\n    border: 1px solid var(--highlight); /* Border color for IE because it doesn&#39;t support CSS variables. */\n    border: 1px solid var(--secondary-color);\n    background: transparent;\n    display: inline-block;\n    text-align: center;\n    font-size: .867rem;\n    border-radius: 4px;\n    padding: .5rem 1.15rem;\n    text-decoration: none;\n    -webkit-transition: all .2s;\n    -o-transition: all .2s;\n    transition: all .2s;\n}\n\n.content-card-button:hover {\n    background-color: var(--highlight); /* Color for IE */\n    background-color: var(--secondary-color);\n    color: #FFFFFF;\n    text-decoration: none;\n}\n\n/* Search Box Card\n   ========================================================================== */\n.search-card {\n    background-color: rgba(0, 0, 0, .1);\n    padding: 39px;\n    border-radius: 4px;\n    margin-bottom: 20px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -ms-flex-direction: column;\n    flex-direction: column;\n    -webkit-box-align: stretch;\n    -ms-flex-align: stretch;\n    align-items: stretch;\n    text-align: center;\n    -webkit-box-pack: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    text-align: center;\n}\n\n.search-card-container {\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-pack: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    width: 100%;\n    max-width: 500px;\n    margin: 0 auto;\n}\n\n.search-card-title {\n    color: var(--titles);\n    font-size: 1.2rem;\n    line-height: 1.5;\n    font-weight: normal;\n}\n\n.search-card-searchbox {\n    margin-bottom: 0;\n    -webkit-box-flex: 1;\n    -ms-flex: 1 1 auto;\n    flex: 1 1 auto;\n}\n\n.search-card-searchbox .odswidget-searchbox__box {\n    font-size: 1rem;\n    display: block;\n    width: 100%;\n    max-width: 500px;\n    padding: 8px 13px;\n    border-radius: 4px 0 0 4px;\n    border: none;\n    margin: 0 auto;\n}\n\n.search-card-submit-button {\n    border: none;\n    background-color: var(--highlight);\n    color: #FFFFFF;\n    font-size: .866rem;\n    font-weight: bold;\n    text-align: center;\n    padding: 8px 12px;\n    border-radius: 0 4px 4px 0;\n    -webkit-transition: opacity .2s;\n    -o-transition: opacity .2s;\n    transition: opacity .2s;\n}\n\n.search-card-submit-button:hover {\n    text-decoration: none;\n    opacity: .7;\n}\n\n/* KPI Card\n   ========================================================================== */\n.kpi-card {\n    background-color: var(--boxes-background);\n    height: 100%;\n    padding: 39px;\n    border-radius: 4px;\n    margin-bottom: 20px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -ms-flex-direction: column;\n    flex-direction: column;\n    -webkit-box-align: center;\n    -ms-flex-align: center;\n    align-items: center;\n    text-align: center;\n    -webkit-box-pack: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    text-align: center;\n}\n\n.kpi-icon {\n    color: var(--highlight);\n    color: var(--secondary-color);\n    font-size: 4rem;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n\n.kpi-title {\n    font-weight: normal;\n    color: var(--highlight);\n    font-size: 3.2rem;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n\n.kpi-description {\n    color: var(--text);\n    font-size: 1rem;\n    line-height: 1.5;\n    font-weight: normal;\n    margin-top: 0;\n    margin-bottom: 0;\n    max-width: 100%;\n}\n\n/* Image Card\n   ========================================================================== */\n.image-card {\n    background-color: rgba(0, 0, 0, .1);\n    background-color: var(--secondary-color);\n    color: #FFFFFF;\n    padding: 39px;\n    border-radius: 4px;\n    margin-bottom: 20px;\n    min-height: 300px;\n    height: 100%;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -ms-flex-direction: column;\n    flex-direction: column;\n    -webkit-box-align: stretch;\n    -ms-flex-align: stretch;\n    align-items: stretch;\n    text-align: center;\n    -webkit-box-pack: center;\n    -ms-flex-pack: center;\n    justify-content: center;\n    background-position: center center;\n    background-repeat: no-repeat;\n    background-size: cover;\n    -webkit-transition: all .2s;\n    -o-transition: all .2s;\n    transition: all .2s;\n    text-decoration: none;\n}\n\n.image-card:hover,\n.image-card:focus {\n    text-decoration: none;\n    -webkit-transform: scale(1.02);\n    -ms-transform: scale(1.02);\n    transform: scale(1.02);\n    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);\n    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);\n}\n\n.image-title {\n    color: inherit;\n    font-size: 1.733rem;\n    line-height: 2.26;\n    font-weight: bold;\n    margin-top: 0;\n    margin-bottom: 13px;\n}\n\n.image-description {\n    color: inherit;\n    font-size: 1rem;\n    line-height: 1.5;\n    font-weight: bold;\n    margin: 0;\n}\n\n/* ========================================================================== \nAccess Card Container\n ========================================================================== */\n.access-cards-container {\n    margin-bottom: 20px;\n    display: grid;\n    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));\n    gap: 40px;\n}\n\n/* ========================================================================== \nAccess Cards\n ========================================================================== */\n\n.access-card-bg {\n    background-repeat: no-repeat;\n    background-size: cover;\n    border-radius: 4px;\n    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);\n    transition: all 0.3s;\n    color: var(--text);\n    display: flex;\n    height: 100%;\n    justify-content: center;\n    margin-bottom: 20px;\n}\n\n.access-card-bg:hover {\n    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);\n    text-decoration: none;\n}\n\n.access-card {\n    border-radius: 10px;\n    background-color: #fff;\n    margin: 200px 26px 26px;\n    padding: 26px;\n    width: 100%;\n\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n}\n\n.access-card-pretitle {\n    text-transform: uppercase;\n    color: var(--secondary-color);\n    opacity: 0.7;\n    font-weight: 400;\n    margin: 0px;\n    font-size: 12px;\n}\n\n.access-card-title {\n    font-weight: 400;\n    margin: 10px 0px;\n    font-size: 22px;\n}\n\n.access-card-subtitle {\n    font-size: 16px;\n    font-weight: 400;\n    margin: 0px 0px 10px 0px;\n}\n\n.access-card-description {\n    background-color: var(--boxes-background);\n    padding: 10px;\n}\n\n.access-card-description h4 {\n    font-weight: 700;\n    margin: 5px 0px 0px 0px;\n}\n\n.access-card-description p {\n    margin: 5px 0px;\n}\n\n.access-card-button {\n    color: var(--secondary-color);\n    font-size: 16px;\n    font-weight: 700;\n    display: flex;\n    justify-content: right;\n    align-items: center;\n    width: 100%;\n    padding: 26px 0px 0px 26px;\n}\n\n.access-card-button i {\n    padding-left: 5px;\n    transition: all 0.3s;\n}\n\n.access-card:hover .access-card-button i {\n    transform: translateX(5px);\n}\n\n\n/* ==========================================================================\n   Homepage Styles\n   ========================================================================== */\n/*\nThe CSS rules below will only be applied to the HTML used in the \u003c/\u003e HTML tab\nand will not be applied to other pages of your platform.\nThe &#39;home-&#39; prefix is used for classes that belong to this page only. This makes it easier\nto understand which classes are used here and which ones are in the Platform Theme Stylesheet.\n*/\n/* Shared Styles\n========================================================================== */\n/*\nThese styles are used by different elements in the home page\n*/\nmain {\n    /* Overrides an existing CSS rule so the banner image can be \&#34;edge-to-edge\&#34; */\n    margin: 0;\n}\n\n@media screen and (min-width: 992px) {\n    .row-equal-height {\n        display: -webkit-box;\n        display: -ms-flexbox;\n        display: flex;\n        -ms-flex-wrap: wrap;\n        flex-wrap: wrap;\n        margin-bottom: 20px;\n    }\n\n    /* Fix for early content wrapping in Safari*/\n    .row-equal-height:before,\n    .row-equal-height:after {\n        content: normal;\n    }\n}\n\n.home-subtitle {\n    color: var(--titles);\n    font-size: 1.2rem;\n    line-height: 1.5;\n    font-weight: normal;\n    margin-bottom: 20px;\n}\n\n/* Header Image\n========================================================================== */\n.home-header {\n    margin-bottom: 20px;\n    /* Change this value to make the background image taller or smaller */\n    height: 350px;\n    /* Background color before image loads */\n    background-color: var(--highlight);\n    background-size: cover;\n    /* You can replace the background-image by uploading an image to the portal assets\n    and replacing the text in simple quotes below or use the URL of an image on the web */\n    background-image: url(&#39;https://discovery.opendatasoft.com/assets/theme_image/header-bg.jpg&#39;);\n    /* Position of the background-image on x y axis. Change these values to\n    modify where the image is centered.\n    */\n    background-position: center center;\n}\n\n/* Home welcome card\n========================================================================== */\n.welcome-card {\n    background-color: var(--highlight);\n    color: #FFFFFF;\n    margin-top: -90px;\n    display: -webkit-box;\n    display: -ms-flexbox;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -ms-flex-direction: column;\n    flex-direction: column;\n    -webkit-box-align: start;\n    -ms-flex-align: start;\n    align-items: flex-start;\n    -webkit-box-pack: start;\n    -ms-flex-pack: start;\n    justify-content: flex-start;\n    padding: 39px;\n    border-radius: 4px;\n    margin-bottom: 20px;\n    height: 100%;\n}\n\n.welcome-card-title {\n    color: inherit;\n    font-size: 2.36rem;\n    line-height: 1.5;\n    font-weight: bold;\n    margin-top: 0;\n    margin-bottom: 13px;\n    max-width: 100%;\n}\n\n.welcome-card-description {\n    font-size: 1rem;\n    line-height: 1.5;\n    font-weight: normal;\n    color: inherit;\n    margin-top: 13px;\n    margin-bottom: 26px;\n    max-width: 100%;\n}\n\n@media screen and (min-width: 992px) {\n    .welcome-card-description {\n        margin-bottom: 0;\n    }\n}\n\n.welcome-card-link {\n    color: inherit;\n    font-weight: bold;\n    margin-top: auto;\n    -webkit-transition: all .2s;\n    -o-transition: all .2s;\n    transition: all .2s;\n    opacity: 1;\n    max-width: 100%\n}\n\n.welcome-card-link .fa {\n    position: relative;\n    left: 0;\n    -webkit-transition: all .2s;\n    -o-transition: all .2s;\n    transition: all .2s;\n}\n\n.welcome-card-link:hover {\n    opacity: .7;\n    text-decoration: none;\n}\n\n.welcome-card-link:hover .fa {\n    left: 3px;\n}\n\n@media screen and (min-width: 992px) {\n    .welcome-card {\n        height: 130%;\n        position: relative;\n        top: -30%;\n        margin-top: 0;\n        margin-bottom: 0;\n    }\n}\n\n/* Most Popular / Last Updated datasets section\n========================================================================== */\n.odswidget-most-popular-datasets__datasets,\n.odswidget-last-datasets-feed__datasets {\n    margin-top: 0;\n    margin-bottom: 20px;\n}\n\n.odswidget-most-popular-datasets__dataset,\n.odswidget-last-datasets-feed__dataset {\n    padding: 13px;\n    background-color: #FFFFFF;\n    border-radius: 4px;\n    margin-bottom: 13px;\n}\n\n.odswidget-most-popular-datasets__theme-picto,\n.odswidget-last-datasets-feed__theme-picto {\n    margin-top: 0;\n}\n\n.odswidget-most-popular-datasets__dataset-details,\n.odswidget-last-datasets-feed__dataset-details {\n    margin-left: 46px;\n}\n\n.odswidget-most-popular-datasets__dataset-details-title,\n.odswidget-last-datasets-feed__dataset-details-title {\n    font-size: 1rem;\n}\n\n.odswidget-most-popular-datasets__dataset-details-title a,\n.odswidget-last-datasets-feed__dataset-details-title a {\n    color: var(--titles);\n}\n\n.odswidget-most-popular-datasets__dataset-details-count,\n.odswidget-last-datasets-feed__dataset-details-modified {\n    opacity: .8;\n    border-bottom: none;\n    cursor: default;\n}\n\n.odswidget-most-popular-datasets__dataset-details-count .fa,\n.odswidget-last-datasets-feed__dataset-details-modified .fa {\n    display: none;\n}\n\n.twitter-timeline-container {\n    margin-bottom: 20px;\n}\n&#34;
+               }'>
+    </form>
+</div>
+<div class="ods-content">
+    <div class="box-live-example"
+      style="height: 800px;">
+      <iframe id="iframe-preview"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+                <head>
+                    &lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;
+/&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;
+/&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;
+&gt;&lt;/script&gt;
+
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;
+&gt;&lt;/script&gt;
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;
+&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+  const sourceMonitoringInterceptor = $q =&gt; {
+    return {
+      request: config =&gt; {
+        console.log(config.url);
+        if (config.params)
+          if (config.params.source) delete config.params.source;
+
+        config.url = config.url.replace(
+          &#34;ods-api-monitoring&#34;,
+          &#34;monitoring-copy&#34;
+        );
+        return config;
+      }
+    };
+  };
+
+  angular
+    .module(&#34;ods-widgets&#34;)
+    .config(function(ODSWidgetsConfigProvider, $httpProvider) {
+      ODSWidgetsConfigProvider.setConfig({
+        defaultDomain: &#34;https://userclub.opendatasoft.com/&#34;,
+        basemaps: [
+          {
+            provider: &#34;jawg.light&#34;,
+            label: &#34;Jawg Light&#34;,
+            jawg_apikey: &#34;opendatasoft-community&#34;
+          },
+          {
+            provider: &#34;jawg.streets&#34;,
+            label: &#34;Jawg Streets&#34;,
+            jawg_apikey: &#34;opendatasoft-community&#34;,
+            id: &#34;streets&#34;
+          }
+        ],
+        themes: {
+          default: {
+            url: &#34;/img/ods.svg&#34;
+          },
+          Santé: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Culture, Patrimoine&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Éducation, Formation, Recherche, Enseignement&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Environment: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Transports, Déplacements&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Économie, Business, PME, Développement économique, Emploi&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Administration, Gouvernement, Finances publiques, Citoyenneté&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Justice, Sécurité, Police, Crime&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Sport, Loisirs&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Hébergement, Restauration&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Services, Social&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Checklist: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Usages: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#34;,
+            color: &#34;#1446A0&#34;
+          }
+        },
+        mapPrependAttribution: &#34;Jawg apikey NOT suitable for production&#34;
+      });
+      $httpProvider.interceptors.push(sourceMonitoringInterceptor);
+    });
+&lt;/script&gt;
+
+                    
+                </head>
+                <base href='https://userclub.opendatasoft.com/'>
+                <body>
+                <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
+&lt;!--
+     The &lt;ods-catalog-context&gt; allows other widgets in this page to access the catalog of datasets in this platform.
+     Check the ods-widgets documentation to learn more about ods-catalog-context.
+--&gt;
+&lt;ods-catalog-context context=&#34;catalog&#34;&gt;
+    &lt;!-- Header Image
+      Check the .home-header class to change the background image
+    --&gt;
+    &lt;section class=&#34;home-header&#34;&gt;&lt;/section&gt;
+    &lt;!-- Welcome card and KPI cards --&gt;
+    &lt;section class=&#34;container&#34;&gt;
+        &lt;div class=&#34;row row-equal-height&#34;&gt;
+            &lt;div class=&#34;col-md-4&#34;&gt;
+                &lt;div class=&#34;welcome-card&#34;&gt;
+                    &lt;h1 class=&#34;welcome-card-title&#34;&gt;
+                        Welcome to
+                        &lt;br /&gt;
+                        Portal Name
+                    &lt;/h1&gt;
+                    &lt;p class=&#34;welcome-card-description&#34;&gt;
+                        Lorem ipsum dolor amet kombucha try-hard biodiesel XOXO scenester
+                        subway tile. Etsy selvage shaman master cleanse activated charcoal.
+                        Celiac hella wayfarers glossier palo santo pork belly. Vape twee
+                        stumptown normcore. Occupy fingerstache listicle etsy.
+                    &lt;/p&gt;
+                    &lt;a href=&#34;/explore/&#34; class=&#34;welcome-card-link&#34;&gt;
+                        Explore catalog
+                        &lt;i class=&#34;fa fa-long-arrow-right fa-fw&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-4&#34;&gt;
+                &lt;!-- KPI box component --&gt;
+                &lt;div class=&#34;kpi-card&#34;&gt;
+                    &lt;i class=&#34;kpi-icon fa fa-gitlab&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;p class=&#34;kpi-title&#34;&gt;5,983&lt;/p&gt;
+                    &lt;p class=&#34;kpi-description&#34;&gt;
+                        Dignissim suspendisse in est ante in nibh nisl tincidunt eget
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-4&#34;&gt;
+                &lt;!-- KPI box component --&gt;
+                &lt;div class=&#34;kpi-card&#34;&gt;
+                    &lt;i class=&#34;kpi-icon fa fa-houzz&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;p class=&#34;kpi-title&#34;&gt;18.3k&lt;/p&gt;
+                    &lt;p class=&#34;kpi-description&#34;&gt;
+                        Quam vulputate dignissim suspendisse in est ante in nibh. Faucibus
+                        nisl tincidunt eget nullam non nisi est sit amet
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- Catalog Search Box --&gt;
+    &lt;section class=&#34;container&#34;&gt;
+        &lt;!-- Search box card --&gt;
+        &lt;div class=&#34;search-card&#34;&gt;
+            &lt;h2 class=&#34;search-card-title&#34;&gt;What data are you looking for?&lt;/h2&gt;
+            &lt;div class=&#34;search-card-container&#34;&gt;
+                &lt;ods-searchbox
+                        class=&#34;search-card-searchbox&#34;
+                        form-id=&#34;search-form&#34;
+                        translate=&#34;placeholder&#34;
+                        placeholder=&#34;Search for a dataset&#34;&gt;
+                &lt;/ods-searchbox&gt;
+                &lt;button
+                        type=&#34;submit&#34;
+                        form=&#34;search-form&#34;
+                        class=&#34;search-card-submit-button&#34;&gt;
+                    Search
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;section class=&#34;container&#34;&gt;
+        &lt;div class=&#34;access-cards-container&#34;&gt;
+            &lt;!-- Start Access Card 1 --&gt;
+            &lt;a href=&#34;#&#34;
+               class=&#34;access-card-bg&#34;
+               style=&#34;background-image: url(&#39;https://discovery.opendatasoft.com/assets/theme_image/mobility-bg.jpg&#39;);&#34;&gt;
+                &lt;div class=&#34;access-card&#34;&gt;
+                    &lt;div class=&#34;access-card-content&#34;&gt;
+                        &lt;h3 class=&#34;access-card-pretitle&#34;&gt;Mobility&lt;/h3&gt;
+                        &lt;h2 class=&#34;access-card-title&#34;&gt;Map of the bike stations&lt;/h2&gt;
+                        &lt;h4 class=&#34;access-card-subtitle&#34;&gt;
+                            Quam vulputate dignissim suspendisse in est ante in nibh. Faucibus nisl tincidunt eget nullam non nisi est sit amet.
+                        &lt;/h4&gt;
+                        &lt;div class=&#34;access-card-description&#34;&gt;
+                            &lt;h4&gt;Categories&lt;/h4&gt;
+                            &lt;p&gt;Title category #1 : XXXX&lt;/p&gt;
+                            &lt;p&gt;Title category #2 : XXXX&lt;/p&gt;
+                            &lt;p&gt;Title category #3 : XXXX&lt;/p&gt;
+                            &lt;p&gt;Title category #4 : XXXX&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;access-card-button&#34;&gt;
+                        &lt;i class=&#34;fa fa-long-arrow-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+            &lt;!-- End Access Card 1 --&gt;
+            &lt;!-- Start Access Card 2 --&gt;
+            &lt;a href=&#34;#&#34;
+               class=&#34;access-card-bg&#34;
+               style=&#34;background-image: url(&#39;https://discovery.opendatasoft.com/assets/theme_image/gastronomy-bg.jpg&#39;);&#34;&gt;
+                &lt;div class=&#34;access-card&#34;&gt;
+                    &lt;div class=&#34;access-card-content&#34;&gt;
+                        &lt;h3 class=&#34;access-card-pretitle&#34;&gt;Gastronomy&lt;/h3&gt;
+                        &lt;h2 class=&#34;access-card-title&#34;&gt;Restaurant of the month&lt;/h2&gt;
+                        &lt;h4 class=&#34;access-card-subtitle&#34;&gt;
+                            Massa id neque aliquam vestibulum. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate.
+                        &lt;/h4&gt;
+                        &lt;div class=&#34;access-card-description&#34;&gt;
+                            &lt;h4&gt;Categorie&lt;/h4&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;access-card-button&#34;&gt;
+                        &lt;i class=&#34;fa fa-long-arrow-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+            &lt;!-- End Access Card 2 --&gt;
+            &lt;!-- Start Access Card 3 --&gt;
+            &lt;a href=&#34;#&#34;
+               class=&#34;access-card-bg&#34;
+               style=&#34;background-image: url(&#39;https://discovery.opendatasoft.com/assets/theme_image/culture-bg.jpg&#39;);&#34;&gt;
+                &lt;div class=&#34;access-card&#34;&gt;
+                    &lt;div class=&#34;access-card-content&#34;&gt;
+                        &lt;h3 class=&#34;access-card-pretitle&#34;&gt;Culture&lt;/h3&gt;
+                        &lt;h2 class=&#34;access-card-title&#34;&gt;Opened libraries&lt;/h2&gt;
+                        &lt;h4 class=&#34;access-card-subtitle&#34;&gt;
+                            Integer malesuada nunc vel risus commodo viverra maecenas. Sem et tortor consequat id porta.
+                        &lt;/h4&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;access-card-button&#34;&gt;
+                        &lt;i class=&#34;fa fa-long-arrow-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+            &lt;!-- End Access Card 3 --&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;section class=&#34;container&#34;&gt;
+        &lt;div class=&#34;row&#34;&gt;
+            &lt;div class=&#34;col-md-4&#34;&gt;
+                &lt;!-- Most Popular Datasets --&gt;
+                &lt;h2 class=&#34;home-subtitle&#34;&gt;Most popular data&lt;/h2&gt;
+                &lt;ods-most-popular-datasets
+                        context=&#34;catalog&#34;&gt;&lt;/ods-most-popular-datasets&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-4&#34;&gt;
+                &lt;!-- Last modified datasets --&gt;
+                &lt;h2 class=&#34;home-subtitle&#34;&gt;Last updated data&lt;/h2&gt;
+                &lt;ods-last-datasets-feed context=&#34;catalog&#34;&gt;&lt;/ods-last-datasets-feed&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-4&#34;&gt;
+                &lt;!-- Twitter feed --&gt;
+                &lt;h2 class=&#34;home-subtitle&#34;&gt;On twitter&lt;/h2&gt;
+                &lt;div class=&#34;twitter-timeline-container&#34;&gt;
+                    &lt;!-- To change the Twitter profile to display go to https://publish.twitter.com/# --&gt;
+                    &lt;a
+                            class=&#34;twitter-timeline&#34;
+                            data-height=&#34;392&#34;
+                            href=&#34;https://twitter.com/Opendatasoft?ref_src=twsrc%5Etfw&#34;&gt;Tweets by Opendatasoft&lt;/a&gt;
+                    &lt;script
+                            async
+                            src=&#34;https://platform.twitter.com/widgets.js&#34;
+                            charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/ods-catalog-context&gt;&lt;/div&gt;</div>
+                <style type='text/css'>
+                    /* ==========================================================================
+   Cards
+   ========================================================================== */
+/**
+ * Styling for the different types of cards:
+ * - Colored Card
+ * - Content card
+ * - Search box card
+ * - KPI card
+ * - Image card
+ */
+/* Variables &amp; Shared classes
+   ========================================================================== */
+:root {
+    --secondary-color: #142E7B;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.centered-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+/* Colored Card (Basic card)
+   ========================================================================== */
+.color-card {
+    background-color: var(--links); /* Background color for IE */
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    height: 100%;
+    text-decoration: none;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+
+.color-card:hover,
+.color-card:focus {
+    text-decoration: none;
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transform: scale(1.02);
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+}
+
+.color-card-icon {
+    font-size: 2rem;
+    margin-bottom: 13px;
+}
+
+.color-card-picto {
+    width: auto;
+    height: 56px;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.color-card-title {
+    color: inherit;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 100%;
+}
+
+.color-card-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+    color: inherit;
+    margin-top: 13px;
+    margin-bottom: 26px;
+    max-width: 100%;
+}
+
+.color-card-link {
+    color: inherit;
+    font-weight: bold;
+    margin-top: auto;
+    max-width: 100%;
+}
+
+/* Content Card
+   ========================================================================== */
+.content-card {
+    background-color: var(--boxes-background);
+    padding: 26px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    height: 100%;
+}
+
+.content-card-title {
+    color: var(--titles);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.content-card-description {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 26px;
+    max-width: 100%;
+}
+
+.content-card-icon {
+    color: var(--highlight);
+    font-size: 2rem;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.content-card-link {
+    color: var(--links);
+    font-weight: bold;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    opacity: 1;
+    max-width: 100%;
+}
+
+.content-card-link:hover {
+    opacity: .7;
+    text-decoration: none;
+}
+
+.content-card-button {
+    color: var(--highlight); /* Color for IE */
+    color: var(--secondary-color);
+    border: 1px solid var(--highlight); /* Border color for IE because it doesn&#39;t support CSS variables. */
+    border: 1px solid var(--secondary-color);
+    background: transparent;
+    display: inline-block;
+    text-align: center;
+    font-size: .867rem;
+    border-radius: 4px;
+    padding: .5rem 1.15rem;
+    text-decoration: none;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+
+.content-card-button:hover {
+    background-color: var(--highlight); /* Color for IE */
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* Search Box Card
+   ========================================================================== */
+.search-card {
+    background-color: rgba(0, 0, 0, .1);
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.search-card-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.search-card-title {
+    color: var(--titles);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: normal;
+}
+
+.search-card-searchbox {
+    margin-bottom: 0;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.search-card-searchbox .odswidget-searchbox__box {
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    padding: 8px 13px;
+    border-radius: 4px 0 0 4px;
+    border: none;
+    margin: 0 auto;
+}
+
+.search-card-submit-button {
+    border: none;
+    background-color: var(--highlight);
+    color: #FFFFFF;
+    font-size: .866rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 0 4px 4px 0;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+}
+
+.search-card-submit-button:hover {
+    text-decoration: none;
+    opacity: .7;
+}
+
+/* KPI Card
+   ========================================================================== */
+.kpi-card {
+    background-color: var(--boxes-background);
+    height: 100%;
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.kpi-icon {
+    color: var(--highlight);
+    color: var(--secondary-color);
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.kpi-title {
+    font-weight: normal;
+    color: var(--highlight);
+    font-size: 3.2rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.kpi-description {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 100%;
+}
+
+/* Image Card
+   ========================================================================== */
+.image-card {
+    background-color: rgba(0, 0, 0, .1);
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    min-height: 300px;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    text-decoration: none;
+}
+
+.image-card:hover,
+.image-card:focus {
+    text-decoration: none;
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transform: scale(1.02);
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+}
+
+.image-title {
+    color: inherit;
+    font-size: 1.733rem;
+    line-height: 2.26;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 13px;
+}
+
+.image-description {
+    color: inherit;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* ========================================================================== 
+Access Card Container
+ ========================================================================== */
+.access-cards-container {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 40px;
+}
+
+/* ========================================================================== 
+Access Cards
+ ========================================================================== */
+
+.access-card-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 4px;
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);
+    transition: all 0.3s;
+    color: var(--text);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.access-card-bg:hover {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.access-card {
+    border-radius: 10px;
+    background-color: #fff;
+    margin: 200px 26px 26px;
+    padding: 26px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.access-card-pretitle {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    opacity: 0.7;
+    font-weight: 400;
+    margin: 0px;
+    font-size: 12px;
+}
+
+.access-card-title {
+    font-weight: 400;
+    margin: 10px 0px;
+    font-size: 22px;
+}
+
+.access-card-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px 0px 10px 0px;
+}
+
+.access-card-description {
+    background-color: var(--boxes-background);
+    padding: 10px;
+}
+
+.access-card-description h4 {
+    font-weight: 700;
+    margin: 5px 0px 0px 0px;
+}
+
+.access-card-description p {
+    margin: 5px 0px;
+}
+
+.access-card-button {
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    padding: 26px 0px 0px 26px;
+}
+
+.access-card-button i {
+    padding-left: 5px;
+    transition: all 0.3s;
+}
+
+.access-card:hover .access-card-button i {
+    transform: translateX(5px);
+}
+
+
+/* ==========================================================================
+   Homepage Styles
+   ========================================================================== */
+/*
+The CSS rules below will only be applied to the HTML used in the &lt;/&gt; HTML tab
+and will not be applied to other pages of your platform.
+The &#39;home-&#39; prefix is used for classes that belong to this page only. This makes it easier
+to understand which classes are used here and which ones are in the Platform Theme Stylesheet.
+*/
+/* Shared Styles
+========================================================================== */
+/*
+These styles are used by different elements in the home page
+*/
+main {
+    /* Overrides an existing CSS rule so the banner image can be &#34;edge-to-edge&#34; */
+    margin: 0;
+}
+
+@media screen and (min-width: 992px) {
+    .row-equal-height {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+    /* Fix for early content wrapping in Safari*/
+    .row-equal-height:before,
+    .row-equal-height:after {
+        content: normal;
+    }
+}
+
+.home-subtitle {
+    color: var(--titles);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+/* Header Image
+========================================================================== */
+.home-header {
+    margin-bottom: 20px;
+    /* Change this value to make the background image taller or smaller */
+    height: 350px;
+    /* Background color before image loads */
+    background-color: var(--highlight);
+    background-size: cover;
+    /* You can replace the background-image by uploading an image to the portal assets
+    and replacing the text in simple quotes below or use the URL of an image on the web */
+    background-image: url(&#39;https://discovery.opendatasoft.com/assets/theme_image/header-bg.jpg&#39;);
+    /* Position of the background-image on x y axis. Change these values to
+    modify where the image is centered.
+    */
+    background-position: center center;
+}
+
+/* Home welcome card
+========================================================================== */
+.welcome-card {
+    background-color: var(--highlight);
+    color: #FFFFFF;
+    margin-top: -90px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    height: 100%;
+}
+
+.welcome-card-title {
+    color: inherit;
+    font-size: 2.36rem;
+    line-height: 1.5;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.welcome-card-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+    color: inherit;
+    margin-top: 13px;
+    margin-bottom: 26px;
+    max-width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+    .welcome-card-description {
+        margin-bottom: 0;
+    }
+}
+
+.welcome-card-link {
+    color: inherit;
+    font-weight: bold;
+    margin-top: auto;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    opacity: 1;
+    max-width: 100%
+}
+
+.welcome-card-link .fa {
+    position: relative;
+    left: 0;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+
+.welcome-card-link:hover {
+    opacity: .7;
+    text-decoration: none;
+}
+
+.welcome-card-link:hover .fa {
+    left: 3px;
+}
+
+@media screen and (min-width: 992px) {
+    .welcome-card {
+        height: 130%;
+        position: relative;
+        top: -30%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+/* Most Popular / Last Updated datasets section
+========================================================================== */
+.odswidget-most-popular-datasets__datasets,
+.odswidget-last-datasets-feed__datasets {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.odswidget-most-popular-datasets__dataset,
+.odswidget-last-datasets-feed__dataset {
+    padding: 13px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    margin-bottom: 13px;
+}
+
+.odswidget-most-popular-datasets__theme-picto,
+.odswidget-last-datasets-feed__theme-picto {
+    margin-top: 0;
+}
+
+.odswidget-most-popular-datasets__dataset-details,
+.odswidget-last-datasets-feed__dataset-details {
+    margin-left: 46px;
+}
+
+.odswidget-most-popular-datasets__dataset-details-title,
+.odswidget-last-datasets-feed__dataset-details-title {
+    font-size: 1rem;
+}
+
+.odswidget-most-popular-datasets__dataset-details-title a,
+.odswidget-last-datasets-feed__dataset-details-title a {
+    color: var(--titles);
+}
+
+.odswidget-most-popular-datasets__dataset-details-count,
+.odswidget-last-datasets-feed__dataset-details-modified {
+    opacity: .8;
+    border-bottom: none;
+    cursor: default;
+}
+
+.odswidget-most-popular-datasets__dataset-details-count .fa,
+.odswidget-last-datasets-feed__dataset-details-modified .fa {
+    display: none;
+}
+
+.twitter-timeline-container {
+    margin-bottom: 20px;
+}
+
+                </style>
+                </body>
+              ">
+      </iframe>
+      <div class="buttons has-addons">
+          
+          <button id="tab-show-code" aria-controls="panel-show-code"
+                  class="show-code button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-preview').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    
+    <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
+         class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
+            <div class="level-left">
+                <div class="level-item">
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-preview-html-content"
+                        >
+                          HTML
+                        </a>
+                        
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-preview-css-content"
+                        >
+                          CSS
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
+            </div>
+        </nav>
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-preview-html-content"
+                 data-clipboard="&lt;!--
+     The &lt;ods-catalog-context&gt; allows other widgets in this page to access the catalog of datasets in this platform.
+     Check the ods-widgets documentation to learn more about ods-catalog-context.
+--&gt;
+&lt;ods-catalog-context context=&#34;catalog&#34;&gt;
+    &lt;!-- Header Image
+      Check the .home-header class to change the background image
+    --&gt;
+    &lt;section class=&#34;home-header&#34;&gt;&lt;/section&gt;
+    &lt;!-- Welcome card and KPI cards --&gt;
+    &lt;section class=&#34;container&#34;&gt;
+        &lt;div class=&#34;row row-equal-height&#34;&gt;
+            &lt;div class=&#34;col-md-4&#34;&gt;
+                &lt;div class=&#34;welcome-card&#34;&gt;
+                    &lt;h1 class=&#34;welcome-card-title&#34;&gt;
+                        Welcome to
+                        &lt;br /&gt;
+                        Portal Name
+                    &lt;/h1&gt;
+                    &lt;p class=&#34;welcome-card-description&#34;&gt;
+                        Lorem ipsum dolor amet kombucha try-hard biodiesel XOXO scenester
+                        subway tile. Etsy selvage shaman master cleanse activated charcoal.
+                        Celiac hella wayfarers glossier palo santo pork belly. Vape twee
+                        stumptown normcore. Occupy fingerstache listicle etsy.
+                    &lt;/p&gt;
+                    &lt;a href=&#34;/explore/&#34; class=&#34;welcome-card-link&#34;&gt;
+                        Explore catalog
+                        &lt;i class=&#34;fa fa-long-arrow-right fa-fw&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-4&#34;&gt;
+                &lt;!-- KPI box component --&gt;
+                &lt;div class=&#34;kpi-card&#34;&gt;
+                    &lt;i class=&#34;kpi-icon fa fa-gitlab&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;p class=&#34;kpi-title&#34;&gt;5,983&lt;/p&gt;
+                    &lt;p class=&#34;kpi-description&#34;&gt;
+                        Dignissim suspendisse in est ante in nibh nisl tincidunt eget
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-4&#34;&gt;
+                &lt;!-- KPI box component --&gt;
+                &lt;div class=&#34;kpi-card&#34;&gt;
+                    &lt;i class=&#34;kpi-icon fa fa-houzz&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;p class=&#34;kpi-title&#34;&gt;18.3k&lt;/p&gt;
+                    &lt;p class=&#34;kpi-description&#34;&gt;
+                        Quam vulputate dignissim suspendisse in est ante in nibh. Faucibus
+                        nisl tincidunt eget nullam non nisi est sit amet
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- Catalog Search Box --&gt;
+    &lt;section class=&#34;container&#34;&gt;
+        &lt;!-- Search box card --&gt;
+        &lt;div class=&#34;search-card&#34;&gt;
+            &lt;h2 class=&#34;search-card-title&#34;&gt;What data are you looking for?&lt;/h2&gt;
+            &lt;div class=&#34;search-card-container&#34;&gt;
+                &lt;ods-searchbox
+                        class=&#34;search-card-searchbox&#34;
+                        form-id=&#34;search-form&#34;
+                        translate=&#34;placeholder&#34;
+                        placeholder=&#34;Search for a dataset&#34;&gt;
+                &lt;/ods-searchbox&gt;
+                &lt;button
+                        type=&#34;submit&#34;
+                        form=&#34;search-form&#34;
+                        class=&#34;search-card-submit-button&#34;&gt;
+                    Search
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;section class=&#34;container&#34;&gt;
+        &lt;div class=&#34;access-cards-container&#34;&gt;
+            &lt;!-- Start Access Card 1 --&gt;
+            &lt;a href=&#34;#&#34;
+               class=&#34;access-card-bg&#34;
+               style=&#34;background-image: url(&#39;https://discovery.opendatasoft.com/assets/theme_image/mobility-bg.jpg&#39;);&#34;&gt;
+                &lt;div class=&#34;access-card&#34;&gt;
+                    &lt;div class=&#34;access-card-content&#34;&gt;
+                        &lt;h3 class=&#34;access-card-pretitle&#34;&gt;Mobility&lt;/h3&gt;
+                        &lt;h2 class=&#34;access-card-title&#34;&gt;Map of the bike stations&lt;/h2&gt;
+                        &lt;h4 class=&#34;access-card-subtitle&#34;&gt;
+                            Quam vulputate dignissim suspendisse in est ante in nibh. Faucibus nisl tincidunt eget nullam non nisi est sit amet.
+                        &lt;/h4&gt;
+                        &lt;div class=&#34;access-card-description&#34;&gt;
+                            &lt;h4&gt;Categories&lt;/h4&gt;
+                            &lt;p&gt;Title category #1 : XXXX&lt;/p&gt;
+                            &lt;p&gt;Title category #2 : XXXX&lt;/p&gt;
+                            &lt;p&gt;Title category #3 : XXXX&lt;/p&gt;
+                            &lt;p&gt;Title category #4 : XXXX&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;access-card-button&#34;&gt;
+                        &lt;i class=&#34;fa fa-long-arrow-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+            &lt;!-- End Access Card 1 --&gt;
+            &lt;!-- Start Access Card 2 --&gt;
+            &lt;a href=&#34;#&#34;
+               class=&#34;access-card-bg&#34;
+               style=&#34;background-image: url(&#39;https://discovery.opendatasoft.com/assets/theme_image/gastronomy-bg.jpg&#39;);&#34;&gt;
+                &lt;div class=&#34;access-card&#34;&gt;
+                    &lt;div class=&#34;access-card-content&#34;&gt;
+                        &lt;h3 class=&#34;access-card-pretitle&#34;&gt;Gastronomy&lt;/h3&gt;
+                        &lt;h2 class=&#34;access-card-title&#34;&gt;Restaurant of the month&lt;/h2&gt;
+                        &lt;h4 class=&#34;access-card-subtitle&#34;&gt;
+                            Massa id neque aliquam vestibulum. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate.
+                        &lt;/h4&gt;
+                        &lt;div class=&#34;access-card-description&#34;&gt;
+                            &lt;h4&gt;Categorie&lt;/h4&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;access-card-button&#34;&gt;
+                        &lt;i class=&#34;fa fa-long-arrow-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+            &lt;!-- End Access Card 2 --&gt;
+            &lt;!-- Start Access Card 3 --&gt;
+            &lt;a href=&#34;#&#34;
+               class=&#34;access-card-bg&#34;
+               style=&#34;background-image: url(&#39;https://discovery.opendatasoft.com/assets/theme_image/culture-bg.jpg&#39;);&#34;&gt;
+                &lt;div class=&#34;access-card&#34;&gt;
+                    &lt;div class=&#34;access-card-content&#34;&gt;
+                        &lt;h3 class=&#34;access-card-pretitle&#34;&gt;Culture&lt;/h3&gt;
+                        &lt;h2 class=&#34;access-card-title&#34;&gt;Opened libraries&lt;/h2&gt;
+                        &lt;h4 class=&#34;access-card-subtitle&#34;&gt;
+                            Integer malesuada nunc vel risus commodo viverra maecenas. Sem et tortor consequat id porta.
+                        &lt;/h4&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;access-card-button&#34;&gt;
+                        &lt;i class=&#34;fa fa-long-arrow-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+            &lt;!-- End Access Card 3 --&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;section class=&#34;container&#34;&gt;
+        &lt;div class=&#34;row&#34;&gt;
+            &lt;div class=&#34;col-md-4&#34;&gt;
+                &lt;!-- Most Popular Datasets --&gt;
+                &lt;h2 class=&#34;home-subtitle&#34;&gt;Most popular data&lt;/h2&gt;
+                &lt;ods-most-popular-datasets
+                        context=&#34;catalog&#34;&gt;&lt;/ods-most-popular-datasets&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-4&#34;&gt;
+                &lt;!-- Last modified datasets --&gt;
+                &lt;h2 class=&#34;home-subtitle&#34;&gt;Last updated data&lt;/h2&gt;
+                &lt;ods-last-datasets-feed context=&#34;catalog&#34;&gt;&lt;/ods-last-datasets-feed&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-4&#34;&gt;
+                &lt;!-- Twitter feed --&gt;
+                &lt;h2 class=&#34;home-subtitle&#34;&gt;On twitter&lt;/h2&gt;
+                &lt;div class=&#34;twitter-timeline-container&#34;&gt;
+                    &lt;!-- To change the Twitter profile to display go to https://publish.twitter.com/# --&gt;
+                    &lt;a
+                            class=&#34;twitter-timeline&#34;
+                            data-height=&#34;392&#34;
+                            href=&#34;https://twitter.com/Opendatasoft?ref_src=twsrc%5Etfw&#34;&gt;Tweets by Opendatasoft&lt;/a&gt;
+                    &lt;script
+                            async
+                            src=&#34;https://platform.twitter.com/widgets.js&#34;
+                            charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/ods-catalog-context&gt;"
+                 role="tabpanel">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;!--
+     The &lt;ods-catalog-context&gt; allows other widgets in this page to access the catalog of datasets in this platform.
+     Check the ods-widgets documentation to learn more about ods-catalog-context.
+--&gt;
+&lt;ods-catalog-context context=&#34;catalog&#34;&gt;
+    &lt;!-- Header Image
+      Check the .home-header class to change the background image
+    --&gt;
+    &lt;section class=&#34;home-header&#34;&gt;&lt;/section&gt;
+    &lt;!-- Welcome card and KPI cards --&gt;
+    &lt;section class=&#34;container&#34;&gt;
+        &lt;div class=&#34;row row-equal-height&#34;&gt;
+            &lt;div class=&#34;col-md-4&#34;&gt;
+                &lt;div class=&#34;welcome-card&#34;&gt;
+                    &lt;h1 class=&#34;welcome-card-title&#34;&gt;
+                        Welcome to
+                        &lt;br /&gt;
+                        Portal Name
+                    &lt;/h1&gt;
+                    &lt;p class=&#34;welcome-card-description&#34;&gt;
+                        Lorem ipsum dolor amet kombucha try-hard biodiesel XOXO scenester
+                        subway tile. Etsy selvage shaman master cleanse activated charcoal.
+                        Celiac hella wayfarers glossier palo santo pork belly. Vape twee
+                        stumptown normcore. Occupy fingerstache listicle etsy.
+                    &lt;/p&gt;
+                    &lt;a href=&#34;/explore/&#34; class=&#34;welcome-card-link&#34;&gt;
+                        Explore catalog
+                        &lt;i class=&#34;fa fa-long-arrow-right fa-fw&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;/a&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-4&#34;&gt;
+                &lt;!-- KPI box component --&gt;
+                &lt;div class=&#34;kpi-card&#34;&gt;
+                    &lt;i class=&#34;kpi-icon fa fa-gitlab&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;p class=&#34;kpi-title&#34;&gt;5,983&lt;/p&gt;
+                    &lt;p class=&#34;kpi-description&#34;&gt;
+                        Dignissim suspendisse in est ante in nibh nisl tincidunt eget
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-4&#34;&gt;
+                &lt;!-- KPI box component --&gt;
+                &lt;div class=&#34;kpi-card&#34;&gt;
+                    &lt;i class=&#34;kpi-icon fa fa-houzz&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;p class=&#34;kpi-title&#34;&gt;18.3k&lt;/p&gt;
+                    &lt;p class=&#34;kpi-description&#34;&gt;
+                        Quam vulputate dignissim suspendisse in est ante in nibh. Faucibus
+                        nisl tincidunt eget nullam non nisi est sit amet
+                    &lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;!-- Catalog Search Box --&gt;
+    &lt;section class=&#34;container&#34;&gt;
+        &lt;!-- Search box card --&gt;
+        &lt;div class=&#34;search-card&#34;&gt;
+            &lt;h2 class=&#34;search-card-title&#34;&gt;What data are you looking for?&lt;/h2&gt;
+            &lt;div class=&#34;search-card-container&#34;&gt;
+                &lt;ods-searchbox
+                        class=&#34;search-card-searchbox&#34;
+                        form-id=&#34;search-form&#34;
+                        translate=&#34;placeholder&#34;
+                        placeholder=&#34;Search for a dataset&#34;&gt;
+                &lt;/ods-searchbox&gt;
+                &lt;button
+                        type=&#34;submit&#34;
+                        form=&#34;search-form&#34;
+                        class=&#34;search-card-submit-button&#34;&gt;
+                    Search
+                &lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;section class=&#34;container&#34;&gt;
+        &lt;div class=&#34;access-cards-container&#34;&gt;
+            &lt;!-- Start Access Card 1 --&gt;
+            &lt;a href=&#34;#&#34;
+               class=&#34;access-card-bg&#34;
+               style=&#34;background-image: url(&#39;https://discovery.opendatasoft.com/assets/theme_image/mobility-bg.jpg&#39;);&#34;&gt;
+                &lt;div class=&#34;access-card&#34;&gt;
+                    &lt;div class=&#34;access-card-content&#34;&gt;
+                        &lt;h3 class=&#34;access-card-pretitle&#34;&gt;Mobility&lt;/h3&gt;
+                        &lt;h2 class=&#34;access-card-title&#34;&gt;Map of the bike stations&lt;/h2&gt;
+                        &lt;h4 class=&#34;access-card-subtitle&#34;&gt;
+                            Quam vulputate dignissim suspendisse in est ante in nibh. Faucibus nisl tincidunt eget nullam non nisi est sit amet.
+                        &lt;/h4&gt;
+                        &lt;div class=&#34;access-card-description&#34;&gt;
+                            &lt;h4&gt;Categories&lt;/h4&gt;
+                            &lt;p&gt;Title category #1 : XXXX&lt;/p&gt;
+                            &lt;p&gt;Title category #2 : XXXX&lt;/p&gt;
+                            &lt;p&gt;Title category #3 : XXXX&lt;/p&gt;
+                            &lt;p&gt;Title category #4 : XXXX&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;access-card-button&#34;&gt;
+                        &lt;i class=&#34;fa fa-long-arrow-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+            &lt;!-- End Access Card 1 --&gt;
+            &lt;!-- Start Access Card 2 --&gt;
+            &lt;a href=&#34;#&#34;
+               class=&#34;access-card-bg&#34;
+               style=&#34;background-image: url(&#39;https://discovery.opendatasoft.com/assets/theme_image/gastronomy-bg.jpg&#39;);&#34;&gt;
+                &lt;div class=&#34;access-card&#34;&gt;
+                    &lt;div class=&#34;access-card-content&#34;&gt;
+                        &lt;h3 class=&#34;access-card-pretitle&#34;&gt;Gastronomy&lt;/h3&gt;
+                        &lt;h2 class=&#34;access-card-title&#34;&gt;Restaurant of the month&lt;/h2&gt;
+                        &lt;h4 class=&#34;access-card-subtitle&#34;&gt;
+                            Massa id neque aliquam vestibulum. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate.
+                        &lt;/h4&gt;
+                        &lt;div class=&#34;access-card-description&#34;&gt;
+                            &lt;h4&gt;Categorie&lt;/h4&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;access-card-button&#34;&gt;
+                        &lt;i class=&#34;fa fa-long-arrow-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+            &lt;!-- End Access Card 2 --&gt;
+            &lt;!-- Start Access Card 3 --&gt;
+            &lt;a href=&#34;#&#34;
+               class=&#34;access-card-bg&#34;
+               style=&#34;background-image: url(&#39;https://discovery.opendatasoft.com/assets/theme_image/culture-bg.jpg&#39;);&#34;&gt;
+                &lt;div class=&#34;access-card&#34;&gt;
+                    &lt;div class=&#34;access-card-content&#34;&gt;
+                        &lt;h3 class=&#34;access-card-pretitle&#34;&gt;Culture&lt;/h3&gt;
+                        &lt;h2 class=&#34;access-card-title&#34;&gt;Opened libraries&lt;/h2&gt;
+                        &lt;h4 class=&#34;access-card-subtitle&#34;&gt;
+                            Integer malesuada nunc vel risus commodo viverra maecenas. Sem et tortor consequat id porta.
+                        &lt;/h4&gt;
+                    &lt;/div&gt;
+                    &lt;div class=&#34;access-card-button&#34;&gt;
+                        &lt;i class=&#34;fa fa-long-arrow-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/a&gt;
+            &lt;!-- End Access Card 3 --&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+    &lt;section class=&#34;container&#34;&gt;
+        &lt;div class=&#34;row&#34;&gt;
+            &lt;div class=&#34;col-md-4&#34;&gt;
+                &lt;!-- Most Popular Datasets --&gt;
+                &lt;h2 class=&#34;home-subtitle&#34;&gt;Most popular data&lt;/h2&gt;
+                &lt;ods-most-popular-datasets
+                        context=&#34;catalog&#34;&gt;&lt;/ods-most-popular-datasets&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-4&#34;&gt;
+                &lt;!-- Last modified datasets --&gt;
+                &lt;h2 class=&#34;home-subtitle&#34;&gt;Last updated data&lt;/h2&gt;
+                &lt;ods-last-datasets-feed context=&#34;catalog&#34;&gt;&lt;/ods-last-datasets-feed&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;col-md-4&#34;&gt;
+                &lt;!-- Twitter feed --&gt;
+                &lt;h2 class=&#34;home-subtitle&#34;&gt;On twitter&lt;/h2&gt;
+                &lt;div class=&#34;twitter-timeline-container&#34;&gt;
+                    &lt;!-- To change the Twitter profile to display go to https://publish.twitter.com/# --&gt;
+                    &lt;a
+                            class=&#34;twitter-timeline&#34;
+                            data-height=&#34;392&#34;
+                            href=&#34;https://twitter.com/Opendatasoft?ref_src=twsrc%5Etfw&#34;&gt;Tweets by Opendatasoft&lt;/a&gt;
+                    &lt;script
+                            async
+                            src=&#34;https://platform.twitter.com/widgets.js&#34;
+                            charset=&#34;utf-8&#34;&gt;&lt;/script&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/section&gt;
+&lt;/ods-catalog-context&gt;</code></pre>
+                </div>
+            </div>
+            
+            <div class="js-tabcontent"
+                 id="code-preview-css-content"
+                 data-clipboard="/* ==========================================================================
+   Cards
+   ========================================================================== */
+/**
+ * Styling for the different types of cards:
+ * - Colored Card
+ * - Content card
+ * - Search box card
+ * - KPI card
+ * - Image card
+ */
+/* Variables &amp; Shared classes
+   ========================================================================== */
+:root {
+    --secondary-color: #142E7B;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.centered-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+/* Colored Card (Basic card)
+   ========================================================================== */
+.color-card {
+    background-color: var(--links); /* Background color for IE */
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    height: 100%;
+    text-decoration: none;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+
+.color-card:hover,
+.color-card:focus {
+    text-decoration: none;
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transform: scale(1.02);
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+}
+
+.color-card-icon {
+    font-size: 2rem;
+    margin-bottom: 13px;
+}
+
+.color-card-picto {
+    width: auto;
+    height: 56px;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.color-card-title {
+    color: inherit;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 100%;
+}
+
+.color-card-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+    color: inherit;
+    margin-top: 13px;
+    margin-bottom: 26px;
+    max-width: 100%;
+}
+
+.color-card-link {
+    color: inherit;
+    font-weight: bold;
+    margin-top: auto;
+    max-width: 100%;
+}
+
+/* Content Card
+   ========================================================================== */
+.content-card {
+    background-color: var(--boxes-background);
+    padding: 26px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    height: 100%;
+}
+
+.content-card-title {
+    color: var(--titles);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.content-card-description {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 26px;
+    max-width: 100%;
+}
+
+.content-card-icon {
+    color: var(--highlight);
+    font-size: 2rem;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.content-card-link {
+    color: var(--links);
+    font-weight: bold;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    opacity: 1;
+    max-width: 100%;
+}
+
+.content-card-link:hover {
+    opacity: .7;
+    text-decoration: none;
+}
+
+.content-card-button {
+    color: var(--highlight); /* Color for IE */
+    color: var(--secondary-color);
+    border: 1px solid var(--highlight); /* Border color for IE because it doesn&#39;t support CSS variables. */
+    border: 1px solid var(--secondary-color);
+    background: transparent;
+    display: inline-block;
+    text-align: center;
+    font-size: .867rem;
+    border-radius: 4px;
+    padding: .5rem 1.15rem;
+    text-decoration: none;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+
+.content-card-button:hover {
+    background-color: var(--highlight); /* Color for IE */
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* Search Box Card
+   ========================================================================== */
+.search-card {
+    background-color: rgba(0, 0, 0, .1);
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.search-card-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.search-card-title {
+    color: var(--titles);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: normal;
+}
+
+.search-card-searchbox {
+    margin-bottom: 0;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.search-card-searchbox .odswidget-searchbox__box {
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    padding: 8px 13px;
+    border-radius: 4px 0 0 4px;
+    border: none;
+    margin: 0 auto;
+}
+
+.search-card-submit-button {
+    border: none;
+    background-color: var(--highlight);
+    color: #FFFFFF;
+    font-size: .866rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 0 4px 4px 0;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+}
+
+.search-card-submit-button:hover {
+    text-decoration: none;
+    opacity: .7;
+}
+
+/* KPI Card
+   ========================================================================== */
+.kpi-card {
+    background-color: var(--boxes-background);
+    height: 100%;
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.kpi-icon {
+    color: var(--highlight);
+    color: var(--secondary-color);
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.kpi-title {
+    font-weight: normal;
+    color: var(--highlight);
+    font-size: 3.2rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.kpi-description {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 100%;
+}
+
+/* Image Card
+   ========================================================================== */
+.image-card {
+    background-color: rgba(0, 0, 0, .1);
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    min-height: 300px;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    text-decoration: none;
+}
+
+.image-card:hover,
+.image-card:focus {
+    text-decoration: none;
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transform: scale(1.02);
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+}
+
+.image-title {
+    color: inherit;
+    font-size: 1.733rem;
+    line-height: 2.26;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 13px;
+}
+
+.image-description {
+    color: inherit;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* ========================================================================== 
+Access Card Container
+ ========================================================================== */
+.access-cards-container {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 40px;
+}
+
+/* ========================================================================== 
+Access Cards
+ ========================================================================== */
+
+.access-card-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 4px;
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);
+    transition: all 0.3s;
+    color: var(--text);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.access-card-bg:hover {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.access-card {
+    border-radius: 10px;
+    background-color: #fff;
+    margin: 200px 26px 26px;
+    padding: 26px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.access-card-pretitle {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    opacity: 0.7;
+    font-weight: 400;
+    margin: 0px;
+    font-size: 12px;
+}
+
+.access-card-title {
+    font-weight: 400;
+    margin: 10px 0px;
+    font-size: 22px;
+}
+
+.access-card-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px 0px 10px 0px;
+}
+
+.access-card-description {
+    background-color: var(--boxes-background);
+    padding: 10px;
+}
+
+.access-card-description h4 {
+    font-weight: 700;
+    margin: 5px 0px 0px 0px;
+}
+
+.access-card-description p {
+    margin: 5px 0px;
+}
+
+.access-card-button {
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    padding: 26px 0px 0px 26px;
+}
+
+.access-card-button i {
+    padding-left: 5px;
+    transition: all 0.3s;
+}
+
+.access-card:hover .access-card-button i {
+    transform: translateX(5px);
+}
+
+
+/* ==========================================================================
+   Homepage Styles
+   ========================================================================== */
+/*
+The CSS rules below will only be applied to the HTML used in the &lt;/&gt; HTML tab
+and will not be applied to other pages of your platform.
+The &#39;home-&#39; prefix is used for classes that belong to this page only. This makes it easier
+to understand which classes are used here and which ones are in the Platform Theme Stylesheet.
+*/
+/* Shared Styles
+========================================================================== */
+/*
+These styles are used by different elements in the home page
+*/
+main {
+    /* Overrides an existing CSS rule so the banner image can be &#34;edge-to-edge&#34; */
+    margin: 0;
+}
+
+@media screen and (min-width: 992px) {
+    .row-equal-height {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+    /* Fix for early content wrapping in Safari*/
+    .row-equal-height:before,
+    .row-equal-height:after {
+        content: normal;
+    }
+}
+
+.home-subtitle {
+    color: var(--titles);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+/* Header Image
+========================================================================== */
+.home-header {
+    margin-bottom: 20px;
+    /* Change this value to make the background image taller or smaller */
+    height: 350px;
+    /* Background color before image loads */
+    background-color: var(--highlight);
+    background-size: cover;
+    /* You can replace the background-image by uploading an image to the portal assets
+    and replacing the text in simple quotes below or use the URL of an image on the web */
+    background-image: url(&#39;https://discovery.opendatasoft.com/assets/theme_image/header-bg.jpg&#39;);
+    /* Position of the background-image on x y axis. Change these values to
+    modify where the image is centered.
+    */
+    background-position: center center;
+}
+
+/* Home welcome card
+========================================================================== */
+.welcome-card {
+    background-color: var(--highlight);
+    color: #FFFFFF;
+    margin-top: -90px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    height: 100%;
+}
+
+.welcome-card-title {
+    color: inherit;
+    font-size: 2.36rem;
+    line-height: 1.5;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.welcome-card-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+    color: inherit;
+    margin-top: 13px;
+    margin-bottom: 26px;
+    max-width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+    .welcome-card-description {
+        margin-bottom: 0;
+    }
+}
+
+.welcome-card-link {
+    color: inherit;
+    font-weight: bold;
+    margin-top: auto;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    opacity: 1;
+    max-width: 100%
+}
+
+.welcome-card-link .fa {
+    position: relative;
+    left: 0;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+
+.welcome-card-link:hover {
+    opacity: .7;
+    text-decoration: none;
+}
+
+.welcome-card-link:hover .fa {
+    left: 3px;
+}
+
+@media screen and (min-width: 992px) {
+    .welcome-card {
+        height: 130%;
+        position: relative;
+        top: -30%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+/* Most Popular / Last Updated datasets section
+========================================================================== */
+.odswidget-most-popular-datasets__datasets,
+.odswidget-last-datasets-feed__datasets {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.odswidget-most-popular-datasets__dataset,
+.odswidget-last-datasets-feed__dataset {
+    padding: 13px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    margin-bottom: 13px;
+}
+
+.odswidget-most-popular-datasets__theme-picto,
+.odswidget-last-datasets-feed__theme-picto {
+    margin-top: 0;
+}
+
+.odswidget-most-popular-datasets__dataset-details,
+.odswidget-last-datasets-feed__dataset-details {
+    margin-left: 46px;
+}
+
+.odswidget-most-popular-datasets__dataset-details-title,
+.odswidget-last-datasets-feed__dataset-details-title {
+    font-size: 1rem;
+}
+
+.odswidget-most-popular-datasets__dataset-details-title a,
+.odswidget-last-datasets-feed__dataset-details-title a {
+    color: var(--titles);
+}
+
+.odswidget-most-popular-datasets__dataset-details-count,
+.odswidget-last-datasets-feed__dataset-details-modified {
+    opacity: .8;
+    border-bottom: none;
+    cursor: default;
+}
+
+.odswidget-most-popular-datasets__dataset-details-count .fa,
+.odswidget-last-datasets-feed__dataset-details-modified .fa {
+    display: none;
+}
+
+.twitter-timeline-container {
+    margin-bottom: 20px;
+}
+">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>/* ==========================================================================
+   Cards
+   ========================================================================== */
+/**
+ * Styling for the different types of cards:
+ * - Colored Card
+ * - Content card
+ * - Search box card
+ * - KPI card
+ * - Image card
+ */
+/* Variables &amp; Shared classes
+   ========================================================================== */
+:root {
+    --secondary-color: #142E7B;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.centered-card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+/* Colored Card (Basic card)
+   ========================================================================== */
+.color-card {
+    background-color: var(--links); /* Background color for IE */
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    height: 100%;
+    text-decoration: none;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+
+.color-card:hover,
+.color-card:focus {
+    text-decoration: none;
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transform: scale(1.02);
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+}
+
+.color-card-icon {
+    font-size: 2rem;
+    margin-bottom: 13px;
+}
+
+.color-card-picto {
+    width: auto;
+    height: 56px;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.color-card-title {
+    color: inherit;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 100%;
+}
+
+.color-card-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+    color: inherit;
+    margin-top: 13px;
+    margin-bottom: 26px;
+    max-width: 100%;
+}
+
+.color-card-link {
+    color: inherit;
+    font-weight: bold;
+    margin-top: auto;
+    max-width: 100%;
+}
+
+/* Content Card
+   ========================================================================== */
+.content-card {
+    background-color: var(--boxes-background);
+    padding: 26px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    height: 100%;
+}
+
+.content-card-title {
+    color: var(--titles);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.content-card-description {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 26px;
+    max-width: 100%;
+}
+
+.content-card-icon {
+    color: var(--highlight);
+    font-size: 2rem;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.content-card-link {
+    color: var(--links);
+    font-weight: bold;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    opacity: 1;
+    max-width: 100%;
+}
+
+.content-card-link:hover {
+    opacity: .7;
+    text-decoration: none;
+}
+
+.content-card-button {
+    color: var(--highlight); /* Color for IE */
+    color: var(--secondary-color);
+    border: 1px solid var(--highlight); /* Border color for IE because it doesn&#39;t support CSS variables. */
+    border: 1px solid var(--secondary-color);
+    background: transparent;
+    display: inline-block;
+    text-align: center;
+    font-size: .867rem;
+    border-radius: 4px;
+    padding: .5rem 1.15rem;
+    text-decoration: none;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+
+.content-card-button:hover {
+    background-color: var(--highlight); /* Color for IE */
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+/* Search Box Card
+   ========================================================================== */
+.search-card {
+    background-color: rgba(0, 0, 0, .1);
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.search-card-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.search-card-title {
+    color: var(--titles);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: normal;
+}
+
+.search-card-searchbox {
+    margin-bottom: 0;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.search-card-searchbox .odswidget-searchbox__box {
+    font-size: 1rem;
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    padding: 8px 13px;
+    border-radius: 4px 0 0 4px;
+    border: none;
+    margin: 0 auto;
+}
+
+.search-card-submit-button {
+    border: none;
+    background-color: var(--highlight);
+    color: #FFFFFF;
+    font-size: .866rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 8px 12px;
+    border-radius: 0 4px 4px 0;
+    -webkit-transition: opacity .2s;
+    -o-transition: opacity .2s;
+    transition: opacity .2s;
+}
+
+.search-card-submit-button:hover {
+    text-decoration: none;
+    opacity: .7;
+}
+
+/* KPI Card
+   ========================================================================== */
+.kpi-card {
+    background-color: var(--boxes-background);
+    height: 100%;
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.kpi-icon {
+    color: var(--highlight);
+    color: var(--secondary-color);
+    font-size: 4rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.kpi-title {
+    font-weight: normal;
+    color: var(--highlight);
+    font-size: 3.2rem;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.kpi-description {
+    color: var(--text);
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: 100%;
+}
+
+/* Image Card
+   ========================================================================== */
+.image-card {
+    background-color: rgba(0, 0, 0, .1);
+    background-color: var(--secondary-color);
+    color: #FFFFFF;
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    min-height: 300px;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    text-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    text-decoration: none;
+}
+
+.image-card:hover,
+.image-card:focus {
+    text-decoration: none;
+    -webkit-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    transform: scale(1.02);
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+}
+
+.image-title {
+    color: inherit;
+    font-size: 1.733rem;
+    line-height: 2.26;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 13px;
+}
+
+.image-description {
+    color: inherit;
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* ========================================================================== 
+Access Card Container
+ ========================================================================== */
+.access-cards-container {
+    margin-bottom: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 40px;
+}
+
+/* ========================================================================== 
+Access Cards
+ ========================================================================== */
+
+.access-card-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 4px;
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);
+    transition: all 0.3s;
+    color: var(--text);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.access-card-bg:hover {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.access-card {
+    border-radius: 10px;
+    background-color: #fff;
+    margin: 200px 26px 26px;
+    padding: 26px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.access-card-pretitle {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    opacity: 0.7;
+    font-weight: 400;
+    margin: 0px;
+    font-size: 12px;
+}
+
+.access-card-title {
+    font-weight: 400;
+    margin: 10px 0px;
+    font-size: 22px;
+}
+
+.access-card-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px 0px 10px 0px;
+}
+
+.access-card-description {
+    background-color: var(--boxes-background);
+    padding: 10px;
+}
+
+.access-card-description h4 {
+    font-weight: 700;
+    margin: 5px 0px 0px 0px;
+}
+
+.access-card-description p {
+    margin: 5px 0px;
+}
+
+.access-card-button {
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    padding: 26px 0px 0px 26px;
+}
+
+.access-card-button i {
+    padding-left: 5px;
+    transition: all 0.3s;
+}
+
+.access-card:hover .access-card-button i {
+    transform: translateX(5px);
+}
+
+
+/* ==========================================================================
+   Homepage Styles
+   ========================================================================== */
+/*
+The CSS rules below will only be applied to the HTML used in the &lt;/&gt; HTML tab
+and will not be applied to other pages of your platform.
+The &#39;home-&#39; prefix is used for classes that belong to this page only. This makes it easier
+to understand which classes are used here and which ones are in the Platform Theme Stylesheet.
+*/
+/* Shared Styles
+========================================================================== */
+/*
+These styles are used by different elements in the home page
+*/
+main {
+    /* Overrides an existing CSS rule so the banner image can be &#34;edge-to-edge&#34; */
+    margin: 0;
+}
+
+@media screen and (min-width: 992px) {
+    .row-equal-height {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+
+    /* Fix for early content wrapping in Safari*/
+    .row-equal-height:before,
+    .row-equal-height:after {
+        content: normal;
+    }
+}
+
+.home-subtitle {
+    color: var(--titles);
+    font-size: 1.2rem;
+    line-height: 1.5;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+/* Header Image
+========================================================================== */
+.home-header {
+    margin-bottom: 20px;
+    /* Change this value to make the background image taller or smaller */
+    height: 350px;
+    /* Background color before image loads */
+    background-color: var(--highlight);
+    background-size: cover;
+    /* You can replace the background-image by uploading an image to the portal assets
+    and replacing the text in simple quotes below or use the URL of an image on the web */
+    background-image: url(&#39;https://discovery.opendatasoft.com/assets/theme_image/header-bg.jpg&#39;);
+    /* Position of the background-image on x y axis. Change these values to
+    modify where the image is centered.
+    */
+    background-position: center center;
+}
+
+/* Home welcome card
+========================================================================== */
+.welcome-card {
+    background-color: var(--highlight);
+    color: #FFFFFF;
+    margin-top: -90px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    padding: 39px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    height: 100%;
+}
+
+.welcome-card-title {
+    color: inherit;
+    font-size: 2.36rem;
+    line-height: 1.5;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 13px;
+    max-width: 100%;
+}
+
+.welcome-card-description {
+    font-size: 1rem;
+    line-height: 1.5;
+    font-weight: normal;
+    color: inherit;
+    margin-top: 13px;
+    margin-bottom: 26px;
+    max-width: 100%;
+}
+
+@media screen and (min-width: 992px) {
+    .welcome-card-description {
+        margin-bottom: 0;
+    }
+}
+
+.welcome-card-link {
+    color: inherit;
+    font-weight: bold;
+    margin-top: auto;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+    opacity: 1;
+    max-width: 100%
+}
+
+.welcome-card-link .fa {
+    position: relative;
+    left: 0;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    transition: all .2s;
+}
+
+.welcome-card-link:hover {
+    opacity: .7;
+    text-decoration: none;
+}
+
+.welcome-card-link:hover .fa {
+    left: 3px;
+}
+
+@media screen and (min-width: 992px) {
+    .welcome-card {
+        height: 130%;
+        position: relative;
+        top: -30%;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+/* Most Popular / Last Updated datasets section
+========================================================================== */
+.odswidget-most-popular-datasets__datasets,
+.odswidget-last-datasets-feed__datasets {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.odswidget-most-popular-datasets__dataset,
+.odswidget-last-datasets-feed__dataset {
+    padding: 13px;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    margin-bottom: 13px;
+}
+
+.odswidget-most-popular-datasets__theme-picto,
+.odswidget-last-datasets-feed__theme-picto {
+    margin-top: 0;
+}
+
+.odswidget-most-popular-datasets__dataset-details,
+.odswidget-last-datasets-feed__dataset-details {
+    margin-left: 46px;
+}
+
+.odswidget-most-popular-datasets__dataset-details-title,
+.odswidget-last-datasets-feed__dataset-details-title {
+    font-size: 1rem;
+}
+
+.odswidget-most-popular-datasets__dataset-details-title a,
+.odswidget-last-datasets-feed__dataset-details-title a {
+    color: var(--titles);
+}
+
+.odswidget-most-popular-datasets__dataset-details-count,
+.odswidget-last-datasets-feed__dataset-details-modified {
+    opacity: .8;
+    border-bottom: none;
+    cursor: default;
+}
+
+.odswidget-most-popular-datasets__dataset-details-count .fa,
+.odswidget-last-datasets-feed__dataset-details-modified .fa {
+    display: none;
+}
+
+.twitter-timeline-container {
+    margin-bottom: 20px;
+}
+</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+                </div>
+            
+        </article>
+        
+    </div>
+</section>
+
+      </div>
+    </div>
+
+    <footer class="footer">
+    <a href="https://www.opendatasoft.com"
+       class="footer-link"
+       title="Opendatasoft website">
+        <img src="/img/ods-logo.svg"
+             class="footer-logo"
+             alt="Opendatasoft logo"
+        />
+    </a>
+    <span class="footer-copyright">
+        &copy; Copyright 2020
+    </span>
+</footer>
+    
+    
+    
+
+    <script>
+      var process = { env: { NODE_ENV: "production" } };
+    </script>
+    <script
+      type="text/javascript"
+      src="/index.min.ba71bbe69583a06c1a20d50de7512f7cd7ee767a9fcdbe52935b11b762c22a39.js"
+      defer
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,10 @@
+**Dataset in use:** `fr-esr-principaux-etablissements-enseignement-superieur` [(See it on mesr domain)](https://mesr.opendatasoft.com/explore/dataset/fr-esr-principaux-etablissements-enseignement-superieur/table/)
+
+**Fields in use:** 
+
+|type_d_etablissement      |secteur_d_etablissement|dep_nom                                            |adresse_uai      |dep_nom     |numero_telephone_uai|url                                                       |uo_lib                                                                |geo_point         |
+|--------------------------|-----------------------|---------------------------------------------------|-----------------|------------|--------------------|----------------------------------------------------------|----------------------------------------------------------------------|------------------|
+|École                     |Public                 |Rhône                                              |36 avenue Guy de Collongue|Rhône       |472186000           |https://www.ec-lyon.fr/                                   |Centrale Lyon |48.85535,2.345259 |
+|École                     |Public                 |Vienne                                             |1 avenue Clément Ader|Vienne      |549498080           |https://www.ensma.fr/                                     |École nationale supérieure de |48.85535,2.345259 |
+|École                     |Privé                  |Val-de-Marne                                       |79 avenue Aristide Briand|Val-de-Marne|181801515           |https://www.esitc-paris.fr/fr                             |École supérieure d'ingénieurs des travaux de la construction de Paris |48.85535,2.345259 |
+|École                     |Privé                  |Seine-et-Marne                                     |Boulevard de Constance|Seine-et-Marne|160724000           |https://www.insead.edu/                                   |Institut européen d'administration des affaires                       |48.861613,2.336221|

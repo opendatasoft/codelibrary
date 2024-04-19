@@ -38,7 +38,6 @@
                                         record="item"
                                         width="300"
                                         height="300">
-                            {{ item.fields.numero }} {{ item.fields.adresse }}<br/>{{ item.fields.ville }}
                         </ods-geotooltip>
                     </div>
                 </div>

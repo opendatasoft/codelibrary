@@ -1,6 +1,6 @@
 <ods-dataset-context context="shanghaiworlduniversityranking"
                      shanghaiworlduniversityranking-dataset="shanghai-world-university-ranking"
-                     shanghaiworlduniversityranking-domain="public"
+                     shanghaiworlduniversityranking-domain="userclub"
                      shanghaiworlduniversityranking-parameters="{'sort':'world_rank'}">
     <div class="row"
          ods-analysis="analysisshanghai"

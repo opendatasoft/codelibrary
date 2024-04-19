@@ -1,0 +1,4615 @@
+<!DOCTYPE html>
+<html class="has-navbar-fixed-top">
+  <head>
+    <meta charset="utf-8" />
+    <title>
+       Access cards &ndash; Codelibrary 
+    </title>
+
+    
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-41201218-21"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-41201218-21");
+    </script>
+
+    
+    
+
+    
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/instantsearch.css@7.3.1/themes/algolia-min.css"
+      integrity="sha256-HB49n/BZjuqiCtQQf49OdZn63XuKFaxcIHWf0HNKte8="
+      crossorigin="anonymous"
+    />
+
+    
+    <link rel="stylesheet" type="text/css" href="/scss/main.css" />
+    
+    
+    <link rel="shortcut icon" href="/ods-favicon.ico" />
+  </head>
+
+  <body>
+    <div class="is-hidden">
+      <svg>
+  <defs>
+    <g id="link-2">
+      <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+      <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+    </g>
+
+    <g id="check">
+      <polyline points="20 6 9 17 4 12"></polyline>
+    </g>
+
+    <g id="copy">
+      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+    </g>
+
+    <g id="external">
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+      <polyline points="15 3 21 3 21 9"></polyline>
+      <line x1="10" y1="14" x2="21" y2="3"></line>
+    </g>
+
+  </defs>
+</svg>
+
+    </div>
+
+    <nav class="ods-header navbar is-fixed-top"
+     role="navigation"
+     aria-label="Main navigation">
+
+   <button type="button"
+           class="menu-button navbar-burger burger"
+           id="nav-button"
+           data-target="sidebarNavbar"
+           aria-controls="sidebarNavbar"
+           aria-expanded="false"
+           aria-label="Main menu">
+        <img class="ods-header__menu-toggle__openlogo" src="/img/menu-fill.svg" alt="Open documentation menu">
+    </button>
+
+    <a class="ods-header-logo ods-header-logo-link"
+       href="https://help.opendatasoft.com/">
+        <img src="/img/ods-logo-noir.svg" alt="Opendatasoft logo">
+        <span class="ods-header__brandname">
+           Help Center
+        </span>
+    </a>
+
+    <div class="ods-header__nav">
+        <a class="ods-header__nav-item-link"
+           href="https://userguide.opendatasoft.com/">
+            User guide
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://academy.opendatasoft.com/page/homepage">
+            Academy
+        </a>
+        <a class="ods-header__nav-item-link is-active"
+           href="https://codelibrary.opendatasoft.com">
+            Code Library
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://help.opendatasoft.com/widgets/">
+            Widgets
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://help.opendatasoft.com/en/apis/">
+            APIs
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://changes.opendatasoft.com/en">
+            Release Notes
+        </a>
+    </div>
+    <button type="button"
+            class="menu-button navbar-burger burger"
+            id="nav-button"
+            data-target="helphubNavbar"
+            aria-controls="helphubNavbar"
+            aria-expanded="false"
+            aria-label="Main menu">
+        <img class="ods-header__menu-toggle__openlogo" src="/img/apps-custo.svg" alt="Open documentation menu">
+    </button>
+    <div class="navbar-menu" id="helphubNavbar">
+        <a class="ods-header__nav-item-link"
+           href="https://userguide.opendatasoft.com/">
+            User guide
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://academy.opendatasoft.com/page/homepage">
+            Academy
+        </a>
+        <a class="ods-header__nav-item-link is-active"
+           href="https://codelibrary.opendatasoft.com">
+            Code Library
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://help.opendatasoft.com/widgets/">
+            Widgets
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://help.opendatasoft.com/en/apis/">
+            APIs
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://changes.opendatasoft.com/en">
+            Release Notes
+        </a>
+    </div>
+</nav>
+
+
+    <div class="columns is-desktop codelibrary mb-0">
+      <div class="column is-narrow pb-0">
+        <div class="sidebar-search is-hidden-touch">
+  <div class="block search-wrapper">
+    <div id="algolia-box"></div>
+    <div class="search-results-wrapper">
+      <div id="algolia-results"></div>
+    </div>
+  </div>
+</div>
+<aside class="sidebar"
+       id="sidebarNavbar">
+  
+  <div class="sidebar-header">
+    <div class="block">
+      <ul class="menu-list">
+        <p class="menu-label">On this page</p>
+        <li>
+          <a href="#">
+            Top
+          </a>
+        </li>
+        
+        <li>
+          <a href="#with-description-and-full-height-background-image">
+            With description and full height background image
+          </a>
+        </li>
+        
+        <li>
+          <a href="#with-description-and-image-in-the-middle">
+            With description and image in the middle
+          </a>
+        </li>
+        
+        <li>
+          <a href="#with-description-and-image-on-top">
+            With description and image on top
+          </a>
+        </li>
+        
+        <li>
+          <a href="#light-version-with-full-height-background-image">
+            Light version with full height background image
+          </a>
+        </li>
+        
+        <li>
+          <a href="#light-version-with-image-in-the-middle">
+            Light version with image in the middle
+          </a>
+        </li>
+        
+        <li>
+          <a href="#light-version-with-image-on-top">
+            Light version with image on top
+          </a>
+        </li>
+        
+      </ul>
+    </div>
+  </div>
+  
+  <div class="sidebar-body">
+    
+    
+    <ul class="menu-list">
+      <li>
+        <a class="sidebar-subtitle"
+          href="https://codelibrary.opendatasoft.com">
+          Home
+        </a>
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/apps/"
+        class="sidebar-subtitle">
+        Apps
+        
+      </a>
+    </li>
+    
+    
+      
+      <li>
+        <a class="sidebar-subtitle " href="/components/">
+          Components
+        </a>
+        <ul>
+          
+          <li>
+            <a class="is-active" href="/components/access-card/">
+              <div>
+                Access cards
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/components/buttons/">
+              <div>
+                Buttons
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/components/contact-card/">
+              <div>
+                Contact Cards
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/components/content-card/">
+              <div>
+                Content cards
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/components/custom-theme-boxes/">
+              <div>
+                Custom theme boxes
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/components/dropdown-module/">
+              <div>
+                Dropdown module
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/components/filters/">
+              <div>
+                Filters
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/components/icons/">
+              <div>
+                Icons
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/components/image-card/">
+              <div>
+                Image cards
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/components/kpis/">
+              <div>
+                KPIs
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/components/material-themed-cards/">
+              <div>
+                Material themed cards
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/components/search-box/">
+              <div>
+                Search box
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/components/search-module/">
+              <div>
+                Search module
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/components/sticky-header/">
+              <div>
+                Sticky header
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/components/switch-toggle/">
+              <div>
+                Switch Module
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/components/table-module/">
+              <div>
+                Table module
+                
+                
+              </div>
+            </a>
+          </li>
+          
+        </ul>
+      </li>
+      
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/custom-views/"
+        class="sidebar-subtitle">
+        Custom views
+        
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/generators/"
+        class="sidebar-subtitle">
+        Generators
+        
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/page-templates/"
+        class="sidebar-subtitle">
+        Page templates
+        
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/portal-themes/"
+        class="sidebar-subtitle">
+        Portal themes
+        
+      </a>
+    </li>
+    
+    
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/widget-tricks/"
+        class="sidebar-subtitle">
+        Widget tricks
+        
+      </a>
+    </li>
+    
+    
+  </ul>
+  <p class="menu-label">
+    Tags
+  </p>
+  <div class="tags">
+    
+    <a class="tag" href="/tags/aggregation/">
+      aggregation
+    </a>
+    
+    <a class="tag" href="/tags/card/">
+      card
+    </a>
+    
+    <a class="tag" href="/tags/chart/">
+      chart
+    </a>
+    
+    <a class="tag" href="/tags/date/">
+      date
+    </a>
+    
+    <a class="tag" href="/tags/display/">
+      display
+    </a>
+    
+    <a class="tag" href="/tags/filter/">
+      filter
+    </a>
+    
+    <a class="tag" href="/tags/geo/">
+      geo
+    </a>
+    
+    <a class="tag" href="/tags/list/">
+      list
+    </a>
+    
+    <a class="tag" href="/tags/map/">
+      map
+    </a>
+    
+    <a class="tag" href="/tags/navigation/">
+      navigation
+    </a>
+    
+    <a class="tag" href="/tags/ods-adv-analysis/">
+      ods-adv-analysis
+    </a>
+    
+    <a class="tag" href="/tags/ods-aggregation/">
+      ods-aggregation
+    </a>
+    
+    <a class="tag" href="/tags/ods-analysis/">
+      ods-analysis
+    </a>
+    
+    <a class="tag" href="/tags/ods-maps/">
+      ods-maps
+    </a>
+    
+    <a class="tag" href="/tags/ods-subaggregation/">
+      ods-subaggregation
+    </a>
+    
+    <a class="tag" href="/tags/redirection/">
+      redirection
+    </a>
+    
+  </div>
+</div>
+</aside>
+
+      </div>
+      <div class="column codelibrary-content">
+        
+<section class="section resources">
+    <div class="container is-max-widescreen">
+        <h1 class="title is-1">Components - Access cards</h1>
+        <div class="content">
+            <p>Card to highlight a redirection to another page. Different styles are available.</p>
+<p><strong>Tips:</strong></p>
+<ul>
+<li>You can change the background image in the HTML file</li>
+<li>You can change the arrow icon with another icon from <a href="https://fontawesome.com/v4.7.0/icons/">the Fontawesome Library</a></li>
+</ul>
+
+        </div>
+        
+        <article class="block">
+            <h2 class="title is-2" id="with-description-and-full-height-background-image">
+                With description and full height background image 
+                <a class="is-link anchor" href="#with-description-and-full-height-background-image">
+            <span class="icon">
+              <img src="/img/fas-link.svg"/>
+            </span>
+                </a>
+            </h2>
+            <div class="content">
+                
+            </div>
+            
+            
+                <div class="box">
+                    
+
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+
+
+
+
+<div class="codepen">
+    <form id="form-with-description-and-full-height-background-image"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+                 "title": "New Pen!",
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "editors": 110,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;row\&#34;\u003e\n    \u003cdiv class=\&#34;col-md-4\&#34;\u003e\n        \u003ca href=\&#34;#\&#34; class=\&#34;access-card-bg\&#34;\n           style=\&#34;background-image: url(&#39;https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg&#39;)\&#34;\u003e\n            \u003cdiv class=\&#34;access-card\&#34;\u003e\n                \u003cdiv class=\&#34;access-card-content\&#34;\u003e\n                    \u003ch3 class=\&#34;access-card-pretitle\&#34;\u003eÉphémère\u003c/h3\u003e\n                    \u003ch2 class=\&#34;access-card-title\&#34;\u003eOpération jardins éphémères\u003c/h2\u003e\n                    \u003ch4 class=\&#34;access-card-subtitle\&#34;\u003e\n                        Liste et carte des jardins éphémères 2021\n                    \u003c/h4\u003e\n                    \u003cdiv class=\&#34;access-card-description\&#34;\u003e\n                        \u003ch4\u003eCatégories\u003c/h4\u003e\n                        \u003cp\u003ePolitique publique : Biodiversité\u003c/p\u003e\n                        \u003cp\u003eType : Catalogue\u003c/p\u003e\n                        \u003cp\u003eSupport : Portail opendata\u003c/p\u003e\n                        \u003cp\u003eDéveloppement : Direction du Numérique - Orléans Métropole\u003c/p\u003e\n                    \u003c/div\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;access-card-button\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/a\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
+                 "css": &#34;:root {\n    --secondary-color: #142e7b;\n}\n\n.access-card-bg {\n    background-repeat: no-repeat;\n    background-size: cover;\n    border-radius: 6px;\n    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);\n    transition: all 0.3s;\n    color: var(--text);\n    display: flex;\n    height: 100%;\n    justify-content: center;\n    margin-bottom: 20px;\n}\n\n.access-card-bg:hover {\n    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);\n    text-decoration: none;\n}\n\n.access-card {\n    border-radius: 10px;\n    background-color: #fff;\n    margin: 200px 26px 26px;\n    padding: 26px;\n    width: 100%;\n\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n}\n\n.access-card-pretitle {\n    text-transform: uppercase;\n    color: var(--secondary-color);\n    opacity: 0.7;\n    font-weight: 400;\n    margin: 0px;\n    font-size: 12px;\n}\n\n.access-card-title {\n    font-weight: 400;\n    margin: 10px 0px;\n    font-size: 22px;\n}\n\n.access-card-subtitle {\n    font-size: 16px;\n    font-weight: 400;\n    margin: 0px 0px 10px 0px;\n}\n\n.access-card-description {\n    background-color: var(--boxes-background);\n    padding: 10px;\n}\n\n.access-card-description h4 {\n    font-weight: 700;\n    margin: 5px 0px 0px 0px;\n}\n\n.access-card-description p {\n    margin: 5px 0px;\n}\n\n.access-card-button {\n    color: var(--secondary-color);\n    font-size: 16px;\n    font-weight: 700;\n    display: flex;\n    justify-content: right;\n    align-items: center;\n    width: 100%;\n    padding: 26px 0px 0px 26px;\n}\n\n.access-card-button i {\n    padding-left: 5px;\n    transition: all 0.3s;\n}\n\n.access-card:hover .access-card-button i {\n    transform: translateX(5px);\n}\n&#34;
+               }'>
+    </form>
+</div>
+<div class="ods-content">
+    <div class="box-live-example"
+      style="height: 720px;">
+      <iframe id="iframe-with-description-and-full-height-background-image"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+                <head>
+                    &lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;
+/&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;
+/&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;
+&gt;&lt;/script&gt;
+
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;
+&gt;&lt;/script&gt;
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;
+&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+  const sourceMonitoringInterceptor = $q =&gt; {
+    return {
+      request: config =&gt; {
+        console.log(config.url);
+        if (config.params)
+          if (config.params.source) delete config.params.source;
+
+        config.url = config.url.replace(
+          &#34;ods-api-monitoring&#34;,
+          &#34;monitoring-copy&#34;
+        );
+        return config;
+      }
+    };
+  };
+
+  angular
+    .module(&#34;ods-widgets&#34;)
+    .config(function(ODSWidgetsConfigProvider, $httpProvider) {
+      ODSWidgetsConfigProvider.setConfig({
+        defaultDomain: &#34;https://userclub.opendatasoft.com/&#34;,
+        basemaps: [
+          {
+            provider: &#34;jawg.light&#34;,
+            label: &#34;Jawg Light&#34;,
+            jawg_apikey: &#34;opendatasoft-community&#34;
+          },
+          {
+            provider: &#34;jawg.streets&#34;,
+            label: &#34;Jawg Streets&#34;,
+            jawg_apikey: &#34;opendatasoft-community&#34;,
+            id: &#34;streets&#34;
+          }
+        ],
+        themes: {
+          default: {
+            url: &#34;/img/ods.svg&#34;
+          },
+          Santé: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Culture, Patrimoine&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Éducation, Formation, Recherche, Enseignement&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Environment: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Transports, Déplacements&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Économie, Business, PME, Développement économique, Emploi&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Administration, Gouvernement, Finances publiques, Citoyenneté&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Justice, Sécurité, Police, Crime&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Sport, Loisirs&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Hébergement, Restauration&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Services, Social&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Checklist: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Usages: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#34;,
+            color: &#34;#1446A0&#34;
+          }
+        },
+        mapPrependAttribution: &#34;Jawg apikey NOT suitable for production&#34;
+      });
+      $httpProvider.interceptors.push(sourceMonitoringInterceptor);
+    });
+&lt;/script&gt;
+
+                    
+                </head>
+                <base href='https://userclub.opendatasoft.com/'>
+                <body>
+                <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
+&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;a href=&#34;#&#34; class=&#34;access-card-bg&#34;
+           style=&#34;background-image: url(&#39;https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg&#39;)&#34;&gt;
+            &lt;div class=&#34;access-card&#34;&gt;
+                &lt;div class=&#34;access-card-content&#34;&gt;
+                    &lt;h3 class=&#34;access-card-pretitle&#34;&gt;Éphémère&lt;/h3&gt;
+                    &lt;h2 class=&#34;access-card-title&#34;&gt;Opération jardins éphémères&lt;/h2&gt;
+                    &lt;h4 class=&#34;access-card-subtitle&#34;&gt;
+                        Liste et carte des jardins éphémères 2021
+                    &lt;/h4&gt;
+                    &lt;div class=&#34;access-card-description&#34;&gt;
+                        &lt;h4&gt;Catégories&lt;/h4&gt;
+                        &lt;p&gt;Politique publique : Biodiversité&lt;/p&gt;
+                        &lt;p&gt;Type : Catalogue&lt;/p&gt;
+                        &lt;p&gt;Support : Portail opendata&lt;/p&gt;
+                        &lt;p&gt;Développement : Direction du Numérique - Orléans Métropole&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;access-card-button&#34;&gt;
+                    &lt;i class=&#34;fa fa-long-arrow-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</div>
+                <style type='text/css'>
+                    :root {
+    --secondary-color: #142e7b;
+}
+
+.access-card-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 6px;
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);
+    transition: all 0.3s;
+    color: var(--text);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.access-card-bg:hover {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.access-card {
+    border-radius: 10px;
+    background-color: #fff;
+    margin: 200px 26px 26px;
+    padding: 26px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.access-card-pretitle {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    opacity: 0.7;
+    font-weight: 400;
+    margin: 0px;
+    font-size: 12px;
+}
+
+.access-card-title {
+    font-weight: 400;
+    margin: 10px 0px;
+    font-size: 22px;
+}
+
+.access-card-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px 0px 10px 0px;
+}
+
+.access-card-description {
+    background-color: var(--boxes-background);
+    padding: 10px;
+}
+
+.access-card-description h4 {
+    font-weight: 700;
+    margin: 5px 0px 0px 0px;
+}
+
+.access-card-description p {
+    margin: 5px 0px;
+}
+
+.access-card-button {
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    padding: 26px 0px 0px 26px;
+}
+
+.access-card-button i {
+    padding-left: 5px;
+    transition: all 0.3s;
+}
+
+.access-card:hover .access-card-button i {
+    transform: translateX(5px);
+}
+
+                </style>
+                </body>
+              ">
+      </iframe>
+      <div class="buttons has-addons">
+          
+          <button id="tab-show-code" aria-controls="panel-show-code"
+                  class="show-code button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-with-description-and-full-height-background-image').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    
+    <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
+         class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
+            <div class="level-left">
+                <div class="level-item">
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-with-description-and-full-height-background-image-html-content"
+                        >
+                          HTML
+                        </a>
+                        
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-with-description-and-full-height-background-image-css-content"
+                        >
+                          CSS
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
+            </div>
+        </nav>
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-with-description-and-full-height-background-image-html-content"
+                 data-clipboard="&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;a href=&#34;#&#34; class=&#34;access-card-bg&#34;
+           style=&#34;background-image: url(&#39;https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg&#39;)&#34;&gt;
+            &lt;div class=&#34;access-card&#34;&gt;
+                &lt;div class=&#34;access-card-content&#34;&gt;
+                    &lt;h3 class=&#34;access-card-pretitle&#34;&gt;Éphémère&lt;/h3&gt;
+                    &lt;h2 class=&#34;access-card-title&#34;&gt;Opération jardins éphémères&lt;/h2&gt;
+                    &lt;h4 class=&#34;access-card-subtitle&#34;&gt;
+                        Liste et carte des jardins éphémères 2021
+                    &lt;/h4&gt;
+                    &lt;div class=&#34;access-card-description&#34;&gt;
+                        &lt;h4&gt;Catégories&lt;/h4&gt;
+                        &lt;p&gt;Politique publique : Biodiversité&lt;/p&gt;
+                        &lt;p&gt;Type : Catalogue&lt;/p&gt;
+                        &lt;p&gt;Support : Portail opendata&lt;/p&gt;
+                        &lt;p&gt;Développement : Direction du Numérique - Orléans Métropole&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;access-card-button&#34;&gt;
+                    &lt;i class=&#34;fa fa-long-arrow-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;"
+                 role="tabpanel">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;a href=&#34;#&#34; class=&#34;access-card-bg&#34;
+           style=&#34;background-image: url(&#39;https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg&#39;)&#34;&gt;
+            &lt;div class=&#34;access-card&#34;&gt;
+                &lt;div class=&#34;access-card-content&#34;&gt;
+                    &lt;h3 class=&#34;access-card-pretitle&#34;&gt;Éphémère&lt;/h3&gt;
+                    &lt;h2 class=&#34;access-card-title&#34;&gt;Opération jardins éphémères&lt;/h2&gt;
+                    &lt;h4 class=&#34;access-card-subtitle&#34;&gt;
+                        Liste et carte des jardins éphémères 2021
+                    &lt;/h4&gt;
+                    &lt;div class=&#34;access-card-description&#34;&gt;
+                        &lt;h4&gt;Catégories&lt;/h4&gt;
+                        &lt;p&gt;Politique publique : Biodiversité&lt;/p&gt;
+                        &lt;p&gt;Type : Catalogue&lt;/p&gt;
+                        &lt;p&gt;Support : Portail opendata&lt;/p&gt;
+                        &lt;p&gt;Développement : Direction du Numérique - Orléans Métropole&lt;/p&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;access-card-button&#34;&gt;
+                    &lt;i class=&#34;fa fa-long-arrow-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+            
+            <div class="js-tabcontent"
+                 id="code-with-description-and-full-height-background-image-css-content"
+                 data-clipboard=":root {
+    --secondary-color: #142e7b;
+}
+
+.access-card-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 6px;
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);
+    transition: all 0.3s;
+    color: var(--text);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.access-card-bg:hover {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.access-card {
+    border-radius: 10px;
+    background-color: #fff;
+    margin: 200px 26px 26px;
+    padding: 26px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.access-card-pretitle {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    opacity: 0.7;
+    font-weight: 400;
+    margin: 0px;
+    font-size: 12px;
+}
+
+.access-card-title {
+    font-weight: 400;
+    margin: 10px 0px;
+    font-size: 22px;
+}
+
+.access-card-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px 0px 10px 0px;
+}
+
+.access-card-description {
+    background-color: var(--boxes-background);
+    padding: 10px;
+}
+
+.access-card-description h4 {
+    font-weight: 700;
+    margin: 5px 0px 0px 0px;
+}
+
+.access-card-description p {
+    margin: 5px 0px;
+}
+
+.access-card-button {
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    padding: 26px 0px 0px 26px;
+}
+
+.access-card-button i {
+    padding-left: 5px;
+    transition: all 0.3s;
+}
+
+.access-card:hover .access-card-button i {
+    transform: translateX(5px);
+}
+">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>:root {
+    --secondary-color: #142e7b;
+}
+
+.access-card-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 6px;
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);
+    transition: all 0.3s;
+    color: var(--text);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.access-card-bg:hover {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.access-card {
+    border-radius: 10px;
+    background-color: #fff;
+    margin: 200px 26px 26px;
+    padding: 26px;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.access-card-pretitle {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    opacity: 0.7;
+    font-weight: 400;
+    margin: 0px;
+    font-size: 12px;
+}
+
+.access-card-title {
+    font-weight: 400;
+    margin: 10px 0px;
+    font-size: 22px;
+}
+
+.access-card-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px 0px 10px 0px;
+}
+
+.access-card-description {
+    background-color: var(--boxes-background);
+    padding: 10px;
+}
+
+.access-card-description h4 {
+    font-weight: 700;
+    margin: 5px 0px 0px 0px;
+}
+
+.access-card-description p {
+    margin: 5px 0px;
+}
+
+.access-card-button {
+    color: var(--secondary-color);
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 100%;
+    padding: 26px 0px 0px 26px;
+}
+
+.access-card-button i {
+    padding-left: 5px;
+    transition: all 0.3s;
+}
+
+.access-card:hover .access-card-button i {
+    transform: translateX(5px);
+}
+</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+                </div>
+            
+        </article>
+        
+        <article class="block">
+            <h2 class="title is-2" id="with-description-and-image-in-the-middle">
+                With description and image in the middle 
+                <a class="is-link anchor" href="#with-description-and-image-in-the-middle">
+            <span class="icon">
+              <img src="/img/fas-link.svg"/>
+            </span>
+                </a>
+            </h2>
+            <div class="content">
+                
+            </div>
+            
+            
+                <div class="box">
+                    
+
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+
+
+
+
+<div class="codepen">
+    <form id="form-with-description-and-image-in-the-middle"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+                 "title": "New Pen!",
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "editors": 110,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;row\&#34;\u003e\n    \u003cdiv class=\&#34;col-md-4\&#34;\u003e\n        \u003ca href=\&#34;#\&#34; class=\&#34;access-card\&#34;\u003e\n            \u003cdiv class=\&#34;access-card-content\&#34;\u003e\n                \u003cdiv class=\&#34;access-card-top\&#34;\u003e\n                    \u003ch3 class=\&#34;access-card-pretitle\&#34;\u003eÉphémère\u003c/h3\u003e\n                    \u003ch2 class=\&#34;access-card-title\&#34;\u003e\n                        Opération jardins éphémères\n                    \u003c/h2\u003e\n                    \u003ch4 class=\&#34;access-card-subtitle\&#34;\u003e\n                        Liste et carte des jardins éphémères 2021\n                    \u003c/h4\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;access-card-img\&#34;\n                     style=\&#34;background-image: url(&#39;https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg&#39;)\&#34;\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;access-card-description\&#34;\u003e\n                    \u003cp\u003ePolitique publique : Biodiversité\u003c/p\u003e\n                    \u003cp\u003eType : Catalogue\u003c/p\u003e\n                    \u003cp\u003eSupport : Portail opendata\u003c/p\u003e\n                    \u003cp\u003eDéveloppement : Direction du Numérique - Orléans Métropole\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;access-card-button\&#34;\u003e\n                Accédez \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n            \u003c/div\u003e\n        \u003c/a\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
+                 "css": &#34;:root {\n    --secondary-color: #142e7b;\n}\n\n.access-card {\n    border-radius: 10px;\n    background-color: var(--boxes-background);\n    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);\n    transition: all 0.3s;\n    position: relative;\n    height: 100%;\n    color: var(--text);\n    display: block;\n    margin-bottom: 20px;\n    \n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n}\n\n.access-card:hover {\n    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.5);\n    text-decoration: none;\n}\n\n.access-card-top {\n    padding: 26px;\n}\n\n.access-card-pretitle {\n    text-transform: uppercase;\n    color: var(--secondary-color);\n    opacity: 0.7;\n    font-weight: 400;\n    margin: 0px;\n    font-size: 12px;\n}\n\n.access-card-title {\n    font-weight: 400;\n    margin: 10px 0px;\n    font-size: 22px;\n}\n\n.access-card-subtitle {\n    font-size: 16px;\n    font-weight: 400;\n    margin: 0px;\n}\n\n.access-card-img {\n    background-repeat: no-repeat;\n    background-size: cover;\n    background-position: center;\n    height: 250px;\n}\n\n.access-card-description {\n    padding: 26px;\n}\n\n.access-card-description p {\n    margin: 5px 0px;\n}\n\n.access-card-button {\n    color: var(--secondary-color);\n    font-size: 14px;\n    font-weight: 700;\n    display: flex;\n    justify-content: left;\n    align-items: center;\n    width: 100%;\n    padding: 0px 26px 26px 26px;\n}\n\n.access-card-button i {\n    padding-left: 5px;\n    transition: all 0.3s;\n}\n\n.access-card:hover .access-card-button i {\n    transform: translateX(5px);\n}\n&#34;
+               }'>
+    </form>
+</div>
+<div class="ods-content">
+    <div class="box-live-example"
+      style="height: 750px;">
+      <iframe id="iframe-with-description-and-image-in-the-middle"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+                <head>
+                    &lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;
+/&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;
+/&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;
+&gt;&lt;/script&gt;
+
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;
+&gt;&lt;/script&gt;
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;
+&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+  const sourceMonitoringInterceptor = $q =&gt; {
+    return {
+      request: config =&gt; {
+        console.log(config.url);
+        if (config.params)
+          if (config.params.source) delete config.params.source;
+
+        config.url = config.url.replace(
+          &#34;ods-api-monitoring&#34;,
+          &#34;monitoring-copy&#34;
+        );
+        return config;
+      }
+    };
+  };
+
+  angular
+    .module(&#34;ods-widgets&#34;)
+    .config(function(ODSWidgetsConfigProvider, $httpProvider) {
+      ODSWidgetsConfigProvider.setConfig({
+        defaultDomain: &#34;https://userclub.opendatasoft.com/&#34;,
+        basemaps: [
+          {
+            provider: &#34;jawg.light&#34;,
+            label: &#34;Jawg Light&#34;,
+            jawg_apikey: &#34;opendatasoft-community&#34;
+          },
+          {
+            provider: &#34;jawg.streets&#34;,
+            label: &#34;Jawg Streets&#34;,
+            jawg_apikey: &#34;opendatasoft-community&#34;,
+            id: &#34;streets&#34;
+          }
+        ],
+        themes: {
+          default: {
+            url: &#34;/img/ods.svg&#34;
+          },
+          Santé: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Culture, Patrimoine&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Éducation, Formation, Recherche, Enseignement&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Environment: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Transports, Déplacements&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Économie, Business, PME, Développement économique, Emploi&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Administration, Gouvernement, Finances publiques, Citoyenneté&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Justice, Sécurité, Police, Crime&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Sport, Loisirs&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Hébergement, Restauration&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Services, Social&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Checklist: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Usages: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#34;,
+            color: &#34;#1446A0&#34;
+          }
+        },
+        mapPrependAttribution: &#34;Jawg apikey NOT suitable for production&#34;
+      });
+      $httpProvider.interceptors.push(sourceMonitoringInterceptor);
+    });
+&lt;/script&gt;
+
+                    
+                </head>
+                <base href='https://userclub.opendatasoft.com/'>
+                <body>
+                <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
+&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;a href=&#34;#&#34; class=&#34;access-card&#34;&gt;
+            &lt;div class=&#34;access-card-content&#34;&gt;
+                &lt;div class=&#34;access-card-top&#34;&gt;
+                    &lt;h3 class=&#34;access-card-pretitle&#34;&gt;Éphémère&lt;/h3&gt;
+                    &lt;h2 class=&#34;access-card-title&#34;&gt;
+                        Opération jardins éphémères
+                    &lt;/h2&gt;
+                    &lt;h4 class=&#34;access-card-subtitle&#34;&gt;
+                        Liste et carte des jardins éphémères 2021
+                    &lt;/h4&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;access-card-img&#34;
+                     style=&#34;background-image: url(&#39;https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg&#39;)&#34;&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;access-card-description&#34;&gt;
+                    &lt;p&gt;Politique publique : Biodiversité&lt;/p&gt;
+                    &lt;p&gt;Type : Catalogue&lt;/p&gt;
+                    &lt;p&gt;Support : Portail opendata&lt;/p&gt;
+                    &lt;p&gt;Développement : Direction du Numérique - Orléans Métropole&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;access-card-button&#34;&gt;
+                Accédez &lt;i class=&#34;fa fa-long-arrow-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</div>
+                <style type='text/css'>
+                    :root {
+    --secondary-color: #142e7b;
+}
+
+.access-card {
+    border-radius: 10px;
+    background-color: var(--boxes-background);
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);
+    transition: all 0.3s;
+    position: relative;
+    height: 100%;
+    color: var(--text);
+    display: block;
+    margin-bottom: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.access-card:hover {
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.access-card-top {
+    padding: 26px;
+}
+
+.access-card-pretitle {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    opacity: 0.7;
+    font-weight: 400;
+    margin: 0px;
+    font-size: 12px;
+}
+
+.access-card-title {
+    font-weight: 400;
+    margin: 10px 0px;
+    font-size: 22px;
+}
+
+.access-card-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.access-card-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+}
+
+.access-card-description {
+    padding: 26px;
+}
+
+.access-card-description p {
+    margin: 5px 0px;
+}
+
+.access-card-button {
+    color: var(--secondary-color);
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    padding: 0px 26px 26px 26px;
+}
+
+.access-card-button i {
+    padding-left: 5px;
+    transition: all 0.3s;
+}
+
+.access-card:hover .access-card-button i {
+    transform: translateX(5px);
+}
+
+                </style>
+                </body>
+              ">
+      </iframe>
+      <div class="buttons has-addons">
+          
+          <button id="tab-show-code" aria-controls="panel-show-code"
+                  class="show-code button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-with-description-and-image-in-the-middle').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    
+    <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
+         class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
+            <div class="level-left">
+                <div class="level-item">
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-with-description-and-image-in-the-middle-html-content"
+                        >
+                          HTML
+                        </a>
+                        
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-with-description-and-image-in-the-middle-css-content"
+                        >
+                          CSS
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
+            </div>
+        </nav>
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-with-description-and-image-in-the-middle-html-content"
+                 data-clipboard="&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;a href=&#34;#&#34; class=&#34;access-card&#34;&gt;
+            &lt;div class=&#34;access-card-content&#34;&gt;
+                &lt;div class=&#34;access-card-top&#34;&gt;
+                    &lt;h3 class=&#34;access-card-pretitle&#34;&gt;Éphémère&lt;/h3&gt;
+                    &lt;h2 class=&#34;access-card-title&#34;&gt;
+                        Opération jardins éphémères
+                    &lt;/h2&gt;
+                    &lt;h4 class=&#34;access-card-subtitle&#34;&gt;
+                        Liste et carte des jardins éphémères 2021
+                    &lt;/h4&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;access-card-img&#34;
+                     style=&#34;background-image: url(&#39;https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg&#39;)&#34;&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;access-card-description&#34;&gt;
+                    &lt;p&gt;Politique publique : Biodiversité&lt;/p&gt;
+                    &lt;p&gt;Type : Catalogue&lt;/p&gt;
+                    &lt;p&gt;Support : Portail opendata&lt;/p&gt;
+                    &lt;p&gt;Développement : Direction du Numérique - Orléans Métropole&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;access-card-button&#34;&gt;
+                Accédez &lt;i class=&#34;fa fa-long-arrow-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;"
+                 role="tabpanel">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;a href=&#34;#&#34; class=&#34;access-card&#34;&gt;
+            &lt;div class=&#34;access-card-content&#34;&gt;
+                &lt;div class=&#34;access-card-top&#34;&gt;
+                    &lt;h3 class=&#34;access-card-pretitle&#34;&gt;Éphémère&lt;/h3&gt;
+                    &lt;h2 class=&#34;access-card-title&#34;&gt;
+                        Opération jardins éphémères
+                    &lt;/h2&gt;
+                    &lt;h4 class=&#34;access-card-subtitle&#34;&gt;
+                        Liste et carte des jardins éphémères 2021
+                    &lt;/h4&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;access-card-img&#34;
+                     style=&#34;background-image: url(&#39;https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg&#39;)&#34;&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;access-card-description&#34;&gt;
+                    &lt;p&gt;Politique publique : Biodiversité&lt;/p&gt;
+                    &lt;p&gt;Type : Catalogue&lt;/p&gt;
+                    &lt;p&gt;Support : Portail opendata&lt;/p&gt;
+                    &lt;p&gt;Développement : Direction du Numérique - Orléans Métropole&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;access-card-button&#34;&gt;
+                Accédez &lt;i class=&#34;fa fa-long-arrow-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+            
+            <div class="js-tabcontent"
+                 id="code-with-description-and-image-in-the-middle-css-content"
+                 data-clipboard=":root {
+    --secondary-color: #142e7b;
+}
+
+.access-card {
+    border-radius: 10px;
+    background-color: var(--boxes-background);
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);
+    transition: all 0.3s;
+    position: relative;
+    height: 100%;
+    color: var(--text);
+    display: block;
+    margin-bottom: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.access-card:hover {
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.access-card-top {
+    padding: 26px;
+}
+
+.access-card-pretitle {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    opacity: 0.7;
+    font-weight: 400;
+    margin: 0px;
+    font-size: 12px;
+}
+
+.access-card-title {
+    font-weight: 400;
+    margin: 10px 0px;
+    font-size: 22px;
+}
+
+.access-card-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.access-card-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+}
+
+.access-card-description {
+    padding: 26px;
+}
+
+.access-card-description p {
+    margin: 5px 0px;
+}
+
+.access-card-button {
+    color: var(--secondary-color);
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    padding: 0px 26px 26px 26px;
+}
+
+.access-card-button i {
+    padding-left: 5px;
+    transition: all 0.3s;
+}
+
+.access-card:hover .access-card-button i {
+    transform: translateX(5px);
+}
+">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>:root {
+    --secondary-color: #142e7b;
+}
+
+.access-card {
+    border-radius: 10px;
+    background-color: var(--boxes-background);
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);
+    transition: all 0.3s;
+    position: relative;
+    height: 100%;
+    color: var(--text);
+    display: block;
+    margin-bottom: 20px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.access-card:hover {
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.access-card-top {
+    padding: 26px;
+}
+
+.access-card-pretitle {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    opacity: 0.7;
+    font-weight: 400;
+    margin: 0px;
+    font-size: 12px;
+}
+
+.access-card-title {
+    font-weight: 400;
+    margin: 10px 0px;
+    font-size: 22px;
+}
+
+.access-card-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.access-card-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+}
+
+.access-card-description {
+    padding: 26px;
+}
+
+.access-card-description p {
+    margin: 5px 0px;
+}
+
+.access-card-button {
+    color: var(--secondary-color);
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    padding: 0px 26px 26px 26px;
+}
+
+.access-card-button i {
+    padding-left: 5px;
+    transition: all 0.3s;
+}
+
+.access-card:hover .access-card-button i {
+    transform: translateX(5px);
+}
+</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+                </div>
+            
+        </article>
+        
+        <article class="block">
+            <h2 class="title is-2" id="with-description-and-image-on-top">
+                With description and image on top 
+                <a class="is-link anchor" href="#with-description-and-image-on-top">
+            <span class="icon">
+              <img src="/img/fas-link.svg"/>
+            </span>
+                </a>
+            </h2>
+            <div class="content">
+                
+            </div>
+            
+            
+                <div class="box">
+                    
+
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+
+
+
+
+<div class="codepen">
+    <form id="form-with-description-and-image-on-top"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+                 "title": "New Pen!",
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "editors": 110,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;row\&#34;\u003e\n    \u003cdiv class=\&#34;col-md-4\&#34;\u003e\n        \u003ca href=\&#34;#\&#34; class=\&#34;access-card\&#34;\u003e\n            \u003cdiv class=\&#34;access-card-container\&#34;\u003e\n                \u003cdiv class=\&#34;access-card-img\&#34;\n                     style=\&#34;background-image: url(&#39;https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg&#39;)\&#34;\u003e\n                    \u003ch3 class=\&#34;access-card-pretitle\&#34;\u003eÉphémère\u003c/h3\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;access-card-content\&#34;\u003e\n                    \u003ch2 class=\&#34;access-card-title\&#34;\u003eOpération jardins éphémères\u003c/h2\u003e\n                    \u003ch4 class=\&#34;access-card-subtitle\&#34;\u003eListe et carte des jardins éphémères 2021\u003c/h4\u003e\n                    \u003cp\u003ePolitique publique : Biodiversité\u003c/p\u003e\n                    \u003cp\u003eType : Catalogue\u003c/p\u003e\n                    \u003cp\u003eSupport : Portail opendata\u003c/p\u003e\n                    \u003cp\u003eDéveloppement : Direction du Numérique - Orléans Métropole\u003c/p\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;access-card-button\&#34;\u003e\n                \u003cdiv class=\&#34;access-card-button-content\&#34;\u003e\n                    Accédez\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/a\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
+                 "css": &#34;:root {\n    --secondary-color: #142e7b;\n}\n\n.access-card {\n    border-radius: 10px;\n    background-color: #fff;\n    height: 100%;\n    background-color: var(--boxes-background);\n    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);\n    transition: all 0.3s;\n    display: block;\n    color: var(--text);\n    margin-bottom: 20px;\n\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n}\n\n.access-card:hover {\n    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.5);\n    text-decoration: none;\n}\n\n.access-card-img {\n    background-repeat: no-repeat;\n    background-size: cover;\n    background-position: center;\n    height: 250px;\n    position: relative;\n    border-radius: 10px 10px 0 0;\n}\n\n.access-card-content {\n    padding: 26px;\n}\n\n.access-card-pretitle {\n    text-transform: uppercase;\n    color: #535c29;\n    background-color: #dbe0c1;\n    border-radius: 3px;\n    font-weight: 400;\n    margin: 0px;\n    font-size: 12px;\n    position: absolute;\n    bottom: 15px;\n    left: 26px;\n    padding: 5px;\n}\n\n.access-card-title {\n    font-weight: 400;\n    margin: 10px 0px;\n    font-size: 22px;\n}\n\n.access-card-subtitle {\n    font-size: 16px;\n    font-weight: 400;\n    margin: 0px 0px 10px 0px;\n}\n\n.access-card-content p {\n    margin: 5px 0px;\n}\n\n.access-card-button {\n    display: flex;\n    justify-content: center;\n    margin: 0px 26px 26px;\n}\n\n.access-card-button:hover {\n    opacity: 0.7;\n}\n\n.access-card-button-content {\n    background-color: var(--secondary-color);\n    text-align: center;\n    color: #fff;\n    border-radius: 24px;\n    padding: 10px 20px;\n    width: fit-content;\n}\n&#34;
+               }'>
+    </form>
+</div>
+<div class="ods-content">
+    <div class="box-live-example"
+      style="height: 700px;">
+      <iframe id="iframe-with-description-and-image-on-top"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+                <head>
+                    &lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;
+/&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;
+/&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;
+&gt;&lt;/script&gt;
+
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;
+&gt;&lt;/script&gt;
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;
+&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+  const sourceMonitoringInterceptor = $q =&gt; {
+    return {
+      request: config =&gt; {
+        console.log(config.url);
+        if (config.params)
+          if (config.params.source) delete config.params.source;
+
+        config.url = config.url.replace(
+          &#34;ods-api-monitoring&#34;,
+          &#34;monitoring-copy&#34;
+        );
+        return config;
+      }
+    };
+  };
+
+  angular
+    .module(&#34;ods-widgets&#34;)
+    .config(function(ODSWidgetsConfigProvider, $httpProvider) {
+      ODSWidgetsConfigProvider.setConfig({
+        defaultDomain: &#34;https://userclub.opendatasoft.com/&#34;,
+        basemaps: [
+          {
+            provider: &#34;jawg.light&#34;,
+            label: &#34;Jawg Light&#34;,
+            jawg_apikey: &#34;opendatasoft-community&#34;
+          },
+          {
+            provider: &#34;jawg.streets&#34;,
+            label: &#34;Jawg Streets&#34;,
+            jawg_apikey: &#34;opendatasoft-community&#34;,
+            id: &#34;streets&#34;
+          }
+        ],
+        themes: {
+          default: {
+            url: &#34;/img/ods.svg&#34;
+          },
+          Santé: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Culture, Patrimoine&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Éducation, Formation, Recherche, Enseignement&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Environment: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Transports, Déplacements&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Économie, Business, PME, Développement économique, Emploi&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Administration, Gouvernement, Finances publiques, Citoyenneté&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Justice, Sécurité, Police, Crime&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Sport, Loisirs&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Hébergement, Restauration&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Services, Social&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Checklist: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Usages: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#34;,
+            color: &#34;#1446A0&#34;
+          }
+        },
+        mapPrependAttribution: &#34;Jawg apikey NOT suitable for production&#34;
+      });
+      $httpProvider.interceptors.push(sourceMonitoringInterceptor);
+    });
+&lt;/script&gt;
+
+                    
+                </head>
+                <base href='https://userclub.opendatasoft.com/'>
+                <body>
+                <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
+&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;a href=&#34;#&#34; class=&#34;access-card&#34;&gt;
+            &lt;div class=&#34;access-card-container&#34;&gt;
+                &lt;div class=&#34;access-card-img&#34;
+                     style=&#34;background-image: url(&#39;https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg&#39;)&#34;&gt;
+                    &lt;h3 class=&#34;access-card-pretitle&#34;&gt;Éphémère&lt;/h3&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;access-card-content&#34;&gt;
+                    &lt;h2 class=&#34;access-card-title&#34;&gt;Opération jardins éphémères&lt;/h2&gt;
+                    &lt;h4 class=&#34;access-card-subtitle&#34;&gt;Liste et carte des jardins éphémères 2021&lt;/h4&gt;
+                    &lt;p&gt;Politique publique : Biodiversité&lt;/p&gt;
+                    &lt;p&gt;Type : Catalogue&lt;/p&gt;
+                    &lt;p&gt;Support : Portail opendata&lt;/p&gt;
+                    &lt;p&gt;Développement : Direction du Numérique - Orléans Métropole&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;access-card-button&#34;&gt;
+                &lt;div class=&#34;access-card-button-content&#34;&gt;
+                    Accédez
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</div>
+                <style type='text/css'>
+                    :root {
+    --secondary-color: #142e7b;
+}
+
+.access-card {
+    border-radius: 10px;
+    background-color: #fff;
+    height: 100%;
+    background-color: var(--boxes-background);
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);
+    transition: all 0.3s;
+    display: block;
+    color: var(--text);
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.access-card:hover {
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.access-card-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    position: relative;
+    border-radius: 10px 10px 0 0;
+}
+
+.access-card-content {
+    padding: 26px;
+}
+
+.access-card-pretitle {
+    text-transform: uppercase;
+    color: #535c29;
+    background-color: #dbe0c1;
+    border-radius: 3px;
+    font-weight: 400;
+    margin: 0px;
+    font-size: 12px;
+    position: absolute;
+    bottom: 15px;
+    left: 26px;
+    padding: 5px;
+}
+
+.access-card-title {
+    font-weight: 400;
+    margin: 10px 0px;
+    font-size: 22px;
+}
+
+.access-card-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px 0px 10px 0px;
+}
+
+.access-card-content p {
+    margin: 5px 0px;
+}
+
+.access-card-button {
+    display: flex;
+    justify-content: center;
+    margin: 0px 26px 26px;
+}
+
+.access-card-button:hover {
+    opacity: 0.7;
+}
+
+.access-card-button-content {
+    background-color: var(--secondary-color);
+    text-align: center;
+    color: #fff;
+    border-radius: 24px;
+    padding: 10px 20px;
+    width: fit-content;
+}
+
+                </style>
+                </body>
+              ">
+      </iframe>
+      <div class="buttons has-addons">
+          
+          <button id="tab-show-code" aria-controls="panel-show-code"
+                  class="show-code button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-with-description-and-image-on-top').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    
+    <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
+         class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
+            <div class="level-left">
+                <div class="level-item">
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-with-description-and-image-on-top-html-content"
+                        >
+                          HTML
+                        </a>
+                        
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-with-description-and-image-on-top-css-content"
+                        >
+                          CSS
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
+            </div>
+        </nav>
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-with-description-and-image-on-top-html-content"
+                 data-clipboard="&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;a href=&#34;#&#34; class=&#34;access-card&#34;&gt;
+            &lt;div class=&#34;access-card-container&#34;&gt;
+                &lt;div class=&#34;access-card-img&#34;
+                     style=&#34;background-image: url(&#39;https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg&#39;)&#34;&gt;
+                    &lt;h3 class=&#34;access-card-pretitle&#34;&gt;Éphémère&lt;/h3&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;access-card-content&#34;&gt;
+                    &lt;h2 class=&#34;access-card-title&#34;&gt;Opération jardins éphémères&lt;/h2&gt;
+                    &lt;h4 class=&#34;access-card-subtitle&#34;&gt;Liste et carte des jardins éphémères 2021&lt;/h4&gt;
+                    &lt;p&gt;Politique publique : Biodiversité&lt;/p&gt;
+                    &lt;p&gt;Type : Catalogue&lt;/p&gt;
+                    &lt;p&gt;Support : Portail opendata&lt;/p&gt;
+                    &lt;p&gt;Développement : Direction du Numérique - Orléans Métropole&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;access-card-button&#34;&gt;
+                &lt;div class=&#34;access-card-button-content&#34;&gt;
+                    Accédez
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;"
+                 role="tabpanel">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;a href=&#34;#&#34; class=&#34;access-card&#34;&gt;
+            &lt;div class=&#34;access-card-container&#34;&gt;
+                &lt;div class=&#34;access-card-img&#34;
+                     style=&#34;background-image: url(&#39;https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg&#39;)&#34;&gt;
+                    &lt;h3 class=&#34;access-card-pretitle&#34;&gt;Éphémère&lt;/h3&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;access-card-content&#34;&gt;
+                    &lt;h2 class=&#34;access-card-title&#34;&gt;Opération jardins éphémères&lt;/h2&gt;
+                    &lt;h4 class=&#34;access-card-subtitle&#34;&gt;Liste et carte des jardins éphémères 2021&lt;/h4&gt;
+                    &lt;p&gt;Politique publique : Biodiversité&lt;/p&gt;
+                    &lt;p&gt;Type : Catalogue&lt;/p&gt;
+                    &lt;p&gt;Support : Portail opendata&lt;/p&gt;
+                    &lt;p&gt;Développement : Direction du Numérique - Orléans Métropole&lt;/p&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;access-card-button&#34;&gt;
+                &lt;div class=&#34;access-card-button-content&#34;&gt;
+                    Accédez
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+            
+            <div class="js-tabcontent"
+                 id="code-with-description-and-image-on-top-css-content"
+                 data-clipboard=":root {
+    --secondary-color: #142e7b;
+}
+
+.access-card {
+    border-radius: 10px;
+    background-color: #fff;
+    height: 100%;
+    background-color: var(--boxes-background);
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);
+    transition: all 0.3s;
+    display: block;
+    color: var(--text);
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.access-card:hover {
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.access-card-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    position: relative;
+    border-radius: 10px 10px 0 0;
+}
+
+.access-card-content {
+    padding: 26px;
+}
+
+.access-card-pretitle {
+    text-transform: uppercase;
+    color: #535c29;
+    background-color: #dbe0c1;
+    border-radius: 3px;
+    font-weight: 400;
+    margin: 0px;
+    font-size: 12px;
+    position: absolute;
+    bottom: 15px;
+    left: 26px;
+    padding: 5px;
+}
+
+.access-card-title {
+    font-weight: 400;
+    margin: 10px 0px;
+    font-size: 22px;
+}
+
+.access-card-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px 0px 10px 0px;
+}
+
+.access-card-content p {
+    margin: 5px 0px;
+}
+
+.access-card-button {
+    display: flex;
+    justify-content: center;
+    margin: 0px 26px 26px;
+}
+
+.access-card-button:hover {
+    opacity: 0.7;
+}
+
+.access-card-button-content {
+    background-color: var(--secondary-color);
+    text-align: center;
+    color: #fff;
+    border-radius: 24px;
+    padding: 10px 20px;
+    width: fit-content;
+}
+">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>:root {
+    --secondary-color: #142e7b;
+}
+
+.access-card {
+    border-radius: 10px;
+    background-color: #fff;
+    height: 100%;
+    background-color: var(--boxes-background);
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);
+    transition: all 0.3s;
+    display: block;
+    color: var(--text);
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.access-card:hover {
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.access-card-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    position: relative;
+    border-radius: 10px 10px 0 0;
+}
+
+.access-card-content {
+    padding: 26px;
+}
+
+.access-card-pretitle {
+    text-transform: uppercase;
+    color: #535c29;
+    background-color: #dbe0c1;
+    border-radius: 3px;
+    font-weight: 400;
+    margin: 0px;
+    font-size: 12px;
+    position: absolute;
+    bottom: 15px;
+    left: 26px;
+    padding: 5px;
+}
+
+.access-card-title {
+    font-weight: 400;
+    margin: 10px 0px;
+    font-size: 22px;
+}
+
+.access-card-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px 0px 10px 0px;
+}
+
+.access-card-content p {
+    margin: 5px 0px;
+}
+
+.access-card-button {
+    display: flex;
+    justify-content: center;
+    margin: 0px 26px 26px;
+}
+
+.access-card-button:hover {
+    opacity: 0.7;
+}
+
+.access-card-button-content {
+    background-color: var(--secondary-color);
+    text-align: center;
+    color: #fff;
+    border-radius: 24px;
+    padding: 10px 20px;
+    width: fit-content;
+}
+</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+                </div>
+            
+        </article>
+        
+        <article class="block">
+            <h2 class="title is-2" id="light-version-with-full-height-background-image">
+                Light version with full height background image 
+                <a class="is-link anchor" href="#light-version-with-full-height-background-image">
+            <span class="icon">
+              <img src="/img/fas-link.svg"/>
+            </span>
+                </a>
+            </h2>
+            <div class="content">
+                
+            </div>
+            
+            
+                <div class="box">
+                    
+
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+
+
+
+
+<div class="codepen">
+    <form id="form-light-version-with-full-height-background-image"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+                 "title": "New Pen!",
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "editors": 110,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;row\&#34;\u003e\n    \u003cdiv class=\&#34;col-md-4\&#34;\u003e\n        \u003ca href=\&#34;#\&#34; class=\&#34;access-card-bg\&#34;\n           style=\&#34;background-image: url(&#39;https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg&#39;)\&#34;\u003e\n            \u003cdiv class=\&#34;access-card\&#34;\u003e\n                \u003cdiv class=\&#34;access-card-content\&#34;\u003e\n                    \u003ch3 class=\&#34;access-card-pretitle\&#34;\u003eÉphémère\u003c/h3\u003e\n                    \u003ch2 class=\&#34;access-card-title\&#34;\u003e\n                        Opération jardins éphémères\n                    \u003c/h2\u003e\n                    \u003ch4 class=\&#34;access-card-subtitle\&#34;\u003e\n                        Liste et carte des jardins éphémères 2021\n                    \u003c/h4\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;access-card-button\&#34;\u003e\n                    \u003cdiv class=\&#34;access-card-button-content\&#34;\u003e\n                        Accédez\n                    \u003c/div\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/a\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
+                 "css": &#34;:root {\n    --secondary-color: #142e7b;\n}\n\n.access-card-bg {\n    background-repeat: no-repeat;\n    background-size: cover;\n    border-radius: 6px;\n    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);\n    transition: all 0.3s;\n    color: var(--text);\n    display: flex;\n    height: 100%;\n    justify-content: center;\n    margin-bottom: 20px;\n}\n\n.access-card-bg:hover {\n    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);\n    text-decoration: none;\n}\n\n.access-card {\n    border-radius: 10px;\n    background-color: #fff;\n    margin: 200px 26px 26px;\n    padding: 26px;\n    width: 100%;\n}\n\n.access-card-pretitle {\n    text-transform: uppercase;\n    color: var(--secondary-color);\n    opacity: 0.7;\n    font-weight: 400;\n    margin: 0px;\n    font-size: 12px;\n}\n\n.access-card-title {\n    font-weight: 400;\n    margin: 10px 0px;\n    font-size: 22px;\n}\n\n.access-card-subtitle {\n    font-size: 16px;\n    font-weight: 400;\n    margin: 0px 0px 20px 0px;\n}\n\n.access-card-button {\n    display: flex;\n    justify-content: center;\n    margin-top: 20px;\n}\n\n.access-card-button:hover {\n    opacity: 0.7;\n}\n\n.access-card-button-content {\n    background-color: var(--secondary-color);\n    text-align: center;\n    color: #fff;\n    border-radius: 24px;\n    padding: 10px 20px;\n    width: fit-content;\n}\n&#34;
+               }'>
+    </form>
+</div>
+<div class="ods-content">
+    <div class="box-live-example"
+      style="height: 600px;">
+      <iframe id="iframe-light-version-with-full-height-background-image"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+                <head>
+                    &lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;
+/&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;
+/&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;
+&gt;&lt;/script&gt;
+
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;
+&gt;&lt;/script&gt;
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;
+&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+  const sourceMonitoringInterceptor = $q =&gt; {
+    return {
+      request: config =&gt; {
+        console.log(config.url);
+        if (config.params)
+          if (config.params.source) delete config.params.source;
+
+        config.url = config.url.replace(
+          &#34;ods-api-monitoring&#34;,
+          &#34;monitoring-copy&#34;
+        );
+        return config;
+      }
+    };
+  };
+
+  angular
+    .module(&#34;ods-widgets&#34;)
+    .config(function(ODSWidgetsConfigProvider, $httpProvider) {
+      ODSWidgetsConfigProvider.setConfig({
+        defaultDomain: &#34;https://userclub.opendatasoft.com/&#34;,
+        basemaps: [
+          {
+            provider: &#34;jawg.light&#34;,
+            label: &#34;Jawg Light&#34;,
+            jawg_apikey: &#34;opendatasoft-community&#34;
+          },
+          {
+            provider: &#34;jawg.streets&#34;,
+            label: &#34;Jawg Streets&#34;,
+            jawg_apikey: &#34;opendatasoft-community&#34;,
+            id: &#34;streets&#34;
+          }
+        ],
+        themes: {
+          default: {
+            url: &#34;/img/ods.svg&#34;
+          },
+          Santé: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Culture, Patrimoine&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Éducation, Formation, Recherche, Enseignement&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Environment: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Transports, Déplacements&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Économie, Business, PME, Développement économique, Emploi&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Administration, Gouvernement, Finances publiques, Citoyenneté&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Justice, Sécurité, Police, Crime&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Sport, Loisirs&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Hébergement, Restauration&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Services, Social&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Checklist: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Usages: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#34;,
+            color: &#34;#1446A0&#34;
+          }
+        },
+        mapPrependAttribution: &#34;Jawg apikey NOT suitable for production&#34;
+      });
+      $httpProvider.interceptors.push(sourceMonitoringInterceptor);
+    });
+&lt;/script&gt;
+
+                    
+                </head>
+                <base href='https://userclub.opendatasoft.com/'>
+                <body>
+                <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
+&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;a href=&#34;#&#34; class=&#34;access-card-bg&#34;
+           style=&#34;background-image: url(&#39;https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg&#39;)&#34;&gt;
+            &lt;div class=&#34;access-card&#34;&gt;
+                &lt;div class=&#34;access-card-content&#34;&gt;
+                    &lt;h3 class=&#34;access-card-pretitle&#34;&gt;Éphémère&lt;/h3&gt;
+                    &lt;h2 class=&#34;access-card-title&#34;&gt;
+                        Opération jardins éphémères
+                    &lt;/h2&gt;
+                    &lt;h4 class=&#34;access-card-subtitle&#34;&gt;
+                        Liste et carte des jardins éphémères 2021
+                    &lt;/h4&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;access-card-button&#34;&gt;
+                    &lt;div class=&#34;access-card-button-content&#34;&gt;
+                        Accédez
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</div>
+                <style type='text/css'>
+                    :root {
+    --secondary-color: #142e7b;
+}
+
+.access-card-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 6px;
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);
+    transition: all 0.3s;
+    color: var(--text);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.access-card-bg:hover {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.access-card {
+    border-radius: 10px;
+    background-color: #fff;
+    margin: 200px 26px 26px;
+    padding: 26px;
+    width: 100%;
+}
+
+.access-card-pretitle {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    opacity: 0.7;
+    font-weight: 400;
+    margin: 0px;
+    font-size: 12px;
+}
+
+.access-card-title {
+    font-weight: 400;
+    margin: 10px 0px;
+    font-size: 22px;
+}
+
+.access-card-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px 0px 20px 0px;
+}
+
+.access-card-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.access-card-button:hover {
+    opacity: 0.7;
+}
+
+.access-card-button-content {
+    background-color: var(--secondary-color);
+    text-align: center;
+    color: #fff;
+    border-radius: 24px;
+    padding: 10px 20px;
+    width: fit-content;
+}
+
+                </style>
+                </body>
+              ">
+      </iframe>
+      <div class="buttons has-addons">
+          
+          <button id="tab-show-code" aria-controls="panel-show-code"
+                  class="show-code button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-light-version-with-full-height-background-image').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    
+    <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
+         class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
+            <div class="level-left">
+                <div class="level-item">
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-light-version-with-full-height-background-image-html-content"
+                        >
+                          HTML
+                        </a>
+                        
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-light-version-with-full-height-background-image-css-content"
+                        >
+                          CSS
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
+            </div>
+        </nav>
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-light-version-with-full-height-background-image-html-content"
+                 data-clipboard="&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;a href=&#34;#&#34; class=&#34;access-card-bg&#34;
+           style=&#34;background-image: url(&#39;https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg&#39;)&#34;&gt;
+            &lt;div class=&#34;access-card&#34;&gt;
+                &lt;div class=&#34;access-card-content&#34;&gt;
+                    &lt;h3 class=&#34;access-card-pretitle&#34;&gt;Éphémère&lt;/h3&gt;
+                    &lt;h2 class=&#34;access-card-title&#34;&gt;
+                        Opération jardins éphémères
+                    &lt;/h2&gt;
+                    &lt;h4 class=&#34;access-card-subtitle&#34;&gt;
+                        Liste et carte des jardins éphémères 2021
+                    &lt;/h4&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;access-card-button&#34;&gt;
+                    &lt;div class=&#34;access-card-button-content&#34;&gt;
+                        Accédez
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;"
+                 role="tabpanel">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;a href=&#34;#&#34; class=&#34;access-card-bg&#34;
+           style=&#34;background-image: url(&#39;https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg&#39;)&#34;&gt;
+            &lt;div class=&#34;access-card&#34;&gt;
+                &lt;div class=&#34;access-card-content&#34;&gt;
+                    &lt;h3 class=&#34;access-card-pretitle&#34;&gt;Éphémère&lt;/h3&gt;
+                    &lt;h2 class=&#34;access-card-title&#34;&gt;
+                        Opération jardins éphémères
+                    &lt;/h2&gt;
+                    &lt;h4 class=&#34;access-card-subtitle&#34;&gt;
+                        Liste et carte des jardins éphémères 2021
+                    &lt;/h4&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;access-card-button&#34;&gt;
+                    &lt;div class=&#34;access-card-button-content&#34;&gt;
+                        Accédez
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+            
+            <div class="js-tabcontent"
+                 id="code-light-version-with-full-height-background-image-css-content"
+                 data-clipboard=":root {
+    --secondary-color: #142e7b;
+}
+
+.access-card-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 6px;
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);
+    transition: all 0.3s;
+    color: var(--text);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.access-card-bg:hover {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.access-card {
+    border-radius: 10px;
+    background-color: #fff;
+    margin: 200px 26px 26px;
+    padding: 26px;
+    width: 100%;
+}
+
+.access-card-pretitle {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    opacity: 0.7;
+    font-weight: 400;
+    margin: 0px;
+    font-size: 12px;
+}
+
+.access-card-title {
+    font-weight: 400;
+    margin: 10px 0px;
+    font-size: 22px;
+}
+
+.access-card-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px 0px 20px 0px;
+}
+
+.access-card-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.access-card-button:hover {
+    opacity: 0.7;
+}
+
+.access-card-button-content {
+    background-color: var(--secondary-color);
+    text-align: center;
+    color: #fff;
+    border-radius: 24px;
+    padding: 10px 20px;
+    width: fit-content;
+}
+">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>:root {
+    --secondary-color: #142e7b;
+}
+
+.access-card-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 6px;
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);
+    transition: all 0.3s;
+    color: var(--text);
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.access-card-bg:hover {
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.access-card {
+    border-radius: 10px;
+    background-color: #fff;
+    margin: 200px 26px 26px;
+    padding: 26px;
+    width: 100%;
+}
+
+.access-card-pretitle {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    opacity: 0.7;
+    font-weight: 400;
+    margin: 0px;
+    font-size: 12px;
+}
+
+.access-card-title {
+    font-weight: 400;
+    margin: 10px 0px;
+    font-size: 22px;
+}
+
+.access-card-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px 0px 20px 0px;
+}
+
+.access-card-button {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.access-card-button:hover {
+    opacity: 0.7;
+}
+
+.access-card-button-content {
+    background-color: var(--secondary-color);
+    text-align: center;
+    color: #fff;
+    border-radius: 24px;
+    padding: 10px 20px;
+    width: fit-content;
+}
+</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+                </div>
+            
+        </article>
+        
+        <article class="block">
+            <h2 class="title is-2" id="light-version-with-image-in-the-middle">
+                Light version with image in the middle 
+                <a class="is-link anchor" href="#light-version-with-image-in-the-middle">
+            <span class="icon">
+              <img src="/img/fas-link.svg"/>
+            </span>
+                </a>
+            </h2>
+            <div class="content">
+                
+            </div>
+            
+            
+                <div class="box">
+                    
+
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+
+
+
+
+<div class="codepen">
+    <form id="form-light-version-with-image-in-the-middle"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+                 "title": "New Pen!",
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "editors": 110,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;row\&#34;\u003e\n    \u003cdiv class=\&#34;col-md-4\&#34;\u003e\n        \u003ca href=\&#34;#\&#34; class=\&#34;access-card\&#34;\u003e\n            \u003cdiv class=\&#34;access-card-top\&#34;\u003e\n                \u003ch3 class=\&#34;access-card-pretitle\&#34;\u003eÉphémère\u003c/h3\u003e\n                \u003ch2 class=\&#34;access-card-title\&#34;\u003e\n                    Opération jardins éphémères\n                \u003c/h2\u003e\n                \u003ch4 class=\&#34;access-card-subtitle\&#34;\u003e\n                    Liste et carte des jardins éphémères 2021\n                \u003c/h4\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;access-card-container\&#34;\u003e\n                \u003cdiv class=\&#34;access-card-img\&#34;\n                     style=\&#34;background-image: url(&#39;https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg&#39;)\&#34;\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;access-card-button\&#34;\u003e\n                    Accédez \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/a\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
+                 "css": &#34;:root {\n    --secondary-color: #142e7b;\n}\n\n.access-card {\n    border-radius: 10px;\n    background-color: var(--boxes-background);\n    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);\n    transition: all 0.3s;\n    position: relative;\n    height: 100%;\n    color: var(--text);\n    display: block;\n    margin-bottom: 20px;\n\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n}\n\n.access-card:hover {\n    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.5);\n    text-decoration: none;\n}\n\n.access-card-top {\n    padding: 26px;\n}\n\n.access-card-pretitle {\n    text-transform: uppercase;\n    color: var(--secondary-color);\n    opacity: 0.7;\n    font-weight: 400;\n    margin: 0px;\n    font-size: 12px;\n}\n\n.access-card-title {\n    font-weight: 400;\n    margin: 10px 0px;\n    font-size: 22px;\n}\n\n.access-card-subtitle {\n    font-size: 16px;\n    font-weight: 400;\n    margin: 0px;\n}\n\n.access-card-img {\n    background-repeat: no-repeat;\n    background-size: cover;\n    background-position: center;\n    height: 250px;\n}\n\n.access-card-button {\n    color: var(--secondary-color);\n    font-size: 14px;\n    font-weight: 700;\n    display: flex;\n    justify-content: left;\n    align-items: center;\n    width: 100%;\n    padding: 26px 26px 26px;\n}\n\n.access-card-button i {\n    padding-left: 5px;\n    transition: all 0.3s;\n}\n\n.access-card:hover .access-card-button i {\n    transform: translateX(5px);\n}\n&#34;
+               }'>
+    </form>
+</div>
+<div class="ods-content">
+    <div class="box-live-example"
+      style="height: 600px;">
+      <iframe id="iframe-light-version-with-image-in-the-middle"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+                <head>
+                    &lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;
+/&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;
+/&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;
+&gt;&lt;/script&gt;
+
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;
+&gt;&lt;/script&gt;
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;
+&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+  const sourceMonitoringInterceptor = $q =&gt; {
+    return {
+      request: config =&gt; {
+        console.log(config.url);
+        if (config.params)
+          if (config.params.source) delete config.params.source;
+
+        config.url = config.url.replace(
+          &#34;ods-api-monitoring&#34;,
+          &#34;monitoring-copy&#34;
+        );
+        return config;
+      }
+    };
+  };
+
+  angular
+    .module(&#34;ods-widgets&#34;)
+    .config(function(ODSWidgetsConfigProvider, $httpProvider) {
+      ODSWidgetsConfigProvider.setConfig({
+        defaultDomain: &#34;https://userclub.opendatasoft.com/&#34;,
+        basemaps: [
+          {
+            provider: &#34;jawg.light&#34;,
+            label: &#34;Jawg Light&#34;,
+            jawg_apikey: &#34;opendatasoft-community&#34;
+          },
+          {
+            provider: &#34;jawg.streets&#34;,
+            label: &#34;Jawg Streets&#34;,
+            jawg_apikey: &#34;opendatasoft-community&#34;,
+            id: &#34;streets&#34;
+          }
+        ],
+        themes: {
+          default: {
+            url: &#34;/img/ods.svg&#34;
+          },
+          Santé: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Culture, Patrimoine&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Éducation, Formation, Recherche, Enseignement&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Environment: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Transports, Déplacements&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Économie, Business, PME, Développement économique, Emploi&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Administration, Gouvernement, Finances publiques, Citoyenneté&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Justice, Sécurité, Police, Crime&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Sport, Loisirs&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Hébergement, Restauration&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Services, Social&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Checklist: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Usages: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#34;,
+            color: &#34;#1446A0&#34;
+          }
+        },
+        mapPrependAttribution: &#34;Jawg apikey NOT suitable for production&#34;
+      });
+      $httpProvider.interceptors.push(sourceMonitoringInterceptor);
+    });
+&lt;/script&gt;
+
+                    
+                </head>
+                <base href='https://userclub.opendatasoft.com/'>
+                <body>
+                <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
+&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;a href=&#34;#&#34; class=&#34;access-card&#34;&gt;
+            &lt;div class=&#34;access-card-top&#34;&gt;
+                &lt;h3 class=&#34;access-card-pretitle&#34;&gt;Éphémère&lt;/h3&gt;
+                &lt;h2 class=&#34;access-card-title&#34;&gt;
+                    Opération jardins éphémères
+                &lt;/h2&gt;
+                &lt;h4 class=&#34;access-card-subtitle&#34;&gt;
+                    Liste et carte des jardins éphémères 2021
+                &lt;/h4&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;access-card-container&#34;&gt;
+                &lt;div class=&#34;access-card-img&#34;
+                     style=&#34;background-image: url(&#39;https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg&#39;)&#34;&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;access-card-button&#34;&gt;
+                    Accédez &lt;i class=&#34;fa fa-long-arrow-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</div>
+                <style type='text/css'>
+                    :root {
+    --secondary-color: #142e7b;
+}
+
+.access-card {
+    border-radius: 10px;
+    background-color: var(--boxes-background);
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);
+    transition: all 0.3s;
+    position: relative;
+    height: 100%;
+    color: var(--text);
+    display: block;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.access-card:hover {
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.access-card-top {
+    padding: 26px;
+}
+
+.access-card-pretitle {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    opacity: 0.7;
+    font-weight: 400;
+    margin: 0px;
+    font-size: 12px;
+}
+
+.access-card-title {
+    font-weight: 400;
+    margin: 10px 0px;
+    font-size: 22px;
+}
+
+.access-card-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.access-card-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+}
+
+.access-card-button {
+    color: var(--secondary-color);
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    padding: 26px 26px 26px;
+}
+
+.access-card-button i {
+    padding-left: 5px;
+    transition: all 0.3s;
+}
+
+.access-card:hover .access-card-button i {
+    transform: translateX(5px);
+}
+
+                </style>
+                </body>
+              ">
+      </iframe>
+      <div class="buttons has-addons">
+          
+          <button id="tab-show-code" aria-controls="panel-show-code"
+                  class="show-code button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-light-version-with-image-in-the-middle').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    
+    <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
+         class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
+            <div class="level-left">
+                <div class="level-item">
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-light-version-with-image-in-the-middle-html-content"
+                        >
+                          HTML
+                        </a>
+                        
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-light-version-with-image-in-the-middle-css-content"
+                        >
+                          CSS
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
+            </div>
+        </nav>
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-light-version-with-image-in-the-middle-html-content"
+                 data-clipboard="&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;a href=&#34;#&#34; class=&#34;access-card&#34;&gt;
+            &lt;div class=&#34;access-card-top&#34;&gt;
+                &lt;h3 class=&#34;access-card-pretitle&#34;&gt;Éphémère&lt;/h3&gt;
+                &lt;h2 class=&#34;access-card-title&#34;&gt;
+                    Opération jardins éphémères
+                &lt;/h2&gt;
+                &lt;h4 class=&#34;access-card-subtitle&#34;&gt;
+                    Liste et carte des jardins éphémères 2021
+                &lt;/h4&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;access-card-container&#34;&gt;
+                &lt;div class=&#34;access-card-img&#34;
+                     style=&#34;background-image: url(&#39;https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg&#39;)&#34;&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;access-card-button&#34;&gt;
+                    Accédez &lt;i class=&#34;fa fa-long-arrow-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;"
+                 role="tabpanel">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;a href=&#34;#&#34; class=&#34;access-card&#34;&gt;
+            &lt;div class=&#34;access-card-top&#34;&gt;
+                &lt;h3 class=&#34;access-card-pretitle&#34;&gt;Éphémère&lt;/h3&gt;
+                &lt;h2 class=&#34;access-card-title&#34;&gt;
+                    Opération jardins éphémères
+                &lt;/h2&gt;
+                &lt;h4 class=&#34;access-card-subtitle&#34;&gt;
+                    Liste et carte des jardins éphémères 2021
+                &lt;/h4&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;access-card-container&#34;&gt;
+                &lt;div class=&#34;access-card-img&#34;
+                     style=&#34;background-image: url(&#39;https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg&#39;)&#34;&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;access-card-button&#34;&gt;
+                    Accédez &lt;i class=&#34;fa fa-long-arrow-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+            
+            <div class="js-tabcontent"
+                 id="code-light-version-with-image-in-the-middle-css-content"
+                 data-clipboard=":root {
+    --secondary-color: #142e7b;
+}
+
+.access-card {
+    border-radius: 10px;
+    background-color: var(--boxes-background);
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);
+    transition: all 0.3s;
+    position: relative;
+    height: 100%;
+    color: var(--text);
+    display: block;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.access-card:hover {
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.access-card-top {
+    padding: 26px;
+}
+
+.access-card-pretitle {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    opacity: 0.7;
+    font-weight: 400;
+    margin: 0px;
+    font-size: 12px;
+}
+
+.access-card-title {
+    font-weight: 400;
+    margin: 10px 0px;
+    font-size: 22px;
+}
+
+.access-card-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.access-card-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+}
+
+.access-card-button {
+    color: var(--secondary-color);
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    padding: 26px 26px 26px;
+}
+
+.access-card-button i {
+    padding-left: 5px;
+    transition: all 0.3s;
+}
+
+.access-card:hover .access-card-button i {
+    transform: translateX(5px);
+}
+">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>:root {
+    --secondary-color: #142e7b;
+}
+
+.access-card {
+    border-radius: 10px;
+    background-color: var(--boxes-background);
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);
+    transition: all 0.3s;
+    position: relative;
+    height: 100%;
+    color: var(--text);
+    display: block;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.access-card:hover {
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.access-card-top {
+    padding: 26px;
+}
+
+.access-card-pretitle {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    opacity: 0.7;
+    font-weight: 400;
+    margin: 0px;
+    font-size: 12px;
+}
+
+.access-card-title {
+    font-weight: 400;
+    margin: 10px 0px;
+    font-size: 22px;
+}
+
+.access-card-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.access-card-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+}
+
+.access-card-button {
+    color: var(--secondary-color);
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    padding: 26px 26px 26px;
+}
+
+.access-card-button i {
+    padding-left: 5px;
+    transition: all 0.3s;
+}
+
+.access-card:hover .access-card-button i {
+    transform: translateX(5px);
+}
+</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+                </div>
+            
+        </article>
+        
+        <article class="block">
+            <h2 class="title is-2" id="light-version-with-image-on-top">
+                Light version with image on top 
+                <a class="is-link anchor" href="#light-version-with-image-on-top">
+            <span class="icon">
+              <img src="/img/fas-link.svg"/>
+            </span>
+                </a>
+            </h2>
+            <div class="content">
+                
+            </div>
+            
+            
+                <div class="box">
+                    
+
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+
+
+
+
+<div class="codepen">
+    <form id="form-light-version-with-image-on-top"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+                 "title": "New Pen!",
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "editors": 110,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;row\&#34;\u003e\n    \u003cdiv class=\&#34;col-md-4\&#34;\u003e\n        \u003ca href=\&#34;#\&#34; class=\&#34;access-card\&#34;\u003e\n            \u003cdiv class=\&#34;access-card-container\&#34;\u003e\n                \u003cdiv class=\&#34;access-card-img\&#34;\n                     style=\&#34;background-image: url(&#39;https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg&#39;)\&#34;\u003e\n                \u003c/div\u003e\n                \u003cdiv class=\&#34;access-card-content\&#34;\u003e\n                    \u003ch3 class=\&#34;access-card-pretitle\&#34;\u003eÉphémère\u003c/h3\u003e\n                    \u003ch2 class=\&#34;access-card-title\&#34;\u003eOpération jardins éphémères\u003c/h2\u003e\n                    \u003ch4 class=\&#34;access-card-subtitle\&#34;\u003eListe et carte des jardins éphémères 2021\u003c/h4\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;access-card-button\&#34;\u003e\n                Accédez \u003ci class=\&#34;fa fa-long-arrow-right\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n            \u003c/div\u003e\n        \u003c/a\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
+                 "css": &#34;:root {\n    --secondary-color: #142e7b;\n    --custom-background: #e2e6ee;\n}\n\n.access-card {\n    border-radius: 10px;\n    height: 100%;\n    min-height: 300px;\n    background-color: var(--custom-background);\n    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);\n    color: var(--secondary-color);\n    transition: all 0.3s;\n    display: block;\n    margin-bottom: 20px;\n\n    display: flex;\n    flex-direction: column;\n    justify-content: space-between;\n}\n\n.access-card:hover {\n    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.5);\n    text-decoration: none;\n}\n\n.access-card-img {\n    background-repeat: no-repeat;\n    background-size: cover;\n    background-position: center;\n    height: 250px;\n    position: relative;\n    border-radius: 10px 10px 0px 0px;\n}\n\n.access-card-content {\n    padding: 26px;\n}\n\n.access-card-pretitle {\n    text-transform: uppercase;\n    color: var(--secondary-color);\n    opacity: 0.7;\n    font-weight: 400;\n    margin: 0px;\n    font-size: 12px;\n}\n\n.access-card-title {\n    font-weight: 400;\n    margin: 10px 0px;\n    font-size: 22px;\n    color: var(--secondary-color);\n}\n\n.access-card-subtitle {\n    font-size: 16px;\n    font-weight: 400;\n    margin: 0px;\n}\n\n.access-card-content p {\n    margin: 5px 0px;\n}\n\n.access-card-button {\n    color: var(--secondary-color);\n    font-size: 14px;\n    font-weight: 700;\n    display: flex;\n    justify-content: left;\n    align-items: center;\n    width: 100%;\n    padding: 0px 26px 26px 26px;\n}\n\n.access-card-button i {\n    padding-left: 5px;\n    transition: all 0.3s;\n}\n\n.access-card:hover .access-card-button i {\n    transform: translateX(5px);\n}\n&#34;
+               }'>
+    </form>
+</div>
+<div class="ods-content">
+    <div class="box-live-example"
+      style="height: 600px;">
+      <iframe id="iframe-light-version-with-image-on-top"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+                <head>
+                    &lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;
+/&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;
+/&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;
+&gt;&lt;/script&gt;
+
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;
+&gt;&lt;/script&gt;
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;
+&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+  const sourceMonitoringInterceptor = $q =&gt; {
+    return {
+      request: config =&gt; {
+        console.log(config.url);
+        if (config.params)
+          if (config.params.source) delete config.params.source;
+
+        config.url = config.url.replace(
+          &#34;ods-api-monitoring&#34;,
+          &#34;monitoring-copy&#34;
+        );
+        return config;
+      }
+    };
+  };
+
+  angular
+    .module(&#34;ods-widgets&#34;)
+    .config(function(ODSWidgetsConfigProvider, $httpProvider) {
+      ODSWidgetsConfigProvider.setConfig({
+        defaultDomain: &#34;https://userclub.opendatasoft.com/&#34;,
+        basemaps: [
+          {
+            provider: &#34;jawg.light&#34;,
+            label: &#34;Jawg Light&#34;,
+            jawg_apikey: &#34;opendatasoft-community&#34;
+          },
+          {
+            provider: &#34;jawg.streets&#34;,
+            label: &#34;Jawg Streets&#34;,
+            jawg_apikey: &#34;opendatasoft-community&#34;,
+            id: &#34;streets&#34;
+          }
+        ],
+        themes: {
+          default: {
+            url: &#34;/img/ods.svg&#34;
+          },
+          Santé: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Culture, Patrimoine&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Éducation, Formation, Recherche, Enseignement&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Environment: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Transports, Déplacements&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Économie, Business, PME, Développement économique, Emploi&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Administration, Gouvernement, Finances publiques, Citoyenneté&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Justice, Sécurité, Police, Crime&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Sport, Loisirs&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Hébergement, Restauration&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Services, Social&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Checklist: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Usages: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#34;,
+            color: &#34;#1446A0&#34;
+          }
+        },
+        mapPrependAttribution: &#34;Jawg apikey NOT suitable for production&#34;
+      });
+      $httpProvider.interceptors.push(sourceMonitoringInterceptor);
+    });
+&lt;/script&gt;
+
+                    
+                </head>
+                <base href='https://userclub.opendatasoft.com/'>
+                <body>
+                <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
+&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;a href=&#34;#&#34; class=&#34;access-card&#34;&gt;
+            &lt;div class=&#34;access-card-container&#34;&gt;
+                &lt;div class=&#34;access-card-img&#34;
+                     style=&#34;background-image: url(&#39;https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg&#39;)&#34;&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;access-card-content&#34;&gt;
+                    &lt;h3 class=&#34;access-card-pretitle&#34;&gt;Éphémère&lt;/h3&gt;
+                    &lt;h2 class=&#34;access-card-title&#34;&gt;Opération jardins éphémères&lt;/h2&gt;
+                    &lt;h4 class=&#34;access-card-subtitle&#34;&gt;Liste et carte des jardins éphémères 2021&lt;/h4&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;access-card-button&#34;&gt;
+                Accédez &lt;i class=&#34;fa fa-long-arrow-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</div>
+                <style type='text/css'>
+                    :root {
+    --secondary-color: #142e7b;
+    --custom-background: #e2e6ee;
+}
+
+.access-card {
+    border-radius: 10px;
+    height: 100%;
+    min-height: 300px;
+    background-color: var(--custom-background);
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);
+    color: var(--secondary-color);
+    transition: all 0.3s;
+    display: block;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.access-card:hover {
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.access-card-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    position: relative;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.access-card-content {
+    padding: 26px;
+}
+
+.access-card-pretitle {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    opacity: 0.7;
+    font-weight: 400;
+    margin: 0px;
+    font-size: 12px;
+}
+
+.access-card-title {
+    font-weight: 400;
+    margin: 10px 0px;
+    font-size: 22px;
+    color: var(--secondary-color);
+}
+
+.access-card-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.access-card-content p {
+    margin: 5px 0px;
+}
+
+.access-card-button {
+    color: var(--secondary-color);
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    padding: 0px 26px 26px 26px;
+}
+
+.access-card-button i {
+    padding-left: 5px;
+    transition: all 0.3s;
+}
+
+.access-card:hover .access-card-button i {
+    transform: translateX(5px);
+}
+
+                </style>
+                </body>
+              ">
+      </iframe>
+      <div class="buttons has-addons">
+          
+          <button id="tab-show-code" aria-controls="panel-show-code"
+                  class="show-code button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-light-version-with-image-on-top').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    
+    <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
+         class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
+            <div class="level-left">
+                <div class="level-item">
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-light-version-with-image-on-top-html-content"
+                        >
+                          HTML
+                        </a>
+                        
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-light-version-with-image-on-top-css-content"
+                        >
+                          CSS
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
+            </div>
+        </nav>
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-light-version-with-image-on-top-html-content"
+                 data-clipboard="&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;a href=&#34;#&#34; class=&#34;access-card&#34;&gt;
+            &lt;div class=&#34;access-card-container&#34;&gt;
+                &lt;div class=&#34;access-card-img&#34;
+                     style=&#34;background-image: url(&#39;https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg&#39;)&#34;&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;access-card-content&#34;&gt;
+                    &lt;h3 class=&#34;access-card-pretitle&#34;&gt;Éphémère&lt;/h3&gt;
+                    &lt;h2 class=&#34;access-card-title&#34;&gt;Opération jardins éphémères&lt;/h2&gt;
+                    &lt;h4 class=&#34;access-card-subtitle&#34;&gt;Liste et carte des jardins éphémères 2021&lt;/h4&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;access-card-button&#34;&gt;
+                Accédez &lt;i class=&#34;fa fa-long-arrow-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;"
+                 role="tabpanel">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-md-4&#34;&gt;
+        &lt;a href=&#34;#&#34; class=&#34;access-card&#34;&gt;
+            &lt;div class=&#34;access-card-container&#34;&gt;
+                &lt;div class=&#34;access-card-img&#34;
+                     style=&#34;background-image: url(&#39;https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg&#39;)&#34;&gt;
+                &lt;/div&gt;
+                &lt;div class=&#34;access-card-content&#34;&gt;
+                    &lt;h3 class=&#34;access-card-pretitle&#34;&gt;Éphémère&lt;/h3&gt;
+                    &lt;h2 class=&#34;access-card-title&#34;&gt;Opération jardins éphémères&lt;/h2&gt;
+                    &lt;h4 class=&#34;access-card-subtitle&#34;&gt;Liste et carte des jardins éphémères 2021&lt;/h4&gt;
+                &lt;/div&gt;
+            &lt;/div&gt;
+            &lt;div class=&#34;access-card-button&#34;&gt;
+                Accédez &lt;i class=&#34;fa fa-long-arrow-right&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
+            &lt;/div&gt;
+        &lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+            
+            <div class="js-tabcontent"
+                 id="code-light-version-with-image-on-top-css-content"
+                 data-clipboard=":root {
+    --secondary-color: #142e7b;
+    --custom-background: #e2e6ee;
+}
+
+.access-card {
+    border-radius: 10px;
+    height: 100%;
+    min-height: 300px;
+    background-color: var(--custom-background);
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);
+    color: var(--secondary-color);
+    transition: all 0.3s;
+    display: block;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.access-card:hover {
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.access-card-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    position: relative;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.access-card-content {
+    padding: 26px;
+}
+
+.access-card-pretitle {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    opacity: 0.7;
+    font-weight: 400;
+    margin: 0px;
+    font-size: 12px;
+}
+
+.access-card-title {
+    font-weight: 400;
+    margin: 10px 0px;
+    font-size: 22px;
+    color: var(--secondary-color);
+}
+
+.access-card-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.access-card-content p {
+    margin: 5px 0px;
+}
+
+.access-card-button {
+    color: var(--secondary-color);
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    padding: 0px 26px 26px 26px;
+}
+
+.access-card-button i {
+    padding-left: 5px;
+    transition: all 0.3s;
+}
+
+.access-card:hover .access-card-button i {
+    transform: translateX(5px);
+}
+">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>:root {
+    --secondary-color: #142e7b;
+    --custom-background: #e2e6ee;
+}
+
+.access-card {
+    border-radius: 10px;
+    height: 100%;
+    min-height: 300px;
+    background-color: var(--custom-background);
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.13);
+    color: var(--secondary-color);
+    transition: all 0.3s;
+    display: block;
+    margin-bottom: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.access-card:hover {
+    box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.5);
+    text-decoration: none;
+}
+
+.access-card-img {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 250px;
+    position: relative;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.access-card-content {
+    padding: 26px;
+}
+
+.access-card-pretitle {
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    opacity: 0.7;
+    font-weight: 400;
+    margin: 0px;
+    font-size: 12px;
+}
+
+.access-card-title {
+    font-weight: 400;
+    margin: 10px 0px;
+    font-size: 22px;
+    color: var(--secondary-color);
+}
+
+.access-card-subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0px;
+}
+
+.access-card-content p {
+    margin: 5px 0px;
+}
+
+.access-card-button {
+    color: var(--secondary-color);
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    width: 100%;
+    padding: 0px 26px 26px 26px;
+}
+
+.access-card-button i {
+    padding-left: 5px;
+    transition: all 0.3s;
+}
+
+.access-card:hover .access-card-button i {
+    transform: translateX(5px);
+}
+</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+                </div>
+            
+        </article>
+        
+    </div>
+</section>
+
+      </div>
+    </div>
+
+    <footer class="footer">
+    <a href="https://www.opendatasoft.com"
+       class="footer-link"
+       title="Opendatasoft website">
+        <img src="/img/ods-logo.svg"
+             class="footer-logo"
+             alt="Opendatasoft logo"
+        />
+    </a>
+    <span class="footer-copyright">
+        &copy; Copyright 2020
+    </span>
+</footer>
+    
+    
+    
+
+    <script>
+      var process = { env: { NODE_ENV: "production" } };
+    </script>
+    <script
+      type="text/javascript"
+      src="/index.min.ba71bbe69583a06c1a20d50de7512f7cd7ee767a9fcdbe52935b11b762c22a39.js"
+      defer
+    ></script>
+  </body>
+</html>

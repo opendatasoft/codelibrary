@@ -1,34 +1,43 @@
-/* Content
-   ========================================================================== */
+/*
+  Structure :
+  -----------
+
+  section.resources > div > .content
+    is the presentation of the resource (root index.md of a resource)
+
+  section.resources > div > article.block > .content
+    is the presentation of the code block (index.md in a resource sub folder)
+ */
+
+
+section.resources > div > article.block > .content {
+  h4.title {
+    margin-top: 1.8rem;
+    margin-bottom: 0.9rem;
+  }
+
+  .highlight {
+    margin: 0;
+    background-color: #f5f5f5;
+  }
+}
+
+section.resources .content {
+  &.apps {
+    p img {
+      max-width: 600px;
+      margin: 0 auto 40px;
+      display: block;
+    }
+  }
+}
+
+
+
+
 .resources .block:not(:last-child) {
   padding-bottom: 3rem;
 }
-
-//.content {
-//  blockquote {
-//    padding: 0.75em;
-//  }
-
-  //   margin-top: $spacing-300;
-  //
-  //   h1, h2, h3, h4, h5, h6 {
-  //     font-weight: 500;
-  //   }
-  //
-  //   p {
-  //     font-weight: 400;
-  //     line-height: 1.7;
-  //   }
-  //
-  //   h1 {
-  //     font-size: $size-1;
-  //     color: $title-color;
-  //   }
-  //   h2 {
-  //     font-size: $size-2;
-  //     color: $title-color;
-  //   }
-//}
 
 h2 {
   a.is-link {
@@ -55,4 +64,8 @@ h2 {
     padding-left: $column-gap;
     padding-right: $column-gap * 3;
   }
+}
+
+strong {
+  font-weight: 600;
 }

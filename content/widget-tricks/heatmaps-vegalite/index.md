@@ -3,6 +3,7 @@ title: "Heatmaps with Vega-Lite"
 date: 2021-06-16T14:46:16+02:00
 description: "Vega-Lite heatmaps and bubblemaps in combination with ods-adv-analysis"
 tags: ["display", "ods-analysis", "aggregation"]
+draft: true
 resources:
 - src: '*/'
   name: folder-:counter
