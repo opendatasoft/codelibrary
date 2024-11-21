@@ -15,8 +15,8 @@ Dataset filter (simple way, with 1 refine) :
 - `dataset_refine_key`: a facet field,
 - `dataset_refine_value`: a value, 
   
-Dataset filters (advanced way, with 1 parameters object) :
-- `dataset_advanced_refine_parameters` : an object with escaped quotes, ie: `{\'q\':\'some text query\', \'refine.field\':\'value'\}`
+Dataset filters (advanced way, with 1 object) :
+- `dataset_advanced_refine_parameters` : an object, ex: `{'q':'some text query', 'refine.field':'value'}`
 
 Value settings, to setup the aggregation :
 - `aggregation_function`: can be SUM, AVG, MIN, MAX, STD, COUNT
@@ -33,6 +33,9 @@ Value settings, to setup the aggregation :
  
 
 - `valref_dataset_id`
+- `valref_dataset_refine_key`
+- `valref_dataset_refine_value`
+- `valref_dataset_advanced_refine_parameters`
 - `valref_aggregation_function`
 - `valref_aggregation_expression`
 - `valref_aggregation_unit`

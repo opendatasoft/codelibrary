@@ -5,7 +5,7 @@
                          context="ctx"
                          ctx-dataset="liste-des-departements-metropole-dom"
                          ctx-parameters="{'q':'code > 3'}"
-                         ctx-domain="discovery">
+                         ctx-domain="userclub">
 
         <!-- To Test default color when values are missing, add :
   ctx-parameters="{'q':'code <= 70 OR code > 972 OR code:95 OR code:78'}"

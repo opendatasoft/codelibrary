@@ -4,11 +4,11 @@
               fieldDefaultRangeStartsNow = true;
 
               view = 'cards';
-              fieldsList = ['powered_by','description_en'];
+              fieldsList = ['purpose','description_en'];
               fieldLink = 'reference_url';
               fieldLinkLabel = 'See it live';
 
-              cardTitle = 'name_of_the_initiative_en';
+              cardTitle = 'name_of_the_initiative';
               fieldPhoto = '';
               imagePosition = 'left';
               itemsPerRow = '2';

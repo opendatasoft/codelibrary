@@ -67,9 +67,13 @@ export function initSearch() {
                                 <p class="hit-summary">
                                     ${hit.print}
                                 </p>
+                                ${hit._highlightResult.tags ? `
                                 <span class="hit-tags">
                                         Tags: ${hit._highlightResult.tags.map(tag => `${tag.value}`).join(', ')}
                                 </span>
+                                `
+                                :
+                                ``}
                             </div>
                         </a>
                       `

@@ -6,7 +6,7 @@
   "scripts": {
     "start": "rm -rf public/ && hugo serve -D",
     "algolia": "atomic-algolia",
-    "submit": "hugo && git add . && git commit -m 'build site' && git push origin $(git branch --show-current) && gh pr create --title"
+    "submit": "hugo && atomic-algolia && git add . && git commit -m 'build site' && git push origin $(git branch --show-current) && gh pr create --title"
   },
   "repository": {
     "type": "git",
@@ -17,8 +17,8 @@
   "dependencies": {
     "@creativebulma/bulma-tooltip": "^1.2.0",
     "atomic-algolia": "^0.3.19",
-    "axios": "^0.21.1",
-    "bulma": "^0.9.1",
+    "axios": "^1.7.7",
+    "bulma": "^0.9.4",
     "clipboard-polyfill": "^3.0.3",
     "instantsearch.js": "^4.7.2",
     "prismjs": "^1.21.0"

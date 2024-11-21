@@ -1,29 +1,44 @@
      ng-init="domain = 'parisdata.opendatasoft.com';
-                datasetid = 'que-faire-a-paris-';
+              datasetid = 'que-faire-a-paris-';
 
-                filters = [
-                {'id':'category','multiple':true},
-                {'id':'tags','multiple':true},
-                {'id':'access_type','multiple':false},
-                {'id':'price_type','multiple':false}
-                ];
-                fieldDate = 'date_start';
-                resetFiltersButton = true;
-                resetFiltersButtonLabel = 'Supprimer tous les filtres';
-                fieldDefaultRangeStartsNow = true;
+              sort = '-date_start';
 
-                view = 'cards';
-                fieldsList = ['address_name','address_street','address_city','category'];
-                fieldLink = 'url';
-                fieldLinkLabel = 'Plus d\'informations';
+              filters = [
+              {'id':'tags','multiple':true},
+              {'id':'access_type','multiple':false},
+              {'id':'price_type','multiple':false}
+              ];
+              fieldDate = 'date_start';
+              resetFiltersButton = true;
+              resetFiltersButtonLabel = 'Supprimer tous les filtres';
+              fieldDefaultRangeStartsNow = false;
 
-                cardTitle = 'title';
-                fieldPhoto = 'cover';
-                imagePosition = 'top';
-                itemsPerRow = '2';
+              view = 'cards';
+              fieldsList = [
+                {'field':'address_name'},
+                {'field':'address_street'},
+                {'field':'address_city'},
+                {'field':'conditionversement'},
+                {'field':'date_start','format':'date'},
+                {'field':'date_end','format':'date'}
+              ];
+              fieldLink = 'url';
+              fieldLinkLabel = 'Plus d\'informations';
 
-                kpis = [{
-                'title': 'Nombre d\'activités',
-                'function': 'COUNT'
-                }
-                ];
+              cardTitle = 'title';
+              fieldPhoto = 'image_couverture';
+              imagePosition = 'top';
+              itemsPerRow = '2';
+
+              mapView = true;
+              mapPicto = 'circle';
+              mapPictoColor = '#EC643C';
+
+              kpis = [{
+              'title': 'Nombre d\'activités',
+              'select': 'count(*)'
+              }
+              ];
+
+              sourceLinkLabel = 'Accéder aux données source';
+              noResultMsg = 'Aucun résultat';

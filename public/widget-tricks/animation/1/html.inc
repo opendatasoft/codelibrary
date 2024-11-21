@@ -8,20 +8,19 @@
         <div class="row">
             <div class="col-sm-offset-4 col-sm-4">
                 <!-- KPI box component -->
-                <div ng-if="true"
+                <div class="kpi-card" 
+                     ng-if="true"
                      ng-init="from = 0;
                               nbticks = 30;
                               delay = 100;
-                              tick = 0;"
-                     class="kpi-card">
+                              tick = 0;">
                     <i class="kpi-icon fa fa-superpowers" aria-hidden="true"></i>
-                    <ods-timer
-                            stop-condition="from >= aggregation"
-                            delay="delay"
-                            auto-start="true"
-                            exec="from = from + ((aggregation || 0) / nbticks);">
+                    <ods-timer stop-condition="tick >= nbticks" 
+                               delay="delay" 
+                               auto-start="true" 
+                               exec="tick = tick + 1;">
                     </ods-timer>
-                    <p class="kpi-title">{{ from | number:0 }}</p>
+                    <p class="kpi-title">{{ ((aggregation || 0) / nbticks) * tick | number:0  }}</p>
                     <p class="kpi-description">tons of uranium produced since 2017</p>
                 </div>
             </div>

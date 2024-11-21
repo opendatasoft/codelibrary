@@ -1,13 +1,12 @@
 <ods-dataset-context context="populationmillesime"
-           populationmillesime-domain="public"
-           populationmillesime-dataset="population-francaise-communes"
-           populationmillesime-parameters="{'refine.annee_recensement':'2016'}">
+           populationmillesime-domain="userclub"
+           populationmillesime-dataset="demographyref-france-pop-legale-commune-arrondissement-municipal">
   <div class="row">
     <div class="col-md-5">
         <ods-chart single-y-axis="true" scientific-display="true" labels-x-length="18" align-month="true">
-              <ods-chart-query context="populationmillesime" field-x="nom_de_la_commune" maxpoints="8" sort="serie1-1">
+              <ods-chart-query context="populationmillesime" field-x="nom_officiel_commune_arrondissement_municipal" maxpoints="8" sort="serie1-1">
                   <ods-chart-serie expression-y="population_totale" chart-type="bar" function-y="MAX"
-                                   label-y="2016 Census population" color="#142E7B" display-values="true" scientific-display="true">
+                                   label-y="2018 Census population" color="#142E7B" display-values="true" scientific-display="true">
                   </ods-chart-serie>
               </ods-chart-query>
         </ods-chart>
@@ -19,7 +18,7 @@
           <div ods-analysis="analysispopulationhomemadechart"
                ods-analysis-context="populationmillesime"
                ods-analysis-max="8"
-               ods-analysis-x="nom_de_la_commune"
+               ods-analysis-x="nom_officiel_commune_arrondissement_municipal"
                ods-analysis-serie-population="MAX(population_totale)"
                ods-analysis-sort="population">
               <div ods-subaggregation="analysispopulationhomemadechart.results"
@@ -48,16 +47,16 @@
                                   <i class="fa fa-times" aria-hidden="true"></i>
                               </div>
                               <h4>
-                                  Population evolution in {{ analysehomemadechart.x }} since 2006
+                                  Population evolution in {{ analysehomemadechart.x }} since 2015
                               </h4>
                               <ods-dataset-context context="historic"
-                                                   historic-domain="public"
-                                                   historic-dataset="population-francaise-communes"
-                                                   historic-parameters="{'q': 'nom_de_la_commune:&quot;' + analysehomemadechart.x + '&quot;'}">
+                                                   historic-domain="userclub"
+                                                   historic-dataset="demographyref-france-pop-legale-commune-arrondissement-municipal-millesime"
+                                                   historic-parameters="{'q': 'nom_officiel_commune_arrondissement_municipal:&quot;' + analysehomemadechart.x + '&quot;'}">
                                   <ods-chart timescale="year" single-y-axis="true"
                                              logarithmic="true" align-month="true">
                                       <ods-chart-query context="historic"
-                                                       field-x="annee_recensement" maxpoints="0"
+                                                       field-x="annee_de_recensement" maxpoints="0"
                                                        timescale="year">
                                           <ods-chart-serie expression-y="population_totale"
                                                            chart-type="column"

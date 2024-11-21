@@ -1,4 +1,4 @@
-<ods-dataset-context context="ctx" 
+    <ods-dataset-context context="ctx"
                      ctx-dataset="us-hospitals"
                      ctx-domain="userclub">
     <div class="container">

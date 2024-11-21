@@ -1,11 +1,12 @@
 <ods-dataset-context context="worldheritagelistpublicus"
                      worldheritagelistpublicus-dataset="world-heritage-list"
+                     worldheritagelistpublicus-domain="userclub"
                      worldheritagelistpublicus-parameters="{'disjunctive.states':true,'sort':'date_inscribed'}">
     <div class="search-module">
         <i class="fa fa-search search-module-icon" aria-hidden="true"></i>
         <input placeholder="Search in dataset"
                ng-model="worldheritagelistpublicus.parameters['q']"
-               ng-model-options="{ updateOn: 'keyup', debounce: { 'default': 300, 'blur': 0 }}"
+               ng-model-options="{ updateOn: 'keyup', debounce: 300 }"
                class="search-module-input"
                type="text"/>
         <button class="search-module-clear"

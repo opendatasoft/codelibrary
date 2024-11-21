@@ -39,9 +39,9 @@
 
     
     <link rel="stylesheet" type="text/css" href="/scss/main.css" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="shortcut icon" href="/favicon.ico" />
+    
+    
+    <link rel="shortcut icon" href="/ods-favicon.ico" />
   </head>
 
   <body>
@@ -73,69 +73,88 @@
 
     </div>
 
-    <nav class="navbar is-fixed-top"
+    <nav class="ods-header navbar is-fixed-top"
      role="navigation"
      aria-label="Main navigation">
-    <div class="navbar-brand">
-        <button class="navbar-burger burger"
-                type="button"
-                data-target="sidebarNavbar"
-                aria-controls="sidebarNavbar"
-                aria-expanded="false"
-                aria-label="Main menu">
-            Menu
-        </button>
-        <a class="navbar-item"
-           href="/"
-           title="Back to the homepage">
-            <img src="/img/ods-logo-helphub.svg"
-                 alt="Helphub Logo"/>
+
+   <button type="button"
+           class="menu-button navbar-burger burger"
+           id="nav-button"
+           data-target="sidebarNavbar"
+           aria-controls="sidebarNavbar"
+           aria-expanded="false"
+           aria-label="Main menu">
+        <img class="ods-header__menu-toggle__openlogo" src="/img/menu-fill.svg" alt="Open documentation menu">
+    </button>
+
+    <a class="ods-header-logo ods-header-logo-link"
+       href="https://help.opendatasoft.com/">
+        <img src="/img/ods-logo-noir.svg" alt="Opendatasoft logo">
+        <span class="ods-header__brandname">
+           Help Center
+        </span>
+    </a>
+
+    <div class="ods-header__nav">
+        <a class="ods-header__nav-item-link"
+           href="https://userguide.opendatasoft.com/">
+            User guide
         </a>
-        <button class="navbar-burger burger"
-                type="button"
-                data-target="helphubNavbar"
-                aria-controls="helphubNavbar"
-                aria-expanded="false"
-                aria-label="Help Hub Menu">
-            Help Hub
-        </button>
+        <a class="ods-header__nav-item-link"
+           href="https://academy.opendatasoft.com/page/homepage">
+            Academy
+        </a>
+        <a class="ods-header__nav-item-link is-active"
+           href="https://codelibrary.opendatasoft.com">
+            Code Library
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://help.opendatasoft.com/widgets/">
+            Widgets
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://help.opendatasoft.com/en/apis/">
+            APIs
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://changes.opendatasoft.com/en">
+            Release Notes
+        </a>
     </div>
-    <div class="navbar-menu"
-         id="helphubNavbar">
-        <div class="navbar-start">
-            <a class="navbar-item"
-               href="https://help.opendatasoft.com/">
-                Help Hub
-            </a>
-            <a class="navbar-item"
-               href="https://help.opendatasoft.com/platform/en/">
-                User guide
-            </a>
-            <a class="navbar-item is-active"
-               href="https://codelibrary.opendatasoft.com">
-                Code Library
-            </a>
-            <a class="navbar-item"
-               href="https://help.opendatasoft.com/faq-glossary/en/">
-                FAQ
-            </a>
-            <a class="navbar-item"
-               href="https://help.opendatasoft.com/widgets/">
-                Widgets
-            </a>
-            <a class="navbar-item"
-               href="https://help.opendatasoft.com/en/apis/">
-                APIs
-            </a>
-            <a class="navbar-item"
-               href="https://academy.opendatasoft.com/page/homepage">
-                Academy
-            </a>
-            <a class="navbar-item"
-               href="https://documentation-resources.opendatasoft.com/pages/release-notes/?headless=true">
-                Release Notes
-            </a>
-        </div>
+    <button type="button"
+            class="menu-button navbar-burger burger"
+            id="nav-button"
+            data-target="helphubNavbar"
+            aria-controls="helphubNavbar"
+            aria-expanded="false"
+            aria-label="Main menu">
+        <img class="ods-header__menu-toggle__openlogo" src="/img/apps-custo.svg" alt="Open documentation menu">
+    </button>
+    <div class="navbar-menu" id="helphubNavbar">
+        <a class="ods-header__nav-item-link"
+           href="https://userguide.opendatasoft.com/">
+            User guide
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://academy.opendatasoft.com/page/homepage">
+            Academy
+        </a>
+        <a class="ods-header__nav-item-link is-active"
+           href="https://codelibrary.opendatasoft.com">
+            Code Library
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://help.opendatasoft.com/widgets/">
+            Widgets
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://help.opendatasoft.com/en/apis/">
+            APIs
+        </a>
+        <a class="ods-header__nav-item-link"
+           href="https://changes.opendatasoft.com/en">
+            Release Notes
+        </a>
     </div>
 </nav>
 
@@ -188,6 +207,12 @@
         </li>
         
         <li>
+          <a href="#activeinactive-style">
+            Active/inactive style
+          </a>
+        </li>
+        
+        <li>
           <a href="#simple-example">
             Simple example
           </a>
@@ -209,11 +234,63 @@
       </li>
       
       
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li>
+        <a href="/apps/"
+        class="sidebar-subtitle">
+        Apps
+        
+      </a>
+    </li>
+    
+    
+      
       <li>
         <a class="sidebar-subtitle " href="/components/">
           Components
         </a>
         <ul>
+          
+          <li>
+            <a class="" href="/components/access-card/">
+              <div>
+                Access cards
+                
+                
+              </div>
+            </a>
+          </li>
           
           <li>
             <a class="" href="/components/buttons/">
@@ -269,6 +346,16 @@
             <a class="" href="/components/filters/">
               <div>
                 Filters
+                
+                
+              </div>
+            </a>
+          </li>
+          
+          <li>
+            <a class="" href="/components/icons/">
+              <div>
+                Icons
                 
                 
               </div>
@@ -371,6 +458,9 @@
       
       
       
+      
+      
+      
       <li>
         <a href="/custom-views/"
         class="sidebar-subtitle">
@@ -398,6 +488,9 @@
       
       
       
+      
+      
+      
       <li>
         <a href="/generators/"
         class="sidebar-subtitle">
@@ -407,6 +500,18 @@
     </li>
     
     
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
       
       
       
@@ -565,8 +670,6 @@
         class="sidebar-subtitle">
         Widget tricks
         
-        <span class="tag pill is-size-7 is-rounded is-info">6</span>
-        
       </a>
     </li>
     
@@ -579,6 +682,10 @@
     
     <a class="tag" href="/tags/aggregation/">
       aggregation
+    </a>
+    
+    <a class="tag" href="/tags/card/">
+      card
     </a>
     
     <a class="tag" href="/tags/chart/">
@@ -613,6 +720,10 @@
       navigation
     </a>
     
+    <a class="tag" href="/tags/ods-adv-analysis/">
+      ods-adv-analysis
+    </a>
+    
     <a class="tag" href="/tags/ods-aggregation/">
       ods-aggregation
     </a>
@@ -625,6 +736,14 @@
       ods-maps
     </a>
     
+    <a class="tag" href="/tags/ods-subaggregation/">
+      ods-subaggregation
+    </a>
+    
+    <a class="tag" href="/tags/redirection/">
+      redirection
+    </a>
+    
   </div>
 </div>
 </aside>
@@ -633,30 +752,31 @@
       <div class="column codelibrary-content">
         
 <section class="section resources">
-  <div class="container is-max-widescreen">
-    <h1 class="title is-1">Components - Switch Module</h1>
-    <div class="content">
-      <p>A switch is a visual toggle between two mutually exclusive states — on and off.</p>
+    <div class="container is-max-widescreen">
+        <h1 class="title is-1">Components - Switch Module</h1>
+        <div class="content">
+            <p>A switch is a visual toggle between two mutually exclusive states — on and off.</p>
 <p>Check the example on the bottom of the page to see how to add Angular attributes to the component and use it in your pages!</p>
 
-    </div>
-    
-    <article class="block">
-      <h2 class="title is-2" id="light-style">
-        Light style 
-        <a class="is-link anchor" href="#light-style">
-          <span class="icon">
-            <img src="/img/fas-link.svg" />
-          </span>
-        </a>
-      </h2>
-      <div class="content">
-        <p>A regular switch that switches to an &ldquo;on&rdquo; state on click.</p>
-
-      </div>
-      
-      <div class="box">
+        </div>
         
+        <article class="block">
+            <h2 class="title is-2" id="light-style">
+                Light style 
+                <a class="is-link anchor" href="#light-style">
+            <span class="icon">
+              <img src="/img/fas-link.svg"/>
+            </span>
+                </a>
+            </h2>
+            <div class="content">
+                <p>A regular switch that switches to an &ldquo;on&rdquo; state on click.</p>
+
+            </div>
+            
+            
+                <div class="box">
+                    
 
 
 
@@ -664,6 +784,14 @@
 
 
     
+
+
+
+
+    
+
+
+
 
 
 
@@ -677,7 +805,7 @@
                name="data"
                value='{
                  "title": "New Pen!",
-                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
                  "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003clabel class=\&#34;switch\&#34;\u003e\n  \u003cinput class=\&#34;switch-input\&#34; type=\&#34;checkbox\&#34;\u003e\n  \u003cspan class=\&#34;switch-button\&#34;\u003e\u003c/span\u003e\n\u003c/label\u003e\u003c/div\u003e&#34;,
                  "css": &#34;/* Light switch\n   ========================================================================== */\n\n.switch {\n    display: inline-block;\n    margin-bottom: .5rem;\n}\n\n.switch-button {\n    /* background color when \&#34;off\&#34; */\n    background: #FFFFFF;\n\n    /* size of switch */\n    width: 43px;\n    height: 25px;\n    border: 2px solid #E6E6E6;\n    border-radius: 100px;\n    display: block;\n\n    cursor: pointer;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    outline: 0;\n    -webkit-transition: all .4s ease;\n    -o-transition: all .4s ease;\n    transition: all .4s ease;\n}\n\n/* Style of the \&#34;bubble\&#34; that toggles */\n.switch-button::after {\n    /* size of bubble */\n    width: 21px;\n    height: 21px;\n    border-radius: 50%;\n    background-color: #FFFFFF;\n    position: relative;\n    display: block;\n    content: \&#34;\&#34;;\n    -webkit-transition: tranform .4s cubic-bezier(0.175, 0.885, 0.320, 1.275), \n                padding .3s ease, margin .3s ease;\n    -o-transition: tranform .4s cubic-bezier(0.175, 0.885, 0.320, 1.275), \n                padding .3s ease, margin .3s ease;\n    transition: tranform .4s cubic-bezier(0.175, 0.885, 0.320, 1.275), \n                padding .3s ease, margin .3s ease;\n    -webkit-transform: translateX(0);\n        -ms-transform: translateX(0);\n            transform: translateX(0);\n    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,.4);\n            box-shadow: 0 1px 3px rgba(0,0,0,.4);\n}\n\n.switch-input {\n    display: none;\n}\n\n.switch-button:hover::after {\n    will-change: padding;\n}\n\n.switch-button:active::after {\n    padding-right: .4rem;\n}\n\n/* \&#34;On\&#34; state\n   ========================== */\n\n.switch-input:checked &#43; .switch-button {\n    /* border and background color when the button is \&#34;on\&#34; */\n    border-color: var(--highlight); \n    background: var(--highlight);\n}\n\n.switch-input:checked &#43; .switch-button::after {\n    /* bubble position when \&#34;on\&#34; */\n    -webkit-transform: translateX(18px);\n        -ms-transform: translateX(18px);\n            transform: translateX(18px);\n}\n\n.switch-input:checked &#43; .switch-button:active::after {\n    margin-left: -.4rem;\n}\n\n/* Checkbox in disabled state\n   ========================== */\n\n.switch-input[type=\&#34;checkbox\&#34;]:disabled &#43; .switch-button {\n    opacity: .6;\n    cursor: not-allowed;\n    -webkit-box-shadow: 0 0 0 transparent;\n            box-shadow: 0 0 0 transparent;\n}\n\n.switch-input[type=\&#34;checkbox\&#34;]:checked:disabled &#43; .switch-button {\n    /* border and background color when button is disabled */\n    border-color: #cccccc;\n    background: #cccccc;\n}&#34;
@@ -691,7 +819,8 @@
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
-                <head>&lt;link
+                <head>
+                    &lt;link
   rel=&#34;stylesheet&#34;
   href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
 /&gt;
@@ -735,6 +864,7 @@
   const sourceMonitoringInterceptor = $q =&gt; {
     return {
       request: config =&gt; {
+        console.log(config.url);
         if (config.params)
           if (config.params.source) delete config.params.source;
 
@@ -845,7 +975,9 @@
       $httpProvider.interceptors.push(sourceMonitoringInterceptor);
     });
 &lt;/script&gt;
-</head>
+
+                    
+                </head>
                 <base href='https://userclub.opendatasoft.com/'>
                 <body>
                 <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
@@ -958,8 +1090,10 @@
                 </body>
               ">
       </iframe>
-      <div class="show-code buttons has-addons">
-          <button class="button is-light">
+      <div class="buttons has-addons">
+          
+          <button id="tab-show-code" aria-controls="panel-show-code"
+                  class="show-code button is-light">
             <span>Show code</span>
           </button>
           <button class="button is-light"
@@ -977,7 +1111,9 @@
           </button>
       </div>
     </div>
-    <div class="box-code js-tabs is-hidden">
+    
+    <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
+         class="box-code js-tabs is-hidden">
         <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
@@ -1141,8 +1277,7 @@
     /* border and background color when button is disabled */
     border-color: #cccccc;
     background: #cccccc;
-}"
-            >
+}">
                 <div class="highlight">
                     <pre class="language-css" data-lang="css"><code>/* Light switch
    ========================================================================== */
@@ -1251,25 +1386,27 @@
     </div>
 </div>
 
-      </div>
-    </article>
-    
-    <article class="block">
-      <h2 class="title is-2" id="skewed-style">
-        Skewed style 
-        <a class="is-link anchor" href="#skewed-style">
-          <span class="icon">
-            <img src="/img/fas-link.svg" />
-          </span>
-        </a>
-      </h2>
-      <div class="content">
-        <p>To edit the text inside this toggle, you must edit the <code>data-toggle-on</code> and <code>data-toggle-off</code> attributes in the HTML code. Depending on the length of the text, you might need to edit the <code>width</code> of of the <code>.switch-button</code> class in the CSS.</p>
-
-      </div>
-      
-      <div class="box">
+                </div>
+            
+        </article>
         
+        <article class="block">
+            <h2 class="title is-2" id="skewed-style">
+                Skewed style 
+                <a class="is-link anchor" href="#skewed-style">
+            <span class="icon">
+              <img src="/img/fas-link.svg"/>
+            </span>
+                </a>
+            </h2>
+            <div class="content">
+                <p>To edit the text inside this toggle, you must edit the <code>data-toggle-on</code> and <code>data-toggle-off</code> attributes in the HTML code. Depending on the length of the text, you might need to edit the <code>width</code> of of the <code>.switch-button</code> class in the CSS.</p>
+
+            </div>
+            
+            
+                <div class="box">
+                    
 
 
 
@@ -1277,6 +1414,14 @@
 
 
     
+
+
+
+
+    
+
+
+
 
 
 
@@ -1290,7 +1435,7 @@
                name="data"
                value='{
                  "title": "New Pen!",
-                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
                  "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003clabel class=\&#34;switch\&#34;\u003e\n  \u003cinput class=\&#34;switch-input\&#34;\n         type=\&#34;checkbox\&#34;\u003e\n  \u003cspan class=\&#34;switch-button\&#34;\n         data-toggle-on=\&#34;ON\&#34;\n         data-toggle-off=\&#34;OFF\&#34;\u003e\u003c/span\u003e\n\u003c/label\u003e\u003c/div\u003e&#34;,
                  "css": &#34;/* Skewed Switch\n   ========================================================================== */\n\n.switch {\n    display: inline-block;\n    margin-bottom: .5rem;\n}\n\n.switch-button {\n    /* Change width and height to modify size of switch */\n    width: 4rem;\n    height: 2rem;\n\n    /* background color when \&#34;off\&#34; */\n    background: #888888;\n\n    display: block;\n    position: relative;\n    cursor: pointer;\n    outline: 0;\n    overflow: hidden;\n    -webkit-user-select: none;\n        -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    -webkit-transform: skew(-10deg);\n        -ms-transform: skew(-10deg);\n            transform: skew(-10deg);\n    -webkit-transition: all .2s ease;\n        -o-transition: all .2s ease;\n            transition: all .2s ease;\n    -webkit-backface-visibility: hidden;\n            backface-visibility: hidden;\n}\n\n.switch-button::before, \n.switch-button::after {\n    /* the line-height must be the same as the height above */\n    line-height: 2rem;\n\n    color: #FFFFFF;\n    font-weight: bold;\n    text-shadow: 0 1px 1px rgba(0,0,0,.3);\n    display: inline-block;\n    width: 100%;\n    text-align: center;\n    position: absolute;\n    -webkit-transform: skew(10deg);\n        -ms-transform: skew(10deg);\n            transform: skew(10deg);\n    -webkit-transition: all .2s ease;\n        -o-transition: all .2s ease;\n            transition: all .2s ease;\n}\n\n.switch-input {\n    display: none;\n}\n\n.switch-button::before {\n    content: attr(data-toggle-off);\n    left: 0;\n}\n\n.switch-button::after {\n    content: attr(data-toggle-on);\n    left: 100%;\n}\n\n.switch-button:active::before {\n    left: -10%;\n}\n\n/* \&#34;On\&#34; state\n   ========================== */\n\n.switch-input:checked &#43; .switch-button {\n    /* color of background when \&#34;on\&#34; */\n    background: var(--highlight);\n}\n\n.switch-input:checked &#43; .switch-button::before {\n    left: -100%;\n}\n\n.switch-input:checked &#43; .switch-button::after {\n    left: 0;\n}\n\n.switch-input:checked &#43; .switch-button:active::after {\n    left: 10%;\n}\n\n/* Checkbox in disabled state\n   ========================== */\n\n.switch-input[type=\&#34;checkbox\&#34;]:disabled &#43; .switch-button {\n    opacity: .6;\n    cursor: not-allowed;\n}\n\n.switch-input[type=\&#34;checkbox\&#34;]:checked:disabled &#43; .switch-button {\n    /* border and background color when button is disabled */\n    border-color: #cccccc;\n    background: #cccccc;\n}&#34;
@@ -1304,7 +1449,8 @@
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
-                <head>&lt;link
+                <head>
+                    &lt;link
   rel=&#34;stylesheet&#34;
   href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
 /&gt;
@@ -1348,6 +1494,7 @@
   const sourceMonitoringInterceptor = $q =&gt; {
     return {
       request: config =&gt; {
+        console.log(config.url);
         if (config.params)
           if (config.params.source) delete config.params.source;
 
@@ -1458,7 +1605,9 @@
       $httpProvider.interceptors.push(sourceMonitoringInterceptor);
     });
 &lt;/script&gt;
-</head>
+
+                    
+                </head>
                 <base href='https://userclub.opendatasoft.com/'>
                 <body>
                 <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
@@ -1580,8 +1729,10 @@
                 </body>
               ">
       </iframe>
-      <div class="show-code buttons has-addons">
-          <button class="button is-light">
+      <div class="buttons has-addons">
+          
+          <button id="tab-show-code" aria-controls="panel-show-code"
+                  class="show-code button is-light">
             <span>Show code</span>
           </button>
           <button class="button is-light"
@@ -1599,7 +1750,9 @@
           </button>
       </div>
     </div>
-    <div class="box-code js-tabs is-hidden">
+    
+    <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
+         class="box-code js-tabs is-hidden">
         <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
@@ -1775,8 +1928,7 @@
     /* border and background color when button is disabled */
     border-color: #cccccc;
     background: #cccccc;
-}"
-            >
+}">
                 <div class="highlight">
                     <pre class="language-css" data-lang="css"><code>/* Skewed Switch
    ========================================================================== */
@@ -1891,25 +2043,27 @@
     </div>
 </div>
 
-      </div>
-    </article>
-    
-    <article class="block">
-      <h2 class="title is-2" id="flip-style">
-        Flip style 
-        <a class="is-link anchor" href="#flip-style">
-          <span class="icon">
-            <img src="/img/fas-link.svg" />
-          </span>
-        </a>
-      </h2>
-      <div class="content">
-        <p>To edit the text inside this toggle, you must edit the <code>data-toggle-on</code> and <code>data-toggle-off</code> attributes in the HTML code. Depending on the length of the text, you might need to edit the <code>width</code> of of the <code>.switch-button</code> class in the CSS.</p>
-
-      </div>
-      
-      <div class="box">
+                </div>
+            
+        </article>
         
+        <article class="block">
+            <h2 class="title is-2" id="flip-style">
+                Flip style 
+                <a class="is-link anchor" href="#flip-style">
+            <span class="icon">
+              <img src="/img/fas-link.svg"/>
+            </span>
+                </a>
+            </h2>
+            <div class="content">
+                <p>To edit the text inside this toggle, you must edit the <code>data-toggle-on</code> and <code>data-toggle-off</code> attributes in the HTML code. Depending on the length of the text, you might need to edit the <code>width</code> of of the <code>.switch-button</code> class in the CSS.</p>
+
+            </div>
+            
+            
+                <div class="box">
+                    
 
 
 
@@ -1917,6 +2071,14 @@
 
 
     
+
+
+
+
+    
+
+
+
 
 
 
@@ -1930,7 +2092,7 @@
                name="data"
                value='{
                  "title": "New Pen!",
-                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
                  "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003clabel class=\&#34;switch\&#34;\u003e\n  \u003cinput class=\&#34;switch-input\&#34;\n         type=\&#34;checkbox\&#34;\u003e\n  \u003cspan class=\&#34;switch-button\&#34;\n         data-toggle-on=\&#34;ON\&#34;\n         data-toggle-off=\&#34;OFF\&#34;\u003e\u003c/span\u003e\n\u003c/label\u003e\u003c/div\u003e&#34;,
                  "css": &#34;/* Flip Switch\n   ========================================================================== */\n\n.switch {\n    display: inline-block;\n    margin-bottom: .5rem;\n}\n\n.switch-button {\n    width: 4rem;\n    height: 2rem;\n    padding: 2px;\n    position: relative;\n    cursor: pointer;\n    outline: 0;\n    display: block;\n    -webkit-user-select: none;\n       -moz-user-select: none;\n        -ms-user-select: none;\n            user-select: none;\n    -webkit-transition: all .2s ease-out;\n         -o-transition: all .2s ease-out;\n            transition: all .2s ease-out;\n    -webkit-perspective: 100px;\n            perspective: 100px;\n}\n\n.switch-button::before, \n.switch-button::after {\n    line-height: 2rem;\n    font-weight: bold;\n    color: #FFFFFF;\n    text-align: center;\n    display: inline-block;\n    border-radius: 4px;\n    width: 100%;\n    position: absolute;\n    top: 0;\n    left: 0;\n    -webkit-backface-visibility: hidden;\n            backface-visibility: hidden;\n    -webkit-transition: all .4s ease;\n         -o-transition: all .4s ease;\n            transition: all .4s ease;\n}\n\n.switch-input {\n    display: none;\n}\n\n/* When switch is \&#34;off\&#34; */\n.switch-button::before {\n    background: var(--links);\n    content: attr(data-toggle-off);\n}\n\n/* When switch is \&#34;on\&#34; */\n.switch-button::after {\n    background: var(--highlight);\n    content: attr(data-toggle-on);\n    -webkit-transform: rotateY(-180deg);\n            transform: rotateY(-180deg);\n}\n\n.switch-button:hover::before {\n    -webkit-transform: rotateY(-20deg);\n            transform: rotateY(-20deg);\n}\n\n/* \&#34;On\&#34; state\n   ========================== */\n\n.switch-input:checked &#43; .switch-button:hover::after {\n    -webkit-transform: rotateY(20deg);\n            transform: rotateY(20deg);\n}\n\n.switch-input:checked &#43; .switch-button::before {\n    -webkit-transform: rotateY(180deg);\n            transform: rotateY(180deg);\n}\n\n.switch-input:checked &#43; .switch-button::after {\n    -webkit-transform: rotateY(0);\n            transform: rotateY(0);\n}\n\n/* Checkbox in disabled\n   ========================== */\n\n.switch-input[type=\&#34;checkbox\&#34;]:disabled &#43; .switch-button {\n    opacity: .6;\n    cursor: not-allowed;\n}\n\n.switch-input[type=\&#34;checkbox\&#34;]:checked:disabled &#43; .switch-button {\n    border-color: #cccccc;\n    background: #cccccc;\n}&#34;
@@ -1944,7 +2106,8 @@
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
-                <head>&lt;link
+                <head>
+                    &lt;link
   rel=&#34;stylesheet&#34;
   href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
 /&gt;
@@ -1988,6 +2151,7 @@
   const sourceMonitoringInterceptor = $q =&gt; {
     return {
       request: config =&gt; {
+        console.log(config.url);
         if (config.params)
           if (config.params.source) delete config.params.source;
 
@@ -2098,7 +2262,9 @@
       $httpProvider.interceptors.push(sourceMonitoringInterceptor);
     });
 &lt;/script&gt;
-</head>
+
+                    
+                </head>
                 <base href='https://userclub.opendatasoft.com/'>
                 <body>
                 <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
@@ -2213,8 +2379,10 @@
                 </body>
               ">
       </iframe>
-      <div class="show-code buttons has-addons">
-          <button class="button is-light">
+      <div class="buttons has-addons">
+          
+          <button id="tab-show-code" aria-controls="panel-show-code"
+                  class="show-code button is-light">
             <span>Show code</span>
           </button>
           <button class="button is-light"
@@ -2232,7 +2400,9 @@
           </button>
       </div>
     </div>
-    <div class="box-code js-tabs is-hidden">
+    
+    <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
+         class="box-code js-tabs is-hidden">
         <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
@@ -2401,8 +2571,7 @@
 .switch-input[type=&#34;checkbox&#34;]:checked:disabled &#43; .switch-button {
     border-color: #cccccc;
     background: #cccccc;
-}"
-            >
+}">
                 <div class="highlight">
                     <pre class="language-css" data-lang="css"><code>/* Flip Switch
    ========================================================================== */
@@ -2510,25 +2679,27 @@
     </div>
 </div>
 
-      </div>
-    </article>
-    
-    <article class="block">
-      <h2 class="title is-2" id="button-group-style">
-        Button group style 
-        <a class="is-link anchor" href="#button-group-style">
-          <span class="icon">
-            <img src="/img/fas-link.svg" />
-          </span>
-        </a>
-      </h2>
-      <div class="content">
-        <p>Show both options at once and switch from one to the other on click.</p>
-
-      </div>
-      
-      <div class="box">
+                </div>
+            
+        </article>
         
+        <article class="block">
+            <h2 class="title is-2" id="button-group-style">
+                Button group style 
+                <a class="is-link anchor" href="#button-group-style">
+            <span class="icon">
+              <img src="/img/fas-link.svg"/>
+            </span>
+                </a>
+            </h2>
+            <div class="content">
+                <p>Show both options at once and switch from one to the other on click.</p>
+
+            </div>
+            
+            
+                <div class="box">
+                    
 
 
 
@@ -2536,6 +2707,14 @@
 
 
     
+
+
+
+
+    
+
+
+
 
 
 
@@ -2549,7 +2728,7 @@
                name="data"
                value='{
                  "title": "New Pen!",
-                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
                  "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003clabel class=\&#34;switch\&#34;\u003e\n    \u003cinput class=\&#34;switch-input\&#34;\n            type=\&#34;checkbox\&#34;\u003e\n    \u003cdiv class=\&#34;switch-button\&#34;\u003e\n        \u003cspan class=\&#34;switch-button-left\&#34;\u003eOFF\u003c/span\u003e \n        \u003cspan class=\&#34;switch-button-right\&#34;\u003eON\u003c/span\u003e\n    \u003c/div\u003e\n\u003c/label\u003e\u003c/div\u003e&#34;,
                  "css": &#34;/* Button Group Switch\n   ========================================================================== */\n\n.switch {\n    display: inline-block;\n    margin-bottom: 0.5rem;\n}\n\n.switch-button {\n    /* background and border when in \&#34;off\&#34; state */\n    background: var(--highlight);\n    border: 2px solid var(--highlight);\n    display: grid; \n    grid-template-columns: 1fr 1fr;\n    border-radius: 6px;\n    color: #FFFFFF;\n    position: relative;\n    cursor: pointer;\n    outline: 0;\n    user-select: none;\n}\n\n.switch-input:not(:checked) &#43; .switch-button .switch-button-left {\n    /* text color when in \&#34;off\&#34; state */\n    color: var(--highlight);\n}\n\n.switch-input {\n    display: none;\n}\n\n.switch-button span {\n    font-size: 1rem;\n    padding: 0.2rem .7rem;\n    text-align: center;\n    z-index: 2;\n    color: #FFFFFF;\n    transition: color .2s;\n}\n\n.switch-button::before {\n    content: &#39;&#39;;\n    position: absolute;\n    background-color: #FFFFFF;\n    box-shadow: 0 1px 3px rgba(0,0,0,.4);\n    border-radius: 4px;\n    top: 0;\n    left: 0;\n    height: 100%;\n    width: 50%;\n    z-index: 1;\n    transition: left .3s cubic-bezier(0.175, 0.885, 0.320, 1), \n                padding .2s ease, margin .2s ease;\n}\n\n.switch-button:hover::before {\n    will-change: padding;\n}\n\n.switch-button:active::before {\n    padding-right: .4rem;\n}\n\n\n/* \&#34;On\&#34; state\n   ========================== */\n\n.switch-input:checked &#43; .switch-button {\n    /* background and border when in \&#34;on\&#34; state */\n    background-color: var(--links);\n    border-color: var(--links);\n}\n\n.switch-input:checked &#43; .switch-button .switch-button-right {\n    /* text color when in \&#34;on\&#34; state */\n    color: var(--links);\n}\n\n.switch-input:checked &#43; .switch-button::before {\n    left: 50%;\n}\n\n.switch-input:checked &#43; .switch-button:active::before {\n    margin-left: -.4rem;\n}\n\n/* Checkbox in disabled state\n   ========================== */\n\n.switch-input[type=\&#34;checkbox\&#34;]:disabled &#43; .switch-button {\n    opacity: 0.6;\n    cursor: not-allowed;\n}\n&#34;
@@ -2563,7 +2742,8 @@
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
-                <head>&lt;link
+                <head>
+                    &lt;link
   rel=&#34;stylesheet&#34;
   href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
 /&gt;
@@ -2607,6 +2787,7 @@
   const sourceMonitoringInterceptor = $q =&gt; {
     return {
       request: config =&gt; {
+        console.log(config.url);
         if (config.params)
           if (config.params.source) delete config.params.source;
 
@@ -2717,7 +2898,9 @@
       $httpProvider.interceptors.push(sourceMonitoringInterceptor);
     });
 &lt;/script&gt;
-</head>
+
+                    
+                </head>
                 <base href='https://userclub.opendatasoft.com/'>
                 <body>
                 <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
@@ -2828,8 +3011,10 @@
                 </body>
               ">
       </iframe>
-      <div class="show-code buttons has-addons">
-          <button class="button is-light">
+      <div class="buttons has-addons">
+          
+          <button id="tab-show-code" aria-controls="panel-show-code"
+                  class="show-code button is-light">
             <span>Show code</span>
           </button>
           <button class="button is-light"
@@ -2847,7 +3032,9 @@
           </button>
       </div>
     </div>
-    <div class="box-code js-tabs is-hidden">
+    
+    <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
+         class="box-code js-tabs is-hidden">
         <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
@@ -3013,8 +3200,7 @@
     opacity: 0.6;
     cursor: not-allowed;
 }
-"
-            >
+">
                 <div class="highlight">
                     <pre class="language-css" data-lang="css"><code>/* Button Group Switch
    ========================================================================== */
@@ -3117,25 +3303,27 @@
     </div>
 </div>
 
-      </div>
-    </article>
-    
-    <article class="block">
-      <h2 class="title is-2" id="simple-example">
-        Simple example 
-        <a class="is-link anchor" href="#simple-example">
-          <span class="icon">
-            <img src="/img/fas-link.svg" />
-          </span>
-        </a>
-      </h2>
-      <div class="content">
-        <p>A simple usecase to show how this component can be used in your pages.</p>
-
-      </div>
-      
-      <div class="box">
+                </div>
+            
+        </article>
         
+        <article class="block">
+            <h2 class="title is-2" id="activeinactive-style">
+                Active/inactive style 
+                <a class="is-link anchor" href="#activeinactive-style">
+            <span class="icon">
+              <img src="/img/fas-link.svg"/>
+            </span>
+                </a>
+            </h2>
+            <div class="content">
+                <p>Toggle button to highlight an active or inactive state.</p>
+
+            </div>
+            
+            
+                <div class="box">
+                    
 
 
 
@@ -3143,12 +3331,20 @@
 
 
     
+
+
+
+
+    
+
+
+
 
 
 
 
 <div class="codepen">
-    <form id="form-simple-example"
+    <form id="form-activeinactive-style"
           action="https://codepen.io/pen/define"
           method="POST"
           target="_blank">
@@ -3156,21 +3352,22 @@
                name="data"
                value='{
                  "title": "New Pen!",
-                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
-                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;content-card\&#34;\n     ng-init=\&#34;view = &#39;map&#39;\&#34;\u003e\n    \u003cdiv class=\&#34;row\&#34;\u003e\n        \u003cdiv class=\&#34;col-sm-3\&#34;\u003e\n            \u003ch2 class=\&#34;content-card-title\&#34;\u003e\n                France departments\n            \u003c/h2\u003e\n            \u003cp class=\&#34;content-card-description\&#34;\u003e\n                Cardano could be many technical analysis since Nexo data mining a fundamental analysis.\n            \u003c/p\u003e\n            \u003cp class=\&#34;content-card-description\&#34;\u003e\n                Ravencoin generates a amazing fish of lots of market cap, and Waves serves many quick anti-money laundering! Solidity allowed lots of fast peer-to-peer network.\n            \u003c/p\u003e\n            \u003cdiv class=\&#34;switch-container\&#34;\u003e\n                \u003cstrong\u003eView : \u003c/strong\u003e\n                \u003clabel class=\&#34;switch\&#34;\u003e\n                    \u003cinput ng-model=\&#34;view\&#34;\n                           ng-true-value=\&#34;&#39;map&#39;\&#34;\n                           ng-false-value=\&#34;&#39;table&#39;\&#34;\n                           ng-checked=\&#34;view == &#39;map&#39;\&#34;\n                           class=\&#34;switch-input\&#34;\n                           type=\&#34;checkbox\&#34;\u003e\n                    \u003cdiv class=\&#34;switch-button\&#34;\u003e\n                        \u003cspan class=\&#34;switch-button-left\&#34;\u003eTABLE\u003c/span\u003e\n                        \u003cspan class=\&#34;switch-button-right\&#34;\u003eMAP\u003c/span\u003e\n                    \u003c/div\u003e\n                \u003c/label\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;col-sm-9\&#34;\u003e\n            \u003cods-dataset-context context=\&#34;countoursgeographiques\&#34;\n                                 countoursgeographiques-dataset=\&#34;contours-geographiques-simplifies-des-nouvelles-regions-metropole\&#34;\n                                 countoursgeographiques-domain=\&#34;userclub\&#34;\n                                 countoursgeographiques-parameters=\&#34;{}\&#34;\u003e\n                \u003cdiv ng-if=\&#34;view == &#39;map&#39;\&#34;\u003e\n                    \u003cods-map context=\&#34;countoursgeographiques\&#34;\n                             scroll-wheel-zoom=\&#34;false\&#34;\u003e\u003c/ods-map\u003e\n                \u003c/div\u003e\n                \u003cdiv ng-if=\&#34;view == &#39;table&#39;\&#34;\u003e\n                    \u003cods-table context=\&#34;countoursgeographiques\&#34;\u003e\u003c/ods-table\u003e\n                \u003c/div\u003e\n            \u003c/ods-dataset-context\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\n\u003c/div\u003e&#34;,
-                 "css": &#34;/* Content Card\n   ========================================================================== */\n   \n.content-card {\n\tbackground-color: var(--boxes-background);\n\tpadding: 26px;\n\tborder-radius: 4px;\n\tmargin-bottom: 20px;\n\theight: 100%;\n}\n.content-card-title {\n\tcolor: var(--titles);\n\tfont-size: 1.2rem;\n\tline-height: 1.5;\n\tfont-weight: normal;\n\tmargin-top: 0;\n\tmargin-bottom: 13px;\n\tmax-width: 100%;\n}\n.content-card-description {\n\tcolor: var(--text);\n\tfont-size: 1rem;\n\tline-height: 1.5;\n\tfont-weight: normal;\n\tmargin-top: 0;\n\tmargin-bottom: 26px;\n\tmax-width: 100%;\n}\n.content-card-icon {\n\tcolor: var(--highlight);\n\tfont-size: 2rem;\n\tmargin-bottom: 13px;\n\tmax-width: 100%;\n}\n.content-card-link {\n\tcolor: var(--links);\n\tfont-weight: bold;\n\ttransition: all .2s;\n\topacity: 1;\n\tmax-width: 100%;\n}\n.content-card-link:hover {\n\topacity: .7;\n\ttext-decoration: none;\n}\n.content-card-button {\n\tcolor: var(--highlight);\n\tborder: 1px solid var(--highlight);\n    background: transparent;\n\tdisplay: inline-block;\n\ttext-align: center;\n\tfont-size: .867rem;\n    border-radius: 4px;\n    padding: .5rem 1.15rem;\n    text-decoration: none;\n    transition: all .2s;\n}\n.content-card-button:hover {\n\tbackground-color: var(--highlight);\n\tcolor: #FFFFFF;\n\ttext-decoration: none;\n}\n\n.switch-container {\n    display: flex;\n    align-items: center;\n}\n\n/* Button Group Switch\n   ========================================================================== */\n\n.switch {\n    display: inline-block;\n    margin-bottom: 0;\n    margin-left: 0.5rem;\n}\n\n.switch-button {\n    /* background and border when in \&#34;off\&#34; state */\n    background: var(--highlight);\n    border: 2px solid var(--highlight);\n    display: grid; \n    grid-template-columns: 1fr 1fr;\n    border-radius: 6px;\n    color: #FFFFFF;\n    position: relative;\n    cursor: pointer;\n    outline: 0;\n    user-select: none;\n}\n\n.switch-input:not(:checked) &#43; .switch-button .switch-button-left {\n    /* text color when in \&#34;off\&#34; state */\n    color: var(--highlight);\n}\n\n.switch-input {\n    display: none;\n}\n\n.switch-button span {\n    font-size: 1rem;\n    padding: 0.2rem .7rem;\n    text-align: center;\n    z-index: 2;\n    color: #FFFFFF;\n    transition: color .2s;\n}\n\n.switch-button::before {\n    content: &#39;&#39;;\n    position: absolute;\n    background-color: #FFFFFF;\n    box-shadow: 0 1px 3px rgba(0,0,0,.4);\n    border-radius: 4px;\n    top: 0;\n    left: 0;\n    height: 100%;\n    width: 50%;\n    z-index: 1;\n    transition: left .3s cubic-bezier(0.175, 0.885, 0.320, 1), \n                padding .2s ease, margin .2s ease;\n}\n\n.switch-button:hover::before {\n    will-change: padding;\n}\n\n.switch-button:active::before {\n    padding-right: .4rem;\n}\n\n\n/* \&#34;On\&#34; state\n   ========================== */\n\n.switch-input:checked &#43; .switch-button {\n    /* background and border when in \&#34;on\&#34; state */\n    background-color: var(--links);\n    border-color: var(--links);\n}\n\n.switch-input:checked &#43; .switch-button .switch-button-right {\n    /* text color when in \&#34;on\&#34; state */\n    color: var(--links);\n}\n\n.switch-input:checked &#43; .switch-button::before {\n    left: 50%;\n}\n\n.switch-input:checked &#43; .switch-button:active::before {\n    margin-left: -.4rem;\n}\n\n/* Checkbox in disabled state\n   ========================== */\n\n.switch-input[type=\&#34;checkbox\&#34;]:disabled &#43; .switch-button {\n    opacity: 0.6;\n    cursor: not-allowed;\n}\n&#34;
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;row\&#34;\u003e\n    \u003cdiv class=\&#34;col-xs-4\&#34;\u003e\n        \u003ch2\u003e\n            Flat style {{ flatbutton.active ? &#39;On&#39; : &#39;Off&#39; }}\n        \u003c/h2\u003e\n        \u003cbutton ng-click=\&#34;flatbutton.active = !flatbutton.active\&#34;\n                ng-class=\&#34;{&#39;flat-button-active&#39;: flatbutton.active == true}\&#34; class=\&#34;flat-button\&#34;\n                aria-expanded=\&#34;{{ flatbutton.active == true }}\&#34;\u003e\n            Click me\n        \u003c/button\u003e\n    \u003c/div\u003e\n\n    \u003cdiv class=\&#34;col-xs-4\&#34;\u003e\n        \u003ch2\u003e\n            Press style {{ pressbutton.active ? &#39;On&#39; : &#39;Off&#39; }}\n        \u003c/h2\u003e\n        \u003cbutton ng-click=\&#34;pressbutton.active = !pressbutton.active\&#34;\n                ng-class=\&#34;{&#39;press-button-active&#39;: pressbutton.active == true}\&#34; class=\&#34;press-button\&#34;\n                aria-expanded=\&#34;{{ pressbutton.active == true }}\&#34;\u003e\n            Click me\n        \u003c/button\u003e\n    \u003c/div\u003e\n\n    \u003cdiv class=\&#34;col-xs-4\&#34;\u003e\n        \u003ch2\u003e\n            Gradient and shadow style {{ shadowbutton.active ? &#39;On&#39; : &#39;Off&#39; }}\n        \u003c/h2\u003e\n        \u003cbutton ng-click=\&#34;shadowbutton.active = !shadowbutton.active\&#34;\n                ng-class=\&#34;{&#39;shadow-button-active&#39;: shadowbutton.active == true}\&#34; class=\&#34;shadow-button\&#34;\n                aria-expanded=\&#34;{{ shadowbutton.active == true }}\&#34;\u003e\n            Click me\n        \u003c/button\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
+                 "css": &#34;/* Flat style\n=============================================================================*/\n.flat-button {\n    font-size: 1rem;\n    color: var(--links);\n    border: 1px solid var(--links);\n    border-radius: 2rem;\n    background: #FFF;\n    padding: .37rem 1rem;\n    margin-right: 6px;\n}\n\n.flat-button:hover {\n    opacity: 0.65;\n}\n\n.flat-button-active {\n    background-color: var(--links);\n    color: #FFF;\n}\n\n/* Press style\n=============================================================================*/\n.press-button {\n    font-size: 1rem;\n    color: var(--links);\n    border: 1px solid var(--links);\n    border-radius: 2rem;\n    background: #FFF;\n    padding: .37rem 1rem;\n    border-bottom-width: 6px;\n}\n\n.press-button:hover {\n    opacity: 0.65;\n}\n\n.press-button-active {\n    margin-top: 3px;\n    border-bottom-width: 3px;\n}\n\n/* Shadow style\n=============================================================================*/\n.shadow-button {\n    font-size: 1rem;\n    background: rgb(0, 136, 204);\n    background: linear-gradient(0deg, rgba(0, 136, 204, 1) 0%, rgba(6, 168, 249, 1) 100%);\n    color: #FFF;\n    border: 1px solid var(--links);\n    border-radius: 2rem;\n    padding: .37rem 1rem;\n}\n\n.shadow-button-active {\n    background-color: rgba(0, 136, 204, 1);\n    box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 0.3) inset;\n    padding-top: .47rem;\n    padding-bottom: .27rem;\n}\n\n\n\n\n&#34;
                }'>
     </form>
 </div>
 <div class="ods-content">
     <div class="box-live-example"
-      style="height: 550px;">
-      <iframe id="iframe-simple-example"
+      style="height: 180px;">
+      <iframe id="iframe-activeinactive-style"
               width="100%" height="100%"
               src="about:blank"
               srcdoc="
-                <head>&lt;link
+                <head>
+                    &lt;link
   rel=&#34;stylesheet&#34;
   href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
 /&gt;
@@ -3214,6 +3411,7 @@
   const sourceMonitoringInterceptor = $q =&gt; {
     return {
       request: config =&gt; {
+        console.log(config.url);
         if (config.params)
           if (config.params.source) delete config.params.source;
 
@@ -3324,7 +3522,624 @@
       $httpProvider.interceptors.push(sourceMonitoringInterceptor);
     });
 &lt;/script&gt;
-</head>
+
+                    
+                </head>
+                <base href='https://userclub.opendatasoft.com/'>
+                <body>
+                <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
+&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-xs-4&#34;&gt;
+        &lt;h2&gt;
+            Flat style {{ flatbutton.active ? &#39;On&#39; : &#39;Off&#39; }}
+        &lt;/h2&gt;
+        &lt;button ng-click=&#34;flatbutton.active = !flatbutton.active&#34;
+                ng-class=&#34;{&#39;flat-button-active&#39;: flatbutton.active == true}&#34; class=&#34;flat-button&#34;
+                aria-expanded=&#34;{{ flatbutton.active == true }}&#34;&gt;
+            Click me
+        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;col-xs-4&#34;&gt;
+        &lt;h2&gt;
+            Press style {{ pressbutton.active ? &#39;On&#39; : &#39;Off&#39; }}
+        &lt;/h2&gt;
+        &lt;button ng-click=&#34;pressbutton.active = !pressbutton.active&#34;
+                ng-class=&#34;{&#39;press-button-active&#39;: pressbutton.active == true}&#34; class=&#34;press-button&#34;
+                aria-expanded=&#34;{{ pressbutton.active == true }}&#34;&gt;
+            Click me
+        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;col-xs-4&#34;&gt;
+        &lt;h2&gt;
+            Gradient and shadow style {{ shadowbutton.active ? &#39;On&#39; : &#39;Off&#39; }}
+        &lt;/h2&gt;
+        &lt;button ng-click=&#34;shadowbutton.active = !shadowbutton.active&#34;
+                ng-class=&#34;{&#39;shadow-button-active&#39;: shadowbutton.active == true}&#34; class=&#34;shadow-button&#34;
+                aria-expanded=&#34;{{ shadowbutton.active == true }}&#34;&gt;
+            Click me
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;&lt;/div&gt;</div>
+                <style type='text/css'>
+                    /* Flat style
+=============================================================================*/
+.flat-button {
+    font-size: 1rem;
+    color: var(--links);
+    border: 1px solid var(--links);
+    border-radius: 2rem;
+    background: #FFF;
+    padding: .37rem 1rem;
+    margin-right: 6px;
+}
+
+.flat-button:hover {
+    opacity: 0.65;
+}
+
+.flat-button-active {
+    background-color: var(--links);
+    color: #FFF;
+}
+
+/* Press style
+=============================================================================*/
+.press-button {
+    font-size: 1rem;
+    color: var(--links);
+    border: 1px solid var(--links);
+    border-radius: 2rem;
+    background: #FFF;
+    padding: .37rem 1rem;
+    border-bottom-width: 6px;
+}
+
+.press-button:hover {
+    opacity: 0.65;
+}
+
+.press-button-active {
+    margin-top: 3px;
+    border-bottom-width: 3px;
+}
+
+/* Shadow style
+=============================================================================*/
+.shadow-button {
+    font-size: 1rem;
+    background: rgb(0, 136, 204);
+    background: linear-gradient(0deg, rgba(0, 136, 204, 1) 0%, rgba(6, 168, 249, 1) 100%);
+    color: #FFF;
+    border: 1px solid var(--links);
+    border-radius: 2rem;
+    padding: .37rem 1rem;
+}
+
+.shadow-button-active {
+    background-color: rgba(0, 136, 204, 1);
+    box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 0.3) inset;
+    padding-top: .47rem;
+    padding-bottom: .27rem;
+}
+
+
+
+
+
+                </style>
+                </body>
+              ">
+      </iframe>
+      <div class="buttons has-addons">
+          
+          <button id="tab-show-code" aria-controls="panel-show-code"
+                  class="show-code button is-light">
+            <span>Show code</span>
+          </button>
+          <button class="button is-light"
+             target="_blank"
+             aria-role="link"
+             rel="noopener"
+             title="Edit on CodePen, open a new tab"
+             onclick="document.getElementById('form-activeinactive-style').submit()">
+              <span>Edit on Codepen</span>
+              <span class="icon is-small">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                  <use xlink:href="#external"></use>
+                </svg>
+              </span>
+          </button>
+      </div>
+    </div>
+    
+    <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
+         class="box-code js-tabs is-hidden">
+        <nav class="level is-mobile">
+            <div class="level-left">
+                <div class="level-item">
+                    <div class="buttons has-addons js-tablist">
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-activeinactive-style-html-content"
+                        >
+                          HTML
+                        </a>
+                        
+                        <a
+                          class="button is-primary is-outlined js-tablist__item js-tablist__link"
+                          href="#code-activeinactive-style-css-content"
+                        >
+                          CSS
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="level-right">
+                <button class="copy-to-cc button is-primary is-outlined is-rounded has-tooltip-left"
+                  data-tooltip="Copy to clipboard"
+                  aria-role="button"
+                  title="Edit on CodePen, open a new tab"
+                >
+                  <span class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#copy"></use>
+                    </svg>
+                  </span>
+                </button>
+                <button class="copied-to-cc button is-success is-outlined is-rounded has-tooltip-left is-hidden"
+                  data-tooltip="Copied"
+                  aria-role="button"
+                  title="Copied"
+                >
+                  <figure class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+                      <use xlink:href="#check"></use>
+                    </svg>
+                  </figure>
+                </button>
+            </div>
+        </nav>
+        <div class="tab-content">
+            <div class="js-tabcontent"
+                 id="code-activeinactive-style-html-content"
+                 data-clipboard="&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-xs-4&#34;&gt;
+        &lt;h2&gt;
+            Flat style {{ flatbutton.active ? &#39;On&#39; : &#39;Off&#39; }}
+        &lt;/h2&gt;
+        &lt;button ng-click=&#34;flatbutton.active = !flatbutton.active&#34;
+                ng-class=&#34;{&#39;flat-button-active&#39;: flatbutton.active == true}&#34; class=&#34;flat-button&#34;
+                aria-expanded=&#34;{{ flatbutton.active == true }}&#34;&gt;
+            Click me
+        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;col-xs-4&#34;&gt;
+        &lt;h2&gt;
+            Press style {{ pressbutton.active ? &#39;On&#39; : &#39;Off&#39; }}
+        &lt;/h2&gt;
+        &lt;button ng-click=&#34;pressbutton.active = !pressbutton.active&#34;
+                ng-class=&#34;{&#39;press-button-active&#39;: pressbutton.active == true}&#34; class=&#34;press-button&#34;
+                aria-expanded=&#34;{{ pressbutton.active == true }}&#34;&gt;
+            Click me
+        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;col-xs-4&#34;&gt;
+        &lt;h2&gt;
+            Gradient and shadow style {{ shadowbutton.active ? &#39;On&#39; : &#39;Off&#39; }}
+        &lt;/h2&gt;
+        &lt;button ng-click=&#34;shadowbutton.active = !shadowbutton.active&#34;
+                ng-class=&#34;{&#39;shadow-button-active&#39;: shadowbutton.active == true}&#34; class=&#34;shadow-button&#34;
+                aria-expanded=&#34;{{ shadowbutton.active == true }}&#34;&gt;
+            Click me
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;"
+                 role="tabpanel">
+                <div class="highlight">
+                    <pre class="language-html" data-lang="html"><code>&lt;div class=&#34;row&#34;&gt;
+    &lt;div class=&#34;col-xs-4&#34;&gt;
+        &lt;h2&gt;
+            Flat style {{ flatbutton.active ? &#39;On&#39; : &#39;Off&#39; }}
+        &lt;/h2&gt;
+        &lt;button ng-click=&#34;flatbutton.active = !flatbutton.active&#34;
+                ng-class=&#34;{&#39;flat-button-active&#39;: flatbutton.active == true}&#34; class=&#34;flat-button&#34;
+                aria-expanded=&#34;{{ flatbutton.active == true }}&#34;&gt;
+            Click me
+        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;col-xs-4&#34;&gt;
+        &lt;h2&gt;
+            Press style {{ pressbutton.active ? &#39;On&#39; : &#39;Off&#39; }}
+        &lt;/h2&gt;
+        &lt;button ng-click=&#34;pressbutton.active = !pressbutton.active&#34;
+                ng-class=&#34;{&#39;press-button-active&#39;: pressbutton.active == true}&#34; class=&#34;press-button&#34;
+                aria-expanded=&#34;{{ pressbutton.active == true }}&#34;&gt;
+            Click me
+        &lt;/button&gt;
+    &lt;/div&gt;
+
+    &lt;div class=&#34;col-xs-4&#34;&gt;
+        &lt;h2&gt;
+            Gradient and shadow style {{ shadowbutton.active ? &#39;On&#39; : &#39;Off&#39; }}
+        &lt;/h2&gt;
+        &lt;button ng-click=&#34;shadowbutton.active = !shadowbutton.active&#34;
+                ng-class=&#34;{&#39;shadow-button-active&#39;: shadowbutton.active == true}&#34; class=&#34;shadow-button&#34;
+                aria-expanded=&#34;{{ shadowbutton.active == true }}&#34;&gt;
+            Click me
+        &lt;/button&gt;
+    &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                </div>
+            </div>
+            
+            <div class="js-tabcontent"
+                 id="code-activeinactive-style-css-content"
+                 data-clipboard="/* Flat style
+=============================================================================*/
+.flat-button {
+    font-size: 1rem;
+    color: var(--links);
+    border: 1px solid var(--links);
+    border-radius: 2rem;
+    background: #FFF;
+    padding: .37rem 1rem;
+    margin-right: 6px;
+}
+
+.flat-button:hover {
+    opacity: 0.65;
+}
+
+.flat-button-active {
+    background-color: var(--links);
+    color: #FFF;
+}
+
+/* Press style
+=============================================================================*/
+.press-button {
+    font-size: 1rem;
+    color: var(--links);
+    border: 1px solid var(--links);
+    border-radius: 2rem;
+    background: #FFF;
+    padding: .37rem 1rem;
+    border-bottom-width: 6px;
+}
+
+.press-button:hover {
+    opacity: 0.65;
+}
+
+.press-button-active {
+    margin-top: 3px;
+    border-bottom-width: 3px;
+}
+
+/* Shadow style
+=============================================================================*/
+.shadow-button {
+    font-size: 1rem;
+    background: rgb(0, 136, 204);
+    background: linear-gradient(0deg, rgba(0, 136, 204, 1) 0%, rgba(6, 168, 249, 1) 100%);
+    color: #FFF;
+    border: 1px solid var(--links);
+    border-radius: 2rem;
+    padding: .37rem 1rem;
+}
+
+.shadow-button-active {
+    background-color: rgba(0, 136, 204, 1);
+    box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 0.3) inset;
+    padding-top: .47rem;
+    padding-bottom: .27rem;
+}
+
+
+
+
+">
+                <div class="highlight">
+                    <pre class="language-css" data-lang="css"><code>/* Flat style
+=============================================================================*/
+.flat-button {
+    font-size: 1rem;
+    color: var(--links);
+    border: 1px solid var(--links);
+    border-radius: 2rem;
+    background: #FFF;
+    padding: .37rem 1rem;
+    margin-right: 6px;
+}
+
+.flat-button:hover {
+    opacity: 0.65;
+}
+
+.flat-button-active {
+    background-color: var(--links);
+    color: #FFF;
+}
+
+/* Press style
+=============================================================================*/
+.press-button {
+    font-size: 1rem;
+    color: var(--links);
+    border: 1px solid var(--links);
+    border-radius: 2rem;
+    background: #FFF;
+    padding: .37rem 1rem;
+    border-bottom-width: 6px;
+}
+
+.press-button:hover {
+    opacity: 0.65;
+}
+
+.press-button-active {
+    margin-top: 3px;
+    border-bottom-width: 3px;
+}
+
+/* Shadow style
+=============================================================================*/
+.shadow-button {
+    font-size: 1rem;
+    background: rgb(0, 136, 204);
+    background: linear-gradient(0deg, rgba(0, 136, 204, 1) 0%, rgba(6, 168, 249, 1) 100%);
+    color: #FFF;
+    border: 1px solid var(--links);
+    border-radius: 2rem;
+    padding: .37rem 1rem;
+}
+
+.shadow-button-active {
+    background-color: rgba(0, 136, 204, 1);
+    box-shadow: -1px 2px 10px 3px rgba(0, 0, 0, 0.3) inset;
+    padding-top: .47rem;
+    padding-bottom: .27rem;
+}
+
+
+
+
+</code></pre>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+                </div>
+            
+        </article>
+        
+        <article class="block">
+            <h2 class="title is-2" id="simple-example">
+                Simple example 
+                <a class="is-link anchor" href="#simple-example">
+            <span class="icon">
+              <img src="/img/fas-link.svg"/>
+            </span>
+                </a>
+            </h2>
+            <div class="content">
+                <p>A simple usecase to show how this component can be used in your pages.</p>
+
+            </div>
+            
+            
+                <div class="box">
+                    
+
+
+
+
+
+
+    
+
+
+
+
+    
+
+
+
+
+
+
+
+<div class="codepen">
+    <form id="form-simple-example"
+          action="https://codepen.io/pen/define"
+          method="POST"
+          target="_blank">
+        <input type="hidden"
+               name="data"
+               value='{
+                 "title": "New Pen!",
+                 "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
+                 "editors": 110,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;content-card\&#34;\n     ng-init=\&#34;view = &#39;map&#39;\&#34;\u003e\n    \u003cdiv class=\&#34;row\&#34;\u003e\n        \u003cdiv class=\&#34;col-sm-3\&#34;\u003e\n            \u003ch2 class=\&#34;content-card-title\&#34;\u003e\n                France departments\n            \u003c/h2\u003e\n            \u003cp class=\&#34;content-card-description\&#34;\u003e\n                Cardano could be many technical analysis since Nexo data mining a fundamental analysis.\n            \u003c/p\u003e\n            \u003cp class=\&#34;content-card-description\&#34;\u003e\n                Ravencoin generates a amazing fish of lots of market cap, and Waves serves many quick anti-money laundering! Solidity allowed lots of fast peer-to-peer network.\n            \u003c/p\u003e\n            \u003cdiv class=\&#34;switch-container\&#34;\u003e\n                \u003cstrong\u003eView : \u003c/strong\u003e\n                \u003clabel class=\&#34;switch\&#34;\u003e\n                    \u003cinput ng-model=\&#34;view\&#34;\n                           ng-true-value=\&#34;&#39;map&#39;\&#34;\n                           ng-false-value=\&#34;&#39;table&#39;\&#34;\n                           ng-checked=\&#34;view == &#39;map&#39;\&#34;\n                           class=\&#34;switch-input\&#34;\n                           type=\&#34;checkbox\&#34;\u003e\n                    \u003cdiv class=\&#34;switch-button\&#34;\u003e\n                        \u003cspan class=\&#34;switch-button-left\&#34;\u003eTABLE\u003c/span\u003e\n                        \u003cspan class=\&#34;switch-button-right\&#34;\u003eMAP\u003c/span\u003e\n                    \u003c/div\u003e\n                \u003c/label\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;col-sm-9\&#34;\u003e\n            \u003cods-dataset-context context=\&#34;countoursgeographiques\&#34;\n                                 countoursgeographiques-dataset=\&#34;contours-geographiques-simplifies-des-nouvelles-regions-metropole\&#34;\n                                 countoursgeographiques-domain=\&#34;userclub\&#34;\n                                 countoursgeographiques-parameters=\&#34;{}\&#34;\u003e\n                \u003cdiv ng-if=\&#34;view == &#39;map&#39;\&#34;\u003e\n                    \u003cods-map context=\&#34;countoursgeographiques\&#34;\n                             scroll-wheel-zoom=\&#34;false\&#34;\u003e\u003c/ods-map\u003e\n                \u003c/div\u003e\n                \u003cdiv ng-if=\&#34;view == &#39;table&#39;\&#34;\u003e\n                    \u003cods-table context=\&#34;countoursgeographiques\&#34;\u003e\u003c/ods-table\u003e\n                \u003c/div\u003e\n            \u003c/ods-dataset-context\u003e\n        \u003c/div\u003e\n    \u003c/div\u003e\n\u003c/div\u003e\n\u003c/div\u003e&#34;,
+                 "css": &#34;/* Content Card\n   ========================================================================== */\n   \n.content-card {\n\tbackground-color: var(--boxes-background);\n\tpadding: 26px;\n\tborder-radius: 4px;\n\tmargin-bottom: 20px;\n\theight: 100%;\n}\n.content-card-title {\n\tcolor: var(--titles);\n\tfont-size: 1.2rem;\n\tline-height: 1.5;\n\tfont-weight: normal;\n\tmargin-top: 0;\n\tmargin-bottom: 13px;\n\tmax-width: 100%;\n}\n.content-card-description {\n\tcolor: var(--text);\n\tfont-size: 1rem;\n\tline-height: 1.5;\n\tfont-weight: normal;\n\tmargin-top: 0;\n\tmargin-bottom: 26px;\n\tmax-width: 100%;\n}\n.content-card-icon {\n\tcolor: var(--highlight);\n\tfont-size: 2rem;\n\tmargin-bottom: 13px;\n\tmax-width: 100%;\n}\n.content-card-link {\n\tcolor: var(--links);\n\tfont-weight: bold;\n\ttransition: all .2s;\n\topacity: 1;\n\tmax-width: 100%;\n}\n.content-card-link:hover {\n\topacity: .7;\n\ttext-decoration: none;\n}\n.content-card-button {\n\tcolor: var(--highlight);\n\tborder: 1px solid var(--highlight);\n    background: transparent;\n\tdisplay: inline-block;\n\ttext-align: center;\n\tfont-size: .867rem;\n    border-radius: 4px;\n    padding: .5rem 1.15rem;\n    text-decoration: none;\n    transition: all .2s;\n}\n.content-card-button:hover {\n\tbackground-color: var(--highlight);\n\tcolor: #FFFFFF;\n\ttext-decoration: none;\n}\n\n.switch-container {\n    display: flex;\n    align-items: center;\n}\n\n/* Button Group Switch\n   ========================================================================== */\n\n.switch {\n    display: inline-block;\n    margin-bottom: 0;\n    margin-left: 0.5rem;\n}\n\n.switch-button {\n    /* background and border when in \&#34;off\&#34; state */\n    background: var(--highlight);\n    border: 2px solid var(--highlight);\n    display: grid; \n    grid-template-columns: 1fr 1fr;\n    border-radius: 6px;\n    color: #FFFFFF;\n    position: relative;\n    cursor: pointer;\n    outline: 0;\n    user-select: none;\n}\n\n.switch-input:not(:checked) &#43; .switch-button .switch-button-left {\n    /* text color when in \&#34;off\&#34; state */\n    color: var(--highlight);\n}\n\n.switch-input {\n    display: none;\n}\n\n.switch-button span {\n    font-size: 1rem;\n    padding: 0.2rem .7rem;\n    text-align: center;\n    z-index: 2;\n    color: #FFFFFF;\n    transition: color .2s;\n}\n\n.switch-button::before {\n    content: &#39;&#39;;\n    position: absolute;\n    background-color: #FFFFFF;\n    box-shadow: 0 1px 3px rgba(0,0,0,.4);\n    border-radius: 4px;\n    top: 0;\n    left: 0;\n    height: 100%;\n    width: 50%;\n    z-index: 1;\n    transition: left .3s cubic-bezier(0.175, 0.885, 0.320, 1), \n                padding .2s ease, margin .2s ease;\n}\n\n.switch-button:hover::before {\n    will-change: padding;\n}\n\n.switch-button:active::before {\n    padding-right: .4rem;\n}\n\n\n/* \&#34;On\&#34; state\n   ========================== */\n\n.switch-input:checked &#43; .switch-button {\n    /* background and border when in \&#34;on\&#34; state */\n    background-color: var(--links);\n    border-color: var(--links);\n}\n\n.switch-input:checked &#43; .switch-button .switch-button-right {\n    /* text color when in \&#34;on\&#34; state */\n    color: var(--links);\n}\n\n.switch-input:checked &#43; .switch-button::before {\n    left: 50%;\n}\n\n.switch-input:checked &#43; .switch-button:active::before {\n    margin-left: -.4rem;\n}\n\n/* Checkbox in disabled state\n   ========================== */\n\n.switch-input[type=\&#34;checkbox\&#34;]:disabled &#43; .switch-button {\n    opacity: 0.6;\n    cursor: not-allowed;\n}\n&#34;
+               }'>
+    </form>
+</div>
+<div class="ods-content">
+    <div class="box-live-example"
+      style="height: 550px;">
+      <iframe id="iframe-simple-example"
+              width="100%" height="100%"
+              src="about:blank"
+              srcdoc="
+                <head>
+                    &lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css&#34;
+/&gt;
+
+&lt;!-- ODS Platform CSS - must be hosted on static : WIP --&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css&#34;
+/&gt;
+&lt;link
+  rel=&#34;stylesheet&#34;
+  href=&#34;https://codelibrary.opendatasoft.com/css/theme.css&#34;
+/&gt;
+
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js&#34;&gt;&lt;/script&gt;
+&lt;script src=&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js&#34;&gt;&lt;/script&gt;
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js&#34;
+&gt;&lt;/script&gt;
+
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js&#34;
+&gt;&lt;/script&gt;
+&lt;script
+  type=&#34;text/javascript&#34;
+  src=&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js&#34;
+&gt;&lt;/script&gt;
+
+&lt;script type=&#34;text/javascript&#34;&gt;
+  const sourceMonitoringInterceptor = $q =&gt; {
+    return {
+      request: config =&gt; {
+        console.log(config.url);
+        if (config.params)
+          if (config.params.source) delete config.params.source;
+
+        config.url = config.url.replace(
+          &#34;ods-api-monitoring&#34;,
+          &#34;monitoring-copy&#34;
+        );
+        return config;
+      }
+    };
+  };
+
+  angular
+    .module(&#34;ods-widgets&#34;)
+    .config(function(ODSWidgetsConfigProvider, $httpProvider) {
+      ODSWidgetsConfigProvider.setConfig({
+        defaultDomain: &#34;https://userclub.opendatasoft.com/&#34;,
+        basemaps: [
+          {
+            provider: &#34;jawg.light&#34;,
+            label: &#34;Jawg Light&#34;,
+            jawg_apikey: &#34;opendatasoft-community&#34;
+          },
+          {
+            provider: &#34;jawg.streets&#34;,
+            label: &#34;Jawg Streets&#34;,
+            jawg_apikey: &#34;opendatasoft-community&#34;,
+            id: &#34;streets&#34;
+          }
+        ],
+        themes: {
+          default: {
+            url: &#34;/img/ods.svg&#34;
+          },
+          Santé: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Culture, Patrimoine&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Éducation, Formation, Recherche, Enseignement&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Environment: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Transports, Déplacements&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Économie, Business, PME, Développement économique, Emploi&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Administration, Gouvernement, Finances publiques, Citoyenneté&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Justice, Sécurité, Police, Crime&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Sport, Loisirs&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Hébergement, Restauration&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          &#34;Services, Social&#34;: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Checklist: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg&#34;,
+            color: &#34;#1446A0&#34;
+          },
+          Usages: {
+            url:
+              &#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg&#34;,
+            color: &#34;#1446A0&#34;
+          }
+        },
+        mapPrependAttribution: &#34;Jawg apikey NOT suitable for production&#34;
+      });
+      $httpProvider.interceptors.push(sourceMonitoringInterceptor);
+    });
+&lt;/script&gt;
+
+                    
+                </head>
                 <base href='https://userclub.opendatasoft.com/'>
                 <body>
                 <div ng-app='ods-widgets'>&lt;div ng-app=&#34;ods-widgets&#34;&gt;
@@ -3542,8 +4357,10 @@
                 </body>
               ">
       </iframe>
-      <div class="show-code buttons has-addons">
-          <button class="button is-light">
+      <div class="buttons has-addons">
+          
+          <button id="tab-show-code" aria-controls="panel-show-code"
+                  class="show-code button is-light">
             <span>Show code</span>
           </button>
           <button class="button is-light"
@@ -3561,7 +4378,9 @@
           </button>
       </div>
     </div>
-    <div class="box-code js-tabs is-hidden">
+    
+    <div id="panel-show-code" aria-labelledby="tab-show-code" aria-hidden
+         class="box-code js-tabs is-hidden">
         <nav class="level is-mobile">
             <div class="level-left">
                 <div class="level-item">
@@ -3872,8 +4691,7 @@
     opacity: 0.6;
     cursor: not-allowed;
 }
-"
-            >
+">
                 <div class="highlight">
                     <pre class="language-css" data-lang="css"><code>/* Content Card
    ========================================================================== */
@@ -4045,10 +4863,11 @@
     </div>
 </div>
 
-      </div>
-    </article>
-    
-  </div>
+                </div>
+            
+        </article>
+        
+    </div>
 </section>
 
       </div>
@@ -4076,7 +4895,7 @@
     </script>
     <script
       type="text/javascript"
-      src="/index.min.d986e12cb7cbc909e8709adbae4f4f150c07f0a07b6e439f91f5b639c68888b4.js"
+      src="/index.min.ba71bbe69583a06c1a20d50de7512f7cd7ee767a9fcdbe52935b11b762c22a39.js"
       defer
     ></script>
   </body>

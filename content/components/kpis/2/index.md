@@ -1,5 +1,6 @@
 ---
 title: " An ods-aggregation example"
+
 ---
 
 Count the number of record of a dataset or compute the average/sum/min/max of a numeric field. 
