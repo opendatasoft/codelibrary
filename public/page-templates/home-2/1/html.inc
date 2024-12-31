@@ -64,14 +64,10 @@
                 What data are you looking for?
             </h2>
             <div class="search-card-container">
-                <ods-searchbox class="search-card-searchbox"
-                               form-id="search-form"
-                               translate="placeholder"
-                               placeholder="Search for a dataset">
-                </ods-searchbox>
-                <button type="submit" form="search-form" class="search-card-submit-button">
-                    Search
-                </button>
+                  <ods-catalog-search
+                                    class-name="'search-card-searchbox'"
+                                    label="'Search'">
+                </ods-catalog-search>
             </div>
         </div>
     </section>
