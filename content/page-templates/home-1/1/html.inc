@@ -63,8 +63,7 @@
                 What data are you looking for?
             </h2>
             <div class="search-card-container">
-                <ods-catalog-search
-                                    class-name="'search-card-searchbox'"
+                <ods-catalog-search class-name="'search-card-searchbox'"
                                     label="'Search'">
                 </ods-catalog-search>
             </div>

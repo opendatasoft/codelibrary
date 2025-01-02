@@ -30,7 +30,7 @@
 /***** HEADER *****/
 .header {
     padding: 40px 0px 50px 0px;
-    background: url(https://userclub.opendatasoft.com/assets/theme_image/bd47c8fb731520f9f0e78a7af0e0031c.jpeg)
+    background: url(https://discovery.opendatasoft.com/assets/theme_image/header-bg.jpg)
         lightgray 50% / cover no-repeat;
 }
 

@@ -30,7 +30,7 @@
 /***** HEADER *****/
 .header {
     padding: 40px 0px 50px 0px;
-    background: url(https://userclub.opendatasoft.com/assets/theme_image/bd47c8fb731520f9f0e78a7af0e0031c.jpeg)
+    background: url(https://discovery.opendatasoft.com/assets/theme_image/header-bg.jpg)
         lightgray 50% / cover no-repeat;
 }
 
@@ -125,12 +125,8 @@
     text-decoration: none;
 }
 
-.theme .odswidget-theme-picto {
-    height: 45px;
-}
-
-.theme .odswidget-picto svg path {
-    fill: var(--secondary-color) !important;
+.theme .theme-icon {
+    font-size: 45px;
 }
 
 /***** VISUALISATIONS *****/
@@ -166,10 +162,9 @@
     display: block;
     height: 200px;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     margin-bottom: 5px;
-    padding: 0px 10px;
 }
 .image-container img {
     width: 100%;
@@ -206,6 +201,7 @@
     font-weight: 100;
     max-width: fit-content;
     color: #FFF;
+    align-items: center;
 }
 
 .visualisation-theme-tag .odswidget-picto svg path {

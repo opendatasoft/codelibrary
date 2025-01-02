@@ -1,5 +1,4 @@
 <ods-catalog-context context="catalog" ods-domain-statistics>
-    <ods-dataset-context context="ctx" ctx-dataset="datavizgallery"
     <section class="header">
         <div class="container flex-container">
             <div class="header-box">
@@ -29,29 +28,29 @@
     <section class="bloc-p40 colored-bg">
         <div class="container">
             <div class="themes-list">
-                <a href="/explore/?refine.theme=Santé" class="theme">
+                <a href="/explore/?refine.theme=Usages" class="theme">
                     <ods-theme-picto
-                                     theme="Santé">
+                                     theme="Usages">
                     </ods-theme-picto>
-                    Santé
+                    Usages
                 </a>
-                <a href="/explore/?refine.theme=Environnement" class="theme">
+                <a href="/explore/?refine.theme=Checklist" class="theme">
                     <ods-theme-picto
-                                     theme="Environnement">
+                                     theme="Checklist">
                     </ods-theme-picto>
-                    Environnement
+                    Checklist
                 </a>
-                <a href="/explore/?refine.theme=Culture, Patrimoine" class="theme">
+                <a href="/explore/?refine.theme=Website" class="theme">
                     <ods-theme-picto
-                                     theme="Culture, Patrimoine">
+                                     theme="Site Web">
                     </ods-theme-picto>
-                    Culture, Patrimoine
+                   Website
                 </a>
-                <a href="/explore/?refine.theme=Sport, Loisirs" class="theme">
+                <a href="/explore/?refine.theme=Environment" class="theme">
                     <ods-theme-picto
-                                     theme="Sport, Loisirs">
+                                     theme="Environment">
                     </ods-theme-picto>
-                    Sport, Loisirs
+                    Environment
                 </a>
             </div>
         </div>
@@ -63,57 +62,57 @@
                 <a class="visualisation"
                    href="#">
                     <div class="image-container">
-                        <img src="/assets/theme_image/bd846b7fe601e65ff20df044b58ec938.jpeg" />
+                        <img src="https://discovery.opendatasoft.com/assets/theme_image/culture-bg.jpg" />
                     </div>
                     <div class="visualisation-content">
                         <p class="visualisation-title">
-                            Structure de la population active - France - par sexe et activité</p>
-                        <p class="mise-a-jour">Mise à jour le 20 novembre 2023 par <strong>Département
-                                Communication</strong></p>
+                            Cultural trends</p>
+                        <p class="mise-a-jour">Updated on November 2023, 20 by <strong>Culture
+                                Department</strong></p>
                         <div class="visualisation-theme-tag">
                             <ods-theme-picto
-                                             theme="Santé">
+                                             theme="Usages">
                             </ods-theme-picto>
-                            Santé
+                            Sports, Leisure
                         </div>
                     </div>
                 </a>
                 <a class="visualisation"
                    href="#">
                     <div class="image-container">
-                        <img src="/assets/theme_image/dcaf2770888eb30ecdf3514d85ca5f76.png" />
+                        <img src="https://discovery.opendatasoft.com/assets/theme_image/gastronomy-bg.jpg" />
                     </div>
 
                     <div class="visualisation-content">
                         <p class="visualisation-title">
-                            Structure de la population active - France - par sexe et activité</p>
-                        <p class="mise-a-jour">Mise à jour le 20 novembre 2023 par <strong>Département
-                                Communication</strong></p>
+                            Gastronomy overview</p>
+                        <p class="mise-a-jour">Updated on November 2023, 20 by <strong>Food
+                                Department</strong></p>
                         <div class="visualisation-theme-tag">
                             <ods-theme-picto
-                                             theme="Santé">
+                                             theme="Academy">
                             </ods-theme-picto>
-                            Santé
+                            Usages
                         </div>
                     </div>
                 </a>
                 <a class="visualisation"
                    href="#">
                     <div class="image-container">
-                        <img src="/assets/theme_image/0b654eef55a21ccce4e44e0b7501169e.jpeg" />
+                        <img src="https://discovery.opendatasoft.com/assets/theme_image/mobility-bg.jpg" />
                     </div>
 
 
                     <div class="visualisation-content">
                         <p class="visualisation-title">
-                            Structure de la population active - France - par sexe et activité</p>
-                        <p class="mise-a-jour">Mise à jour le 20 novembre 2023 par <strong>Département
-                                Communication</strong></p>
+                            Mobility dashboard</p>
+                        <p class="mise-a-jour">Updated on November 2023, 20 by <strong>Transport
+                                Department</strong></p>
                         <div class="visualisation-theme-tag">
                             <ods-theme-picto
-                                             theme="Santé">
+                                             theme="Environment">
                             </ods-theme-picto>
-                            Santé
+                            Environment
                         </div>
                     </div>
                 </a>
@@ -177,4 +176,4 @@
             </div>
         </div>
     </section>
-</ods-catalog-context>
+</ods-dataset-context>

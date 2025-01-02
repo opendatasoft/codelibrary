@@ -58,18 +58,9 @@
         <div class="search-card">
             <h2 class="search-card-title">What data are you looking for?</h2>
             <div class="search-card-container">
-                <ods-searchbox
-                        class="search-card-searchbox"
-                        form-id="search-form"
-                        translate="placeholder"
-                        placeholder="Search for a dataset">
-                </ods-searchbox>
-                <button
-                        type="submit"
-                        form="search-form"
-                        class="search-card-submit-button">
-                    Search
-                </button>
+                <ods-catalog-search class-name="'search-card-searchbox'"
+                                    label="'Search'">
+                </ods-catalog-search>
             </div>
         </div>
     </section>
@@ -84,7 +75,8 @@
                         <h3 class="access-card-pretitle">Mobility</h3>
                         <h2 class="access-card-title">Map of the bike stations</h2>
                         <h4 class="access-card-subtitle">
-                            Quam vulputate dignissim suspendisse in est ante in nibh. Faucibus nisl tincidunt eget nullam non nisi est sit amet.
+                            Quam vulputate dignissim suspendisse in est ante in nibh. Faucibus nisl tincidunt eget
+                            nullam non nisi est sit amet.
                         </h4>
                         <div class="access-card-description">
                             <h4>Categories</h4>
@@ -109,7 +101,8 @@
                         <h3 class="access-card-pretitle">Gastronomy</h3>
                         <h2 class="access-card-title">Restaurant of the month</h2>
                         <h4 class="access-card-subtitle">
-                            Massa id neque aliquam vestibulum. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate.
+                            Massa id neque aliquam vestibulum. Fringilla phasellus faucibus scelerisque eleifend donec
+                            pretium vulputate.
                         </h4>
                         <div class="access-card-description">
                             <h4>Categorie</h4>
@@ -147,7 +140,7 @@
                 <!-- Most Popular Datasets -->
                 <h2 class="home-subtitle">Most popular data</h2>
                 <ods-most-popular-datasets
-                        context="catalog"></ods-most-popular-datasets>
+                                           context="catalog"></ods-most-popular-datasets>
             </div>
             <div class="col-md-4">
                 <!-- Last modified datasets -->
@@ -160,9 +153,9 @@
                 <div class="twitter-timeline-container">
                     <!-- To change the Twitter profile to display go to https://publish.twitter.com/# -->
                     <a
-                            class="twitter-timeline"
-                            data-height="392"
-                            href="https://twitter.com/Opendatasoft?ref_src=twsrc%5Etfw">Tweets by Opendatasoft</a>
+                       class="twitter-timeline"
+                       data-height="392"
+                       href="https://twitter.com/Opendatasoft?ref_src=twsrc%5Etfw">Tweets by Opendatasoft</a>
                     <script
                             async
                             src="https://platform.twitter.com/widgets.js"

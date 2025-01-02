@@ -214,37 +214,8 @@
 	font-weight: normal;
 }
 .search-card-searchbox {
-	margin-bottom: 0;
-	-webkit-box-flex: 1;
-	    -ms-flex: 1 1 auto;
-	        flex: 1 1 auto;
-}
-.search-card-searchbox .odswidget-searchbox__box {
-	font-size: 1rem;
-    display: block;
-    width: 100%;
-    max-width: 500px;
-    padding: 8px 13px;
-    border-radius: 4px 0 0 4px;
-    border: none;
-    margin: 0 auto;
-}
-.search-card-submit-button {
-	border: none;
-	background-color: var(--highlight);
-	color: #FFFFFF;
-	font-size: .866rem;
-	font-weight: bold;
-	text-align: center;
-	padding: 8px 12px;
-	border-radius: 0 4px 4px 0;
-	-webkit-transition: opacity .2s;
-	-o-transition: opacity .2s;
-	transition: opacity .2s;
-}
-.search-card-submit-button:hover {
-	text-decoration: none;
-	opacity: .7;
+    text-align: left;
+    z-index: 2;
 }
 /* KPI Card
    ========================================================================== */

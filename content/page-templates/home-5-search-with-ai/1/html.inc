@@ -1,5 +1,4 @@
 <ods-catalog-context context="catalog" ods-domain-statistics>
-    <ods-dataset-context context="ctx" ctx-dataset="datavizgallery"
     <section class="header">
         <div class="container flex-container">
             <div class="header-box">
@@ -29,29 +28,21 @@
     <section class="bloc-p40 colored-bg">
         <div class="container">
             <div class="themes-list">
-                <a href="/explore/?refine.theme=Santé" class="theme">
-                    <ods-theme-picto
-                                     theme="Santé">
-                    </ods-theme-picto>
-                    Santé
+                <a href="#" class="theme">
+                    <i class="fa fa-cutlery theme-icon" aria-hidden="true"></i>
+                    Food
                 </a>
-                <a href="/explore/?refine.theme=Environnement" class="theme">
-                    <ods-theme-picto
-                                     theme="Environnement">
-                    </ods-theme-picto>
-                    Environnement
+                <a href="#" class="theme">
+                    <i class="fa fa-paint-brush theme-icon" aria-hidden="true"></i>
+                    Culture
                 </a>
-                <a href="/explore/?refine.theme=Culture, Patrimoine" class="theme">
-                    <ods-theme-picto
-                                     theme="Culture, Patrimoine">
-                    </ods-theme-picto>
-                    Culture, Patrimoine
+                <a href="#" class="theme">
+                    <i class="fa fa-futbol-o theme-icon" aria-hidden="true"></i>
+                    Sport
                 </a>
-                <a href="/explore/?refine.theme=Sport, Loisirs" class="theme">
-                    <ods-theme-picto
-                                     theme="Sport, Loisirs">
-                    </ods-theme-picto>
-                    Sport, Loisirs
+                <a href="#" class="theme">
+                    <i class="fa fa-bicycle theme-icon" aria-hidden="true"></i>
+                    Environment
                 </a>
             </div>
         </div>
@@ -62,58 +53,48 @@
             <div class="visualisations-list">
                 <a class="visualisation"
                    href="#">
-                    <div class="image-container">
-                        <img src="/assets/theme_image/bd846b7fe601e65ff20df044b58ec938.jpeg" />
+                    <div class="image-container" style="background-image: url('https://discovery.opendatasoft.com/assets/theme_image/culture-bg.jpg')" >
                     </div>
                     <div class="visualisation-content">
                         <p class="visualisation-title">
-                            Structure de la population active - France - par sexe et activité</p>
-                        <p class="mise-a-jour">Mise à jour le 20 novembre 2023 par <strong>Département
-                                Communication</strong></p>
+                            Cultural trends</p>
+                        <p class="mise-a-jour">Updated on November 2023, 20 by <strong>Culture
+                            Department</strong></p>
                         <div class="visualisation-theme-tag">
-                            <ods-theme-picto
-                                             theme="Santé">
-                            </ods-theme-picto>
-                            Santé
+                            <i class="fa fa-paint-brush" aria-hidden="true"></i>
+                            Culture
                         </div>
                     </div>
                 </a>
                 <a class="visualisation"
                    href="#">
-                    <div class="image-container">
-                        <img src="/assets/theme_image/dcaf2770888eb30ecdf3514d85ca5f76.png" />
+                    <div class="image-container" style="background-image: url('https://discovery.opendatasoft.com/assets/theme_image/gastronomy-bg.jpg')" >
                     </div>
 
                     <div class="visualisation-content">
                         <p class="visualisation-title">
-                            Structure de la population active - France - par sexe et activité</p>
-                        <p class="mise-a-jour">Mise à jour le 20 novembre 2023 par <strong>Département
-                                Communication</strong></p>
+                            Gastronomy overview</p>
+                        <p class="mise-a-jour">Updated on November 2023, 20 by <strong>Food
+                            Department</strong></p>
                         <div class="visualisation-theme-tag">
-                            <ods-theme-picto
-                                             theme="Santé">
-                            </ods-theme-picto>
-                            Santé
+                            <i class="fa fa-cutlery" aria-hidden="true"></i>
+                            Food
                         </div>
                     </div>
                 </a>
                 <a class="visualisation"
                    href="#">
-                    <div class="image-container">
-                        <img src="/assets/theme_image/0b654eef55a21ccce4e44e0b7501169e.jpeg" />
+                    <div class="image-container" style="background-image: url('https://discovery.opendatasoft.com/assets/theme_image/mobility-bg.jpg')">
                     </div>
-
 
                     <div class="visualisation-content">
                         <p class="visualisation-title">
-                            Structure de la population active - France - par sexe et activité</p>
-                        <p class="mise-a-jour">Mise à jour le 20 novembre 2023 par <strong>Département
-                                Communication</strong></p>
+                            Mobility dashboard</p>
+                        <p class="mise-a-jour">Updated on November 2023, 20 by <strong>Transport
+                            Department</strong></p>
                         <div class="visualisation-theme-tag">
-                            <ods-theme-picto
-                                             theme="Santé">
-                            </ods-theme-picto>
-                            Santé
+                            <i class="fa fa-bicycle" aria-hidden="true"></i>
+                            Transport
                         </div>
                     </div>
                 </a>
