@@ -42,14 +42,14 @@
                 </a>
                 <a href="#" class="theme">
                     <i class="fa fa-bicycle theme-icon" aria-hidden="true"></i>
-                    Environment
+                    Transport
                 </a>
             </div>
         </div>
     </section>
     <section class="bloc-visualisations colored-bg">
         <div class="container">
-            <h2 class="section-title"> Dernières visualisations </h2>
+            <h2 class="section-title">Last visualisations</h2>
             <div class="visualisations-list">
                 <a class="visualisation"
                    href="#">
@@ -142,13 +142,13 @@
         <div class="container">
             <div class="datasets-boxes">
                 <div class="datasets-box">
-                    <h2>Derniers jeux de données</h2>
+                    <h2>Last datasets</h2>
                     <ods-last-datasets-feed
                                             context="catalog">
                     </ods-last-datasets-feed>
                 </div>
                 <div class="datasets-box">
-                    <h2>Jeux de données populaires</h2>
+                    <h2>Popular datasets</h2>
                     <ods-most-popular-datasets
                                                context="catalog"
                                                max="5"

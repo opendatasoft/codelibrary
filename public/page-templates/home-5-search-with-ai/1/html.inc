@@ -28,91 +28,73 @@
     <section class="bloc-p40 colored-bg">
         <div class="container">
             <div class="themes-list">
-                <a href="/explore/?refine.theme=Usages" class="theme">
-                    <ods-theme-picto
-                                     theme="Usages">
-                    </ods-theme-picto>
-                    Usages
+                <a href="#" class="theme">
+                    <i class="fa fa-cutlery theme-icon" aria-hidden="true"></i>
+                    Food
                 </a>
-                <a href="/explore/?refine.theme=Checklist" class="theme">
-                    <ods-theme-picto
-                                     theme="Checklist">
-                    </ods-theme-picto>
-                    Checklist
+                <a href="#" class="theme">
+                    <i class="fa fa-paint-brush theme-icon" aria-hidden="true"></i>
+                    Culture
                 </a>
-                <a href="/explore/?refine.theme=Website" class="theme">
-                    <ods-theme-picto
-                                     theme="Site Web">
-                    </ods-theme-picto>
-                   Website
+                <a href="#" class="theme">
+                    <i class="fa fa-futbol-o theme-icon" aria-hidden="true"></i>
+                    Sport
                 </a>
-                <a href="/explore/?refine.theme=Environment" class="theme">
-                    <ods-theme-picto
-                                     theme="Environment">
-                    </ods-theme-picto>
-                    Environment
+                <a href="#" class="theme">
+                    <i class="fa fa-bicycle theme-icon" aria-hidden="true"></i>
+                    Transport
                 </a>
             </div>
         </div>
     </section>
     <section class="bloc-visualisations colored-bg">
         <div class="container">
-            <h2 class="section-title"> Dernières visualisations </h2>
+            <h2 class="section-title">Last visualisations</h2>
             <div class="visualisations-list">
                 <a class="visualisation"
                    href="#">
-                    <div class="image-container">
-                        <img src="https://discovery.opendatasoft.com/assets/theme_image/culture-bg.jpg" />
+                    <div class="image-container" style="background-image: url('https://discovery.opendatasoft.com/assets/theme_image/culture-bg.jpg')" >
                     </div>
                     <div class="visualisation-content">
                         <p class="visualisation-title">
                             Cultural trends</p>
                         <p class="mise-a-jour">Updated on November 2023, 20 by <strong>Culture
-                                Department</strong></p>
+                            Department</strong></p>
                         <div class="visualisation-theme-tag">
-                            <ods-theme-picto
-                                             theme="Usages">
-                            </ods-theme-picto>
-                            Sports, Leisure
+                            <i class="fa fa-paint-brush" aria-hidden="true"></i>
+                            Culture
                         </div>
                     </div>
                 </a>
                 <a class="visualisation"
                    href="#">
-                    <div class="image-container">
-                        <img src="https://discovery.opendatasoft.com/assets/theme_image/gastronomy-bg.jpg" />
+                    <div class="image-container" style="background-image: url('https://discovery.opendatasoft.com/assets/theme_image/gastronomy-bg.jpg')" >
                     </div>
 
                     <div class="visualisation-content">
                         <p class="visualisation-title">
                             Gastronomy overview</p>
                         <p class="mise-a-jour">Updated on November 2023, 20 by <strong>Food
-                                Department</strong></p>
+                            Department</strong></p>
                         <div class="visualisation-theme-tag">
-                            <ods-theme-picto
-                                             theme="Academy">
-                            </ods-theme-picto>
-                            Usages
+                            <i class="fa fa-cutlery" aria-hidden="true"></i>
+                            Food
                         </div>
                     </div>
                 </a>
                 <a class="visualisation"
                    href="#">
-                    <div class="image-container">
-                        <img src="https://discovery.opendatasoft.com/assets/theme_image/mobility-bg.jpg" />
+                    <div class="image-container" style="background-image: url('https://discovery.opendatasoft.com/assets/theme_image/mobility-bg.jpg')">
                     </div>
-
 
                     <div class="visualisation-content">
                         <p class="visualisation-title">
                             Mobility dashboard</p>
                         <p class="mise-a-jour">Updated on November 2023, 20 by <strong>Transport
-                                Department</strong></p>
+                            Department</strong></p>
                         <div class="visualisation-theme-tag">
-                            <ods-theme-picto
-                                             theme="Environment">
-                            </ods-theme-picto>
-                            Environment
+                            <i class="fa fa-bicycle" aria-hidden="true"></i>
+                            Transport
                         </div>
                     </div>
                 </a>
@@ -160,13 +142,13 @@
         <div class="container">
             <div class="datasets-boxes">
                 <div class="datasets-box">
-                    <h2>Derniers jeux de données</h2>
+                    <h2>Last datasets</h2>
                     <ods-last-datasets-feed
                                             context="catalog">
                     </ods-last-datasets-feed>
                 </div>
                 <div class="datasets-box">
-                    <h2>Jeux de données populaires</h2>
+                    <h2>Popular datasets</h2>
                     <ods-most-popular-datasets
                                                context="catalog"
                                                max="5"
@@ -176,4 +158,4 @@
             </div>
         </div>
     </section>
-</ods-dataset-context>
+</ods-catalog-context>
