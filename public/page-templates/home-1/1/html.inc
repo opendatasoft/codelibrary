@@ -18,7 +18,9 @@
                         Portal Name
                     </h1>
                     <p class="welcome-card-description">
-                        Lorem ipsum dolor amet kombucha try-hard biodiesel XOXO scenester subway tile. Etsy selvage shaman master cleanse activated charcoal. Celiac hella wayfarers glossier palo santo pork belly. Vape twee stumptown normcore. Occupy fingerstache listicle etsy.
+                        Lorem ipsum dolor amet kombucha try-hard biodiesel XOXO scenester subway tile. Etsy selvage
+                        shaman master cleanse activated charcoal. Celiac hella wayfarers glossier palo santo pork belly.
+                        Vape twee stumptown normcore. Occupy fingerstache listicle etsy.
                     </p>
                     <a href="/explore/"
                        class="welcome-card-link">
@@ -46,7 +48,8 @@
                         18.3k
                     </p>
                     <p class="kpi-description">
-                        Quam vulputate dignissim suspendisse in est ante in nibh. Faucibus nisl tincidunt eget nullam non nisi est sit amet
+                        Quam vulputate dignissim suspendisse in est ante in nibh. Faucibus nisl tincidunt eget nullam
+                        non nisi est sit amet
                     </p>
                 </div>
             </div>
@@ -60,14 +63,9 @@
                 What data are you looking for?
             </h2>
             <div class="search-card-container">
-                <ods-searchbox class="search-card-searchbox"
-                               form-id="search-form"
-                               translate="placeholder"
-                               placeholder="Search for a dataset">
-                </ods-searchbox>
-                <button type="submit" form="search-form" class="search-card-submit-button">
-                    Search
-                </button>
+                <ods-catalog-search class-name="'search-card-searchbox'"
+                                    label="'Search'">
+                </ods-catalog-search>
             </div>
         </div>
     </section>
@@ -86,7 +84,8 @@
                             Mobility
                         </h3>
                         <p class="image-description">
-                            Quam vulputate dignissim suspendisse in est ante in nibh. Faucibus nisl tincidunt eget nullam non nisi est sit amet.
+                            Quam vulputate dignissim suspendisse in est ante in nibh. Faucibus nisl tincidunt eget
+                            nullam non nisi est sit amet.
                         </p>
                     </div>
                 </a>
@@ -100,7 +99,8 @@
                             Garden
                         </h3>
                         <p class="image-description">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore et dolore magna aliqua.
                         </p>
                     </div>
                 </a>
@@ -114,7 +114,8 @@
                             Gastronomy
                         </h3>
                         <p class="image-description">
-                            Massa id neque aliquam vestibulum. Fringilla phasellus faucibus scelerisque eleifend donec pretium vulputate.
+                            Massa id neque aliquam vestibulum. Fringilla phasellus faucibus scelerisque eleifend donec
+                            pretium vulputate.
                         </p>
                     </div>
                 </a>
@@ -156,7 +157,8 @@
                             Education
                         </h3>
                         <p class="image-description">
-                            Euismod lacinia at quis risus sed vulputate odio. Parturient montes nascetur ridiculus mus mauris vitae.
+                            Euismod lacinia at quis risus sed vulputate odio. Parturient montes nascetur ridiculus mus
+                            mauris vitae.
                         </p>
                     </div>
                 </a>
@@ -190,9 +192,11 @@
                                          ctx-domain="userclub"
                                          ctx-dataset="base-nationale-des-lieux-de-covoiturage-en-france"
                                          ctx-parameters="{'timezone':'Europe/Berlin'}">
-                        <ods-chart single-y-axis="true" scientific-display="true" labels-x-length="20" align-month="true">
+                        <ods-chart single-y-axis="true" scientific-display="true" labels-x-length="20"
+                                   align-month="true">
                             <ods-chart-query context="ctx" field-x="reg_name" maxpoints="0" sort="serie1-1">
-                                <ods-chart-serie expression-y="spot_size" chart-type="bar" function-y="SUM" color="#EC643C" scientific-display="true">
+                                <ods-chart-serie expression-y="spot_size" chart-type="bar" function-y="SUM"
+                                                 color="#EC643C" scientific-display="true">
                                 </ods-chart-serie>
                             </ods-chart-query>
                         </ods-chart>
@@ -227,9 +231,11 @@
                                          ctx-domain="userclub"
                                          ctx-dataset="base-nationale-des-lieux-de-covoiturage-en-france"
                                          ctx-parameters="{'timezone':'Europe/Berlin'}">
-                        <ods-chart single-y-axis="true" scientific-display="true" labels-x-length="20" align-month="true">
+                        <ods-chart single-y-axis="true" scientific-display="true" labels-x-length="20"
+                                   align-month="true">
                             <ods-chart-query context="ctx" field-x="reg_name" maxpoints="0" sort="serie1-1">
-                                <ods-chart-serie expression-y="spot_size" chart-type="bar" function-y="SUM" color="#EC643C" scientific-display="true">
+                                <ods-chart-serie expression-y="spot_size" chart-type="bar" function-y="SUM"
+                                                 color="#EC643C" scientific-display="true">
                                 </ods-chart-serie>
                             </ods-chart-query>
                         </ods-chart>
@@ -262,7 +268,9 @@
                 </h2>
                 <div class="twitter-timeline-container">
                     <!-- To change the Twitter profile to display go to https://publish.twitter.com/# -->
-                    <a class="twitter-timeline" data-height="392" href="https://twitter.com/Opendatasoft?ref_src=twsrc%5Etfw">Tweets by Opendatasoft</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <a class="twitter-timeline" data-height="392"
+                       href="https://twitter.com/Opendatasoft?ref_src=twsrc%5Etfw">Tweets by Opendatasoft</a>
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
             </div>
         </div>
