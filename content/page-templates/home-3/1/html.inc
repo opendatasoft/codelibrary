@@ -194,7 +194,7 @@
 			<div class="col-md-4">
 				<div class="content-card">
 					<div>
-						<a class="twitter-timeline" data-height="387" href="https://twitter.com/Opendatasoft?ref_src=twsrc%5Etfw">Tweets by Opendatasoft</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+						<a class="twitter-timeline" data-height="387" href="https://twitter.com/Huwise?ref_src=twsrc%5Etfw">Tweets by Huwise</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 					</div>
 				</div>
 			</div>

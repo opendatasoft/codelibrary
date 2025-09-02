@@ -17,7 +17,7 @@ French schools display their canteen menus each week either so that it can be re
 
 **The service**
 
-To help agents avoid repeating this task, Opendatasoft has created a model menu page that automatically generates the information from a dataset “school canteen menus”.
+To help agents avoid repeating this task, Huwise has created a model menu page that automatically generates the information from a dataset “school canteen menus”.
 
 **The ODS Advantage: the platform’s filters.** They enable you to choose the elements to show on the menu. Data that is only useful to territorial agents do not need to be displayed on documents destined to the public.
 
@@ -31,7 +31,7 @@ Rennes Metropolis offers its schools a ready-to-print menu page for which the te
 
 ## Requirements
 
-- An Opendatasoft platform
+- A Huwise platform
 
 ## Get the App
 

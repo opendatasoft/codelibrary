@@ -1,4 +1,4 @@
-<!-- "dep" context is the official geo-referential from Opendatasoft Data Network -->
+<!-- "dep" context is the official geo-referential from Huwise Data Network -->
 <ods-dataset-context context="dep,carpool"
                      dep-dataset="departements-et-collectivites-doutre-mer-france"
                      dep-domain="userclub"

@@ -82,7 +82,7 @@
     - faicon (string) : optional, FontAwesome icon id, ex: ‘square-o’ (omit the fa- prefix) 
 
     Please see the documentation for more information regarding the select
-    https://help.opendatasoft.com/apis/ods-explore-v2/#section/Opendatasoft-Query-Language-(ODSQL)
+    https://help.opendatasoft.com/apis/ods-explore-v2/#section/Huwise-Query-Language-(ODSQL)
 
     Please see all available icons here
     https://fontawesome.com/v4/icons/

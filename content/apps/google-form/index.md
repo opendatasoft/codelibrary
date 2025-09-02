@@ -1,19 +1,19 @@
 ---
 title: "Google Form Survey Results Visualization"
-description: "Automate the result display from your collaborative surveys by connecting Google Form to your Opendatasoft portal."
+description: "Automate the result display from your collaborative surveys by connecting Google Form to your Huwise portal."
 tags: []
 hubspotFormId: 54303c2e-0e50-4acf-ad7e-361fb6498df0
 hubspotPortalId: 2041226
 hubspotCampaignId: 7011p000000ybQYAAY
 ---
 
-**Automate the result display from your collaborative surveys by connecting Google Form to your Opendatasoft portal.**
+**Automate the result display from your collaborative surveys by connecting Google Form to your Huwise portal.**
 
 ## Description
 
 **The context**
 
-You are preparing a survey and you need to visualize the results in a legible and structured way, as well as enrich them with other data. Google Form allows easy collection of these results, but not their advanced visualization or comparison with other data. Integrating Google Form with the Opendatasoft platform can help you take advantage of both tools.
+You are preparing a survey and you need to visualize the results in a legible and structured way, as well as enrich them with other data. Google Form allows easy collection of these results, but not their advanced visualization or comparison with other data. Integrating Google Form with the Huwise platform can help you take advantage of both tools.
 
 **The service**
 
@@ -28,7 +28,7 @@ When you create a survey with Google Form, the answers are collected in a spread
 ## Requirements
 
 - A Google Account
-- An Opendatasoft platform
+- A Huwise platform
 
 ## Get the App
 

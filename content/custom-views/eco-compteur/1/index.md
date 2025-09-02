@@ -5,7 +5,7 @@ domainid: "eco-compteur-odsapps"
 datasetid: "eco-counter-data"
 ---
 
-Eco-Counter custom view for Opendatasoft integration: an overall view of your territory through Eco-Counter stations data.
+Eco-Counter custom view for Huwise integration: an overall view of your territory through Eco-Counter stations data.
 
 ### Install procedure
 

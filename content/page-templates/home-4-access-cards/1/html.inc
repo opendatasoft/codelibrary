@@ -162,7 +162,7 @@
                     <a
                             class="twitter-timeline"
                             data-height="392"
-                            href="https://twitter.com/Opendatasoft?ref_src=twsrc%5Etfw">Tweets by Opendatasoft</a>
+                            href="https://twitter.com/Huwise?ref_src=twsrc%5Etfw">Tweets by Huwise</a>
                     <script
                             async
                             src="https://platform.twitter.com/widgets.js"
