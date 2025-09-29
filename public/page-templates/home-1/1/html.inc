@@ -262,7 +262,7 @@
                 </h2>
                 <div class="twitter-timeline-container">
                     <!-- To change the Twitter profile to display go to https://publish.twitter.com/# -->
-                    <a class="twitter-timeline" data-height="392" href="https://twitter.com/Opendatasoft?ref_src=twsrc%5Etfw">Tweets by Opendatasoft</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    <a class="twitter-timeline" data-height="392" href="https://twitter.com/Huwise?ref_src=twsrc%5Etfw">Tweets by Huwise</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
                 </div>
             </div>
         </div>

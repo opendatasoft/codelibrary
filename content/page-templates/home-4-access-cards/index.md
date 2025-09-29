@@ -1,6 +1,6 @@
 ---
 title: "Home page 4 with access cards"
-description: "A home page for your Opendatasoft portal, with access cards"
+description: "A home page for your Huwise portal, with access cards"
 tags: ["display", "navigation"]
 resources:
 - src: '*/'

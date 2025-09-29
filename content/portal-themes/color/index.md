@@ -1,6 +1,6 @@
 ---
 title: "Colored theme"
-description: "An Opendatasoft theme, when your business identity contains dominant colors"
+description: "A Huwise theme, when your business identity contains dominant colors"
 tags: []
 resources:
 - src: '*/'

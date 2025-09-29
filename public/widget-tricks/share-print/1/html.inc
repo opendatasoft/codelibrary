@@ -18,7 +18,7 @@
                 Share through social network or by email:
             </h3>
             <div class="boutons" style="font-size: 1.6rem;">
-                <a href="https://twitter.com/intent/tweet?text=Opendatasoft Page Test;url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}"
+                <a href="https://twitter.com/intent/tweet?text=Huwise Page Test;url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}"
                    class="ods-dataset-visualization__social-button ods-dataset-visualization__social-button--twitter"
                    target="_blank">
                     <i class="fa fa-twitter ods-dataset-visualization__social-button-icon" aria-hidden="true"></i>
@@ -33,12 +33,12 @@
                    target="_blank">
                     <i class="fa fa-google-plus ods-dataset-visualization__social-button-icon" aria-hidden="true"></i>
                 </a>
-                <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&amp;mini=true&amp;title=Opendatasoft Page Test;source=Opendatasoft"
+                <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&amp;mini=true&amp;title=Huwise Page Test;source=Huwise"
                    class="ods-dataset-visualization__social-button ods-dataset-visualization__social-button--linkedin"
                    target="_blank">
                     <i class="fa fa-linkedin ods-dataset-visualization__social-button-icon" aria-hidden="true"></i>
                 </a>
-                <a href="mailto:?subject=Opendatasoft Page Test&amp;body=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}"
+                <a href="mailto:?subject=Huwise Page Test&amp;body=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}"
                    class="ods-dataset-visualization__social-button ods-dataset-visualization__social-button--mail"
                    target="_blank">
                     <i class="fa fa-envelope ods-dataset-visualization__social-button-icon" aria-hidden="true"></i>

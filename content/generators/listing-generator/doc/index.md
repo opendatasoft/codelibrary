@@ -11,7 +11,7 @@ Find the [code and live examples above](#automated-listing-visualization).
 
 ### Before start, important read
 
-The listing generator is an HTML template powered by ods-widgets library from Opendatasoft. ods-widgets library relies on AngularJs and therefore propose directives and expressions to operate dynamic behavior into your pages.  
+The listing generator is an HTML template powered by ods-widgets library from Huwise. ods-widgets library relies on AngularJs and therefore propose directives and expressions to operate dynamic behavior into your pages.  
 Settings set within the page. You'll therefore need to pay attention to the following section to avoid input mistakes.
 
 #### First, a minimalist example
@@ -224,7 +224,7 @@ Available options are :
 - `unit` (string) : optional, KPI unit, ex: 'citizens'
 - `faicon` (stirng) : optional, FontAwesome icon id, ex: 'square-o' (omit the fa- prefix)
 
-[Please see the documentation for more information regarding the select](https://help.opendatasoft.com/apis/ods-explore-v2/#section/Opendatasoft-Query-Language-(ODSQL))
+[Please see the documentation for more information regarding the select](https://help.opendatasoft.com/apis/ods-explore-v2/#section/Huwise-Query-Language-(ODSQL))
 
 [Please see all available Fontawesome icons here](https://fontawesome.com/v4.7.0/icons/)
 

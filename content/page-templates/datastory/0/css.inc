@@ -71,7 +71,7 @@ section {
 /**
  * License: MIT License
  * Generated on 26 May 2021
- * Author: Labs from Opendatasoft
+ * Author: Labs from Huwise
  * Version: 0.1
  * Description: ods-chart CSS Library
  */

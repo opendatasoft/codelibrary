@@ -17,7 +17,7 @@ Elections are always a highlight for you and your constituents. To make your cit
 
 **The service**
 
-With Opendatasoft, it is possible to compare different fields of the same dataset or several datasets together. The visual representation of these combined and filtered data allows you to offer your community a comparative view of the distribution of votes by district, municipality or constituency.
+With Huwise, it is possible to compare different fields of the same dataset or several datasets together. The visual representation of these combined and filtered data allows you to offer your community a comparative view of the distribution of votes by district, municipality or constituency.
 
 **The Use Case**
 
@@ -31,7 +31,7 @@ Like the Hauts-de-Seine, guide your citizens in reading the voting results. The 
 
 ## Requirements
 
-- An Opendatasoft platform
+- A Huwise platform
 
 ## Get the App
 

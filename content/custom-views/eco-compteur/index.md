@@ -1,7 +1,7 @@
 ---
 title: "Eco-Counter / Eco-Compteur"
 date: "2021-12-09"
-description: "Eco-Counter custom view for Opendatasoft integration: an overall view of your territory through Eco-Counter stations data."
+description: "Eco-Counter custom view for Huwise integration: an overall view of your territory through Eco-Counter stations data."
 tags: ["aggregation", "chart", "ods-adv-analysis"]
 resources:
 - src: '*/'

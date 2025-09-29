@@ -2,4 +2,4 @@
 title: "Default look"
 ---
 
-The default look & feel of catalog cards for any new Opendatasoft portal.
+The default look & feel of catalog cards for any new Huwise portal.

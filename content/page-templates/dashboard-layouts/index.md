@@ -15,7 +15,7 @@ These resources are split into 2 main parts
 
 To see the final example made with these layouts, go to [dashboard resource](/page-templates/dashboard).
 
-**ODS Layout** is well known from Opendatasoft users, and these resources over-ride it by setting `row` as `display: flex` 
+**ODS Layout** is well known from Huwise users, and these resources over-ride it by setting `row` as `display: flex` 
 elements to take advantage of Flexbox capabilities. You can see the [ODS Layout over-ride resource here](/page-templates/ods-layout-over-ride).
 
 **CSS Grid framework** refer to some custom CSS classes that over-rides CSS Grid layout. It's mainly suitable for **expert users only** that are looking for more advanced layouts such as grids and multiple rows designs. 

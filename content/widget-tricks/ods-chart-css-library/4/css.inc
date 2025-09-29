@@ -1,7 +1,7 @@
 /**
  * License: MIT License
  * Generated on 26 May 2021
- * Author: Fpassaniti for Opendatasoft
+ * Author: Fpassaniti for Huwise
  * Version: 0.1
  * Description: ods-chart CUSTOM CSS LIBRARY. Go to http://codelibrary.opendatasoft.com/widget-tricks/ods-chart-css/ for more information (doc & examples).
  */

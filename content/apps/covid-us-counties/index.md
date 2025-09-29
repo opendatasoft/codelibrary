@@ -25,7 +25,7 @@ This page aggregates a number of indicators, with key figures, maps, tables etc.
 
 ## Requirements
 
-- An Opendatasoft platform
+- A Huwise platform
 - A dataset with records on COVID for every date and possibly split by gender, age etc.
 
 

@@ -17,7 +17,7 @@ Smart sorting bins and energy meters, traffic surveillance cameras, fleets of ge
 
 **The service**
 
-Opendatasoft provides you with a visualization model fully designed to represent, understand and analyze all your IoT data, regardless of their source and format. This app allows you to:
+Huwise provides you with a visualization model fully designed to represent, understand and analyze all your IoT data, regardless of their source and format. This app allows you to:
 
 - map all of your sensors to monitor their operating status and supervise their activity
 - simply and visually restore the raw data collected by your sensors, offering several levels of detail: location, operating status, description of measurements, analytical curves, etc.
@@ -25,7 +25,7 @@ Opendatasoft provides you with a visualization model fully designed to represent
 
 **The use case**
 
-In Paris, Trilib stations installed in several areas of the city generate data on waste. The app proposed by Opendatasoft allows to locate these stations on a map. By clicking on a geolocated point, a lateral banner opens to the right of the map, allowing to visualize the filling rates of the buckets, to check if they are active or not, and to browse the history of the data they have produced so far.
+In Paris, Trilib stations installed in several areas of the city generate data on waste. The app proposed by Huwise allows to locate these stations on a map. By clicking on a geolocated point, a lateral banner opens to the right of the map, allowing to visualize the filling rates of the buckets, to check if they are active or not, and to browse the history of the data they have produced so far.
 
 ![Trilib sorting stations in Paris](https://odsplus.opendatasoft.com/api/v2/catalog/datasets/ods-plus-content-en/files/27b66c50b1674cad4070a1aa96d149ad)
 
@@ -33,7 +33,7 @@ In Paris, Trilib stations installed in several areas of the city generate data o
 
 ## Requirements
 
-- An Opendatasoft platform
+- A Huwise platform
 
 ## Get the App
 
