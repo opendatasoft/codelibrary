@@ -1,4 +1,4 @@
-**Dataset in use:** `north-carolina-population-overview-2010` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/north-carolina-population-overview-2010/table/)
+**Dataset in use:** `north-carolina-population-overview-2010` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/north-carolina-population-overview-2010/table/)
 
 **Fields in use:** 
 

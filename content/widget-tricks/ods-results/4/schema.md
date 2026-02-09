@@ -1,4 +1,4 @@
-**Dataset in use:** `principales-depenses-dequipements-issy` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/principales-depenses-dequipements-issy/table/)
+**Dataset in use:** `principales-depenses-dequipements-issy` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/principales-depenses-dequipements-issy/table/)
 
 **Fields in use:** 
 

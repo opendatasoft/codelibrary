@@ -8,7 +8,7 @@
 
     <!-- ### GENERAL SETTINGS ### -->
     <!-- domain : (Domain URL) : Must contain the ID of the domain where the dataset is published.
-    ex: 'discovery.opendatasoft.com'
+    ex: 'discovery.huwise.com'
     -->
         <!-- datasetid (Dataset ID) : Must contain the ID of the dataset
     ex: 'oeuvres-de-johannes-vermeer'
@@ -65,7 +65,7 @@
 
     Available functions are SUM, AVG, COUNT, STD, MAX, MIN.
     Please see the documentation for more information
-    https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsAggregation
+    https://help.huwise.com/widgets/#/api/ods-widgets.directive:odsAggregation
 
     Please see all available icons here
     https://fontawesome.com/v4.7.0/icons/
@@ -93,7 +93,7 @@
 
     <!-- mapPictoColor = '#EC643C'
          mapPicto = 'ods-photo'
-    Map picto settings to set the color and the picto from this list : https://help.opendatasoft.com/platform/en/other_resources/pictograms_reference/pictograms_reference.html
+    Map picto settings to set the color and the picto from this list : https://help.huwise.com/platform/en/other_resources/pictograms_reference/pictograms_reference.html
     -->
 
     <!-- DO NOT MODIFY -->

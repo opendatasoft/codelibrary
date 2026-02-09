@@ -1,4 +1,4 @@
-**Field in use in `laender-germany` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/laender-germany/table/)**
+**Field in use in `laender-germany` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/laender-germany/table/)**
 
 | land_name | land_code |
 |---|---|
@@ -7,7 +7,7 @@
 |Baden-Württemberg|08|
 |Thüringen|16|
 
-**Field in use in `kreise-germany` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/kreise-germany/table/)**
+**Field in use in `kreise-germany` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/kreise-germany/table/)**
 
 | land_name | land_code | geo_shape (geo_shape) |
 |---|---|---|

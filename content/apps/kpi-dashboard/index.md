@@ -17,7 +17,7 @@ Whether you are a community or a company, your goal is to provide an ever higher
 
 **The service**
 
-Huwise allows you to build a dashboard of [performance indicators](https://www.opendatasoft.com/en/glossary/kpi-key-performance-indicator/) related to datasets published on your portal. The use of such a tool offers you:
+Huwise allows you to build a dashboard of [performance indicators](https://www.huwise.com/en/glossary/kpi-key-performance-indicator/) related to datasets published on your portal. The use of such a tool offers you:
 
 - an understanding of essential metrics to track your achievements, all in one place.
 - the guarantee that your indicators will always be up to date because synchronized with the datasets of your portal.
@@ -28,13 +28,13 @@ Huwise allows you to build a dashboard of [performance indicators](https://www.o
 **The use case**
 
 The city of Paris has built a dashboard of performance indicators using its website’s visual identity. Open to the public, the dashboard is designed around three axes, each represented by a color to facilitate sorting and readability: living together better (pink), the city that benefits everyone (blue) and the construction of tomorrow’s world (green). The municipality has chosen to represent a percentage rate of completion of its service’s actions, accompanied with a progress bar. Each action is contextualized by a page mixing texts, and data visualizations. This page also gives access to the data set’s source used to build the performance indicators.
-[https://indicateurs-parisdata.opendatasoft.com](https://indicateurs-parisdata.opendatasoft.com)
+[https://indicateurs-parisdata.huwise.com](https://indicateurs-parisdata.huwise.com)
 
-![Portal's homepage](https://odsplus.opendatasoft.com/api/v2/catalog/datasets/ods-plus-content-en/files/a0f632bc730e4976e6221d4f4396f159)
+![Portal's homepage](https://odsplus.huwise.com/api/v2/catalog/datasets/ods-plus-content-en/files/a0f632bc730e4976e6221d4f4396f159)
 
-![Indicator detailed page](https://odsplus.opendatasoft.com/api/v2/catalog/datasets/ods-plus-content-en/files/4613ea2e82c1b62ea0d736cce7fbeee1)
+![Indicator detailed page](https://odsplus.huwise.com/api/v2/catalog/datasets/ods-plus-content-en/files/4613ea2e82c1b62ea0d736cce7fbeee1)
 
-![Paris customer case : A city government dashboard for Parisians](https://odsplus.opendatasoft.com/api/v2/catalog/datasets/ods-plus-content-en/files/45d4e282650deee8f338433d9743995e)
+![Paris customer case : A city government dashboard for Parisians](https://odsplus.huwise.com/api/v2/catalog/datasets/ods-plus-content-en/files/45d4e282650deee8f338433d9743995e)
 
 ## Requirements
 
@@ -46,6 +46,6 @@ The city of Paris has built a dashboard of performance indicators using its webs
 
 Get the code on [Github](https://github.com/opendatasoft/odsapps-perfkpi)
 
-See it live [here](https://perfkpi-odsapps.opendatasoft.com/)
+See it live [here](https://perfkpi-odsapps.huwise.com/)
 
 Contact us to learn how we can accompany you in implementing this connection with the Waze API.

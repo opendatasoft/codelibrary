@@ -1,4 +1,4 @@
-**Dataset in use:** `belgium-statistical-districts` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/belgium-statistical-districts/table/)
+**Dataset in use:** `belgium-statistical-districts` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/belgium-statistical-districts/table/)
 
 **Fields in use:** 
 

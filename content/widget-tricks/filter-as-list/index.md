@@ -9,4 +9,4 @@ resources:
 ---
 
 > **!! WARNING !!** This ressource is deprecated ! Please use `ods-select` instead.
-> [Documentation available here](https://codelibrary.opendatasoft.com/widget-tricks/ods-select/)
+> [Documentation available here](https://codelibrary.huwise.com/widget-tricks/ods-select/)

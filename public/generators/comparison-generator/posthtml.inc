@@ -13,7 +13,7 @@
 
     <!-- ### GENERAL SETTINGS ### -->
     <!-- domain (Domain URL): Must contain the URL of the domain where the dataset is published.
-     ex: 'public.opendatasoft.com'
+     ex: 'public.huwise.com'
     -->
     <!-- datasetid (Dataset ID): Must contain the ID of the dataset
      ex: 'healthref-france-finess'
@@ -82,7 +82,7 @@
     - faicon (string) : optional, FontAwesome icon id, ex: ‘square-o’ (omit the fa- prefix) 
 
     Please see the documentation for more information regarding the select
-    https://help.opendatasoft.com/apis/ods-explore-v2/#section/Huwise-Query-Language-(ODSQL)
+    https://help.huwise.com/apis/ods-explore-v2/#section/Huwise-Query-Language-(ODSQL)
 
     Please see all available icons here
     https://fontawesome.com/v4/icons/
@@ -122,7 +122,7 @@
 
     Available values for select are AVG, COUNT, MIN, MAX, STDDEV, SUM.
     Please see the documentation for more information
-    https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsAnalysis
+    https://help.huwise.com/widgets/#/api/ods-widgets.directive:odsAnalysis
 
     ex:
     charts = [
@@ -156,7 +156,7 @@ Available values for type are line, spline, area, areaspline, column, bar, pie, 
 Available values for function are COUNT, AVG, MIN, MAX, STDDEV, SUM, QUANTILES, CONSTANT
 
 Please see the documentation for more information
-https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsChartSerie
+https://help.huwise.com/widgets/#/api/ods-widgets.directive:odsChartSerie
 
 ex:
 charts = [

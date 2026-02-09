@@ -1,4 +1,4 @@
-**Dataset in use:** `resume-statistique-communes-departements-et-regions-france-2012-2013-2014` [(See it on public domain)](https://public.opendatasoft.com/explore/dataset/resume-statistique-communes-departements-et-regions-france-2012-2013-2014/table/)
+**Dataset in use:** `resume-statistique-communes-departements-et-regions-france-2012-2013-2014` [(See it on public domain)](https://public.huwise.com/explore/dataset/resume-statistique-communes-departements-et-regions-france-2012-2013-2014/table/)
 
 **Fields in use:**
 

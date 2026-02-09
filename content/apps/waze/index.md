@@ -28,11 +28,11 @@ The European Metropolis of Lille (MEL) controls its traffic thanks to traffic se
 - More quickly identify problems that may arise in specific streets, so as to then send out emergency intervention services when needed.
 - Anticipate future incidents and traffic blockages to implement preventative solutions.
 
-![Real time statistics](https://odsplus.opendatasoft.com/api/v2/catalog/datasets/ods-plus-content-en/files/410a5b74392503b60d0dbefad0f0c3b6)
+![Real time statistics](https://odsplus.huwise.com/api/v2/catalog/datasets/ods-plus-content-en/files/410a5b74392503b60d0dbefad0f0c3b6)
 
-![Historical data](https://odsplus.opendatasoft.com/api/v2/catalog/datasets/ods-plus-content-en/files/0df45acabd09f5d88fb7e7c1283d7dda)
+![Historical data](https://odsplus.huwise.com/api/v2/catalog/datasets/ods-plus-content-en/files/0df45acabd09f5d88fb7e7c1283d7dda)
 
-![Trends and side-by-side comparison](https://odsplus.opendatasoft.com/api/v2/catalog/datasets/ods-plus-content-en/files/d3935cf2ce6578deca41d6aa6da64893)
+![Trends and side-by-side comparison](https://odsplus.huwise.com/api/v2/catalog/datasets/ods-plus-content-en/files/d3935cf2ce6578deca41d6aa6da64893)
 
 ## Requirements
 

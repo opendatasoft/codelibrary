@@ -78,7 +78,7 @@
             <!-- Start Access Card 1 -->
             <a href="#"
                class="access-card-bg"
-               style="background-image: url('https://discovery.opendatasoft.com/assets/theme_image/mobility-bg.jpg');">
+               style="background-image: url('https://discovery.huwise.com/assets/theme_image/mobility-bg.jpg');">
                 <div class="access-card">
                     <div class="access-card-content">
                         <h3 class="access-card-pretitle">Mobility</h3>
@@ -103,7 +103,7 @@
             <!-- Start Access Card 2 -->
             <a href="#"
                class="access-card-bg"
-               style="background-image: url('https://discovery.opendatasoft.com/assets/theme_image/gastronomy-bg.jpg');">
+               style="background-image: url('https://discovery.huwise.com/assets/theme_image/gastronomy-bg.jpg');">
                 <div class="access-card">
                     <div class="access-card-content">
                         <h3 class="access-card-pretitle">Gastronomy</h3>
@@ -124,7 +124,7 @@
             <!-- Start Access Card 3 -->
             <a href="#"
                class="access-card-bg"
-               style="background-image: url('https://discovery.opendatasoft.com/assets/theme_image/culture-bg.jpg');">
+               style="background-image: url('https://discovery.huwise.com/assets/theme_image/culture-bg.jpg');">
                 <div class="access-card">
                     <div class="access-card-content">
                         <h3 class="access-card-pretitle">Culture</h3>

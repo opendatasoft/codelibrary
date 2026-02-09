@@ -1,9 +1,9 @@
-**Dataset in use:** `us-hospitals` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/us-hospitals/table/)
+**Dataset in use:** `us-hospitals` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/us-hospitals/table/)
 
 **Fields in use:**
 none: count function
 
-**Dataset in use:** `observation-synop` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/observation-synop/table/)
+**Dataset in use:** `observation-synop` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/observation-synop/table/)
 
 **Fields in use:**
 

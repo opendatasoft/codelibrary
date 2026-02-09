@@ -1,4 +1,4 @@
-**Dataset in use:** `resume-statistique-communes-departements-et-regions-france-2012-2013-2014` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/resume-statistique-communes-departements-et-regions-france-2012-2013-2014/table/)
+**Dataset in use:** `resume-statistique-communes-departements-et-regions-france-2012-2013-2014` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/resume-statistique-communes-departements-et-regions-france-2012-2013-2014/table/)
 
 **Fields in use:**
 
@@ -9,7 +9,7 @@
 |6645.0|6637.0|
 |48.0|43.0|
 
-**Dataset in use:** `belgium-statistical-districts` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/belgium-statistical-districts/table/)
+**Dataset in use:** `belgium-statistical-districts` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/belgium-statistical-districts/table/)
 
 **Fields in use:**
 

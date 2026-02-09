@@ -1,4 +1,4 @@
-     ng-init="domain = 'userclub.opendatasoft.com';
+     ng-init="domain = 'userclub.huwise.com';
                       datasetid = 'deliberations-du-conseil-municipal-dissy-les-moulineaux';
 
               sort = '';

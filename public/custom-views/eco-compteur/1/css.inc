@@ -330,7 +330,7 @@ section:nth-child(even) h2.indicateur {
 * Generated on 26 May 2021
 * Author: Fpassaniti for Huwise
 * Version: 0.1
-* Description: ods-chart CUSTOM CSS LIBRARY. Go to http://codelibrary.opendatasoft.com/widget-tricks/ods-chart-css/ for more information (doc & examples).
+* Description: ods-chart CUSTOM CSS LIBRARY. Go to http://codelibrary.huwise.com/widget-tricks/ods-chart-css/ for more information (doc & examples).
 */
 .extralarge-y-values .highcharts-yaxis-labels text, .large-y-values .highcharts-yaxis-labels text {
     transform: translate(0, 4px);

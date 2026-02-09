@@ -1,6 +1,6 @@
 <div class="container">
-    <ods-dataset-context context="ctx,ctxdate" ctx-domain="userclub.opendatasoft.com" ctx-dataset="rappel-conso"
-        ctxdate-domain="userclub.opendatasoft.com" ctxdate-dataset="rappel-conso"
+    <ods-dataset-context context="ctx,ctxdate" ctx-domain="userclub.huwise.com" ctx-dataset="rappel-conso"
+        ctxdate-domain="userclub.huwise.com" ctxdate-dataset="rappel-conso"
         ctx-parameters="{'sort':'date_de_publication_de_la_fiche','disjunctive.nature_juridique_du_rappel':'true','disjunctive.distributeurs':'true','disjunctive.categorie_de_produit':'true'}">
         <h1 class="page-title">Rappel conso</h1>
         <p class="page-subtitle">
@@ -112,7 +112,7 @@
                 <div ng-repeat="item in items" class="col-md-6 margin-bottom-20">
                     <div class="content-card">
                         <div class="content-card-img"
-                            style="{{'background-image: url(https://userclub.opendatasoft.com/explore/dataset/rappel-conso/files/' + item.fields.lien_vers_la_liste_des_images.id + '/300/);' }}">
+                            style="{{'background-image: url(https://userclub.huwise.com/explore/dataset/rappel-conso/files/' + item.fields.lien_vers_la_liste_des_images.id + '/300/);' }}">
                         </div>
                         <div class="content-card-body">
                             <h2 class="content-card-title text-center">
@@ -149,7 +149,7 @@
                 </div>
             </div>
         </section>
-        <a href="https://userclub.opendatasoft.com/explore/dataset/rappel-conso/" target="_blank"
+        <a href="https://userclub.huwise.com/explore/dataset/rappel-conso/" target="_blank"
             class="margin-bottom-20">Voir les données</a>
     </ods-dataset-context>
 </div>

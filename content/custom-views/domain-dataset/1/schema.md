@@ -1,4 +1,4 @@
-**Dataset in use:** `domaindatasets` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/domaindatasets/table/)
+**Dataset in use:** `domaindatasets` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/domaindatasets/table/)
 
 **Fields in use:**
 

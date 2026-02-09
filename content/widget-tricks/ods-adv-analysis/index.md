@@ -9,6 +9,6 @@ resources:
 ---
 
 The `ods-adv-analysis` widget exposes the results of an aggregation function over a context.
-It uses the [ODS Explore API V2](https://help.opendatasoft.com/apis/ods-explore-v2/) and its [ODSQL language](https://help.opendatasoft.com/apis/ods-explore-v2/#section/Huwise-Query-Language-(ODSQL)).
+It uses the [ODS Explore API V2](https://help.huwise.com/apis/ods-explore-v2/) and its [ODSQL language](https://help.huwise.com/apis/ods-explore-v2/#section/Huwise-Query-Language-(ODSQL)).
 
-[ods-adv-analysis documentation](https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsAdvAnalysis)
+[ods-adv-analysis documentation](https://help.huwise.com/widgets/#/api/ods-widgets.directive:odsAdvAnalysis)

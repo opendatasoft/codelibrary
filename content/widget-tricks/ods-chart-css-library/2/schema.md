@@ -1,4 +1,4 @@
-**Dataset in use:** `world-heritage-list` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/world-heritage-list/table/)
+**Dataset in use:** `world-heritage-list` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/world-heritage-list/table/)
 
 **Fields in use:** 
 

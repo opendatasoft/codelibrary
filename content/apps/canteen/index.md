@@ -25,9 +25,9 @@ To help agents avoid repeating this task, Huwise has created a model menu page t
 
 Rennes Metropolis offers its schools a ready-to-print menu page for which the text is generated from a dataset updated by the General Canteen Service. Thanks to the platform’s filters, allergens and organic ingredients are highlighted with specific colors. The dataset includes the menus for the ongoing, past, and following weeks, allowing schools to anticipate the preparation of the menus displayed.
 
-![Canteen menu](https://odsplus.opendatasoft.com/api/v2/catalog/datasets/ods-plus-content-en/files/d28fa042592154aff047dc37d93d6aa7)
+![Canteen menu](https://odsplus.huwise.com/api/v2/catalog/datasets/ods-plus-content-en/files/d28fa042592154aff047dc37d93d6aa7)
 
-![Canteen menu dataset](https://odsplus.opendatasoft.com/api/v2/catalog/datasets/ods-plus-content-en/files/80ba947ae6cbc6ace40bf6e032be2464)
+![Canteen menu dataset](https://odsplus.huwise.com/api/v2/catalog/datasets/ods-plus-content-en/files/80ba947ae6cbc6ace40bf6e032be2464)
 
 ## Requirements
 
@@ -37,6 +37,6 @@ Rennes Metropolis offers its schools a ready-to-print menu page for which the te
 
 Get the code on [Github](https://github.com/opendatasoft/ods-cookbook/tree/master/dashboard/canteen-menu)
 
-See it live [here](https://discovery.opendatasoft.com/pages/menu-cantine/)
+See it live [here](https://discovery.huwise.com/pages/menu-cantine/)
 
 Contact us to learn how we can accompany you in implementing this connection with the Waze API.

@@ -11,7 +11,7 @@ etc...
 
 Computing the average, maximum, sum of a field to sort de list of proposition in `ods-select`
 
-`ods-adv-analysis` [Code Library resource](https://codelibrary.opendatasoft.com/widget-tricks/ods-adv-analysis/) and [it's documentation](https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsAdvAnalysis).
+`ods-adv-analysis` [Code Library resource](https://codelibrary.huwise.com/widget-tricks/ods-adv-analysis/) and [it's documentation](https://help.huwise.com/widgets/#/api/ods-widgets.directive:odsAdvAnalysis).
 
 > **Note 1:** performing an adv-analysis on a field containing huge quantity of distinct values can alter performances of the page (the browser needs to download the long list of possible values, then it displays and manipulates the list into the widget)
 

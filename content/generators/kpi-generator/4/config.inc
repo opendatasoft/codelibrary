@@ -15,7 +15,7 @@
         'aggregation_expression':'dose_number',
 
         'link_label': 'Voir les données',
-        'link':'https://userclub.opendatasoft.com/explore/dataset/donnees-relatives-aux-stocks-des-doses-de-vaccins-contre-la-covid-19-departement/custom/',
+        'link':'https://userclub.huwise.com/explore/dataset/donnees-relatives-aux-stocks-des-doses-de-vaccins-contre-la-covid-19-departement/custom/',
         'link_mode':'popin',
         'image_url':'https://ichef.bbci.co.uk/news/640/cpsprodpb/B002/production/_115785054_c1ada70a-19f7-491b-b9f4-fd577d1ab022.jpg',
 
@@ -52,7 +52,7 @@
         'aggregation_unit':'',
         'aggregation_expression':'dose_number',
 
-        'link':'https://userclub.opendatasoft.com/explore/dataset/donnees-relatives-aux-stocks-des-doses-de-vaccins-contre-la-covid-19-departement/custom/',
+        'link':'https://userclub.huwise.com/explore/dataset/donnees-relatives-aux-stocks-des-doses-de-vaccins-contre-la-covid-19-departement/custom/',
         'image_url':'https://img.huffingtonpost.com/asset/602fff2626000025036bcaf3.jpg?ops=scalefit_630_noupscale',
 
         'compare_mode':'numeric',
@@ -90,7 +90,7 @@
         'aggregation_expression':'dose_number',
 
         'link_label': 'Voir les données',
-        'link':'https://userclub.opendatasoft.com/explore/dataset/donnees-relatives-aux-stocks-des-doses-de-vaccins-contre-la-covid-19-departement/custom/',
+        'link':'https://userclub.huwise.com/explore/dataset/donnees-relatives-aux-stocks-des-doses-de-vaccins-contre-la-covid-19-departement/custom/',
         'link_mode':'popin',
         'image_url':'https://s2.qwant.com/thumbr/0x0/f/d/14d9e875694919510ae95fbe38e9098a54f69b7eade14cbb9757506f02e878/Trombose-1-420x280_c.png?u=https%3A%2F%2Falcidesvogel.com.br%2Fwp-content%2Fuploads%2F2016%2F11%2FTrombose-1-420x280_c.png&q=0&b=1&p=0&a=0',
 
@@ -128,7 +128,7 @@
         'aggregation_expression':'nb_tests',
 
         'link_label': 'Voir les données',
-        'link':'https://userclub.opendatasoft.com/explore/dataset/donnees-relatives-aux-resultats-des-tests-virologiques-covid-19-france/custom/',
+        'link':'https://userclub.huwise.com/explore/dataset/donnees-relatives-aux-resultats-des-tests-virologiques-covid-19-france/custom/',
         'link_mode':'popin',
         'image_url':'https://maroc-diplomatique.net/wp-content/uploads/2020/07/tests-PCR.jpg',
 
@@ -165,7 +165,7 @@
         'aggregation_expression':'nb_pos',
 
         'link_label': 'Voir les données',
-        'link':'https://userclub.opendatasoft.com/explore/dataset/donnees-relatives-aux-resultats-des-tests-virologiques-covid-19-france/custom/',
+        'link':'https://userclub.huwise.com/explore/dataset/donnees-relatives-aux-resultats-des-tests-virologiques-covid-19-france/custom/',
         'link_mode':'popin',
         'image_url':'https://images.midilibre.fr/api/v1/images/view/5ef0c06cd286c23e66521344/full/image.jpg?v=1',
 
@@ -203,7 +203,7 @@
         'aggregation_expression':'nb_pos',
 
         'link_label': 'Voir les données',
-        'link':'https://userclub.opendatasoft.com/explore/dataset/donnees-relatives-aux-resultats-des-tests-virologiques-covid-19-france/custom/',
+        'link':'https://userclub.huwise.com/explore/dataset/donnees-relatives-aux-resultats-des-tests-virologiques-covid-19-france/custom/',
         'link_mode':'popin',
         'image_url':'https://static.actu.fr/uploads/2020/05/centre-test-covid-19-coronavirus-population-chu-lille.jpeg',
 
@@ -228,7 +228,7 @@
         'aggregation_unit':'décès',
         'aggregation_expression':'day_death_new',
 
-        'link':'https://userclub.opendatasoft.com/explore/dataset/donnees-hospitalieres-relatives-a-lepidemie-de-covid-19-en-france/custom/',
+        'link':'https://userclub.huwise.com/explore/dataset/donnees-hospitalieres-relatives-a-lepidemie-de-covid-19-en-france/custom/',
         'link_mode':'popin',
         'image_url':'https://photos.lci.fr/images/613/344/deces-covid-hopital-ef1304-1@1x.jpeg',
 
@@ -264,7 +264,7 @@
         'aggregation_unit':'admis',
         'aggregation_expression':'day_intcare_new',
 
-        'link':'https://userclub.opendatasoft.com/explore/dataset/donnees-hospitalieres-relatives-a-lepidemie-de-covid-19-en-france/custom/',
+        'link':'https://userclub.huwise.com/explore/dataset/donnees-hospitalieres-relatives-a-lepidemie-de-covid-19-en-france/custom/',
         'link_mode':'popin',
         'image_url':'https://images.ladepeche.fr/api/v1/images/view/5f980b95d286c24d8323d394/large/image.jpg?v=4',
 

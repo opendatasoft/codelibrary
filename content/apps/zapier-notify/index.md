@@ -23,11 +23,11 @@ To push alerts to data consumers, the Huwise platform integrated the tool Zapier
 
 Citilog, a world leader in road traffic monitoring and surveillance, manages the data collected from its cameras through the Huwise platform. To help with their regular operations and improve their maintenance, the company has set up Zapier alerts in the event of an anomaly, and when a camera is being repaired.
 
-![Zapier demo home page](https://odsplus.opendatasoft.com/api/v2/catalog/datasets/ods-plus-content-en/files/adfbb294e0b7f2daae068e854452c276)
+![Zapier demo home page](https://odsplus.huwise.com/api/v2/catalog/datasets/ods-plus-content-en/files/adfbb294e0b7f2daae068e854452c276)
 
-![Zapier "control-center"](https://odsplus.opendatasoft.com/api/v2/catalog/datasets/ods-plus-content-en/files/14cc63eb89f6806e4c6d2a5b1fbbfd91)
+![Zapier "control-center"](https://odsplus.huwise.com/api/v2/catalog/datasets/ods-plus-content-en/files/14cc63eb89f6806e4c6d2a5b1fbbfd91)
 
-![Weather alerts: notification application](https://odsplus.opendatasoft.com/api/v2/catalog/datasets/ods-plus-content-en/files/6e33c235e62400eb35508a91c66e8642)
+![Weather alerts: notification application](https://odsplus.huwise.com/api/v2/catalog/datasets/ods-plus-content-en/files/6e33c235e62400eb35508a91c66e8642)
 
 ## Requirements
 
@@ -38,6 +38,6 @@ Citilog, a world leader in road traffic monitoring and surveillance, manages the
 
 Get the code on [Github](https://github.com/opendatasoft/ods-cookbook/tree/master/zapier)
 
-See it live [here](https://zapier-odsapps.opendatasoft.com/pages/dashboard/)
+See it live [here](https://zapier-odsapps.huwise.com/pages/dashboard/)
 
 Contact us to learn how we can accompany you in implementing this connection with the Waze API.

@@ -69,7 +69,7 @@
 
     Available functions are SUM, AVG, COUNT, STD, MAX, MIN.
     Please see the documentation for more information
-    https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsAggregation
+    https://help.huwise.com/widgets/#/api/ods-widgets.directive:odsAggregation
 
     Please see all available icons here
     https://fontawesome.com/v4.7.0/icons/

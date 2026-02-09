@@ -11,4 +11,4 @@ In the example, we use this technique to perform a daily average over a week, (f
 1. `ods-adv-analysis` groups record by day over the last 7 days, and returns the total number of hits for each day. 
 2. `ods-subaggregation` computes the average of hits by day.
 
-[ods-subaggregation documentation](https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsSubaggregation)
+[ods-subaggregation documentation](https://help.huwise.com/widgets/#/api/ods-widgets.directive:odsSubaggregation)

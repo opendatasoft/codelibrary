@@ -22,9 +22,9 @@ Alim'Confiance is a mobile and desktop web app, connected to the Ministry of Agr
 **The ODS Advantage: a poster to print by the restaurant’s owner.** Each inspected establishment is indicated by a pin on the inspection map. By clicking on the marker, a tooltip appears and gives access to a small card that the restaurant owner can print, in the manner of "homemade" banners used by some restaurants on their menu. The information contained in this printable form is generated automatically and informs the consumer about the level of hygiene, the date and the period of validity of its inspection.
 
 
-![Alim'Confiance map search](https://odsplus.opendatasoft.com/api/v2/catalog/datasets/ods-plus-content-en/files/548833349b09ffa5d9ac6acca7cbebe0)
+![Alim'Confiance map search](https://odsplus.huwise.com/api/v2/catalog/datasets/ods-plus-content-en/files/548833349b09ffa5d9ac6acca7cbebe0)
 
-![Inspection result card](https://odsplus.opendatasoft.com/api/v2/catalog/datasets/ods-plus-content-en/files/656aac67fa67f34746ca53b70996fb39)
+![Inspection result card](https://odsplus.huwise.com/api/v2/catalog/datasets/ods-plus-content-en/files/656aac67fa67f34746ca53b70996fb39)
 
 ## Requirements
 

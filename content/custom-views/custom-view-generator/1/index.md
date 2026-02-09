@@ -3,7 +3,7 @@ title: "Automated listing visualization in custom views"
 type: "generators"
 date: "2021-03-12T00:00:00+01:00"
 height: 750
-external_url: https://userclub.opendatasoft.com/explore/dataset/custom-view-generator-demo/generator/
+external_url: https://userclub.huwise.com/explore/dataset/custom-view-generator-demo/generator/
 domainid: userclub
 datasetid: custom-view-generator-demo
 ---

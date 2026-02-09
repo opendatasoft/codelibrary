@@ -1,4 +1,4 @@
-**Dataset in use:** `fr-esr-principaux-etablissements-enseignement-superieur` [(See it on mesr domain)](https://mesr.opendatasoft.com/explore/dataset/fr-esr-principaux-etablissements-enseignement-superieur/table/)
+**Dataset in use:** `fr-esr-principaux-etablissements-enseignement-superieur` [(See it on mesr domain)](https://mesr.huwise.com/explore/dataset/fr-esr-principaux-etablissements-enseignement-superieur/table/)
 
 **Fields in use:**
 

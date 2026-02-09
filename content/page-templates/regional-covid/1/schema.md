@@ -1,4 +1,4 @@
-**Dataset in use:** `situacion-epidemiologica-coronavirus-en-castilla-y-leon` [(See it on jcyl domain)](https://jcyl.opendatasoft.com/explore/dataset/situacion-epidemiologica-coronavirus-en-castilla-y-leon/table/)
+**Dataset in use:** `situacion-epidemiologica-coronavirus-en-castilla-y-leon` [(See it on jcyl domain)](https://jcyl.huwise.com/explore/dataset/situacion-epidemiologica-coronavirus-en-castilla-y-leon/table/)
 
 **Fields in use:**
 
@@ -9,7 +9,7 @@
 |2021-12-13|62|26348|2596|509|Palencia|34120|
 |2021-12-13|54|42320|4456|901|Salamanca|37274|
 
-**Dataset in use:** `limites-provinciales-de-castilla-y-leon-recintos` [(See it on jcyl domain)](https://jcyl.opendatasoft.com/explore/dataset/limites-provinciales-de-castilla-y-leon-recintos/table/)
+**Dataset in use:** `limites-provinciales-de-castilla-y-leon-recintos` [(See it on jcyl domain)](https://jcyl.huwise.com/explore/dataset/limites-provinciales-de-castilla-y-leon-recintos/table/)
 
 **Fields in use:**
 

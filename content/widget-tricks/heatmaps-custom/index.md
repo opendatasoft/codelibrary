@@ -9,7 +9,7 @@ resources:
 ---
 
 > We consider the usage of `ods-adv-analysis` as a prerequisite of this resource.
-> [Documentation available here](https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsAdvAnalysis)
+> [Documentation available here](https://help.huwise.com/widgets/#/api/ods-widgets.directive:odsAdvAnalysis)
 
 Keep in mind that, for heatmaps or bubblemaps, you'll need to adapt the display depending on the values, axis, and legends. 
 

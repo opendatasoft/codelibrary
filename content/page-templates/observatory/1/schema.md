@@ -1,4 +1,4 @@
-**Dataset in use:** `buildingref-france-bpe-all-geolocated` [(See it on public domain)](https://public.opendatasoft.com/explore/dataset/buildingref-france-bpe-all-geolocated/table/)
+**Dataset in use:** `buildingref-france-bpe-all-geolocated` [(See it on public domain)](https://public.huwise.com/explore/dataset/buildingref-france-bpe-all-geolocated/table/)
 
 **Fields in use:**
 

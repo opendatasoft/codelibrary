@@ -159,7 +159,7 @@
                         </h2>
                     </div>
 
-                    {{link_to_annonce = "https://userclub.opendatasoft.com/pages/advanced-search-fiche?q=idweb:" + '"' + item.fields.idweb + '"' ; '' }}
+                    {{link_to_annonce = "https://userclub.huwise.com/pages/advanced-search-fiche?q=idweb:" + '"' + item.fields.idweb + '"' ; '' }}
 
                     <div ng-if="item.fields.idweb !='23-10244' ">
                         <a target="_blank" href="{{link_to_annonce}}">

@@ -27,9 +27,9 @@ Huwise provides you with a visualization model fully designed to represent, unde
 
 In Paris, Trilib stations installed in several areas of the city generate data on waste. The app proposed by Huwise allows to locate these stations on a map. By clicking on a geolocated point, a lateral banner opens to the right of the map, allowing to visualize the filling rates of the buckets, to check if they are active or not, and to browse the history of the data they have produced so far.
 
-![Trilib sorting stations in Paris](https://odsplus.opendatasoft.com/api/v2/catalog/datasets/ods-plus-content-en/files/27b66c50b1674cad4070a1aa96d149ad)
+![Trilib sorting stations in Paris](https://odsplus.huwise.com/api/v2/catalog/datasets/ods-plus-content-en/files/27b66c50b1674cad4070a1aa96d149ad)
 
-![Current filling rate and historical analysis](https://odsplus.opendatasoft.com/api/v2/catalog/datasets/ods-plus-content-en/files/d4825a6b0055ac3ee62b6cc947234976)
+![Current filling rate and historical analysis](https://odsplus.huwise.com/api/v2/catalog/datasets/ods-plus-content-en/files/d4825a6b0055ac3ee62b6cc947234976)
 
 ## Requirements
 

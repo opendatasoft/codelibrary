@@ -1,4 +1,4 @@
-**Dataset in use:** `openaq` [(See it on public domain)](https://public.opendatasoft.com/explore/dataset/openaq/table/)
+**Dataset in use:** `openaq` [(See it on public domain)](https://public.huwise.com/explore/dataset/openaq/table/)
 
 **Fields in use:**
 

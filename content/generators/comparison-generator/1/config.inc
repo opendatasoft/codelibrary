@@ -1,4 +1,4 @@
-ng-init="domain = 'userclub.opendatasoft.com';
+ng-init="domain = 'userclub.huwise.com';
                 datasetid = 'healthref-france-finess';
                 
                 refineField = '';

@@ -2,7 +2,7 @@
 title: "Content title"
 date: {{ .Date }}
 height: 70
-external_url: "https://wwww.opendatasoft.com"
+external_url: "https://www.huwise.com"
 ---
 
 Text

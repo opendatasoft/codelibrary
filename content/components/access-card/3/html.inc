@@ -3,7 +3,7 @@
         <a href="#" class="access-card">
             <div class="access-card-container">
                 <div class="access-card-img"
-                     style="background-image: url('https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg')">
+                     style="background-image: url('https://userclub.huwise.com/assets/theme_image/access-cards.jpg')">
                     <h3 class="access-card-pretitle">Éphémère</h3>
                 </div>
                 <div class="access-card-content">

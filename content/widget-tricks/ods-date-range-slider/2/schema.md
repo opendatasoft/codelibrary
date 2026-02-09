@@ -1,4 +1,4 @@
-**Dataset in use:** `shanghai-world-university-ranking` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/shanghai-world-university-ranking/table/)
+**Dataset in use:** `shanghai-world-university-ranking` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/shanghai-world-university-ranking/table/)
 
 **Fields in use:** 
 

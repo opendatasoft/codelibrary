@@ -7,4 +7,4 @@ date: 2021-08-12T10:00:00+02:00
 
 It can for example be used to initialise an `ods-date-range-slider` with the correct bounds.
 
-[ods-date-range-slider documentation](https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsDateRangeSlider)
+[ods-date-range-slider documentation](https://help.huwise.com/widgets/#/api/ods-widgets.directive:odsDateRangeSlider)

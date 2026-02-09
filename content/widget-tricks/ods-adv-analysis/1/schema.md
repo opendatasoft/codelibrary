@@ -1,6 +1,6 @@
 **Dataset in use:** `ods-api-monitoring`. 
 
-Get it on your domain by replacing `{{domainid}}` by your domainid in the following url: `https://{{domainid}}.opendatasoft.com/explore/dataset/ods-api-monitoring/table/?source=monitoring&refine.domain_id={{domainid}}`
+Get it on your domain by replacing `{{domainid}}` by your domainid in the following url: `https://{{domainid}}.huwise.com/explore/dataset/ods-api-monitoring/table/?source=monitoring&refine.domain_id={{domainid}}`
 
 **Fields in use:** 
 

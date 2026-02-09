@@ -1,4 +1,4 @@
-**Fields in use in:** `shanghai-world-university-ranking` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/shanghai-world-university-ranking/table/)
+**Fields in use in:** `shanghai-world-university-ranking` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/shanghai-world-university-ranking/table/)
 
 | geo_shape (geo_shape) | 
 |---|
@@ -7,7 +7,7 @@
 |{"type": "Polygon", "coordinates": [[...]]}|
 |{"type": "MultiPolygon", "coordinates": [[...]]}|
 
-**Field in use in `rapworld` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/rapworld/table/)**
+**Field in use in `rapworld` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/rapworld/table/)**
 
 | geo_point (geo_point_2d) | categories(text)
 |----|---|
@@ -16,7 +16,7 @@
 |[12.32919334,-33.28191939]|singer|
 |[56.20494929,-10.39294955]|producer|
 
-**Field in use in `opendatasoft-offices` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/opendatasoft-offices/table/)**
+**Field in use in `opendatasoft-offices` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/opendatasoft-offices/table/)**
 
 | geo_point (geo_point_2d) | 
 |----|

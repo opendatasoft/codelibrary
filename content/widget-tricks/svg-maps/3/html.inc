@@ -8,7 +8,7 @@
          ods-color-gradient-logarithmic-scale-factor="1">
         <div class="svgmap-france svgmap-with-text">
             <div class="svgmap-francemetro">
-                <ods-picto url="'https://static.opendatasoft.com/georef/svg/fr/dep_fxx_text.svg'"
+                <ods-picto url="'https://static.huwise.com/georef/svg/fr/dep_fxx_text.svg'"
                            color-by-attribute="analysis.colors"></ods-picto>
             </div>
         </div>

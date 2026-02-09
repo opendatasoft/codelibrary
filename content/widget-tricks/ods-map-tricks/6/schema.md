@@ -1,4 +1,4 @@
-**Dataset in use:** `healthref-france-finess` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/healthref-france-finess/table/)
+**Dataset in use:** `healthref-france-finess` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/healthref-france-finess/table/)
 
 **Fields in use:**
 
@@ -9,7 +9,7 @@
 |Pharmacie d'Officine|68|
 |Pharmacie d'Officine|68|
 
-**Dataset in use:** `departements-et-collectivites-doutre-mer-france` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/departements-et-collectivites-doutre-mer-france/table/)
+**Dataset in use:** `departements-et-collectivites-doutre-mer-france` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/departements-et-collectivites-doutre-mer-france/table/)
 
 **Fields in use:**
 

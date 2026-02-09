@@ -19,9 +19,9 @@ You have a regularly updated source of data about COVID-19 for your region (e.g.
 
 This page aggregates a number of indicators, with key figures, maps, tables etc. that allows to share detailed data with a simple visualization. All the aggregated data by day, by zipcode, by gender etc. are pre-configured.
 
-![Main figures and category graphs](https://odsplus.opendatasoft.com/api/v2/catalog/datasets/ods-plus-content-en/files/d02448c54530bc3cfb632ce9e1378e72)
+![Main figures and category graphs](https://odsplus.huwise.com/api/v2/catalog/datasets/ods-plus-content-en/files/d02448c54530bc3cfb632ce9e1378e72)
 
-![Maps and filtered graphs](https://odsplus.opendatasoft.com/api/v2/catalog/datasets/ods-plus-content-en/files/81ebf78adfa945504d3b1cf8a0d89d14)
+![Maps and filtered graphs](https://odsplus.huwise.com/api/v2/catalog/datasets/ods-plus-content-en/files/81ebf78adfa945504d3b1cf8a0d89d14)
 
 ## Requirements
 

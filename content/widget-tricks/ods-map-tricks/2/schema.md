@@ -1,4 +1,4 @@
-**Fields in use in:** `regions-et-collectivites-doutre-mer-france` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/regions-et-collectivites-doutre-mer-france/table/)
+**Fields in use in:** `regions-et-collectivites-doutre-mer-france` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/regions-et-collectivites-doutre-mer-france/table/)
 
 | reg_code | 
 |---|
@@ -7,7 +7,7 @@
 |44|
 |11|
 
-**Field in use in `departements-et-collectivites-doutre-mer-france` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/departements-et-collectivites-doutre-mer-france/table/)**
+**Field in use in `departements-et-collectivites-doutre-mer-france` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/departements-et-collectivites-doutre-mer-france/table/)**
 
 | reg_code | dep_code |
 |---|---|
@@ -16,7 +16,7 @@
 |44|57|
 |11|91|
 
-**Field in use in `communes-et-arrondissements-municipaux-france` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/communes-et-arrondissements-municipaux-france/table/)**
+**Field in use in `communes-et-arrondissements-municipaux-france` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/communes-et-arrondissements-municipaux-france/table/)**
 
 | dep_code |
 |---|

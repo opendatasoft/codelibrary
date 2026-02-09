@@ -539,7 +539,7 @@ main {
     background-size: cover;
     /* You can replace the background-image by uploading an image to the portal assets
     and replacing the text in simple quotes below or use the URL of an image on the web */
-    background-image: url('https://discovery.opendatasoft.com/assets/theme_image/header-bg.jpg');
+    background-image: url('https://discovery.huwise.com/assets/theme_image/header-bg.jpg');
     /* Position of the background-image on x y axis. Change these values to
     modify where the image is centered.
     */

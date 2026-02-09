@@ -1,4 +1,4 @@
-**Dataset in use:** `population-millesimee-communes-2016` [(See it on public domain)](https://public.opendatasoft.com/explore/dataset/population-millesimee-communes-2016/table/)
+**Dataset in use:** `population-millesimee-communes-2016` [(See it on public domain)](https://public.huwise.com/explore/dataset/population-millesimee-communes-2016/table/)
 
 **Fields in use:**
 

@@ -9,7 +9,7 @@
         'aggregation_expression':'day_intcare_new',
 
         'link_label':'See data in a pop in',
-        'link':'https://userclub.opendatasoft.com/explore/dataset/donnees-hospitalieres-relatives-a-lepidemie-de-covid-19-en-france/custom/',
+        'link':'https://userclub.huwise.com/explore/dataset/donnees-hospitalieres-relatives-a-lepidemie-de-covid-19-en-france/custom/',
         'link_mode':'popin',
         'image_url':'https://images.ladepeche.fr/api/v1/images/view/5f980b95d286c24d8323d394/large/image.jpg?v=4',
 

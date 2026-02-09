@@ -1,4 +1,4 @@
-**Dataset in use:** `rappel-conso` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/rappel-conso/table/)
+**Dataset in use:** `rappel-conso` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/rappel-conso/table/)
 
 **Fields in use:**
 

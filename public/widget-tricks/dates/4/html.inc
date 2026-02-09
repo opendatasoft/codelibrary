@@ -25,7 +25,7 @@
             <li>
                 <div class="ods-box canteenmenu-ods-box header">
                     <div class="logos">
-                        <img src="https://discovery.opendatasoft.com/assets/theme_image/rennes_logo.png"/>
+                        <img src="https://discovery.huwise.com/assets/theme_image/rennes_logo.png"/>
                     </div>
                     <h1>
                         School canteen menu <br/>
@@ -83,13 +83,13 @@
                 {{ menu.fields.code_entree }}
             </h3-->
                                 <img ng-if="menu.fields.code_entree.indexOf('AB') >= 0"
-                                     src="https://discovery.opendatasoft.com/assets/theme_image/ab.png"/>
+                                     src="https://discovery.huwise.com/assets/theme_image/ab.png"/>
                                 <img ng-if="menu.fields.code_entree.indexOf('VBF') >= 0"
-                                     src="https://discovery.opendatasoft.com/assets/theme_image/vbf.png"/>
+                                     src="https://discovery.huwise.com/assets/theme_image/vbf.png"/>
                                 <img ng-if="menu.fields.code_entree.indexOf('VPF') >= 0"
-                                     src="https://discovery.opendatasoft.com/assets/theme_image/vpf.png"/>
+                                     src="https://discovery.huwise.com/assets/theme_image/vpf.png"/>
                                 <img ng-if="menu.fields.code_entree.indexOf('EBR') >= 0"
-                                     src="https://discovery.opendatasoft.com/assets/theme_image/ebr.jpg"/>
+                                     src="https://discovery.huwise.com/assets/theme_image/ebr.jpg"/>
                             </div>
                         </div>
                         <div class="item plat">
@@ -101,13 +101,13 @@
                 {{ menu.fields.code_plat }}
             </h3-->
                                 <img ng-if="menu.fields.code_plat.indexOf('AB') >= 0"
-                                     src="https://discovery.opendatasoft.com/assets/theme_image/ab.png"/>
+                                     src="https://discovery.huwise.com/assets/theme_image/ab.png"/>
                                 <img ng-if="menu.fields.code_plat.indexOf('VBF') >= 0"
-                                     src="https://discovery.opendatasoft.com/assets/theme_image/vbf.png"/>
+                                     src="https://discovery.huwise.com/assets/theme_image/vbf.png"/>
                                 <img ng-if="menu.fields.code_plat.indexOf('VPF') >= 0"
-                                     src="https://discovery.opendatasoft.com/assets/theme_image/vpf.png"/>
+                                     src="https://discovery.huwise.com/assets/theme_image/vpf.png"/>
                                 <img ng-if="menu.fields.code_plat.indexOf('EBR') >= 0"
-                                     src="https://discovery.opendatasoft.com/assets/theme_image/ebr.jpg"/>
+                                     src="https://discovery.huwise.com/assets/theme_image/ebr.jpg"/>
                             </div>
                         </div>
                         <div class="item plat">
@@ -119,13 +119,13 @@
                 {{ menu.fields.code_legumes }}
             </h3-->
                                 <img ng-if="menu.fields.code_legumes.indexOf('AB') >= 0"
-                                     src="https://discovery.opendatasoft.com/assets/theme_image/ab.png"/>
+                                     src="https://discovery.huwise.com/assets/theme_image/ab.png"/>
                                 <img ng-if="menu.fields.code_legumes.indexOf('VBF') >= 0"
-                                     src="https://discovery.opendatasoft.com/assets/theme_image/vbf.png"/>
+                                     src="https://discovery.huwise.com/assets/theme_image/vbf.png"/>
                                 <img ng-if="menu.fields.code_legumes.indexOf('VPF') >= 0"
-                                     src="https://discovery.opendatasoft.com/assets/theme_image/vpf.png"/>
+                                     src="https://discovery.huwise.com/assets/theme_image/vpf.png"/>
                                 <img ng-if="menu.fields.code_legumes.indexOf('EBR') >= 0"
-                                     src="https://discovery.opendatasoft.com/assets/theme_image/ebr.jpg"/>
+                                     src="https://discovery.huwise.com/assets/theme_image/ebr.jpg"/>
                             </div>
                         </div>
                         <div class="item plat">
@@ -137,13 +137,13 @@
                 {{ menu.fields.code_laitage }}
             </h3-->
                                 <img ng-if="menu.fields.code_laitage.indexOf('AB') >= 0"
-                                     src="https://discovery.opendatasoft.com/assets/theme_image/ab.png"/>
+                                     src="https://discovery.huwise.com/assets/theme_image/ab.png"/>
                                 <img ng-if="menu.fields.code_laitage.indexOf('VBF') >= 0"
-                                     src="https://discovery.opendatasoft.com/assets/theme_image/vbf.png"/>
+                                     src="https://discovery.huwise.com/assets/theme_image/vbf.png"/>
                                 <img ng-if="menu.fields.code_laitage.indexOf('VPF') >= 0"
-                                     src="https://discovery.opendatasoft.com/assets/theme_image/vpf.png"/>
+                                     src="https://discovery.huwise.com/assets/theme_image/vpf.png"/>
                                 <img ng-if="menu.fields.code_laitage.indexOf('EBR') >= 0"
-                                     src="https://discovery.opendatasoft.com/assets/theme_image/ebr.jpg"/>
+                                     src="https://discovery.huwise.com/assets/theme_image/ebr.jpg"/>
                             </div>
                         </div>
                         <div class="item plat">
@@ -155,13 +155,13 @@
                 {{ menu.fields.code_dessert }}
             </h3-->
                                 <img ng-if="menu.fields.code_dessert.indexOf('AB') >= 0"
-                                     src="https://discovery.opendatasoft.com/assets/theme_image/ab.png"/>
+                                     src="https://discovery.huwise.com/assets/theme_image/ab.png"/>
                                 <img ng-if="menu.fields.code_dessert.indexOf('VBF') >= 0"
-                                     src="https://discovery.opendatasoft.com/assets/theme_image/vbf.png"/>
+                                     src="https://discovery.huwise.com/assets/theme_image/vbf.png"/>
                                 <img ng-if="menu.fields.code_dessert.indexOf('VPF') >= 0"
-                                     src="https://discovery.opendatasoft.com/assets/theme_image/vpf.png"/>
+                                     src="https://discovery.huwise.com/assets/theme_image/vpf.png"/>
                                 <img ng-if="menu.fields.code_dessert.indexOf('EBR') >= 0"
-                                     src="https://discovery.opendatasoft.com/assets/theme_image/ebr.jpg"/>
+                                     src="https://discovery.huwise.com/assets/theme_image/ebr.jpg"/>
                             </div>
                         </div>
                         <div class="item plat">
@@ -173,13 +173,13 @@
                 {{ menu.fields.code_gouter }}
             </h3-->
                                 <img ng-if="menu.fields.code_gouter.indexOf('AB') >= 0"
-                                     src="https://discovery.opendatasoft.com/assets/theme_image/ab.png"/>
+                                     src="https://discovery.huwise.com/assets/theme_image/ab.png"/>
                                 <img ng-if="menu.fields.code_gouter.indexOf('VBF') >= 0"
-                                     src="https://discovery.opendatasoft.com/assets/theme_image/vbf.png"/>
+                                     src="https://discovery.huwise.com/assets/theme_image/vbf.png"/>
                                 <img ng-if="menu.fields.code_gouter.indexOf('VPF') >= 0"
-                                     src="https://discovery.opendatasoft.com/assets/theme_image/vpf.png"/>
+                                     src="https://discovery.huwise.com/assets/theme_image/vpf.png"/>
                                 <img ng-if="menu.fields.code_gouter.indexOf('EBR') >= 0"
-                                     src="https://discovery.opendatasoft.com/assets/theme_image/ebr.jpg"/>
+                                     src="https://discovery.huwise.com/assets/theme_image/ebr.jpg"/>
                             </div>
                         </div>
                     </div>

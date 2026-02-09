@@ -835,7 +835,7 @@
                  "title": "New Pen!",
                  "head": &#34;\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.css\&#34;\n/\u003e\n\n\u003c!-- ODS Platform CSS - must be hosted on static : WIP --\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://s3-us-west-2.amazonaws.com/s.cdpn.io/4124551/ods.css\&#34;\n/\u003e\n\u003clink\n  rel=\&#34;stylesheet\&#34;\n  href=\&#34;https://codelibrary.opendatasoft.com/css/theme.css\&#34;\n/\u003e\n\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.0/angular.js\&#34;\u003e\u003c/script\u003e\n\u003cscript src=\&#34;//cdnjs.cloudflare.com/ajax/libs/angular-sanitize/1.8.2/angular-sanitize.min.js\&#34;\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://static.opendatasoft.com/ods-widgets/latest-v2/ods-widgets.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/platform-filters.js\&#34;\n\u003e\u003c/script\u003e\n\u003cscript\n  type=\&#34;text/javascript\&#34;\n  src=\&#34;https://codelibrary.opendatasoft.com/js/ods-catalog-card.js\&#34;\n\u003e\u003c/script\u003e\n\n\u003cscript type=\&#34;text/javascript\&#34;\u003e\n  const sourceMonitoringInterceptor = $q =\u003e {\n    return {\n      request: config =\u003e {\n        console.log(config.url);\n        if (config.params)\n          if (config.params.source) delete config.params.source;\n\n        config.url = config.url.replace(\n          \&#34;ods-api-monitoring\&#34;,\n          \&#34;monitoring-copy\&#34;\n        );\n        return config;\n      }\n    };\n  };\n\n  angular\n    .module(\&#34;ods-widgets\&#34;)\n    .config(function(ODSWidgetsConfigProvider, $httpProvider) {\n      ODSWidgetsConfigProvider.setConfig({\n        defaultDomain: \&#34;https://userclub.opendatasoft.com/\&#34;,\n        basemaps: [\n          {\n            provider: \&#34;jawg.light\&#34;,\n            label: \&#34;Jawg Light\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;\n          },\n          {\n            provider: \&#34;jawg.streets\&#34;,\n            label: \&#34;Jawg Streets\&#34;,\n            jawg_apikey: \&#34;opendatasoft-community\&#34;,\n            id: \&#34;streets\&#34;\n          }\n        ],\n        themes: {\n          default: {\n            url: \&#34;/img/ods.svg\&#34;\n          },\n          Santé: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/doctors.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Culture, Patrimoine\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/culture.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Éducation, Formation, Recherche, Enseignement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/college.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Environment: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/leaf.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Transports, Déplacements\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/train_station.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Aménagement du territoire, Urbanisme, Bâtiments, Équipements, Logement\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/townplanning.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Économie, Business, PME, Développement économique, Emploi\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/economy.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Administration, Gouvernement, Finances publiques, Citoyenneté\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/administration.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Justice, Sécurité, Police, Crime\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/court.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Sport, Loisirs\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/soccer.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Hébergement, Restauration\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/accommodation.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          \&#34;Services, Social\&#34;: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/social.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Checklist: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/copyshop.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          },\n          Usages: {\n            url:\n              \&#34;https://userclub.opendatasoft.com/static/pictos/img/set-v3/pictos/bike.svg\&#34;,\n            color: \&#34;#1446A0\&#34;\n          }\n        },\n        mapPrependAttribution: \&#34;Jawg apikey NOT suitable for production\&#34;\n      });\n      $httpProvider.interceptors.push(sourceMonitoringInterceptor);\n    });\n\u003c/script\u003e\n&#34;,
                  "editors": 110,
-                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;container\&#34;\u003e\n    \u003cods-dataset-context context=\&#34;ctx\&#34;\n                         ctx-dataset=\&#34;les-eruptions-volcaniques-dans-le-monde\&#34;\n                         ctx-domain=\&#34;userclub\&#34;\n                         ctx-urlsync=\&#34;true\&#34;\u003e\n        \u003cdiv class=\&#34;row ods-box\&#34;\u003e\n            \u003ch3\u003e\n                Share by copying this link :\n            \u003c/h3\u003e\n            \u003ch3 class=\&#34;red-box\&#34;\u003e\n                Filter and have a look to your browser URL ! It&#39;s synced !\n            \u003c/h3\u003e\n            \u003ch4\u003e\n                \u003ca href=\&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}\&#34;\n                   target=\&#34;_blank\&#34;\u003ehttps://userclub.opendatasoft.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}\u003c/a\u003e\n            \u003c/h4\u003e\n            \u003ch3\u003e\n                Share through social network or by email:\n            \u003c/h3\u003e\n            \u003cdiv class=\&#34;boutons\&#34; style=\&#34;font-size: 1.6rem;\&#34;\u003e\n                \u003ca href=\&#34;https://twitter.com/intent/tweet?text=Huwise Page Test;url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--twitter\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-twitter ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--facebook\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-facebook ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;https://plus.google.com/share?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--google-plus\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-google-plus ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\u0026amp;mini=true\u0026amp;title=Huwise Page Test;source=Huwise\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--linkedin\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-linkedin ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;mailto:?subject=Huwise Page Test\u0026amp;body=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--mail\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-envelope ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;row ods-box\&#34;\u003e\n            \u003ch3\u003e\n                A dashboard : Global earthquakes\n            \u003c/h3\u003e\n            \u003cdiv class=\&#34;col-md-3 ods-box\&#34;\u003e\n                \u003cods-text-search context=\&#34;ctx\&#34; placeholder=\&#34;country, type, status...\&#34;\u003e\u003c/ods-text-search\u003e\n                \u003cods-filter-summary context=\&#34;ctx\&#34;\u003e\u003c/ods-filter-summary\u003e\n                \u003cods-facets context=\&#34;ctx\&#34;\u003e\u003c/ods-facets\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;col-md-9 ods-box\&#34;\u003e\n                \u003cods-map\u003e\n                    \u003cods-map-layer context=\&#34;ctx\&#34;\u003e\n                        \u003cdiv\u003e\n                            \u003ch3\u003e\n                                {{ record.fields.volcano_name }}\n                            \u003c/h3\u003e\n                            \u003cp style=\&#34;font-style:italic; color:grey; font-weight:300\&#34;\u003e\n                                {{ record.fields.country }}\n                            \u003c/p\u003e\n                            \u003cp\u003eType: {{record.fields.volcano_type}}\u003c/p\u003e\n                            \u003cp\u003eStatus: {{record.fields.status}}\u003c/p\u003e\n                            \u003cdiv style=\&#34;line-height: 0px;\&#34;\u003e\n                                \u003cp\u003e\n                                    \u003cspan style=\&#34;font-style:italic;\&#34;\u003eHas tsunami \u003c/span\u003e\u003cb\n                                       style=\&#34;font-size:1.2em\&#34;\u003e{{ record.fields.flag_tsunami }}\u003c/b\u003e\n                                \u003c/p\u003e\n                                \u003cp\u003e\n                                    \u003cspan style=\&#34;font-style:italic;\&#34;\u003eHas earthquakes \u003c/span\u003e\u003cb\n                                       style=\&#34;font-size:1.2em\&#34;\u003e{{ record.fields.flag_earthquake }}\u003c/b\u003e\n                                \u003c/p\u003e\n                            \u003c/div\u003e\n                            \u003ca style=\&#34;color: #1e0c33; font-weight: 600; font-size: 1.1em;\&#34;\n                               href=\&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint-card?q=country:%22{{ record.fields.country }}%22 AND volcano_name:%22{{ record.fields.volcano_name }}%22\&#34;\n                               target=\&#34;_blank\&#34;\u003eGo to the volcano card\u003c/a\u003e\n                        \u003c/div\u003e\n                    \u003c/ods-map-layer\u003e\n                \u003c/ods-map\u003e\n                \u003cdiv class=\&#34;ods-box\&#34;\u003e\n                    \u003cods-table context=\&#34;ctx\&#34;\u003e\u003c/ods-table\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
+                 "html": &#34;\u003cdiv ng-app=\&#34;ods-widgets\&#34;\u003e\n\u003cdiv class=\&#34;container\&#34;\u003e\n    \u003cods-dataset-context context=\&#34;ctx\&#34;\n                         ctx-dataset=\&#34;les-eruptions-volcaniques-dans-le-monde\&#34;\n                         ctx-domain=\&#34;userclub\&#34;\n                         ctx-urlsync=\&#34;true\&#34;\u003e\n        \u003cdiv class=\&#34;row ods-box\&#34;\u003e\n            \u003ch3\u003e\n                Share by copying this link :\n            \u003c/h3\u003e\n            \u003ch3 class=\&#34;red-box\&#34;\u003e\n                Filter and have a look to your browser URL ! It&#39;s synced !\n            \u003c/h3\u003e\n            \u003ch4\u003e\n                \u003ca href=\&#34;https://userclub.huwise.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}\&#34;\n                   target=\&#34;_blank\&#34;\u003ehttps://userclub.huwise.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}\u003c/a\u003e\n            \u003c/h4\u003e\n            \u003ch3\u003e\n                Share through social network or by email:\n            \u003c/h3\u003e\n            \u003cdiv class=\&#34;boutons\&#34; style=\&#34;font-size: 1.6rem;\&#34;\u003e\n                \u003ca href=\&#34;https://twitter.com/intent/tweet?text=Huwise Page Test;url=https%3A%2F%2Fuserclub.huwise.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--twitter\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-twitter ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fuserclub.huwise.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--facebook\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-facebook ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;https://plus.google.com/share?url=https%3A%2F%2Fuserclub.huwise.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--google-plus\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-google-plus ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fuserclub.huwise.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\u0026amp;mini=true\u0026amp;title=Huwise Page Test;source=Huwise\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--linkedin\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-linkedin ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n                \u003ca href=\&#34;mailto:?subject=Huwise Page Test\u0026amp;body=https%3A%2F%2Fuserclub.huwise.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}\&#34;\n                   class=\&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--mail\&#34;\n                   target=\&#34;_blank\&#34;\u003e\n                    \u003ci class=\&#34;fa fa-envelope ods-dataset-visualization__social-button-icon\&#34; aria-hidden=\&#34;true\&#34;\u003e\u003c/i\u003e\n                \u003c/a\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n        \u003cdiv class=\&#34;row ods-box\&#34;\u003e\n            \u003ch3\u003e\n                A dashboard : Global earthquakes\n            \u003c/h3\u003e\n            \u003cdiv class=\&#34;col-md-3 ods-box\&#34;\u003e\n                \u003cods-text-search context=\&#34;ctx\&#34; placeholder=\&#34;country, type, status...\&#34;\u003e\u003c/ods-text-search\u003e\n                \u003cods-filter-summary context=\&#34;ctx\&#34;\u003e\u003c/ods-filter-summary\u003e\n                \u003cods-facets context=\&#34;ctx\&#34;\u003e\u003c/ods-facets\u003e\n            \u003c/div\u003e\n            \u003cdiv class=\&#34;col-md-9 ods-box\&#34;\u003e\n                \u003cods-map\u003e\n                    \u003cods-map-layer context=\&#34;ctx\&#34;\u003e\n                        \u003cdiv\u003e\n                            \u003ch3\u003e\n                                {{ record.fields.volcano_name }}\n                            \u003c/h3\u003e\n                            \u003cp style=\&#34;font-style:italic; color:grey; font-weight:300\&#34;\u003e\n                                {{ record.fields.country }}\n                            \u003c/p\u003e\n                            \u003cp\u003eType: {{record.fields.volcano_type}}\u003c/p\u003e\n                            \u003cp\u003eStatus: {{record.fields.status}}\u003c/p\u003e\n                            \u003cdiv style=\&#34;line-height: 0px;\&#34;\u003e\n                                \u003cp\u003e\n                                    \u003cspan style=\&#34;font-style:italic;\&#34;\u003eHas tsunami \u003c/span\u003e\u003cb\n                                       style=\&#34;font-size:1.2em\&#34;\u003e{{ record.fields.flag_tsunami }}\u003c/b\u003e\n                                \u003c/p\u003e\n                                \u003cp\u003e\n                                    \u003cspan style=\&#34;font-style:italic;\&#34;\u003eHas earthquakes \u003c/span\u003e\u003cb\n                                       style=\&#34;font-size:1.2em\&#34;\u003e{{ record.fields.flag_earthquake }}\u003c/b\u003e\n                                \u003c/p\u003e\n                            \u003c/div\u003e\n                            \u003ca style=\&#34;color: #1e0c33; font-weight: 600; font-size: 1.1em;\&#34;\n                               href=\&#34;https://userclub.huwise.com/pages/widgettrick-shareandprint-card?q=country:%22{{ record.fields.country }}%22 AND volcano_name:%22{{ record.fields.volcano_name }}%22\&#34;\n                               target=\&#34;_blank\&#34;\u003eGo to the volcano card\u003c/a\u003e\n                        \u003c/div\u003e\n                    \u003c/ods-map-layer\u003e\n                \u003c/ods-map\u003e\n                \u003cdiv class=\&#34;ods-box\&#34;\u003e\n                    \u003cods-table context=\&#34;ctx\&#34;\u003e\u003c/ods-table\u003e\n                \u003c/div\u003e\n            \u003c/div\u003e\n        \u003c/div\u003e\n    \u003c/ods-dataset-context\u003e\n\u003c/div\u003e\u003c/div\u003e&#34;,
                  "css": &#34;.boutons {\n    margin-left: 30px;\n}\n.red-box {\n    float: right;\n    border: 2px solid darkred;\n    color: darkred;\n    padding: 20px;\n    background-color: #ffe8e8;\n}\n&#34;
                }'>
     </form>
@@ -1022,34 +1022,34 @@
                 Filter and have a look to your browser URL ! It&#39;s synced !
             &lt;/h3&gt;
             &lt;h4&gt;
-                &lt;a href=&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}&#34;
-                   target=&#34;_blank&#34;&gt;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}&lt;/a&gt;
+                &lt;a href=&#34;https://userclub.huwise.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}&#34;
+                   target=&#34;_blank&#34;&gt;https://userclub.huwise.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}&lt;/a&gt;
             &lt;/h4&gt;
             &lt;h3&gt;
                 Share through social network or by email:
             &lt;/h3&gt;
             &lt;div class=&#34;boutons&#34; style=&#34;font-size: 1.6rem;&#34;&gt;
-                &lt;a href=&#34;https://twitter.com/intent/tweet?text=Huwise Page Test;url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
+                &lt;a href=&#34;https://twitter.com/intent/tweet?text=Huwise Page Test;url=https%3A%2F%2Fuserclub.huwise.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
                    class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--twitter&#34;
                    target=&#34;_blank&#34;&gt;
                     &lt;i class=&#34;fa fa-twitter ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
                 &lt;/a&gt;
-                &lt;a href=&#34;https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
+                &lt;a href=&#34;https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fuserclub.huwise.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
                    class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--facebook&#34;
                    target=&#34;_blank&#34;&gt;
                     &lt;i class=&#34;fa fa-facebook ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
                 &lt;/a&gt;
-                &lt;a href=&#34;https://plus.google.com/share?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
+                &lt;a href=&#34;https://plus.google.com/share?url=https%3A%2F%2Fuserclub.huwise.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
                    class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--google-plus&#34;
                    target=&#34;_blank&#34;&gt;
                     &lt;i class=&#34;fa fa-google-plus ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
                 &lt;/a&gt;
-                &lt;a href=&#34;https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&amp;amp;mini=true&amp;amp;title=Huwise Page Test;source=Huwise&#34;
+                &lt;a href=&#34;https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fuserclub.huwise.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&amp;amp;mini=true&amp;amp;title=Huwise Page Test;source=Huwise&#34;
                    class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--linkedin&#34;
                    target=&#34;_blank&#34;&gt;
                     &lt;i class=&#34;fa fa-linkedin ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
                 &lt;/a&gt;
-                &lt;a href=&#34;mailto:?subject=Huwise Page Test&amp;amp;body=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
+                &lt;a href=&#34;mailto:?subject=Huwise Page Test&amp;amp;body=https%3A%2F%2Fuserclub.huwise.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
                    class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--mail&#34;
                    target=&#34;_blank&#34;&gt;
                     &lt;i class=&#34;fa fa-envelope ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
@@ -1088,7 +1088,7 @@
                                 &lt;/p&gt;
                             &lt;/div&gt;
                             &lt;a style=&#34;color: #1e0c33; font-weight: 600; font-size: 1.1em;&#34;
-                               href=&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint-card?q=country:%22{{ record.fields.country }}%22 AND volcano_name:%22{{ record.fields.volcano_name }}%22&#34;
+                               href=&#34;https://userclub.huwise.com/pages/widgettrick-shareandprint-card?q=country:%22{{ record.fields.country }}%22 AND volcano_name:%22{{ record.fields.volcano_name }}%22&#34;
                                target=&#34;_blank&#34;&gt;Go to the volcano card&lt;/a&gt;
                         &lt;/div&gt;
                     &lt;/ods-map-layer&gt;
@@ -1147,7 +1147,7 @@
         <div id="panel-show-schema" aria-labelledby="tab-show-schema" aria-hidden
              class="box-schema is-hidden">
             <div class="content">
-                <p><strong>Dataset in use:</strong> <code>record-stores</code> <a href="https://userclub.opendatasoft.com/explore/dataset/record-stores/table/">(See it on userclub domain)</a></p>
+                <p><strong>Dataset in use:</strong> <code>record-stores</code> <a href="https://userclub.huwise.com/explore/dataset/record-stores/table/">(See it on userclub domain)</a></p>
 <p><strong>Fields in use:</strong></p>
 <table>
   <thead>
@@ -1253,34 +1253,34 @@
                 Filter and have a look to your browser URL ! It&#39;s synced !
             &lt;/h3&gt;
             &lt;h4&gt;
-                &lt;a href=&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}&#34;
-                   target=&#34;_blank&#34;&gt;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}&lt;/a&gt;
+                &lt;a href=&#34;https://userclub.huwise.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}&#34;
+                   target=&#34;_blank&#34;&gt;https://userclub.huwise.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}&lt;/a&gt;
             &lt;/h4&gt;
             &lt;h3&gt;
                 Share through social network or by email:
             &lt;/h3&gt;
             &lt;div class=&#34;boutons&#34; style=&#34;font-size: 1.6rem;&#34;&gt;
-                &lt;a href=&#34;https://twitter.com/intent/tweet?text=Huwise Page Test;url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
+                &lt;a href=&#34;https://twitter.com/intent/tweet?text=Huwise Page Test;url=https%3A%2F%2Fuserclub.huwise.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
                    class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--twitter&#34;
                    target=&#34;_blank&#34;&gt;
                     &lt;i class=&#34;fa fa-twitter ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
                 &lt;/a&gt;
-                &lt;a href=&#34;https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
+                &lt;a href=&#34;https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fuserclub.huwise.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
                    class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--facebook&#34;
                    target=&#34;_blank&#34;&gt;
                     &lt;i class=&#34;fa fa-facebook ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
                 &lt;/a&gt;
-                &lt;a href=&#34;https://plus.google.com/share?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
+                &lt;a href=&#34;https://plus.google.com/share?url=https%3A%2F%2Fuserclub.huwise.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
                    class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--google-plus&#34;
                    target=&#34;_blank&#34;&gt;
                     &lt;i class=&#34;fa fa-google-plus ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
                 &lt;/a&gt;
-                &lt;a href=&#34;https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&amp;amp;mini=true&amp;amp;title=Huwise Page Test;source=Huwise&#34;
+                &lt;a href=&#34;https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fuserclub.huwise.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&amp;amp;mini=true&amp;amp;title=Huwise Page Test;source=Huwise&#34;
                    class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--linkedin&#34;
                    target=&#34;_blank&#34;&gt;
                     &lt;i class=&#34;fa fa-linkedin ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
                 &lt;/a&gt;
-                &lt;a href=&#34;mailto:?subject=Huwise Page Test&amp;amp;body=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
+                &lt;a href=&#34;mailto:?subject=Huwise Page Test&amp;amp;body=https%3A%2F%2Fuserclub.huwise.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
                    class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--mail&#34;
                    target=&#34;_blank&#34;&gt;
                     &lt;i class=&#34;fa fa-envelope ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
@@ -1319,7 +1319,7 @@
                                 &lt;/p&gt;
                             &lt;/div&gt;
                             &lt;a style=&#34;color: #1e0c33; font-weight: 600; font-size: 1.1em;&#34;
-                               href=&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint-card?q=country:%22{{ record.fields.country }}%22 AND volcano_name:%22{{ record.fields.volcano_name }}%22&#34;
+                               href=&#34;https://userclub.huwise.com/pages/widgettrick-shareandprint-card?q=country:%22{{ record.fields.country }}%22 AND volcano_name:%22{{ record.fields.volcano_name }}%22&#34;
                                target=&#34;_blank&#34;&gt;Go to the volcano card&lt;/a&gt;
                         &lt;/div&gt;
                     &lt;/ods-map-layer&gt;
@@ -1346,34 +1346,34 @@
                 Filter and have a look to your browser URL ! It&#39;s synced !
             &lt;/h3&gt;
             &lt;h4&gt;
-                &lt;a href=&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}&#34;
-                   target=&#34;_blank&#34;&gt;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}&lt;/a&gt;
+                &lt;a href=&#34;https://userclub.huwise.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}&#34;
+                   target=&#34;_blank&#34;&gt;https://userclub.huwise.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}&lt;/a&gt;
             &lt;/h4&gt;
             &lt;h3&gt;
                 Share through social network or by email:
             &lt;/h3&gt;
             &lt;div class=&#34;boutons&#34; style=&#34;font-size: 1.6rem;&#34;&gt;
-                &lt;a href=&#34;https://twitter.com/intent/tweet?text=Huwise Page Test;url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
+                &lt;a href=&#34;https://twitter.com/intent/tweet?text=Huwise Page Test;url=https%3A%2F%2Fuserclub.huwise.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
                    class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--twitter&#34;
                    target=&#34;_blank&#34;&gt;
                     &lt;i class=&#34;fa fa-twitter ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
                 &lt;/a&gt;
-                &lt;a href=&#34;https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
+                &lt;a href=&#34;https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fuserclub.huwise.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
                    class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--facebook&#34;
                    target=&#34;_blank&#34;&gt;
                     &lt;i class=&#34;fa fa-facebook ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
                 &lt;/a&gt;
-                &lt;a href=&#34;https://plus.google.com/share?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
+                &lt;a href=&#34;https://plus.google.com/share?url=https%3A%2F%2Fuserclub.huwise.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
                    class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--google-plus&#34;
                    target=&#34;_blank&#34;&gt;
                     &lt;i class=&#34;fa fa-google-plus ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
                 &lt;/a&gt;
-                &lt;a href=&#34;https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&amp;amp;mini=true&amp;amp;title=Huwise Page Test;source=Huwise&#34;
+                &lt;a href=&#34;https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fuserclub.huwise.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&amp;amp;mini=true&amp;amp;title=Huwise Page Test;source=Huwise&#34;
                    class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--linkedin&#34;
                    target=&#34;_blank&#34;&gt;
                     &lt;i class=&#34;fa fa-linkedin ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
                 &lt;/a&gt;
-                &lt;a href=&#34;mailto:?subject=Huwise Page Test&amp;amp;body=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
+                &lt;a href=&#34;mailto:?subject=Huwise Page Test&amp;amp;body=https%3A%2F%2Fuserclub.huwise.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&#34;
                    class=&#34;ods-dataset-visualization__social-button ods-dataset-visualization__social-button--mail&#34;
                    target=&#34;_blank&#34;&gt;
                     &lt;i class=&#34;fa fa-envelope ods-dataset-visualization__social-button-icon&#34; aria-hidden=&#34;true&#34;&gt;&lt;/i&gt;
@@ -1412,7 +1412,7 @@
                                 &lt;/p&gt;
                             &lt;/div&gt;
                             &lt;a style=&#34;color: #1e0c33; font-weight: 600; font-size: 1.1em;&#34;
-                               href=&#34;https://userclub.opendatasoft.com/pages/widgettrick-shareandprint-card?q=country:%22{{ record.fields.country }}%22 AND volcano_name:%22{{ record.fields.volcano_name }}%22&#34;
+                               href=&#34;https://userclub.huwise.com/pages/widgettrick-shareandprint-card?q=country:%22{{ record.fields.country }}%22 AND volcano_name:%22{{ record.fields.volcano_name }}%22&#34;
                                target=&#34;_blank&#34;&gt;Go to the volcano card&lt;/a&gt;
                         &lt;/div&gt;
                     &lt;/ods-map-layer&gt;
@@ -1778,7 +1778,7 @@
         <div id="panel-show-schema" aria-labelledby="tab-show-schema" aria-hidden
              class="box-schema is-hidden">
             <div class="content">
-                <p><strong>Dataset in use:</strong> <code>record-stores</code> <a href="https://userclub.opendatasoft.com/explore/dataset/record-stores/table/">(See it on userclub domain)</a></p>
+                <p><strong>Dataset in use:</strong> <code>record-stores</code> <a href="https://userclub.huwise.com/explore/dataset/record-stores/table/">(See it on userclub domain)</a></p>
 <p><strong>Fields in use:</strong></p>
 <table>
   <thead>
@@ -2048,16 +2048,16 @@
     </div>
 
     <footer class="footer">
-    <a href="https://www.opendatasoft.com"
+    <a href="https://www.huwise.com"
        class="footer-link"
        title="Huwise website">
-        <img src="/img/ods-logo.svg"
+        <img src="/img/huwise.svg"
              class="footer-logo"
              alt="Huwise logo"
         />
     </a>
     <span class="footer-copyright">
-        &copy; Copyright 2020
+        &copy; Copyright 2026
     </span>
 </footer>
     
@@ -2069,7 +2069,7 @@
     </script>
     <script
       type="text/javascript"
-      src="/index.min.6510c7ce98efac53fdde446743709595f2a2855fc9c9ec3746938bc39066e306.js"
+      src="/index.min.02e5368ab38ca8a6f26635575b9b6d3c1f19d8d4e80509bf2c12231df80e90fc.js"
       defer
     ></script>
   </body>

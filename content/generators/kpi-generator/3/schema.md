@@ -1,4 +1,4 @@
-**Dataset in use:** `donnees-hospitalieres-relatives-a-lepidemie-de-covid-19-en-france` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/donnees-hospitalieres-relatives-a-lepidemie-de-covid-19-en-france/table/)
+**Dataset in use:** `donnees-hospitalieres-relatives-a-lepidemie-de-covid-19-en-france` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/donnees-hospitalieres-relatives-a-lepidemie-de-covid-19-en-france/table/)
 
 **Fields in use:**
 

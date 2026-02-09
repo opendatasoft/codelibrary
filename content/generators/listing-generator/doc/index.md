@@ -49,7 +49,7 @@ correctVariable = 'I\'ll be freed from apostrophes'; // Ok !
 
 Domain URL (string) : Must contain the URL of the domain where the dataset is published.
 ```
-domain = 'userclub.opendatasoft.com';
+domain = 'userclub.huwise.com';
 ```
         
 #### `datasetid`
@@ -224,7 +224,7 @@ Available options are :
 - `unit` (string) : optional, KPI unit, ex: 'citizens'
 - `faicon` (stirng) : optional, FontAwesome icon id, ex: 'square-o' (omit the fa- prefix)
 
-[Please see the documentation for more information regarding the select](https://help.opendatasoft.com/apis/ods-explore-v2/#section/Huwise-Query-Language-(ODSQL))
+[Please see the documentation for more information regarding the select](https://help.huwise.com/apis/ods-explore-v2/#section/Huwise-Query-Language-(ODSQL))
 
 [Please see all available Fontawesome icons here](https://fontawesome.com/v4.7.0/icons/)
 

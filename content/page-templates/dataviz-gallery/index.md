@@ -14,6 +14,6 @@ It offers more customization possibilities to advanced users who would like to a
 
 This ressource integrates the following widgets:
  - `ods-select` to create the filters on text fields. [Resource available here](/widget-tricks/ods-select/)
- - `ods-adv-analysis` to create KPI. [Resource available here](https://help.opendatasoft.com/widgets/#/api/ods-widgets.directive:odsAdvAnalysis)
+ - `ods-adv-analysis` to create KPI. [Resource available here](https://help.huwise.com/widgets/#/api/ods-widgets.directive:odsAdvAnalysis)
  - `ods-date-range-slider` to create a date selector. It is deactivated by default. [Resource available here](/widget-tricks/ods-date-range-slider/)
  - `ods-results` to list the content of the records from the dataset. [Resource available here](/widget-tricks/ods-results/)

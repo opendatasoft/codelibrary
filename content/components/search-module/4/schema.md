@@ -1,4 +1,4 @@
-**Dataset in use:** `demographyref-france-pop-active-sexe-activite-commune-millesime` [(See it on public domain)](https://public.opendatasoft.com/explore/dataset/demographyref-france-pop-active-sexe-activite-commune-millesime/table/)
+**Dataset in use:** `demographyref-france-pop-active-sexe-activite-commune-millesime` [(See it on public domain)](https://public.huwise.com/explore/dataset/demographyref-france-pop-active-sexe-activite-commune-millesime/table/)
 
 **Fields in use:**
 

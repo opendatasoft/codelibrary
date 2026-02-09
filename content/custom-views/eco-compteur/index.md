@@ -9,4 +9,4 @@ resources:
 ---
 
 
-[See it live here !](https://eco-compteur-odsapps.opendatasoft.com/explore/dataset/eco-counter-data/dashboard/)
+[See it live here !](https://eco-compteur-odsapps.huwise.com/explore/dataset/eco-counter-data/dashboard/)

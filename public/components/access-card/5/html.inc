@@ -12,7 +12,7 @@
             </div>
             <div class="access-card-container">
                 <div class="access-card-img"
-                     style="background-image: url('https://userclub.opendatasoft.com/assets/theme_image/access-cards.jpg')">
+                     style="background-image: url('https://userclub.huwise.com/assets/theme_image/access-cards.jpg')">
                 </div>
                 <div class="access-card-button">
                     Accédez <i class="fa fa-long-arrow-right" aria-hidden="true"></i>

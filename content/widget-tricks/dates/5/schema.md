@@ -1,4 +1,4 @@
-**Dataset in use:** `evenements-publics-openagenda` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/evenements-publics-openagenda/table/)
+**Dataset in use:** `evenements-publics-openagenda` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/evenements-publics-openagenda/table/)
 
 **Fields in use:** 
 

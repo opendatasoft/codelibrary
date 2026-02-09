@@ -142,7 +142,7 @@
                                     <div class="advanced-kpi--bottom-second-stage">
                                         <span class="date">{{ ctx1.dataset.metas.data_processed | date }}</span>
                                         <a class="source"
-                                           href="{{ 'https://' + ctx1.dataset.metas.domain + '.opendatasoft.com/explore/dataset/' + ctx1.dataset.datasetid }}"
+                                           href="{{ 'https://' + ctx1.dataset.metas.domain + '.huwise.com/explore/dataset/' + ctx1.dataset.datasetid }}"
                                            title="{{ ctx1.dataset.metas.title }}">Source <i
                                                 class="fa fa-long-arrow-right"
                                                 aria-hidden="true"></i>
@@ -181,7 +181,7 @@
                                     <div class="advanced-kpi--bottom-second-stage">
                                         <span class="date">{{ ctx1.dataset.metas.data_processed | date }}</span>
                                         <a class="source"
-                                           href="{{ 'https://' + ctx1.dataset.metas.domain + '.opendatasoft.com/explore/dataset/' + ctx1.dataset.datasetid }}"
+                                           href="{{ 'https://' + ctx1.dataset.metas.domain + '.huwise.com/explore/dataset/' + ctx1.dataset.datasetid }}"
                                            title="{{ ctx1.dataset.metas.title }}">Source <i
                                                 class="fa fa-long-arrow-right"
                                                 aria-hidden="true"></i>
@@ -220,7 +220,7 @@
                                     <div class="advanced-kpi--bottom-second-stage">
                                         <span class="date">{{ ctx1.dataset.metas.data_processed | date }}</span>
                                         <a class="source"
-                                           href="{{ 'https://' + ctx1.dataset.metas.domain + '.opendatasoft.com/explore/dataset/' + ctx1.dataset.datasetid }}"
+                                           href="{{ 'https://' + ctx1.dataset.metas.domain + '.huwise.com/explore/dataset/' + ctx1.dataset.datasetid }}"
                                            title="{{ ctx1.dataset.metas.title }}">Source <i
                                                 class="fa fa-long-arrow-right"
                                                 aria-hidden="true"></i>
@@ -262,7 +262,7 @@
                                     <div class="advanced-kpi--bottom-second-stage">
                                         <span class="date">{{ ctx1.dataset.metas.data_processed | date }}</span>
                                         <a class="source"
-                                           href="{{ 'https://' + ctx1.dataset.metas.domain + '.opendatasoft.com/explore/dataset/' + ctx1.dataset.datasetid }}"
+                                           href="{{ 'https://' + ctx1.dataset.metas.domain + '.huwise.com/explore/dataset/' + ctx1.dataset.datasetid }}"
                                            title="{{ ctx1.dataset.metas.title }}">Source <i
                                                 class="fa fa-long-arrow-right"
                                                 aria-hidden="true"></i>
@@ -299,7 +299,7 @@
                                     <div class="advanced-kpi--bottom-second-stage">
                                         <span class="date">{{ ctx1.dataset.metas.data_processed | date }}</span>
                                         <a class="source"
-                                           href="{{ 'https://' + ctx1.dataset.metas.domain + '.opendatasoft.com/explore/dataset/' + ctx1.dataset.datasetid }}"
+                                           href="{{ 'https://' + ctx1.dataset.metas.domain + '.huwise.com/explore/dataset/' + ctx1.dataset.datasetid }}"
                                            title="{{ ctx1.dataset.metas.title }}">Source <i
                                                 class="fa fa-long-arrow-right"
                                                 aria-hidden="true"></i>
@@ -335,7 +335,7 @@
                                     <div class="advanced-kpi--bottom-second-stage">
                                         <span class="date">{{ ctx1.dataset.metas.data_processed | date }}</span>
                                         <a class="source"
-                                           href="{{ 'https://' + ctx1.dataset.metas.domain + '.opendatasoft.com/explore/dataset/' + ctx1.dataset.datasetid }}"
+                                           href="{{ 'https://' + ctx1.dataset.metas.domain + '.huwise.com/explore/dataset/' + ctx1.dataset.datasetid }}"
                                            title="{{ ctx1.dataset.metas.title }}">Source <i
                                                 class="fa fa-long-arrow-right"
                                                 aria-hidden="true"></i>
@@ -365,7 +365,7 @@
                                     <div class="advanced-kpi--bottom-second-stage">
                                         <span class="date">{{ ctx1.dataset.metas.data_processed | date }}</span>
                                         <a class="source"
-                                           href="{{ 'https://' + ctx1.dataset.metas.domain + '.opendatasoft.com/explore/dataset/' + ctx1.dataset.datasetid }}"
+                                           href="{{ 'https://' + ctx1.dataset.metas.domain + '.huwise.com/explore/dataset/' + ctx1.dataset.datasetid }}"
                                            title="{{ ctx1.dataset.metas.title }}">Source <i
                                                 class="fa fa-long-arrow-right"
                                                 aria-hidden="true"></i>
@@ -401,7 +401,7 @@
                                     <div class="advanced-kpi--bottom-second-stage">
                                         <span class="date">{{ ctx1.dataset.metas.data_processed | date }}</span>
                                         <a class="source"
-                                           href="{{ 'https://' + ctx1.dataset.metas.domain + '.opendatasoft.com/explore/dataset/' + ctx1.dataset.datasetid }}"
+                                           href="{{ 'https://' + ctx1.dataset.metas.domain + '.huwise.com/explore/dataset/' + ctx1.dataset.datasetid }}"
                                            title="{{ ctx1.dataset.metas.title }}">Source <i
                                                 class="fa fa-long-arrow-right"
                                                 aria-hidden="true"></i>

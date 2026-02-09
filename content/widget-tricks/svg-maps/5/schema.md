@@ -1,4 +1,4 @@
-**Dataset in use:** `liste-des-departements-metropole-dom` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/liste-des-departements-metropole-dom/table/)
+**Dataset in use:** `liste-des-departements-metropole-dom` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/liste-des-departements-metropole-dom/table/)
 
 **Fields in use:**
 

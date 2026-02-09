@@ -1,4 +1,4 @@
-**Dataset in use:** `donnees-relatives-aux-stocks-des-doses-de-vaccins-contre-la-covid-19-departement` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/donnees-relatives-aux-stocks-des-doses-de-vaccins-contre-la-covid-19-departement/table/)
+**Dataset in use:** `donnees-relatives-aux-stocks-des-doses-de-vaccins-contre-la-covid-19-departement` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/donnees-relatives-aux-stocks-des-doses-de-vaccins-contre-la-covid-19-departement/table/)
 
 **Fields in use:**
 

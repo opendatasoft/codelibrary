@@ -25,9 +25,9 @@ Like the metropolis of Rennes, build an electoral map of your territory so that 
 
 Like the Hauts-de-Seine, guide your citizens in reading the voting results. The regional department has built an infographic containing data on the legislative and presidential elections since 1993. Filter buttons allow the user to choose the election that interests them, then to display the results (elected candidates, non-elected candidates, participation rate, number of invalid ballots, etc.) per constituency or municipality.
 
-![Rennes metropolis elections](https://odsplus.opendatasoft.com/api/v2/catalog/datasets/ods-plus-content-en/files/ba48d5e36dec041c4105c621ac962175)
+![Rennes metropolis elections](https://odsplus.huwise.com/api/v2/catalog/datasets/ods-plus-content-en/files/ba48d5e36dec041c4105c621ac962175)
 
-![Hauts de seine elections visualization](https://odsplus.opendatasoft.com/api/v2/catalog/datasets/ods-plus-content-en/files/fb73e1beedc13db100788ccac3153e21)
+![Hauts de seine elections visualization](https://odsplus.huwise.com/api/v2/catalog/datasets/ods-plus-content-en/files/fb73e1beedc13db100788ccac3153e21)
 
 ## Requirements
 
@@ -37,6 +37,6 @@ Like the Hauts-de-Seine, guide your citizens in reading the voting results. The 
 
 Get the code on [Github](https://github.com/opendatasoft/ods-cookbook/tree/master/dashboard/elections-v2)
 
-See it live [here](https://discovery.opendatasoft.com/pages/apps-elections-v2/)
+See it live [here](https://discovery.huwise.com/pages/apps-elections-v2/)
 
 Contact us to learn how we can accompany you in implementing this connection with the Waze API.

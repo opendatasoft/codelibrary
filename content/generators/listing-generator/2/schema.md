@@ -1,4 +1,4 @@
-**Dataset in use:** `que-faire-a-paris-` [(See it on parisdata domain)](https://parisdata.opendatasoft.com/explore/dataset/que-faire-a-paris-/table/)
+**Dataset in use:** `que-faire-a-paris-` [(See it on parisdata domain)](https://parisdata.huwise.com/explore/dataset/que-faire-a-paris-/table/)
 
 **Fields in use:** 
 

@@ -7,7 +7,7 @@ resources:
   name: folder-:counter
 ---
 
-This home page integrates the first version of the [component Access cards](https://codelibrary.opendatasoft.com/components/access-card/) to highlight redirections to other pages.
+This home page integrates the first version of the [component Access cards](https://codelibrary.huwise.com/components/access-card/) to highlight redirections to other pages.
 The access cards are inserted in a grid container, so that all the cards have the same height.
 
 **Tips**

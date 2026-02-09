@@ -1,4 +1,4 @@
-**Dataset in use:** `gtfs_ny_routes` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/gtfs_ny_routes/table/)
+**Dataset in use:** `gtfs_ny_routes` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/gtfs_ny_routes/table/)
 
 **Fields in use:**
 
@@ -9,7 +9,7 @@
 |B933AD|us-ny_brx_bronx|Bus|S52|St. George - Staten Island Univ. Hospital|
 |B933AD|us-ny_brx_bronx|Bus|Q56|Broadway Junction - Jamaica|
 
-**Dataset in use:** `gtfs_ny_stops` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/gtfs_ny_stops/table/)
+**Dataset in use:** `gtfs_ny_stops` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/gtfs_ny_stops/table/)
 
 **Fields in use:**
 

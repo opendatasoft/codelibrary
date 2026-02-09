@@ -28,11 +28,11 @@
             </ods-map>
             <ul>
                 <li>
-                    <a href="https://data.opendatasoft.com/explore/dataset/georef-germany-land%40public/"
+                    <a href="https://data.huwise.com/explore/dataset/georef-germany-land%40public/"
                        target="_blank">Germany Lander dataset source</a>
                 </li>
                 <li>
-                    <a href="https://data.opendatasoft.com/explore/dataset/georef-germany-kreis%40public/"
+                    <a href="https://data.huwise.com/explore/dataset/georef-germany-kreis%40public/"
                        target="_blank">Germany Kreis dataset source</a>
                 </li>
             </ul>

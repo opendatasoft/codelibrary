@@ -1,4 +1,4 @@
-**Dataset in use:** `velib-disponibilite-en-temps-reel` [(See it on parisdata domain)](https://parisdata.opendatasoft.com/explore/dataset/velib-disponibilite-en-temps-reel/table/)
+**Dataset in use:** `velib-disponibilite-en-temps-reel` [(See it on parisdata domain)](https://parisdata.huwise.com/explore/dataset/velib-disponibilite-en-temps-reel/table/)
 
 **Fields in use:**
 

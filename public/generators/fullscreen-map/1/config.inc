@@ -1,5 +1,5 @@
 <!-- SETTINGS START HERE -->
-<div ng-init="domain = 'mesr.opendatasoft.com';
+<div ng-init="domain = 'mesr.huwise.com';
                 datasetid = 'fr-esr-principaux-etablissements-enseignement-superieur';
 
                 title = 'Établissements près de chez vous';

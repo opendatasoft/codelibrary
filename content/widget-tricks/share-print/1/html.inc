@@ -11,34 +11,34 @@
                 Filter and have a look to your browser URL ! It's synced !
             </h3>
             <h4>
-                <a href="https://userclub.opendatasoft.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}"
-                   target="_blank">https://userclub.opendatasoft.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}</a>
+                <a href="https://userclub.huwise.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}"
+                   target="_blank">https://userclub.huwise.com/pages/widgettrick-shareandprint/?{{ ctx.getQueryStringURL() }}</a>
             </h4>
             <h3>
                 Share through social network or by email:
             </h3>
             <div class="boutons" style="font-size: 1.6rem;">
-                <a href="https://twitter.com/intent/tweet?text=Huwise Page Test;url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}"
+                <a href="https://twitter.com/intent/tweet?text=Huwise Page Test;url=https%3A%2F%2Fuserclub.huwise.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}"
                    class="ods-dataset-visualization__social-button ods-dataset-visualization__social-button--twitter"
                    target="_blank">
                     <i class="fa fa-twitter ods-dataset-visualization__social-button-icon" aria-hidden="true"></i>
                 </a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}"
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fuserclub.huwise.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}"
                    class="ods-dataset-visualization__social-button ods-dataset-visualization__social-button--facebook"
                    target="_blank">
                     <i class="fa fa-facebook ods-dataset-visualization__social-button-icon" aria-hidden="true"></i>
                 </a>
-                <a href="https://plus.google.com/share?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}"
+                <a href="https://plus.google.com/share?url=https%3A%2F%2Fuserclub.huwise.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}"
                    class="ods-dataset-visualization__social-button ods-dataset-visualization__social-button--google-plus"
                    target="_blank">
                     <i class="fa fa-google-plus ods-dataset-visualization__social-button-icon" aria-hidden="true"></i>
                 </a>
-                <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&amp;mini=true&amp;title=Huwise Page Test;source=Huwise"
+                <a href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fuserclub.huwise.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}&amp;mini=true&amp;title=Huwise Page Test;source=Huwise"
                    class="ods-dataset-visualization__social-button ods-dataset-visualization__social-button--linkedin"
                    target="_blank">
                     <i class="fa fa-linkedin ods-dataset-visualization__social-button-icon" aria-hidden="true"></i>
                 </a>
-                <a href="mailto:?subject=Huwise Page Test&amp;body=https%3A%2F%2Fuserclub.opendatasoft.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}"
+                <a href="mailto:?subject=Huwise Page Test&amp;body=https%3A%2F%2Fuserclub.huwise.com%2Fpages%2Fwidgettrick-shareandprint%2F%3F{{ctx.getQueryStringURL() | encodeURIComponent}}"
                    class="ods-dataset-visualization__social-button ods-dataset-visualization__social-button--mail"
                    target="_blank">
                     <i class="fa fa-envelope ods-dataset-visualization__social-button-icon" aria-hidden="true"></i>
@@ -77,7 +77,7 @@
                                 </p>
                             </div>
                             <a style="color: #1e0c33; font-weight: 600; font-size: 1.1em;"
-                               href="https://userclub.opendatasoft.com/pages/widgettrick-shareandprint-card?q=country:%22{{ record.fields.country }}%22 AND volcano_name:%22{{ record.fields.volcano_name }}%22"
+                               href="https://userclub.huwise.com/pages/widgettrick-shareandprint-card?q=country:%22{{ record.fields.country }}%22 AND volcano_name:%22{{ record.fields.volcano_name }}%22"
                                target="_blank">Go to the volcano card</a>
                         </div>
                     </ods-map-layer>

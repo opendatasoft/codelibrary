@@ -1,4 +1,4 @@
-**Dataset in use:** `menus-cantines` [(See it on rennes-metropole domain)](https://rennes-metropole.opendatasoft.com/explore/dataset/menus-cantines/table/)
+**Dataset in use:** `menus-cantines` [(See it on rennes-metropole domain)](https://rennes-metropole.huwise.com/explore/dataset/menus-cantines/table/)
 
 **Fields in use:** 
 

@@ -1,4 +1,4 @@
-**Dataset in use:** `healthref-france-finess` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/healthref-france-finess/table/)
+**Dataset in use:** `healthref-france-finess` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/healthref-france-finess/table/)
 
 **Fields in use:**
 

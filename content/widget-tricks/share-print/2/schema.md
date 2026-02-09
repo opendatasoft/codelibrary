@@ -1,4 +1,4 @@
-**Dataset in use:** `record-stores` [(See it on userclub domain)](https://userclub.opendatasoft.com/explore/dataset/record-stores/table/)
+**Dataset in use:** `record-stores` [(See it on userclub domain)](https://userclub.huwise.com/explore/dataset/record-stores/table/)
 
 **Fields in use:**
 

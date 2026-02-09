@@ -1,4 +1,4 @@
-**Dataset in use:** `us-hospitals` [from userclub](https://userclub.opendatasoft.com/explore/dataset/us-hospitals/table/)
+**Dataset in use:** `us-hospitals` [from userclub](https://userclub.huwise.com/explore/dataset/us-hospitals/table/)
 
 **Fields in use:** 
 

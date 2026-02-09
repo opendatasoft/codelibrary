@@ -1,4 +1,4 @@
-     ng-init="domain = 'parisdata.opendatasoft.com';
+     ng-init="domain = 'parisdata.huwise.com';
               datasetid = 'que-faire-a-paris-';
 
               sort = '-date_start';

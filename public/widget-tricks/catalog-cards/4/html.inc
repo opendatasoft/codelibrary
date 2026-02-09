@@ -24,7 +24,7 @@
                 <div class="stars">
                     <img ng-repeat="kw in dataset.metas.keyword track by $index"
                          ng-if="kw == 'academy' || kw =='traffic' || kw =='bicycle'"
-                         src="https://discovery.opendatasoft.com/assets/theme_image/stared.png" />
+                         src="https://discovery.huwise.com/assets/theme_image/stared.png" />
                 </div>
             </div>
         </ods-catalog-card>
