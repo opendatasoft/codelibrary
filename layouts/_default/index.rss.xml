@@ -28,7 +28,7 @@
     {{- end -}}
     {{ range $pages.ByLastmod }}
       {{ $permalink := .Permalink }}
-      {{ range where .Page.Resources ".Date" "ge" (now.AddDate 0 -2 0) }}
+      {{ range where .Page.Resources ".Date" "ge" (now.AddDate -1 0 0) }}
         <item>
           <title>{{ .Title }}</title>
           <link>{{ $permalink }}#{{ .Title | anchorize }}</link>

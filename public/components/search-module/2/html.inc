@@ -5,7 +5,7 @@
         <i class="fa fa-search search-module-icon" aria-hidden="true"></i>
         <input placeholder="Search in dataset"
                ng-model="ctx.parameters['q']"
-               ng-model-options="{ updateOn: 'keyup', debounce: { 'default': 300, 'blur': 0 }}"
+               ng-model-options="{ updateOn: 'keyup', debounce: 300 }"
                class="search-module-input"
                type="text"/>
         <button class="search-module-clear"

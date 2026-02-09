@@ -1,5 +1,6 @@
 ---
 title: "Switch Module"
+date: 2022-01-25
 description: "A switch is a visual toggle between two mutually exclusive states — on and off."
 tags: ["display"]
 height: 120

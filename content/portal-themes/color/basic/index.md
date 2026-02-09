@@ -2,7 +2,7 @@
 title: "Basic"
 description: ""
 tags: []
-iframe: "https://color-basic-theme-discovery.opendatasoft.com/"
+iframe: "https://color-basic-theme-discovery.huwise.com/"
 links: "#0086D6"
 pagebackground: "#F6F8FB"
 headerlinks: "#FFFFFF"

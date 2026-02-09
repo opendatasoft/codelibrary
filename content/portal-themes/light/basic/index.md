@@ -2,7 +2,7 @@
 title: "Basic"
 description: ""
 tags: []
-iframe: "https://light-basic-theme-discovery.opendatasoft.com/"
+iframe: "https://light-basic-theme-discovery.huwise.com/"
 text: "#565656"
 links: "#0086D6"
 titles: "#000000"

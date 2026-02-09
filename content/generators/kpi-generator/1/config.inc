@@ -8,7 +8,7 @@
                 'aggregation_function':'SUM',
                 'aggregation_expression':'dose_number',
 
-                'link':'https://userclub.opendatasoft.com/explore/dataset/donnees-relatives-aux-stocks-des-doses-de-vaccins-contre-la-covid-19-departement/custom/',
+                'link':'https://userclub.huwise.com/explore/dataset/donnees-relatives-aux-stocks-des-doses-de-vaccins-contre-la-covid-19-departement/custom/',
                 'image_url':'https://ichef.bbci.co.uk/news/640/cpsprodpb/B002/production/_115785054_c1ada70a-19f7-491b-b9f4-fd577d1ab022.jpg',
 
                 'compare_mode':'date',
@@ -34,7 +34,7 @@
                     'aggregation_function':'SUM',
                     'aggregation_expression':'nb_pos',
 
-                    'link':'https://userclub.opendatasoft.com/explore/dataset/donnees-relatives-aux-resultats-des-tests-virologiques-covid-19-france/custom/',
+                    'link':'https://userclub.huwise.com/explore/dataset/donnees-relatives-aux-resultats-des-tests-virologiques-covid-19-france/custom/',
                     'image_url':'https://images.midilibre.fr/api/v1/images/view/5ef0c06cd286c23e66521344/full/image.jpg?v=1',
 
                     'compare_mode':'date',

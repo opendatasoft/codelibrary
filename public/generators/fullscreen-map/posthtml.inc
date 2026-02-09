@@ -8,7 +8,7 @@
 
     <!-- ### GENERAL SETTINGS ### -->
     <!-- domain : (Domain URL) : Must contain the ID of the domain where the dataset is published.
-      ex: 'discovery.opendatasoft.com'
+      ex: 'discovery.huwise.com'
     -->
     <!-- datasetid (Dataset ID) : Must contain the ID of the dataset
       ex: 'oeuvres-de-johannes-vermeer'

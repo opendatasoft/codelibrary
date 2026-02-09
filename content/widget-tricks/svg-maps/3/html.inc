@@ -1,6 +1,6 @@
 <ods-dataset-context context="ctx"
                      ctx-dataset="liste-des-departements-metropole-dom"
-                     ctx-domain="discovery">
+                     ctx-domain="userclub">
     <div ods-color-gradient="analysis"
          ods-color-gradient-context="ctx"
          ods-color-gradient-x="code_texte"
@@ -8,7 +8,7 @@
          ods-color-gradient-logarithmic-scale-factor="1">
         <div class="svgmap-france svgmap-with-text">
             <div class="svgmap-francemetro">
-                <ods-picto url="'https://static.opendatasoft.com/georef/svg/fr/dep_fxx_text.svg'"
+                <ods-picto url="'https://static.huwise.com/georef/svg/fr/dep_fxx_text.svg'"
                            color-by-attribute="analysis.colors"></ods-picto>
             </div>
         </div>

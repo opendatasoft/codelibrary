@@ -1,9 +1,9 @@
 <ods-dataset-context context="rapworldpublic,opendatasoftofficespublic,shanghaiworlduniversityrankingpublic"
                      rapworldpublic-dataset="rapworld"
-                     rapworldpublic-domain="public"
-                     rapworldpublic-parameters="{'q':'NOT #null(bio_deathdate)'}"
+                     rapworldpublic-domain="userclub"
+                     rapworldpublic-parameters="{'q':'NOT #null(deathdate)'}"
                      opendatasoftofficespublic-dataset="opendatasoft-offices"
-                     opendatasoftofficespublic-domain="public"
+                     opendatasoftofficespublic-domain="userclub"
                      shanghaiworlduniversityrankingpublic-dataset="shanghai-world-university-ranking"
                      shanghaiworlduniversityrankingpublic-domain="userclub">
     <div class="map-container">
@@ -27,7 +27,7 @@
               <ods-map-layer-group>
                   <ods-map-layer show-if="layerselection.offices"
                                  caption="false"
-                                 context="opendatasoftofficespublic" color="#336179" picto="ods-circle" show-marker="true" display="auto" shape-opacity="0.5" point-opacity="1" border-color="#FFFFFF" border-opacity="1" border-size="1" border-pattern="solid" caption="true" title="Opendatasoft Offices" description="This dataset contains the list of all Opendatasoft headquarters and local offices, worldwide." size="4" size-min="3" size-max="5" size-function="linear"></ods-map-layer>
+                                 context="opendatasoftofficespublic" color="#336179" picto="ods-circle" show-marker="true" display="auto" shape-opacity="0.5" point-opacity="1" border-color="#FFFFFF" border-opacity="1" border-size="1" border-pattern="solid" caption="true" title="Huwise Offices" description="This dataset contains the list of all Huwise headquarters and local offices, worldwide." size="4" size-min="3" size-max="5" size-function="linear"></ods-map-layer>
               </ods-map-layer-group>
               <ods-map-layer-group>
                   <ods-map-layer show-if="layerselection.shapes" color="#336179"

@@ -4,19 +4,19 @@
                          ctxanalysis-parameters="{'sort':'world_rank'}"
                          ctxrefine-dataset="shanghai-world-university-ranking"
                          ctxrefine-parameters="{'sort':'world_rank'}">
-        <div ods-analysis="rankings"
-             ods-analysis-context="ctxanalysis"
-             ods-analysis-x="university_name"
-             ods-analysis-serie-maxscore="MAX(world_rank_int)"
-             ods-analysis-sort="-maxscore"
-             ods-analysis-max="100">
+        <div ods-adv-analysis="rankings"
+             ods-adv-analysis-context="ctxanalysis"
+             ods-adv-analysis-group-by="university_name"
+             ods-adv-analysis-select="MAX(world_rank_int) as maxscore, university_name"
+             ods-adv-analysis-order-by="maxscore"
+             ods-adv-analysis-limit="100">
             <h3>
                 Select an university in this TOP 100 list (sorted by it's best ranking overall)
             </h3>
-            <ods-select options="rankings.results"
+            <ods-select options="rankings"
                         selected-values="ctxrefine.parameters['refine.university_name']"
-                        label-modifier="x + ', Best ranking: ' + maxscore"
-                        value-modifier="x"
+                        label-modifier="university_name + ', Best ranking: ' + maxscore"
+                        value-modifier="university_name"
                         placeholder="Select an university"></ods-select>
 
             <div ng-if="!ctxrefine.parameters['refine.university_name'][0]">

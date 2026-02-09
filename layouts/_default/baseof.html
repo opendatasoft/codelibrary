@@ -12,7 +12,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script
       async
-      src="https://www.googletagmanager.com/gtag/js?id={{ .Site.GoogleAnalytics }}"
+      src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Config.Services.GoogleAnalytics.ID }}"
     ></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -21,7 +21,7 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "{{ .Site.GoogleAnalytics }}");
+      gtag("config", "{{ .Site.Config.Services.GoogleAnalytics.ID }}");
     </script>
 
     <!-- JavaScript and dependencies -->
@@ -48,11 +48,9 @@
       crossorigin="anonymous"
     />
 
-    {{ $style := resources.Get "scss/main.scss" | resources.ToCSS (dict "outputStyle" "compressed" "includePaths" (slice "node_modules")) }}
+    {{ $style := resources.Get "scss/main.scss" | css.Sass (dict "outputStyle" "compressed" "includePaths" (slice "node_modules")) }}
     <link rel="stylesheet" type="text/css" href="{{ $style.RelPermalink }}" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="shortcut icon" href="/huwise-favicon.ico" />
   </head>
 
   <body>

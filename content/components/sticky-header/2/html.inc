@@ -13,7 +13,7 @@
                     Number of records: <strong>{{ shanghairanking.dataset.metas.records_count | number }}</strong>
                 </div>
             </div>
-            <a href="https://data.opendatasoft.com/explore/dataset/shanghai-world-university-ranking%40public/information/?sort=world_rank" class="sticky-summary-button">
+            <a href="https://data.huwise.com/explore/dataset/shanghai-world-university-ranking%40public/information/?sort=world_rank" class="sticky-summary-button">
                 View
             </a>
         </div>

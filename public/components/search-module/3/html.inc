@@ -13,7 +13,7 @@
                    aria-controls="search-results"
                    placeholder="Search in dataset"
                    ng-model="ctx.parameters['q']"
-                   ng-model-options="{ updateOn: 'keyup', debounce: { 'default': 300, 'blur': 0 }}"
+                   ng-model-options="{ updateOn: 'keyup', debounce: 300 }"
                    class="search-bar-input"
                    type="text"/>
             <button aria-label="Clear search"

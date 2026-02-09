@@ -359,34 +359,34 @@
  * - Change the class name to something related to your project.
  */
 .image-card-mobility {
-	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.5))), url('https://discovery.opendatasoft.com/assets/theme_image/mobility-bg.jpg');
-	background-image: -o-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://discovery.opendatasoft.com/assets/theme_image/mobility-bg.jpg');
-	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://discovery.opendatasoft.com/assets/theme_image/mobility-bg.jpg');
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.5))), url('https://discovery.huwise.com/assets/theme_image/mobility-bg.jpg');
+	background-image: -o-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://discovery.huwise.com/assets/theme_image/mobility-bg.jpg');
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://discovery.huwise.com/assets/theme_image/mobility-bg.jpg');
 }
 .image-card-garden {
-	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.5))), url('https://discovery.opendatasoft.com/assets/theme_image/garden-bg.jpg');
-	background-image: -o-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://discovery.opendatasoft.com/assets/theme_image/garden-bg.jpg');
-	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://discovery.opendatasoft.com/assets/theme_image/garden-bg.jpg');
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.5))), url('https://discovery.huwise.com/assets/theme_image/garden-bg.jpg');
+	background-image: -o-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://discovery.huwise.com/assets/theme_image/garden-bg.jpg');
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://discovery.huwise.com/assets/theme_image/garden-bg.jpg');
 }
 .image-card-gastronomy {
-	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.5))), url('https://discovery.opendatasoft.com/assets/theme_image/gastronomy-bg.jpg');
-	background-image: -o-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://discovery.opendatasoft.com/assets/theme_image/gastronomy-bg.jpg');
-	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://discovery.opendatasoft.com/assets/theme_image/gastronomy-bg.jpg');
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.5))), url('https://discovery.huwise.com/assets/theme_image/gastronomy-bg.jpg');
+	background-image: -o-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://discovery.huwise.com/assets/theme_image/gastronomy-bg.jpg');
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://discovery.huwise.com/assets/theme_image/gastronomy-bg.jpg');
 }
 .image-card-sport {
-	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.5))), url('https://discovery.opendatasoft.com/assets/theme_image/sport-bg.jpg');
-	background-image: -o-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://discovery.opendatasoft.com/assets/theme_image/sport-bg.jpg');
-	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://discovery.opendatasoft.com/assets/theme_image/sport-bg.jpg');
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.5))), url('https://discovery.huwise.com/assets/theme_image/sport-bg.jpg');
+	background-image: -o-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://discovery.huwise.com/assets/theme_image/sport-bg.jpg');
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://discovery.huwise.com/assets/theme_image/sport-bg.jpg');
 }
 .image-card-culture {
-	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.5))), url('https://discovery.opendatasoft.com/assets/theme_image/culture-bg.jpg');
-	background-image: -o-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://discovery.opendatasoft.com/assets/theme_image/culture-bg.jpg');
-	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://discovery.opendatasoft.com/assets/theme_image/culture-bg.jpg');
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.5))), url('https://discovery.huwise.com/assets/theme_image/culture-bg.jpg');
+	background-image: -o-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://discovery.huwise.com/assets/theme_image/culture-bg.jpg');
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://discovery.huwise.com/assets/theme_image/culture-bg.jpg');
 }
 .image-card-education {
-	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.5))), url('https://discovery.opendatasoft.com/assets/theme_image/education-bg.jpg');
-	background-image: -o-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://discovery.opendatasoft.com/assets/theme_image/education-bg.jpg');
-	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://discovery.opendatasoft.com/assets/theme_image/education-bg.jpg');
+	background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0,0,0,0.5))), url('https://discovery.huwise.com/assets/theme_image/education-bg.jpg');
+	background-image: -o-linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://discovery.huwise.com/assets/theme_image/education-bg.jpg');
+	background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://discovery.huwise.com/assets/theme_image/education-bg.jpg');
 }
 /* ==========================================================================
    Homepage Styles
@@ -460,7 +460,7 @@ main {
     background-size: cover;
     /* You can replace the background-image by uploading an image to the portal assets
     and replacing the text in simple quotes below or use the URL of an image on the web */
-    background-image: url('https://discovery.opendatasoft.com/assets/theme_image/header-bg.jpg');
+    background-image: url('https://discovery.huwise.com/assets/theme_image/header-bg.jpg');
     /* Position of the background-image on x y axis. Change these values to
     modify where the image is centered.
     */

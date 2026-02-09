@@ -1,6 +1,6 @@
 <ods-dataset-context context="ctx"
-                     ctx-dataset="evenements-publics-cibul" 
-                     ctx-domain="public"
+                     ctx-dataset="evenements-publics-openagenda" 
+                     ctx-domain="userclub"
                      ctx-parameters="{'sort':'-date_start'}">
     <h3>
         Date de début de l'événement

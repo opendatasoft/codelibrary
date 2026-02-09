@@ -48,7 +48,7 @@
                 </div>
             </div>
         </nav>
-        <section class="row is-info">
+        <section class="row">
             <div class="col-md-6">
                 <div class="card z-depth-1">
                     <div class="card-head">
@@ -88,7 +88,7 @@
                 </div>
             </div>
         </section>
-        <section class="row is-warning">
+        <section class="row">
             <div class="col-md-12">
                 <ods-dataset-context context="queries"
                                      queries-dataset="monitoring-copy"
@@ -125,7 +125,7 @@
                 </ods-dataset-context>
             </div>
         </section>
-        <section class="row is-success">
+        <section class="row">
             <div class="col-md-6">
                 <div class="card z-depth-1">
                     <div class="card-head">

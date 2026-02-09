@@ -14,5 +14,3 @@ Custom heatmaps or bubblemaps are made of a CSS grid, an `ods-adv-analysis` and 
 Colors are RGB codes, computed of the aggregation value within the range of all values. Low and high colors values are set into `variables` object at the beginning of the code.
     
 The toggle button, and the legend are independent of the grid and can be removed.
-
-> Note: It's much easier to deal with dates with Vega-Lite as it can split by day, day of the week, month with the labels and the correct ordering. We then strongly advice to go for [Vega-Lite heatmaps](/widget-tricks/heatmaps-vegalite) in that case.

@@ -10,7 +10,7 @@
                                      result-class="timeline-item"
                                      no-results-message="No more event...">
 
-            {{ url = 'https://issy-les-moulineaux.opendatasoft.com/explore/dataset/' + item.datasetid + '/files/' + item.fields.imagecsv.id + '/300/' ; "" }}
+            {{ url = 'https://issy-les-moulineaux.huwise.com/explore/dataset/' + item.datasetid + '/files/' + item.fields.imagecsv.id + '/300/' ; "" }}
 
             <div class="timeline-img" style=""></div>
 
@@ -38,7 +38,6 @@
                                         record="item"
                                         width="300"
                                         height="300">
-                            {{ item.fields.numero }} {{ item.fields.adresse }}<br/>{{ item.fields.ville }}
                         </ods-geotooltip>
                     </div>
                 </div>

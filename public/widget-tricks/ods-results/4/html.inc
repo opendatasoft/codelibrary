@@ -13,7 +13,7 @@
                     <ods-record-image context="ctx"
                                       record="record"
                                       field="image"
-                                      domain-url="https://userclub.opendatasoft.com"></ods-record-image>
+                                      domain-url="https://userclub.huwise.com"></ods-record-image>
                     <!-- domain-url is not necessary if your page is on the same domain than the dataset -->
                     <div class="box-content">
                         <div class="headers">

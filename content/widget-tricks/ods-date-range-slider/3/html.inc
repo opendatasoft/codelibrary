@@ -1,6 +1,6 @@
 <ods-dataset-context context="ctx"
-                     ctx-dataset="shanghai-world-university-ranking@public"
-                     ctx-domain="public">
+                     ctx-dataset="shanghai-world-university-ranking"
+                     ctx-domain="userclub">
     <h3>
         Ods-date-range-slider by year
     </h3>

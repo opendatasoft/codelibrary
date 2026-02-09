@@ -10,13 +10,13 @@
         <div class="cell-6 sm:cell-3">
             <div class="box green">
                 <h3>MAIN Content</h3>
-                <img src="https://userclub.opendatasoft.com/assets/theme_image/pie-chart.svg" />
+                <img src="https://userclub.huwise.com/assets/theme_image/pie-chart.svg" />
             </div>
         </div>
         <div class="cell-6 sm:cell-3">
             <div class="box green">
                 <h3>MAIN Content</h3>
-                <img src="https://userclub.opendatasoft.com/assets/theme_image/pie-chart.svg" />
+                <img src="https://userclub.huwise.com/assets/theme_image/pie-chart.svg" />
             </div>
         </div>
         <div class="cell-6 sm:cell-3">
@@ -34,13 +34,13 @@
         <div class="cell-6 sm:cell-3 sm:cell-order-2">
             <div class="box green">
                 <h3>MAIN Content</h3>
-                <img src="https://userclub.opendatasoft.com/assets/theme_image/pie-chart.svg" />
+                <img src="https://userclub.huwise.com/assets/theme_image/pie-chart.svg" />
             </div>
         </div>
         <div class="cell-6 sm:cell-3 sm:cell-order-3">
             <div class="box green">
                 <h3>MAIN Content</h3>
-                <img src="https://userclub.opendatasoft.com/assets/theme_image/pie-chart.svg" />
+                <img src="https://userclub.huwise.com/assets/theme_image/pie-chart.svg" />
             </div>
         </div>
         <div class="cell-6 sm:cell-3 sm:cell-order-1">

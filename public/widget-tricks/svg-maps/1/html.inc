@@ -1,6 +1,6 @@
 <ods-dataset-context context="ctx"
                      ctx-dataset="liste-des-departements-metropole-dom"
-                     ctx-domain="discovery">
+                     ctx-domain="userclub">
     <div ods-color-gradient="analysis"
          ods-color-gradient-context="ctx"
          ods-color-gradient-x="code_texte"
@@ -32,33 +32,33 @@
             <div class="svgmap-drom"
                  ng-class="drom">
                 <div class="svgmap-martinique">
-                    <ods-picto url="'https://static.opendatasoft.com/georef/svg/fr/dep_mtq.svg'"
+                    <ods-picto url="'https://static.huwise.com/georef/svg/fr/dep_mtq.svg'"
                                color-by-attribute="analysis.colors"></ods-picto>
                 </div>
                 <div class="svgmap-reunion">
-                    <ods-picto url="'https://static.opendatasoft.com/georef/svg/fr/dep_reu.svg'"
+                    <ods-picto url="'https://static.huwise.com/georef/svg/fr/dep_reu.svg'"
                                color-by-attribute="analysis.colors"></ods-picto>
                 </div>
                 <div class="svgmap-guyane">
-                    <ods-picto url="'https://static.opendatasoft.com/georef/svg/fr/dep_guf.svg'"
+                    <ods-picto url="'https://static.huwise.com/georef/svg/fr/dep_guf.svg'"
                                color-by-attribute="analysis.colors"></ods-picto>
                 </div>
                 <div class="svgmap-guadeloupe">
-                    <ods-picto url="'https://static.opendatasoft.com/georef/svg/fr/dep_glp.svg'"
+                    <ods-picto url="'https://static.huwise.com/georef/svg/fr/dep_glp.svg'"
                                color-by-attribute="analysis.colors"></ods-picto>
                 </div>
                 <div class="svgmap-mayotte">
-                    <ods-picto url="'https://static.opendatasoft.com/georef/svg/fr/dep_myt.svg'"
+                    <ods-picto url="'https://static.huwise.com/georef/svg/fr/dep_myt.svg'"
                                color-by-attribute="analysis.colors"></ods-picto>
                 </div>
             </div>
             <div class="svgmap-idf"
                  ng-class="idf">
-                <ods-picto url="'https://static.opendatasoft.com/georef/svg/fr/dep_idf.svg'"
+                <ods-picto url="'https://static.huwise.com/georef/svg/fr/dep_idf.svg'"
                            color-by-attribute="analysis.colors"></ods-picto>
             </div>
             <div class="svgmap-francemetro">
-                <ods-picto url="'https://static.opendatasoft.com/georef/svg/fr/dep_fxx.svg'"
+                <ods-picto url="'https://static.huwise.com/georef/svg/fr/dep_fxx.svg'"
                            color-by-attribute="analysis.colors"></ods-picto>
             </div>
         </div>

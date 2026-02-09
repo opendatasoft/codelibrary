@@ -4,7 +4,7 @@
               fieldDefaultRangeStartsNow = true;
 
               view = 'cards';
-              fieldsList = ['powered_by','description_en'];
+              fieldsList = ['purpose','description_en'];
               fieldLink = 'reference_url';
               fieldLinkLabel = 'See it live';
 

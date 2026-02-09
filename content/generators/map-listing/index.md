@@ -7,4 +7,6 @@ resources:
   name: folder-:counter
 ---
 
+> Note: The listing generator V3 can now handle maps, pagination and other new features. We then recommend to use the [listing generator](/generators/listing-generator/) instead of this resource.  
+
 Edit only a few settings to generate a modern looking visualization that uses ODS components and widgets.

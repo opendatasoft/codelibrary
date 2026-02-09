@@ -8,7 +8,7 @@
         'aggregation_function':'SUM',
         'aggregation_expression':'population_en_2012',
 
-        'link':'https://userclub.opendatasoft.com/explore/dataset/resume-statistique-communes-departements-et-regions-france-2012-2013-2014/analyze/?dataChart=eyJxdWVyaWVzIjpbeyJjb25maWciOnsiZGF0YXNldCI6InJlc3VtZS1zdGF0aXN0aXF1ZS1jb21tdW5lcy1kZXBhcnRlbWVudHMtZXQtcmVnaW9ucy1mcmFuY2UtMjAxMi0yMDEzLTIwMTQiLCJvcHRpb25zIjp7fX0sImNoYXJ0cyI6W3siYWxpZ25Nb250aCI6dHJ1ZSwidHlwZSI6ImNvbHVtbiIsImZ1bmMiOiJBVkciLCJ5QXhpcyI6InBvcHVsYXRpb25fZW5fMjAxMiIsInNjaWVudGlmaWNEaXNwbGF5Ijp0cnVlLCJjb2xvciI6IiMwMEM3QjEifSx7ImFsaWduTW9udGgiOnRydWUsInR5cGUiOiJjb2x1bW4iLCJmdW5jIjoiQVZHIiwieUF4aXMiOiJwb3B1bGF0aW9uX2VuXzIwMDciLCJzY2llbnRpZmljRGlzcGxheSI6dHJ1ZSwiY29sb3IiOiIjNTY1NjU2In1dLCJ4QXhpcyI6InJlZ2lvbiIsIm1heHBvaW50cyI6NTAsInNvcnQiOiJzZXJpZTEtMSJ9XSwidGltZXNjYWxlIjoiIiwiZGlzcGxheUxlZ2VuZCI6dHJ1ZSwiYWxpZ25Nb250aCI6dHJ1ZX0%3D',
+        'link':'https://userclub.huwise.com/explore/dataset/resume-statistique-communes-departements-et-regions-france-2012-2013-2014/analyze/?dataChart=eyJxdWVyaWVzIjpbeyJjb25maWciOnsiZGF0YXNldCI6InJlc3VtZS1zdGF0aXN0aXF1ZS1jb21tdW5lcy1kZXBhcnRlbWVudHMtZXQtcmVnaW9ucy1mcmFuY2UtMjAxMi0yMDEzLTIwMTQiLCJvcHRpb25zIjp7fX0sImNoYXJ0cyI6W3siYWxpZ25Nb250aCI6dHJ1ZSwidHlwZSI6ImNvbHVtbiIsImZ1bmMiOiJBVkciLCJ5QXhpcyI6InBvcHVsYXRpb25fZW5fMjAxMiIsInNjaWVudGlmaWNEaXNwbGF5Ijp0cnVlLCJjb2xvciI6IiMwMEM3QjEifSx7ImFsaWduTW9udGgiOnRydWUsInR5cGUiOiJjb2x1bW4iLCJmdW5jIjoiQVZHIiwieUF4aXMiOiJwb3B1bGF0aW9uX2VuXzIwMDciLCJzY2llbnRpZmljRGlzcGxheSI6dHJ1ZSwiY29sb3IiOiIjNTY1NjU2In1dLCJ4QXhpcyI6InJlZ2lvbiIsIm1heHBvaW50cyI6NTAsInNvcnQiOiJzZXJpZTEtMSJ9XSwidGltZXNjYWxlIjoiIiwiZGlzcGxheUxlZ2VuZCI6dHJ1ZSwiYWxpZ25Nb250aCI6dHJ1ZX0%3D',
         'image_url':'https://saint-didier-autrement.org/wp-content/uploads/2020/06/office_population.jpg',
 
         'compare_mode':'numeric',
@@ -31,7 +31,7 @@
         'aggregation_function':'SUM',
         'aggregation_expression':'inhab',
 
-        'link':'https://userclub.opendatasoft.com/explore/dataset/belgium-statistical-districts/analyze/?dataChart=eyJxdWVyaWVzIjpbeyJjb25maWciOnsiZGF0YXNldCI6ImJlbGdpdW0tc3RhdGlzdGljYWwtZGlzdHJpY3RzIiwib3B0aW9ucyI6e319LCJjaGFydHMiOlt7ImFsaWduTW9udGgiOnRydWUsInR5cGUiOiJjb2x1bW4iLCJmdW5jIjoiU1VNIiwieUF4aXMiOiJpbmhhYiIsInNjaWVudGlmaWNEaXNwbGF5Ijp0cnVlLCJjb2xvciI6IiMwMEM3QjEifV0sInhBeGlzIjoicmVnX2ZyIiwibWF4cG9pbnRzIjo1MCwic29ydCI6IiJ9XSwidGltZXNjYWxlIjoiIiwiZGlzcGxheUxlZ2VuZCI6dHJ1ZSwiYWxpZ25Nb250aCI6dHJ1ZX0%3D',
+        'link':'https://userclub.huwise.com/explore/dataset/belgium-statistical-districts/analyze/?dataChart=eyJxdWVyaWVzIjpbeyJjb25maWciOnsiZGF0YXNldCI6ImJlbGdpdW0tc3RhdGlzdGljYWwtZGlzdHJpY3RzIiwib3B0aW9ucyI6e319LCJjaGFydHMiOlt7ImFsaWduTW9udGgiOnRydWUsInR5cGUiOiJjb2x1bW4iLCJmdW5jIjoiU1VNIiwieUF4aXMiOiJpbmhhYiIsInNjaWVudGlmaWNEaXNwbGF5Ijp0cnVlLCJjb2xvciI6IiMwMEM3QjEifV0sInhBeGlzIjoicmVnX2ZyIiwibWF4cG9pbnRzIjo1MCwic29ydCI6IiJ9XSwidGltZXNjYWxlIjoiIiwiZGlzcGxheUxlZ2VuZCI6dHJ1ZSwiYWxpZ25Nb250aCI6dHJ1ZX0%3D',
         'image_url':'https://saint-didier-autrement.org/wp-content/uploads/2020/06/office_population.jpg',
 
         'compare_mode':'numeric',

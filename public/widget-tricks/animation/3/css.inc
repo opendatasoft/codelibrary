@@ -90,8 +90,8 @@
     fill: none;
     stroke-width: 8px;
     stroke: var(--highlight);
-    -webkit-transition: stroke-dasharray 0.1s;
-    transition: stroke-dasharray 0.1s;
+    -webkit-transition: stroke-dasharray 2.5s;
+    transition: stroke-dasharray 2.5s;
 }
 
 .odswidget-gauge {

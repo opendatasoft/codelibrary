@@ -1,5 +1,5 @@
 
-     ng-init="domain = 'mesr.opendatasoft.com';
+     ng-init="domain = 'mesr.huwise.com';
                 datasetid = 'fr-esr-principaux-etablissements-enseignement-superieur';
 
                 filters = [

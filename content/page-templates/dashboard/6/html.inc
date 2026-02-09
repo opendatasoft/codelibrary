@@ -3,7 +3,7 @@
                          stats-dataset="resume-statistique-communes-departements-et-regions-france-2012-2013-2014"
                          stats-domain="public">
         <div class="container"
-             ng-init="stats['source'] = 'https://' + stats.dataset.metas.domain + '.opendatasoft.com/explore/dataset/' + stats.dataset.datasetid">
+             ng-init="stats['source'] = 'https://' + stats.dataset.metas.domain + '.huwise.com/explore/dataset/' + stats.dataset.datasetid">
             <div class="header">
                 <h1>
                     Observatoire statistiques de la population Française

@@ -55,7 +55,7 @@
             <div class="map-drawer-container__drawer map-drawer-container__drawer__partial">
                 <div class="map-drawer-container__drawer__close"
                      ng-click="shanghai.parameters['refine.country'] = undefined;
-                               shanghaihistoric.parameters['refine.university_namex'] = undefined;
+                               shanghaihistoric.parameters['refine.university_name'] = undefined;
                                drawer.status = false">
                     <i class="fa fa-times"></i>
                 </div>

@@ -1,16 +1,21 @@
-const addToggleButton = box => {
-  const button = box.querySelector(".show-code .button");
-  const codeBox = box.querySelector(".box-code");
+const addToggleButton = (box, name) => {
+  const button = box.querySelector(`button.show-${name}`);
+  const content = box.querySelector(`div.box-${name}`);
 
-  if (!button || !codeBox) { return }
+  if (!button || !content) { return }
 
   button.addEventListener("click", () => {
-    codeBox.classList.toggle("is-hidden");
+    content.classList.toggle("is-hidden");
+    content.toggleAttribute("aria-hidden");
     button.classList.toggle("is-active");
+    button.toggleAttribute("aria-selected");
   });
 };
 
 export default () => {
   const boxes = document.querySelectorAll(".box");
-  [...boxes].forEach(addToggleButton);
+  [...boxes].forEach((box) => {
+    addToggleButton(box, 'code');
+    addToggleButton(box, 'schema');
+  } );
 };

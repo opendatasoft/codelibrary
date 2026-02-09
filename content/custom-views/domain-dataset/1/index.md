@@ -5,7 +5,7 @@ domainid: "userclub"
 datasetid: "domaindatasets"
 ---
 
-This custom view will help you create an overview of all the datasets on your domain. See the [user guide](https://help.opendatasoft.com/platform/fr/publishing_data/04_configuring_a_source/connectors/dataset_of_datasets.html#creation) to set up this special dataset.
+This custom view will help you create an overview of all the datasets on your domain. See the [user guide](https://help.huwise.com/platform/en/publishing_data/01_creating_a_dataset/connectors/dataset_of_datasets.html) to set up this special dataset.
 
 For this view to properly function, you need to activate these options on the extractor:
 
@@ -26,5 +26,5 @@ You also need to set up a _Replace text_ processor with the field _Publishing Pr
 
 ![processor setup](processor.png)
 
-See this resource live [here](https://userclub.opendatasoft.com/explore/dataset/domaindatasets/custom/?sort=modified). (Note:
+See this resource live [here](https://userclub.huwise.com/explore/dataset/domaindatasets/custom/?sort=modified). (Note:
 we made this page public for the sake of example, but it is most likely a private view).
