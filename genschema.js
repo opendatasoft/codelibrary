@@ -2,7 +2,7 @@ let domain = process.argv[2];
 let dataset = process.argv[3];
 let fields = process.argv[4];
 
-let query = `https://${domain}.opendatasoft.com/explore/dataset/${dataset}/download/?format=csv&use_labels_for_header=false&rows=4&fields=${fields}`;
+let query = `https://${domain}.huwise.com/explore/dataset/${dataset}/download/?format=csv&use_labels_for_header=false&rows=4&fields=${fields}`;
 
 const axios = require("axios");
 const fs = require('fs');
@@ -33,7 +33,7 @@ axios.get(query)
         })
 
         writeDisk('./schema.md',
-            `**Dataset in use:** \`${dataset}\` [(See it on ${domain} domain)](https://${domain}.opendatasoft.com/explore/dataset/${dataset}/table/)
+            `**Dataset in use:** \`${dataset}\` [(See it on ${domain} domain)](https://${domain}.huwise.com/explore/dataset/${dataset}/table/)
 
 **Fields in use:**
 

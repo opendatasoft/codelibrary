@@ -21,7 +21,7 @@
 
 {{ $defaultDomain := "" }}
 {{ if .Params.domainid }}
-    {{ $defaultDomain = printf "%s%s%s" "<script type=\"text/javascript\"> angular.module(\"ods-widgets\").config(function(ODSWidgetsConfigProvider, $httpProvider) { ODSWidgetsConfigProvider.setConfig({defaultDomain: \"https://" .Params.domainid ".opendatasoft.com/\"}) }) </script>" }}
+    {{ $defaultDomain = printf "%s%s%s" "<script type=\"text/javascript\"> angular.module(\"ods-widgets\").config(function(ODSWidgetsConfigProvider, $httpProvider) { ODSWidgetsConfigProvider.setConfig({defaultDomain: \"https://" .Params.domainid ".huwise.com/\"}) }) </script>" }}
 {{ end }}
 
 {{ $schema := path.Join .File.Dir "schema.md" }}
@@ -53,7 +53,7 @@
                     {{ $head }}
                     {{ $defaultDomain }}
                 </head>
-                <base href='https://{{ $baseurl }}.opendatasoft.com/'>
+                <base href='https://{{ $baseurl }}.huwise.com/'>
                 <body>
                 <div ng-app='ods-widgets'>{{ $html }}</div>
                 <style type='text/css'>
