@@ -3,8 +3,8 @@ title: "{{ replace .Name "-" " " | title }}"
 date: {{ .Date }}
 description: ""
 tags: []
-iframe: "https://discovery.opendatasoft.com/"
-external_url: "https://discovery.opendatasoft.com/"
+iframe: "https://discovery.huwise.com/"
+external_url: "https://discovery.huwise.com/"
 text: "#565656"
 links: "#0086D6"
 titles: "#000000"

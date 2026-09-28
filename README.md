@@ -1,6 +1,6 @@
 # ODS Codelibrary
 
-This the Hugo site powering our [code library](https://codelibrary.opendatasoft.com/). The repo is mainly here for you to peak at the code. It's not intended to serve as a base for other projects. Should you have a question nevertheless, feel free to raise an issue.
+This the Hugo site powering our [code library](https://codelibrary.huwise.com/). The repo is mainly here for you to peak at the code. It's not intended to serve as a base for other projects. Should you have a question nevertheless, feel free to raise an issue.
 
 ### Cmds
 If you want to run the site locally:
