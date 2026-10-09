@@ -202,6 +202,12 @@ fieldPhoto (string) : (Field id of the image field if any)
 fieldPhoto = 'image';
 ````
 
+#### `fieldPhotoType` (only available if `view` is set to `cards`)
+fieldPhotoType (string) : Type of the image field: `'file'` for a file/image field stored on the dataset (default), `'url'` for a text field containing an image URL
+```
+fieldPhotoType = 'file';
+```
+
 #### `imagePosition` (only available if `view` is set to `cards`)
 imagePosition (string) : (Image position) : Image position in the card, can be 'top' or 'left'
 ```

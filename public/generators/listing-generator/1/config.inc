@@ -20,6 +20,7 @@
 
               cardTitle = 'titre';
               fieldPhoto = 'image';
+              fieldPhotoType = 'file';
               imagePosition = 'left';
               itemsPerRow = '2';
 

@@ -45,6 +45,9 @@
         <!-- fieldImage (Field id of the image field if any)
          ex: 'image'
     -->
+        <!-- fieldImageType (Type of the image field) : 'file' for a file/image field (default), 'url' for a text field containing an image URL
+         ex: 'file'
+    -->
         <!-- imagePosition (Image position) : Image position in the card, can be 'top' or 'left'
          ex: 'left'
     -->
@@ -218,8 +221,12 @@
                     ng-click="ctx.parameters['refine.' + resultTitle] = (ctx.parameters['refine.' + resultTitle]?undefined:item.fields[resultTitle])"
                     ng-class="{'result-img-horizontal': imagePosition === 'left' }">
                   <div class="result-img"
-                       ng-if="item.fields[fieldImage]"
+                       ng-if="item.fields[fieldImage] && fieldImageType !== 'url'"
                        style="{{ 'background-image: url(https://' + domain + '/explore/dataset/' + datasetid + '/files/' + item.fields[fieldImage].id + '/300/);' }}">
+                  </div>
+                  <div class="result-img"
+                       ng-if="item.fields[fieldImage] && fieldImageType === 'url'"
+                       ng-style="{'background-image': 'url(' + item.fields[fieldImage] + ')'}">
                   </div>
                   <div class="result-content">
                     <h2 class="result-title">

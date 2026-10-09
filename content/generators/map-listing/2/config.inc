@@ -15,6 +15,7 @@
                 fieldLinkLabel = 'Télécharger l\'image';
 
                 fieldImage = 'photo';
+                fieldImageType = 'file';
                 imagePosition = 'left';
 
                 resultTitle = 'legende_revisee';

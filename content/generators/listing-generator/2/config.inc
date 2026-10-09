@@ -27,6 +27,7 @@
 
               cardTitle = 'title';
               fieldPhoto = 'image_couverture';
+              fieldPhotoType = 'file';
               imagePosition = 'top';
               itemsPerRow = '2';
 

@@ -47,6 +47,9 @@
     <!-- fieldPhoto (Field id of the image field if any)
      ex: 'image'
 -->
+    <!-- fieldPhotoType (Type of the image field) : 'file' for a file/image field (default), 'url' for a text field containing an image URL
+     ex: 'file'
+-->
     <!-- imagePosition (Image position) : Image position in the card, can be 'top' or 'left'
      ex: 'left'
 -->
@@ -281,7 +284,11 @@
                     <div class="content-card"
                          ng-class="{'content-card-horizontal': imagePosition === 'left' }">
                         <div class="content-card-img"
-                             ng-if="item.fields[fieldPhoto]"
+                             ng-if="item.fields[fieldPhoto] && fieldPhotoType === 'url'"
+                             ng-style="{'background-image': 'url(' + item.fields[fieldPhoto] + ')'}">
+                        </div>
+                        <div class="content-card-img"
+                             ng-if="item.fields[fieldPhoto] && fieldPhotoType !== 'url'"
                              style="{{ 'background-image: url(/explore/dataset/' + ctx.dataset.datasetid + '/files/' + item.fields[fieldPhoto].id + '/300/);' }}">
                         </div>
                         <div class="content-card-body">

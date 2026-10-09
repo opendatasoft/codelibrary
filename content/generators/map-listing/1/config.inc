@@ -15,6 +15,7 @@
                 fieldLinkLabel = 'Visiter le site web';
 
                 fieldImage = '';
+                fieldImageType = 'file';
                 imagePosition = 'left';
 
                 resultTitle = 'uo_lib';
