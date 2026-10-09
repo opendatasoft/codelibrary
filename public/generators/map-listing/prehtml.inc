@@ -1,3 +1,7 @@
+  <!-- V1.3 :
+    - Added fieldImageType using file for images stores on dataset and url if the field contains a hotlinked image
+  -->
+
   <!-- V1.2 :
     - Add fieldImage and imagePosition for image datasets
     - Add mapPictoColor and mapPicto to set up map picto
